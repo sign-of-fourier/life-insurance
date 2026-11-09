@@ -1,0 +1,160 @@
+# Machine-readable mirror of guidelines.md §CLS. Source of truth for prose = guidelines_src.
+# Checked against the markdown by src/check_rules.py.
+
+ladders:
+  non_tobacco: [Elite, Preferred Plus, Preferred, Standard Plus, Standard, Table, Postpone, Decline]
+  tobacco: [Preferred Tobacco, Standard Tobacco, Table Tobacco, Postpone, Decline]
+
+class_order:  # lower = better; used for "worst of caps" (CMB-4)
+  Elite: 0
+  Preferred Plus: 1
+  Preferred: 2
+  Standard Plus: 3
+  Standard: 4
+  Preferred Tobacco: 2   # tobacco ladder analog of Preferred
+  Standard Tobacco: 4    # tobacco ladder analog of Standard
+
+tobacco_equivalent:  # mapping a non-tobacco cap onto the tobacco ladder
+  Elite: Preferred Tobacco
+  Preferred Plus: Preferred Tobacco
+  Preferred: Preferred Tobacco
+  Standard Plus: Standard Tobacco
+  Standard: Standard Tobacco
+
+debit_table:            # CLS-3.3
+  rule: CLS-3.3
+  standard_max: 25      # +1..+25 -> Standard / Standard Tobacco
+  table_step: 25        # Table = ceil((net-25)/25)
+  max_table: 16         # +401..+425
+  decline_above: 425    # CLS-8.1
+  premium_per_table: 0.25
+  age_limit:            # CLS-3.4
+    min_age: 71
+    max_table: 8
+  letters: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P]
+
+preferred_matrix:       # CLS-5; all thresholds inclusive (CLS-5.5)
+  rule: CLS-5
+  classes:
+    Elite:
+      ages: [18, 65]
+      build_column: Elite
+      bp_under60: {sys: 130, dia: 80, treated_ok: false}
+      bp_60plus: {sys: 135, dia: 85, treated_ok: false}
+      tc_max: 220
+      lipids_treated_ok: false
+      ratio_max: 4.5
+      nicotine_free_years: 10
+      family_history: no_cvd_or_cancer_dx_under_65
+      mvr: {max_minor: 0, minor_years: 5, dui_free_years: null, major_ever: false}   # null = never
+      alcohol_drug_free_years: null   # none ever
+      personal_medical: no_ratable_ever
+      avocation: none_requiring_fe_or_exclusion
+      travel_tiers: [A]
+      min_face: 250000
+      requires_fluids: true           # REQ-3
+    Preferred Plus:
+      ages: [18, 75]
+      build_column: Pref Plus
+      bp_under60: {sys: 135, dia: 85, treated_ok: true}
+      bp_60plus: {sys: 140, dia: 88, treated_ok: true}
+      tc_max: 250
+      lipids_treated_ok: true
+      ratio_max: 5.0
+      nicotine_free_years: 5
+      family_history: no_cvd_or_cancer_death_under_60
+      mvr: {max_minor: 1, minor_years: 3, dui_free_years: 10}
+      alcohol_drug_free_years: 10
+      personal_medical: no_cad_stroke_dm_cancer_ever_and_no_current_ratable
+      avocation: none_requiring_fe
+      travel_tiers: [A, B]
+      min_face: 100000
+    Preferred:
+      ages: [18, 80]
+      build_column: Preferred
+      bp_under60: {sys: 140, dia: 90, treated_ok: true}
+      bp_60plus: {sys: 145, dia: 90, treated_ok: true}
+      tc_max: 280
+      lipids_treated_ok: true
+      ratio_max: 5.5
+      nicotine_free_years: 3
+      family_history: max_one_cvd_or_cancer_death_under_60
+      mvr: {max_minor: 2, minor_years: 3, dui_free_years: 5}
+      alcohol_drug_free_years: 5
+      personal_medical: chapter_caps
+      avocation: fe_max_2_50          # AVO-1.4
+      travel_tiers: [A, B, C]
+      travel_c_max_weeks: 4
+      min_face: 0
+    Standard Plus:
+      ages: [18, 80]
+      build_column: Std Plus
+      bp_under60: {sys: 145, dia: 90, treated_ok: true}
+      bp_60plus: {sys: 150, dia: 92, treated_ok: true}
+      tc_max: 300
+      lipids_treated_ok: true
+      ratio_max: 6.5
+      nicotine_free_years: 2
+      family_history: any
+      mvr: {max_minor: 3, minor_years: 3, dui_free_years: 3}
+      alcohol_drug_free_years: 3
+      personal_medical: chapter_caps
+      avocation: fe_permitted
+      travel_tiers: [A, B, C, D]
+      min_face: 0
+  standard_plus_rule: {rule: CLS-5.2, max_failed_preferred_rows: 2}
+  family_history_waived_age: 70       # CLS-5.4 / FH-4
+  preferred_tobacco:                  # CLS-5.6
+    rule: CLS-5.6
+    no_cigarettes_months: 12
+    meets_rows_of: Preferred
+    except_rows: [nicotine_free_years]
+
+credits:                # CLS-6
+  max_total: -50
+  floor_class: Standard
+  items:
+    - {id: CLS-6.1, desc: "TC/HDL <= 3.5 untreated", amount: -15}
+    - {id: CLS-6.2, desc: "BP avg <= 125/80 untreated", amount: -10}
+    - {id: CLS-6.3, desc: "both parents alive past 80 or died after 80 of non-CVD/cancer", amount: -15}
+    - {id: CLS-6.4, desc: "documented regular exercise in APS + resting pulse <= 65", amount: -10}
+    - {id: CLS-6.5, desc: "NT-proBNP < 50 (age 50+)", amount: -10}
+    - {id: CLS-6.6, desc: "normal stress test/echo within 24 mo (age 50+, non-cardiac)", amount: -10}
+  excluded_chapters: [CV, CA, ALC, DRG]   # exception: CV-1.2 LDL/stress modifier
+  excluded_if_gross_debits_ge: 150
+
+postpone_triggers:      # CLS-7
+  - {id: CLS-7.1, trigger: pending_workup, reconsider: "results + 3 mo"}
+  - {id: CLS-7.2, trigger: surgery_scheduled_or_within_3mo, months: 3}
+  - {id: CLS-7.3, trigger: cancer_active_treatment, months: "per CA"}
+  - {id: CLS-7.4, trigger: mi_stent_cabg_stroke_within_6mo, months: 6}
+  - {id: CLS-7.5, trigger: complicated_pregnancy, months: 3}
+  - {id: CLS-7.6, trigger: dui_within_12mo_or_suspended, months: 12}
+  - {id: CLS-7.7, trigger: substance_treatment_within_12mo, months: 12}
+  - {id: CLS-7.8, trigger: psych_hospitalization_within_12mo, months: 12}
+  - {id: CLS-7.9, trigger: unexplained_weight_loss_10pct_6mo, reconsider: "workup complete"}
+  - {id: CLS-7.10, trigger: pending_felony_charges, reconsider: disposition}
+  - {id: CLS-7.11, trigger: underweight_unexplained, reconsider: workup}
+
+decline_triggers:       # CLS-8
+  - {id: CLS-8.1, trigger: net_debits_over_limit}
+  - {id: CLS-8.2, trigger: chapter_decline}
+  - {id: CLS-8.3, trigger: two_dui_5yr_or_dui_injury_10yr}
+  - {id: CLS-8.4, trigger: hard_drugs_within_5yr}
+  - {id: CLS-8.5, trigger: incarcerated_or_released_under_2yr}
+  - {id: CLS-8.6, trigger: not_present_in_us_at_signing}
+  - {id: CLS-8.7, trigger: multiple_material_misrep}
+  - {id: CLS-8.8, trigger: overinsured_over_2x}
+  - {id: CLS-8.9, trigger: terminal_or_adl_or_cognitive}
+
+worksheet_steps:        # CLS-4
+  - eligibility
+  - ladder
+  - knockouts
+  - impairment_debits
+  - credits
+  - net_to_class
+  - preferred_matrix_and_caps
+  - flat_extras
+  - riders
+  - amount

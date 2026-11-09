@@ -1,0 +1,174 @@
+# Mirrors guidelines.md §HTN (BP debits), LIP, TOB, FH, MVR, ALC, DRG, OCC, AVO, AVI, TRV, FIN, FN.
+
+htn:
+  rule: HTN
+  # rows: [max_sys, max_dia, debits]; use worse of sys/dia (HTN-1); beyond last row -> postpone
+  rows: [[140, 90, 0], [150, 95, 25], [160, 100, 50], [170, 105, 75], [180, 110, 100]]
+  over_last: postpone
+  age60_systolic_row_relief: 1          # HTN-2
+  lvh: 25                               # HTN-3
+  retinopathy: 25
+  resistant_3plus_agents: {debits: 25, best_class: Standard}   # HTN-4
+  best_class_by_agents: {1: Preferred Plus, 2: Preferred, 3: Standard}   # HTN-5
+  order_aps_if: {agents_ge: 2, avg_over: [150, 95]}
+
+lipids:
+  rule: LIP-3
+  rows:   # [tc_max, ratio_max, debits]; worse of TC / ratio row (LIP-3.1)
+    - [300, 7.0, 0]
+    - [350, 8.0, 25]
+    - [400, 9.0, 50]
+  over_last: {debits: 75, order: [APS]}
+  hdl_under_30: 15                       # LIP-4, only if ratio row not rated
+  triglycerides: [[500, 0], [1000, 25]]  # LIP-5; >1000 -> 50
+  triglycerides_over_last: 50
+  nonfasting_ignore_trig: true           # LIP-6
+
+tobacco:
+  cigarette_months_tobacco_ladder: 12    # TOB-2.1
+  cigarette_best_class: Standard Tobacco
+  quit_ladder_years:                     # TOB-2.2/2.3: years since last use -> best class
+    - [1, 2, Standard]
+    - [2, 3, Standard Plus]
+    - [3, 5, Preferred]
+    - [5, 10, Preferred Plus]
+    - [10, null, Elite]
+  cigars: {max_per_year: 12, requires_negative_cotinine: true, best_class: Preferred}   # TOB-3.1
+  other_products_tobacco_ladder: [pipe, chew, snuff, vape, heated, nrt]                 # TOB-3.2
+  cotinine:                              # TOB-4
+    urine_positive: 200
+    saliva_positive: 30
+    urine_borderline: [100, 199]
+    borderline_best_class: Standard Plus
+    legacy_before_year: 2019
+    legacy_cutoff: 500
+  cessation_rx: [varenicline, bupropion]  # TOB-5
+  heavy_history: {pack_years: 30, min_age: 50, debits_if_no_fev1: 25}   # TOB-2.4
+
+family_history:
+  relatives: [father, mother, brother, sister]
+  cvd: [CAD, MI, stroke, cardiomyopathy, sudden cardiac death]
+  cancer: [breast, ovary, colon, prostate, pancreas, melanoma]
+  two_cvd_deaths_under_60_debits: 25     # FH-2
+  waived_age: 70
+  unknown_best: Preferred                # FH-1.2
+  hereditary_untested_best: Preferred    # FH-3
+
+mvr:
+  rule: MVR-3
+  minor_3yr: [[3, 0], [4, 25], [6, 50]]   # [max count, debits]; >=7 decline
+  minor_decline_at: 7
+  major_5yr: {1: 25, 2: 75}               # >=3 decline
+  major_decline_at: 3
+  dui:                                    # years since DUI
+    - {min: 0, max: 1, outcome: postpone, months: 12}
+    - {min: 1, max: 2, debits: 75, best_class: Standard}
+    - {min: 2, max: 5, debits: 25, best_class: Standard Plus}
+    - {min: 5, max: 10, debits: 0, best_class: Preferred}
+  two_dui_5yr: decline
+  at_fault_accident: minor
+  at_fault_injury: major
+
+alcohol:
+  rule: ALC
+  drinks_rows:  # [max drinks/wk, debits, best_class]
+    - [14, 0, null]
+    - [21, 25, Standard Plus]
+    - [35, 50, Standard]          # 50-75 range; 75 if abnormal labs
+  over_35: {debits: 100, md: true}
+  abnormal_labs_row: 2            # abnormal LFT/CDT -> 22–35 row
+  aud_abstinence:                 # years abstinent after treatment
+    - {max: 1, outcome: postpone}
+    - {max: 2, debits: 75}
+    - {max: 5, debits: 25}
+    - {max: null, debits: 0, best_class: Preferred, pp_after_years: 10}
+  relapse_add: 50
+  relapse_decline_count: 2
+  use_higher_source: true         # ALC-1
+
+drugs:
+  hard: {within_years: 5, outcome: decline, abstinent_5_10: 50, abstinent_over_10: {debits: 0, best_class: Standard Plus}}
+  marijuana:                      # DRG-3, uses per week
+    - {max: 2, debits: 0, best_class: Preferred Plus}
+    - {max: 7, debits: 0, best_class: Standard Plus}
+    - {max: null, debits: 25, best_class: Standard}
+  oud_maintenance: {under_2yr: decline, stable_2yr: 100}
+
+occupation:
+  classes:
+    1A: {fe: 0}
+    2A: {fe: 0}
+    3A: {fe: 0, no_elite: [police, firefighter]}
+    4A: {fe: [2.5, 5.0]}
+    5A: {fe: 7.5, or: decline, authority: Senior UW}
+  military_deploy_12mo: postpone
+
+avocations:
+  scuba:
+    - {when: "<=100ft certified <=50 dives", fe: 0}
+    - {when: "100-130ft or >50 dives", fe: 2.5}
+    - {when: ">130ft cave/wreck/solo", fe: 5.0}
+    - {when: ">200ft", outcome: decline}
+  skydiving:
+    - {when: "<=50 jumps/yr", fe: 2.5}
+    - {when: ">50 jumps/yr or wingsuit", fe: 5.0}
+    - {when: "BASE", outcome: decline}
+  climbing:
+    - {when: "<=14000ft", fe: 0}
+    - {when: "14000-20000ft", fe: 3.0}
+    - {when: ">20000ft or technical solo", fe: 7.5}
+    - {when: ">26000ft", outcome: decline}
+  motor_racing:
+    - {when: "amateur <=10 events", fe: 2.5}
+    - {when: "pro or >150mph", fe: 5.0, exclusion_option: true}
+  hang_gliding:
+    - {when: "<=25 flights", fe: 2.5}
+    - {when: ">25 flights or competition", fe: 5.0}
+  heli_skiing: [{when: any, fe: 2.5}]
+  rodeo: [{when: competitive, fe: 5.0}]
+  preferred_max_fe: 2.5          # AVO-1.4; above -> best Standard Plus
+  intent_to_stop_temporary_years: 2
+
+aviation:
+  rule: AVI-1
+  profiles:
+    - {when: ">=100 hrs, <=200 hrs/yr, IFR, age<=70", fe: 0}
+    - {when: ">=100 hrs, no IFR, <=100 hrs/yr", fe: 0}
+    - {when: ">=100 hrs, no IFR, >100 hrs/yr", fe: 2.5}
+    - {when: "<100 total hrs", fe: 2.5, years: 2}
+    - {when: "homebuilt/experimental/ultralight", fe: [2.5, 5.0]}
+    - {when: "crop dusting/firefighting/test/aerobatic", fe: [5.0, 10.0], exclusion_option: true}
+    - {when: "age 71+", fe_min: 2.5}
+  medical_rated_ge_75: exclusion_or_decline
+  commercial_airline: none
+
+travel:
+  rule: TRV
+  # tier -> [<=4wk, 4-13wk, >13wk]
+  A: [none, none, none]
+  B: [none, none, {best_class: Preferred}]
+  C: [{best_class: Preferred}, {fe: 2.5, or_best_class: Standard}, {fe: 5.0, max_face: 1000000}]
+  D: [decline, decline, decline]
+
+financial:
+  rule: FIN-1
+  multiples: [[18, 40, 30], [41, 50, 20], [51, 60, 15], [61, 65, 10], [66, 70, 5]]
+  age_71plus_networth_pct: 0.5
+  nonworking_spouse: {ratio: 1.0, max: 3000000}
+  student_max: 500000
+  tolerance_issue: 0.10          # FIN-2.1
+  counter_offer_up_to: 1.00      # FIN-2.2
+  decline_over: 1.00             # FIN-2.4
+  key_person_multiple: 10
+
+foreign_national:
+  rule: FN-1
+  citizen_abroad: {A: 5000000, B: 5000000, C: {max: 1000000, best_class: Standard}, D: decline}
+  green_card: as_citizen
+  eligible_visas: [H-1B, L-1, E-2, O-1, TN]
+  visa_min_months_us: 12
+  visa_best_class: Preferred
+  visa_max_face: 3000000
+  ineligible_visas: [F-1, B-1, B-2, none]
+  f1_dependent: {max_face: 250000, best_class: Standard}
+  recent_immigrant_years: 5

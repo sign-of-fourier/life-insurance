@@ -1,0 +1,221 @@
+# Underwriter personas for Phase 6 noisy-note rendering. All invented.
+# Rates are per-opportunity probabilities.
+#   sentences: 0 = pure fragments, 1 = full sentences
+#   abbrev: {t1, t2, t3} probability of abbreviating when an abbreviation exists in that tier
+#   typo: per-word typo rate | arith_err: per-worksheet chance of a wrong sum (golden is right)
+#   omit: per-trace-step chance the step is not written | wrong_final: chance stated decision differs w/o grey basis
+#   leniency: -1 (always strictest option in GRY range) .. +1 (always most lenient)
+#   cite_rules: chance a worksheet line cites a rule id | case: lower | upper | mixed | normal
+#   entries: how observations are timestamped: per_doc (one entry per evidence arrival) | batch (few big entries) | final_only
+#   worksheet: A debit_grid | B shorthand_list | C freeform_math | D checklist_partial
+formats:
+  A: {name: debit_grid, desc: "table-like lines: item | rule | debits, total, class"}
+  B: {name: shorthand_list, desc: "one-line items with arrows, minimal structure"}
+  C: {name: freeform_math, desc: "running arithmetic in prose: 'htn +25, bld +50 = 75 -> C'"}
+  D: {name: checklist_partial, desc: "CLS-4 steps as a checklist, some left blank"}
+
+personas:
+  uw_01:
+    name: R. Okafor
+    years: 24
+    level: Senior UW
+    sentences: 0.8
+    abbrev: {t1: 0.6, t2: 0.7, t3: 0.2}
+    typo: 0.005
+    arith_err: 0.01
+    omit: 0.05
+    wrong_final: 0.0
+    leniency: 0.0
+    cite_rules: 0.9
+    case: normal
+    entries: per_doc
+    worksheet: A
+    quirks: [pnr, dbl-ck]
+    voice: "methodical, cites rules, explains grey-area choices"
+  uw_02:
+    name: D. Lindqvist
+    years: 3
+    level: UW I
+    sentences: 0.9
+    abbrev: {t1: 0.3, t2: 0.4, t3: 0.05}
+    typo: 0.01
+    arith_err: 0.05
+    omit: 0.03
+    wrong_final: 0.03
+    leniency: -0.5
+    cite_rules: 0.6
+    case: normal
+    entries: per_doc
+    worksheet: D
+    quirks: [chk w/MD]
+    voice: "junior, over-explains, cautious, asks MD a lot, occasional math slip"
+  uw_03:
+    name: "M. 'Mags' Ferreira"
+    years: 31
+    level: Senior UW
+    sentences: 0.1
+    abbrev: {t1: 0.95, t2: 0.95, t3: 0.8}
+    typo: 0.02
+    arith_err: 0.02
+    omit: 0.30
+    wrong_final: 0.01
+    leniency: 0.4
+    cite_rules: 0.15
+    case: lower
+    entries: batch
+    worksheet: B
+    quirks: [nbd, B-, DNR-UW, zz]
+    voice: "veteran, extremely terse, skips 'obvious' steps, lenient on grey areas"
+  uw_04:
+    name: J. Thibodeaux
+    years: 12
+    level: UW II
+    sentences: 0.4
+    abbrev: {t1: 0.8, t2: 0.8, t3: 0.5}
+    typo: 0.01
+    arith_err: 0.03
+    omit: 0.12
+    wrong_final: 0.01
+    leniency: -0.2
+    cite_rules: 0.5
+    case: mixed
+    entries: per_doc
+    worksheet: C
+    quirks: [rs, lsp]
+    voice: "running math in prose, mixes caps, mid-level detail"
+  uw_05:
+    name: P. Raman
+    years: 8
+    level: UW II
+    sentences: 0.6
+    abbrev: {t1: 0.7, t2: 0.7, t3: 0.4}
+    typo: 0.008
+    arith_err: 0.02
+    omit: 0.08
+    wrong_final: 0.0
+    leniency: 0.0
+    cite_rules: 0.7
+    case: normal
+    entries: per_doc
+    worksheet: A
+    quirks: [KTA, ghost, stale]
+    voice: "organized; heavy on requirement tracking; notes every order/receipt"
+  uw_06:
+    name: S. Kowalczyk
+    years: 19
+    level: Senior UW
+    sentences: 0.2
+    abbrev: {t1: 0.9, t2: 0.9, t3: 0.7}
+    typo: 0.03
+    arith_err: 0.04
+    omit: 0.20
+    wrong_final: 0.02
+    leniency: -0.6
+    cite_rules: 0.2
+    case: upper
+    entries: batch
+    worksheet: B
+    quirks: [ko, "cap@", BLu, Q-flip]
+    voice: "ALL CAPS, strict, distrusts applicants, rounds borderlines adversely"
+  uw_07:
+    name: T. Nakamura-Hale
+    years: 6
+    level: UW I
+    sentences: 0.3
+    abbrev: {t1: 0.8, t2: 0.6, t3: 0.3}
+    typo: 0.02
+    arith_err: 0.03
+    omit: 0.15
+    wrong_final: 0.02
+    leniency: 0.2
+    cite_rules: 0.3
+    case: lower
+    entries: per_doc
+    worksheet: C
+    quirks: [nfz, "?"]
+    voice: "texting style, question marks for open items, lowercase"
+  uw_08:
+    name: L. Abernathy
+    years: 27
+    level: CUO
+    sentences: 0.7
+    abbrev: {t1: 0.7, t2: 0.9, t3: 0.3}
+    typo: 0.004
+    arith_err: 0.0
+    omit: 0.25
+    wrong_final: 0.0
+    leniency: 0.1
+    cite_rules: 0.4
+    case: normal
+    entries: final_only
+    worksheet: D
+    quirks: [GRYd, CL5]
+    voice: "writes one summary at the end; omits routine items; authoritative"
+  uw_09:
+    name: K. Mbeki
+    years: 10
+    level: UW II
+    sentences: 0.5
+    abbrev: {t1: 0.6, t2: 0.7, t3: 0.6}
+    typo: 0.01
+    arith_err: 0.02
+    omit: 0.10
+    wrong_final: 0.01
+    leniency: 0.0
+    cite_rules: 0.5
+    case: normal
+    entries: per_doc
+    worksheet: A
+    quirks: [3P-clr, lab-clr, PMclr, "√"]
+    voice: "status-code style: clears sections with tier-3 tags"
+  uw_10:
+    name: A. Gustafsson
+    years: 15
+    level: UW II
+    sentences: 0.35
+    abbrev: {t1: 0.85, t2: 0.85, t3: 0.65}
+    typo: 0.015
+    arith_err: 0.03
+    omit: 0.18
+    wrong_final: 0.02
+    leniency: 0.5
+    cite_rules: 0.25
+    case: mixed
+    entries: batch
+    worksheet: C
+    quirks: [BLd, GRYd, rs]
+    voice: "lenient, rounds borderlines favorably, writes in bursts"
+  uw_11:
+    name: H. Castellanos
+    years: 4
+    level: UW I
+    sentences: 0.75
+    abbrev: {t1: 0.5, t2: 0.5, t3: 0.15}
+    typo: 0.02
+    arith_err: 0.06
+    omit: 0.06
+    wrong_final: 0.04
+    leniency: -0.3
+    cite_rules: 0.45
+    case: normal
+    entries: per_doc
+    worksheet: D
+    quirks: ["?", chk w/MD]
+    voice: "careful but error-prone math; sometimes picks wrong table from debits"
+  uw_12:
+    name: "B. 'Doc' Whitcombe"
+    years: 35
+    level: Senior UW
+    sentences: 0.15
+    abbrev: {t1: 1.0, t2: 1.0, t3: 0.9}
+    typo: 0.025
+    arith_err: 0.01
+    omit: 0.35
+    wrong_final: 0.01
+    leniency: 0.3
+    cite_rules: 0.05
+    case: upper
+    entries: final_only
+    worksheet: B
+    quirks: [zz, nbd, cpfwd, worst-doc, DD]
+    voice: "near-cryptic; nearly every token abbreviated; legacy rider names (DBA, KR)"

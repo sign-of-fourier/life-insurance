@@ -1,0 +1,39 @@
+# guidelines.md §LAB. Canonical units = US conventional.
+conversions:      # LAB-1
+  cholesterol_mmol_to_mgdl: 38.67
+  glucose_mmol_to_mgdl: 18.0
+  creatinine_umol_to_mgdl: 0.011312   # 1/88.4
+  a1c_ifcc_to_ngsp: {divide: 10.929, add: 2.15}
+analytes:
+  glucose_fasting: {unit: mg/dL, normal_max: 109, actions: [[125, check_a1c], [null, dm_workup]]}
+  glucose_random: {unit: mg/dL, normal_max: 139, dm_pending_at: 200}
+  a1c: {unit: "%", normal_max: 5.6, prediabetes: [5.7, 6.4], diabetes_min: 6.5}
+  fructosamine: {unit: umol/L, normal_max: 285, map: [[350, "a1c 6.0-7.0"], [null, "a1c >7.5"]], legacy_before_year: 2015}
+  ast: {unit: U/L, uln: 40, rules: [[1.5, 0], [3.0, 25], [5.0, aps], [null, postpone]]}   # x ULN
+  alt: {unit: U/L, uln: 45, rules: [[1.5, 0], [3.0, 25], [5.0, aps], [null, postpone]]}
+  ggt: {unit: U/L, uln: 60, rules: [[2.0, 0], [3.0, 25], [null, 50]], cdt_elevated_add: 25}
+  alk_phos: {unit: U/L, uln: 130, rules: [[1.5, 0], [null, 25]]}
+  bilirubin: {unit: mg/dL, normal_max: 1.5, gilbert_max: 3.0}
+  cdt: {unit: "%dCDT", normal_max: 1.6, rules: [[2.4, 25], [null, 50]]}
+  egfr: {unit: mL/min/1.73m2, see: REN-1}
+  creatinine: {unit: mg/dL}
+  urine_protein: {unit: mg/dL, normal_max: 30, see: REN-2}
+  urine_glucose: {unit: qual, normal: negative}
+  urine_rbc: {unit: /hpf, normal_max: 5}
+  hemoglobin: {unit: g/dL, normal: {M: [13.0, 17.5], F: [12.0, 15.5]}, postpone_below: 10.0, unexplained_low_debits: 25}
+  psa: {unit: ng/mL, age_max: [[49, 2.5], [59, 3.5], [69, 4.5], [null, 6.5]], postpone_untreated_over: 10}
+  nt_probnp: {unit: pg/mL, normal_max: {under75: 124, "75plus": 449}, rules: [[299, 25], [899, 75], [null, decline]]}
+  albumin: {unit: g/dL, normal_min: 3.5, low_debits: 25}
+  hiv: {unit: qual, see: IMM-1}
+  cocaine: {unit: qual, positive: DRG-2}
+  cotinine_urine: {unit: ng/mL, see: TOB-4}
+  cotinine_saliva: {unit: ng/mL, see: TOB-4}
+  tc: {unit: mg/dL}
+  hdl: {unit: mg/dL}
+  ldl: {unit: mg/dL}
+  triglycerides: {unit: mg/dL}
+  tc_hdl_ratio: {unit: ratio}
+renal:            # REN-1 eGFR -> debits by age
+  egfr_rows: [[60, 0], [45, {under60: 25, "60plus": 0}], [30, 75], [15, 150]]
+  egfr_under_15: decline
+  proteinuria: [[100, 25], [300, 50], [null, 100]]   # mg/dL upper bounds above normal_max 30

@@ -1,0 +1,43 @@
+# guidelines.md §REQ
+rule: REQ-1
+age_bands: [[18, 40], [41, 50], [51, 60], [61, 70], [71, 80]]
+amount_bands: [[0, 250000], [250001, 1000000], [1000001, 3000000], [3000001, 10000000], [10000001, null]]
+# grid[age_band][amount_band]; ACCEL = accelerated path (REQ-3); CUO = refer
+grid:
+  - [[ACCEL], [ACCEL], [PM, B, U], [PM, B, U, EKG, FINQ], [PM, B, U, EKG, FINQ, APS, INSP]]
+  - [[ACCEL], [PM, B, U], [PM, B, U], [PM, B, U, EKG, FINQ], [PM, B, U, EKG, FINQ, APS, NTPROBNP]]
+  - [[PM, S], [PM, B, U], [PM, B, U, EKG], [PM, B, U, EKG, FINQ, APS], [PM, B, U, EKG, FINQ, APS, STRESS]]
+  - [[PM, B, U], [PM, B, U, EKG], [PM, B, U, EKG, APS], [PM, B, U, EKG, APS, FINQ], [CUO]]
+  - [[PM, B, U, APS, COG], [PM, B, U, EKG, APS, COG], [PM, B, U, EKG, APS, COG, FINQ], [CUO], [CUO]]
+always: [MIB, RX, MVR]
+mvr_age_limit: 75          # 76+ only if still driving
+accel_fallback: next_amount_column   # REQ-3: failing accel -> requirements of next column
+accel_allowed_part2_yes: [seasonal_allergy, minor_injury_resolved, pregnancy_uncomplicated, contraception, acne, gerd]
+accel_mib_block_categories: [1, 2, 3, 4, 5, 6]
+accel_mib_block_years: 10
+accel_no_elite: true
+fluids_for_foreign_nationals: true   # FN-2
+aps:
+  max_routine: 2            # REQ-4
+  stale_months: 24          # APS-3 / GEN-5
+  outstanding_close_days: 45
+lab_validity_months: {default: 6, under50_face_le_1m: 12}   # GEN-5
+codes:
+  PM: paramedical exam (ht, wt, BP x3, pulse)
+  B: blood profile
+  U: urinalysis
+  S: oral fluid panel (cotinine, HIV, cocaine)
+  EKG: resting 12-lead EKG
+  APS: attending physician statement
+  COG: cognitive screen
+  FINQ: financial questionnaire
+  NTPROBNP: NT-proBNP (added to blood)
+  STRESS: exercise stress test (MD)
+  INSP: inspection report
+uw_triggers:               # REQ-2
+  - {id: REQ-2.1, when: "impairment with possible debits >= 50", order: [APS]}
+  - {id: REQ-2.2, when: "app vs Rx/MIB discrepancy on ratable condition", order: [APS, FLUIDS_IF_ACCEL]}
+  - {id: REQ-2.3, when: "positive/ambiguous tobacco evidence on accel case", order: [S]}
+  - {id: REQ-2.4, when: "DUI within 5 yrs", order: [ALCQ, B]}
+  - {id: REQ-2.5, when: "aviation/avocation disclosed", order: [AVIQ_OR_AVOQ]}
+  - {id: REQ-2.6, when: "foreign national or Tier C travel > 4 wks", order: [FORQ]}

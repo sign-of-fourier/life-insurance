@@ -1,0 +1,46 @@
+# MVR violation codes (synthetic, ACD-flavored). class: minor | major | dui | nonmoving | accident | admin
+# Vendors print code + description differently (see vendors.yaml); some print state statute numbers instead.
+codes:
+  S05: {desc: "Speeding 1-5 over limit", class: minor}
+  S10: {desc: "Speeding 6-10 over limit", class: minor}
+  S15: {desc: "Speeding 11-15 over limit", class: minor}
+  S20: {desc: "Speeding 16-20 over limit", class: minor}
+  S25: {desc: "Speeding 21-25 over limit", class: minor}
+  S26: {desc: "Speeding 26+ over limit", class: major}
+  S99: {desc: "Speeding, amount not reported", class: minor}
+  M01: {desc: "Failure to yield right of way", class: minor}
+  M02: {desc: "Disregard traffic signal / stop sign", class: minor}
+  M03: {desc: "Improper lane change", class: minor}
+  M04: {desc: "Following too closely", class: minor}
+  M05: {desc: "Improper turn", class: minor}
+  M06: {desc: "Failure to signal", class: minor}
+  M07: {desc: "Use of handheld device while driving", class: minor}
+  M08: {desc: "Seat belt violation", class: nonmoving}
+  M09: {desc: "Careless driving", class: minor}
+  M10: {desc: "Passing school bus", class: major}
+  R01: {desc: "Reckless driving", class: major}
+  R02: {desc: "Driving while license suspended/revoked", class: major}
+  R03: {desc: "Leaving scene of accident (hit and run)", class: major}
+  R04: {desc: "Eluding / fleeing police", class: major}
+  R05: {desc: "Racing on highway", class: major}
+  R06: {desc: "Vehicular assault / homicide", class: major, note: "with injury/fatality -> CLS-8.3 if alcohol involved"}
+  D01: {desc: "DUI - alcohol", class: dui}
+  D02: {desc: "DUI - drugs", class: dui}
+  D03: {desc: "DWI / OWI", class: dui}
+  D04: {desc: "Refusal of chemical test", class: dui}
+  D05: {desc: "DUI with injury", class: dui, note: "CLS-8.3 within 10 yrs"}
+  D06: {desc: "Wet reckless (alcohol-related reckless, plea)", class: dui, note: "treated as DUI"}
+  A01: {desc: "Accident - at fault, property damage", class: accident, counts_as: minor}
+  A02: {desc: "Accident - at fault, injury", class: accident, counts_as: major}
+  A03: {desc: "Accident - not at fault", class: accident, counts_as: none}
+  A04: {desc: "Accident - fault not determined", class: accident, counts_as: none}
+  N01: {desc: "Expired registration", class: nonmoving}
+  N02: {desc: "Equipment violation", class: nonmoving}
+  N03: {desc: "No proof of insurance", class: nonmoving}
+  N04: {desc: "Parking violation", class: nonmoving}
+  N05: {desc: "Failure to appear / pay fine", class: admin, note: "may cause suspension; not moving"}
+  L01: {desc: "License suspended - administrative (insurance/fines)", class: admin}
+  L02: {desc: "License suspended - DUI", class: dui, note: "CLS-7.6 if current"}
+  L03: {desc: "License suspended - points", class: admin}
+  L04: {desc: "License reinstated", class: admin}
+  L05: {desc: "SR-22 filing required", class: admin, note: "implies prior major/DUI; look for it"}

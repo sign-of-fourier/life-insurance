@@ -1,0 +1,58 @@
+# Occupation classes (guidelines §OCC). fe = flat extra per $1000; tags drive rider/elite rules.
+occupations:
+  accountant: {class: 1A}
+  attorney: {class: 1A}
+  software engineer: {class: 1A}
+  physician: {class: 1A}
+  dentist: {class: 1A}
+  pharmacist: {class: 1A}
+  financial analyst: {class: 1A}
+  marketing manager: {class: 1A}
+  retail store manager: {class: 1A}
+  architect: {class: 1A}
+  professor: {class: 1A}
+  administrative assistant: {class: 1A}
+  insurance underwriter: {class: 1A}
+  data scientist: {class: 1A}
+  graphic designer: {class: 1A}
+  homemaker: {class: 1A, tags: [non_earning]}
+  retired: {class: 1A, tags: [non_earning]}
+  student: {class: 1A, tags: [non_earning]}
+  unemployed: {class: 1A, tags: [non_earning]}
+  registered nurse: {class: 2A}
+  teacher: {class: 2A}
+  dental hygienist: {class: 2A}
+  real estate agent: {class: 2A}
+  pharmaceutical sales rep: {class: 2A}
+  chef: {class: 2A}
+  hair stylist: {class: 2A}
+  mechanic: {class: 2A}
+  plumber: {class: 2A}
+  carpenter: {class: 2A}
+  machinist: {class: 2A}
+  warehouse supervisor: {class: 2A}
+  paramedic: {class: 2A}
+  delivery driver: {class: 2A}
+  farmer: {class: 2A}
+  HVAC technician: {class: 3A}
+  electrician: {class: 3A}
+  roofer: {class: 3A, note: "<=3 stories; >3 stories -> 4A"}
+  police officer: {class: 3A, tags: [no_elite]}
+  firefighter: {class: 3A, tags: [no_elite]}
+  correctional officer: {class: 3A, tags: [no_elite]}
+  construction laborer: {class: 3A}
+  long-haul truck driver: {class: 3A, note: "4A if MVR has major/DUI in 5 yrs"}
+  lineworker (utility): {class: 3A}
+  active duty military (non-deploying): {class: 3A}
+  commercial fisherman: {class: 4A, fe: 5.0}
+  logger: {class: 4A, fe: 5.0}
+  structural iron worker: {class: 4A, fe: 2.5}
+  offshore oil rig worker: {class: 4A, fe: 2.5}
+  tower climber (telecom): {class: 4A, fe: 2.5}
+  underground miner: {class: 4A, fe: 2.5}
+  crop duster pilot: {class: 4A, fe: 5.0, note: "also AVI-1"}
+  bomb disposal technician: {class: 5A, fe: 7.5}
+  wildland smoke jumper: {class: 5A, fe: 7.5}
+  private security contractor (overseas): {class: 5A, fe: 7.5, note: "TRV-1 also"}
+  special forces (deploying): {class: 5A, note: "OCC-1 postpone if deploying within 12 mo"}
+  airline pilot: {class: 1A, note: "AVI-2 no aviation rating"}

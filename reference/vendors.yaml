@@ -1,0 +1,202 @@
+# Source-document vendors / layouts + OCR-extraction noise profiles (all names invented).
+# Used by Phase 4 renderers (source "PDFs") and extract.py (noisy vendor-specific JSON).
+
+lab_vendors:
+  MIL:
+    name: Meridian Insurance Laboratories
+    country: US
+    years_active: [2010, 2026]
+    flag_style: letter          # H / L / C(ritical) in a FLAG column
+    units: conventional
+    date_format: "%m/%d/%Y"
+    panels:                     # how analytes are grouped/printed
+      lipid: {mode: separate, analytes: [tc, hdl, ldl, triglycerides, tc_hdl_ratio]}
+      liver: {mode: separate, analytes: [ast, alt, ggt, alk_phos, bilirubin, albumin]}
+      renal: {mode: separate, analytes: [creatinine, egfr]}
+      glucose: {mode: separate, analytes: [glucose_fasting, a1c]}
+    prints_reference_ranges: true
+    aliases: {tc: CHOLESTEROL, hdl: HDL CHOL, tc_hdl_ratio: CHOL/HDL RATIO, a1c: HEMOGLOBIN A1C, egfr: eGFR (CKD-EPI 2021), cotinine_urine: COTININE (U), nt_probnp: NT-proBNP}
+    json_schema: mil.v3         # extracted JSON shape family
+  APX:
+    name: Apex Risk Analytics Lab
+    country: US
+    years_active: [2016, 2026]
+    flag_style: none            # never flags; UW must apply thresholds (LAB-1)
+    units: conventional
+    units_printed: sometimes    # 40% of lines omit the unit column
+    date_format: "%Y-%m-%d"
+    panels:
+      lipid: {mode: combined, format: "{tc}/{hdl}/{tc_hdl_ratio}", label: "LIPID (CHOL/HDL/RATIO)"}   # 3 values in one cell
+      liver: {mode: combined, format: "{ast}/{alt}", label: "AST/ALT", separate: [ggt, alk_phos, bilirubin]}
+      renal: {mode: separate, analytes: [creatinine, egfr]}
+      glucose: {mode: separate, analytes: [a1c, glucose_random]}
+    prints_reference_ranges: false
+    aliases: {tc: CHOL, hdl: HDL, tc_hdl_ratio: RATIO, a1c: A1C, ggt: GGTP, cotinine_urine: NIC/COT, cdt: "%CDT"}
+    json_schema: apx.flat
+  HRT:
+    name: Heritage Diagnostic Services
+    country: US
+    years_active: [2005, 2018]  # legacy vendor; only appears on old reports / old APS attachments
+    flag_style: asterisk_critical_only   # "*" only for critical values
+    units: conventional
+    date_format: "%m-%d-%y"
+    legacy_methods:             # LAB-4 / TOB-4.4
+      a1c_replaced_by_fructosamine_before: 2015
+      cotinine_qualitative_before: 2019   # prints POS/NEG at 500 ng/mL cutoff
+      ldl_direct: false
+    panels:
+      lipid: {mode: combined, format: "{tc} / {hdl}", label: "CHOL / HDL", omit: [tc_hdl_ratio]}   # 2 not 3
+      liver: {mode: separate, analytes: [ast, alt, ggt]}
+      glucose: {mode: separate, analytes: [glucose_fasting, fructosamine]}
+    prints_reference_ranges: true
+    aliases: {tc: TOTAL CHOL, ggt: GAMMA GT, fructosamine: FRUCTOSAMINE, cotinine_urine: NICOTINE METAB}
+    json_schema: hrt.legacy
+  NGL:
+    name: Northgate Laboratories (Canada)
+    country: CA
+    years_active: [2012, 2026]
+    flag_style: arrow           # ↑ / ↓ inline after value
+    units: SI                   # mmol/L chol & glucose, umol/L creatinine, IFCC mmol/mol A1c (LAB-1 conversions)
+    date_format: "%d/%m/%Y"     # day-first -> date_garbled risk
+    panels:
+      lipid: {mode: separate, analytes: [tc, hdl, ldl, triglycerides], label_ratio: "Non-HDL"}   # prints non-HDL, not ratio (LAB-3)
+      liver: {mode: separate, analytes: [ast, alt, ggt]}
+      glucose: {mode: separate, analytes: [glucose_fasting, a1c]}
+    prints_reference_ranges: true
+    aliases: {tc: Cholesterol total, hdl: HDL-C, a1c: HbA1c (IFCC), creatinine: Creatinine (umol/L)}
+    json_schema: ngl.si
+    used_for: [foreign_nationals, canadian_residents, cross_border]
+
+paramed_vendors:
+  PMX:
+    name: ParaMedEx Examination Services
+    build_format: "Ht {ft}'{in}\"  Wt {lb} lbs"
+    bp_format: "BP#{n}: {sys}/{dia}"
+    readings: 3
+    includes_questions: true    # examiner re-asks Part 2 questions; answers may differ from app
+    json_schema: pmx.v2
+  HSC:
+    name: HealthScreen Mobile Clinicians
+    build_format: "HEIGHT {in} in / WEIGHT {kg} kg"    # metric weight -> unit conversion noise
+    bp_format: "{sys}/{dia} ({position})"
+    readings: 2
+    includes_questions: false
+    json_schema: hsc.flat
+
+rx_vendors:
+  SCR:
+    name: ScriptCheck Rx History
+    layout: chronological        # one row per fill
+    columns: [fill_date, drug_name, strength, qty, days_supply, prescriber, prescriber_specialty, pharmacy]
+    drug_naming: generic
+    lookback_years: 7
+    json_schema: scr.fills
+  RXP:
+    name: RxProfile+
+    layout: grouped_by_drug      # one row per drug: first fill, last fill, # fills
+    columns: [drug_name, first_fill, last_fill, fill_count, prescriber]
+    drug_naming: brand_with_ndc  # "TOPROL XL 50MG TAB (NDC 0186-1090-05)" -> UW must map brand
+    prescriber_specialty: false
+    lookback_years: 5
+    json_schema: rxp.grouped
+
+mib_layouts:
+  MIBF:
+    name: MIB full report
+    shows: [code, report_date, reporting_member_type]
+    json_schema: mib.codes
+  MIBS:
+    name: MIB summary (checking service)
+    shows: [hit_count, code, year_only]     # year only, no month
+    json_schema: mib.summary
+
+mvr_layouts:
+  ACD:
+    name: Vendor-normalized MVR
+    shows: [violation_date, conviction_date, code, description, points]
+    code_set: reference/mvr_codes.yaml
+    json_schema: mvr.acd
+  STATE:
+    name: State-format MVR
+    shows: [violation_date, statute, description_abbrev]   # e.g. "VC 23152(a) DUI ALC" - code must be inferred
+    code_set: state_statute
+    json_schema: mvr.state
+
+app_forms:
+  APP-2019:
+    name: Application form 2019 edition
+    part2_numbering: "Q1..Q28"
+    tobacco_question: "Q4: In the past 5 years have you used tobacco or nicotine in any form?"   # 5-yr window -> details needed
+    json_schema: app19
+  APP-2024:
+    name: Application form 2024 edition (e-app)
+    part2_numbering: "7a..7z, 8a..8k"
+    tobacco_question: "7c: Have you used any tobacco/nicotine product in the last 12 months? If no, date of last use."
+    json_schema: app24
+
+aps_styles:
+  # pages: typical range; abbrev: physician abbreviation density (0-1); ocr: base OCR noise multiplier
+  epic_progress:
+    desc: "Large health system EHR export: header block per page (patient/MRN/DOB), SOAP progress notes, vitals table, med list, problem list, results"
+    pages: [3, 12]
+    sections: [header, problem_list, medications, allergies, visit_notes_soap, vitals_flowsheet, results]
+    page_noise: ["Printed by: {user} {datetime}", "Page {n} of {N}", "CONFIDENTIAL - Contains PHI"]
+    abbrev: 0.4
+    ocr: 0.6
+  athena_summary:
+    desc: "Ambulatory EHR clinical summary: encounter list, assessment/plan bullets, structured vitals"
+    pages: [2, 6]
+    sections: [demographics, encounters, assessment_plan, vitals, medications, labs]
+    abbrev: 0.5
+    ocr: 0.6
+  ecw_problem_heavy:
+    desc: "eClinicalWorks-like: long problem list incl. resolved/'r/o' items, terse progress notes, copy-forward text"
+    pages: [2, 8]
+    sections: [problem_list_long, progress_notes_terse, medications, immunizations]
+    copy_forward: true          # same paragraph repeated visit to visit (stale info risk)
+    abbrev: 0.7
+    ocr: 0.7
+  small_practice_typed:
+    desc: "Solo practice, typed letters-style notes, few structured fields, values embedded in prose"
+    pages: [1, 4]
+    sections: [visit_notes_prose]
+    abbrev: 0.5
+    ocr: 0.9
+  handwritten_scan:
+    desc: "Faxed handwritten progress notes, transcribed by OCR; heavy noise, missing words, '[illegible]'"
+    pages: [1, 5]
+    sections: [visit_notes_handwritten]
+    abbrev: 0.9
+    ocr: 2.5
+  specialist_letter:
+    desc: "Consultant letter to PCP: history, exam, impression, recommendations; test results quoted inline"
+    pages: [1, 3]
+    sections: [letter_header, hpi, exam, studies, impression, plan]
+    abbrev: 0.3
+    ocr: 0.5
+  hospital_discharge:
+    desc: "Inpatient discharge summary: admit/discharge dx, hospital course, procedures, discharge meds, follow-up"
+    pages: [2, 6]
+    sections: [admission_info, diagnoses, hospital_course, procedures, discharge_meds, follow_up]
+    abbrev: 0.4
+    ocr: 0.6
+  foreign_translated:
+    desc: "Foreign medical records with certified translation; metric units, day-first dates, translator notes"
+    pages: [1, 5]
+    sections: [translator_cert, original_summary_translated, lab_tables_si]
+    abbrev: 0.2
+    ocr: 1.2
+    units: SI
+
+# Extraction noise (per field / per page probabilities) before the APS-style multiplier.
+ocr_noise:
+  default: {dropped: 0.01, misread_digit: 0.005, unit_lost: 0.01, unit_wrong: 0.002, flag_lost: 0.05,
+            merged_cells: 0.01, split_field: 0.005, truncated_page: 0.0, header_noise: 0.02, date_garbled: 0.005}
+  lab: {dropped: 0.005, misread_digit: 0.003, unit_lost: 0.02, flag_lost: 0.15, merged_cells: 0.03}    # labs: low error, flags often lost
+  paramed: {dropped: 0.01, misread_digit: 0.005}
+  rx: {dropped: 0.02, split_field: 0.01, merged_cells: 0.02}
+  mib: {dropped: 0.01, misread_digit: 0.01}          # a misread MIB digit changes meaning
+  mvr: {dropped: 0.02, date_garbled: 0.01}
+  app: {dropped: 0.01, header_noise: 0.0}
+  aps: {dropped: 0.04, misread_digit: 0.01, truncated_page: 0.03, header_noise: 0.15, date_garbled: 0.02}
+  digit_confusions: {"0": [O, D], "1": [l, I, "7"], "5": [S], "8": [B, "3"], "6": [G], "2": [Z], "9": [g]}

@@ -1,0 +1,273 @@
+# Synthetic MIB-style codebook (invented; resembles the idea, not the real MIB code set).
+# Code = 6 digits: S C C D R Q
+#   SCC (3) condition; first digit S = body system
+#   D   degree / severity / test status
+#   R   source of the information reported to the bureau
+#   Q   qualifier (treatment / timing / prior-insurer action)
+# Generated docs: reference/mib_codebook.md (src/gen_mib.py). Rule refs: guidelines §MIB.
+
+systems:
+  0: General & administrative (build, insurance activity, hazardous activity, driving)
+  1: Cardiovascular
+  2: Digestive & liver
+  3: Nervous system
+  4: Psychiatric & substance use
+  5: Respiratory
+  6: Endocrine & metabolic
+  7: Genitourinary, renal & reproductive
+  8: Neoplasm & blood
+  9: Musculoskeletal, immune, skin & other
+
+degree:   # 4th digit
+  0: unspecified
+  1: history of / resolved
+  2: mild / slight
+  3: moderate
+  4: severe / marked
+  5: abnormal test value, borderline
+  6: abnormal test value, significant
+  7: under investigation / unconfirmed
+  8: treated, reported controlled
+  9: degree not reported
+
+source:   # 5th digit
+  0: applicant admission (prior application)
+  1: attending physician statement / medical records
+  2: lab or paramedical exam
+  3: prescription database
+  4: motor vehicle / public record
+  5: electronic health record (eMed) feed
+  6: claim (health/disability/life)
+  7: other insurer, source not stated
+  8: interview / inspection report
+  9: foreign source
+
+qualifier:  # 6th digit
+  0: none
+  1: surgical treatment
+  2: medication
+  3: hospitalized
+  4: emergency visit
+  5: within past 12 months
+  6: 1–5 years ago
+  7: more than 5 years ago
+  8: recurrence / relapse
+  9: prior insurer rated, postponed or declined
+
+# condition codes: SCC -> {label, maps (impairments.yaml key or null), note?, retired?}
+# maps: null = administrative/irrelevant for rating (MIB-6 or no-rating)
+conditions:
+  # ---- 0 general / administrative
+  "001": {label: Build - overweight, maps: build}
+  "002": {label: Build - underweight, maps: build}
+  "003": {label: Weight loss, unexplained, maps: build}
+  "010": {label: Prior application - life, maps: null, note: insurance activity}
+  "011": {label: Prior application - disability, maps: null}
+  "012": {label: Prior application - LTC, maps: null}
+  "015": {label: Applied multiple carriers within 90 days, maps: null, note: anti-selection alert}
+  "020": {label: Hazardous avocation - unspecified, maps: avocation}
+  "021": {label: Scuba diving, maps: avocation}
+  "022": {label: Skydiving / parachuting, maps: avocation}
+  "023": {label: Motor racing, maps: avocation}
+  "024": {label: Mountaineering, maps: avocation}
+  "025": {label: Aviation - private pilot, maps: aviation}
+  "026": {label: Aviation - student pilot / unusual flying, maps: aviation}
+  "030": {label: Driving record - adverse, maps: mvr}
+  "031": {label: Driving under influence, maps: mvr}
+  "032": {label: License suspended / revoked, maps: mvr}
+  "040": {label: Foreign residence / travel, maps: travel}
+  "045": {label: Criminal record / incarceration, maps: criminal}
+  "050": {label: Tobacco use reported, maps: tobacco}
+  "051": {label: Nicotine test positive, maps: tobacco}
+  "055": {label: Tobacco use denied - inconsistent, maps: tobacco, note: discrepancy alert}
+  "090": {label: Old-format code (pre-2012) - general, maps: null, retired: true, note: "informational only (MIB-3)"}
+
+  # ---- 1 cardiovascular
+  "100": {label: Blood pressure elevated / hypertension, maps: hypertension}
+  "101": {label: Hypertension with end-organ change, maps: hypertension}
+  "105": {label: Blood pressure low, maps: null}
+  "110": {label: Coronary artery disease, maps: cad}
+  "111": {label: Myocardial infarction, maps: cad}
+  "112": {label: Coronary stent / angioplasty, maps: cad}
+  "113": {label: Coronary bypass surgery, maps: cad}
+  "114": {label: Angina / chest pain, maps: cad, note: "chest pain often non-cardiac; corroborate"}
+  "115": {label: Coronary calcium / non-obstructive disease, maps: cad_nonobstructive}
+  "120": {label: Atrial fibrillation / flutter, maps: afib}
+  "121": {label: Supraventricular tachycardia, maps: arrhythmia_other}
+  "122": {label: Ventricular ectopy / PVCs, maps: arrhythmia_other}
+  "123": {label: Conduction disorder / bundle branch block, maps: arrhythmia_other}
+  "124": {label: Pacemaker / implanted device, maps: arrhythmia_other}
+  "125": {label: Syncope, maps: arrhythmia_other}
+  "126": {label: Pre-excitation (WPW), maps: arrhythmia_other}
+  "130": {label: Heart murmur, maps: valve}
+  "131": {label: Valve disorder, maps: valve}
+  "132": {label: Valve replacement / repair, maps: valve}
+  "140": {label: Cardiomyopathy, maps: cardiomyopathy}
+  "141": {label: Heart failure, maps: cardiomyopathy}
+  "150": {label: Peripheral arterial disease, maps: pad_aaa}
+  "151": {label: Aortic aneurysm, maps: pad_aaa}
+  "160": {label: Deep vein thrombosis, maps: pulmonary_embolism}
+  "170": {label: Abnormal EKG, maps: null, note: "corroborate; may be normal variant"}
+  "171": {label: Abnormal stress test, maps: cad}
+  "175": {label: Abnormal echocardiogram, maps: null, note: corroborate}
+  "180": {label: Lipid disorder (legacy cardiovascular placement), maps: lipids, retired: true, note: "pre-2012; now 640"}
+  "190": {label: Old-format cardiovascular code, maps: null, retired: true}
+
+  # ---- 2 digestive & liver
+  "200": {label: Gastroesophageal reflux, maps: benign_no_rating}
+  "201": {label: Barrett's esophagus, maps: barretts}
+  "205": {label: Peptic ulcer, maps: benign_no_rating}
+  "210": {label: Crohn's disease, maps: crohns}
+  "211": {label: Ulcerative colitis, maps: ulcerative_colitis}
+  "212": {label: Irritable bowel syndrome, maps: benign_no_rating}
+  "215": {label: Colon polyps, maps: benign_tumor}
+  "220": {label: Liver function tests abnormal, maps: lft}
+  "221": {label: Fatty liver, maps: fatty_liver}
+  "222": {label: Hepatitis B, maps: hepatitis_b}
+  "223": {label: Hepatitis C, maps: hepatitis_c}
+  "224": {label: Cirrhosis, maps: cirrhosis}
+  "225": {label: Hepatitis, type unspecified, maps: lft, note: "order serology/APS"}
+  "230": {label: Pancreatitis, maps: pancreatitis}
+  "235": {label: Gallbladder disease, maps: benign_no_rating}
+  "240": {label: Bariatric surgery, maps: build}
+  "245": {label: GI bleeding, maps: null, note: "corroborate; cause drives rating"}
+
+  # ---- 3 nervous system
+  "300": {label: Headache / migraine, maps: migraine}
+  "305": {label: Seizure disorder / epilepsy, maps: epilepsy}
+  "306": {label: Single seizure, maps: epilepsy}
+  "310": {label: Transient ischemic attack, maps: tia}
+  "311": {label: Stroke, maps: stroke}
+  "315": {label: Multiple sclerosis, maps: multiple_sclerosis}
+  "316": {label: Demyelinating event / optic neuritis, maps: multiple_sclerosis, note: "may precede MS dx"}
+  "320": {label: Parkinson's disease, maps: parkinsons}
+  "321": {label: Tremor, essential, maps: benign_no_rating}
+  "325": {label: Peripheral neuropathy, maps: neuropathy}
+  "330": {label: Head injury / concussion, maps: tbi}
+  "335": {label: Dementia / memory impairment, maps: cognitive_impairment}
+  "340": {label: Sleep disorder, non-respiratory, maps: insomnia}
+  "345": {label: Vertigo / dizziness, maps: benign_no_rating}
+  "390": {label: Old-format neuro code, maps: null, retired: true}
+
+  # ---- 4 psychiatric & substance
+  "400": {label: Depression, maps: depression_anxiety}
+  "401": {label: Anxiety disorder, maps: depression_anxiety}
+  "402": {label: Adjustment disorder / situational, maps: depression_anxiety}
+  "405": {label: Bipolar disorder, maps: bipolar}
+  "406": {label: Schizophrenia / psychotic disorder, maps: schizophrenia}
+  "410": {label: Attention deficit disorder, maps: adhd}
+  "411": {label: Post-traumatic stress disorder, maps: ptsd}
+  "412": {label: Eating disorder, maps: eating_disorder}
+  "415": {label: Suicide attempt / self-harm, maps: suicide_attempt}
+  "420": {label: Alcohol use - excessive, maps: alcohol}
+  "421": {label: Alcohol use disorder - treated, maps: alcohol_use_disorder}
+  "425": {label: Marijuana use, maps: marijuana}
+  "426": {label: Drug use - cocaine/stimulant, maps: substance_use_hard}
+  "427": {label: Drug use - opioid, maps: substance_use_hard}
+  "428": {label: Drug use - unspecified, maps: substance_use_hard, note: corroborate}
+  "430": {label: Insomnia, maps: insomnia}
+  "490": {label: Old-format psychiatric code, maps: null, retired: true}
+
+  # ---- 5 respiratory
+  "500": {label: Asthma, maps: asthma}
+  "505": {label: Chronic obstructive pulmonary disease, maps: copd}
+  "506": {label: Emphysema, maps: copd}
+  "510": {label: Sleep apnea, maps: sleep_apnea}
+  "515": {label: Sarcoidosis, maps: sarcoidosis}
+  "520": {label: Pulmonary embolism, maps: pulmonary_embolism}
+  "525": {label: Pulmonary nodule, maps: null, note: "workup status drives decision (CLS-7.1)"}
+  "530": {label: Pneumonia, maps: benign_no_rating}
+  "535": {label: Abnormal pulmonary function test, maps: copd}
+  "540": {label: Chronic sinusitis / allergic rhinitis, maps: benign_no_rating}
+
+  # ---- 6 endocrine & metabolic
+  "600": {label: Diabetes mellitus type 2, maps: diabetes_t2}
+  "601": {label: Diabetes mellitus type 1, maps: diabetes_t1}
+  "602": {label: Diabetes, type unspecified, maps: diabetes_t2, note: "type from APS/Rx"}
+  "603": {label: Gestational diabetes, maps: gestational_dm}
+  "605": {label: Glucose elevated / prediabetes, maps: prediabetes}
+  "606": {label: HbA1c elevated, maps: prediabetes, note: "value decides DM-1 vs DM-2"}
+  "610": {label: Hypothyroidism, maps: thyroid}
+  "611": {label: Hyperthyroidism / Graves, maps: thyroid}
+  "612": {label: Thyroid nodule, maps: null, note: "check biopsy"}
+  "620": {label: Adrenal disorder, maps: adrenal_pituitary}
+  "621": {label: Pituitary disorder, maps: adrenal_pituitary}
+  "630": {label: Gout / hyperuricemia, maps: benign_no_rating}
+  "640": {label: Cholesterol / lipids elevated, maps: lipids}
+  "641": {label: Triglycerides elevated, maps: lipids}
+  "650": {label: Vitamin deficiency, maps: benign_no_rating}
+  "690": {label: Old-format endocrine code, maps: null, retired: true}
+
+  # ---- 7 genitourinary, renal, reproductive
+  "700": {label: Protein in urine, maps: proteinuria}
+  "701": {label: Blood in urine, maps: null, note: "LAB-2 urine RBC"}
+  "702": {label: Glucose in urine, maps: null, note: "check A1c"}
+  "705": {label: Chronic kidney disease, maps: ckd}
+  "706": {label: Kidney function abnormal (creatinine/eGFR), maps: ckd}
+  "707": {label: Dialysis, maps: ckd}
+  "708": {label: Kidney transplant, maps: ckd}
+  "710": {label: Kidney stones, maps: benign_no_rating}
+  "711": {label: Polycystic kidney disease, maps: polycystic_kidney}
+  "715": {label: Prostate enlargement, maps: benign_no_rating}
+  "716": {label: PSA elevated, maps: psa}
+  "720": {label: Pregnancy, maps: pregnancy}
+  "721": {label: Pregnancy complication, maps: pregnancy}
+  "725": {label: Abnormal Pap / cervical dysplasia, maps: cervical_dysplasia}
+  "730": {label: Infertility / reproductive treatment, maps: benign_no_rating}
+  "735": {label: Urinary tract infection, recurrent, maps: benign_no_rating}
+
+  # ---- 8 neoplasm & blood
+  "800": {label: Cancer - type unspecified, maps: cancer, note: "order oncology APS"}
+  "801": {label: Skin cancer - basal / squamous, maps: cancer}
+  "802": {label: Melanoma, maps: cancer}
+  "803": {label: Breast cancer, maps: cancer}
+  "804": {label: Breast - carcinoma in situ, maps: cancer}
+  "805": {label: Prostate cancer, maps: cancer}
+  "806": {label: Colon / rectal cancer, maps: cancer}
+  "807": {label: Thyroid cancer, maps: cancer}
+  "808": {label: Lymphoma, maps: cancer}
+  "809": {label: Leukemia, maps: cancer}
+  "810": {label: Lung cancer, maps: cancer}
+  "811": {label: Testicular cancer, maps: cancer}
+  "812": {label: Other solid tumor, maps: cancer}
+  "815": {label: Benign tumor, maps: benign_tumor}
+  "816": {label: Breast mass / biopsy, maps: null, note: "benign vs pending (CLS-7.1)"}
+  "820": {label: Genetic predisposition (BRCA/Lynch), maps: brca_lynch}
+  "830": {label: Anemia, maps: anemia}
+  "831": {label: Platelet disorder, maps: anemia}
+  "832": {label: Clotting disorder, maps: anemia}
+  "833": {label: Hemochromatosis, maps: anemia}
+  "834": {label: Sickle cell, maps: anemia}
+  "840": {label: HIV infection, maps: hiv}
+  "841": {label: HIV test positive, maps: hiv}
+  "890": {label: Old-format neoplasm code, maps: null, retired: true}
+
+  # ---- 9 musculoskeletal, immune, skin, other
+  "900": {label: Back / spine disorder, maps: back_pain}
+  "901": {label: Back surgery, maps: back_pain}
+  "905": {label: Arthritis - osteo, maps: benign_no_rating}
+  "906": {label: Rheumatoid arthritis, maps: rheumatoid_arthritis}
+  "907": {label: Fibromyalgia, maps: benign_no_rating}
+  "910": {label: Lupus, maps: lupus}
+  "911": {label: Psoriasis / psoriatic arthritis, maps: psoriasis}
+  "915": {label: Chronic pain / opioid therapy, maps: back_pain}
+  "920": {label: Organ transplant (non-kidney), maps: organ_transplant_other}
+  "925": {label: Fracture / injury, maps: benign_no_rating}
+  "930": {label: Eye disorder, maps: benign_no_rating}
+  "935": {label: Hearing disorder, maps: benign_no_rating}
+  "940": {label: Skin disorder, non-malignant, maps: benign_no_rating}
+  "950": {label: Activities of daily living impairment, maps: frailty}
+  "951": {label: Mobility aid / falls, maps: frailty}
+  "960": {label: Disability claim, maps: null, note: "check cause"}
+  "990": {label: Old-format miscellaneous code, maps: null, retired: true}
+
+# Non-catalog `maps` values used above (handled by nonmedical/labs rules, not impairments.yaml)
+nonmedical_maps: [build, avocation, aviation, mvr, travel, criminal, tobacco, lipids, lft, alcohol, marijuana, psa]
+
+reading_rules:   # summary of guidelines §MIB, for renderers and notes
+  - "Never rate on a code alone (MIB-1)."
+  - "Code report date > 7 years ago -> informational (MIB-3)."
+  - "Undisclosed condition within 7 years -> APS (MIB-4); not corroborated -> ignore."
+  - "Retired/old-format codes (x90 and 180) are informational only."
+  - "Foreign nationals / recent immigrants: absence of codes is not favorable (MIB-5)."
+  - "Degree 7 (under investigation) + no follow-up evidence -> GRY-8 territory."

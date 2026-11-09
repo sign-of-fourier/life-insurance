@@ -1,0 +1,757 @@
+# Medical impairment catalog. Mirrors guidelines.md medical chapters.
+#
+# Used by: Phase 3/4 generators (sample a profile -> build truth + evidence that implies it)
+#          Phase 5 engine (evaluate `match` predicates against attributes established from evidence)
+#
+# Profile fields:
+#   match:   attribute predicates (all must hold). Ops: value | [lo, hi] inclusive | {lt|le|gt|ge: x} | {in: [...]}
+#   debits:  int, or "grid" (look up in `grid`), or omitted (0)
+#   best:    class cap (non-tobacco name; map to tobacco ladder via classes.yaml tobacco_equivalent)
+#   outcome: rate (default) | postpone | decline | md
+#   fe:      {per_k, years}  (years null = permanent)
+#   postpone_months: int
+# Attributes common to all: years_since (dx or event or last tx, per chapter), age (insurance age).
+# Profiles are evaluated top-down; first match wins. `add` blocks are modifiers that stack.
+
+hypertension:
+  chapter: HTN
+  label: Hypertension
+  rule_ids: [HTN-1, HTN-2, HTN-3, HTN-4, HTN-5]
+  attributes: [bp_avg_sys, bp_avg_dia, agents, lvh, retinopathy]
+  engine: htn_table             # BP debit rows in nonmedical.yaml htn
+  rx: [lisinopril, losartan, amlodipine, hydrochlorothiazide, metoprolol, chlorthalidone, olmesartan, valsartan, carvedilol, spironolactone]
+  order: {aps_if: "agents>=2 or avg>150/95"}
+  severity_hint: {mild: "1 agent, controlled", moderate: "2 agents or 141-160", severe: ">=3 agents or >160 or LVH"}
+
+cad:
+  chapter: CV
+  label: Coronary artery disease / MI / stent / CABG
+  rule_ids: [CV-1, CV-1.1, CV-1.2, CV-1.3]
+  attributes: [age_at_event, years_since, ef, angina, smoker, abnormal_stress, vessels, ldl, normal_stress_12mo]
+  order: [APS_cardiology, EKG, NTPROBNP]
+  rx: [atorvastatin, rosuvastatin, clopidogrel, aspirin, metoprolol, nitroglycerin, ticagrelor, ezetimibe]
+  best: Standard
+  postpone_if: {years_since: {lt: 0.5}, months: 6}
+  grid:   # rows = age_at_event band, cols = years since: [0.5-1, 1-2, 2-5, >5]
+    bands_age: [[0, 39], [40, 49], [50, 59], [60, 69], [70, 120]]
+    bands_years: [[0.5, 1], [1, 2], [2, 5], [5, 100]]
+    values:
+      - [decline, 200, 150, 125]
+      - [200, 150, 100, 75]
+      - [150, 100, 75, 50]
+      - [100, 75, 50, 25]
+      - [75, 50, 25, 25]
+  add:
+    - {match: {ef: [40, 49]}, debits: 50}
+    - {match: {ef: [30, 39]}, debits: 100}
+    - {match: {ef: {lt: 30}}, outcome: decline}
+    - {match: {angina: true}, debits: 50}
+    - {match: {smoker: true}, debits: 50}
+    - {match: {abnormal_stress: true}, debits: 75, md: true}
+    - {match: {vessels: {ge: 3}}, debits: 25}
+    - {match: {ldl: {lt: 70}, normal_stress_12mo: true}, debits: -25}
+
+cad_nonobstructive:
+  chapter: CV
+  label: Non-obstructive CAD (<50%) / coronary calcium
+  rule_ids: [CV-1.4, CV-1.5]
+  attributes: [stenosis_pct, cac_score]
+  profiles:
+    - {id: nonobstructive, match: {stenosis_pct: [1, 49]}, debits: 25, best: Standard}
+    - {id: cac_0_99, match: {cac_score: [0, 99]}, debits: 0}
+    - {id: cac_100_399, match: {cac_score: [100, 399]}, debits: 25}
+    - {id: cac_400, match: {cac_score: {ge: 400}}, debits: 50}
+
+afib:
+  chapter: CV
+  label: Atrial fibrillation / flutter
+  rule_ids: [CV-2]
+  attributes: [type, echo_normal, chads_vasc, structural, ablation_years, years_since]
+  rx: [apixaban, rivaroxaban, warfarin, diltiazem, metoprolol, flecainide, amiodarone]
+  order: [APS_cardiology]
+  profiles:
+    - {id: ablated, match: {ablation_years: {ge: 1}}, debits: 0, best: Standard Plus}
+    - {id: single_episode, match: {type: single, years_since: {ge: 1}, echo_normal: true}, debits: 0, best: Preferred}
+    - {id: structural, match: {structural: true}, debits: 100, outcome: md}
+    - {id: paroxysmal, match: {type: paroxysmal, echo_normal: true, chads_vasc: {le: 1}}, debits: 25}
+    - {id: persistent, match: {type: {in: [persistent, permanent]}, echo_normal: true}, debits: 50}
+
+valve:
+  chapter: CV
+  label: Valvular disease / murmur
+  rule_ids: [CV-3]
+  attributes: [kind, severity_grade, repaired_years]
+  profiles:
+    - {id: innocent, match: {kind: innocent_murmur}, debits: 0}
+    - {id: mvp_mild, match: {kind: mvp, severity_grade: {in: [trace, mild]}}, debits: 0, best: Preferred Plus}
+    - {id: replaced_recent, match: {repaired_years: {lt: 1}}, outcome: postpone, postpone_months: 12}
+    - {id: replaced, match: {repaired_years: {ge: 1}}, debits: 75}
+    - {id: moderate, match: {severity_grade: moderate}, debits: 50}
+    - {id: severe, match: {severity_grade: severe}, outcome: decline}
+
+cardiomyopathy:
+  chapter: CV
+  label: Heart failure / cardiomyopathy
+  rule_ids: [CV-4]
+  attributes: [ef, recovered_years, hcm]
+  rx: [sacubitril-valsartan, carvedilol, furosemide, spironolactone, empagliflozin]
+  profiles:
+    - {id: hcm, match: {hcm: true}, debits: 75, outcome: md}
+    - {id: low_ef, match: {ef: {lt: 40}}, outcome: decline}
+    - {id: recovered, match: {ef: {ge: 50}, recovered_years: {gt: 2}}, debits: 50}
+    - {id: mid_ef, match: {ef: [40, 49]}, debits: 100}
+
+arrhythmia_other:
+  chapter: CV
+  label: PVCs / SVT / WPW / BBB / pacemaker / syncope
+  rule_ids: [CV-5]
+  attributes: [kind, ablated, echo_normal]
+  profiles:
+    - {id: pvc, match: {kind: pvc, echo_normal: true}, debits: 0}
+    - {id: svt_ablated, match: {kind: svt, ablated: true}, debits: 0}
+    - {id: svt, match: {kind: svt}, debits: 25}
+    - {id: wpw_ablated, match: {kind: wpw, ablated: true}, debits: 0}
+    - {id: wpw, match: {kind: wpw}, debits: 25}
+    - {id: rbbb, match: {kind: rbbb}, debits: 0}
+    - {id: lbbb, match: {kind: lbbb}, debits: 25}
+    - {id: pacemaker, match: {kind: pacemaker}, debits: 25}
+    - {id: vasovagal, match: {kind: vasovagal}, debits: 0}
+
+pad_aaa:
+  chapter: CV
+  label: Peripheral arterial disease / aortic aneurysm
+  rule_ids: [CV-6]
+  attributes: [kind, smoker, size_cm, repaired_months]
+  profiles:
+    - {id: pad_smoker, match: {kind: pad, smoker: true}, debits: 125, best: Standard}
+    - {id: pad, match: {kind: pad}, debits: 75, best: Standard}
+    - {id: aaa_repaired, match: {kind: aaa, repaired_months: {ge: 6}}, debits: 50}
+    - {id: aaa_small, match: {kind: aaa, size_cm: {lt: 4.0}}, debits: 50}
+    - {id: aaa_mid, match: {kind: aaa, size_cm: [4.0, 5.0]}, debits: 100}
+    - {id: aaa_large, match: {kind: aaa, size_cm: {gt: 5.0}}, outcome: decline}
+
+prediabetes:
+  chapter: DM
+  label: Prediabetes / impaired fasting glucose
+  rule_ids: [DM-1]
+  attributes: [a1c_avg]
+  rx: [metformin]
+  profiles:
+    - {id: low, match: {a1c_avg: {le: 6.0}}, debits: 0, best: Preferred}
+    - {id: high, match: {a1c_avg: [6.1, 6.4]}, debits: 0, best: Standard Plus}
+
+diabetes_t2:
+  chapter: DM
+  label: Type 2 diabetes
+  rule_ids: [DM-2, DM-2.1, DM-2.2, DM-2.3, DM-2.4, DM-2.5]
+  attributes: [a1c_avg, a1c_available, insulin, duration_years, age_at_dx, microalbuminuria, neuropathy, retinopathy, cad]
+  rx: [metformin, glipizide, glimepiride, sitagliptin, empagliflozin, dapagliflozin, semaglutide, tirzepatide, dulaglutide, insulin glargine, insulin lispro, pioglitazone]
+  order: [APS, B, U]
+  best: Standard
+  missing_a1c_assume: 8.5     # DM-2.4 (8.0-8.9 column)
+  grid:
+    bands_age: [[18, 39], [40, 49], [50, 59], [60, 69], [70, 120]]
+    bands_a1c: [[0, 6.99], [7.0, 7.99], [8.0, 8.99], [9.0, 9.99], [10.0, 99]]
+    values:
+      - [75, 100, 150, 200, decline]
+      - [50, 75, 125, 175, decline]
+      - [25, 50, 100, 150, 200]
+      - [0, 25, 75, 125, 175]
+      - [0, 0, 50, 100, 150]
+  add:
+    - {match: {insulin: true}, debits: 25}
+    - {match: {duration_years: {gt: 15}}, debits: 25}
+    - {match: {age_at_dx: {lt: 30}}, debits: 25}
+    - {match: {microalbuminuria: true}, debits: 50, cmb3_group: renal_protein}
+    - {match: {neuropathy: true}, debits: 25}
+    - {match: {retinopathy: nonproliferative}, debits: 25}
+    - {match: {retinopathy: proliferative}, debits: 75}
+    - {match: {cad: true}, debits: 50, rule: CMB-2}
+  best_override: {match: {insulin: false, a1c_avg: {lt: 7.0}, age: {ge: 60}, complications: false}, best: Standard Plus}
+
+diabetes_t1:
+  chapter: DM
+  label: Type 1 diabetes
+  rule_ids: [DM-3]
+  attributes: [a1c_avg, age, pump_cgm]
+  rx: [insulin glargine, insulin lispro, insulin aspart, insulin degludec]
+  uses_grid_of: diabetes_t2
+  add_flat: 50
+  decline_if: {age: {lt: 30}, a1c_avg: {ge: 8.5}}
+  pump_credit: {match: {pump_cgm: true, a1c_avg: {lt: 7.0}, age: {ge: 40}}, debits: -25, md: true}
+  best: Standard
+
+gestational_dm:
+  chapter: DM
+  label: Gestational diabetes (resolved)
+  rule_ids: [DM-4]
+  profiles:
+    - {id: resolved, match: {resolved: true}, debits: 0, best: Preferred}
+
+cancer:
+  chapter: CA
+  label: Cancer (see type table)
+  rule_ids: [CA, CA-1, CA-2, CA-3]
+  attributes: [type, stage, years_since_tx, gleason, psa_undetectable, surveillance, recurrence]
+  order: [APS_oncology]
+  best: Standard
+  unknown_stage: next_worse    # CA-1 / GRY-6
+  recurrence: decline
+  # rows: years_since_tx windows [lo, hi) -> outcome; fe = {per_k, years}
+  types:
+    bcc_scc: [{years: [0, 100], debits: 0, best: null}]
+    melanoma_in_situ: [{years: [0, 2], debits: 0, best: Standard}, {years: [2, 100], debits: 0, best: Preferred}]
+    melanoma_1:
+      - {years: [0, 2], fe: {per_k: 10, years: 3}}
+      - {years: [2, 5], fe: {per_k: 5, years: 2}}
+      - {years: [5, 100], debits: 0, best: Standard Plus}
+    melanoma_2:
+      - {years: [0, 2], outcome: postpone}
+      - {years: [2, 5], fe: {per_k: 10, years: 4}}
+      - {years: [5, 10], fe: {per_k: 5, years: 3}}
+      - {years: [10, 100], debits: 0}
+    melanoma_3_4: [{years: [0, 10], outcome: decline}, {years: [10, 100], outcome: md}]
+    breast_dcis:
+      - {years: [0, 1], outcome: postpone}
+      - {years: [1, 3], fe: {per_k: 5, years: 2}}
+      - {years: [3, 100], debits: 0, best: Standard Plus}
+    breast_1:
+      - {years: [0, 1], outcome: postpone}
+      - {years: [1, 3], fe: {per_k: 10, years: 4}}
+      - {years: [3, 5], fe: {per_k: 7.5, years: 3}}
+      - {years: [5, 10], fe: {per_k: 5, years: 2}}
+      - {years: [10, 100], debits: 0}
+    breast_2:
+      - {years: [0, 2], outcome: postpone}
+      - {years: [2, 5], fe: {per_k: 15, years: 5}}
+      - {years: [5, 10], fe: {per_k: 7.5, years: 3}}
+      - {years: [10, 100], debits: 25}
+    breast_3:
+      - {years: [0, 5], outcome: decline}
+      - {years: [5, 10], fe: {per_k: 15, years: 5}, debits: 25}
+      - {years: [10, 100], debits: 50}
+    prostate_surveillance: [{years: [0, 100], debits: 25, best: Standard}]
+    prostate_le7_surgery:
+      - {years: [0, 1], outcome: postpone}
+      - {years: [1, 3], fe: {per_k: 5, years: 3}}
+      - {years: [3, 100], debits: 0, best: Standard Plus}
+    prostate_ge8:
+      - {years: [0, 3], outcome: decline}
+      - {years: [3, 5], fe: {per_k: 15, years: 5}}
+      - {years: [5, 100], fe: {per_k: 7.5, years: 3}}
+    colon_1:
+      - {years: [0, 1], outcome: postpone}
+      - {years: [1, 5], fe: {per_k: 10, years: 3}}
+      - {years: [5, 100], debits: 0}
+    colon_2:
+      - {years: [0, 2], outcome: postpone}
+      - {years: [2, 5], fe: {per_k: 15, years: 4}}
+      - {years: [5, 100], fe: {per_k: 5, years: 2}}
+    colon_3:
+      - {years: [0, 5], outcome: decline}
+      - {years: [5, 10], fe: {per_k: 10, years: 3}}
+      - {years: [10, 100], debits: 0}
+    thyroid:
+      - {years: [0, 1], fe: {per_k: 5, years: 2}}
+      - {years: [1, 5], debits: 0, best: Standard}
+      - {years: [5, 100], debits: 0, best: Preferred}
+    hodgkin_1_2:
+      - {years: [0, 2], outcome: postpone}
+      - {years: [2, 5], fe: {per_k: 10, years: 5}}
+      - {years: [5, 10], debits: 50}
+      - {years: [10, 100], debits: 25}
+    nhl_indolent: [{years: [0, 100], debits: 75, best: Standard}]
+    nhl_aggressive:
+      - {years: [0, 3], outcome: decline}
+      - {years: [3, 5], fe: {per_k: 15, years: 5}}
+      - {years: [5, 100], debits: 50}
+    cll_rai0: [{years: [0, 100], debits_by_age: {under60: 75, "60plus": 25}}]
+    acute_leukemia: [{years: [0, 5], outcome: decline}, {years: [5, 100], outcome: md}]
+    testicular_seminoma_1:
+      - {years: [0, 1], outcome: postpone}
+      - {years: [1, 3], fe: {per_k: 5, years: 2}}
+      - {years: [3, 100], debits: 0}
+    lung_pancreas_esophagus_brain: [{years: [0, 100], outcome: decline}]
+    other_unlisted: [{years: [0, 5], outcome: decline}, {years: [5, 100], outcome: md}]   # MISC-3
+  stage_order:   # for CA-1 "next worse stage"
+    melanoma: [melanoma_in_situ, melanoma_1, melanoma_2, melanoma_3_4]
+    breast: [breast_dcis, breast_1, breast_2, breast_3]
+    prostate: [prostate_surveillance, prostate_le7_surgery, prostate_ge8]
+    colon: [colon_1, colon_2, colon_3]
+  rx: [tamoxifen, anastrozole, letrozole, exemestane, leuprolide, bicalutamide, capecitabine, ondansetron, levothyroxine]
+
+benign_tumor:
+  chapter: CA
+  label: Benign tumor / polyps
+  rule_ids: [CA-3]
+  profiles:
+    - {id: hgd_polyp, match: {high_grade_dysplasia: true}, debits: 25}
+    - {id: benign, match: {}, debits: 0}
+
+brca_lynch:
+  chapter: CA
+  label: BRCA/Lynch positive (no cancer)
+  rule_ids: [CA-9]
+  profiles:
+    - {id: prophylactic_done, match: {prophylactic_surgery: true}, debits: 0, best: Standard Plus}
+    - {id: no_surgery, match: {}, debits: 50}
+
+depression_anxiety:
+  chapter: MH
+  label: Depression / anxiety
+  rule_ids: [MH]
+  attributes: [meds_count, work_loss_months, psychiatrist, hospitalization_years_ago, ect, disability, years_since_dx]
+  rx: [sertraline, escitalopram, fluoxetine, citalopram, bupropion, venlafaxine, duloxetine, mirtazapine, buspirone, trazodone, alprazolam, lorazepam, clonazepam, aripiprazole]
+  order: {aps_if: "moderate or worse"}
+  profiles:
+    - {id: hosp_recent, match: {hospitalization_years_ago: {lt: 1}}, outcome: postpone, postpone_months: 12}
+    - {id: severe, match: {any_of: {hospitalization_years_ago: {ge: 1}, ect: true, disability: true}}, debits: 75, best: Standard, range: [75, 100]}
+    - {id: moderate, match: {any_of: {meds_count: {ge: 2}, work_loss_months: {gt: 0}, psychiatrist: true}}, debits: 25, best: Standard Plus}
+    - {id: mild_recent, match: {years_since_dx: {lt: 2}}, debits: 0, best: Preferred}
+    - {id: mild, match: {}, debits: 0, best: Preferred Plus}
+
+bipolar:
+  chapter: MH
+  label: Bipolar disorder
+  rule_ids: [MH]
+  attributes: [type, stable_years, hospitalization_years_ago, compliant]
+  rx: [lithium, lamotrigine, quetiapine, divalproex, aripiprazole, lurasidone, olanzapine]
+  order: [APS_psychiatry]
+  profiles:
+    - {id: hosp_recent, match: {hospitalization_years_ago: {lt: 1}}, outcome: postpone, postpone_months: 12}
+    - {id: unstable, match: {any_of: {hospitalization_years_ago: [1, 5], compliant: false}}, debits: 125, range: [125, decline]}
+    - {id: bp2_stable, match: {type: II, stable_years: {ge: 2}}, debits: 50}
+    - {id: bp1_stable, match: {type: I, stable_years: {ge: 2}}, debits: 75}
+
+schizophrenia:
+  chapter: MH
+  label: Schizophrenia / schizoaffective
+  rule_ids: [MH]
+  rx: [risperidone, olanzapine, clozapine, paliperidone, haloperidol]
+  profiles:
+    - {id: stable5, match: {stable_years: {gt: 5}, monotherapy: true}, debits: 150, outcome: md}
+    - {id: default, match: {}, outcome: decline}
+
+adhd:
+  chapter: MH
+  label: ADHD
+  rule_ids: [MH]
+  rx: [methylphenidate, amphetamine-dextroamphetamine, lisdexamfetamine, atomoxetine, guanfacine]
+  profiles:
+    - {id: functioning, match: {}, debits: 0, best: Preferred Plus}
+
+ptsd:
+  chapter: MH
+  label: PTSD
+  rule_ids: [MH]
+  rx: [sertraline, prazosin, paroxetine]
+  profiles:
+    - {id: outpatient, match: {}, debits: 25}
+
+eating_disorder:
+  chapter: MH
+  label: Eating disorder
+  rule_ids: [MH]
+  profiles:
+    - {id: recovered, match: {recovered_years: {gt: 3}}, debits: 25}
+    - {id: recent, match: {}, outcome: postpone, postpone_months: 12}
+
+suicide_attempt:
+  chapter: MH
+  label: Suicide attempt
+  rule_ids: [MH]
+  profiles:
+    - {id: recent, match: {years_since: {lt: 2}}, outcome: decline}
+    - {id: mid, match: {years_since: [2, 5]}, debits: 100}
+    - {id: old, match: {years_since: {gt: 5}}, debits: 50}
+
+insomnia:
+  chapter: MH
+  label: Insomnia only
+  rule_ids: [MH-3]
+  rx: [trazodone, zolpidem, eszopiclone]
+  profiles: [{id: only, match: {}, debits: 0}]
+
+asthma:
+  chapter: RSP
+  label: Asthma
+  rule_ids: [RSP]
+  attributes: [controller, steroid_bursts_per_year, er_years_ago, biologic]
+  rx: [albuterol, fluticasone-salmeterol, budesonide-formoterol, montelukast, prednisone, mometasone, dupilumab]
+  profiles:
+    - {id: severe, match: {any_of: {steroid_bursts_per_year: {ge: 2}, er_years_ago: {lt: 2}, biologic: true}}, debits: 50, range: [50, 100]}
+    - {id: moderate, match: {controller: true}, debits: 0, best: Preferred}
+    - {id: mild, match: {}, debits: 0, best: Elite}
+
+copd:
+  chapter: RSP
+  label: COPD
+  rule_ids: [RSP, RSP-2]
+  attributes: [fev1_pct, smoker, home_o2]
+  rx: [tiotropium, umeclidinium-vilanterol, albuterol, fluticasone-umeclidinium-vilanterol, roflumilast]
+  order: [APS]
+  missing_fev1_assume: 60
+  profiles:
+    - {id: severe, match: {any_of: {fev1_pct: {lt: 50}, home_o2: true}}, outcome: decline}
+    - {id: moderate_smoker, match: {fev1_pct: [50, 69], smoker: true}, debits: 150}
+    - {id: moderate, match: {fev1_pct: [50, 69]}, debits: 100}
+    - {id: mild_smoker, match: {smoker: true}, debits: 75}
+    - {id: mild, match: {}, debits: 50}
+
+sleep_apnea:
+  chapter: RSP
+  label: Obstructive sleep apnea
+  rule_ids: [RSP, RSP-1]
+  attributes: [treated, compliant, ahi]
+  profiles:
+    - {id: treated, match: {treated: true, compliant: true}, debits: 0, best: Preferred}
+    - {id: untreated_severe, match: {ahi: {gt: 30}}, debits: 75}
+    - {id: untreated, match: {}, debits: 25}
+
+sarcoidosis:
+  chapter: RSP
+  label: Pulmonary sarcoidosis
+  rule_ids: [RSP]
+  profiles:
+    - {id: stable, match: {stable_years: {gt: 2}}, debits: 25}
+    - {id: active, match: {}, debits: 75}
+
+pulmonary_embolism:
+  chapter: RSP
+  label: Pulmonary embolism / DVT
+  rule_ids: [RSP]
+  rx: [apixaban, rivaroxaban, warfarin]
+  profiles:
+    - {id: recent, match: {years_since: {lt: 0.5}}, outcome: postpone, postpone_months: 6}
+    - {id: recurrent, match: {recurrent: true}, debits: 75}
+    - {id: unprovoked, match: {provoked: false}, debits: 25}
+    - {id: provoked, match: {}, debits: 0}
+
+crohns:
+  chapter: GI
+  label: Crohn's disease
+  rule_ids: [GI]
+  rx: [mesalamine, budesonide, azathioprine, adalimumab, infliximab, ustekinumab, vedolizumab]
+  profiles:
+    - {id: moderate, match: {any_of: {biologic: true, surgery_years_ago: {lt: 2}}}, debits: 75}
+    - {id: mild, match: {}, debits: 25}
+
+ulcerative_colitis:
+  chapter: GI
+  label: Ulcerative colitis
+  rule_ids: [GI]
+  rx: [mesalamine, budesonide, azathioprine, infliximab, vedolizumab]
+  profiles:
+    - {id: no_surveillance, match: {duration_years: {gt: 10}, colonoscopy_years_ago: {gt: 3}}, debits: 50}
+    - {id: mild, match: {}, debits: 0, range: [0, 25]}
+
+barretts:
+  chapter: GI
+  label: Barrett's esophagus
+  rule_ids: [GI]
+  profiles:
+    - {id: hgd, match: {dysplasia: high}, outcome: postpone}
+    - {id: lgd, match: {dysplasia: low}, debits: 50}
+    - {id: none, match: {}, debits: 25}
+
+fatty_liver:
+  chapter: GI
+  label: NAFLD / fatty liver
+  rule_ids: [GI]
+  profiles:
+    - {id: cirrhosis, match: {fibrosis: F4}, outcome: decline}
+    - {id: fibrosis, match: {fibrosis: {in: [F2, F3]}}, debits: 75}
+    - {id: simple, match: {}, debits: 0, note: "rate LFTs per LAB-2"}
+
+hepatitis_b:
+  chapter: GI
+  label: Chronic hepatitis B
+  rule_ids: [GI]
+  rx: [entecavir, tenofovir]
+  profiles:
+    - {id: carrier, match: {}, debits: 50}
+
+hepatitis_c:
+  chapter: GI
+  label: Hepatitis C
+  rule_ids: [GI]
+  rx: [sofosbuvir-velpatasvir, glecaprevir-pibrentasvir, ledipasvir-sofosbuvir]
+  profiles:
+    - {id: cirrhosis, match: {cirrhosis: true}, outcome: decline}
+    - {id: cured_old, match: {svr: true, years_since_tx: {gt: 1}}, debits: 0}
+    - {id: cured_recent, match: {svr: true}, debits: 25}
+    - {id: untreated, match: {}, debits: 100}
+
+pancreatitis:
+  chapter: GI
+  label: Pancreatitis
+  rule_ids: [GI]
+  profiles:
+    - {id: chronic, match: {chronic: true}, debits: 100}
+    - {id: alcohol, match: {cause: alcohol}, debits: 50, note: "plus ALC"}
+    - {id: gallstone, match: {}, debits: 0}
+
+cirrhosis:
+  chapter: GI
+  label: Cirrhosis
+  rule_ids: [GI]
+  profiles: [{id: any, match: {}, outcome: decline}]
+
+ckd:
+  chapter: REN
+  label: Chronic kidney disease (eGFR)
+  rule_ids: [REN-1]
+  engine: egfr_table   # labs.yaml renal
+  profiles:
+    - {id: dialysis, match: {dialysis: true}, outcome: decline}
+    - {id: transplant, match: {transplant_years: {gt: 3}}, debits: 150, outcome: md}
+
+proteinuria:
+  chapter: REN
+  label: Proteinuria
+  rule_ids: [REN-2]
+  engine: proteinuria_table
+  cmb3_group: renal_protein
+
+polycystic_kidney:
+  chapter: REN
+  label: Polycystic kidney disease
+  rule_ids: [REN-3]
+  profiles:
+    - {id: normal_egfr, match: {egfr: {ge: 60}}, debits: 25}
+    - {id: reduced, match: {}, debits: 25, note: "plus REN-1"}
+
+epilepsy:
+  chapter: NEU
+  label: Epilepsy / seizure disorder
+  rule_ids: [NEU]
+  rx: [levetiracetam, lamotrigine, carbamazepine, phenytoin, lacosamide, topiramate, oxcarbazepine]
+  profiles:
+    - {id: uncontrolled, match: {seizures_per_year: {gt: 3}}, debits: 100, range: [100, decline]}
+    - {id: some, match: {seizures_per_year: [1, 3]}, debits: 50}
+    - {id: controlled, match: {seizure_free_years: {gt: 2}}, debits: 0, best: Standard Plus}
+    - {id: controlled_recent, match: {}, debits: 50}
+
+tia:
+  chapter: NEU
+  label: TIA
+  rule_ids: [NEU]
+  profiles:
+    - {id: recent, match: {years_since: {lt: 1}}, outcome: postpone, postpone_months: 12}
+    - {id: young, match: {age: {lt: 50}}, debits: 50}
+    - {id: older, match: {}, debits: 25}
+
+stroke:
+  chapter: NEU
+  label: Stroke (CVA)
+  rule_ids: [NEU, CLS-7.4]
+  rx: [clopidogrel, aspirin, atorvastatin, apixaban]
+  order: [APS_neurology]
+  profiles:
+    - {id: very_recent, match: {years_since: {lt: 0.5}}, outcome: postpone, postpone_months: 6}
+    - {id: recurrent, match: {recurrent: true}, outcome: decline}
+    - {id: recent, match: {years_since: {lt: 1}}, outcome: postpone, postpone_months: 12}
+    - {id: young, match: {age: {lt: 50}}, debits: 100}
+    - {id: mid, match: {age: [50, 69]}, debits: 75}
+    - {id: old, match: {}, debits: 50}
+  add:
+    - {match: {residual_deficit: true}, debits: 50}
+
+multiple_sclerosis:
+  chapter: NEU
+  label: Multiple sclerosis
+  rule_ids: [NEU]
+  rx: [ocrelizumab, dimethyl fumarate, glatiramer, interferon beta-1a, fingolimod, natalizumab]
+  profiles:
+    - {id: progressive, match: {any_of: {progressive: true, edss: {gt: 5}}}, outcome: decline}
+    - {id: moderate, match: {edss: [2.5, 5]}, debits: 100, range: [100, 150]}
+    - {id: mild, match: {}, debits: 50}
+
+parkinsons:
+  chapter: NEU
+  label: Parkinson's disease
+  rule_ids: [NEU]
+  rx: [carbidopa-levodopa, pramipexole, ropinirole, rasagiline]
+  profiles:
+    - {id: young_onset, match: {age_at_onset: {lt: 50}}, debits: 150}
+    - {id: late_onset, match: {}, debits: 50, range: [50, 100]}
+
+migraine:
+  chapter: NEU
+  label: Migraine
+  rule_ids: [NEU]
+  rx: [sumatriptan, rizatriptan, topiramate, propranolol, amitriptyline, erenumab, ubrogepant]
+  profiles: [{id: any, match: {}, debits: 0}]
+
+neuropathy:
+  chapter: NEU
+  label: Peripheral neuropathy (idiopathic)
+  rule_ids: [NEU]
+  rx: [gabapentin, pregabalin, duloxetine]
+  profiles: [{id: idiopathic, match: {}, debits: 0}]
+
+tbi:
+  chapter: NEU
+  label: Concussion / TBI
+  rule_ids: [NEU]
+  profiles:
+    - {id: residual, match: {residual: true}, debits: 50, range: [50, 100]}
+    - {id: recovered, match: {}, debits: 0}
+
+thyroid:
+  chapter: END
+  label: Thyroid disorder
+  rule_ids: [END]
+  rx: [levothyroxine, methimazole, liothyronine]
+  profiles:
+    - {id: graves_active, match: {kind: graves_active}, outcome: postpone}
+    - {id: any, match: {}, debits: 0}
+
+adrenal_pituitary:
+  chapter: END
+  label: Adrenal insufficiency / pituitary adenoma
+  rule_ids: [END]
+  rx: [hydrocortisone, fludrocortisone, cabergoline]
+  profiles:
+    - {id: adrenal, match: {kind: adrenal}, debits: 50}
+    - {id: pituitary, match: {kind: pituitary}, debits: 0, range: [0, 25]}
+
+back_pain:
+  chapter: MSK
+  label: Back pain / spine
+  rule_ids: [MSK, RID]
+  rx: [cyclobenzaprine, meloxicam, naproxen, methocarbamol, tramadol, oxycodone, hydrocodone-acetaminophen]
+  rider_effects: [WP, WMD]
+  profiles:
+    - {id: opioid_benzo, match: {chronic_opioid: true, benzo: true}, debits: 75}
+    - {id: opioid, match: {chronic_opioid: true}, debits: 25, range: [25, 50]}
+    - {id: simple, match: {}, debits: 0}
+
+rheumatoid_arthritis:
+  chapter: MSK
+  label: Rheumatoid arthritis
+  rule_ids: [MSK]
+  rx: [methotrexate, hydroxychloroquine, adalimumab, etanercept, tofacitinib, prednisone]
+  profiles:
+    - {id: biologic, match: {biologic: true}, debits: 50}
+    - {id: mild, match: {}, debits: 0, range: [0, 25]}
+
+anemia:
+  chapter: HEM
+  label: Anemia / blood disorders
+  rule_ids: [HEM]
+  profiles:
+    - {id: sickle_disease, match: {kind: sickle_cell_disease}, outcome: decline}
+    - {id: itp, match: {kind: itp}, debits: 25}
+    - {id: fvl_vte, match: {kind: factor_v_leiden, vte: true}, debits: 25}
+    - {id: benign, match: {}, debits: 0}
+
+hiv:
+  chapter: IMM
+  label: HIV
+  rule_ids: [IMM-1]
+  rx: [bictegravir-emtricitabine-tenofovir, dolutegravir, emtricitabine-tenofovir, darunavir-cobicistat]
+  profiles:
+    - {id: insurable, match: {art_years: {ge: 2}, undetectable_months: {ge: 12}, cd4: {ge: 500}, age: [20, 60], aids_defining: false, hep_coinfection: false}, debits: 100, outcome: md, max_face: 2000000}
+    - {id: default, match: {}, outcome: decline}
+
+lupus:
+  chapter: IMM
+  label: Lupus
+  rule_ids: [IMM-2]
+  rx: [hydroxychloroquine, prednisone, mycophenolate, belimumab]
+  profiles:
+    - {id: organ, match: {organ_involvement: true}, debits: 150, range: [150, decline]}
+    - {id: systemic, match: {kind: systemic}, debits: 50}
+    - {id: cutaneous, match: {}, debits: 0}
+
+psoriasis:
+  chapter: IMM
+  label: Psoriasis / psoriatic arthritis
+  rule_ids: [IMM-3]
+  rx: [adalimumab, secukinumab, ustekinumab, methotrexate, apremilast]
+  profiles:
+    - {id: psa_biologic, match: {arthritis: true, biologic: true}, debits: 25}
+    - {id: skin, match: {}, debits: 0}
+
+cognitive_impairment:
+  chapter: GER
+  label: Dementia / MCI / failed cognitive screen
+  rule_ids: [GER-1]
+  rx: [donepezil, memantine, rivastigmine, galantamine]
+  profiles: [{id: any, match: {}, outcome: decline}]
+
+frailty:
+  chapter: GER
+  label: Frailty findings (71+)
+  rule_ids: [GER-2, GER-3]
+  profiles:
+    - {id: adl, match: {adl_dependency: true}, outcome: decline}
+    - {id: findings, match: {}, debits_per_item: 50}
+
+pregnancy:
+  chapter: OBS
+  label: Pregnancy
+  rule_ids: [OBS, CLS-7.5]
+  profiles:
+    - {id: complicated, match: {complicated: true}, outcome: postpone, postpone_months: 3}
+    - {id: normal, match: {}, debits: 0, note: "rate pre-pregnancy weight"}
+
+cervical_dysplasia:
+  chapter: OBS
+  label: Abnormal pap / CIN
+  rule_ids: [OBS]
+  profiles:
+    - {id: cin3_pending, match: {cin3_pending: true}, outcome: postpone}
+    - {id: treated, match: {}, debits: 0}
+
+organ_transplant_other:
+  chapter: MISC
+  label: Non-kidney organ transplant
+  rule_ids: [MISC-4]
+  rx: [tacrolimus, mycophenolate, cyclosporine, sirolimus]
+  profiles:
+    - {id: liver_5yr, match: {organ: liver, years_since: {gt: 5}}, debits: 150, outcome: md}
+    - {id: default, match: {}, outcome: decline}
+
+alcohol_use_disorder:
+  chapter: ALC
+  label: Alcohol use disorder (treated)
+  rule_ids: [ALC]
+  engine: alcohol_table
+  rx: [naltrexone, acamprosate, disulfiram]
+
+substance_use_hard:
+  chapter: DRG
+  label: Cocaine / methamphetamine / opioid misuse
+  rule_ids: [DRG-2, DRG-4, CLS-8.4]
+  engine: drugs_table
+  rx: [buprenorphine-naloxone, methadone, naloxone]
+
+# --- no-rating / distractor conditions (MISC-1). Generator uses these as noise.
+benign_no_rating:
+  chapter: MISC
+  label: Low-impact conditions (MISC-1)
+  rule_ids: [MISC-1]
+  irrelevant: true
+  members:
+    seasonal_allergy: [cetirizine, loratadine, fluticasone nasal, montelukast]
+    acne: [doxycycline, tretinoin, minocycline]
+    rosacea: [metronidazole topical, ivermectin topical]
+    eczema: [triamcinolone topical, tacrolimus topical]
+    gerd: [omeprazole, pantoprazole, famotidine]
+    hernia_repaired: []
+    cataracts: []
+    glaucoma: [latanoprost, timolol ophthalmic]
+    bph: [tamsulosin, finasteride]
+    erectile_dysfunction: [sildenafil, tadalafil]
+    osteopenia: [alendronate]
+    gout: [allopurinol, colchicine]
+    kidney_stones: [tamsulosin]
+    hypothyroidism_simple: [levothyroxine]
+    contraception: [norethindrone-ethinyl estradiol, levonorgestrel IUD]
+    uti: [nitrofurantoin, sulfamethoxazole-trimethoprim]
+    sinusitis: [amoxicillin-clavulanate, azithromycin]
+    vitamin_d_deficiency: [ergocalciferol]
+    acute_injury: [ibuprofen, cyclobenzaprine]
+    dental: [amoxicillin, hydrocodone-acetaminophen]

@@ -1,0 +1,537 @@
+{
+ "truth": {
+  "case_id": "EX0001",
+  "seed": 1,
+  "app_date": "2026-10-01",
+  "design": {
+   "complexity": "moderate",
+   "disclosure": "minimized"
+  },
+  "person": {
+   "first_name": "Dale",
+   "last_name": "Rourke",
+   "sex": "M",
+   "dob": "1980-03-02",
+   "age": 46,
+   "address_state": "OH",
+   "country_of_residence": "US",
+   "citizenship": "US",
+   "years_in_us": null,
+   "visa_type": null,
+   "occupation": "HVAC technician",
+   "occupation_class": "3A",
+   "annual_income": 78000,
+   "net_worth": 210000,
+   "marital_status": "married",
+   "dependents": 2
+  },
+  "coverage": {
+   "face_amount": 500000,
+   "product": "Term 20",
+   "riders_requested": [
+    "WP"
+   ],
+   "existing_coverage": 0,
+   "replacement": false,
+   "beneficiary_relation": "spouse"
+  },
+  "height_in": 70.0,
+  "weight_lb": 208.0,
+  "bp_systolic": 136,
+  "bp_diastolic": 86,
+  "pulse": 78,
+  "tobacco": [
+   {
+    "product": "cigarette",
+    "status": "current",
+    "frequency": "1/2 ppd",
+    "start": "1998-01-01",
+    "quit": null,
+    "disclosure": "minimized"
+   }
+  ],
+  "alcohol_drinks_per_week": 0.0,
+  "alcohol_treatment": false,
+  "drug_use": [],
+  "conditions": [
+   {
+    "condition_key": "hypertension",
+    "label": "Essential hypertension",
+    "onset": "2021-05-01",
+    "status": "controlled",
+    "severity": "mild",
+    "details": {},
+    "meds": [
+     {
+      "drug": "lisinopril",
+      "dose": "10 mg",
+      "start": "2021-05-10",
+      "stop": null,
+      "prescriber_id": null,
+      "indication": "HTN"
+     }
+    ],
+    "procedures": [],
+    "treating_provider_ids": [],
+    "disclosure": "honest",
+    "in_mib": false,
+    "irrelevant": false
+   },
+   {
+    "condition_key": "seasonal_allergy",
+    "label": "Allergic rhinitis",
+    "onset": "2015-04-01",
+    "status": "controlled",
+    "severity": "mild",
+    "details": {},
+    "meds": [
+     {
+      "drug": "fluticasone nasal",
+      "dose": "50 mcg",
+      "start": "2015-04-01",
+      "stop": null,
+      "prescriber_id": null,
+      "indication": null
+     }
+    ],
+    "procedures": [],
+    "treating_provider_ids": [],
+    "disclosure": "honest",
+    "in_mib": false,
+    "irrelevant": true
+   }
+  ],
+  "family_history": [],
+  "mvr": [],
+  "avocations": [],
+  "travel": [],
+  "prior_apps": [],
+  "providers": [],
+  "true_labs": {
+   "cotinine_urine": 1500.0,
+   "tc": 212.0,
+   "hdl": 41.0
+  }
+ },
+ "evidence": {
+  "case_id": "EX0001",
+  "facts": [
+   {
+    "fact_id": "EX0001-F001",
+    "doc_id": "EX0001-D01",
+    "kind": "app_answer",
+    "key": "tobacco_12mo",
+    "value": "No - quit 2024",
+    "unit": null,
+    "as_of": null,
+    "relevant": true,
+    "truth_ref": "tobacco[0]",
+    "note": "minimized"
+   },
+   {
+    "fact_id": "EX0001-F002",
+    "doc_id": "EX0001-D01",
+    "kind": "app_answer",
+    "key": "htn_treated",
+    "value": "Yes, lisinopril",
+    "unit": null,
+    "as_of": null,
+    "relevant": true,
+    "truth_ref": "conditions[0]",
+    "note": null
+   },
+   {
+    "fact_id": "EX0001-F003",
+    "doc_id": "EX0001-D02",
+    "kind": "rx_fill",
+    "key": "varenicline",
+    "value": "0.5 mg x56",
+    "unit": null,
+    "as_of": "2026-06-03",
+    "relevant": true,
+    "truth_ref": "tobacco[0]",
+    "note": "contradicts app tobacco answer"
+   },
+   {
+    "fact_id": "EX0001-F004",
+    "doc_id": "EX0001-D02",
+    "kind": "rx_fill",
+    "key": "fluticasone nasal",
+    "value": "50 mcg",
+    "unit": null,
+    "as_of": "2026-08-01",
+    "relevant": false,
+    "truth_ref": "conditions[1]",
+    "note": null
+   },
+   {
+    "fact_id": "EX0001-F005",
+    "doc_id": "EX0001-D03",
+    "kind": "lab_value",
+    "key": "cotinine_urine",
+    "value": 1500,
+    "unit": "ng/mL",
+    "as_of": "2026-10-12",
+    "relevant": true,
+    "truth_ref": "true_labs.cotinine_urine",
+    "note": null
+   },
+   {
+    "fact_id": "EX0001-F006",
+    "doc_id": "EX0001-D04",
+    "kind": "paramed",
+    "key": "build",
+    "value": "5'10\" 208 lb",
+    "unit": null,
+    "as_of": "2026-10-12",
+    "relevant": true,
+    "truth_ref": null,
+    "note": null
+   },
+   {
+    "fact_id": "EX0001-F007",
+    "doc_id": "EX0001-D04",
+    "kind": "paramed",
+    "key": "bp",
+    "value": "136/86",
+    "unit": null,
+    "as_of": "2026-10-12",
+    "relevant": true,
+    "truth_ref": null,
+    "note": null
+   }
+  ],
+  "docs": [
+   {
+    "doc_id": "EX0001-D01",
+    "case_id": "EX0001",
+    "doc_type": "app_part1",
+    "vendor_id": "app_v1",
+    "ordered_at": null,
+    "received_at": "2026-10-01T09:00:00",
+    "order_reason": null,
+    "pages": 1,
+    "text_path": "data/source/EX0001/EX0001-D01.txt",
+    "fact_ids": [
+     "EX0001-F001",
+     "EX0001-F002"
+    ]
+   },
+   {
+    "doc_id": "EX0001-D02",
+    "case_id": "EX0001",
+    "doc_type": "rx",
+    "vendor_id": "rx_vendorA",
+    "ordered_at": "2026-10-01T09:05:00",
+    "received_at": "2026-10-01T09:20:00",
+    "order_reason": "auto",
+    "pages": 1,
+    "text_path": "data/source/EX0001/EX0001-D02.txt",
+    "fact_ids": [
+     "EX0001-F003",
+     "EX0001-F004"
+    ]
+   },
+   {
+    "doc_id": "EX0001-D03",
+    "case_id": "EX0001",
+    "doc_type": "lab_urine",
+    "vendor_id": "lab_B",
+    "ordered_at": "2026-10-02T10:00:00",
+    "received_at": "2026-10-14T16:00:00",
+    "order_reason": "REQ-1 age/amount",
+    "pages": 1,
+    "text_path": "data/source/EX0001/EX0001-D03.txt",
+    "fact_ids": [
+     "EX0001-F005"
+    ]
+   },
+   {
+    "doc_id": "EX0001-D04",
+    "case_id": "EX0001",
+    "doc_type": "paramed",
+    "vendor_id": "pm_A",
+    "ordered_at": "2026-10-02T10:00:00",
+    "received_at": "2026-10-13T12:00:00",
+    "order_reason": null,
+    "pages": 1,
+    "text_path": "data/source/EX0001/EX0001-D04.txt",
+    "fact_ids": [
+     "EX0001-F006",
+     "EX0001-F007"
+    ]
+   }
+  ]
+ },
+ "extracted": [
+  {
+   "doc_id": "EX0001-D03",
+   "case_id": "EX0001",
+   "doc_type": "lab_urine",
+   "vendor_schema": "lab_B.v2",
+   "payload": {
+    "panel": "UA/NIC",
+    "results": [
+     {
+      "test": "COTININE",
+      "val": "15OO",
+      "units": null
+     }
+    ]
+   },
+   "losses": [
+    {
+     "fact_id": "EX0001-F005",
+     "kind": "misread_digit",
+     "original": "1500",
+     "extracted": "15OO"
+    },
+    {
+     "fact_id": "EX0001-F005",
+     "kind": "unit_lost",
+     "original": "ng/mL",
+     "extracted": null
+    }
+   ]
+  }
+ ],
+ "golden": {
+  "case_id": "EX0001",
+  "trace": [
+   {
+    "step": 1,
+    "stage": "application",
+    "at": "2026-10-01T09:30:00",
+    "fact_ids": [
+     "EX0001-F001"
+    ],
+    "rule_id": "TOB-1",
+    "finding": "App states no tobacco in 12 months; quit 2024.",
+    "effect": {
+     "debits": 0,
+     "credits": 0,
+     "class_cap": null,
+     "ladder": null,
+     "flat_extra": null,
+     "postpone_months": null,
+     "decline": false,
+     "order_requirement": null,
+     "rider_action": null,
+     "no_impact": false
+    }
+   },
+   {
+    "step": 2,
+    "stage": "third_party",
+    "at": "2026-10-01T09:35:00",
+    "fact_ids": [
+     "EX0001-F003"
+    ],
+    "rule_id": "TOB-5",
+    "finding": "Varenicline filled 06/2026 contradicts quit date; treat as tobacco use within 12 months pending cotinine.",
+    "effect": {
+     "debits": 0,
+     "credits": 0,
+     "class_cap": "Standard Tobacco",
+     "ladder": "tobacco",
+     "flat_extra": null,
+     "postpone_months": null,
+     "decline": false,
+     "order_requirement": null,
+     "rider_action": null,
+     "no_impact": false
+    }
+   },
+   {
+    "step": 3,
+    "stage": "third_party",
+    "at": "2026-10-01T09:36:00",
+    "fact_ids": [
+     "EX0001-F004"
+    ],
+    "rule_id": "MISC-1",
+    "finding": "Fluticasone nasal for allergies; no impact.",
+    "effect": {
+     "debits": 0,
+     "credits": 0,
+     "class_cap": null,
+     "ladder": null,
+     "flat_extra": null,
+     "postpone_months": null,
+     "decline": false,
+     "order_requirement": null,
+     "rider_action": null,
+     "no_impact": true
+    }
+   },
+   {
+    "step": 4,
+    "stage": "application",
+    "at": "2026-10-01T09:40:00",
+    "fact_ids": [
+     "EX0001-F002"
+    ],
+    "rule_id": "HTN-5",
+    "finding": "Treated HTN, single agent; final debits depend on paramed BP.",
+    "effect": {
+     "debits": 0,
+     "credits": 0,
+     "class_cap": null,
+     "ladder": null,
+     "flat_extra": null,
+     "postpone_months": null,
+     "decline": false,
+     "order_requirement": null,
+     "rider_action": null,
+     "no_impact": false
+    }
+   },
+   {
+    "step": 5,
+    "stage": "labs",
+    "at": "2026-10-14T16:30:00",
+    "fact_ids": [
+     "EX0001-F005"
+    ],
+    "rule_id": "TOB-4.2",
+    "finding": "Cotinine 1500 ng/mL positive; confirms tobacco ladder, best class Standard Tobacco.",
+    "effect": {
+     "debits": 0,
+     "credits": 0,
+     "class_cap": "Standard Tobacco",
+     "ladder": "tobacco",
+     "flat_extra": null,
+     "postpone_months": null,
+     "decline": false,
+     "order_requirement": null,
+     "rider_action": null,
+     "no_impact": false
+    }
+   },
+   {
+    "step": 6,
+    "stage": "labs",
+    "at": "2026-10-14T16:35:00",
+    "fact_ids": [
+     "EX0001-F006"
+    ],
+    "rule_id": "BLD-1",
+    "finding": "Build 5'10\" 208 lb (BMI 29.8) within Standard on build chart.",
+    "effect": {
+     "debits": 0,
+     "credits": 0,
+     "class_cap": null,
+     "ladder": null,
+     "flat_extra": null,
+     "postpone_months": null,
+     "decline": false,
+     "order_requirement": null,
+     "rider_action": null,
+     "no_impact": false
+    }
+   },
+   {
+    "step": 7,
+    "stage": "labs",
+    "at": "2026-10-14T16:36:00",
+    "fact_ids": [
+     "EX0001-F007"
+    ],
+    "rule_id": "HTN-1",
+    "finding": "Treated BP 136/86, controlled on one agent: +25.",
+    "effect": {
+     "debits": 25,
+     "credits": 0,
+     "class_cap": null,
+     "ladder": null,
+     "flat_extra": null,
+     "postpone_months": null,
+     "decline": false,
+     "order_requirement": null,
+     "rider_action": null,
+     "no_impact": false
+    }
+   },
+   {
+    "step": 8,
+    "stage": "final",
+    "at": "2026-10-14T16:45:00",
+    "fact_ids": [],
+    "rule_id": "CLS-3.3",
+    "finding": "Net +25 on tobacco ladder = Standard Tobacco. WP approved.",
+    "effect": {
+     "debits": 0,
+     "credits": 0,
+     "class_cap": null,
+     "ladder": null,
+     "flat_extra": null,
+     "postpone_months": null,
+     "decline": false,
+     "order_requirement": null,
+     "rider_action": {
+      "code": "WP",
+      "status": "approved",
+      "reason": "Std Tobacco eligible"
+     },
+     "no_impact": false
+    }
+   }
+  ],
+  "decision": {
+   "ladder": "tobacco",
+   "risk_class": "Standard Tobacco",
+   "table": 0,
+   "flat_extras": [],
+   "riders": [
+    {
+     "code": "WP",
+     "status": "approved",
+     "reason": "Std Tobacco eligible"
+    }
+   ],
+   "postpone_months": null,
+   "decline_reason": null,
+   "net_debits": 25,
+   "preliminary_class": "Standard Plus",
+   "approved_face_amount": null,
+   "exclusions": []
+  },
+  "grey_areas": [],
+  "requirements_ordered": [
+   "EX0001-D03",
+   "EX0001-D04"
+  ],
+  "narrative_path": null
+ },
+ "notes": {
+  "case_id": "EX0001",
+  "persona_id": "uw_07",
+  "observations": [
+   {
+    "at": "2026-10-01T09:40:00",
+    "text": "46M 500k T20. app sez quit cigs '24. Rx - chantix 6/26?? ord u/a + PM"
+   },
+   {
+    "at": "2026-10-14T16:40:00",
+    "text": "cot 1500 pos. 5.10.208 ok. bp 136/86 on lisin"
+   }
+  ],
+  "worksheet_format": "debit_list",
+  "worksheet": "HTN tx ctrl +25\nbld 0\ncot+ -> STD TOB\nnet +25  STD TOB  WP ok",
+  "stated_decision": "Standard Tobacco",
+  "corruptions": [
+   {
+    "kind": "abbrev_t2",
+    "step": null,
+    "fact_id": "EX0001-F006",
+    "detail": "build written as 5.10.208"
+   },
+   {
+    "kind": "omitted_step",
+    "step": 3,
+    "fact_id": null,
+    "detail": "fluticasone dismissal not written"
+   }
+  ]
+ }
+}

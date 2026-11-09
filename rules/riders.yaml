@@ -1,0 +1,65 @@
+# guidelines.md §RID. Codes are the "official" codes; obscure note variants live in reference/abbreviations.yaml
+riders:
+  WP:
+    name: Waiver of Premium
+    ages: [18, 55]
+    best_allowed: Standard Tobacco      # i.e. any non-table class on either ladder
+    max_table: 4
+    decline_if: [back_spine_rated, psych_rated, occupation_fe, bmi_over_40, non_earning]
+  WMD:
+    name: Waiver of Monthly Deduction
+    same_as: WP
+    products: [UL, GUL]
+  ADB:
+    name: Accidental Death Benefit
+    ages: [18, 65]
+    max_table: 4
+    max_amount: 250000
+    decline_if: [mvr_major_or_dui_5yr, avocation_or_aviation_fe, alcohol_or_drug_rated, occupation_4a_5a]
+  CTR:
+    name: Children's Term Rider
+    ages: [18, 55]
+    any_issued_class: true
+    decline_if: [child_serious_impairment]
+  GIO:
+    name: Guaranteed Insurability Option
+    ages: [18, 40]
+    min_class: Standard                 # Standard / Standard Tobacco or better
+    max_table: 0
+    decline_if: [any_flat_extra]
+  ABR:
+    name: Accelerated Benefit Rider (terminal illness)
+    automatic: true
+  CIA:
+    name: Chronic Illness Acceleration
+    ages: [18, 75]
+    max_table: 2
+    decline_if: [neuro_or_cognitive_rated, age_66plus_with_ger_finding]
+  XCR:
+    name: Extended Conversion Rider
+    ages: [18, 60]
+    min_class: Standard Plus
+    max_table: 0
+  OIR:
+    name: Other-Insured Rider
+    separate_underwriting: true
+    max_face_ratio: 1.0
+  ROP-T:
+    name: Return of Premium (term)
+    products: [Term 20, Term 30]
+    ages: [18, 55]
+    max_table: 2
+  KPE:
+    name: Key-Person Endorsement
+    requires: [FIN-2.3, FINQ]
+    any_issued_class: true
+  LTA:
+    name: Level Term Addition
+    products: [UL, GUL]
+    ages: [18, 65]
+    max_table: 4
+    within_fin_limit: true
+rules:
+  - {id: RID-1, text: rider decline does not change base class}
+  - {id: RID-2, text: ineligible requested riders are declined with reason}
+  - {id: terminal, text: no riders on Postpone/Decline}
