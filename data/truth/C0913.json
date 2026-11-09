@@ -1,0 +1,292 @@
+{
+ "case_id": "C0913",
+ "seed": 364230147,
+ "app_date": "2026-07-24",
+ "design": {
+  "case_id": "C0913",
+  "seed": 364230147,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 54,
+  "sex": "F",
+  "face": 150000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "cervical_dysplasia:cin3_pending",
+    "key": "cervical_dysplasia",
+    "variant": "cin3_pending",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cin3_pending": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "adhd:functioning",
+    "key": "adhd",
+    "variant": "functioning",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.583,
+   "bmi": 24.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Vanessa",
+  "last_name": "Arnold",
+  "sex": "F",
+  "dob": "1972-12-27",
+  "age": 54,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "data scientist",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 210000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 131.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 72,
+ "pulse": 92,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cervical_dysplasia",
+   "label": "Abnormal pap / CIN",
+   "onset": "2007-03-01",
+   "status": "in_workup",
+   "severity": "severe",
+   "details": {
+    "cin3_pending": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0913-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adhd",
+   "label": "ADHD",
+   "onset": "2022-12-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "amphetamine-dextroamphetamine",
+     "dose": "10 mg",
+     "start": "2023-02-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adhd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0913-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2026-02-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0913-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2025-02-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2025-03-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0913-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-09-11",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2019-06-07",
+   "code": "A03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Atlas Assurance",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0913-P1",
+   "name": "Dr. Jared Hawkins",
+   "specialty": "family medicine",
+   "practice": "Simpson LLC Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0913-P2",
+   "name": "Dr. Ryan Combs",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Powell-Glass Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0913-P3",
+   "name": "Dr. Ashley Long",
+   "specialty": "psychiatry",
+   "practice": "Torres LLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 62.0,
+  "ldl": 204.0,
+  "triglycerides": 78.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 85.0,
+  "a1c": 5.5,
+  "ast": 14.0,
+  "alt": 22.0,
+  "ggt": 52.0,
+  "alk_phos": 98.0,
+  "bilirubin": 0.9,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 72.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.2,
+  "cdt": 1.3,
+  "nt_probnp": 16.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,309 @@
+{
+ "case_id": "C0378",
+ "seed": 613223943,
+ "app_date": "2025-10-16",
+ "design": {
+  "case_id": "C0378",
+  "seed": 613223943,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 37,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "cancer:colon_2_y0-2",
+    "key": "cancer",
+    "variant": "colon_2_y0-2",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "colon_2",
+     "years_since_tx": [
+      0,
+      2
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "sinusitis",
+   "seasonal_allergy",
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.675,
+   "bmi": 24.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Donald",
+  "last_name": "Williams",
+  "sex": "M",
+  "dob": "1988-07-31",
+  "age": 37,
+  "address_state": "LA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "physician",
+  "occupation_class": "1A",
+  "annual_income": 37000,
+  "net_worth": 41000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 30",
+  "riders_requested": [
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 60.0,
+ "weight_lb": 124.0,
+ "bp_systolic": 117,
+ "bp_diastolic": 77,
+ "pulse": 73,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2022-10-13",
+   "status": "active",
+   "severity": "severe",
+   "details": {
+    "type": "colon_2",
+    "years_since_tx": 1.8,
+    "stage": "II"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0378-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2022-05-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2022-06-30",
+     "stop": "2022-06-06",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0378-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2017-02-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2017-03-26",
+     "stop": "2017-03-28",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2017-02-23",
+     "stop": "2017-03-11",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0378-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2018-10-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2018-11-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0378-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2014-02-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0378-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-03-27",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-05-28",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-06-25",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0378-P1",
+   "name": "Dr. William Williams",
+   "specialty": "family medicine",
+   "practice": "Porter Inc Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0378-P2",
+   "name": "Dr. Brandon Ramos",
+   "specialty": "oncology",
+   "practice": "Bruce Sexton and Ward Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 68.0,
+  "ldl": 198.0,
+  "triglycerides": 77.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 96.0,
+  "a1c": 5.3,
+  "ast": 30.0,
+  "alt": 40.0,
+  "ggt": 20.0,
+  "alk_phos": 74.0,
+  "bilirubin": 0.8,
+  "albumin": 4.0,
+  "creatinine": 1.0,
+  "egfr": 88.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.1,
+  "nt_probnp": 35.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

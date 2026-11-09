@@ -1,0 +1,279 @@
+{
+ "case_id": "C0349",
+ "seed": 926629914,
+ "app_date": "2026-08-18",
+ "design": {
+  "case_id": "C0349",
+  "seed": 926629914,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 39,
+  "sex": "M",
+  "face": 1000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "brca_lynch:prophylactic_done",
+    "key": "brca_lynch",
+    "variant": "prophylactic_done",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "prophylactic_surgery": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "psoriasis:skin",
+    "key": "psoriasis",
+    "variant": "skin",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ],
+    [
+     "family_history",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.837,
+   "bmi": 29.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Timothy",
+  "last_name": "Johnston",
+  "sex": "M",
+  "dob": "1987-05-01",
+  "age": 39,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "teacher",
+  "occupation_class": "2A",
+  "annual_income": 39000,
+  "net_worth": 250000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "UL",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "business partner"
+ },
+ "height_in": 66.0,
+ "weight_lb": 182.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 88,
+ "pulse": 69,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2023-12-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "prophylactic_surgery": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0349-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2024-08-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "arthritis": false,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "adalimumab",
+     "dose": "40 mg inj",
+     "start": "2024-08-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0349-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2025-07-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0349-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 47,
+   "age_at_death": 49,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 52,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 70,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2020-05-06",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0349-P1",
+   "name": "Dr. Holly Todd",
+   "specialty": "family medicine",
+   "practice": "Weaver-Davis Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0349-P2",
+   "name": "Dr. Michael Gould",
+   "specialty": "oncology",
+   "practice": "Kelley-Miller Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0349-P3",
+   "name": "Dr. Danny White",
+   "specialty": "rheumatology",
+   "practice": "Parrish PLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 227.0,
+  "hdl": 43.0,
+  "ldl": 159.0,
+  "triglycerides": 125.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 96.0,
+  "a1c": 5.1,
+  "ast": 32.0,
+  "alt": 39.0,
+  "ggt": 49.0,
+  "alk_phos": 65.0,
+  "bilirubin": 1.0,
+  "albumin": 4.0,
+  "creatinine": 1.0,
+  "egfr": 108.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.0,
+  "nt_probnp": 94.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

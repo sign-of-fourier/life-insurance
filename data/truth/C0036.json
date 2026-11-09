@@ -1,0 +1,441 @@
+{
+ "case_id": "C0036",
+ "seed": 303185010,
+ "app_date": "2025-11-18",
+ "design": {
+  "case_id": "C0036",
+  "seed": 303185010,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 19,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "eating_disorder:recovered",
+    "key": "eating_disorder",
+    "variant": "recovered",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recovered_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "lupus:systemic",
+    "key": "lupus",
+    "variant": "systemic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "systemic"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "rosacea",
+   "glaucoma",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "epic_progress",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CIA",
+   "GIO",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.571,
+   "bmi": 21.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Eric",
+  "last_name": "Moran",
+  "sex": "M",
+  "dob": "2007-02-21",
+  "age": 19,
+  "address_state": "KY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "delivery driver",
+  "occupation_class": "2A",
+  "annual_income": 116000,
+  "net_worth": 1333000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 30",
+  "riders_requested": [
+   "CIA",
+   "GIO",
+   "KPE"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 63.0,
+ "weight_lb": 119.0,
+ "bp_systolic": 123,
+ "bp_diastolic": 80,
+ "pulse": 57,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "2/yr",
+   "start": "2013-10-05",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2025-03-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "recovered_years": 4.0
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0036-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2024-03-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [
+    {
+     "drug": "fludrocortisone",
+     "dose": "0.1 mg",
+     "start": "2024-05-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0036-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2023-12-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "organ_involvement": false,
+    "kind": "systemic"
+   },
+   "meds": [
+    {
+     "drug": "mycophenolate",
+     "dose": "500 mg",
+     "start": "2024-03-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    },
+    {
+     "drug": "hydroxychloroquine",
+     "dose": "200 mg",
+     "start": "2024-03-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0036-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2025-06-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "500 mg",
+     "start": "2025-06-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0036-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2025-02-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2025-02-23",
+     "stop": "2025-03-26",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0036-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2024-09-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2024-11-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0036-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2023-11-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2023-11-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0036-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 77,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-01-26",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-07-29",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0036-P1",
+   "name": "Dr. Timothy Bradley",
+   "specialty": "family medicine",
+   "practice": "Hardy-Russell Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0036-P2",
+   "name": "Dr. Brett Miller",
+   "specialty": "psychiatry",
+   "practice": "Sanders and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0036-P3",
+   "name": "Dr. David Johnson",
+   "specialty": "endocrinology",
+   "practice": "Stewart Benjamin and Singleton Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0036-P4",
+   "name": "Dr. Luke Sanders",
+   "specialty": "rheumatology",
+   "practice": "Johnson Inc Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 50.0,
+  "ldl": 186.0,
+  "triglycerides": 211.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 78.0,
+  "a1c": 5.3,
+  "ast": 35.0,
+  "alt": 33.0,
+  "ggt": 21.0,
+  "alk_phos": 70.0,
+  "bilirubin": 0.9,
+  "albumin": 4.4,
+  "creatinine": 1.0,
+  "egfr": 110.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.5,
+  "cdt": 1.2,
+  "nt_probnp": 105.0,
+  "cotinine_urine": 42.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

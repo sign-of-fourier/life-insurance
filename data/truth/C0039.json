@@ -1,0 +1,402 @@
+{
+ "case_id": "C0039",
+ "seed": 389368943,
+ "app_date": "2025-06-10",
+ "design": {
+  "case_id": "C0039",
+  "seed": 389368943,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 79,
+  "sex": "M",
+  "face": 750000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "pad_aaa:pad",
+    "key": "pad_aaa",
+    "variant": "pad",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "kind": "pad"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "afib:structural",
+    "key": "afib",
+    "variant": "structural",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "structural": true
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CIA",
+   "LTA",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.656,
+   "bmi": 20.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Christian",
+  "last_name": "Duncan",
+  "sex": "M",
+  "dob": "1946-02-19",
+  "age": 79,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 91480,
+  "net_worth": 2287000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "LTA",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 121.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 82,
+ "pulse": 89,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "5/day",
+   "start": "1986-04-23",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2018-01-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 1.9
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0039-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2017-01-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "pad",
+    "smoker": false,
+    "size_cm": 4.6,
+    "repaired_months": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0039-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2015-07-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "tenofovir",
+     "dose": "25 mg",
+     "start": "2015-10-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0039-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "1996-03-29",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "persistent",
+    "echo_normal": false,
+    "chads_vasc": 4,
+    "structural": true,
+    "ablation_years": null,
+    "years_since": 29.2
+   },
+   "meds": [
+    {
+     "drug": "diltiazem",
+     "dose": "120 mg",
+     "start": "1996-06-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0039-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2011-10-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2011-10-25",
+     "stop": "2011-11-24",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0039-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2021-10-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2021-12-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0039-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 71,
+   "age_at_death": 87,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "New Zealand",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0039-P1",
+   "name": "Dr. Hannah Fisher",
+   "specialty": "family medicine",
+   "practice": "Garcia Roy and Christensen Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0039-P2",
+   "name": "Dr. Penny Ewing",
+   "specialty": "pulmonology",
+   "practice": "Hall Inc Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0039-P3",
+   "name": "Dr. Kevin Henderson",
+   "specialty": "cardiology",
+   "practice": "Prince Collins and Stanley Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0039-P4",
+   "name": "Dr. Omar Mcdonald",
+   "specialty": "gastroenterology",
+   "practice": "Frank-Adkins Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 290.0,
+  "hdl": 67.0,
+  "ldl": 204.0,
+  "triglycerides": 93.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 92.0,
+  "a1c": 4.8,
+  "ast": 95.0,
+  "alt": 118.0,
+  "ggt": 13.0,
+  "alk_phos": 65.0,
+  "bilirubin": 1.2,
+  "albumin": 4.7,
+  "creatinine": 1.0,
+  "egfr": 74.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.2,
+  "nt_probnp": 155.0,
+  "cotinine_urine": 3638.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.5
+ }
+}

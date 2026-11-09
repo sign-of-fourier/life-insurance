@@ -1,0 +1,280 @@
+{
+ "case_id": "C0835",
+ "seed": 794322792,
+ "app_date": "2026-08-27",
+ "design": {
+  "case_id": "C0835",
+  "seed": 794322792,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 49,
+  "sex": "F",
+  "face": 500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "diabetes_t1:age40-49_a1c7.0",
+    "key": "diabetes_t1",
+    "variant": "age40-49_a1c7.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      7.0,
+      7.99
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ADB",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.543,
+   "bmi": 32.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Sandra",
+  "last_name": "Fisher",
+  "sex": "F",
+  "dob": "1977-07-23",
+  "age": 49,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "attorney",
+  "occupation_class": "1A",
+  "annual_income": 46000,
+  "net_worth": 525000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB",
+   "XCR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 69.0,
+ "weight_lb": 222.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 82,
+ "pulse": 75,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2018-05-10",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 7.2,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 8.3,
+    "age_at_dx": 40,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2018-07-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin lispro",
+     "dose": "100 u/mL",
+     "start": "2018-05-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0835-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2020-05-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "ustekinumab",
+     "dose": "90 mg inj",
+     "start": "2020-07-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0835-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 63,
+   "age_at_death": 79,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-04-01",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Sweden",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0835-P1",
+   "name": "Dr. Michelle Johnson",
+   "specialty": "family medicine",
+   "practice": "Vaughan Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0835-P2",
+   "name": "Dr. Amy Johnson",
+   "specialty": "endocrinology",
+   "practice": "Cowan Harris and Medina Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0835-P3",
+   "name": "Dr. Greg Lyons",
+   "specialty": "rheumatology",
+   "practice": "Thompson LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 289.0,
+  "hdl": 67.0,
+  "ldl": 188.0,
+  "triglycerides": 170.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 146.0,
+  "a1c": 7.0,
+  "ast": 25.0,
+  "alt": 34.0,
+  "ggt": 25.0,
+  "alk_phos": 84.0,
+  "bilirubin": 0.9,
+  "albumin": 4.8,
+  "creatinine": 1.1,
+  "egfr": 115.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.0,
+  "nt_probnp": 72.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

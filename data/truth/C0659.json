@@ -1,0 +1,247 @@
+{
+ "case_id": "C0659",
+ "seed": 796979093,
+ "app_date": "2025-08-27",
+ "design": {
+  "case_id": "C0659",
+  "seed": 796979093,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 60,
+  "sex": "F",
+  "face": 750000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cervical_dysplasia:cin3_pending",
+    "key": "cervical_dysplasia",
+    "variant": "cin3_pending",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cin3_pending": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.83,
+   "bmi": 25.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Crystal",
+  "last_name": "Austin",
+  "sex": "F",
+  "dob": "1965-04-15",
+  "age": 60,
+  "address_state": "NJ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "architect",
+  "occupation_class": "1A",
+  "annual_income": 60000,
+  "net_worth": 629000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "GUL",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 59.0,
+ "weight_lb": 124.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 79,
+ "pulse": 82,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2010-12-26",
+   "quit": "2021-07-08",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cervical_dysplasia",
+   "label": "Abnormal pap / CIN",
+   "onset": "2018-06-16",
+   "status": "in_workup",
+   "severity": "severe",
+   "details": {
+    "cin3_pending": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0659-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2013-09-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2013-10-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2013-11-02",
+     "stop": "2013-10-31",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0659-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-08-18",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-12-28",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "France",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0659-P1",
+   "name": "Dr. Maria Boyer",
+   "specialty": "family medicine",
+   "practice": "Hamilton LLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0659-P2",
+   "name": "Dr. Larry Cantrell",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Long LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 54.0,
+  "ldl": 190.0,
+  "triglycerides": 158.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 97.0,
+  "a1c": 4.8,
+  "ast": 28.0,
+  "alt": 20.0,
+  "ggt": 16.0,
+  "alk_phos": 44.0,
+  "bilirubin": 0.3,
+  "albumin": 4.5,
+  "creatinine": 0.9,
+  "egfr": 92.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.5,
+  "nt_probnp": 19.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

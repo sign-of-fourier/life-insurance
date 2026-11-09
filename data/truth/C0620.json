@@ -1,0 +1,512 @@
+{
+ "case_id": "C0620",
+ "seed": 948512403,
+ "app_date": "2026-09-20",
+ "design": {
+  "case_id": "C0620",
+  "seed": 948512403,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 53,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "cad_nonobstructive:cac_400",
+    "key": "cad_nonobstructive",
+    "variant": "cac_400",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": {
+      "ge": 400
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "copd:mild",
+    "key": "copd",
+    "variant": "mild",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "afib:structural",
+    "key": "afib",
+    "variant": "structural",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "structural": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t1:age50-59_a1c10.0",
+    "key": "diabetes_t1",
+    "variant": "age50-59_a1c10.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 250,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      10.0,
+      99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "eczema",
+   "gerd",
+   "acute_injury",
+   "dental"
+  ],
+  "grey": "GRY-8",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.853,
+   "bmi": 29.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Whitney",
+  "last_name": "Howard",
+  "sex": "F",
+  "dob": "1973-09-17",
+  "age": 53,
+  "address_state": "VA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 19000,
+  "net_worth": 23000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 10",
+  "riders_requested": [
+   "WP"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 58.0,
+ "weight_lb": 139.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 79,
+ "pulse": 59,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2011-09-24",
+   "quit": "2024-11-19",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2016-03-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stenosis_pct": 97,
+    "cac_score": 880
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0620-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2024-09-20",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 81,
+    "smoker": false,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2025-01-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    },
+    {
+     "drug": "tiotropium",
+     "dose": "18 mcg",
+     "start": "2024-12-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0620-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2024-07-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "single",
+    "echo_normal": false,
+    "chads_vasc": 4,
+    "structural": true,
+    "ablation_years": null,
+    "years_since": 2.2
+   },
+   "meds": [
+    {
+     "drug": "amiodarone",
+     "dose": "200 mg",
+     "start": "2024-11-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0620-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2012-02-14",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 10.3,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 14.6,
+    "age_at_dx": 38,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2012-03-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin aspart",
+     "dose": "100 u/mL",
+     "start": "2012-02-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0620-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2013-12-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2014-01-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2014-01-21",
+     "stop": "2013-12-29",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0620-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2025-01-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2025-02-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0620-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2019-05-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2019-06-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0620-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2025-03-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "500 mg",
+     "start": "2025-03-21",
+     "stop": "2025-04-27",
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2025-04-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0620-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 64,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2019-08-23",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0620-P1",
+   "name": "Dr. Michelle Johnson",
+   "specialty": "family medicine",
+   "practice": "Moore LLC Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0620-P2",
+   "name": "Dr. Tara Hammond",
+   "specialty": "cardiology",
+   "practice": "Romero Campbell and Allen Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0620-P3",
+   "name": "Dr. Frances Thomas",
+   "specialty": "pulmonology",
+   "practice": "James Chang and Adams Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0620-P4",
+   "name": "Dr. Linda Martinez",
+   "specialty": "endocrinology",
+   "practice": "Smith Morales and Buckley Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 262.0,
+  "hdl": 40.0,
+  "ldl": 195.0,
+  "triglycerides": 134.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 248.0,
+  "a1c": 10.4,
+  "ast": 24.0,
+  "alt": 36.0,
+  "ggt": 37.0,
+  "alk_phos": 81.0,
+  "bilirubin": 0.5,
+  "albumin": 3.9,
+  "creatinine": 1.0,
+  "egfr": 89.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.7,
+  "cdt": 1.3,
+  "nt_probnp": 106.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

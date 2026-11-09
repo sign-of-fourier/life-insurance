@@ -1,0 +1,338 @@
+{
+ "case_id": "C0128",
+ "seed": 1000924147,
+ "app_date": "2026-04-14",
+ "design": {
+  "case_id": "C0128",
+  "seed": 1000924147,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 64,
+  "sex": "F",
+  "face": 3000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea",
+   "vitamin_d_deficiency",
+   "cataracts",
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.314,
+   "bmi": 27.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jodi",
+  "last_name": "Parker",
+  "sex": "F",
+  "dob": "1962-04-21",
+  "age": 64,
+  "address_state": "OH",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dental hygienist",
+  "occupation_class": "2A",
+  "annual_income": 956000,
+  "net_worth": 10795000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "UL",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 160.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 69,
+ "pulse": 73,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2021-12-26",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 9.5,
+    "monotherapy": true
+   },
+   "meds": [
+    {
+     "drug": "haloperidol",
+     "dose": "5 mg",
+     "start": "2022-01-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    },
+    {
+     "drug": "clozapine",
+     "dose": "100 mg",
+     "start": "2022-02-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0128-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2011-10-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2011-10-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2011-11-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0128-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2020-12-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2020-12-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0128-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2020-11-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0128-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2022-04-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2022-04-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0128-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 77,
+   "age_at_death": 80,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-10-26",
+   "code": "S99",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-11-20",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Netherlands",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0128-P1",
+   "name": "Dr. Matthew Randolph",
+   "specialty": "family medicine",
+   "practice": "Williamson Oconnell and Richards Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0128-P2",
+   "name": "Dr. Johnathan Sherman",
+   "specialty": "psychiatry",
+   "practice": "Bass-Perez Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 54.0,
+  "ldl": 207.0,
+  "triglycerides": 151.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 97.0,
+  "a1c": 5.0,
+  "ast": 33.0,
+  "alt": 30.0,
+  "ggt": 29.0,
+  "alk_phos": 47.0,
+  "bilirubin": 0.5,
+  "albumin": 4.1,
+  "creatinine": 1.2,
+  "egfr": 68.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.5,
+  "cdt": 1.2,
+  "nt_probnp": 21.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

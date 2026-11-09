@@ -1,0 +1,319 @@
+{
+ "case_id": "C0864",
+ "seed": 536231439,
+ "app_date": "2025-01-31",
+ "design": {
+  "case_id": "C0864",
+  "seed": 536231439,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 45,
+  "sex": "M",
+  "face": 5000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "polycystic_kidney:reduced",
+    "key": "polycystic_kidney",
+    "variant": "reduced",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "glaucoma",
+   "erectile_dysfunction"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.784,
+   "bmi": 29.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Alexander",
+  "last_name": "Lawson",
+  "sex": "M",
+  "dob": "1979-11-27",
+  "age": 45,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "construction laborer",
+  "occupation_class": "3A",
+  "annual_income": 318000,
+  "net_worth": 1409000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 73.0,
+ "weight_lb": 220.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 77,
+ "pulse": 59,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2009-08-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F2"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0864-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2007-05-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 53
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0864-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2013-06-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2013-07-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2013-06-21",
+     "stop": "2013-07-16",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0864-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2024-04-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "20 mg",
+     "start": "2024-05-20",
+     "stop": "2024-06-13",
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    },
+    {
+     "drug": "tadalafil",
+     "dose": "5 mg",
+     "start": "2024-04-18",
+     "stop": "2024-04-27",
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0864-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 77,
+   "age_at_death": 83,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2018-03-14",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Iceland",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0864-P1",
+   "name": "Dr. Derrick Keller",
+   "specialty": "family medicine",
+   "practice": "Rice-Anderson Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0864-P2",
+   "name": "Dr. Jane Wood",
+   "specialty": "gastroenterology",
+   "practice": "Franco Wise and Bishop Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0864-P3",
+   "name": "Dr. Alison Powell",
+   "specialty": "nephrology",
+   "practice": "Anderson Mcgee and Thomas Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 51.0,
+  "ldl": 222.0,
+  "triglycerides": 72.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 84.0,
+  "a1c": 5.2,
+  "ast": 84.0,
+  "alt": 94.0,
+  "ggt": 10.0,
+  "alk_phos": 116.0,
+  "bilirubin": 0.5,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 105.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.8,
+  "cdt": 1.3,
+  "nt_probnp": 71.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.6
+ }
+}

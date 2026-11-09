@@ -1,0 +1,253 @@
+{
+ "case_id": "C0388",
+ "seed": 665211433,
+ "app_date": "2025-03-18",
+ "design": {
+  "case_id": "C0388",
+  "seed": 665211433,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 55,
+  "sex": "F",
+  "face": 100000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "nm_surgery:surgery_scheduled",
+    "key": "nm_surgery",
+    "variant": "surgery_scheduled",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "migraine:any",
+    "key": "migraine",
+    "variant": "any",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "moderate",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CIA",
+   "OIR",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.327,
+   "bmi": 29.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_surgery": "surgery_scheduled"
+  }
+ },
+ "person": {
+  "first_name": "Andrea",
+  "last_name": "Jones",
+  "sex": "F",
+  "dob": "1969-10-05",
+  "age": 55,
+  "address_state": "UT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dentist",
+  "occupation_class": "1A",
+  "annual_income": 20000,
+  "net_worth": 130000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA",
+   "OIR",
+   "WP"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 59.0,
+ "weight_lb": 144.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 81,
+ "pulse": 92,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "migraine",
+   "label": "Migraine",
+   "onset": "2015-01-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "topiramate",
+     "dose": "50 mg",
+     "start": "2015-03-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "migraine"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0388-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2024-08-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2024-10-01",
+     "stop": "2024-09-06",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0388-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 72,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2016-10-09",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Norway",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0388-P1",
+   "name": "Dr. Donna Casey",
+   "specialty": "family medicine",
+   "practice": "Logan and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0388-P2",
+   "name": "Dr. Melissa Blackburn",
+   "specialty": "neurology",
+   "practice": "Caldwell Dalton and Bennett Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 60.0,
+  "ldl": 197.0,
+  "triglycerides": 119.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 103.0,
+  "a1c": 5.3,
+  "ast": 38.0,
+  "alt": 39.0,
+  "ggt": 16.0,
+  "alk_phos": 49.0,
+  "bilirubin": 1.2,
+  "albumin": 3.8,
+  "creatinine": 0.9,
+  "egfr": 84.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.3,
+  "cdt": 1.5,
+  "nt_probnp": 48.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

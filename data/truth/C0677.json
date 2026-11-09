@@ -1,0 +1,247 @@
+{
+ "case_id": "C0677",
+ "seed": 915615222,
+ "app_date": "2026-02-04",
+ "design": {
+  "case_id": "C0677",
+  "seed": 915615222,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 36,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "organ_transplant_other:default",
+    "key": "organ_transplant_other",
+    "variant": "default",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "OIR",
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.267,
+   "bmi": 29.5,
+   "foreign_country": "Singapore",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "James",
+  "last_name": "Ferguson",
+  "sex": "M",
+  "dob": "1989-11-08",
+  "age": 36,
+  "address_state": "NE",
+  "country_of_residence": "US",
+  "citizenship": "Singapore",
+  "years_in_us": 2.0,
+  "visa_type": "Permanent Resident",
+  "occupation": "roofer",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 125000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 20",
+  "riders_requested": [
+   "OIR",
+   "ROP-T"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 69.0,
+ "weight_lb": 200.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 77,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "5/day",
+   "start": "2013-10-11",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2009-04-18",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 16.8,
+    "organ": "other"
+   },
+   "meds": [
+    {
+     "drug": "mycophenolate",
+     "dose": "500 mg",
+     "start": "2009-07-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    },
+    {
+     "drug": "cyclosporine",
+     "dose": "100 mg",
+     "start": "2009-04-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0677-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2011-03-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2011-04-01",
+     "stop": "2011-05-15",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0677-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-07-26",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-11-04",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Austria",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0677-P1",
+   "name": "Dr. Keith Taylor",
+   "specialty": "family medicine",
+   "practice": "Wright and Sons Clinic",
+   "aps_style": "foreign_translated",
+   "country": "Singapore"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 59.0,
+  "ldl": 202.0,
+  "triglycerides": 107.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 94.0,
+  "a1c": 5.3,
+  "ast": 35.0,
+  "alt": 25.0,
+  "ggt": 42.0,
+  "alk_phos": 82.0,
+  "bilirubin": 0.8,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 110.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.5,
+  "cdt": 1.2,
+  "nt_probnp": 97.0,
+  "cotinine_urine": 1176.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

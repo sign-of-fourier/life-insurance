@@ -1,0 +1,375 @@
+{
+ "case_id": "C0301",
+ "seed": 390473273,
+ "app_date": "2025-10-19",
+ "design": {
+  "case_id": "C0301",
+  "seed": 390473273,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 54,
+  "sex": "F",
+  "face": 5000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "cancer:melanoma_in_situ_y0-2",
+    "key": "cancer",
+    "variant": "melanoma_in_situ_y0-2",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "melanoma_in_situ",
+     "years_since_tx": [
+      0,
+      2
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad_nonobstructive:cac_0_99",
+    "key": "cad_nonobstructive",
+    "variant": "cac_0_99",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": [
+      0,
+      99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "ckd:egfr_45-59",
+    "key": "ckd",
+    "variant": "egfr_45-59",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": "45-59"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_foreign:citizen_abroad_C",
+    "key": "nm_foreign",
+    "variant": "citizen_abroad_C",
+    "chapter": "FN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "glaucoma"
+  ],
+  "grey": "GRY-7",
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.949,
+   "bmi": 31.7,
+   "foreign_country": "Lebanon",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Diana",
+  "last_name": "Kelly",
+  "sex": "F",
+  "dob": "1972-01-31",
+  "age": 54,
+  "address_state": "N/A",
+  "country_of_residence": "Lebanon",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 351000,
+  "net_worth": 2743000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "WP"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 162.0,
+ "bp_systolic": 133,
+ "bp_diastolic": 90,
+ "pulse": 84,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2016-09-02",
+   "quit": "2024-07-27",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2023-11-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_in_situ",
+    "years_since_tx": 1.4,
+    "stage": "0"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0301-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2023-03-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "stenosis_pct": 76,
+    "cac_score": 55
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0301-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ckd",
+   "label": "Chronic kidney disease (eGFR)",
+   "onset": "2023-05-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 45
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0301-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2015-03-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2015-04-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0301-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2012-11-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2012-12-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2013-01-09",
+     "stop": "2013-01-10",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0301-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-07-01",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-12-06",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2019-03-26",
+   "code": "N04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0301-P1",
+   "name": "Dr. Amy Bryant",
+   "specialty": "family medicine",
+   "practice": "Richardson PLC Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Lebanon"
+  },
+  {
+   "provider_id": "C0301-P2",
+   "name": "Dr. Dylan Nguyen",
+   "specialty": "oncology",
+   "practice": "Johnson LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0301-P3",
+   "name": "Dr. John Grant",
+   "specialty": "cardiology",
+   "practice": "Smith Scott and Rivera Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0301-P4",
+   "name": "Dr. Jessica Johnson",
+   "specialty": "nephrology",
+   "practice": "Davis-Barton Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 295.0,
+  "hdl": 54.0,
+  "ldl": 204.0,
+  "triglycerides": 183.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 87.0,
+  "a1c": 5.1,
+  "ast": 18.0,
+  "alt": 14.0,
+  "ggt": 13.0,
+  "alk_phos": 107.0,
+  "bilirubin": 0.8,
+  "albumin": 4.0,
+  "creatinine": 2.0,
+  "egfr": 45.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.8,
+  "cdt": 0.9,
+  "nt_probnp": 58.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

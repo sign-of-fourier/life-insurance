@@ -1,0 +1,310 @@
+{
+ "case_id": "C0269",
+ "seed": 500266989,
+ "app_date": "2025-08-04",
+ "design": {
+  "case_id": "C0269",
+  "seed": 500266989,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 29,
+  "sex": "M",
+  "face": 300000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "benign_tumor:hgd_polyp",
+    "key": "benign_tumor",
+    "variant": "hgd_polyp",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "high_grade_dysplasia": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "proteinuria:prot_>300",
+    "key": "proteinuria",
+    "variant": "prot_>300",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": ">300"
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "specialist_letter"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.683,
+   "bmi": 32.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Daniel",
+  "last_name": "Merritt",
+  "sex": "M",
+  "dob": "1996-06-26",
+  "age": 29,
+  "address_state": "TN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "construction laborer",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 203000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 60.0,
+ "weight_lb": 165.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 71,
+ "pulse": 56,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2015-06-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "high_grade_dysplasia": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0269-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2022-10-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2019-04-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [
+    {
+     "drug": "fludrocortisone",
+     "dose": "0.1 mg",
+     "start": "2019-04-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0269-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2024-04-27",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "urine_protein": 552
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0269-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-06-23",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-05-12",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Singapore",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0269-P1",
+   "name": "Dr. Christine Mays",
+   "specialty": "family medicine",
+   "practice": "Mccarty Ford and Williams Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0269-P2",
+   "name": "Dr. Joshua Vaughan",
+   "specialty": "oncology",
+   "practice": "Bass Ltd Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0269-P3",
+   "name": "Dr. Kelly Forbes",
+   "specialty": "endocrinology",
+   "practice": "Adkins Shelton and Johnson Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0269-P4",
+   "name": "Dr. Julie Murphy",
+   "specialty": "nephrology",
+   "practice": "Romero Group Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 54.0,
+  "ldl": 209.0,
+  "triglycerides": 138.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 84.0,
+  "a1c": 5.3,
+  "ast": 26.0,
+  "alt": 16.0,
+  "ggt": 19.0,
+  "alk_phos": 46.0,
+  "bilirubin": 0.7,
+  "albumin": 4.7,
+  "creatinine": 0.8,
+  "egfr": 84.0,
+  "urine_protein": 552.0,
+  "hemoglobin": 14.7,
+  "cdt": 1.2,
+  "nt_probnp": 23.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

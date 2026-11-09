@@ -1,0 +1,499 @@
+{
+ "case_id": "C0286",
+ "seed": 496458154,
+ "app_date": "2026-01-26",
+ "design": {
+  "case_id": "C0286",
+  "seed": 496458154,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 46,
+  "sex": "F",
+  "face": 150000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cad:ev0-39_y5-100",
+    "key": "cad",
+    "variant": "ev0-39_y5-100",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      0,
+      39
+     ],
+     "years_since": [
+      5,
+      100
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "pancreatitis:chronic",
+    "key": "pancreatitis",
+    "variant": "chronic",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "tbi:residual",
+    "key": "tbi",
+    "variant": "residual",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "residual": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "LTA",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.94,
+   "bmi": 23.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jamie",
+  "last_name": "Scott",
+  "sex": "F",
+  "dob": "1980-03-16",
+  "age": 46,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dentist",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 145000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "GUL",
+  "riders_requested": [
+   "LTA",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 69.0,
+ "weight_lb": 161.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 67,
+ "pulse": 61,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1995-02-12",
+   "quit": "2018-06-08",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2013-01-26",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 33,
+    "years_since": 13,
+    "event": "MI",
+    "ef": 55,
+    "angina": false,
+    "vessels": 1,
+    "ldl": 97,
+    "abnormal_stress": false,
+    "normal_stress_12mo": false,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "80 mg",
+     "start": "2013-04-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2013-03-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "50 mg",
+     "start": "2013-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0286-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2024-07-28",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "chronic": true,
+    "cause": "other"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0286-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tbi",
+   "label": "Concussion / TBI",
+   "onset": "2023-06-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "residual": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0286-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2020-03-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F2"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0286-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2006-05-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": true,
+    "steroid_bursts_per_year": null,
+    "er_years_ago": 0.8,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "prednisone",
+     "dose": "10 mg",
+     "start": "2006-06-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0286-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2021-07-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "entecavir",
+     "dose": "0.5 mg",
+     "start": "2021-10-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0286-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2018-02-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2018-03-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0286-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-01-21",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-12-11",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-08-30",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0286-P1",
+   "name": "Dr. Tracie Lucas",
+   "specialty": "family medicine",
+   "practice": "Nelson-Norton Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0286-P2",
+   "name": "Dr. Sarah Roberts",
+   "specialty": "cardiology",
+   "practice": "Davenport Johnson and Boyle Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0286-P3",
+   "name": "Dr. Elizabeth Collier",
+   "specialty": "gastroenterology",
+   "practice": "Jones-Mcdaniel Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0286-P4",
+   "name": "Dr. Amber Powell",
+   "specialty": "neurology",
+   "practice": "Gentry-Gallegos Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0286-P5",
+   "name": "Dr. Nicole Salazar",
+   "specialty": "pulmonology",
+   "practice": "James-Douglas Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 287.0,
+  "hdl": 57.0,
+  "ldl": 213.0,
+  "triglycerides": 84.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 102.0,
+  "a1c": 5.1,
+  "ast": 94.0,
+  "alt": 64.0,
+  "ggt": 45.0,
+  "alk_phos": 108.0,
+  "bilirubin": 0.6,
+  "albumin": 4.6,
+  "creatinine": 0.8,
+  "egfr": 71.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.4,
+  "nt_probnp": 57.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

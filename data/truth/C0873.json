@@ -1,0 +1,281 @@
+{
+ "case_id": "C0873",
+ "seed": 317525663,
+ "app_date": "2026-09-07",
+ "design": {
+  "case_id": "C0873",
+  "seed": 317525663,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 46,
+  "sex": "F",
+  "face": 500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "barretts:hgd",
+    "key": "barretts",
+    "variant": "hgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "high"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "gestational_dm:resolved",
+    "key": "gestational_dm",
+    "variant": "resolved",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "resolved": true
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.735,
+   "bmi": 28.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Linda",
+  "last_name": "Dominguez",
+  "sex": "F",
+  "dob": "1981-01-16",
+  "age": 46,
+  "address_state": "IA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "marketing manager",
+  "occupation_class": "1A",
+  "annual_income": 34000,
+  "net_worth": 358000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": true,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 67.0,
+ "weight_lb": 179.0,
+ "bp_systolic": 131,
+ "bp_diastolic": 68,
+ "pulse": 85,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1/2 ppd",
+   "start": "1996-03-25",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2011-06-27",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "dysplasia": "high"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0873-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "gestational_dm",
+   "label": "Gestational diabetes (resolved)",
+   "onset": "2016-08-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "resolved": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0873-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2016-11-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2017-01-02",
+     "stop": "2016-12-16",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0873-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 67,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-01-01",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2019-09-26",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0873-P1",
+   "name": "Dr. Heather Dillon",
+   "specialty": "family medicine",
+   "practice": "Foster-Schmidt Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0873-P2",
+   "name": "Dr. Michele Hanson",
+   "specialty": "gastroenterology",
+   "practice": "Walton-Michael Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0873-P3",
+   "name": "Dr. Jane Jackson",
+   "specialty": "endocrinology",
+   "practice": "Snyder-Moreno Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 54.0,
+  "ldl": 177.0,
+  "triglycerides": 220.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 80.0,
+  "a1c": 5.1,
+  "ast": 35.0,
+  "alt": 20.0,
+  "ggt": 32.0,
+  "alk_phos": 96.0,
+  "bilirubin": 0.8,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 78.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.4,
+  "cdt": 0.9,
+  "nt_probnp": 16.0,
+  "cotinine_urine": 1040.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,353 @@
+{
+ "case_id": "C0501",
+ "seed": 747659118,
+ "app_date": "2026-10-12",
+ "design": {
+  "case_id": "C0501",
+  "seed": 747659118,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 42,
+  "sex": "M",
+  "face": 100000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "brca_lynch:no_surgery",
+    "key": "brca_lynch",
+    "variant": "no_surgery",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones",
+   "rosacea"
+  ],
+  "grey": "GRY-10",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.347,
+   "bmi": 20.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Mark",
+  "last_name": "Harper",
+  "sex": "M",
+  "dob": "1984-06-17",
+  "age": 42,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "construction laborer",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 53000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 30",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 73.0,
+ "weight_lb": 155.0,
+ "bp_systolic": 129,
+ "bp_diastolic": 87,
+ "pulse": 69,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2015-04-13",
+   "quit": "2024-12-10",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2016-10-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 0.6
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0501-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2008-06-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": true,
+    "steroid_bursts_per_year": 4,
+    "er_years_ago": 4.8,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2008-10-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0501-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2019-10-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "prophylactic_surgery": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0501-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2023-03-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2023-03-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0501-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2022-03-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2022-05-11",
+     "stop": "2022-04-25",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0501-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-05-27",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0501-P1",
+   "name": "Dr. Tiffany Hill",
+   "specialty": "family medicine",
+   "practice": "Campbell-Colon Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0501-P2",
+   "name": "Dr. Benjamin Johnson",
+   "specialty": "pulmonology",
+   "practice": "Lynch-Burns Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0501-P3",
+   "name": "Dr. Kathleen Graves",
+   "specialty": "oncology",
+   "practice": "Cordova Ltd Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 62.0,
+  "ldl": 209.0,
+  "triglycerides": 73.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 82.0,
+  "a1c": 5.0,
+  "ast": 30.0,
+  "alt": 26.0,
+  "ggt": 15.0,
+  "alk_phos": 117.0,
+  "bilirubin": 0.9,
+  "albumin": 4.1,
+  "creatinine": 1.2,
+  "egfr": 83.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.6,
+  "cdt": 1.3,
+  "nt_probnp": 68.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.5
+ }
+}

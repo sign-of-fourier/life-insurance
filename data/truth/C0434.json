@@ -1,0 +1,413 @@
+{
+ "case_id": "C0434",
+ "seed": 576210420,
+ "app_date": "2025-02-24",
+ "design": {
+  "case_id": "C0434",
+  "seed": 576210420,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 71,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "frailty:findings",
+    "key": "frailty",
+    "variant": "findings",
+    "chapter": "GER",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "parkinsons:late_onset",
+    "key": "parkinsons",
+    "variant": "late_onset",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "substance_use_hard:oud_maint_ge2",
+    "key": "substance_use_hard",
+    "variant": "oud_maint_ge2",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts",
+   "acne",
+   "glaucoma",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "athena_summary",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "CIA",
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.558,
+   "bmi": 32.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Amber",
+  "last_name": "Gordon",
+  "sex": "F",
+  "dob": "1954-01-01",
+  "age": 71,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 35840,
+  "net_worth": 896000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA",
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 68.0,
+ "weight_lb": 211.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 73,
+ "pulse": 77,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2003-11-30",
+   "quit": "2023-09-16",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "frailty",
+   "label": "Frailty findings (71+)",
+   "onset": "2019-10-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "adl_dependency": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0434-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "parkinsons",
+   "label": "Parkinson's disease",
+   "onset": "2022-01-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_onset": 77
+   },
+   "meds": [
+    {
+     "drug": "pramipexole",
+     "dose": "0.5 mg",
+     "start": "2022-02-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0434-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2015-01-01",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "substance": "opioids",
+    "maintenance_years": 6.9,
+    "maintenance": true
+   },
+   "meds": [
+    {
+     "drug": "methadone",
+     "dose": "10 mg",
+     "start": "2015-01-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0434-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2013-07-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0434-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2015-06-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2015-07-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2015-07-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0434-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2023-09-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2023-11-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0434-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2013-12-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2013-12-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0434-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 63,
+   "age_at_death": 78,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-08-09",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-07-25",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0434-P1",
+   "name": "Dr. Scott Stewart",
+   "specialty": "family medicine",
+   "practice": "Rhodes PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0434-P2",
+   "name": "Dr. Eddie Griffin",
+   "specialty": "neurology",
+   "practice": "Warner Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0434-P3",
+   "name": "Dr. Johnny Gomez",
+   "specialty": "addiction medicine",
+   "practice": "Tanner PLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 64.0,
+  "ldl": 173.0,
+  "triglycerides": 213.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 101.0,
+  "a1c": 5.1,
+  "ast": 29.0,
+  "alt": 35.0,
+  "ggt": 23.0,
+  "alk_phos": 73.0,
+  "bilirubin": 0.4,
+  "albumin": 4.7,
+  "creatinine": 0.7,
+  "egfr": 76.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.2,
+  "cdt": 1.3,
+  "nt_probnp": 108.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

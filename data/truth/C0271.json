@@ -1,0 +1,230 @@
+{
+ "case_id": "C0271",
+ "seed": 417217748,
+ "app_date": "2026-09-10",
+ "design": {
+  "case_id": "C0271",
+  "seed": 417217748,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 21,
+  "sex": "F",
+  "face": 300000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_surgery:surgery_scheduled",
+    "key": "nm_surgery",
+    "variant": "surgery_scheduled",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "gestational_dm:resolved",
+    "key": "gestational_dm",
+    "variant": "resolved",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "resolved": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "moderate",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CIA",
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.483,
+   "bmi": 25.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_surgery": "surgery_scheduled"
+  }
+ },
+ "person": {
+  "first_name": "Linda",
+  "last_name": "Barr",
+  "sex": "F",
+  "dob": "2005-12-07",
+  "age": 21,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "lineworker (utility)",
+  "occupation_class": "3A",
+  "annual_income": 20000,
+  "net_worth": 229000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA",
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 134.0,
+ "bp_systolic": 115,
+ "bp_diastolic": 70,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "4/yr",
+   "start": "2010-06-04",
+   "quit": null,
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "gestational_dm",
+   "label": "Gestational diabetes (resolved)",
+   "onset": "2023-02-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "resolved": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0271-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 73,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-06-25",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-03-31",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-08-26",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0271-P1",
+   "name": "Dr. Cristina Green",
+   "specialty": "family medicine",
+   "practice": "Miller-Weber Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0271-P2",
+   "name": "Dr. Benjamin Miller",
+   "specialty": "endocrinology",
+   "practice": "Flores-Lowery Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 53.0,
+  "ldl": 194.0,
+  "triglycerides": 151.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 92.0,
+  "a1c": 5.1,
+  "ast": 19.0,
+  "alt": 19.0,
+  "ggt": 21.0,
+  "alk_phos": 81.0,
+  "bilirubin": 0.6,
+  "albumin": 4.5,
+  "creatinine": 0.8,
+  "egfr": 81.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.5,
+  "cdt": 1.0,
+  "nt_probnp": 49.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

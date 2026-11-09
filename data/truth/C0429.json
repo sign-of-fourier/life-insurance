@@ -1,0 +1,316 @@
+{
+ "case_id": "C0429",
+ "seed": 107645248,
+ "app_date": "2025-07-06",
+ "design": {
+  "case_id": "C0429",
+  "seed": 107645248,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 26,
+  "sex": "M",
+  "face": 7500000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "valve:replaced",
+    "key": "valve",
+    "variant": "replaced",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "repaired_years": {
+      "ge": 1
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current_heavy",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "uti",
+   "osteopenia",
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.49,
+   "bmi": 26.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Christopher",
+  "last_name": "Rodriguez",
+  "sex": "M",
+  "dob": "1999-01-17",
+  "age": 26,
+  "address_state": "VA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "financial analyst",
+  "occupation_class": "1A",
+  "annual_income": 510000,
+  "net_worth": 5043000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 30",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 157.0,
+ "bp_systolic": 137,
+ "bp_diastolic": 72,
+ "pulse": 83,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "2 ppd",
+   "start": "2018-03-03",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "valve",
+   "label": "Valvular disease / murmur",
+   "onset": "2019-08-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "other",
+    "severity_grade": "trace",
+    "repaired_years": 3.5
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0429-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-11-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2018-12-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0429-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2025-02-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2025-03-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0429-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2016-10-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2016-11-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0429-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2019-04-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0429-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 68,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-07-28",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Harborview Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0429-P1",
+   "name": "Dr. Angela Miller",
+   "specialty": "family medicine",
+   "practice": "Aguirre-Walker Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0429-P2",
+   "name": "Dr. Lindsey Mendoza",
+   "specialty": "cardiology",
+   "practice": "Howard and Sons Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 56.0,
+  "ldl": 207.0,
+  "triglycerides": 150.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 83.0,
+  "a1c": 5.6,
+  "ast": 30.0,
+  "alt": 35.0,
+  "ggt": 26.0,
+  "alk_phos": 97.0,
+  "bilirubin": 0.6,
+  "albumin": 4.8,
+  "creatinine": 0.8,
+  "egfr": 113.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.3,
+  "cdt": 1.2,
+  "nt_probnp": 20.0,
+  "cotinine_urine": 1909.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

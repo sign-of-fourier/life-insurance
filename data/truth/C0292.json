@@ -1,0 +1,251 @@
+{
+ "case_id": "C0292",
+ "seed": 517474893,
+ "app_date": "2026-10-25",
+ "design": {
+  "case_id": "C0292",
+  "seed": 517474893,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 55,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:colon_1_y0-1",
+    "key": "cancer",
+    "variant": "colon_1_y0-1",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "colon_1",
+     "years_since_tx": [
+      0,
+      1
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "acne"
+  ],
+  "grey": "GRY-7",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:colon_1_y0-1"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CIA",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.481,
+   "bmi": 24.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Maria",
+  "last_name": "Pena",
+  "sex": "F",
+  "dob": "1972-01-02",
+  "age": 55,
+  "address_state": "VA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "airline pilot",
+  "occupation_class": "1A",
+  "annual_income": 34000,
+  "net_worth": 317000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA",
+   "OIR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 63.0,
+ "weight_lb": 136.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 88,
+ "pulse": 58,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2025-02-22",
+   "status": "active",
+   "severity": "severe",
+   "details": {
+    "type": "colon_1",
+    "years_since_tx": 0.3,
+    "stage": "I"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0292-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2015-03-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2015-03-28",
+     "stop": "2015-03-21",
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0292-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2017-10-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2017-11-03",
+     "stop": "2017-11-12",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0292-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Spain",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0292-P1",
+   "name": "Dr. Michael Leon",
+   "specialty": "family medicine",
+   "practice": "Hawkins Chavez and Flores Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0292-P2",
+   "name": "Dr. Karl Gay",
+   "specialty": "oncology",
+   "practice": "Galloway PLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 64.0,
+  "ldl": 181.0,
+  "triglycerides": 203.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 89.0,
+  "a1c": 5.5,
+  "ast": 33.0,
+  "alt": 38.0,
+  "ggt": 52.0,
+  "alk_phos": 102.0,
+  "bilirubin": 0.5,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 89.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.3,
+  "cdt": 1.4,
+  "nt_probnp": 109.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

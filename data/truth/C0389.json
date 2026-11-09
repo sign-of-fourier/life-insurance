@@ -1,0 +1,299 @@
+{
+ "case_id": "C0389",
+ "seed": 1069882469,
+ "app_date": "2025-03-03",
+ "design": {
+  "case_id": "C0389",
+  "seed": 1069882469,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 65,
+  "sex": "M",
+  "face": 1500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:melanoma_2_y10-100",
+    "key": "cancer",
+    "variant": "melanoma_2_y10-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "melanoma_2",
+     "years_since_tx": [
+      10,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "bph",
+   "gerd",
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.676,
+   "bmi": 25.0,
+   "foreign_country": "Jordan",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Anthony",
+  "last_name": "Reed",
+  "sex": "M",
+  "dob": "1960-07-15",
+  "age": 65,
+  "address_state": "KY",
+  "country_of_residence": "US",
+  "citizenship": "Jordan",
+  "years_in_us": 2.3,
+  "visa_type": "L-1",
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 221000,
+  "net_worth": 2049000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 65.0,
+ "weight_lb": 150.0,
+ "bp_systolic": 150,
+ "bp_diastolic": 91,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1 ppd",
+   "start": "2013-08-12",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2000-08-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_2",
+    "years_since_tx": 24.3,
+    "stage": "II"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0389-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2016-10-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "finasteride",
+     "dose": "5 mg",
+     "start": "2016-11-23",
+     "stop": "2016-12-05",
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0389-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2020-11-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2020-12-28",
+     "stop": "2020-12-06",
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2020-12-20",
+     "stop": "2020-11-22",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0389-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2013-12-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2014-01-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0389-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 72,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Austria",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0389-P1",
+   "name": "Dr. Roy Harper",
+   "specialty": "family medicine",
+   "practice": "Estrada-Flores Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Jordan"
+  },
+  {
+   "provider_id": "C0389-P2",
+   "name": "Dr. Jodi Bray",
+   "specialty": "oncology",
+   "practice": "Cabrera-Walton Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 57.0,
+  "ldl": 198.0,
+  "triglycerides": 178.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 102.0,
+  "a1c": 5.5,
+  "ast": 21.0,
+  "alt": 37.0,
+  "ggt": 40.0,
+  "alk_phos": 120.0,
+  "bilirubin": 0.5,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 83.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.1,
+  "cdt": 1.2,
+  "nt_probnp": 55.0,
+  "cotinine_urine": 1979.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

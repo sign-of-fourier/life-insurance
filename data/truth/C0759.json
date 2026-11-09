@@ -1,0 +1,401 @@
+{
+ "case_id": "C0759",
+ "seed": 1064824545,
+ "app_date": "2025-01-25",
+ "design": {
+  "case_id": "C0759",
+  "seed": 1064824545,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 66,
+  "sex": "M",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_alcohol:dpw_gt35",
+    "key": "nm_alcohol",
+    "variant": "dpw_gt35",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "afib:persistent",
+    "key": "afib",
+    "variant": "persistent",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": {
+      "in": [
+       "persistent",
+       "permanent"
+      ]
+     },
+     "echo_normal": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "pancreatitis:chronic",
+    "key": "pancreatitis",
+    "variant": "chronic",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic": true
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_lipids:lip_50",
+    "key": "nm_lipids",
+    "variant": "lip_50",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "erectile_dysfunction"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "GIO",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.299,
+   "bmi": 32.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Alec",
+  "last_name": "Alexander",
+  "sex": "M",
+  "dob": "1959-02-19",
+  "age": 66,
+  "address_state": "AL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "warehouse supervisor",
+  "occupation_class": "2A",
+  "annual_income": 1339000,
+  "net_worth": 4828000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [
+   "GIO",
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 72.0,
+ "weight_lb": 239.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 75,
+ "pulse": 84,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 38.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2015-01-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 0.2,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2000-03-03",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "permanent",
+    "echo_normal": true,
+    "chads_vasc": 3,
+    "structural": false,
+    "ablation_years": null,
+    "years_since": 24.9
+   },
+   "meds": [
+    {
+     "drug": "rivaroxaban",
+     "dose": "10 mg",
+     "start": "2000-03-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0759-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2016-06-20",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "chronic": true,
+    "cause": "alcohol"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0759-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2023-11-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true,
+    "surgery_years_ago": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0759-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2018-06-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "50 mg",
+     "start": "2018-07-22",
+     "stop": "2018-07-20",
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    },
+    {
+     "drug": "tadalafil",
+     "dose": "5 mg",
+     "start": "2018-06-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0759-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-06-13",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-08-24",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "France",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2017,
+   "company": "Pinecrest Mutual",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0759-P1",
+   "name": "Dr. Melanie Johnson",
+   "specialty": "family medicine",
+   "practice": "Lin PLC Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0759-P2",
+   "name": "Dr. Gary Bauer",
+   "specialty": "cardiology",
+   "practice": "Willis LLC Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0759-P3",
+   "name": "Dr. Chloe Taylor",
+   "specialty": "gastroenterology",
+   "practice": "Odonnell-Stewart Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 390.0,
+  "hdl": 61.0,
+  "ldl": 307.0,
+  "triglycerides": 108.0,
+  "tc_hdl_ratio": 6.4,
+  "glucose_fasting": 93.0,
+  "a1c": 5.1,
+  "ast": 66.0,
+  "alt": 41.0,
+  "ggt": 199.0,
+  "alk_phos": 42.0,
+  "bilirubin": 0.5,
+  "albumin": 4.7,
+  "creatinine": 1.1,
+  "egfr": 85.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.0,
+  "cdt": 3.2,
+  "nt_probnp": 60.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.4
+ }
+}

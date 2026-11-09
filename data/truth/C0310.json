@@ -1,0 +1,291 @@
+{
+ "case_id": "C0310",
+ "seed": 950321717,
+ "app_date": "2026-09-08",
+ "design": {
+  "case_id": "C0310",
+  "seed": 950321717,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 54,
+  "sex": "F",
+  "face": 300000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "polycystic_kidney:reduced",
+    "key": "polycystic_kidney",
+    "variant": "reduced",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "anemia:fvl_vte",
+    "key": "anemia",
+    "variant": "fvl_vte",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "factor_v_leiden",
+     "vte": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.668,
+   "bmi": 28.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Sara",
+  "last_name": "Dunlap",
+  "sex": "F",
+  "dob": "1972-04-05",
+  "age": 54,
+  "address_state": "VA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "correctional officer",
+  "occupation_class": "3A",
+  "annual_income": 29000,
+  "net_worth": 337000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 10",
+  "riders_requested": [
+   "OIR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 190.0,
+ "bp_systolic": 113,
+ "bp_diastolic": 90,
+ "pulse": 92,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2015-12-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 26
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0310-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2013-08-03",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "vte": true,
+    "kind": "factor_v_leiden"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0310-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2011-04-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0310-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2026-03-09",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-06-12",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0310-P1",
+   "name": "Dr. Caitlyn Davies",
+   "specialty": "family medicine",
+   "practice": "Young King and Juarez Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0310-P2",
+   "name": "Dr. Christopher Ferguson",
+   "specialty": "nephrology",
+   "practice": "Burton Wilson and Warren Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0310-P3",
+   "name": "Dr. Brandy Wright",
+   "specialty": "hematology",
+   "practice": "Hernandez-Phillips Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0310-P4",
+   "name": "Dr. Ashley Warren",
+   "specialty": "endocrinology",
+   "practice": "Green PLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 287.0,
+  "hdl": 52.0,
+  "ldl": 202.0,
+  "triglycerides": 162.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 79.0,
+  "a1c": 5.6,
+  "ast": 25.0,
+  "alt": 42.0,
+  "ggt": 19.0,
+  "alk_phos": 64.0,
+  "bilirubin": 0.4,
+  "albumin": 4.1,
+  "creatinine": 0.8,
+  "egfr": 75.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.0,
+  "nt_probnp": 89.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

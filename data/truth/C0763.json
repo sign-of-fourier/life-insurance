@@ -1,0 +1,291 @@
+{
+ "case_id": "C0763",
+ "seed": 317886414,
+ "app_date": "2026-04-25",
+ "design": {
+  "case_id": "C0763",
+  "seed": 317886414,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 50,
+  "sex": "M",
+  "face": 3000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "diabetes_t2:age50-59_a1c7.0-7.99",
+    "key": "diabetes_t2",
+    "variant": "age50-59_a1c7.0-7.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      7.0,
+      7.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up diabetes_t2:age50-59_a1c7.0-7.99"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ADB",
+   "LTA",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.796,
+   "bmi": 24.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Joel",
+  "last_name": "Le",
+  "sex": "M",
+  "dob": "1976-10-16",
+  "age": 50,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "registered nurse",
+  "occupation_class": "2A",
+  "annual_income": 188000,
+  "net_worth": 1735000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB",
+   "LTA",
+   "OIR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 72.0,
+ "weight_lb": 181.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 77,
+ "pulse": 82,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2010-05-24",
+   "quit": "2021-07-14",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2023-09-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 7.2,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 2.6,
+    "age_at_dx": 47,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2024-01-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "semaglutide",
+     "dose": "1 mg",
+     "start": "2023-12-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0763-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2017-03-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2017-03-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0763-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2017-07-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2017-08-21",
+     "stop": "2017-09-12",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0763-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-05-06",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Atlas Assurance",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0763-P1",
+   "name": "Dr. Joseph Peterson",
+   "specialty": "family medicine",
+   "practice": "Moreno Morales and Mejia Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0763-P2",
+   "name": "Dr. Cory Bowman",
+   "specialty": "endocrinology",
+   "practice": "Ponce Group Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 295.0,
+  "hdl": 48.0,
+  "ldl": 231.0,
+  "triglycerides": 76.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 163.0,
+  "a1c": 7.2,
+  "ast": 32.0,
+  "alt": 15.0,
+  "ggt": 39.0,
+  "alk_phos": 67.0,
+  "bilirubin": 0.9,
+  "albumin": 4.1,
+  "creatinine": 1.1,
+  "egfr": 71.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.0,
+  "nt_probnp": 93.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.7
+ }
+}

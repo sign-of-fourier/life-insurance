@@ -1,0 +1,287 @@
+{
+ "case_id": "C0456",
+ "seed": 917134806,
+ "app_date": "2026-08-08",
+ "design": {
+  "case_id": "C0456",
+  "seed": 917134806,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 80,
+  "sex": "F",
+  "face": 150000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "nm_build:over_25",
+    "key": "nm_build",
+    "variant": "over_25",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "pad_aaa:aaa_repaired",
+    "key": "pad_aaa",
+    "variant": "aaa_repaired",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "repaired_months": {
+      "ge": 6
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "vape",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "sinusitis",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "CIA",
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.361,
+   "bmi": 35.0,
+   "foreign_country": "Kenya",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kylie",
+  "last_name": "Bird",
+  "sex": "F",
+  "dob": "1946-08-07",
+  "age": 80,
+  "address_state": "PA",
+  "country_of_residence": "US",
+  "citizenship": "Kenya",
+  "years_in_us": 3.7,
+  "visa_type": "Permanent Resident",
+  "occupation": "construction laborer",
+  "occupation_class": "3A",
+  "annual_income": 60000,
+  "net_worth": 830000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 217.0,
+ "bp_systolic": 122,
+ "bp_diastolic": 76,
+ "pulse": 57,
+ "tobacco": [
+  {
+   "product": "vape",
+   "status": "current",
+   "frequency": "weekends",
+   "start": "2022-05-17",
+   "quit": null,
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2023-09-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "aaa",
+    "smoker": false,
+    "size_cm": 3.3,
+    "repaired_months": 48
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0456-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2025-05-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2025-07-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2025-05-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0456-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2024-10-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2024-12-24",
+     "stop": "2024-12-19",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0456-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Belgium",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Harborview Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0456-P1",
+   "name": "Dr. Catherine Johnson",
+   "specialty": "family medicine",
+   "practice": "Barton Martinez and Terry Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Kenya"
+  },
+  {
+   "provider_id": "C0456-P2",
+   "name": "Dr. Nancy Brown",
+   "specialty": "cardiology",
+   "practice": "Anderson-Armstrong Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 41.0,
+  "ldl": 191.0,
+  "triglycerides": 216.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 104.0,
+  "a1c": 4.8,
+  "ast": 20.0,
+  "alt": 39.0,
+  "ggt": 28.0,
+  "alk_phos": 52.0,
+  "bilirubin": 0.9,
+  "albumin": 4.3,
+  "creatinine": 0.9,
+  "egfr": 90.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.7,
+  "cdt": 1.0,
+  "nt_probnp": 142.0,
+  "cotinine_urine": 2176.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

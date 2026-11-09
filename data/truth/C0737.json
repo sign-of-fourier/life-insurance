@@ -1,0 +1,247 @@
+{
+ "case_id": "C0737",
+ "seed": 725392080,
+ "app_date": "2025-05-28",
+ "design": {
+  "case_id": "C0737",
+  "seed": 725392080,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 78,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cad_nonobstructive:cac_0_99",
+    "key": "cad_nonobstructive",
+    "variant": "cac_0_99",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": [
+      0,
+      99
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "bp",
+     "Standard Plus"
+    ],
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "build",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "KPE",
+   "OIR",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.561,
+   "bmi": 30.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Brenda",
+  "last_name": "Davis",
+  "sex": "F",
+  "dob": "1946-12-29",
+  "age": 78,
+  "address_state": "PA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 142640,
+  "net_worth": 3566000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "KPE",
+   "OIR",
+   "XCR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 58.0,
+ "weight_lb": 145.0,
+ "bp_systolic": 149,
+ "bp_diastolic": 88,
+ "pulse": 87,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1962-09-29",
+   "quit": "2023-01-28",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2023-07-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "stenosis_pct": 94,
+    "cac_score": 18
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0737-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2017-07-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "cetirizine",
+     "dose": "10 mg",
+     "start": "2017-07-19",
+     "stop": "2017-07-29",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0737-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0737-P1",
+   "name": "Dr. Scott Garrett",
+   "specialty": "family medicine",
+   "practice": "Brewer-Brown Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0737-P2",
+   "name": "Dr. Dean Oneill",
+   "specialty": "cardiology",
+   "practice": "Garcia LLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 259.0,
+  "hdl": 49.0,
+  "ldl": 190.0,
+  "triglycerides": 96.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 101.0,
+  "a1c": 5.5,
+  "ast": 22.0,
+  "alt": 39.0,
+  "ggt": 55.0,
+  "alk_phos": 56.0,
+  "bilirubin": 0.3,
+  "albumin": 4.9,
+  "creatinine": 0.9,
+  "egfr": 87.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.9,
+  "cdt": 1.2,
+  "nt_probnp": 390.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

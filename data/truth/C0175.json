@@ -1,0 +1,314 @@
+{
+ "case_id": "C0175",
+ "seed": 332770460,
+ "app_date": "2026-08-10",
+ "design": {
+  "case_id": "C0175",
+  "seed": 332770460,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 46,
+  "sex": "F",
+  "face": 3000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "diabetes_t1:age40-49_a1c9.0",
+    "key": "diabetes_t1",
+    "variant": "age40-49_a1c9.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 225,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      9.0,
+      9.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "eczema",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up diabetes_t1:age40-49_a1c9.0"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.669,
+   "bmi": 20.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Latoya",
+  "last_name": "Vaughn",
+  "sex": "F",
+  "dob": "1980-06-18",
+  "age": 46,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "long-haul truck driver",
+  "occupation_class": "3A",
+  "annual_income": 224000,
+  "net_worth": 979000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "UL",
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "business partner"
+ },
+ "height_in": 69.0,
+ "weight_lb": 141.0,
+ "bp_systolic": 110,
+ "bp_diastolic": 69,
+ "pulse": 88,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2012-04-09",
+   "quit": "2024-11-03",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2023-02-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 9.7,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 3.5,
+    "age_at_dx": 42,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2023-03-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin lispro",
+     "dose": "100 u/mL",
+     "start": "2023-02-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0175-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2023-09-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2023-10-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2023-10-17",
+     "stop": "2023-10-27",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0175-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2013-06-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2013-07-23",
+     "stop": "2013-07-23",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2013-07-11",
+     "stop": "2013-07-30",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0175-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-12-19",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-09-15",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-09-19",
+   "code": "A03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0175-P1",
+   "name": "Dr. Carmen Parker",
+   "specialty": "family medicine",
+   "practice": "Mitchell Hodge and Strickland Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0175-P2",
+   "name": "Dr. Dillon Humphrey",
+   "specialty": "endocrinology",
+   "practice": "Schneider and Sons Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 60.0,
+  "ldl": 177.0,
+  "triglycerides": 188.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 225.0,
+  "a1c": 9.8,
+  "ast": 14.0,
+  "alt": 18.0,
+  "ggt": 44.0,
+  "alk_phos": 82.0,
+  "bilirubin": 0.7,
+  "albumin": 4.3,
+  "creatinine": 0.9,
+  "egfr": 98.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 12.7,
+  "cdt": 1.3,
+  "nt_probnp": 42.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

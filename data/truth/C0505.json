@@ -1,0 +1,254 @@
+{
+ "case_id": "C0505",
+ "seed": 778395261,
+ "app_date": "2026-03-09",
+ "design": {
+  "case_id": "C0505",
+  "seed": 778395261,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 57,
+  "sex": "M",
+  "face": 250000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "benign_tumor:hgd_polyp",
+    "key": "benign_tumor",
+    "variant": "hgd_polyp",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "high_grade_dysplasia": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cancer:prostate_surveillance_y0-100",
+    "key": "cancer",
+    "variant": "prostate_surveillance_y0-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "prostate_surveillance",
+     "years_since_tx": [
+      0,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current_heavy",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "WMD",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.64,
+   "bmi": 32.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jason",
+  "last_name": "Sampson",
+  "sex": "M",
+  "dob": "1968-11-06",
+  "age": 57,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "graphic designer",
+  "occupation_class": "1A",
+  "annual_income": 26000,
+  "net_worth": 196000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "UL",
+  "riders_requested": [
+   "WMD",
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 69.0,
+ "weight_lb": 218.0,
+ "bp_systolic": 125,
+ "bp_diastolic": 78,
+ "pulse": 64,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "2 ppd",
+   "start": "2001-11-18",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2025-04-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "high_grade_dysplasia": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0505-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2023-01-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "prostate_surveillance",
+    "years_since_tx": 2.1,
+    "gleason": 6,
+    "psa_undetectable": false,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0505-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 79,
+   "age_at_death": 90,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-09-20",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-10-20",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-05-13",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0505-P1",
+   "name": "Dr. Katherine Hawkins",
+   "specialty": "family medicine",
+   "practice": "Ramirez Baker and Christensen Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0505-P2",
+   "name": "Dr. Jacob Dillon",
+   "specialty": "oncology",
+   "practice": "Graham-Smith Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 46.0,
+  "ldl": 226.0,
+  "triglycerides": 78.0,
+  "tc_hdl_ratio": 6.3,
+  "glucose_fasting": 95.0,
+  "a1c": 5.3,
+  "ast": 19.0,
+  "alt": 17.0,
+  "ggt": 49.0,
+  "alk_phos": 81.0,
+  "bilirubin": 0.7,
+  "albumin": 4.1,
+  "creatinine": 1.0,
+  "egfr": 115.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.9,
+  "cdt": 1.1,
+  "nt_probnp": 55.0,
+  "cotinine_urine": 2824.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 5.1
+ }
+}

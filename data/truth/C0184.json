@@ -1,0 +1,403 @@
+{
+ "case_id": "C0184",
+ "seed": 837481340,
+ "app_date": "2025-01-24",
+ "design": {
+  "case_id": "C0184",
+  "seed": 837481340,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 74,
+  "sex": "M",
+  "face": 100000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "multiple_sclerosis:mild",
+    "key": "multiple_sclerosis",
+    "variant": "mild",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "barretts:lgd",
+    "key": "barretts",
+    "variant": "lgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "low"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "frailty:findings",
+    "key": "frailty",
+    "variant": "findings",
+    "chapter": "GER",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "stroke:old",
+    "key": "stroke",
+    "variant": "old",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.615,
+   "bmi": 20.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Richard",
+  "last_name": "Williams",
+  "sex": "M",
+  "dob": "1951-06-30",
+  "age": 74,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "paramedic",
+  "occupation_class": "2A",
+  "annual_income": 26000,
+  "net_worth": 325000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 71.0,
+ "weight_lb": 146.0,
+ "bp_systolic": 119,
+ "bp_diastolic": 78,
+ "pulse": 55,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1995-09-27",
+   "quit": "2015-03-13",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2010-05-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "progressive": false,
+    "edss": 1.0
+   },
+   "meds": [
+    {
+     "drug": "ocrelizumab",
+     "dose": "300 mg IV",
+     "start": "2010-06-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0184-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2011-11-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "low"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0184-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "frailty",
+   "label": "Frailty findings (71+)",
+   "onset": "2020-04-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "adl_dependency": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0184-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2014-11-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": null,
+    "er_years_ago": null,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2015-03-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0184-P4"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "stroke",
+   "label": "Stroke (CVA)",
+   "onset": "2006-09-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 18.4,
+    "recurrent": false
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "2.5 mg",
+     "start": "2006-10-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "stroke"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2006-10-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "stroke"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0184-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 67,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-06-25",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-11-25",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2016-07-18",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0184-P1",
+   "name": "Dr. Jennifer Meyer",
+   "specialty": "family medicine",
+   "practice": "Sullivan Group Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0184-P2",
+   "name": "Dr. Ashley Gibbs",
+   "specialty": "neurology",
+   "practice": "Finley Johnson and Ryan Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0184-P3",
+   "name": "Dr. Derek Daniel",
+   "specialty": "gastroenterology",
+   "practice": "Bell Inc Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0184-P4",
+   "name": "Dr. Chad Gaines",
+   "specialty": "pulmonology",
+   "practice": "Gordon and Sons Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 64.0,
+  "ldl": 202.0,
+  "triglycerides": 134.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 78.0,
+  "a1c": 5.2,
+  "ast": 14.0,
+  "alt": 42.0,
+  "ggt": 34.0,
+  "alk_phos": 119.0,
+  "bilirubin": 0.7,
+  "albumin": 3.9,
+  "creatinine": 0.7,
+  "egfr": 70.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 16.0,
+  "cdt": 1.0,
+  "nt_probnp": 57.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.1
+ }
+}

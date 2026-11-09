@@ -1,0 +1,336 @@
+{
+ "case_id": "C0838",
+ "seed": 117420218,
+ "app_date": "2026-08-03",
+ "design": {
+  "case_id": "C0838",
+  "seed": 117420218,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 59,
+  "sex": "F",
+  "face": 250000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_mvr:major1",
+    "key": "nm_mvr",
+    "variant": "major1",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "hypertension:resistant",
+    "key": "hypertension",
+    "variant": "resistant",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "agents": 3
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.687,
+   "bmi": 31.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Megan",
+  "last_name": "Castro",
+  "sex": "F",
+  "dob": "1967-02-12",
+  "age": 59,
+  "address_state": "MN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "architect",
+  "occupation_class": "1A",
+  "annual_income": 24000,
+  "net_worth": 188000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 208.0,
+ "bp_systolic": 133,
+ "bp_diastolic": 77,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "3/yr",
+   "start": "2011-01-21",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2012-09-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": 4,
+    "er_years_ago": null,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2012-12-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0838-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2008-12-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "agents": 3,
+    "bp_band": null
+   },
+   "meds": [
+    {
+     "drug": "hydrochlorothiazide",
+     "dose": "12.5 mg",
+     "start": "2009-04-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    },
+    {
+     "drug": "olmesartan",
+     "dose": "40 mg",
+     "start": "2009-03-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    },
+    {
+     "drug": "chlorthalidone",
+     "dose": "25 mg",
+     "start": "2009-01-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0838-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2020-02-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2020-02-23",
+     "stop": "2020-03-27",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0838-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 64,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-03-28",
+   "code": "R03",
+   "disclosure": "minimized"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "United Kingdom",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Harborview Life",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0838-P1",
+   "name": "Dr. Edward Martin",
+   "specialty": "family medicine",
+   "practice": "Haney and Sons Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0838-P2",
+   "name": "Dr. Elizabeth Payne",
+   "specialty": "pulmonology",
+   "practice": "Woodard Bishop and Morse Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 45.0,
+  "ldl": 195.0,
+  "triglycerides": 178.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 79.0,
+  "a1c": 5.1,
+  "ast": 21.0,
+  "alt": 25.0,
+  "ggt": 45.0,
+  "alk_phos": 79.0,
+  "bilirubin": 0.8,
+  "albumin": 4.2,
+  "creatinine": 1.0,
+  "egfr": 86.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.7,
+  "cdt": 1.2,
+  "nt_probnp": 41.0,
+  "cotinine_urine": 35.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

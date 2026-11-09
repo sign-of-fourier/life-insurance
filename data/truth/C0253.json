@@ -1,0 +1,381 @@
+{
+ "case_id": "C0253",
+ "seed": 955215044,
+ "app_date": "2025-05-12",
+ "design": {
+  "case_id": "C0253",
+  "seed": 955215044,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 21,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "polycystic_kidney:normal_egfr",
+    "key": "polycystic_kidney",
+    "variant": "normal_egfr",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": {
+      "ge": 60
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "tia:young",
+    "key": "tia",
+    "variant": "young",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "age": {
+      "lt": 50
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea",
+   "cataracts",
+   "contraception"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 3,
+  "evidence_path": "accel_to_fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "ecw_problem_heavy",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CIA",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.341,
+   "bmi": 28.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Barbara",
+  "last_name": "Robinson",
+  "sex": "F",
+  "dob": "2004-05-27",
+  "age": 21,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 97000,
+  "net_worth": 1024000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA",
+   "GIO"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 66.0,
+ "weight_lb": 177.0,
+ "bp_systolic": 114,
+ "bp_diastolic": 82,
+ "pulse": 88,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2022-06-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 76
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0253-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2024-07-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "tenofovir",
+     "dose": "300 mg",
+     "start": "2024-10-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    },
+    {
+     "drug": "entecavir",
+     "dose": "0.5 mg",
+     "start": "2024-08-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0253-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tia",
+   "label": "TIA",
+   "onset": "2021-11-11",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 3.5
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0253-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2022-05-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2022-05-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0253-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2021-05-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0253-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2022-04-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "norethindrone-ethinyl estradiol",
+     "dose": "1/20",
+     "start": "2022-04-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    },
+    {
+     "drug": "levonorgestrel IUD",
+     "dose": "52 mg",
+     "start": "2022-04-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0253-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-06-17",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Ireland",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0253-P1",
+   "name": "Dr. David Melton",
+   "specialty": "family medicine",
+   "practice": "Wright and Sons Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0253-P2",
+   "name": "Dr. Nicole Medina",
+   "specialty": "nephrology",
+   "practice": "Cameron-Thompson Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0253-P3",
+   "name": "Dr. Jonathan Smith",
+   "specialty": "gastroenterology",
+   "practice": "Ross Ltd Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0253-P4",
+   "name": "Dr. Crystal Weiss",
+   "specialty": "neurology",
+   "practice": "Garcia Ltd Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 43.0,
+  "ldl": 195.0,
+  "triglycerides": 181.0,
+  "tc_hdl_ratio": 6.4,
+  "glucose_fasting": 98.0,
+  "a1c": 5.4,
+  "ast": 98.0,
+  "alt": 86.0,
+  "ggt": 36.0,
+  "alk_phos": 76.0,
+  "bilirubin": 1.1,
+  "albumin": 4.6,
+  "creatinine": 1.0,
+  "egfr": 81.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 12.7,
+  "cdt": 1.4,
+  "nt_probnp": 73.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,364 @@
+{
+ "case_id": "C0605",
+ "seed": 306142515,
+ "app_date": "2025-10-30",
+ "design": {
+  "case_id": "C0605",
+  "seed": 306142515,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 49,
+  "sex": "F",
+  "face": 1000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "hepatitis_c:cured_recent",
+    "key": "hepatitis_c",
+    "variant": "cured_recent",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "svr": true
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "cancer:nhl_aggressive_y5-100",
+    "key": "cancer",
+    "variant": "nhl_aggressive_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "nhl_aggressive",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "sarcoidosis:stable",
+    "key": "sarcoidosis",
+    "variant": "stable",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones",
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CIA",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.697,
+   "bmi": 32.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Donna",
+  "last_name": "Mills",
+  "sex": "F",
+  "dob": "1976-07-18",
+  "age": 49,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "electrician",
+  "occupation_class": "3A",
+  "annual_income": 71000,
+  "net_worth": 613000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "KPE"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 175.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 82,
+ "pulse": 83,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2019-03-26",
+   "status": "resolved",
+   "severity": "moderate",
+   "details": {
+    "cirrhosis": false,
+    "svr": true,
+    "years_since_tx": 0.8
+   },
+   "meds": [
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2019-07-20",
+     "stop": "2019-10-12",
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0605-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2006-11-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "nhl_aggressive",
+    "years_since_tx": 18.5,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0605-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2016-09-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 17.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0605-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2013-02-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2013-03-04",
+     "stop": "2013-02-24",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0605-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2023-08-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2023-10-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2023-08-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0605-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 78,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-02-18",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-04-13",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0605-P1",
+   "name": "Dr. Emily Roberts",
+   "specialty": "family medicine",
+   "practice": "Lawson Ltd Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0605-P2",
+   "name": "Dr. Kevin Bolton",
+   "specialty": "gastroenterology",
+   "practice": "Wilson Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0605-P3",
+   "name": "Dr. Jason Shepherd",
+   "specialty": "oncology",
+   "practice": "Gardner Burns and Diaz Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0605-P4",
+   "name": "Dr. Kelli Booth",
+   "specialty": "pulmonology",
+   "practice": "Olson-Doyle Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 50.0,
+  "ldl": 214.0,
+  "triglycerides": 77.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 80.0,
+  "a1c": 5.4,
+  "ast": 27.0,
+  "alt": 13.0,
+  "ggt": 24.0,
+  "alk_phos": 105.0,
+  "bilirubin": 0.4,
+  "albumin": 4.1,
+  "creatinine": 0.7,
+  "egfr": 113.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.3,
+  "nt_probnp": 108.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

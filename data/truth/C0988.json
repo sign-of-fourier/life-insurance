@@ -1,0 +1,282 @@
+{
+ "case_id": "C0988",
+ "seed": 422148826,
+ "app_date": "2026-10-10",
+ "design": {
+  "case_id": "C0988",
+  "seed": 422148826,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 48,
+  "sex": "M",
+  "face": 3000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cirrhosis:any",
+    "key": "cirrhosis",
+    "variant": "any",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "copd:mild",
+    "key": "copd",
+    "variant": "mild",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "CTR",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.81,
+   "bmi": 27.4,
+   "foreign_country": "United Kingdom",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Mark",
+  "last_name": "Waller",
+  "sex": "M",
+  "dob": "1978-06-14",
+  "age": 48,
+  "address_state": "IN",
+  "country_of_residence": "US",
+  "citizenship": "United Kingdom",
+  "years_in_us": 2.6,
+  "visa_type": "H-1B",
+  "occupation": "retail store manager",
+  "occupation_class": "1A",
+  "annual_income": 185000,
+  "net_worth": 1742000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "UL",
+  "riders_requested": [
+   "CTR",
+   "OIR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 140.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 69,
+ "pulse": 67,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "11/yr",
+   "start": "2018-09-16",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cirrhosis",
+   "label": "Cirrhosis",
+   "onset": "2015-09-04",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0988-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2012-07-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 94,
+    "smoker": false,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "umeclidinium-vilanterol",
+     "dose": "62.5/25",
+     "start": "2012-10-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0988-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2022-05-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0988-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 75,
+   "age_at_death": 78,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-06-18",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Harborview Life",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0988-P1",
+   "name": "Dr. Lauren Cannon",
+   "specialty": "family medicine",
+   "practice": "Smith-Johnson Clinic",
+   "aps_style": "foreign_translated",
+   "country": "United Kingdom"
+  },
+  {
+   "provider_id": "C0988-P2",
+   "name": "Dr. Jesse Austin",
+   "specialty": "gastroenterology",
+   "practice": "Horne Inc Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0988-P3",
+   "name": "Dr. Barbara Daniels",
+   "specialty": "pulmonology",
+   "practice": "Irwin PLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 262.0,
+  "hdl": 40.0,
+  "ldl": 194.0,
+  "triglycerides": 139.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 90.0,
+  "a1c": 5.3,
+  "ast": 37.0,
+  "alt": 37.0,
+  "ggt": 50.0,
+  "alk_phos": 73.0,
+  "bilirubin": 0.3,
+  "albumin": 4.2,
+  "creatinine": 1.0,
+  "egfr": 111.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.6,
+  "cdt": 1.0,
+  "nt_probnp": 77.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.6
+ }
+}

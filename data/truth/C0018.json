@@ -1,0 +1,325 @@
+{
+ "case_id": "C0018",
+ "seed": 462198491,
+ "app_date": "2025-09-15",
+ "design": {
+  "case_id": "C0018",
+  "seed": 462198491,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 31,
+  "sex": "M",
+  "face": 7500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "afib:ablated",
+    "key": "afib",
+    "variant": "ablated",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "ablation_years": {
+      "ge": 1
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti",
+   "dental",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "simple",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.701,
+   "bmi": 20.3,
+   "foreign_country": null,
+   "cessation_rx_quit": "2025-03-14"
+  }
+ },
+ "person": {
+  "first_name": "Scott",
+  "last_name": "Wright",
+  "sex": "M",
+  "dob": "1995-01-21",
+  "age": 31,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "architect",
+  "occupation_class": "1A",
+  "annual_income": 356000,
+  "net_worth": 3665000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 67.0,
+ "weight_lb": 129.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 90,
+ "pulse": 87,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2010-09-09",
+   "quit": "2025-03-14",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2011-09-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "other",
+    "echo_normal": true,
+    "chads_vasc": 3,
+    "structural": false,
+    "ablation_years": 9.1,
+    "years_since": 14.0
+   },
+   "meds": [
+    {
+     "drug": "metoprolol",
+     "dose": "50 mg",
+     "start": "2012-01-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0018-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2021-05-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2021-06-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0018-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2016-03-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2016-04-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0018-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2012-01-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2012-01-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0018-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 69,
+   "age_at_death": 85,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-04-12",
+   "code": "S99",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-05-22",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "United Kingdom",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Atlas Assurance",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0018-P1",
+   "name": "Dr. Eric Dorsey",
+   "specialty": "family medicine",
+   "practice": "Turner Grimes and Love Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0018-P2",
+   "name": "Dr. Sandra Smith",
+   "specialty": "cardiology",
+   "practice": "Thomas Valdez and Vasquez Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 43.0,
+  "ldl": 222.0,
+  "triglycerides": 60.0,
+  "tc_hdl_ratio": 6.4,
+  "glucose_fasting": 87.0,
+  "a1c": 4.9,
+  "ast": 16.0,
+  "alt": 17.0,
+  "ggt": 17.0,
+  "alk_phos": 59.0,
+  "bilirubin": 0.8,
+  "albumin": 4.5,
+  "creatinine": 0.7,
+  "egfr": 90.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.8,
+  "cdt": 1.4,
+  "nt_probnp": 35.0,
+  "cotinine_urine": 98.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,282 @@
+{
+ "case_id": "C0171",
+ "seed": 271699138,
+ "app_date": "2025-01-25",
+ "design": {
+  "case_id": "C0171",
+  "seed": 271699138,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 20,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "pregnancy:normal",
+    "key": "pregnancy",
+    "variant": "normal",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts",
+   "contraception",
+   "vitamin_d_deficiency",
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "simple",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.585,
+   "bmi": 21.3,
+   "foreign_country": null,
+   "cessation_rx_quit": "2024-06-14"
+  }
+ },
+ "person": {
+  "first_name": "Alicia",
+  "last_name": "Garcia",
+  "sex": "F",
+  "dob": "2005-07-17",
+  "age": 20,
+  "address_state": "NJ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 56000,
+  "net_worth": 409000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 30",
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 124.0,
+ "bp_systolic": 144,
+ "bp_diastolic": 90,
+ "pulse": 58,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2019-02-27",
+   "quit": "2024-06-14",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pregnancy",
+   "label": "Pregnancy",
+   "onset": "2023-11-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "complicated": false,
+    "weeks": 11
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0171-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2021-06-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0171-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2022-11-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "norethindrone-ethinyl estradiol",
+     "dose": "1/20",
+     "start": "2022-11-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0171-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2021-04-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2021-05-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0171-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-09-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0171-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0171-P1",
+   "name": "Dr. Timothy Berry",
+   "specialty": "family medicine",
+   "practice": "Jackson Valdez and Farmer Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0171-P2",
+   "name": "Dr. Jennifer Gray",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Greene-Gonzalez Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 57.0,
+  "ldl": 223.0,
+  "triglycerides": 80.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 104.0,
+  "a1c": 5.1,
+  "ast": 34.0,
+  "alt": 21.0,
+  "ggt": 52.0,
+  "alk_phos": 96.0,
+  "bilirubin": 0.6,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 70.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.5,
+  "cdt": 1.2,
+  "nt_probnp": 84.0,
+  "cotinine_urine": 71.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

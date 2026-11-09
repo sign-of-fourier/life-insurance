@@ -1,0 +1,241 @@
+{
+ "case_id": "C0170",
+ "seed": 906683243,
+ "app_date": "2026-04-27",
+ "design": {
+  "case_id": "C0170",
+  "seed": 906683243,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 41,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "stroke:very_recent",
+    "key": "stroke",
+    "variant": "very_recent",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "lt": 0.5
+     }
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.342,
+   "bmi": 25.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Julie",
+  "last_name": "Ortiz",
+  "sex": "F",
+  "dob": "1985-08-29",
+  "age": 41,
+  "address_state": "MI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "carpenter",
+  "occupation_class": "2A",
+  "annual_income": 292000,
+  "net_worth": 2160000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 168.0,
+ "bp_systolic": 137,
+ "bp_diastolic": 73,
+ "pulse": 92,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "stroke",
+   "label": "Stroke (CVA)",
+   "onset": "2025-12-02",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 0.4,
+    "recurrent": false
+   },
+   "meds": [
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2026-01-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "stroke"
+    },
+    {
+     "drug": "apixaban",
+     "dose": "2.5 mg",
+     "start": "2026-03-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "stroke"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0170-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2011-07-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2011-08-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0170-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 67,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-06-16",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-10-26",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0170-P1",
+   "name": "Dr. Jeffrey Russell",
+   "specialty": "family medicine",
+   "practice": "Garner LLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0170-P2",
+   "name": "Dr. Lisa Ball",
+   "specialty": "neurology",
+   "practice": "King-Simmons Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 42.0,
+  "ldl": 196.0,
+  "triglycerides": 182.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 97.0,
+  "a1c": 5.5,
+  "ast": 20.0,
+  "alt": 38.0,
+  "ggt": 34.0,
+  "alk_phos": 42.0,
+  "bilirubin": 1.0,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 82.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.2,
+  "nt_probnp": 77.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

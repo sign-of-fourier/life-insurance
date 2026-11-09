@@ -1,0 +1,344 @@
+{
+ "case_id": "C0402",
+ "seed": 636930195,
+ "app_date": "2025-07-08",
+ "design": {
+  "case_id": "C0402",
+  "seed": 636930195,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 44,
+  "sex": "M",
+  "face": 300000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "pulmonary_embolism:unprovoked",
+    "key": "pulmonary_embolism",
+    "variant": "unprovoked",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "provoked": false
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "cancer:nhl_indolent_y0-100",
+    "key": "cancer",
+    "variant": "nhl_indolent_y0-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "nhl_indolent",
+     "years_since_tx": [
+      0,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "polycystic_kidney:reduced",
+    "key": "polycystic_kidney",
+    "variant": "reduced",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_lipids:lip_50",
+    "key": "nm_lipids",
+    "variant": "lip_50",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_travel:tierC_long",
+    "key": "nm_travel",
+    "variant": "tierC_long",
+    "chapter": "TRV",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 5.0,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CIA",
+   "CTR",
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.931,
+   "bmi": 24.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Wyatt",
+  "last_name": "Lopez",
+  "sex": "M",
+  "dob": "1981-09-29",
+  "age": 44,
+  "address_state": "KY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "real estate agent",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 59000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA",
+   "CTR",
+   "ROP-T"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 63.0,
+ "weight_lb": 141.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 68,
+ "pulse": 83,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2004-09-22",
+   "quit": "2020-10-16",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2020-12-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 4.6,
+    "recurrent": false,
+    "provoked": false
+   },
+   "meds": [
+    {
+     "drug": "rivaroxaban",
+     "dose": "15 mg",
+     "start": "2021-01-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0402-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2004-06-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "nhl_indolent",
+    "years_since_tx": 20.8,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0402-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2016-01-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 32
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0402-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-12-18",
+   "code": "S99",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-03-06",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Jordan",
+   "weeks_per_year": 18.0,
+   "purpose": "consulting",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0402-P1",
+   "name": "Dr. Mark Foster",
+   "specialty": "family medicine",
+   "practice": "Morales Ltd Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0402-P2",
+   "name": "Dr. Renee Craig",
+   "specialty": "pulmonology",
+   "practice": "James and Sons Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0402-P3",
+   "name": "Dr. John Cox",
+   "specialty": "oncology",
+   "practice": "Jackson Group Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0402-P4",
+   "name": "Dr. Taylor Torres",
+   "specialty": "nephrology",
+   "practice": "Barnes Melton and Patterson Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 362.0,
+  "hdl": 39.0,
+  "ldl": 284.0,
+  "triglycerides": 191.0,
+  "tc_hdl_ratio": 9.3,
+  "glucose_fasting": 102.0,
+  "a1c": 5.2,
+  "ast": 38.0,
+  "alt": 39.0,
+  "ggt": 34.0,
+  "alk_phos": 92.0,
+  "bilirubin": 1.0,
+  "albumin": 4.7,
+  "creatinine": 1.2,
+  "egfr": 78.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.2,
+  "nt_probnp": 59.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.8
+ }
+}

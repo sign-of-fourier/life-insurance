@@ -1,0 +1,324 @@
+{
+ "case_id": "C0627",
+ "seed": 427523464,
+ "app_date": "2025-04-01",
+ "design": {
+  "case_id": "C0627",
+  "seed": 427523464,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 68,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "rheumatoid_arthritis:biologic",
+    "key": "rheumatoid_arthritis",
+    "variant": "biologic",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "biologic": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cancer:nhl_aggressive_y3-5",
+    "key": "cancer",
+    "variant": "nhl_aggressive_y3-5",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 15,
+     "years": 5
+    },
+    "params": {
+     "type": "nhl_aggressive",
+     "years_since_tx": [
+      3,
+      5
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "eczema",
+   "erectile_dysfunction",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.737,
+   "bmi": 25.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Randy",
+  "last_name": "Hendricks",
+  "sex": "M",
+  "dob": "1957-01-16",
+  "age": 68,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "electrician",
+  "occupation_class": "3A",
+  "annual_income": 542000,
+  "net_worth": 1346000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 157.0,
+ "bp_systolic": 114,
+ "bp_diastolic": 72,
+ "pulse": 73,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1/2 ppd",
+   "start": "2017-10-30",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "rheumatoid_arthritis",
+   "label": "Rheumatoid arthritis",
+   "onset": "2011-02-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0627-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2020-05-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "nhl_aggressive",
+    "years_since_tx": 4.3,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0627-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2022-09-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2022-11-03",
+     "stop": "2022-10-15",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0627-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2018-06-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "tadalafil",
+     "dose": "5 mg",
+     "start": "2018-06-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0627-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2024-11-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2024-12-19",
+     "stop": "2024-12-04",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0627-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 67,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0627-P1",
+   "name": "Dr. Lisa Miller",
+   "specialty": "family medicine",
+   "practice": "Ryan Dominguez and Taylor Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0627-P2",
+   "name": "Dr. Aaron Curtis",
+   "specialty": "oncology",
+   "practice": "Gutierrez Ltd Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 68.0,
+  "ldl": 169.0,
+  "triglycerides": 219.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 99.0,
+  "a1c": 5.4,
+  "ast": 30.0,
+  "alt": 12.0,
+  "ggt": 22.0,
+  "alk_phos": 98.0,
+  "bilirubin": 0.6,
+  "albumin": 3.9,
+  "creatinine": 0.8,
+  "egfr": 79.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.5,
+  "cdt": 1.0,
+  "nt_probnp": 67.0,
+  "cotinine_urine": 1963.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.8
+ }
+}

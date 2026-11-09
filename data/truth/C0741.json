@@ -1,0 +1,282 @@
+{
+ "case_id": "C0741",
+ "seed": 270880502,
+ "app_date": "2025-05-14",
+ "design": {
+  "case_id": "C0741",
+  "seed": 270880502,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 25,
+  "sex": "M",
+  "face": 300000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "suicide_attempt:mid",
+    "key": "suicide_attempt",
+    "variant": "mid",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "valve:replaced",
+    "key": "valve",
+    "variant": "replaced",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "repaired_years": {
+      "ge": 1
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 3,
+  "evidence_path": "accel_to_fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "ecw_problem_heavy",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CIA",
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.286,
+   "bmi": 23.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Robert",
+  "last_name": "Carrillo",
+  "sex": "M",
+  "dob": "2000-11-07",
+  "age": 25,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "teacher",
+  "occupation_class": "2A",
+  "annual_income": 35000,
+  "net_worth": 352000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "CIA",
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 62.0,
+ "weight_lb": 129.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 75,
+ "pulse": 63,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2020-06-20",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 4.9
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0741-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "valve",
+   "label": "Valvular disease / murmur",
+   "onset": "2019-09-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "mvp",
+    "severity_grade": "severe",
+    "repaired_years": 2.9
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0741-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2020-07-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 0.9
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0741-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 69,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2021-08-22",
+   "code": "M08",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0741-P1",
+   "name": "Dr. Adam Williams",
+   "specialty": "family medicine",
+   "practice": "Hudson Roberson and Leblanc Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0741-P2",
+   "name": "Dr. Glenn Young",
+   "specialty": "psychiatry",
+   "practice": "Patel-Case Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0741-P3",
+   "name": "Dr. April Garcia",
+   "specialty": "cardiology",
+   "practice": "Kline-Wright Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0741-P4",
+   "name": "Dr. Stacey Davis",
+   "specialty": "pulmonology",
+   "practice": "Hamilton LLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 51.0,
+  "ldl": 203.0,
+  "triglycerides": 187.0,
+  "tc_hdl_ratio": 5.7,
+  "glucose_fasting": 82.0,
+  "a1c": 5.6,
+  "ast": 23.0,
+  "alt": 12.0,
+  "ggt": 33.0,
+  "alk_phos": 93.0,
+  "bilirubin": 0.7,
+  "albumin": 4.7,
+  "creatinine": 0.8,
+  "egfr": 70.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.1,
+  "nt_probnp": 103.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

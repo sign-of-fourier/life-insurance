@@ -1,0 +1,284 @@
+{
+ "case_id": "C0919",
+ "seed": 939801482,
+ "app_date": "2025-01-10",
+ "design": {
+  "case_id": "C0919",
+  "seed": 939801482,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 80,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "hepatitis_c:untreated",
+    "key": "hepatitis_c",
+    "variant": "untreated",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.307,
+   "bmi": 29.2,
+   "foreign_country": null,
+   "cessation_rx_quit": "2024-04-23"
+  }
+ },
+ "person": {
+  "first_name": "Robert",
+  "last_name": "Wagner",
+  "sex": "M",
+  "dob": "1944-10-24",
+  "age": 80,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 195440,
+  "net_worth": 4886000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "GIO",
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 74.0,
+ "weight_lb": 228.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 88,
+ "pulse": 90,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1975-09-21",
+   "quit": "2024-04-23",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2005-07-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": false,
+    "svr": false,
+    "years_since_tx": 7.8
+   },
+   "meds": [
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2005-08-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0919-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2013-04-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2013-06-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0919-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2014-11-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2014-12-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2014-12-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0919-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-05-29",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-12-18",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-05-17",
+   "code": "M08",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0919-P1",
+   "name": "Dr. Kevin Mann",
+   "specialty": "family medicine",
+   "practice": "Lutz-Bass Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0919-P2",
+   "name": "Dr. Aaron Mccall",
+   "specialty": "gastroenterology",
+   "practice": "Byrd Smith and Singleton Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 289.0,
+  "hdl": 67.0,
+  "ldl": 206.0,
+  "triglycerides": 78.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 99.0,
+  "a1c": 5.3,
+  "ast": 83.0,
+  "alt": 69.0,
+  "ggt": 14.0,
+  "alk_phos": 100.0,
+  "bilirubin": 0.7,
+  "albumin": 4.7,
+  "creatinine": 0.9,
+  "egfr": 81.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.5,
+  "cdt": 1.4,
+  "nt_probnp": 367.0,
+  "cotinine_urine": 104.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.7
+ }
+}

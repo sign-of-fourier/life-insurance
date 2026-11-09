@@ -1,0 +1,346 @@
+{
+ "case_id": "C0410",
+ "seed": 612737086,
+ "app_date": "2026-06-21",
+ "design": {
+  "case_id": "C0410",
+  "seed": 612737086,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 18,
+  "sex": "F",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "fatty_liver:cirrhosis",
+    "key": "fatty_liver",
+    "variant": "cirrhosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": "F4"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_travel:tierB_long",
+    "key": "nm_travel",
+    "variant": "tierB_long",
+    "chapter": "TRV",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury",
+   "acne",
+   "kidney_stones",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.444,
+   "bmi": 23.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Rebecca",
+  "last_name": "Trujillo",
+  "sex": "F",
+  "dob": "2008-06-23",
+  "age": 18,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "paramedic",
+  "occupation_class": "2A",
+  "annual_income": 75000,
+  "net_worth": 891000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 60.0,
+ "weight_lb": 121.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 67,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2015-03-25",
+   "quit": "2016-04-28",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2025-06-21",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "fibrosis": "F4"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0410-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2025-01-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2025-01-30",
+     "stop": "2025-03-19",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2025-02-01",
+     "stop": "2025-03-26",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0410-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2025-10-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2025-12-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0410-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2024-10-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2024-11-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0410-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2025-06-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2025-06-28",
+     "stop": "2025-07-16",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0410-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 80,
+   "age_at_death": 82,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-09-15",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-09-25",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "South Korea",
+   "weeks_per_year": 23.0,
+   "purpose": "family",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0410-P1",
+   "name": "Dr. Michael Clayton",
+   "specialty": "family medicine",
+   "practice": "Ramirez-Hays Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0410-P2",
+   "name": "Dr. Patricia Wilson",
+   "specialty": "gastroenterology",
+   "practice": "Pace LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 49.0,
+  "ldl": 187.0,
+  "triglycerides": 200.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 85.0,
+  "a1c": 5.4,
+  "ast": 97.0,
+  "alt": 97.0,
+  "ggt": 43.0,
+  "alk_phos": 87.0,
+  "bilirubin": 0.5,
+  "albumin": 4.4,
+  "creatinine": 1.2,
+  "egfr": 107.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.3,
+  "nt_probnp": 23.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,297 @@
+{
+ "case_id": "C0459",
+ "seed": 877668522,
+ "app_date": "2026-05-01",
+ "design": {
+  "case_id": "C0459",
+  "seed": 877668522,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 25,
+  "sex": "F",
+  "face": 100000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "psoriasis:skin",
+    "key": "psoriasis",
+    "variant": "skin",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "eczema",
+   "dental",
+   "hernia_repaired",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel",
+  "complexity": "moderate",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "LTA",
+   "WMD",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.695,
+   "bmi": 31.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Rachel",
+  "last_name": "Jackson",
+  "sex": "F",
+  "dob": "2001-08-02",
+  "age": 25,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dental hygienist",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 187000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "GUL",
+  "riders_requested": [
+   "LTA",
+   "WMD",
+   "XCR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 69.0,
+ "weight_lb": 213.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 90,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "5/day",
+   "start": "2016-12-15",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2023-02-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "arthritis": false,
+    "biologic": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0459-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2020-08-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2020-09-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2020-09-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0459-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2021-01-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2021-02-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0459-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2021-08-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0459-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2022-07-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2022-08-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0459-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0459-P1",
+   "name": "Dr. Cynthia Wyatt",
+   "specialty": "family medicine",
+   "practice": "Charles Gibson and Shaffer Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0459-P2",
+   "name": "Dr. David Mclaughlin",
+   "specialty": "rheumatology",
+   "practice": "Oneal Castro and Chavez Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 62.0,
+  "ldl": 181.0,
+  "triglycerides": 180.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 80.0,
+  "a1c": 5.1,
+  "ast": 37.0,
+  "alt": 21.0,
+  "ggt": 39.0,
+  "alk_phos": 113.0,
+  "bilirubin": 0.5,
+  "albumin": 4.9,
+  "creatinine": 1.2,
+  "egfr": 80.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.3,
+  "nt_probnp": 89.0,
+  "cotinine_urine": 676.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

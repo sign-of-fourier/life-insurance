@@ -1,0 +1,355 @@
+{
+ "case_id": "C0542",
+ "seed": 990236590,
+ "app_date": "2026-03-25",
+ "design": {
+  "case_id": "C0542",
+  "seed": 990236590,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 42,
+  "sex": "M",
+  "face": 5000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "diabetes_t1:age40-49_a1c10.0",
+    "key": "diabetes_t1",
+    "variant": "age40-49_a1c10.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      10.0,
+      99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "arrhythmia_other:vasovagal",
+    "key": "arrhythmia_other",
+    "variant": "vasovagal",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "vasovagal"
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "gerd",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.52,
+   "bmi": 25.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tom",
+  "last_name": "Hamilton",
+  "sex": "M",
+  "dob": "1984-01-07",
+  "age": 42,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 481000,
+  "net_worth": 2462000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 67.0,
+ "weight_lb": 161.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 76,
+ "pulse": 69,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2004-06-12",
+   "quit": "2015-01-23",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2025-03-25",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 12.3,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 1.0,
+    "age_at_dx": 41,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2025-04-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin lispro",
+     "dose": "100 u/mL",
+     "start": "2025-05-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0542-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2007-05-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "kind": "vasovagal",
+    "ablated": true,
+    "echo_normal": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0542-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2015-09-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2015-10-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0542-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2015-10-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2015-12-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2015-11-18",
+     "stop": "2015-12-19",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0542-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2018-05-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2018-05-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0542-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Harborview Life",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0542-P1",
+   "name": "Dr. William Cruz",
+   "specialty": "family medicine",
+   "practice": "Wong-Anderson Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0542-P2",
+   "name": "Dr. Raymond Alvarez",
+   "specialty": "endocrinology",
+   "practice": "Mccall Inc Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0542-P3",
+   "name": "Dr. Lisa Campbell",
+   "specialty": "cardiology",
+   "practice": "Butler-Williams Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 294.0,
+  "hdl": 61.0,
+  "ldl": 191.0,
+  "triglycerides": 210.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 296.0,
+  "a1c": 12.3,
+  "ast": 18.0,
+  "alt": 17.0,
+  "ggt": 21.0,
+  "alk_phos": 94.0,
+  "bilirubin": 0.3,
+  "albumin": 4.0,
+  "creatinine": 1.1,
+  "egfr": 96.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.8,
+  "cdt": 1.2,
+  "nt_probnp": 79.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.6
+ }
+}

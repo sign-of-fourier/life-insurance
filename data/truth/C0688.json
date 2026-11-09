@@ -1,0 +1,318 @@
+{
+ "case_id": "C0688",
+ "seed": 65904822,
+ "app_date": "2026-04-27",
+ "design": {
+  "case_id": "C0688",
+  "seed": 65904822,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 49,
+  "sex": "F",
+  "face": 300000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t2:age40-49_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age40-49_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.433,
+   "bmi": 29.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Julie",
+  "last_name": "Davis",
+  "sex": "F",
+  "dob": "1977-01-13",
+  "age": 49,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "financial analyst",
+  "occupation_class": "1A",
+  "annual_income": 34000,
+  "net_worth": 376000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 30",
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 66.0,
+ "weight_lb": 180.0,
+ "bp_systolic": 131,
+ "bp_diastolic": 79,
+ "pulse": 80,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2012-10-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 3.7,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 13.5,
+    "age_at_dx": 35,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "1000 mg",
+     "start": "2013-02-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0688-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2012-09-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2012-10-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0688-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2015-11-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2015-12-16",
+     "stop": "2015-11-17",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2015-11-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0688-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 58,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 38,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 74,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-06-30",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Ireland",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0688-P1",
+   "name": "Dr. Rhonda Burke",
+   "specialty": "family medicine",
+   "practice": "Nelson Henderson and Yates Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0688-P2",
+   "name": "Dr. Janet Mills",
+   "specialty": "endocrinology",
+   "practice": "Oliver Harvey and Cummings Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 47.0,
+  "ldl": 206.0,
+  "triglycerides": 157.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 53.0,
+  "a1c": 3.7,
+  "ast": 27.0,
+  "alt": 37.0,
+  "ggt": 20.0,
+  "alk_phos": 66.0,
+  "bilirubin": 1.1,
+  "albumin": 4.0,
+  "creatinine": 0.8,
+  "egfr": 76.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.2,
+  "nt_probnp": 16.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

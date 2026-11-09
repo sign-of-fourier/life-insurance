@@ -1,0 +1,289 @@
+{
+ "case_id": "C0266",
+ "seed": 549515394,
+ "app_date": "2026-07-13",
+ "design": {
+  "case_id": "C0266",
+  "seed": 549515394,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 34,
+  "sex": "F",
+  "face": 5000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "arrhythmia_other:wpw",
+    "key": "arrhythmia_other",
+    "variant": "wpw",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "wpw"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "pad_aaa:aaa_mid",
+    "key": "pad_aaa",
+    "variant": "aaa_mid",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "size_cm": [
+      4.0,
+      5.0
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.384,
+   "bmi": 29.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kimberly",
+  "last_name": "Hudson",
+  "sex": "F",
+  "dob": "1992-11-05",
+  "age": 34,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "firefighter",
+  "occupation_class": "3A",
+  "annual_income": 433000,
+  "net_worth": 917000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 67.0,
+ "weight_lb": 191.0,
+ "bp_systolic": 129,
+ "bp_diastolic": 80,
+ "pulse": 75,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2019-06-05",
+   "quit": "2020-07-09",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2022-01-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": true,
+    "compliant": false,
+    "ahi": 51
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0266-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2011-09-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "wpw",
+    "ablated": false,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0266-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2019-01-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "kind": "aaa",
+    "smoker": false,
+    "size_cm": 5.0,
+    "repaired_months": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0266-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-12-04",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2026-06-04",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0266-P1",
+   "name": "Dr. Amanda Smith",
+   "specialty": "family medicine",
+   "practice": "Soto-Watkins Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0266-P2",
+   "name": "Dr. Melissa Carrillo",
+   "specialty": "pulmonology",
+   "practice": "Daniels and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0266-P3",
+   "name": "Dr. Yolanda Lynch",
+   "specialty": "cardiology",
+   "practice": "Bonilla Inc Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 45.0,
+  "ldl": 223.0,
+  "triglycerides": 115.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 82.0,
+  "a1c": 5.5,
+  "ast": 36.0,
+  "alt": 29.0,
+  "ggt": 40.0,
+  "alk_phos": 110.0,
+  "bilirubin": 0.6,
+  "albumin": 4.0,
+  "creatinine": 1.0,
+  "egfr": 75.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 12.8,
+  "cdt": 1.2,
+  "nt_probnp": 62.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,237 @@
+{
+ "case_id": "C0635",
+ "seed": 1034510190,
+ "app_date": "2025-09-14",
+ "design": {
+  "case_id": "C0635",
+  "seed": 1034510190,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 46,
+  "sex": "F",
+  "face": 7500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "hepatitis_c:cured_old",
+    "key": "hepatitis_c",
+    "variant": "cured_old",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "svr": true,
+     "years_since_tx": {
+      "gt": 1
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "simple",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CTR",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.878,
+   "bmi": 31.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Danielle",
+  "last_name": "Gates",
+  "sex": "F",
+  "dob": "1979-05-05",
+  "age": 46,
+  "address_state": "CO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "real estate agent",
+  "occupation_class": "2A",
+  "annual_income": 427000,
+  "net_worth": 4442000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "UL",
+  "riders_requested": [
+   "CTR",
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 61.0,
+ "weight_lb": 167.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 90,
+ "pulse": 68,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2017-09-28",
+   "quit": "2025-03-15",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2024-11-26",
+   "status": "resolved",
+   "severity": "mild",
+   "details": {
+    "cirrhosis": false,
+    "svr": true,
+    "years_since_tx": 9.6
+   },
+   "meds": [
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2024-11-26",
+     "stop": "2025-02-18",
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0635-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2013-02-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2013-03-13",
+     "stop": "2013-04-20",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0635-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2018-02-25",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0635-P1",
+   "name": "Dr. Penny Bond",
+   "specialty": "family medicine",
+   "practice": "Reyes-Diaz Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0635-P2",
+   "name": "Dr. Nicholas Mosley",
+   "specialty": "gastroenterology",
+   "practice": "Smith Ltd Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 299.0,
+  "hdl": 57.0,
+  "ldl": 222.0,
+  "triglycerides": 100.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 80.0,
+  "a1c": 5.1,
+  "ast": 31.0,
+  "alt": 34.0,
+  "ggt": 21.0,
+  "alk_phos": 84.0,
+  "bilirubin": 0.5,
+  "albumin": 4.0,
+  "creatinine": 1.0,
+  "egfr": 112.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.5,
+  "cdt": 1.3,
+  "nt_probnp": 70.0,
+  "cotinine_urine": 1059.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

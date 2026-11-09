@@ -1,0 +1,477 @@
+{
+ "case_id": "C0499",
+ "seed": 17603480,
+ "app_date": "2025-11-19",
+ "design": {
+  "case_id": "C0499",
+  "seed": 17603480,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 56,
+  "sex": "M",
+  "face": 1000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "alcohol_use_disorder:relapse",
+    "key": "alcohol_use_disorder",
+    "variant": "relapse",
+    "chapter": "ALC",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad_nonobstructive:cac_400",
+    "key": "cad_nonobstructive",
+    "variant": "cac_400",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": {
+      "ge": 400
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CTR",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.66,
+   "bmi": 24.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Eric",
+  "last_name": "Boyer",
+  "sex": "M",
+  "dob": "1970-05-06",
+  "age": 56,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "software engineer",
+  "occupation_class": "1A",
+  "annual_income": 101000,
+  "net_worth": 936000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "CTR",
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 136.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 68,
+ "pulse": 56,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "7/yr",
+   "start": "2023-01-29",
+   "quit": null,
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": true,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "alcohol_use_disorder",
+   "label": "Alcohol use disorder (treated)",
+   "onset": "2015-12-05",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "abstinent_years": 3.1,
+    "treatment": "IOP",
+    "relapses": 1
+   },
+   "meds": [
+    {
+     "drug": "naltrexone",
+     "dose": "380 mg inj",
+     "start": "2015-12-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "alcohol_use_disorder"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0499-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2010-05-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": true,
+    "compliant": false,
+    "ahi": 52
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0499-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2019-09-08",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 6.2,
+    "organ": "liver"
+   },
+   "meds": [
+    {
+     "drug": "cyclosporine",
+     "dose": "100 mg",
+     "start": "2019-09-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0499-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2022-08-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 28,
+    "colonoscopy_years_ago": 4.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0499-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2009-11-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stenosis_pct": 93,
+    "cac_score": 726
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0499-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2014-05-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "125 mcg",
+     "start": "2014-06-09",
+     "stop": "2014-07-19",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0499-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2024-05-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2024-06-16",
+     "stop": "2024-07-16",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2024-05-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0499-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 64,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-08-22",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-06-29",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-12-29",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Pinecrest Mutual",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0499-P1",
+   "name": "Dr. Kelli Williams",
+   "specialty": "family medicine",
+   "practice": "Goodwin PLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0499-P2",
+   "name": "Dr. Rebekah Hernandez",
+   "specialty": "addiction medicine",
+   "practice": "Carlson and Sons Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0499-P3",
+   "name": "Dr. Nicholas Herrera",
+   "specialty": "pulmonology",
+   "practice": "Hood-Wise Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0499-P4",
+   "name": "Dr. Patricia Parsons",
+   "specialty": "gastroenterology",
+   "practice": "Gonzalez Group Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0499-P5",
+   "name": "Dr. Patrick Kelly",
+   "specialty": "cardiology",
+   "practice": "Brown-Wallace Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 72.0,
+  "ldl": 184.0,
+  "triglycerides": 122.0,
+  "tc_hdl_ratio": 3.9,
+  "glucose_fasting": 87.0,
+  "a1c": 4.9,
+  "ast": 31.0,
+  "alt": 14.0,
+  "ggt": 26.0,
+  "alk_phos": 91.0,
+  "bilirubin": 1.0,
+  "albumin": 4.6,
+  "creatinine": 0.8,
+  "egfr": 83.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.1,
+  "cdt": 1.5,
+  "nt_probnp": 108.0,
+  "cotinine_urine": 47.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.8
+ }
+}

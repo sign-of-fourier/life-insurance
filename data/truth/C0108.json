@@ -1,0 +1,372 @@
+{
+ "case_id": "C0108",
+ "seed": 785868308,
+ "app_date": "2025-10-14",
+ "design": {
+  "case_id": "C0108",
+  "seed": 785868308,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 54,
+  "sex": "F",
+  "face": 150000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:other_unlisted_y5-100",
+    "key": "cancer",
+    "variant": "other_unlisted_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "other_unlisted",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hypertension:bp_0",
+    "key": "hypertension",
+    "variant": "bp_0",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred Plus",
+    "fe": null,
+    "params": {
+     "bp_band": "<=140/90",
+     "agents": 1
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_lipids:lip_25",
+    "key": "nm_lipids",
+    "variant": "lip_25",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_foreign:citizen_abroad_C",
+    "key": "nm_foreign",
+    "variant": "citizen_abroad_C",
+    "chapter": "FN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "acute_injury",
+   "hypothyroidism_simple"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "moderate",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.547,
+   "bmi": 31.7,
+   "foreign_country": "Dominican Republic",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Denise",
+  "last_name": "Crawford",
+  "sex": "F",
+  "dob": "1971-07-15",
+  "age": 54,
+  "address_state": "N/A",
+  "country_of_residence": "Dominican Republic",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "farmer",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 90000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "UL",
+  "riders_requested": [
+   "LTA"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 61.0,
+ "weight_lb": 168.0,
+ "bp_systolic": 128,
+ "bp_diastolic": 82,
+ "pulse": 71,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2018-10-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "other_unlisted",
+    "years_since_tx": 5.8,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0108-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2014-08-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "agents": 1,
+    "bp_band": "<=140/90"
+   },
+   "meds": [
+    {
+     "drug": "valsartan",
+     "dose": "160 mg",
+     "start": "2014-10-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0108-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2025-02-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2025-02-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0108-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2015-10-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2015-12-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2015-12-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0108-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2012-03-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2012-05-05",
+     "stop": "2012-05-04",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0108-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 72,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-01-28",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-11-11",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-09-14",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-03-26",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0108-P1",
+   "name": "Dr. Alec Lozano",
+   "specialty": "family medicine",
+   "practice": "Hood Welch and Carson Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0108-P2",
+   "name": "Dr. Bryan Williams",
+   "specialty": "oncology",
+   "practice": "Johns-Hammond Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 314.0,
+  "hdl": 62.0,
+  "ldl": 214.0,
+  "triglycerides": 187.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 97.0,
+  "a1c": 5.5,
+  "ast": 23.0,
+  "alt": 37.0,
+  "ggt": 51.0,
+  "alk_phos": 99.0,
+  "bilirubin": 0.9,
+  "albumin": 4.6,
+  "creatinine": 1.2,
+  "egfr": 106.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.4,
+  "cdt": 1.3,
+  "nt_probnp": 93.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

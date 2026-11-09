@@ -1,0 +1,310 @@
+{
+ "case_id": "C0639",
+ "seed": 464509215,
+ "app_date": "2025-03-25",
+ "design": {
+  "case_id": "C0639",
+  "seed": 464509215,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 49,
+  "sex": "F",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cervical_dysplasia:cin3_pending",
+    "key": "cervical_dysplasia",
+    "variant": "cin3_pending",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cin3_pending": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "gestational_dm:resolved",
+    "key": "gestational_dm",
+    "variant": "resolved",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "resolved": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.751,
+   "bmi": 28.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Angela",
+  "last_name": "Fox",
+  "sex": "F",
+  "dob": "1976-07-24",
+  "age": 49,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "electrician",
+  "occupation_class": "3A",
+  "annual_income": 99000,
+  "net_worth": 611000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 190.0,
+ "bp_systolic": 128,
+ "bp_diastolic": 87,
+ "pulse": 92,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cervical_dysplasia",
+   "label": "Abnormal pap / CIN",
+   "onset": "2024-03-25",
+   "status": "in_workup",
+   "severity": "severe",
+   "details": {
+    "cin3_pending": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0639-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "gestational_dm",
+   "label": "Gestational diabetes (resolved)",
+   "onset": "2009-12-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "resolved": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0639-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2010-08-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2010-09-19",
+     "stop": "2010-08-23",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0639-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2010-05-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2010-07-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2010-06-03",
+     "stop": "2010-06-08",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0639-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 69,
+   "age_at_death": 91,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-04-23",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-07-27",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Germany",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0639-P1",
+   "name": "Dr. Ian Bradley",
+   "specialty": "family medicine",
+   "practice": "Guerra-Torres Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0639-P2",
+   "name": "Dr. Felicia Jenkins",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Johnson Garza and Vargas Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0639-P3",
+   "name": "Dr. Jenna Montgomery",
+   "specialty": "endocrinology",
+   "practice": "Wells Mueller and Mccann Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 297.0,
+  "hdl": 53.0,
+  "ldl": 223.0,
+  "triglycerides": 103.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 101.0,
+  "a1c": 5.5,
+  "ast": 20.0,
+  "alt": 34.0,
+  "ggt": 45.0,
+  "alk_phos": 41.0,
+  "bilirubin": 1.1,
+  "albumin": 4.7,
+  "creatinine": 0.8,
+  "egfr": 93.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.9,
+  "cdt": 0.8,
+  "nt_probnp": 86.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

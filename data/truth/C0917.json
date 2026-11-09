@@ -1,0 +1,352 @@
+{
+ "case_id": "C0917",
+ "seed": 557041478,
+ "app_date": "2025-10-22",
+ "design": {
+  "case_id": "C0917",
+  "seed": 557041478,
+  "target": "Table Tobacco 5-16",
+  "ladder": "tobacco",
+  "age": 46,
+  "sex": "M",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cad:ev40-49_y2-5",
+    "key": "cad",
+    "variant": "ev40-49_y2-5",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      40,
+      49
+     ],
+     "years_since": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad_nonobstructive:nonobstructive",
+    "key": "cad_nonobstructive",
+    "variant": "nonobstructive",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "stenosis_pct": [
+      1,
+      49
+     ]
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.325,
+   "bmi": 29.6,
+   "foreign_country": null,
+   "cessation_rx_quit": "2025-03-26"
+  }
+ },
+ "person": {
+  "first_name": "Douglas",
+  "last_name": "Macdonald",
+  "sex": "M",
+  "dob": "1979-08-11",
+  "age": 46,
+  "address_state": "NJ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmaceutical sales rep",
+  "occupation_class": "2A",
+  "annual_income": 230000,
+  "net_worth": 2562000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 173.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 83,
+ "pulse": 82,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2019-06-15",
+   "quit": "2025-03-26",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2022-10-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 43,
+    "years_since": 3,
+    "event": "stent",
+    "ef": 59,
+    "angina": false,
+    "vessels": 2,
+    "ldl": 80,
+    "abnormal_stress": false,
+    "normal_stress_12mo": false,
+    "smoker": true
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "80 mg",
+     "start": "2023-01-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2022-12-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "25 mg",
+     "start": "2022-11-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0917-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2009-07-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stenosis_pct": 1,
+    "cac_score": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0917-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2023-04-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 12.0,
+    "monotherapy": true
+   },
+   "meds": [
+    {
+     "drug": "clozapine",
+     "dose": "100 mg",
+     "start": "2023-06-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0917-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2015-12-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0917-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2021-10-11",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Atlas Assurance",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0917-P1",
+   "name": "Dr. Troy Rodriguez",
+   "specialty": "family medicine",
+   "practice": "Holt Gregory and Davis Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0917-P2",
+   "name": "Dr. Philip Green",
+   "specialty": "cardiology",
+   "practice": "Williams PLC Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0917-P3",
+   "name": "Dr. Sean Turner",
+   "specialty": "psychiatry",
+   "practice": "Stewart Gregory and Davis Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 287.0,
+  "hdl": 53.0,
+  "ldl": 222.0,
+  "triglycerides": 60.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 102.0,
+  "a1c": 5.0,
+  "ast": 33.0,
+  "alt": 26.0,
+  "ggt": 38.0,
+  "alk_phos": 114.0,
+  "bilirubin": 1.0,
+  "albumin": 4.3,
+  "creatinine": 0.8,
+  "egfr": 89.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.2,
+  "cdt": 1.3,
+  "nt_probnp": 28.0,
+  "cotinine_urine": 95.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.5
+ }
+}

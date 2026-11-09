@@ -1,0 +1,379 @@
+{
+ "case_id": "C0237",
+ "seed": 807600465,
+ "app_date": "2025-02-05",
+ "design": {
+  "case_id": "C0237",
+  "seed": 807600465,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 68,
+  "sex": "M",
+  "face": 100000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t1:age60-69_a1c8.0",
+    "key": "diabetes_t1",
+    "variant": "age60-69_a1c8.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      8.0,
+      8.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.611,
+   "bmi": 27.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Allen",
+  "last_name": "Patel",
+  "sex": "M",
+  "dob": "1956-08-17",
+  "age": 68,
+  "address_state": "UT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 12440,
+  "net_worth": 311000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "UL",
+  "riders_requested": [
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 71.0,
+ "weight_lb": 200.0,
+ "bp_systolic": 128,
+ "bp_diastolic": 73,
+ "pulse": 57,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "1996-01-25",
+   "quit": "2016-06-09",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2010-05-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 17,
+    "colonoscopy_years_ago": 6.0
+   },
+   "meds": [
+    {
+     "drug": "infliximab",
+     "dose": "100 mg IV",
+     "start": "2010-09-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    },
+    {
+     "drug": "vedolizumab",
+     "dose": "300 mg IV",
+     "start": "2010-07-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0237-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2012-07-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "prazosin",
+     "dose": "2 mg",
+     "start": "2012-08-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0237-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2022-03-14",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 8.3,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 2.9,
+    "age_at_dx": 65,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2022-05-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin aspart",
+     "dose": "100 u/mL",
+     "start": "2022-06-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0237-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2018-06-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2018-07-14",
+     "stop": "2018-07-22",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0237-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2022-11-05",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-04-27",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-12-14",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0237-P1",
+   "name": "Dr. Zachary Pope",
+   "specialty": "family medicine",
+   "practice": "Ford Kaufman and Crawford Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0237-P2",
+   "name": "Dr. Steve Obrien",
+   "specialty": "gastroenterology",
+   "practice": "Petty Knight and Munoz Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0237-P3",
+   "name": "Dr. Jessica Larsen",
+   "specialty": "psychiatry",
+   "practice": "Reyes Meyers and Johnson Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0237-P4",
+   "name": "Dr. Danny Bradshaw",
+   "specialty": "endocrinology",
+   "practice": "Howell LLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 57.0,
+  "ldl": 192.0,
+  "triglycerides": 162.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 185.0,
+  "a1c": 8.1,
+  "ast": 22.0,
+  "alt": 35.0,
+  "ggt": 23.0,
+  "alk_phos": 73.0,
+  "bilirubin": 0.7,
+  "albumin": 4.7,
+  "creatinine": 1.0,
+  "egfr": 66.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.1,
+  "cdt": 1.4,
+  "nt_probnp": 80.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.3
+ }
+}

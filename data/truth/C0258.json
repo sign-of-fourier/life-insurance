@@ -1,0 +1,395 @@
+{
+ "case_id": "C0258",
+ "seed": 272418663,
+ "app_date": "2026-03-18",
+ "design": {
+  "case_id": "C0258",
+  "seed": 272418663,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 49,
+  "sex": "F",
+  "face": 150000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "afib:structural",
+    "key": "afib",
+    "variant": "structural",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "structural": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_occupation:occ_5a",
+    "key": "nm_occupation",
+    "variant": "occ_5a",
+    "chapter": "OCC",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 7.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones",
+   "sinusitis",
+   "seasonal_allergy",
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.457,
+   "bmi": 27.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Molly",
+  "last_name": "Carpenter",
+  "sex": "F",
+  "dob": "1976-11-21",
+  "age": 49,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "private security contractor (overseas)",
+  "occupation_class": "5A",
+  "annual_income": 18000,
+  "net_worth": 49000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "UL",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 64.0,
+ "weight_lb": 158.0,
+ "bp_systolic": 133,
+ "bp_diastolic": 70,
+ "pulse": 89,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2003-03-19",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "persistent",
+    "echo_normal": false,
+    "chads_vasc": 1,
+    "structural": true,
+    "ablation_years": null,
+    "years_since": 23.0
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "2.5 mg",
+     "start": "2003-05-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0258-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2014-10-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": false,
+    "surgery_years_ago": 0.7
+   },
+   "meds": [
+    {
+     "drug": "ustekinumab",
+     "dose": "45 mg",
+     "start": "2015-01-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    },
+    {
+     "drug": "infliximab",
+     "dose": "100 mg IV",
+     "start": "2014-11-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0258-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2015-05-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2015-06-13",
+     "stop": "2015-07-10",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0258-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2016-10-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2016-12-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0258-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2020-05-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "cetirizine",
+     "dose": "10 mg",
+     "start": "2020-05-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0258-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2022-04-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2022-04-13",
+     "stop": "2022-04-28",
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0258-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2019-10-26",
+   "code": "N04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "martial arts",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0258-P1",
+   "name": "Dr. Kenneth Moore",
+   "specialty": "family medicine",
+   "practice": "Ruiz-Cooke Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0258-P2",
+   "name": "Dr. Curtis Simmons",
+   "specialty": "cardiology",
+   "practice": "Monroe-Roberts Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0258-P3",
+   "name": "Dr. Cheyenne Moore",
+   "specialty": "gastroenterology",
+   "practice": "Smith and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 47.0,
+  "ldl": 226.0,
+  "triglycerides": 100.0,
+  "tc_hdl_ratio": 6.2,
+  "glucose_fasting": 90.0,
+  "a1c": 5.4,
+  "ast": 28.0,
+  "alt": 36.0,
+  "ggt": 41.0,
+  "alk_phos": 116.0,
+  "bilirubin": 0.6,
+  "albumin": 4.8,
+  "creatinine": 0.7,
+  "egfr": 94.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.0,
+  "cdt": 0.9,
+  "nt_probnp": 40.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

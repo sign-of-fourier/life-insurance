@@ -1,0 +1,308 @@
+{
+ "case_id": "C0927",
+ "seed": 933801212,
+ "app_date": "2025-03-27",
+ "design": {
+  "case_id": "C0927",
+  "seed": 933801212,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 77,
+  "sex": "M",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "ulcerative_colitis:mild",
+    "key": "ulcerative_colitis",
+    "variant": "mild",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "back_pain:simple",
+    "key": "back_pain",
+    "variant": "simple",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "lipids",
+     "Standard Plus"
+    ],
+    [
+     "build",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "rosacea"
+  ],
+  "grey": "GRY-2",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.284,
+   "bmi": 30.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Blake",
+  "last_name": "Drake",
+  "sex": "M",
+  "dob": "1948-07-29",
+  "age": 77,
+  "address_state": "CT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 63000,
+  "net_worth": 14080000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 71.0,
+ "weight_lb": 217.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 90,
+ "pulse": 92,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2017-09-15",
+   "quit": "2020-12-24",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2012-09-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "duration_years": 30,
+    "colonoscopy_years_ago": 3.0
+   },
+   "meds": [
+    {
+     "drug": "vedolizumab",
+     "dose": "300 mg IV",
+     "start": "2012-10-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0927-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2013-12-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "chronic_opioid": false,
+    "benzo": false
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2014-02-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0927-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2021-11-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2021-12-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0927-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 48,
+   "age_at_death": 57,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 64,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-09-29",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Ireland",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Atlas Assurance",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0927-P1",
+   "name": "Dr. Michael Peterson",
+   "specialty": "family medicine",
+   "practice": "Tapia Group Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0927-P2",
+   "name": "Dr. Shawn Rodriguez",
+   "specialty": "gastroenterology",
+   "practice": "Davis Herrera and Leach Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 284.0,
+  "hdl": 68.0,
+  "ldl": 191.0,
+  "triglycerides": 125.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 81.0,
+  "a1c": 4.9,
+  "ast": 31.0,
+  "alt": 21.0,
+  "ggt": 17.0,
+  "alk_phos": 70.0,
+  "bilirubin": 0.6,
+  "albumin": 4.2,
+  "creatinine": 1.0,
+  "egfr": 90.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.0,
+  "nt_probnp": 113.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.1
+ }
+}

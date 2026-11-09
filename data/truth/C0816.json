@@ -1,0 +1,295 @@
+{
+ "case_id": "C0816",
+ "seed": 806069645,
+ "app_date": "2025-09-28",
+ "design": {
+  "case_id": "C0816",
+  "seed": 806069645,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 31,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple",
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.307,
+   "bmi": 24.2,
+   "foreign_country": "Costa Rica",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Samantha",
+  "last_name": "Yates",
+  "sex": "F",
+  "dob": "1994-08-14",
+  "age": 31,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "Costa Rica",
+  "years_in_us": 1.5,
+  "visa_type": "L-1",
+  "occupation": "farmer",
+  "occupation_class": "2A",
+  "annual_income": 108000,
+  "net_worth": 158000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 30",
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 124.0,
+ "bp_systolic": 123,
+ "bp_diastolic": 84,
+ "pulse": 75,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "3/yr",
+   "start": "2015-01-03",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2012-09-28",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 8.0,
+    "undetectable_months": 106,
+    "cd4": 743,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "emtricitabine-tenofovir",
+     "dose": "200/25 mg",
+     "start": "2012-11-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    },
+    {
+     "drug": "bictegravir-emtricitabine-tenofovir",
+     "dose": "50/200/25 mg",
+     "start": "2012-10-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0816-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2012-10-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "25 mcg",
+     "start": "2012-11-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0816-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2018-03-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2018-04-25",
+     "stop": "2018-03-31",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0816-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 65,
+   "age_at_death": 77,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-02-18",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-06-16",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0816-P1",
+   "name": "Dr. Tyler Taylor",
+   "specialty": "family medicine",
+   "practice": "Marsh-Torres Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Costa Rica"
+  },
+  {
+   "provider_id": "C0816-P2",
+   "name": "Dr. Joseph Hunt",
+   "specialty": "rheumatology",
+   "practice": "Stanton LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 64.0,
+  "ldl": 196.0,
+  "triglycerides": 109.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 85.0,
+  "a1c": 5.1,
+  "ast": 23.0,
+  "alt": 18.0,
+  "ggt": 35.0,
+  "alk_phos": 100.0,
+  "bilirubin": 0.9,
+  "albumin": 4.1,
+  "creatinine": 1.1,
+  "egfr": 87.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.5,
+  "cdt": 1.2,
+  "nt_probnp": 39.0,
+  "cotinine_urine": 18.0,
+  "hiv": 1.0,
+  "cocaine": 0.0
+ }
+}

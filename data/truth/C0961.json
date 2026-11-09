@@ -1,0 +1,319 @@
+{
+ "case_id": "C0961",
+ "seed": 478015732,
+ "app_date": "2025-01-14",
+ "design": {
+  "case_id": "C0961",
+  "seed": 478015732,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 66,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "tia:recent",
+    "key": "tia",
+    "variant": "recent",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "lt": 1
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hypertension:bp_75",
+    "key": "hypertension",
+    "variant": "bp_75",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "bp_band": "161-170/101-105",
+     "agents": 1
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti",
+   "vitamin_d_deficiency"
+  ],
+  "grey": "GRY-8",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.756,
+   "bmi": 30.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Adam",
+  "last_name": "Richardson",
+  "sex": "M",
+  "dob": "1958-09-10",
+  "age": 66,
+  "address_state": "UT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "hair stylist",
+  "occupation_class": "2A",
+  "annual_income": 39000,
+  "net_worth": 58000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 186.0,
+ "bp_systolic": 161,
+ "bp_diastolic": 95,
+ "pulse": 68,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "tia",
+   "label": "TIA",
+   "onset": "2024-06-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 0.6
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0961-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2023-05-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "agents": 1,
+    "bp_band": "161-170/101-105"
+   },
+   "meds": [
+    {
+     "drug": "olmesartan",
+     "dose": "40 mg",
+     "start": "2023-07-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0961-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2019-07-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2019-07-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0961-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2012-01-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2012-02-14",
+     "stop": "2012-01-26",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0961-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 74,
+   "age_at_death": 86,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-08-01",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-10-23",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-01-07",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Denmark",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0961-P1",
+   "name": "Dr. Jason Dixon",
+   "specialty": "family medicine",
+   "practice": "Owens-Nguyen Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0961-P2",
+   "name": "Dr. Kimberly Anderson",
+   "specialty": "neurology",
+   "practice": "Woodard-Smith Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 58.0,
+  "ldl": 208.0,
+  "triglycerides": 71.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 92.0,
+  "a1c": 5.0,
+  "ast": 24.0,
+  "alt": 32.0,
+  "ggt": 45.0,
+  "alk_phos": 55.0,
+  "bilirubin": 0.5,
+  "albumin": 4.1,
+  "creatinine": 1.2,
+  "egfr": 87.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.5,
+  "cdt": 0.8,
+  "nt_probnp": 44.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

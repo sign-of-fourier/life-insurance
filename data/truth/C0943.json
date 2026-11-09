@@ -1,0 +1,381 @@
+{
+ "case_id": "C0943",
+ "seed": 786136713,
+ "app_date": "2026-06-04",
+ "design": {
+  "case_id": "C0943",
+  "seed": 786136713,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 35,
+  "sex": "M",
+  "face": 3000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "bipolar:bp2_stable",
+    "key": "bipolar",
+    "variant": "bp2_stable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "II",
+     "stable_years": {
+      "ge": 2
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones",
+   "acne",
+   "hernia_repaired",
+   "sinusitis"
+  ],
+  "grey": "GRY-7",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "LTA",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.798,
+   "bmi": 31.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jonathan",
+  "last_name": "Medina",
+  "sex": "M",
+  "dob": "1991-08-05",
+  "age": 35,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "roofer",
+  "occupation_class": "3A",
+  "annual_income": 125000,
+  "net_worth": 1047000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "GUL",
+  "riders_requested": [
+   "LTA",
+   "WMD"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 67.0,
+ "weight_lb": 200.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 77,
+ "pulse": 61,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2006-11-15",
+   "quit": "2024-03-02",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2019-08-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F2"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0943-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2010-03-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "II",
+    "stable_years": 4.6,
+    "hospitalization_years_ago": null,
+    "compliant": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0943-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2016-11-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2016-12-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0943-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2023-04-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2023-05-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2023-06-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0943-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2012-04-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0943-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2019-06-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2019-07-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2019-07-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0943-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 71,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-06-29",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0943-P1",
+   "name": "Dr. James Nash",
+   "specialty": "family medicine",
+   "practice": "Chambers Salinas and Williams Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0943-P2",
+   "name": "Dr. Sarah Baxter",
+   "specialty": "gastroenterology",
+   "practice": "Jones Giles and Johnson Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0943-P3",
+   "name": "Dr. Sheila Wright",
+   "specialty": "psychiatry",
+   "practice": "Alvarado-Arroyo Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 58.0,
+  "ldl": 175.0,
+  "triglycerides": 210.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 85.0,
+  "a1c": 5.4,
+  "ast": 91.0,
+  "alt": 105.0,
+  "ggt": 36.0,
+  "alk_phos": 74.0,
+  "bilirubin": 0.6,
+  "albumin": 4.8,
+  "creatinine": 0.8,
+  "egfr": 95.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.0,
+  "nt_probnp": 42.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

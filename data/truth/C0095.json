@@ -1,0 +1,276 @@
+{
+ "case_id": "C0095",
+ "seed": 1033774877,
+ "app_date": "2026-06-10",
+ "design": {
+  "case_id": "C0095",
+  "seed": 1033774877,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 70,
+  "sex": "F",
+  "face": 150000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:melanoma_3_4_y10-100",
+    "key": "cancer",
+    "variant": "melanoma_3_4_y10-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "melanoma_3_4",
+     "years_since_tx": [
+      10,
+      25
+     ]
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "lipids",
+     "Standard"
+    ]
+   ]
+  },
+  "benign": [
+   "eczema",
+   "hypothyroidism_simple"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "moderate",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.488,
+   "bmi": 29.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Katie",
+  "last_name": "Coleman",
+  "sex": "F",
+  "dob": "1956-06-10",
+  "age": 70,
+  "address_state": "MO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 3880,
+  "net_worth": 97000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 67.0,
+ "weight_lb": 190.0,
+ "bp_systolic": 144,
+ "bp_diastolic": 89,
+ "pulse": 74,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2005-08-28",
+   "quit": "2025-03-06",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2001-07-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_3_4",
+    "years_since_tx": 24.4,
+    "stage": "III"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0095-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2023-09-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2023-10-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2023-09-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0095-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2025-01-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2025-01-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0095-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-08-22",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-05-09",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-04-20",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0095-P1",
+   "name": "Dr. Matthew Brown",
+   "specialty": "family medicine",
+   "practice": "Murray-Pineda Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0095-P2",
+   "name": "Dr. Jeremy Cunningham",
+   "specialty": "oncology",
+   "practice": "Thomas Allen and Bartlett Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 48.0,
+  "ldl": 214.0,
+  "triglycerides": 61.0,
+  "tc_hdl_ratio": 5.7,
+  "glucose_fasting": 88.0,
+  "a1c": 5.4,
+  "ast": 34.0,
+  "alt": 35.0,
+  "ggt": 21.0,
+  "alk_phos": 93.0,
+  "bilirubin": 1.0,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 80.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.7,
+  "cdt": 0.9,
+  "nt_probnp": 23.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

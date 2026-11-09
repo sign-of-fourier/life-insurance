@@ -1,0 +1,483 @@
+{
+ "case_id": "C0623",
+ "seed": 671892357,
+ "app_date": "2025-04-10",
+ "design": {
+  "case_id": "C0623",
+  "seed": 671892357,
+  "target": "Table Tobacco 5-16",
+  "ladder": "tobacco",
+  "age": 53,
+  "sex": "F",
+  "face": 250000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "sleep_apnea:untreated",
+    "key": "sleep_apnea",
+    "variant": "untreated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cancer:cll_rai0_y0-100",
+    "key": "cancer",
+    "variant": "cll_rai0_y0-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "cll_rai0",
+     "years_since_tx": [
+      0,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "back_pain:opioid_benzo",
+    "key": "back_pain",
+    "variant": "opioid_benzo",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true,
+     "benzo": true
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti",
+   "osteopenia",
+   "glaucoma",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CIA",
+   "LTA",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.259,
+   "bmi": 32.2,
+   "foreign_country": null,
+   "cessation_rx_quit": "2024-12-25"
+  }
+ },
+ "person": {
+  "first_name": "Anna",
+  "last_name": "Ellis",
+  "sex": "F",
+  "dob": "1972-04-29",
+  "age": 53,
+  "address_state": "AZ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "paramedic",
+  "occupation_class": "2A",
+  "annual_income": 64000,
+  "net_worth": 252000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "LTA",
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 62.0,
+ "weight_lb": 176.0,
+ "bp_systolic": 125,
+ "bp_diastolic": 77,
+ "pulse": 60,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2015-06-25",
+   "quit": "2024-12-25",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2009-06-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": true,
+    "compliant": false,
+    "ahi": 7
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0623-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2010-01-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "prazosin",
+     "dose": "2 mg",
+     "start": "2010-05-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    },
+    {
+     "drug": "paroxetine",
+     "dose": "10 mg",
+     "start": "2010-03-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0623-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "1999-10-11",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "cll_rai0",
+    "years_since_tx": 24.0,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0623-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2015-09-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": true
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2015-11-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    },
+    {
+     "drug": "meloxicam",
+     "dose": "7.5 mg",
+     "start": "2015-12-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0623-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2021-11-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2022-01-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0623-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2010-11-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2010-11-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0623-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2010-06-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2010-07-02",
+     "stop": "2010-08-03",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0623-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2019-02-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2019-02-26",
+     "stop": "2019-03-22",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2019-03-15",
+     "stop": "2019-04-09",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0623-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-07-03",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Australia",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0623-P1",
+   "name": "Dr. Lindsey Reynolds",
+   "specialty": "family medicine",
+   "practice": "Hoover PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0623-P2",
+   "name": "Dr. Douglas Miller",
+   "specialty": "pulmonology",
+   "practice": "Rush-Allen Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0623-P3",
+   "name": "Dr. Brittney Mercado",
+   "specialty": "psychiatry",
+   "practice": "Boyd LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0623-P4",
+   "name": "Dr. Andrew Floyd",
+   "specialty": "oncology",
+   "practice": "Smith Group Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 44.0,
+  "ldl": 218.0,
+  "triglycerides": 76.0,
+  "tc_hdl_ratio": 6.3,
+  "glucose_fasting": 87.0,
+  "a1c": 5.6,
+  "ast": 38.0,
+  "alt": 24.0,
+  "ggt": 23.0,
+  "alk_phos": 83.0,
+  "bilirubin": 0.9,
+  "albumin": 4.7,
+  "creatinine": 1.0,
+  "egfr": 78.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.9,
+  "cdt": 1.1,
+  "nt_probnp": 63.0,
+  "cotinine_urine": 86.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

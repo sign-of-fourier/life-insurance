@@ -1,0 +1,255 @@
+{
+ "case_id": "C0230",
+ "seed": 473830872,
+ "app_date": "2026-03-18",
+ "design": {
+  "case_id": "C0230",
+  "seed": 473830872,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 58,
+  "sex": "M",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "multiple_sclerosis:progressive",
+    "key": "multiple_sclerosis",
+    "variant": "progressive",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "progressive": true,
+      "edss": {
+       "gt": 5
+      }
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.768,
+   "bmi": 25.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Michael",
+  "last_name": "Valencia",
+  "sex": "M",
+  "dob": "1968-07-05",
+  "age": 58,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "software engineer",
+  "occupation_class": "1A",
+  "annual_income": 26000,
+  "net_worth": 219000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 133.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 73,
+ "pulse": 86,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2006-11-29",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "progressive": true,
+    "edss": 7.0
+   },
+   "meds": [
+    {
+     "drug": "fingolimod",
+     "dose": "0.5 mg",
+     "start": "2007-02-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0230-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2021-12-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2022-01-10",
+     "stop": "2022-01-07",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2022-01-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0230-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 71,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-11-05",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-06-06",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0230-P1",
+   "name": "Dr. Brandon Mayer",
+   "specialty": "family medicine",
+   "practice": "Moon PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0230-P2",
+   "name": "Dr. Veronica Johnson",
+   "specialty": "neurology",
+   "practice": "Wilson-Reed Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 51.0,
+  "ldl": 207.0,
+  "triglycerides": 108.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 80.0,
+  "a1c": 5.4,
+  "ast": 29.0,
+  "alt": 12.0,
+  "ggt": 48.0,
+  "alk_phos": 50.0,
+  "bilirubin": 0.3,
+  "albumin": 4.2,
+  "creatinine": 1.1,
+  "egfr": 105.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.6,
+  "cdt": 0.9,
+  "nt_probnp": 48.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.3
+ }
+}

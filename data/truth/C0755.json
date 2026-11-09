@@ -1,0 +1,316 @@
+{
+ "case_id": "C0755",
+ "seed": 501085826,
+ "app_date": "2026-03-03",
+ "design": {
+  "case_id": "C0755",
+  "seed": 501085826,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 45,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "polycystic_kidney:reduced",
+    "key": "polycystic_kidney",
+    "variant": "reduced",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "pad_aaa:aaa_mid",
+    "key": "pad_aaa",
+    "variant": "aaa_mid",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "size_cm": [
+      4.0,
+      5.0
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_travel:tierC_mid",
+    "key": "nm_travel",
+    "variant": "tierC_mid",
+    "chapter": "TRV",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "glaucoma",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.809,
+   "bmi": 31.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Jimenez",
+  "sex": "F",
+  "dob": "1981-02-01",
+  "age": 45,
+  "address_state": "TN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "farmer",
+  "occupation_class": "2A",
+  "annual_income": 123000,
+  "net_worth": 772000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 174.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 85,
+ "pulse": 89,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2018-11-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 52
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0755-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2020-01-26",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "kind": "aaa",
+    "smoker": false,
+    "size_cm": 4.0,
+    "repaired_months": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0755-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2014-12-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2015-01-17",
+     "stop": "2015-01-12",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0755-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2023-04-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2023-05-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0755-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2018-07-15",
+   "code": "N04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Indonesia",
+   "weeks_per_year": 7.0,
+   "purpose": "volunteer work",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0755-P1",
+   "name": "Dr. Andrea Cordova",
+   "specialty": "family medicine",
+   "practice": "Bennett and Sons Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0755-P2",
+   "name": "Dr. Lisa Knapp",
+   "specialty": "nephrology",
+   "practice": "Parker Cervantes and Calderon Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0755-P3",
+   "name": "Dr. Shawn Williamson",
+   "specialty": "cardiology",
+   "practice": "Delgado-Sullivan Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 70.0,
+  "ldl": 187.0,
+  "triglycerides": 177.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 90.0,
+  "a1c": 5.4,
+  "ast": 33.0,
+  "alt": 21.0,
+  "ggt": 16.0,
+  "alk_phos": 86.0,
+  "bilirubin": 0.8,
+  "albumin": 3.9,
+  "creatinine": 1.0,
+  "egfr": 108.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.4,
+  "nt_probnp": 22.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

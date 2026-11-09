@@ -1,0 +1,247 @@
+{
+ "case_id": "C0796",
+ "seed": 152354415,
+ "app_date": "2025-07-25",
+ "design": {
+  "case_id": "C0796",
+  "seed": 152354415,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 19,
+  "sex": "F",
+  "face": 500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_occupation:deploying",
+    "key": "nm_occupation",
+    "variant": "deploying",
+    "chapter": "OCC",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_alcohol:dpw_22_35",
+    "key": "nm_alcohol",
+    "variant": "dpw_22_35",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "contraception",
+   "acute_injury",
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.32,
+   "bmi": 25.1,
+   "foreign_country": "New Zealand",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Sarah",
+  "last_name": "Brooks",
+  "sex": "F",
+  "dob": "2006-07-15",
+  "age": 19,
+  "address_state": "MO",
+  "country_of_residence": "US",
+  "citizenship": "New Zealand",
+  "years_in_us": 4.5,
+  "visa_type": "H-1B",
+  "occupation": "special forces (deploying)",
+  "occupation_class": "5A",
+  "annual_income": 52000,
+  "net_worth": 602000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 170.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 81,
+ "pulse": 87,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1 ppd",
+   "start": "2019-08-17",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 24.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2023-10-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "norethindrone-ethinyl estradiol",
+     "dose": "1/20",
+     "start": "2023-12-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0796-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2022-08-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2022-09-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0796-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2024-03-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0796-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 66,
+   "age_at_death": 77,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0796-P1",
+   "name": "Dr. Timothy Johnson",
+   "specialty": "family medicine",
+   "practice": "Hernandez-Smith Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 63.0,
+  "ldl": 189.0,
+  "triglycerides": 167.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 88.0,
+  "a1c": 5.2,
+  "ast": 44.0,
+  "alt": 18.0,
+  "ggt": 181.0,
+  "alk_phos": 90.0,
+  "bilirubin": 0.4,
+  "albumin": 4.0,
+  "creatinine": 1.1,
+  "egfr": 98.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.8,
+  "cdt": 2.8,
+  "nt_probnp": 52.0,
+  "cotinine_urine": 435.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

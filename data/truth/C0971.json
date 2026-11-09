@@ -1,0 +1,413 @@
+{
+ "case_id": "C0971",
+ "seed": 408463224,
+ "app_date": "2026-06-15",
+ "design": {
+  "case_id": "C0971",
+  "seed": 408463224,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 35,
+  "sex": "M",
+  "face": 100000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "hepatitis_c:untreated",
+    "key": "hepatitis_c",
+    "variant": "untreated",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "back_pain:opioid_benzo",
+    "key": "back_pain",
+    "variant": "opioid_benzo",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true,
+     "benzo": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_build:under_50",
+    "key": "nm_build",
+    "variant": "under_50",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_alcohol:dpw_22_35",
+    "key": "nm_alcohol",
+    "variant": "dpw_22_35",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "substance_use_hard:oud_maint_ge2",
+    "key": "substance_use_hard",
+    "variant": "oud_maint_ge2",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.655,
+   "bmi": 16.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jose",
+  "last_name": "Oconnor",
+  "sex": "M",
+  "dob": "1991-09-01",
+  "age": 35,
+  "address_state": "MI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "paramedic",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 130000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 30",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 61.0,
+ "weight_lb": 89.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 76,
+ "pulse": 61,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2008-12-18",
+   "quit": "2010-01-22",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 23.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2022-10-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": false,
+    "svr": false,
+    "years_since_tx": 5.3
+   },
+   "meds": [
+    {
+     "drug": "ledipasvir-sofosbuvir",
+     "dose": "90/400 mg",
+     "start": "2022-11-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    },
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2023-01-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0971-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2012-07-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": true
+   },
+   "meds": [
+    {
+     "drug": "naproxen",
+     "dose": "500 mg",
+     "start": "2012-11-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    },
+    {
+     "drug": "tramadol",
+     "dose": "50 mg",
+     "start": "2012-08-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0971-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2017-04-03",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true,
+    "surgery_years_ago": null
+   },
+   "meds": [
+    {
+     "drug": "adalimumab",
+     "dose": "40 mg inj",
+     "start": "2017-05-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0971-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2016-10-31",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "substance": "opioids",
+    "maintenance_years": 4.7,
+    "maintenance": true
+   },
+   "meds": [
+    {
+     "drug": "methadone",
+     "dose": "10 mg",
+     "start": "2017-01-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    },
+    {
+     "drug": "naloxone",
+     "dose": "4 mg nasal",
+     "start": "2016-12-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0971-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-01-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0971-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2021-06-09",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0971-P1",
+   "name": "Dr. Melissa Villarreal",
+   "specialty": "family medicine",
+   "practice": "Riley-Duncan Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0971-P2",
+   "name": "Dr. Eduardo Ramirez",
+   "specialty": "gastroenterology",
+   "practice": "Jones Morris and Cherry Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0971-P3",
+   "name": "Dr. John Pearson",
+   "specialty": "addiction medicine",
+   "practice": "Robinson-Hart Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 52.0,
+  "ldl": 222.0,
+  "triglycerides": 93.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 92.0,
+  "a1c": 4.9,
+  "ast": 56.0,
+  "alt": 92.0,
+  "ggt": 165.0,
+  "alk_phos": 112.0,
+  "bilirubin": 0.6,
+  "albumin": 4.6,
+  "creatinine": 0.8,
+  "egfr": 114.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.2,
+  "cdt": 2.6,
+  "nt_probnp": 18.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

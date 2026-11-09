@@ -1,0 +1,235 @@
+{
+ "case_id": "C0785",
+ "seed": 694361111,
+ "app_date": "2025-06-09",
+ "design": {
+  "case_id": "C0785",
+  "seed": 694361111,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 72,
+  "sex": "M",
+  "face": 150000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:prostate_ge8_y0-3",
+    "key": "cancer",
+    "variant": "prostate_ge8_y0-3",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "prostate_ge8",
+     "years_since_tx": [
+      0,
+      3
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:prostate_ge8_y0-3"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.697,
+   "bmi": 21.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Robert",
+  "last_name": "Yu",
+  "sex": "M",
+  "dob": "1953-09-24",
+  "age": 72,
+  "address_state": "LA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 17200,
+  "net_worth": 430000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 108.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 73,
+ "pulse": 65,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2023-02-08",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "prostate_ge8",
+    "years_since_tx": 2.1,
+    "gleason": 8,
+    "psa_undetectable": false,
+    "stage": null
+   },
+   "meds": [
+    {
+     "drug": "leuprolide",
+     "dose": "22.5 mg",
+     "start": "2023-03-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cancer"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0785-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2018-11-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0785-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 68,
+   "age_at_death": 82,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-07-08",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-10-09",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0785-P1",
+   "name": "Dr. Edward Thomas",
+   "specialty": "family medicine",
+   "practice": "Little Cuevas and Green Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0785-P2",
+   "name": "Dr. Emily James",
+   "specialty": "oncology",
+   "practice": "Byrd Inc Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 70.0,
+  "ldl": 175.0,
+  "triglycerides": 202.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 95.0,
+  "a1c": 5.1,
+  "ast": 33.0,
+  "alt": 40.0,
+  "ggt": 46.0,
+  "alk_phos": 85.0,
+  "bilirubin": 0.4,
+  "albumin": 4.7,
+  "creatinine": 1.1,
+  "egfr": 85.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.7,
+  "cdt": 0.9,
+  "nt_probnp": 108.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 5.6
+ }
+}

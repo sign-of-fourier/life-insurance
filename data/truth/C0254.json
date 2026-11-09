@@ -1,0 +1,436 @@
+{
+ "case_id": "C0254",
+ "seed": 161281932,
+ "app_date": "2025-02-09",
+ "design": {
+  "case_id": "C0254",
+  "seed": 161281932,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 44,
+  "sex": "F",
+  "face": 100000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_lipids:lip_50",
+    "key": "nm_lipids",
+    "variant": "lip_50",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad:ev40-49_y1-2",
+    "key": "cad",
+    "variant": "ev40-49_y1-2",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      40,
+      49
+     ],
+     "years_since": [
+      1,
+      2
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "back_pain:opioid_benzo",
+    "key": "back_pain",
+    "variant": "opioid_benzo",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true,
+     "benzo": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "copd:moderate_smoker",
+    "key": "copd",
+    "variant": "moderate_smoker",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fev1_pct": [
+      50,
+      69
+     ],
+     "smoker": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "bipolar:bp1_stable",
+    "key": "bipolar",
+    "variant": "bp1_stable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "I",
+     "stable_years": {
+      "ge": 2
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 3,
+  "evidence_path": "accel_to_fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "epic_progress",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.845,
+   "bmi": 27.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Shelby",
+  "last_name": "Brady",
+  "sex": "F",
+  "dob": "1981-07-05",
+  "age": 44,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "attorney",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 116000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "GIO",
+   "KPE"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 63.0,
+ "weight_lb": 155.0,
+ "bp_systolic": 123,
+ "bp_diastolic": 89,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1999-01-17",
+   "quit": "2006-08-17",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2023-03-19",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 42,
+    "years_since": 1.9,
+    "event": "stent",
+    "ef": 56,
+    "angina": false,
+    "vessels": 1,
+    "ldl": 55,
+    "abnormal_stress": false,
+    "normal_stress_12mo": true,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "80 mg",
+     "start": "2023-05-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2023-04-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "100 mg",
+     "start": "2023-05-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0254-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2017-11-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0254-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2018-01-04",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "fev1_pct": 66,
+    "smoker": true,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "umeclidinium-vilanterol",
+     "dose": "62.5/25",
+     "start": "2018-02-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0254-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2021-01-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "I",
+    "stable_years": 6.5,
+    "hospitalization_years_ago": 13.8,
+    "compliant": true
+   },
+   "meds": [
+    {
+     "drug": "lamotrigine",
+     "dose": "200 mg",
+     "start": "2021-01-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0254-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2014-05-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2014-06-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    },
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2014-06-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0254-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 62,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0254-P1",
+   "name": "Dr. Anthony Little",
+   "specialty": "family medicine",
+   "practice": "Burns Suarez and Sexton Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0254-P2",
+   "name": "Dr. Michael Jones",
+   "specialty": "cardiology",
+   "practice": "Whitaker-Baker Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0254-P3",
+   "name": "Dr. Sandra Bradley",
+   "specialty": "pulmonology",
+   "practice": "Zuniga Inc Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0254-P4",
+   "name": "Dr. Joseph Cobb",
+   "specialty": "psychiatry",
+   "practice": "Ruiz-Kramer Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 391.0,
+  "hdl": 42.0,
+  "ldl": 318.0,
+  "triglycerides": 153.0,
+  "tc_hdl_ratio": 9.3,
+  "glucose_fasting": 100.0,
+  "a1c": 5.0,
+  "ast": 24.0,
+  "alt": 15.0,
+  "ggt": 16.0,
+  "alk_phos": 62.0,
+  "bilirubin": 0.7,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 91.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.7,
+  "cdt": 1.3,
+  "nt_probnp": 59.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

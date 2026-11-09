@@ -1,0 +1,363 @@
+{
+ "case_id": "C0124",
+ "seed": 821037103,
+ "app_date": "2026-05-22",
+ "design": {
+  "case_id": "C0124",
+  "seed": 821037103,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 20,
+  "sex": "M",
+  "face": 300000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_lipids:lip_75",
+    "key": "nm_lipids",
+    "variant": "lip_75",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "bipolar:unstable",
+    "key": "bipolar",
+    "variant": "unstable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": [
+       1,
+       5
+      ],
+      "compliant": false
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cardiomyopathy:mid_ef",
+    "key": "cardiomyopathy",
+    "variant": "mid_ef",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": [
+      40,
+      49
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "nm_avocation:skydive",
+    "key": "nm_avocation",
+    "variant": "skydive",
+    "chapter": "AVO",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.359,
+   "bmi": 26.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "John",
+  "last_name": "Jordan",
+  "sex": "M",
+  "dob": "2006-07-23",
+  "age": 20,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 27000,
+  "net_worth": 246000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 20",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 134.0,
+ "bp_systolic": 116,
+ "bp_diastolic": 76,
+ "pulse": 62,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2015-03-10",
+   "quit": "2016-04-13",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2024-03-10",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "other",
+    "stable_years": 2.1,
+    "hospitalization_years_ago": 1.8,
+    "compliant": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0124-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2025-08-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "ef": 40,
+    "recovered_years": 1.1,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "spironolactone",
+     "dose": "25 mg",
+     "start": "2025-11-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0124-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2025-04-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2025-05-10",
+     "stop": "2025-05-14",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0124-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2024-05-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2024-06-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0124-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 67,
+   "age_at_death": 80,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-08-02",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-09-24",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skydiving",
+   "details": {
+    "jumps_per_year": 12,
+    "intends_to_stop": false
+   },
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0124-P1",
+   "name": "Dr. Eric Singh",
+   "specialty": "family medicine",
+   "practice": "Brown Krause and Brown Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0124-P2",
+   "name": "Dr. Richard Rice",
+   "specialty": "psychiatry",
+   "practice": "Rhodes and Sons Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0124-P3",
+   "name": "Dr. Wendy Smith",
+   "specialty": "cardiology",
+   "practice": "Jimenez Group Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 424.0,
+  "hdl": 74.0,
+  "ldl": 306.0,
+  "triglycerides": 218.0,
+  "tc_hdl_ratio": 5.7,
+  "glucose_fasting": 91.0,
+  "a1c": 5.0,
+  "ast": 15.0,
+  "alt": 42.0,
+  "ggt": 17.0,
+  "alk_phos": 76.0,
+  "bilirubin": 0.6,
+  "albumin": 3.8,
+  "creatinine": 0.8,
+  "egfr": 96.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.1,
+  "cdt": 1.1,
+  "nt_probnp": 275.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

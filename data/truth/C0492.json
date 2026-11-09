@@ -1,0 +1,277 @@
+{
+ "case_id": "C0492",
+ "seed": 26077596,
+ "app_date": "2026-08-26",
+ "design": {
+  "case_id": "C0492",
+  "seed": 26077596,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 28,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:colon_3_y0-5",
+    "key": "cancer",
+    "variant": "colon_3_y0-5",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "colon_3",
+     "years_since_tx": [
+      0,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "hypothyroidism_simple",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:colon_3_y0-5"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "GIO",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.65,
+   "bmi": 20.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Lauren",
+  "last_name": "Maxwell",
+  "sex": "F",
+  "dob": "1998-08-07",
+  "age": 28,
+  "address_state": "NJ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "firefighter",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 98000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 20",
+  "riders_requested": [
+   "GIO",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 67.0,
+ "weight_lb": 128.0,
+ "bp_systolic": 129,
+ "bp_diastolic": 77,
+ "pulse": 66,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2020-06-06",
+   "quit": "2025-03-20",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2024-06-04",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "colon_3",
+    "years_since_tx": 1.4,
+    "stage": "III"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0492-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-05-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0492-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2025-06-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "75 mcg",
+     "start": "2025-06-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0492-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2018-08-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2018-09-28",
+     "stop": "2018-09-01",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0492-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0492-P1",
+   "name": "Dr. Ashley Sullivan",
+   "specialty": "family medicine",
+   "practice": "Frederick Inc Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0492-P2",
+   "name": "Dr. Dustin Cunningham",
+   "specialty": "oncology",
+   "practice": "Nelson-Hester Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 53.0,
+  "ldl": 207.0,
+  "triglycerides": 93.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 97.0,
+  "a1c": 5.5,
+  "ast": 19.0,
+  "alt": 13.0,
+  "ggt": 52.0,
+  "alk_phos": 51.0,
+  "bilirubin": 0.8,
+  "albumin": 4.4,
+  "creatinine": 0.8,
+  "egfr": 92.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.4,
+  "cdt": 1.4,
+  "nt_probnp": 43.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

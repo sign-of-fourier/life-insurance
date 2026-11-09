@@ -1,0 +1,350 @@
+{
+ "case_id": "C0654",
+ "seed": 452061098,
+ "app_date": "2025-03-22",
+ "design": {
+  "case_id": "C0654",
+  "seed": 452061098,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 58,
+  "sex": "M",
+  "face": 750000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "depression_anxiety:hosp_recent",
+    "key": "depression_anxiety",
+    "variant": "hosp_recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "hospitalization_years_ago": {
+      "lt": 1
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "uti",
+   "rosacea",
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.46,
+   "bmi": 23.0,
+   "foreign_country": "Romania",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Benjamin",
+  "last_name": "Castillo",
+  "sex": "M",
+  "dob": "1967-01-16",
+  "age": 58,
+  "address_state": "FL",
+  "country_of_residence": "US",
+  "citizenship": "Romania",
+  "years_in_us": 4.4,
+  "visa_type": "Permanent Resident",
+  "occupation": "long-haul truck driver",
+  "occupation_class": "3A",
+  "annual_income": 108000,
+  "net_worth": 439000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "UL",
+  "riders_requested": [
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 70.0,
+ "weight_lb": 161.0,
+ "bp_systolic": 136,
+ "bp_diastolic": 79,
+ "pulse": 59,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "1986-10-01",
+   "quit": "2023-09-24",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2021-09-21",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": null,
+    "psychiatrist": false,
+    "hospitalization_years_ago": 0.2,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 3.5
+   },
+   "meds": [
+    {
+     "drug": "bupropion",
+     "dose": "300 mg",
+     "start": "2021-12-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    },
+    {
+     "drug": "citalopram",
+     "dose": "40 mg",
+     "start": "2021-10-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0654-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2011-05-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2011-06-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0654-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2010-12-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2011-01-02",
+     "stop": "2011-01-15",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0654-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2016-11-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2016-12-26",
+     "stop": "2016-12-11",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2017-01-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0654-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2011-12-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0654-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-08-21",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2017,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0654-P1",
+   "name": "Dr. Kevin Ramirez",
+   "specialty": "family medicine",
+   "practice": "Kelly Inc Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Romania"
+  },
+  {
+   "provider_id": "C0654-P2",
+   "name": "Dr. Alex Brown",
+   "specialty": "psychiatry",
+   "practice": "Walker-Fleming Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 56.0,
+  "ldl": 193.0,
+  "triglycerides": 192.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 95.0,
+  "a1c": 5.4,
+  "ast": 35.0,
+  "alt": 30.0,
+  "ggt": 39.0,
+  "alk_phos": 65.0,
+  "bilirubin": 0.3,
+  "albumin": 4.0,
+  "creatinine": 0.9,
+  "egfr": 72.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.1,
+  "nt_probnp": 90.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.7
+ }
+}

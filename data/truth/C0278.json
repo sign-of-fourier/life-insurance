@@ -1,0 +1,250 @@
+{
+ "case_id": "C0278",
+ "seed": 530318938,
+ "app_date": "2026-01-19",
+ "design": {
+  "case_id": "C0278",
+  "seed": 530318938,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 40,
+  "sex": "M",
+  "face": 7500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "eating_disorder:recent",
+    "key": "eating_disorder",
+    "variant": "recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "multiple_sclerosis:mild",
+    "key": "multiple_sclerosis",
+    "variant": "mild",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.691,
+   "bmi": 30.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jacob",
+  "last_name": "Scott",
+  "sex": "M",
+  "dob": "1986-03-09",
+  "age": 40,
+  "address_state": "NE",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "HVAC technician",
+  "occupation_class": "3A",
+  "annual_income": 361000,
+  "net_worth": 3751000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 71.0,
+ "weight_lb": 218.0,
+ "bp_systolic": 123,
+ "bp_diastolic": 90,
+ "pulse": 81,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2015-06-15",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "recovered_years": 2.2
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0278-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2020-01-20",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "progressive": false,
+    "edss": 0.0
+   },
+   "meds": [
+    {
+     "drug": "glatiramer",
+     "dose": "20 mg",
+     "start": "2020-04-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    },
+    {
+     "drug": "natalizumab",
+     "dose": "300 mg IV",
+     "start": "2020-04-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0278-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 76,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0278-P1",
+   "name": "Dr. Vincent Johnson",
+   "specialty": "family medicine",
+   "practice": "Carr-Johnson Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0278-P2",
+   "name": "Dr. Alexander Oconnor",
+   "specialty": "psychiatry",
+   "practice": "Alexander Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0278-P3",
+   "name": "Dr. Wyatt Sellers",
+   "specialty": "neurology",
+   "practice": "Roberts-Hamilton Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 54.0,
+  "ldl": 221.0,
+  "triglycerides": 101.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 80.0,
+  "a1c": 5.1,
+  "ast": 38.0,
+  "alt": 22.0,
+  "ggt": 34.0,
+  "alk_phos": 72.0,
+  "bilirubin": 0.9,
+  "albumin": 4.3,
+  "creatinine": 1.1,
+  "egfr": 103.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.2,
+  "cdt": 1.4,
+  "nt_probnp": 109.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.4
+ }
+}

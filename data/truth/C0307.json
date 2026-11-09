@@ -1,0 +1,318 @@
+{
+ "case_id": "C0307",
+ "seed": 220373159,
+ "app_date": "2025-10-25",
+ "design": {
+  "case_id": "C0307",
+  "seed": 220373159,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 35,
+  "sex": "M",
+  "face": 150000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "multiple_sclerosis:moderate",
+    "key": "multiple_sclerosis",
+    "variant": "moderate",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "edss": [
+      2.5,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "substance_use_hard:hard_5_10",
+    "key": "substance_use_hard",
+    "variant": "hard_5_10",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.793,
+   "bmi": 23.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Matthew",
+  "last_name": "Rogers",
+  "sex": "M",
+  "dob": "1990-11-03",
+  "age": 35,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "registered nurse",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 191000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 119.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 88,
+ "pulse": 77,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2012-01-16",
+   "quit": "2013-07-19",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2014-02-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "progressive": false,
+    "edss": 3.5
+   },
+   "meds": [
+    {
+     "drug": "natalizumab",
+     "dose": "300 mg IV",
+     "start": "2014-04-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0307-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2018-04-03",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "substance": "cocaine",
+    "years_since_last_use": 9.4,
+    "maintenance": false
+   },
+   "meds": [
+    {
+     "drug": "methadone",
+     "dose": "10 mg",
+     "start": "2018-06-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0307-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2018-02-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2018-02-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0307-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2022-11-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2022-12-07",
+     "stop": "2022-12-29",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0307-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-01-10",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-11-03",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Iceland",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0307-P1",
+   "name": "Dr. Kimberly Walter",
+   "specialty": "family medicine",
+   "practice": "Bauer Davis and Richardson Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0307-P2",
+   "name": "Dr. John Russell",
+   "specialty": "neurology",
+   "practice": "Caldwell Merritt and Castro Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0307-P3",
+   "name": "Dr. Jody Frazier",
+   "specialty": "addiction medicine",
+   "practice": "Smith-Taylor Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 52.0,
+  "ldl": 224.0,
+  "triglycerides": 80.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 95.0,
+  "a1c": 5.1,
+  "ast": 26.0,
+  "alt": 20.0,
+  "ggt": 21.0,
+  "alk_phos": 47.0,
+  "bilirubin": 0.5,
+  "albumin": 3.8,
+  "creatinine": 0.7,
+  "egfr": 114.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.0,
+  "cdt": 1.3,
+  "nt_probnp": 109.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,348 @@
+{
+ "case_id": "C0417",
+ "seed": 1025732156,
+ "app_date": "2025-01-21",
+ "design": {
+  "case_id": "C0417",
+  "seed": 1025732156,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 69,
+  "sex": "F",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_build:under_25",
+    "key": "nm_build",
+    "variant": "under_25",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "arrhythmia_other:pacemaker",
+    "key": "arrhythmia_other",
+    "variant": "pacemaker",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "pacemaker"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_marijuana:mj_daily",
+    "key": "nm_marijuana",
+    "variant": "mj_daily",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.708,
+   "bmi": 17.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Alexis",
+  "last_name": "Gardner",
+  "sex": "F",
+  "dob": "1955-10-15",
+  "age": 69,
+  "address_state": "OH",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 197720,
+  "net_worth": 4943000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 114.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 72,
+ "pulse": 73,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "1991-01-26",
+   "quit": "2017-06-03",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 10,
+   "form": "vaped",
+   "disclosure": "omitted"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2010-11-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "pacemaker",
+    "ablated": true,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0417-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2021-04-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": 3,
+    "er_years_ago": 7.7,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2021-07-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0417-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2020-04-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2020-05-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0417-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2024-07-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2024-09-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0417-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-07-09",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-06-14",
+   "code": "N02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0417-P1",
+   "name": "Dr. William Saunders",
+   "specialty": "family medicine",
+   "practice": "Garcia-Davis Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0417-P2",
+   "name": "Dr. Michael Pruitt",
+   "specialty": "cardiology",
+   "practice": "Rodriguez-George Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0417-P3",
+   "name": "Dr. Adrian York",
+   "specialty": "pulmonology",
+   "practice": "Lara Rodriguez and Diaz Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 269.0,
+  "hdl": 41.0,
+  "ldl": 200.0,
+  "triglycerides": 139.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 81.0,
+  "a1c": 5.2,
+  "ast": 17.0,
+  "alt": 32.0,
+  "ggt": 16.0,
+  "alk_phos": 71.0,
+  "bilirubin": 1.0,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 84.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.0,
+  "cdt": 1.1,
+  "nt_probnp": 89.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

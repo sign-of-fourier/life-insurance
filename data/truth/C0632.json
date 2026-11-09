@@ -1,0 +1,338 @@
+{
+ "case_id": "C0632",
+ "seed": 946872490,
+ "app_date": "2026-04-03",
+ "design": {
+  "case_id": "C0632",
+  "seed": 946872490,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 47,
+  "sex": "M",
+  "face": 5000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cirrhosis:any",
+    "key": "cirrhosis",
+    "variant": "any",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "vape",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "vitamin_d_deficiency",
+   "uti",
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "ADB",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.341,
+   "bmi": 30.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jeremy",
+  "last_name": "Flores",
+  "sex": "M",
+  "dob": "1978-11-03",
+  "age": 47,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "real estate agent",
+  "occupation_class": "2A",
+  "annual_income": 733000,
+  "net_worth": 5941000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "GIO"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 68.0,
+ "weight_lb": 203.0,
+ "bp_systolic": 129,
+ "bp_diastolic": 71,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "vape",
+   "status": "current",
+   "frequency": "weekends",
+   "start": "2021-03-09",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cirrhosis",
+   "label": "Cirrhosis",
+   "onset": "2016-04-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0632-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2025-04-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "40 mg",
+     "start": "2025-06-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0632-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2025-04-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2025-06-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0632-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2013-09-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2013-11-14",
+     "stop": "2013-11-06",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0632-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2022-07-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2022-08-09",
+     "stop": "2022-08-09",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0632-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 72,
+   "age_at_death": 77,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-12-09",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-04-21",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Australia",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0632-P1",
+   "name": "Dr. Chad Estrada",
+   "specialty": "family medicine",
+   "practice": "Cooper Blake and Dudley Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0632-P2",
+   "name": "Dr. Melanie Tucker",
+   "specialty": "gastroenterology",
+   "practice": "Lee Ltd Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 54.0,
+  "ldl": 192.0,
+  "triglycerides": 161.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 96.0,
+  "a1c": 5.1,
+  "ast": 32.0,
+  "alt": 24.0,
+  "ggt": 55.0,
+  "alk_phos": 107.0,
+  "bilirubin": 0.4,
+  "albumin": 4.2,
+  "creatinine": 1.1,
+  "egfr": 86.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.8,
+  "cdt": 0.9,
+  "nt_probnp": 90.0,
+  "cotinine_urine": 1062.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.4
+ }
+}

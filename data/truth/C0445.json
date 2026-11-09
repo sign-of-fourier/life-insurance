@@ -1,0 +1,392 @@
+{
+ "case_id": "C0445",
+ "seed": 1016192987,
+ "app_date": "2026-08-04",
+ "design": {
+  "case_id": "C0445",
+  "seed": 1016192987,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 60,
+  "sex": "M",
+  "face": 750000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "tia:older",
+    "key": "tia",
+    "variant": "older",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "barretts:none",
+    "key": "barretts",
+    "variant": "none",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "crohns:mild",
+    "key": "crohns",
+    "variant": "mild",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "epilepsy:some",
+    "key": "epilepsy",
+    "variant": "some",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "seizures_per_year": [
+      1,
+      3
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cardiomyopathy:mid_ef",
+    "key": "cardiomyopathy",
+    "variant": "mid_ef",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": [
+      40,
+      49
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "ecw_problem_heavy",
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.598,
+   "bmi": 30.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Samuel",
+  "last_name": "Barber",
+  "sex": "M",
+  "dob": "1966-02-23",
+  "age": 60,
+  "address_state": "MN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "financial analyst",
+  "occupation_class": "1A",
+  "annual_income": 83000,
+  "net_worth": 907000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 73.0,
+ "weight_lb": 228.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 71,
+ "pulse": 61,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1983-04-29",
+   "quit": "1988-02-19",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "tia",
+   "label": "TIA",
+   "onset": "2015-05-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 11.2
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0445-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2009-06-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "other"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0445-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2025-08-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": false,
+    "surgery_years_ago": 13.7
+   },
+   "meds": [
+    {
+     "drug": "ustekinumab",
+     "dose": "90 mg inj",
+     "start": "2025-08-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    },
+    {
+     "drug": "budesonide",
+     "dose": "3 mg",
+     "start": "2025-10-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0445-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2006-09-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "seizures_per_year": 3,
+    "seizure_free_years": 16.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0445-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2011-02-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "ef": 43,
+    "recovered_years": 3.1,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "furosemide",
+     "dose": "80 mg",
+     "start": "2011-04-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0445-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2025-03-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2025-04-11",
+     "stop": "2025-05-02",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0445-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0445-P1",
+   "name": "Dr. Teresa Crawford",
+   "specialty": "family medicine",
+   "practice": "Peterson Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0445-P2",
+   "name": "Dr. David Benitez",
+   "specialty": "neurology",
+   "practice": "Wood Cox and Thomas Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0445-P3",
+   "name": "Dr. Brandon Williams",
+   "specialty": "gastroenterology",
+   "practice": "Sweeney Solis and Allen Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0445-P4",
+   "name": "Dr. Earl Evans",
+   "specialty": "cardiology",
+   "practice": "Blanchard Ltd Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 57.0,
+  "ldl": 197.0,
+  "triglycerides": 102.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 79.0,
+  "a1c": 5.4,
+  "ast": 24.0,
+  "alt": 26.0,
+  "ggt": 19.0,
+  "alk_phos": 41.0,
+  "bilirubin": 1.0,
+  "albumin": 4.9,
+  "creatinine": 0.9,
+  "egfr": 85.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.8,
+  "cdt": 1.0,
+  "nt_probnp": 448.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.2
+ }
+}

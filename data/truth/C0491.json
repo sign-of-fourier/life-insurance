@@ -1,0 +1,257 @@
+{
+ "case_id": "C0491",
+ "seed": 945369264,
+ "app_date": "2026-08-03",
+ "design": {
+  "case_id": "C0491",
+  "seed": 945369264,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 19,
+  "sex": "M",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:testicular_seminoma_1_y3-100",
+    "key": "cancer",
+    "variant": "testicular_seminoma_1_y3-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "testicular_seminoma_1",
+     "years_since_tx": [
+      3,
+      25
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "sleep_apnea:untreated",
+    "key": "sleep_apnea",
+    "variant": "untreated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.826,
+   "bmi": 31.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Justin",
+  "last_name": "Cruz",
+  "sex": "M",
+  "dob": "2007-11-12",
+  "age": 19,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 40000,
+  "net_worth": 424000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 61.0,
+ "weight_lb": 169.0,
+ "bp_systolic": 142,
+ "bp_diastolic": 83,
+ "pulse": 85,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2021-06-10",
+   "quit": "2024-11-05",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2022-04-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "testicular_seminoma_1",
+    "years_since_tx": 3.1,
+    "stage": "I"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0491-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2024-12-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": true,
+    "compliant": false,
+    "ahi": 18
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0491-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 67,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-07-11",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-01-09",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-07-12",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-07-11",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0491-P1",
+   "name": "Dr. Mackenzie Marks",
+   "specialty": "family medicine",
+   "practice": "Reed LLC Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0491-P2",
+   "name": "Dr. Sarah Lopez",
+   "specialty": "oncology",
+   "practice": "Williams Group Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0491-P3",
+   "name": "Dr. Chase Savage",
+   "specialty": "pulmonology",
+   "practice": "Hamilton LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 287.0,
+  "hdl": 56.0,
+  "ldl": 198.0,
+  "triglycerides": 165.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 79.0,
+  "a1c": 5.4,
+  "ast": 25.0,
+  "alt": 33.0,
+  "ggt": 38.0,
+  "alk_phos": 42.0,
+  "bilirubin": 0.9,
+  "albumin": 4.0,
+  "creatinine": 1.1,
+  "egfr": 103.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.5,
+  "cdt": 1.3,
+  "nt_probnp": 73.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

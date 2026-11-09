@@ -1,0 +1,256 @@
+{
+ "case_id": "C0965",
+ "seed": 11454706,
+ "app_date": "2026-07-29",
+ "design": {
+  "case_id": "C0965",
+  "seed": 11454706,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 28,
+  "sex": "F",
+  "face": 150000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "prediabetes:low",
+    "key": "prediabetes",
+    "variant": "low",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "a1c_avg": {
+      "le": 6.0
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy",
+   "kidney_stones"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "simple",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.346,
+   "bmi": 28.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tammy",
+  "last_name": "Hawkins",
+  "sex": "F",
+  "dob": "1998-10-27",
+  "age": 28,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "mechanic",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 147000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "UL",
+  "riders_requested": [
+   "LTA"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 63.0,
+ "weight_lb": 159.0,
+ "bp_systolic": 142,
+ "bp_diastolic": 80,
+ "pulse": 58,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2018-10-07",
+   "quit": "2025-11-11",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "prediabetes",
+   "label": "Prediabetes / impaired fasting glucose",
+   "onset": "2020-10-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 5.5
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2021-02-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "prediabetes"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0965-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2015-11-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "cetirizine",
+     "dose": "10 mg",
+     "start": "2015-11-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0965-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2025-05-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2025-06-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0965-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Pinecrest Mutual",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0965-P1",
+   "name": "Dr. Paul Rogers",
+   "specialty": "family medicine",
+   "practice": "Hart-Ross Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0965-P2",
+   "name": "Dr. Christopher Hutchinson",
+   "specialty": "endocrinology",
+   "practice": "Contreras Torres and Hammond Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 41.0,
+  "ldl": 223.0,
+  "triglycerides": 78.0,
+  "tc_hdl_ratio": 6.8,
+  "glucose_fasting": 104.0,
+  "a1c": 5.5,
+  "ast": 37.0,
+  "alt": 17.0,
+  "ggt": 41.0,
+  "alk_phos": 87.0,
+  "bilirubin": 0.6,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 76.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.5,
+  "nt_probnp": 39.0,
+  "cotinine_urine": 1153.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

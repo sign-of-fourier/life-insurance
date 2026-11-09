@@ -1,0 +1,335 @@
+{
+ "case_id": "C0989",
+ "seed": 916768632,
+ "app_date": "2025-01-08",
+ "design": {
+  "case_id": "C0989",
+  "seed": 916768632,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 64,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "diabetes_t1:age60-69_a1c9.0",
+    "key": "diabetes_t1",
+    "variant": "age60-69_a1c9.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 175,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      9.0,
+      9.99
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti",
+   "gerd",
+   "acne",
+   "erectile_dysfunction"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up diabetes_t1:age60-69_a1c9.0"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.899,
+   "bmi": 32.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Aaron",
+  "last_name": "Harrison",
+  "sex": "M",
+  "dob": "1960-10-05",
+  "age": 64,
+  "address_state": "IN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "delivery driver",
+  "occupation_class": "2A",
+  "annual_income": 55000,
+  "net_worth": 523000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 71.0,
+ "weight_lb": 230.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 77,
+ "pulse": 70,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2022-12-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 9.2,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 2.1,
+    "age_at_dx": 61,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2023-02-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin lispro",
+     "dose": "100 u/mL",
+     "start": "2022-12-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0989-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2019-10-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2019-12-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0989-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2018-01-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2018-01-30",
+     "stop": "2018-02-24",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0989-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2011-02-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2011-04-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0989-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2012-01-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "100 mg",
+     "start": "2012-02-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    },
+    {
+     "drug": "tadalafil",
+     "dose": "20 mg",
+     "start": "2012-02-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0989-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 63,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0989-P1",
+   "name": "Dr. Victoria Campbell",
+   "specialty": "family medicine",
+   "practice": "Medina Patel and Sharp Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0989-P2",
+   "name": "Dr. Danielle Phillips",
+   "specialty": "endocrinology",
+   "practice": "Wilson PLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 47.0,
+  "ldl": 195.0,
+  "triglycerides": 172.0,
+  "tc_hdl_ratio": 5.9,
+  "glucose_fasting": 214.0,
+  "a1c": 9.0,
+  "ast": 15.0,
+  "alt": 15.0,
+  "ggt": 50.0,
+  "alk_phos": 109.0,
+  "bilirubin": 1.1,
+  "albumin": 4.5,
+  "creatinine": 1.1,
+  "egfr": 62.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 16.0,
+  "cdt": 1.1,
+  "nt_probnp": 17.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.0
+ }
+}

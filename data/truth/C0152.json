@@ -1,0 +1,324 @@
+{
+ "case_id": "C0152",
+ "seed": 347519846,
+ "app_date": "2025-08-10",
+ "design": {
+  "case_id": "C0152",
+  "seed": 347519846,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 76,
+  "sex": "M",
+  "face": 1500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "copd:mild",
+    "key": "copd",
+    "variant": "mild",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "rosacea",
+   "erectile_dysfunction",
+   "bph"
+  ],
+  "grey": "GRY-1",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.289,
+   "bmi": 30.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Daniel",
+  "last_name": "Nichols",
+  "sex": "M",
+  "dob": "1949-05-27",
+  "age": 76,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 415360,
+  "net_worth": 10384000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 167.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 80,
+ "pulse": 89,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1978-07-09",
+   "quit": "1999-05-22",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2021-09-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 82,
+    "smoker": false,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2021-11-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0152-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2014-07-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2014-09-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0152-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2013-09-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2013-10-03",
+     "stop": "2013-10-10",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0152-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2025-01-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "20 mg",
+     "start": "2025-02-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0152-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2021-05-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2021-06-10",
+     "stop": "2021-07-06",
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0152-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2022-12-05",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-06-08",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0152-P1",
+   "name": "Dr. Brian Montgomery",
+   "specialty": "family medicine",
+   "practice": "Thornton-Turner Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0152-P2",
+   "name": "Dr. Scott Lee",
+   "specialty": "pulmonology",
+   "practice": "Holloway LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 297.0,
+  "hdl": 56.0,
+  "ldl": 205.0,
+  "triglycerides": 179.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 104.0,
+  "a1c": 5.5,
+  "ast": 34.0,
+  "alt": 38.0,
+  "ggt": 52.0,
+  "alk_phos": 75.0,
+  "bilirubin": 0.6,
+  "albumin": 4.4,
+  "creatinine": 1.0,
+  "egfr": 64.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.0,
+  "cdt": 1.3,
+  "nt_probnp": 84.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.3
+ }
+}

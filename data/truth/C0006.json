@@ -1,0 +1,248 @@
+{
+ "case_id": "C0006",
+ "seed": 287048512,
+ "app_date": "2025-05-08",
+ "design": {
+  "case_id": "C0006",
+  "seed": 287048512,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 28,
+  "sex": "F",
+  "face": 250000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "depression_anxiety:hosp_recent",
+    "key": "depression_anxiety",
+    "variant": "hosp_recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "hospitalization_years_ago": {
+      "lt": 1
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "ADB",
+   "LTA",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.907,
+   "bmi": 20.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Theresa",
+  "last_name": "Wilson",
+  "sex": "F",
+  "dob": "1997-06-15",
+  "age": 28,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmacist",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 201000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB",
+   "LTA",
+   "OIR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 127.0,
+ "bp_systolic": 116,
+ "bp_diastolic": 75,
+ "pulse": 59,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2015-07-21",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": 0,
+    "psychiatrist": false,
+    "hospitalization_years_ago": 0.8,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 9.8
+   },
+   "meds": [
+    {
+     "drug": "trazodone",
+     "dose": "100 mg",
+     "start": "2015-09-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    },
+    {
+     "drug": "citalopram",
+     "dose": "10 mg",
+     "start": "2015-07-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0006-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2014-10-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2014-12-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0006-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 80,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "France",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0006-P1",
+   "name": "Dr. Tammy Ramirez",
+   "specialty": "family medicine",
+   "practice": "Hurley and Sons Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0006-P2",
+   "name": "Dr. Jonathan Taylor",
+   "specialty": "psychiatry",
+   "practice": "Mason Ltd Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 50.0,
+  "ldl": 196.0,
+  "triglycerides": 141.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 88.0,
+  "a1c": 5.2,
+  "ast": 38.0,
+  "alt": 34.0,
+  "ggt": 30.0,
+  "alk_phos": 104.0,
+  "bilirubin": 0.9,
+  "albumin": 4.6,
+  "creatinine": 1.2,
+  "egfr": 113.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.4,
+  "cdt": 1.3,
+  "nt_probnp": 109.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

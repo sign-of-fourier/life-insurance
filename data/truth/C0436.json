@@ -1,0 +1,316 @@
+{
+ "case_id": "C0436",
+ "seed": 235053175,
+ "app_date": "2026-10-21",
+ "design": {
+  "case_id": "C0436",
+  "seed": 235053175,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 39,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "psoriasis:skin",
+    "key": "psoriasis",
+    "variant": "skin",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "brca_lynch:prophylactic_done",
+    "key": "brca_lynch",
+    "variant": "prophylactic_done",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "prophylactic_surgery": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_alcohol:dpw_15_21",
+    "key": "nm_alcohol",
+    "variant": "dpw_15_21",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "nm_foreign:citizen_abroad_C",
+    "key": "nm_foreign",
+    "variant": "citizen_abroad_C",
+    "chapter": "FN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.638,
+   "bmi": 31.7,
+   "foreign_country": "Dominican Republic",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Mark",
+  "last_name": "Boyer",
+  "sex": "M",
+  "dob": "1988-03-02",
+  "age": 39,
+  "address_state": "N/A",
+  "country_of_residence": "Dominican Republic",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "graphic designer",
+  "occupation_class": "1A",
+  "annual_income": 104000,
+  "net_worth": 195000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 70.0,
+ "weight_lb": 221.0,
+ "bp_systolic": 141,
+ "bp_diastolic": 80,
+ "pulse": 90,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 16.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2020-09-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "arthritis": true,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "secukinumab",
+     "dose": "150 mg inj",
+     "start": "2020-11-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0436-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2019-02-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "prophylactic_surgery": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0436-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2013-10-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2013-11-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "cetirizine",
+     "dose": "10 mg",
+     "start": "2013-11-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0436-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-02-03",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-11-25",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-09-12",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Switzerland",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0436-P1",
+   "name": "Dr. Jesse Taylor",
+   "specialty": "family medicine",
+   "practice": "Johns-Davis Clinic",
+   "aps_style": "foreign_translated",
+   "country": "Dominican Republic"
+  },
+  {
+   "provider_id": "C0436-P2",
+   "name": "Dr. Wesley Johnson",
+   "specialty": "rheumatology",
+   "practice": "Obrien LLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0436-P3",
+   "name": "Dr. Keith Gardner",
+   "specialty": "oncology",
+   "practice": "Savage PLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 58.0,
+  "ldl": 199.0,
+  "triglycerides": 93.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 92.0,
+  "a1c": 5.3,
+  "ast": 22.0,
+  "alt": 39.0,
+  "ggt": 38.0,
+  "alk_phos": 62.0,
+  "bilirubin": 0.4,
+  "albumin": 4.1,
+  "creatinine": 0.7,
+  "egfr": 86.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.5,
+  "cdt": 1.1,
+  "nt_probnp": 46.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

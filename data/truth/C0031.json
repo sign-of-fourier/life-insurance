@@ -1,0 +1,254 @@
+{
+ "case_id": "C0031",
+ "seed": 995249367,
+ "app_date": "2026-10-05",
+ "design": {
+  "case_id": "C0031",
+  "seed": 995249367,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 56,
+  "sex": "F",
+  "face": 7500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:breast_1_y5-10",
+    "key": "cancer",
+    "variant": "breast_1_y5-10",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 5,
+     "years": 2
+    },
+    "params": {
+     "type": "breast_1",
+     "years_since_tx": [
+      5,
+      10
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:breast_1_y5-10"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.669,
+   "bmi": 28.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tracy",
+  "last_name": "Thompson",
+  "sex": "F",
+  "dob": "1971-01-04",
+  "age": 56,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "graphic designer",
+  "occupation_class": "1A",
+  "annual_income": 747000,
+  "net_worth": 5439000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 66.0,
+ "weight_lb": 178.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 88,
+ "pulse": 85,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2020-05-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "breast_1",
+    "years_since_tx": 5.9,
+    "stage": "I"
+   },
+   "meds": [
+    {
+     "drug": "anastrozole",
+     "dose": "1 mg",
+     "start": "2020-07-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cancer"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0031-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2020-04-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "100 mg",
+     "start": "2020-05-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0031-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 70,
+   "age_at_death": 86,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-06-05",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-02-04",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0031-P1",
+   "name": "Dr. Carly Duncan",
+   "specialty": "family medicine",
+   "practice": "Mcclain Eaton and Stanley Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0031-P2",
+   "name": "Dr. James Sawyer",
+   "specialty": "oncology",
+   "practice": "Kramer PLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 254.0,
+  "hdl": 48.0,
+  "ldl": 192.0,
+  "triglycerides": 66.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 93.0,
+  "a1c": 5.0,
+  "ast": 26.0,
+  "alt": 24.0,
+  "ggt": 15.0,
+  "alk_phos": 109.0,
+  "bilirubin": 0.8,
+  "albumin": 4.1,
+  "creatinine": 0.9,
+  "egfr": 76.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.0,
+  "nt_probnp": 87.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

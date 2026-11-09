@@ -1,0 +1,431 @@
+{
+ "case_id": "C0311",
+ "seed": 16901692,
+ "app_date": "2025-10-10",
+ "design": {
+  "case_id": "C0311",
+  "seed": 16901692,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 47,
+  "sex": "M",
+  "face": 250000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "afib:ablated",
+    "key": "afib",
+    "variant": "ablated",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "ablation_years": {
+      "ge": 1
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hypertension:bp_0",
+    "key": "hypertension",
+    "variant": "bp_0",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred Plus",
+    "fe": null,
+    "params": {
+     "bp_band": "<=140/90",
+     "agents": 1
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_aviation:pilot_student",
+    "key": "nm_aviation",
+    "variant": "pilot_student",
+    "chapter": "AVI",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": 2
+    },
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "bp",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "gout",
+   "rosacea",
+   "acne",
+   "eczema"
+  ],
+  "grey": "GRY-9",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CTR",
+   "OIR",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.35,
+   "bmi": 29.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Devon",
+  "last_name": "Jones",
+  "sex": "M",
+  "dob": "1978-08-12",
+  "age": 47,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dentist",
+  "occupation_class": "1A",
+  "annual_income": 35000,
+  "net_worth": 305000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CTR",
+   "OIR",
+   "WP"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 73.0,
+ "weight_lb": 221.0,
+ "bp_systolic": 145,
+ "bp_diastolic": 84,
+ "pulse": 84,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2020-08-23",
+   "quit": "2022-07-18",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2003-01-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "paroxysmal",
+    "echo_normal": true,
+    "chads_vasc": 4,
+    "structural": true,
+    "ablation_years": 7.6,
+    "years_since": 22.7
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0311-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2019-01-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "agents": 1,
+    "bp_band": "<=140/90"
+   },
+   "meds": [
+    {
+     "drug": "olmesartan",
+     "dose": "40 mg",
+     "start": "2019-04-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0311-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2017-04-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2017-04-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0311-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2015-01-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2015-02-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0311-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2022-01-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2022-01-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0311-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2012-02-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2012-03-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2012-02-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0311-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 44,
+   "age_at_death": 46,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 53,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-08-06",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "private_aviation",
+   "details": {
+    "total_hours": 40,
+    "hours_per_year": 41,
+    "ifr": false
+   },
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Norway",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Harborview Life",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0311-P1",
+   "name": "Dr. Michael Davis",
+   "specialty": "family medicine",
+   "practice": "Clay-Stevens Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0311-P2",
+   "name": "Dr. Scott Russell",
+   "specialty": "cardiology",
+   "practice": "Dalton Williams and Arnold Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 271.0,
+  "hdl": 56.0,
+  "ldl": 180.0,
+  "triglycerides": 174.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 102.0,
+  "a1c": 5.6,
+  "ast": 24.0,
+  "alt": 31.0,
+  "ggt": 15.0,
+  "alk_phos": 69.0,
+  "bilirubin": 0.9,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 72.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.3,
+  "cdt": 1.3,
+  "nt_probnp": 90.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.5
+ }
+}

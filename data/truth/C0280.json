@@ -1,0 +1,215 @@
+{
+ "case_id": "C0280",
+ "seed": 20240269,
+ "app_date": "2026-07-29",
+ "design": {
+  "case_id": "C0280",
+  "seed": 20240269,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 18,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cirrhosis:any",
+    "key": "cirrhosis",
+    "variant": "any",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.756,
+   "bmi": 23.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kristi",
+  "last_name": "Wilson",
+  "sex": "F",
+  "dob": "2008-02-27",
+  "age": 18,
+  "address_state": "OH",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 44000,
+  "net_worth": 408000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 61.0,
+ "weight_lb": 124.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 89,
+ "pulse": 83,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1 ppd",
+   "start": "2021-01-01",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cirrhosis",
+   "label": "Cirrhosis",
+   "onset": "2025-12-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0280-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2024-10-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2024-11-01",
+     "stop": "2024-11-12",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0280-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2026-03-14",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0280-P1",
+   "name": "Dr. Jennifer Molina",
+   "specialty": "family medicine",
+   "practice": "Moore and Sons Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0280-P2",
+   "name": "Dr. Meghan Adams",
+   "specialty": "gastroenterology",
+   "practice": "Buckley Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 45.0,
+  "ldl": 211.0,
+  "triglycerides": 145.0,
+  "tc_hdl_ratio": 6.3,
+  "glucose_fasting": 98.0,
+  "a1c": 5.0,
+  "ast": 38.0,
+  "alt": 31.0,
+  "ggt": 15.0,
+  "alk_phos": 89.0,
+  "bilirubin": 0.5,
+  "albumin": 3.8,
+  "creatinine": 1.1,
+  "egfr": 109.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.0,
+  "cdt": 0.9,
+  "nt_probnp": 96.0,
+  "cotinine_urine": 2501.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

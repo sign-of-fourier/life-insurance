@@ -1,0 +1,390 @@
+{
+ "case_id": "C0984",
+ "seed": 1024527494,
+ "app_date": "2026-06-04",
+ "design": {
+  "case_id": "C0984",
+  "seed": 1024527494,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 70,
+  "sex": "M",
+  "face": 100000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "barretts:lgd",
+    "key": "barretts",
+    "variant": "lgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "low"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "arrhythmia_other:lbbb",
+    "key": "arrhythmia_other",
+    "variant": "lbbb",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "lbbb"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "lupus:systemic",
+    "key": "lupus",
+    "variant": "systemic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "systemic"
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.782,
+   "bmi": 25.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Ryan",
+  "last_name": "Shaw",
+  "sex": "M",
+  "dob": "1956-10-05",
+  "age": 70,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 9320,
+  "net_worth": 233000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 64.0,
+ "weight_lb": 146.0,
+ "bp_systolic": 129,
+ "bp_diastolic": 81,
+ "pulse": 90,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2018-12-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "low"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0984-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2012-04-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "lbbb",
+    "ablated": true,
+    "echo_normal": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0984-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2020-02-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "organ_involvement": false,
+    "kind": "systemic"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0984-P4"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2012-07-11",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "entecavir",
+     "dose": "0.5 mg",
+     "start": "2012-08-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    },
+    {
+     "drug": "tenofovir",
+     "dose": "25 mg",
+     "start": "2012-08-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0984-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2012-01-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2012-01-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0984-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2023-01-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2023-03-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2023-03-06",
+     "stop": "2023-03-23",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0984-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 64,
+   "age_at_death": 91,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-10-22",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-09-02",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0984-P1",
+   "name": "Dr. John Wolf",
+   "specialty": "family medicine",
+   "practice": "Matthews Inc Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0984-P2",
+   "name": "Dr. Dawn Pacheco",
+   "specialty": "gastroenterology",
+   "practice": "Shannon-Ward Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0984-P3",
+   "name": "Dr. Morgan Hobbs",
+   "specialty": "cardiology",
+   "practice": "Wilson and Sons Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0984-P4",
+   "name": "Dr. Norman Woods",
+   "specialty": "rheumatology",
+   "practice": "Harvey-Mclaughlin Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 284.0,
+  "hdl": 59.0,
+  "ldl": 209.0,
+  "triglycerides": 76.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 80.0,
+  "a1c": 5.0,
+  "ast": 62.0,
+  "alt": 63.0,
+  "ggt": 32.0,
+  "alk_phos": 74.0,
+  "bilirubin": 0.4,
+  "albumin": 4.4,
+  "creatinine": 1.2,
+  "egfr": 84.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.2,
+  "nt_probnp": 54.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.5
+ }
+}

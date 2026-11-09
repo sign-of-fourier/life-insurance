@@ -1,0 +1,331 @@
+{
+ "case_id": "C0101",
+ "seed": 148038842,
+ "app_date": "2026-08-06",
+ "design": {
+  "case_id": "C0101",
+  "seed": 148038842,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 51,
+  "sex": "F",
+  "face": 300000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "valve:replaced_recent",
+    "key": "valve",
+    "variant": "replaced_recent",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "repaired_years": {
+      "lt": 1
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea",
+   "acute_injury",
+   "kidney_stones",
+   "sinusitis"
+  ],
+  "grey": "GRY-1",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.726,
+   "bmi": 26.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kristy",
+  "last_name": "Johnson",
+  "sex": "F",
+  "dob": "1975-06-19",
+  "age": 51,
+  "address_state": "OH",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "software engineer",
+  "occupation_class": "1A",
+  "annual_income": 27000,
+  "net_worth": 284000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 174.0,
+ "bp_systolic": 110,
+ "bp_diastolic": 77,
+ "pulse": 74,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "valve",
+   "label": "Valvular disease / murmur",
+   "onset": "2020-09-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "kind": "mvp",
+    "severity_grade": "other",
+    "repaired_years": 0.3
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0101-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2014-12-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2015-01-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0101-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2022-05-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2022-05-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2022-06-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0101-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2023-08-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2023-09-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0101-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2022-02-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2022-03-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2022-02-23",
+     "stop": "2022-03-06",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0101-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 68,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-03-20",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2026-01-01",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0101-P1",
+   "name": "Dr. Jessica Henry",
+   "specialty": "family medicine",
+   "practice": "Gonzalez Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0101-P2",
+   "name": "Dr. Tyler Hess",
+   "specialty": "cardiology",
+   "practice": "Smith Chen and Martinez Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 57.0,
+  "ldl": 209.0,
+  "triglycerides": 133.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 85.0,
+  "a1c": 5.0,
+  "ast": 29.0,
+  "alt": 31.0,
+  "ggt": 21.0,
+  "alk_phos": 70.0,
+  "bilirubin": 0.3,
+  "albumin": 4.2,
+  "creatinine": 1.0,
+  "egfr": 91.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.4,
+  "nt_probnp": 98.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

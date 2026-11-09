@@ -1,0 +1,308 @@
+{
+ "case_id": "C0038",
+ "seed": 92624829,
+ "app_date": "2026-03-02",
+ "design": {
+  "case_id": "C0038",
+  "seed": 92624829,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 38,
+  "sex": "M",
+  "face": 1500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "diabetes_t1:age18-39_a1c10.0",
+    "key": "diabetes_t1",
+    "variant": "age18-39_a1c10.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      10.0,
+      99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "eating_disorder:recovered",
+    "key": "eating_disorder",
+    "variant": "recovered",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recovered_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "WP",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.536,
+   "bmi": 28.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Patrick",
+  "last_name": "Jenkins",
+  "sex": "M",
+  "dob": "1988-02-05",
+  "age": 38,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "machinist",
+  "occupation_class": "2A",
+  "annual_income": 93000,
+  "net_worth": 1098000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "WP",
+   "XCR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 65.0,
+ "weight_lb": 171.0,
+ "bp_systolic": 128,
+ "bp_diastolic": 81,
+ "pulse": 81,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2007-07-21",
+   "quit": "2025-10-14",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2018-12-20",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 10.2,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 7.2,
+    "age_at_dx": 30,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2019-01-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin lispro",
+     "dose": "100 u/mL",
+     "start": "2019-04-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0038-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2012-05-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "recovered_years": 7.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0038-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2016-07-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2016-07-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0038-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 69,
+   "age_at_death": 81,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-08-01",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0038-P1",
+   "name": "Dr. Richard Ortiz",
+   "specialty": "family medicine",
+   "practice": "Beltran Watson and Myers Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0038-P2",
+   "name": "Dr. Michael May",
+   "specialty": "endocrinology",
+   "practice": "Mullins-Mcclain Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0038-P3",
+   "name": "Dr. Daniel Lawson",
+   "specialty": "psychiatry",
+   "practice": "Whitaker-Porter Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 53.0,
+  "ldl": 209.0,
+  "triglycerides": 130.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 247.0,
+  "a1c": 10.3,
+  "ast": 36.0,
+  "alt": 18.0,
+  "ggt": 35.0,
+  "alk_phos": 52.0,
+  "bilirubin": 1.1,
+  "albumin": 4.6,
+  "creatinine": 1.0,
+  "egfr": 95.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.7,
+  "cdt": 1.3,
+  "nt_probnp": 21.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

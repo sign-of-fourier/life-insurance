@@ -1,0 +1,470 @@
+{
+ "case_id": "C0986",
+ "seed": 307034755,
+ "app_date": "2026-06-02",
+ "design": {
+  "case_id": "C0986",
+  "seed": 307034755,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 36,
+  "sex": "M",
+  "face": 1500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "depression_anxiety:severe",
+    "key": "depression_anxiety",
+    "variant": "severe",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": {
+       "ge": 1
+      },
+      "ect": true,
+      "disability": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "epilepsy:uncontrolled",
+    "key": "epilepsy",
+    "variant": "uncontrolled",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "seizures_per_year": {
+      "gt": 3
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "pad_aaa:pad_smoker",
+    "key": "pad_aaa",
+    "variant": "pad_smoker",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "kind": "pad",
+     "smoker": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "barretts:lgd",
+    "key": "barretts",
+    "variant": "lgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "low"
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "hernia_repaired",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CTR",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.866,
+   "bmi": 29.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Michael",
+  "last_name": "Blevins",
+  "sex": "M",
+  "dob": "1990-09-11",
+  "age": 36,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "data scientist",
+  "occupation_class": "1A",
+  "annual_income": 57000,
+  "net_worth": 595000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 73.0,
+ "weight_lb": 225.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 74,
+ "pulse": 59,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2018-05-09",
+   "quit": "2019-07-18",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2022-12-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": 5,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": true,
+    "years_since_dx": 3.5
+   },
+   "meds": [
+    {
+     "drug": "duloxetine",
+     "dose": "60 mg",
+     "start": "2023-01-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0986-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2013-04-27",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "seizures_per_year": 7,
+    "seizure_free_years": 13.5
+   },
+   "meds": [
+    {
+     "drug": "topiramate",
+     "dose": "50 mg",
+     "start": "2013-05-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    },
+    {
+     "drug": "lacosamide",
+     "dose": "200 mg",
+     "start": "2013-06-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0986-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2016-10-26",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 9.6,
+    "organ": "liver"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0986-P1"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2019-07-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "kind": "pad",
+    "smoker": true,
+    "size_cm": 5.1,
+    "repaired_months": 52
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0986-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2013-07-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "low"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0986-P5"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2024-12-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "500 mg",
+     "start": "2024-12-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0986-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2014-07-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0986-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2018-11-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2019-01-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0986-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0986-P1",
+   "name": "Dr. Jamie Wise",
+   "specialty": "family medicine",
+   "practice": "Williams Inc Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0986-P2",
+   "name": "Dr. Mario Richard",
+   "specialty": "psychiatry",
+   "practice": "Roberts PLC Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0986-P3",
+   "name": "Dr. Tara Brooks",
+   "specialty": "neurology",
+   "practice": "Wilson-Li Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0986-P4",
+   "name": "Dr. Marissa Martin",
+   "specialty": "cardiology",
+   "practice": "Murphy Campos and Hamilton Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0986-P5",
+   "name": "Dr. Pamela Roberts",
+   "specialty": "gastroenterology",
+   "practice": "Zhang Jefferson and Byrd Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 298.0,
+  "hdl": 68.0,
+  "ldl": 200.0,
+  "triglycerides": 150.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 101.0,
+  "a1c": 5.3,
+  "ast": 20.0,
+  "alt": 24.0,
+  "ggt": 13.0,
+  "alk_phos": 72.0,
+  "bilirubin": 1.2,
+  "albumin": 4.5,
+  "creatinine": 0.7,
+  "egfr": 106.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.3,
+  "cdt": 1.4,
+  "nt_probnp": 68.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,223 @@
+{
+ "case_id": "C0650",
+ "seed": 756706440,
+ "app_date": "2026-05-16",
+ "design": {
+  "case_id": "C0650",
+  "seed": 756706440,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 23,
+  "sex": "F",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cirrhosis:any",
+    "key": "cirrhosis",
+    "variant": "any",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CTR",
+   "LTA",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.875,
+   "bmi": 22.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Karen",
+  "last_name": "Brown",
+  "sex": "F",
+  "dob": "2003-07-18",
+  "age": 23,
+  "address_state": "MI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 76000,
+  "net_worth": 434000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR",
+   "LTA",
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": true,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 59.0,
+ "weight_lb": 110.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 70,
+ "pulse": 70,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2020-09-09",
+   "quit": "2021-11-14",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cirrhosis",
+   "label": "Cirrhosis",
+   "onset": "2020-09-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0650-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2021-08-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2021-08-22",
+     "stop": "2021-10-01",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0650-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0650-P1",
+   "name": "Dr. Patricia Patterson",
+   "specialty": "family medicine",
+   "practice": "Liu Group Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0650-P2",
+   "name": "Dr. Eileen Golden",
+   "specialty": "gastroenterology",
+   "practice": "Kennedy and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 267.0,
+  "hdl": 40.0,
+  "ldl": 195.0,
+  "triglycerides": 160.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 93.0,
+  "a1c": 5.6,
+  "ast": 15.0,
+  "alt": 18.0,
+  "ggt": 20.0,
+  "alk_phos": 60.0,
+  "bilirubin": 0.8,
+  "albumin": 4.3,
+  "creatinine": 1.2,
+  "egfr": 108.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.7,
+  "cdt": 1.1,
+  "nt_probnp": 36.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

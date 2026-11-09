@@ -1,0 +1,364 @@
+{
+ "case_id": "C0375",
+ "seed": 129693953,
+ "app_date": "2026-03-03",
+ "design": {
+  "case_id": "C0375",
+  "seed": 129693953,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 68,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "diabetes_t2:age60-69_a1c8.0-8.99",
+    "key": "diabetes_t2",
+    "variant": "age60-69_a1c8.0-8.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      8.0,
+      8.99
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "lupus:organ",
+    "key": "lupus",
+    "variant": "organ",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ_involvement": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "erectile_dysfunction",
+   "dental",
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.322,
+   "bmi": 27.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jason",
+  "last_name": "Freeman",
+  "sex": "M",
+  "dob": "1957-12-24",
+  "age": 68,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 301880,
+  "net_worth": 7547000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 68.0,
+ "weight_lb": 179.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 71,
+ "pulse": 61,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2014-12-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 8.7,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 11.2,
+    "age_at_dx": 56,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2015-04-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "semaglutide",
+     "dose": "2 mg",
+     "start": "2015-04-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0375-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2023-06-21",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "organ_involvement": true,
+    "kind": "systemic"
+   },
+   "meds": [
+    {
+     "drug": "prednisone",
+     "dose": "20 mg",
+     "start": "2023-08-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0375-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2014-01-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "50 mg",
+     "start": "2014-02-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0375-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2012-09-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2012-09-19",
+     "stop": "2012-09-18",
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0375-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-03-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2018-04-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0375-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 65,
+   "age_at_death": 81,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-03-26",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-11-11",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0375-P1",
+   "name": "Dr. Sharon Ramirez",
+   "specialty": "family medicine",
+   "practice": "Silva Group Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0375-P2",
+   "name": "Dr. Willie Williams",
+   "specialty": "endocrinology",
+   "practice": "Rojas LLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0375-P3",
+   "name": "Dr. Brittany Morrow",
+   "specialty": "rheumatology",
+   "practice": "Floyd-Dougherty Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 60.0,
+  "ldl": 178.0,
+  "triglycerides": 202.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 193.0,
+  "a1c": 8.6,
+  "ast": 38.0,
+  "alt": 38.0,
+  "ggt": 31.0,
+  "alk_phos": 99.0,
+  "bilirubin": 0.6,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 88.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.0,
+  "cdt": 1.2,
+  "nt_probnp": 107.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.8
+ }
+}

@@ -1,0 +1,320 @@
+{
+ "case_id": "C0634",
+ "seed": 523895134,
+ "app_date": "2025-01-21",
+ "design": {
+  "case_id": "C0634",
+  "seed": 523895134,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 77,
+  "sex": "M",
+  "face": 1500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "cad:recent_lt6mo",
+    "key": "cad",
+    "variant": "recent_lt6mo",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": [
+      0,
+      0.49
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "multiple_sclerosis:mild",
+    "key": "multiple_sclerosis",
+    "variant": "mild",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "erectile_dysfunction"
+  ],
+  "grey": "GRY-2",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.426,
+   "bmi": 32.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Adrian",
+  "last_name": "Scott",
+  "sex": "M",
+  "dob": "1948-07-12",
+  "age": 77,
+  "address_state": "IA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 281920,
+  "net_worth": 7048000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "WP"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 60.0,
+ "weight_lb": 166.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 75,
+ "pulse": 63,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2024-08-28",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 77,
+    "years_since": 0.4,
+    "event": "stent",
+    "ef": 58
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "80 mg",
+     "start": "2024-12-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2024-10-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "clopidogrel",
+     "dose": "75 mg",
+     "start": "2024-12-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "25 mg",
+     "start": "2024-08-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0634-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2022-01-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "progressive": false,
+    "edss": 1.5
+   },
+   "meds": [
+    {
+     "drug": "ocrelizumab",
+     "dose": "300 mg IV",
+     "start": "2022-05-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0634-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2015-02-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "tadalafil",
+     "dose": "20 mg",
+     "start": "2015-04-04",
+     "stop": "2015-03-23",
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0634-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 74,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2020-04-01",
+   "code": "N02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Pinecrest Mutual",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0634-P1",
+   "name": "Dr. John Gonzalez",
+   "specialty": "family medicine",
+   "practice": "Brown-Orr Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0634-P2",
+   "name": "Dr. Rebecca Martinez",
+   "specialty": "cardiology",
+   "practice": "Ali Inc Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0634-P3",
+   "name": "Dr. Alexandria Barnes",
+   "specialty": "neurology",
+   "practice": "Cole-Zuniga Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 57.0,
+  "ldl": 211.0,
+  "triglycerides": 67.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 101.0,
+  "a1c": 5.1,
+  "ast": 19.0,
+  "alt": 14.0,
+  "ggt": 37.0,
+  "alk_phos": 68.0,
+  "bilirubin": 0.7,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 91.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.3,
+  "nt_probnp": 378.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

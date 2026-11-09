@@ -1,0 +1,633 @@
+{
+ "case_id": "C0001",
+ "seed": 850282902,
+ "app_date": "2026-07-17",
+ "design": {
+  "case_id": "C0001",
+  "seed": 850282902,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 33,
+  "sex": "M",
+  "face": 3000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "epilepsy:some",
+    "key": "epilepsy",
+    "variant": "some",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "seizures_per_year": [
+      1,
+      3
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "tia:young",
+    "key": "tia",
+    "variant": "young",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "age": {
+      "lt": 50
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_c:untreated",
+    "key": "hepatitis_c",
+    "variant": "untreated",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "suicide_attempt:mid",
+    "key": "suicide_attempt",
+    "variant": "mid",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad:ev0-39_y1-2",
+    "key": "cad",
+    "variant": "ev0-39_y1-2",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 200,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      0,
+      39
+     ],
+     "years_since": [
+      1,
+      2
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "adrenal_pituitary:pituitary",
+    "key": "adrenal_pituitary",
+    "variant": "pituitary",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "pituitary"
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "ecw_problem_heavy",
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [
+    "cad modifier vessels"
+   ],
+   "fin_ratio": 0.706,
+   "bmi": 21.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Joshua",
+  "last_name": "Dorsey",
+  "sex": "M",
+  "dob": "1993-12-23",
+  "age": 33,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 1388000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 74.0,
+ "weight_lb": 164.0,
+ "bp_systolic": 131,
+ "bp_diastolic": 70,
+ "pulse": 58,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2011-02-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "seizures_per_year": 2,
+    "seizure_free_years": 10.4
+   },
+   "meds": [
+    {
+     "drug": "lacosamide",
+     "dose": "100 mg",
+     "start": "2011-03-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tia",
+   "label": "TIA",
+   "onset": "2019-06-11",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 7.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2016-01-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": true,
+    "steroid_bursts_per_year": 2,
+    "er_years_ago": null,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2016-03-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    },
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2016-04-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2015-02-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": false,
+    "svr": false,
+    "years_since_tx": 9.9
+   },
+   "meds": [
+    {
+     "drug": "ledipasvir-sofosbuvir",
+     "dose": "90/400 mg",
+     "start": "2015-04-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2013-02-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 1.5
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2024-05-05",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 2.2
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2024-08-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 31,
+    "years_since": 1.9,
+    "event": "stent",
+    "ef": 60,
+    "angina": false,
+    "vessels": 3,
+    "ldl": 94,
+    "abnormal_stress": false,
+    "normal_stress_12mo": true,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "20 mg",
+     "start": "2024-11-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2024-11-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "100 mg",
+     "start": "2024-11-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P6"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2022-05-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "kind": "pituitary"
+   },
+   "meds": [
+    {
+     "drug": "fludrocortisone",
+     "dose": "0.1 mg",
+     "start": "2022-07-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P7"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2013-04-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "125 mcg",
+     "start": "2013-06-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2020-12-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2021-01-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2021-01-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0001-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-05-12",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-10-08",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Atlas Assurance",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0001-P1",
+   "name": "Dr. Jessica Curtis",
+   "specialty": "family medicine",
+   "practice": "Joyce Inc Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0001-P2",
+   "name": "Dr. Mary Kline",
+   "specialty": "neurology",
+   "practice": "Sullivan-Conrad Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0001-P3",
+   "name": "Dr. Kyle Fox",
+   "specialty": "pulmonology",
+   "practice": "Green PLC Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0001-P4",
+   "name": "Dr. Edward Wilson",
+   "specialty": "gastroenterology",
+   "practice": "Heath Inc Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0001-P5",
+   "name": "Dr. Craig Tyler",
+   "specialty": "psychiatry",
+   "practice": "Pham Group Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0001-P6",
+   "name": "Dr. Amber Miller",
+   "specialty": "cardiology",
+   "practice": "Newman Inc Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0001-P7",
+   "name": "Dr. Zachary Williams",
+   "specialty": "endocrinology",
+   "practice": "Figueroa-Gutierrez Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 49.0,
+  "ldl": 224.0,
+  "triglycerides": 64.0,
+  "tc_hdl_ratio": 5.8,
+  "glucose_fasting": 90.0,
+  "a1c": 4.9,
+  "ast": 55.0,
+  "alt": 91.0,
+  "ggt": 41.0,
+  "alk_phos": 117.0,
+  "bilirubin": 0.5,
+  "albumin": 4.8,
+  "creatinine": 0.7,
+  "egfr": 112.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.6,
+  "cdt": 0.9,
+  "nt_probnp": 23.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

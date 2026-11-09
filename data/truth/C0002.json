@@ -1,0 +1,242 @@
+{
+ "case_id": "C0002",
+ "seed": 996870512,
+ "app_date": "2026-07-21",
+ "design": {
+  "case_id": "C0002",
+  "seed": 996870512,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 76,
+  "sex": "M",
+  "face": 100000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_build:under_25",
+    "key": "nm_build",
+    "variant": "under_25",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_lipids:hdl_low",
+    "key": "nm_lipids",
+    "variant": "hdl_low",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 15,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "cancer:prostate_ge8_y3-5",
+    "key": "cancer",
+    "variant": "prostate_ge8_y3-5",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 15,
+     "years": 5
+    },
+    "params": {
+     "type": "prostate_ge8",
+     "years_since_tx": [
+      3,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "CIA",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.892,
+   "bmi": 17.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Joshua",
+  "last_name": "Walker",
+  "sex": "M",
+  "dob": "1950-07-11",
+  "age": 76,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 8960,
+  "net_worth": 224000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "GUL",
+  "riders_requested": [
+   "CIA",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 95.0,
+ "bp_systolic": 117,
+ "bp_diastolic": 86,
+ "pulse": 74,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2022-01-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "prostate_ge8",
+    "years_since_tx": 3.6,
+    "gleason": 9,
+    "psa_undetectable": false,
+    "stage": null
+   },
+   "meds": [
+    {
+     "drug": "leuprolide",
+     "dose": "7.5 mg",
+     "start": "2022-02-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cancer"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0002-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 77,
+   "age_at_death": 78,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-09-12",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0002-P1",
+   "name": "Dr. Sabrina Marshall",
+   "specialty": "family medicine",
+   "practice": "Owens-Smith Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0002-P2",
+   "name": "Dr. Sue Acevedo",
+   "specialty": "oncology",
+   "practice": "Hill Group Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 177.0,
+  "hdl": 29.0,
+  "ldl": 129.0,
+  "triglycerides": 92.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 80.0,
+  "a1c": 5.0,
+  "ast": 32.0,
+  "alt": 27.0,
+  "ggt": 31.0,
+  "alk_phos": 51.0,
+  "bilirubin": 0.8,
+  "albumin": 4.9,
+  "creatinine": 0.9,
+  "egfr": 64.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.1,
+  "nt_probnp": 310.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 5.2
+ }
+}

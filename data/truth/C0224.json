@@ -1,0 +1,273 @@
+{
+ "case_id": "C0224",
+ "seed": 133449192,
+ "app_date": "2026-09-01",
+ "design": {
+  "case_id": "C0224",
+  "seed": 133449192,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 59,
+  "sex": "F",
+  "face": 3000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:colon_2_y2-5",
+    "key": "cancer",
+    "variant": "colon_2_y2-5",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 15,
+     "years": 4
+    },
+    "params": {
+     "type": "colon_2",
+     "years_since_tx": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "bp",
+     "Standard Plus"
+    ],
+    [
+     "family_history",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [
+   "top-up cancer:colon_2_y2-5"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "CIA",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.285,
+   "bmi": 29.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Leah",
+  "last_name": "Williams",
+  "sex": "F",
+  "dob": "1968-02-10",
+  "age": 59,
+  "address_state": "LA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "software engineer",
+  "occupation_class": "1A",
+  "annual_income": 700000,
+  "net_worth": 2554000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA",
+   "GIO"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 61.0,
+ "weight_lb": 154.0,
+ "bp_systolic": 141,
+ "bp_diastolic": 89,
+ "pulse": 90,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1989-09-21",
+   "quit": "2023-05-12",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2023-01-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "colon_2",
+    "years_since_tx": 2.3,
+    "stage": "II"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0224-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2026-04-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2026-06-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0224-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 52,
+   "age_at_death": 51,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 58,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-06-08",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Canada",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Pinecrest Mutual",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0224-P1",
+   "name": "Dr. Brandon Anderson",
+   "specialty": "family medicine",
+   "practice": "Johnson-Hill Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0224-P2",
+   "name": "Dr. Richard Davis",
+   "specialty": "oncology",
+   "practice": "Solis-Garza Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 269.0,
+  "hdl": 68.0,
+  "ldl": 160.0,
+  "triglycerides": 201.0,
+  "tc_hdl_ratio": 4.0,
+  "glucose_fasting": 90.0,
+  "a1c": 4.9,
+  "ast": 24.0,
+  "alt": 30.0,
+  "ggt": 10.0,
+  "alk_phos": 61.0,
+  "bilirubin": 0.9,
+  "albumin": 4.6,
+  "creatinine": 0.7,
+  "egfr": 71.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.8,
+  "cdt": 1.5,
+  "nt_probnp": 110.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

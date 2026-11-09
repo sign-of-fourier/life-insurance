@@ -1,0 +1,305 @@
+{
+ "case_id": "C0214",
+ "seed": 236298618,
+ "app_date": "2025-05-12",
+ "design": {
+  "case_id": "C0214",
+  "seed": 236298618,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 62,
+  "sex": "M",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "proteinuria:prot_31-100",
+    "key": "proteinuria",
+    "variant": "prot_31-100",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": "31-100"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "epilepsy:controlled_recent",
+    "key": "epilepsy",
+    "variant": "controlled_recent",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "chew",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "hernia_repaired"
+  ],
+  "grey": "GRY-6",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "GIO",
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.432,
+   "bmi": 21.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Caleb",
+  "last_name": "Robles",
+  "sex": "M",
+  "dob": "1963-08-01",
+  "age": 62,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "long-haul truck driver",
+  "occupation_class": "3A",
+  "annual_income": 347000,
+  "net_worth": 1605000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [
+   "GIO",
+   "LTA"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 60.0,
+ "weight_lb": 109.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 76,
+ "pulse": 68,
+ "tobacco": [
+  {
+   "product": "chew",
+   "status": "current",
+   "frequency": "several times/day",
+   "start": "2019-03-11",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2022-12-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "urine_protein": 85
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0214-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2008-01-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "seizures_per_year": null,
+    "seizure_free_years": 1.9
+   },
+   "meds": [
+    {
+     "drug": "carbamazepine",
+     "dose": "200 mg",
+     "start": "2008-03-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0214-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2014-06-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "500 mg",
+     "start": "2014-07-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0214-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2012-12-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0214-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2022-07-21",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-08-31",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2019-08-21",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0214-P1",
+   "name": "Dr. Jorge Rivera",
+   "specialty": "family medicine",
+   "practice": "Faulkner Baldwin and Ochoa Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0214-P2",
+   "name": "Dr. Robert Hernandez",
+   "specialty": "nephrology",
+   "practice": "Mcclure Group Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0214-P3",
+   "name": "Dr. Alice Day",
+   "specialty": "neurology",
+   "practice": "Smith-Sanchez Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 300.0,
+  "hdl": 50.0,
+  "ldl": 210.0,
+  "triglycerides": 200.0,
+  "tc_hdl_ratio": 6.0,
+  "glucose_fasting": 101.0,
+  "a1c": 4.9,
+  "ast": 22.0,
+  "alt": 41.0,
+  "ggt": 35.0,
+  "alk_phos": 120.0,
+  "bilirubin": 0.8,
+  "albumin": 4.4,
+  "creatinine": 0.8,
+  "egfr": 68.0,
+  "urine_protein": 85.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.1,
+  "nt_probnp": 101.0,
+  "cotinine_urine": 1468.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.5
+ }
+}

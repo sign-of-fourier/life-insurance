@@ -1,0 +1,317 @@
+{
+ "case_id": "C0360",
+ "seed": 338631125,
+ "app_date": "2025-08-27",
+ "design": {
+  "case_id": "C0360",
+  "seed": 338631125,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 64,
+  "sex": "F",
+  "face": 5000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:thyroid_y5-100",
+    "key": "cancer",
+    "variant": "thyroid_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "type": "thyroid",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "rosacea",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "ADB",
+   "LTA",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.611,
+   "bmi": 28.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Rebecca",
+  "last_name": "Jefferson",
+  "sex": "F",
+  "dob": "1961-10-21",
+  "age": 64,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "paramedic",
+  "occupation_class": "2A",
+  "annual_income": 818000,
+  "net_worth": 7199000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB",
+   "LTA",
+   "OIR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 62.0,
+ "weight_lb": 157.0,
+ "bp_systolic": 145,
+ "bp_diastolic": 85,
+ "pulse": 89,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2012-02-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "thyroid",
+    "years_since_tx": 12.2,
+    "stage": "I"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2012-05-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cancer"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0360-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2021-11-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2021-11-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0360-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2016-09-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2016-10-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0360-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2014-03-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2014-04-28",
+     "stop": "2014-03-26",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0360-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "colon cancer",
+   "age_at_onset": 57,
+   "age_at_death": 57,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 69,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-10-04",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2017-10-26",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Luxembourg",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0360-P1",
+   "name": "Dr. Kimberly Marshall",
+   "specialty": "family medicine",
+   "practice": "Fletcher Snyder and Harmon Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0360-P2",
+   "name": "Dr. Amanda Phillips",
+   "specialty": "oncology",
+   "practice": "Ward Bentley and Brown Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 217.0,
+  "hdl": 42.0,
+  "ldl": 157.0,
+  "triglycerides": 86.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 99.0,
+  "a1c": 5.2,
+  "ast": 26.0,
+  "alt": 33.0,
+  "ggt": 18.0,
+  "alk_phos": 67.0,
+  "bilirubin": 0.5,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 76.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.0,
+  "cdt": 0.8,
+  "nt_probnp": 24.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

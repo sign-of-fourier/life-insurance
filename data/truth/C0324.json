@@ -1,0 +1,233 @@
+{
+ "case_id": "C0324",
+ "seed": 612331780,
+ "app_date": "2025-07-12",
+ "design": {
+  "case_id": "C0324",
+  "seed": 612331780,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 36,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "copd:moderate",
+    "key": "copd",
+    "variant": "moderate",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fev1_pct": [
+      50,
+      69
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CIA",
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.257,
+   "bmi": 22.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Clifford",
+  "last_name": "Holder",
+  "sex": "M",
+  "dob": "1989-08-23",
+  "age": 36,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "attorney",
+  "occupation_class": "1A",
+  "annual_income": 97000,
+  "net_worth": 257000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "CIA",
+   "CTR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 72.0,
+ "weight_lb": 166.0,
+ "bp_systolic": 110,
+ "bp_diastolic": 81,
+ "pulse": 57,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2018-02-22",
+   "quit": "2022-09-15",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2023-06-06",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "fev1_pct": 63,
+    "smoker": false,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "fluticasone-umeclidinium-vilanterol",
+     "dose": "100/62.5/25",
+     "start": "2023-09-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0324-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-04-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0324-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-05-25",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-09-25",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0324-P1",
+   "name": "Dr. Anthony Underwood",
+   "specialty": "family medicine",
+   "practice": "Henry Butler and Young Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0324-P2",
+   "name": "Dr. Nancy Lee",
+   "specialty": "pulmonology",
+   "practice": "Jacobs Cook and Phillips Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 59.0,
+  "ldl": 196.0,
+  "triglycerides": 204.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 89.0,
+  "a1c": 5.5,
+  "ast": 23.0,
+  "alt": 18.0,
+  "ggt": 26.0,
+  "alk_phos": 51.0,
+  "bilirubin": 0.4,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 70.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.7,
+  "cdt": 0.8,
+  "nt_probnp": 36.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

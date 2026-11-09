@@ -1,0 +1,260 @@
+{
+ "case_id": "C0034",
+ "seed": 102261517,
+ "app_date": "2025-12-28",
+ "design": {
+  "case_id": "C0034",
+  "seed": 102261517,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 24,
+  "sex": "M",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "stroke:recent",
+    "key": "stroke",
+    "variant": "recent",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "lt": 1
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "chew",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "eczema"
+  ],
+  "grey": "GRY-12",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.329,
+   "bmi": 26.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Gregory",
+  "last_name": "Murphy",
+  "sex": "M",
+  "dob": "2001-08-01",
+  "age": 24,
+  "address_state": "TX",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmaceutical sales rep",
+  "occupation_class": "2A",
+  "annual_income": 151000,
+  "net_worth": 719000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 500000,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 72.0,
+ "weight_lb": 196.0,
+ "bp_systolic": 135,
+ "bp_diastolic": 70,
+ "pulse": 60,
+ "tobacco": [
+  {
+   "product": "chew",
+   "status": "current",
+   "frequency": "several times/day",
+   "start": "2015-06-05",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "stroke",
+   "label": "Stroke (CVA)",
+   "onset": "2025-02-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 0.9,
+    "recurrent": false
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "5 mg",
+     "start": "2025-04-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "stroke"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0034-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2024-05-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0034-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2022-01-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2022-01-06",
+     "stop": "2022-01-29",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0034-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 79,
+   "age_at_death": 86,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0034-P1",
+   "name": "Dr. Richard Thompson",
+   "specialty": "family medicine",
+   "practice": "Fritz Bonilla and Nichols Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0034-P2",
+   "name": "Dr. Lisa Bates",
+   "specialty": "neurology",
+   "practice": "Sutton-Garcia Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 62.0,
+  "ldl": 192.0,
+  "triglycerides": 160.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 78.0,
+  "a1c": 5.1,
+  "ast": 17.0,
+  "alt": 19.0,
+  "ggt": 10.0,
+  "alk_phos": 102.0,
+  "bilirubin": 0.7,
+  "albumin": 4.0,
+  "creatinine": 0.9,
+  "egfr": 72.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.4,
+  "nt_probnp": 51.0,
+  "cotinine_urine": 2458.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

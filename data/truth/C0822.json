@@ -1,0 +1,414 @@
+{
+ "case_id": "C0822",
+ "seed": 289476633,
+ "app_date": "2025-11-07",
+ "design": {
+  "case_id": "C0822",
+  "seed": 289476633,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 61,
+  "sex": "F",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "ckd:egfr_15-29",
+    "key": "ckd",
+    "variant": "egfr_15-29",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": "15-29"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad_nonobstructive:cac_400",
+    "key": "cad_nonobstructive",
+    "variant": "cac_400",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": {
+      "ge": 400
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "rheumatoid_arthritis:biologic",
+    "key": "rheumatoid_arthritis",
+    "variant": "biologic",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "biologic": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_build:over_250",
+    "key": "nm_build",
+    "variant": "over_250",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 250,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne"
+  ],
+  "grey": "GRY-5",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "ADB",
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.553,
+   "bmi": 45.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Elizabeth",
+  "last_name": "Lara",
+  "sex": "F",
+  "dob": "1965-02-26",
+  "age": 61,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 3870000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB",
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 276.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 87,
+ "pulse": 86,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "ckd",
+   "label": "Chronic kidney disease (eGFR)",
+   "onset": "2019-01-07",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "egfr": 17
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0822-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2020-12-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": null,
+    "er_years_ago": 3.7,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2020-12-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0822-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2017-02-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stenosis_pct": 77,
+    "cac_score": 591
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0822-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "rheumatoid_arthritis",
+   "label": "Rheumatoid arthritis",
+   "onset": "2010-11-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "tofacitinib",
+     "dose": "5 mg",
+     "start": "2010-11-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rheumatoid_arthritis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0822-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-10-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2018-12-12",
+     "stop": "2018-11-27",
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2018-11-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0822-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 62,
+   "age_at_death": 87,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-01-05",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Switzerland",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Harborview Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0822-P1",
+   "name": "Dr. Ryan Stephenson",
+   "specialty": "family medicine",
+   "practice": "Myers-Arellano Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0822-P2",
+   "name": "Dr. Todd Higgins",
+   "specialty": "nephrology",
+   "practice": "Lucero Rojas and White Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0822-P3",
+   "name": "Dr. Chad Kim",
+   "specialty": "pulmonology",
+   "practice": "Brooks Bell and Berry Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0822-P4",
+   "name": "Dr. Jeffrey Evans",
+   "specialty": "cardiology",
+   "practice": "Fowler-Williams Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 64.0,
+  "ldl": 190.0,
+  "triglycerides": 187.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 95.0,
+  "a1c": 5.1,
+  "ast": 31.0,
+  "alt": 17.0,
+  "ggt": 40.0,
+  "alk_phos": 109.0,
+  "bilirubin": 0.4,
+  "albumin": 4.6,
+  "creatinine": 4.5,
+  "egfr": 17.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.0,
+  "cdt": 1.3,
+  "nt_probnp": 81.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

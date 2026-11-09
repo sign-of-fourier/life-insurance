@@ -1,0 +1,391 @@
+{
+ "case_id": "C0641",
+ "seed": 746336756,
+ "app_date": "2026-02-26",
+ "design": {
+  "case_id": "C0641",
+  "seed": 746336756,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 31,
+  "sex": "M",
+  "face": 300000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "pad_aaa:aaa_mid",
+    "key": "pad_aaa",
+    "variant": "aaa_mid",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "size_cm": [
+      4.0,
+      5.0
+     ]
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "diabetes_t1:age18-39_a1c8.0",
+    "key": "diabetes_t1",
+    "variant": "age18-39_a1c8.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 200,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      8.0,
+      8.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "barretts:lgd",
+    "key": "barretts",
+    "variant": "lgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "low"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.653,
+   "bmi": 29.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jason",
+  "last_name": "Montgomery",
+  "sex": "M",
+  "dob": "1995-05-21",
+  "age": 31,
+  "address_state": "CO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "long-haul truck driver",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 207000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 30",
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 183.0,
+ "bp_systolic": 117,
+ "bp_diastolic": 80,
+ "pulse": 57,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2022-02-26",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "kind": "aaa",
+    "smoker": false,
+    "size_cm": 4.1,
+    "repaired_months": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0641-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2013-04-04",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 8.6,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 12.9,
+    "age_at_dx": 18,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2013-07-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin aspart",
+     "dose": "100 u/mL",
+     "start": "2013-06-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0641-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2019-12-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "low"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0641-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2014-10-04",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 11.4,
+    "organ": "liver"
+   },
+   "meds": [
+    {
+     "drug": "sirolimus",
+     "dose": "1 mg",
+     "start": "2014-12-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0641-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2024-02-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2024-02-15",
+     "stop": "2024-03-31",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0641-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 68,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Germany",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0641-P1",
+   "name": "Dr. Jessica Frederick",
+   "specialty": "family medicine",
+   "practice": "Wheeler-Scott Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0641-P2",
+   "name": "Dr. Julia Lopez",
+   "specialty": "cardiology",
+   "practice": "Lee PLC Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0641-P3",
+   "name": "Dr. Melissa Cook",
+   "specialty": "endocrinology",
+   "practice": "Burgess Hernandez and Kramer Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0641-P4",
+   "name": "Dr. Stephanie Floyd",
+   "specialty": "gastroenterology",
+   "practice": "Sims Group Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 70.0,
+  "ldl": 183.0,
+  "triglycerides": 114.0,
+  "tc_hdl_ratio": 3.9,
+  "glucose_fasting": 197.0,
+  "a1c": 8.4,
+  "ast": 18.0,
+  "alt": 22.0,
+  "ggt": 16.0,
+  "alk_phos": 101.0,
+  "bilirubin": 0.4,
+  "albumin": 4.7,
+  "creatinine": 0.8,
+  "egfr": 98.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.4,
+  "cdt": 1.2,
+  "nt_probnp": 35.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

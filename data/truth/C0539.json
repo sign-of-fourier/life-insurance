@@ -1,0 +1,311 @@
+{
+ "case_id": "C0539",
+ "seed": 710506249,
+ "app_date": "2025-04-11",
+ "design": {
+  "case_id": "C0539",
+  "seed": 710506249,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 59,
+  "sex": "M",
+  "face": 100000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cardiomyopathy:hcm",
+    "key": "cardiomyopathy",
+    "variant": "hcm",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "hcm": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "substance_use_hard:hard_5_10",
+    "key": "substance_use_hard",
+    "variant": "hard_5_10",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy",
+   "bph"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "GIO",
+   "ROP-T",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.817,
+   "bmi": 23.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Richard",
+  "last_name": "Davis",
+  "sex": "M",
+  "dob": "1965-11-26",
+  "age": 59,
+  "address_state": "NJ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "carpenter",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 204000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 20",
+  "riders_requested": [
+   "GIO",
+   "ROP-T",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 159.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 87,
+ "pulse": 63,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2008-05-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "ef": 40,
+    "recovered_years": 2.0,
+    "hcm": true
+   },
+   "meds": [
+    {
+     "drug": "spironolactone",
+     "dose": "25 mg",
+     "start": "2008-05-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0539-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2013-01-31",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "substance": "methamphetamine",
+    "years_since_last_use": 7.5,
+    "maintenance": false
+   },
+   "meds": [
+    {
+     "drug": "methadone",
+     "dose": "10 mg",
+     "start": "2013-03-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0539-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2012-10-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "cetirizine",
+     "dose": "10 mg",
+     "start": "2012-12-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0539-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2018-06-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2018-07-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0539-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-02-07",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-11-08",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0539-P1",
+   "name": "Dr. Megan Patrick",
+   "specialty": "family medicine",
+   "practice": "Mcclain Dalton and Howard Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0539-P2",
+   "name": "Dr. Brandy Adams",
+   "specialty": "cardiology",
+   "practice": "Fry-Mills Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0539-P3",
+   "name": "Dr. Sharon Greene",
+   "specialty": "addiction medicine",
+   "practice": "Moore Group Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 57.0,
+  "ldl": 208.0,
+  "triglycerides": 90.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 90.0,
+  "a1c": 5.2,
+  "ast": 16.0,
+  "alt": 25.0,
+  "ggt": 22.0,
+  "alk_phos": 75.0,
+  "bilirubin": 0.5,
+  "albumin": 3.8,
+  "creatinine": 0.7,
+  "egfr": 101.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.1,
+  "nt_probnp": 286.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.8
+ }
+}

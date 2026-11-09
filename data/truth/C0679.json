@@ -1,0 +1,218 @@
+{
+ "case_id": "C0679",
+ "seed": 627033578,
+ "app_date": "2025-07-20",
+ "design": {
+  "case_id": "C0679",
+  "seed": 627033578,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 56,
+  "sex": "M",
+  "face": 5000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "anemia:fvl_vte",
+    "key": "anemia",
+    "variant": "fvl_vte",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "factor_v_leiden",
+     "vte": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.489,
+   "bmi": 23.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Connor",
+  "last_name": "Ellis",
+  "sex": "M",
+  "dob": "1969-05-27",
+  "age": 56,
+  "address_state": "CO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmacist",
+  "occupation_class": "1A",
+  "annual_income": 682000,
+  "net_worth": 7956000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "GUL",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 153.0,
+ "bp_systolic": 114,
+ "bp_diastolic": 85,
+ "pulse": 62,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2022-06-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "vte": true,
+    "kind": "factor_v_leiden"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0679-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 47,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 42,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Switzerland",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0679-P1",
+   "name": "Dr. Wanda Peterson",
+   "specialty": "family medicine",
+   "practice": "Edwards Group Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0679-P2",
+   "name": "Dr. Peter Ferguson",
+   "specialty": "hematology",
+   "practice": "Peters PLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 297.0,
+  "hdl": 65.0,
+  "ldl": 219.0,
+  "triglycerides": 64.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 96.0,
+  "a1c": 5.4,
+  "ast": 17.0,
+  "alt": 29.0,
+  "ggt": 27.0,
+  "alk_phos": 101.0,
+  "bilirubin": 0.8,
+  "albumin": 3.8,
+  "creatinine": 1.1,
+  "egfr": 86.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.3,
+  "cdt": 1.0,
+  "nt_probnp": 92.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.6
+ }
+}

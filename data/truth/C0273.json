@@ -1,0 +1,417 @@
+{
+ "case_id": "C0273",
+ "seed": 575586120,
+ "app_date": "2025-07-17",
+ "design": {
+  "case_id": "C0273",
+  "seed": 575586120,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 57,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "depression_anxiety:moderate",
+    "key": "depression_anxiety",
+    "variant": "moderate",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "meds_count": {
+       "ge": 2
+      },
+      "work_loss_months": {
+       "gt": 0
+      },
+      "psychiatrist": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "bipolar:unstable",
+    "key": "bipolar",
+    "variant": "unstable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": [
+       1,
+       5
+      ],
+      "compliant": false
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "multiple_sclerosis:moderate",
+    "key": "multiple_sclerosis",
+    "variant": "moderate",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "edss": [
+      2.5,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple",
+   "kidney_stones"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.479,
+   "bmi": 31.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Colin",
+  "last_name": "Higgins",
+  "sex": "M",
+  "dob": "1968-05-12",
+  "age": 57,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "teacher",
+  "occupation_class": "2A",
+  "annual_income": 278000,
+  "net_worth": 2766000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 62.0,
+ "weight_lb": 173.0,
+ "bp_systolic": 122,
+ "bp_diastolic": 82,
+ "pulse": 63,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2019-05-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": null,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 6.2
+   },
+   "meds": [
+    {
+     "drug": "venlafaxine",
+     "dose": "150 mg",
+     "start": "2019-08-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    },
+    {
+     "drug": "citalopram",
+     "dose": "20 mg",
+     "start": "2019-05-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0273-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2011-02-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0273-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2023-03-30",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "other",
+    "stable_years": 6.6,
+    "hospitalization_years_ago": 3.9,
+    "compliant": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0273-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2009-12-11",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "progressive": false,
+    "edss": 3.5
+   },
+   "meds": [
+    {
+     "drug": "interferon beta-1a",
+     "dose": "30 mcg inj",
+     "start": "2009-12-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0273-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2022-10-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "75 mcg",
+     "start": "2022-10-14",
+     "stop": "2022-11-08",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0273-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2021-01-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2021-01-16",
+     "stop": "2021-03-16",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0273-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2018-04-18",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Pinecrest Mutual",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0273-P1",
+   "name": "Dr. Timothy Murphy",
+   "specialty": "family medicine",
+   "practice": "Petty-Harrington Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0273-P2",
+   "name": "Dr. Emily Johnson",
+   "specialty": "psychiatry",
+   "practice": "Taylor Daniels and Holmes Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0273-P3",
+   "name": "Dr. Vanessa Cobb",
+   "specialty": "endocrinology",
+   "practice": "Montgomery-Brown Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0273-P4",
+   "name": "Dr. Courtney Davis",
+   "specialty": "neurology",
+   "practice": "Garcia Aguilar and Morales Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 41.0,
+  "ldl": 216.0,
+  "triglycerides": 110.0,
+  "tc_hdl_ratio": 6.8,
+  "glucose_fasting": 91.0,
+  "a1c": 5.5,
+  "ast": 29.0,
+  "alt": 24.0,
+  "ggt": 54.0,
+  "alk_phos": 63.0,
+  "bilirubin": 0.3,
+  "albumin": 4.6,
+  "creatinine": 0.8,
+  "egfr": 111.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.2,
+  "cdt": 1.3,
+  "nt_probnp": 21.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.8
+ }
+}

@@ -1,0 +1,327 @@
+{
+ "case_id": "C0525",
+ "seed": 419319089,
+ "app_date": "2026-10-01",
+ "design": {
+  "case_id": "C0525",
+  "seed": 419319089,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 31,
+  "sex": "F",
+  "face": 3000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cervical_dysplasia:treated",
+    "key": "cervical_dysplasia",
+    "variant": "treated",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "kidney_stones",
+   "glaucoma",
+   "hypothyroidism_simple"
+  ],
+  "grey": "GRY-2",
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "grey",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.387,
+   "bmi": 28.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Lisa",
+  "last_name": "Horton",
+  "sex": "F",
+  "dob": "1995-04-09",
+  "age": 31,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmaceutical sales rep",
+  "occupation_class": "2A",
+  "annual_income": 258000,
+  "net_worth": 2773000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "UL",
+  "riders_requested": [
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 153.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 88,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "10/yr",
+   "start": "2012-06-21",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cervical_dysplasia",
+   "label": "Abnormal pap / CIN",
+   "onset": "2020-04-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "cin3_pending": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0525-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2025-11-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2025-12-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0525-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2012-04-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2012-04-20",
+     "stop": "2012-05-28",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0525-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2019-01-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2019-02-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0525-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2022-12-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "25 mcg",
+     "start": "2022-12-20",
+     "stop": "2023-01-07",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0525-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "colon cancer",
+   "age_at_onset": 57,
+   "age_at_death": 54,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-04-15",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2026-08-09",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Japan",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0525-P1",
+   "name": "Dr. James Mercado",
+   "specialty": "family medicine",
+   "practice": "Manning Serrano and Patterson Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0525-P2",
+   "name": "Dr. Lori Huff",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Hart and Sons Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 261.0,
+  "hdl": 62.0,
+  "ldl": 172.0,
+  "triglycerides": 135.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 93.0,
+  "a1c": 5.1,
+  "ast": 24.0,
+  "alt": 21.0,
+  "ggt": 40.0,
+  "alk_phos": 96.0,
+  "bilirubin": 0.8,
+  "albumin": 4.7,
+  "creatinine": 1.0,
+  "egfr": 74.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.8,
+  "cdt": 1.3,
+  "nt_probnp": 70.0,
+  "cotinine_urine": 28.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,318 @@
+{
+ "case_id": "C0329",
+ "seed": 333467095,
+ "app_date": "2025-08-16",
+ "design": {
+  "case_id": "C0329",
+  "seed": 333467095,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 56,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "anemia:sickle_disease",
+    "key": "anemia",
+    "variant": "sickle_disease",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "sickle_cell_disease"
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "eczema",
+   "rosacea",
+   "hypothyroidism_simple",
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.828,
+   "bmi": 21.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Rachel",
+  "last_name": "Terrell",
+  "sex": "F",
+  "dob": "1969-05-03",
+  "age": 56,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retail store manager",
+  "occupation_class": "1A",
+  "annual_income": 161000,
+  "net_worth": 1834000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 59.0,
+ "weight_lb": 105.0,
+ "bp_systolic": 125,
+ "bp_diastolic": 67,
+ "pulse": 84,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2016-11-29",
+   "quit": "2024-07-22",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2010-06-05",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "vte": true,
+    "kind": "sickle_cell_disease"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0329-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2022-05-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2022-07-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0329-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2025-02-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2025-03-19",
+     "stop": "2025-03-30",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2025-03-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0329-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2020-11-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "75 mcg",
+     "start": "2021-01-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0329-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2014-11-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0329-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2022-10-22",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-10-08",
+   "code": "S99",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-10-02",
+   "code": "M08",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Atlas Assurance",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0329-P1",
+   "name": "Dr. Dominic Kane",
+   "specialty": "family medicine",
+   "practice": "Carlson Valenzuela and Jacobs Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0329-P2",
+   "name": "Dr. Adam Bright",
+   "specialty": "hematology",
+   "practice": "Bryant Inc Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 287.0,
+  "hdl": 66.0,
+  "ldl": 181.0,
+  "triglycerides": 198.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 83.0,
+  "a1c": 5.5,
+  "ast": 28.0,
+  "alt": 12.0,
+  "ggt": 41.0,
+  "alk_phos": 77.0,
+  "bilirubin": 0.6,
+  "albumin": 4.8,
+  "creatinine": 1.1,
+  "egfr": 96.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.2,
+  "nt_probnp": 44.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "case_id": "C0621",
+ "seed": 1046121283,
+ "app_date": "2026-09-02",
+ "design": {
+  "case_id": "C0621",
+  "seed": 1046121283,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 67,
+  "sex": "M",
+  "face": 1500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "sleep_apnea:treated",
+    "key": "sleep_apnea",
+    "variant": "treated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "treated": true,
+     "compliant": true
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.616,
+   "bmi": 29.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Robert",
+  "last_name": "Garza",
+  "sex": "M",
+  "dob": "1959-04-04",
+  "age": 67,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "software engineer",
+  "occupation_class": "1A",
+  "annual_income": 487000,
+  "net_worth": 4863000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "UL",
+  "riders_requested": [
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 68.0,
+ "weight_lb": 194.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 89,
+ "pulse": 90,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1998-08-06",
+   "quit": "2018-03-13",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2024-07-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "treated": true,
+    "compliant": true,
+    "ahi": 30
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0621-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2020-06-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2020-07-02",
+     "stop": "2020-07-17",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0621-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 54,
+   "age_at_death": 53,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 65,
+   "age_at_death": 82,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0621-P1",
+   "name": "Dr. Brandon Johnson",
+   "specialty": "family medicine",
+   "practice": "Vega Patterson and Gonzalez Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0621-P2",
+   "name": "Dr. Morgan Mendez",
+   "specialty": "pulmonology",
+   "practice": "Potter Ltd Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 267.0,
+  "hdl": 58.0,
+  "ldl": 167.0,
+  "triglycerides": 208.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 89.0,
+  "a1c": 5.0,
+  "ast": 30.0,
+  "alt": 22.0,
+  "ggt": 33.0,
+  "alk_phos": 59.0,
+  "bilirubin": 1.0,
+  "albumin": 4.1,
+  "creatinine": 0.8,
+  "egfr": 61.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.9,
+  "cdt": 0.9,
+  "nt_probnp": 68.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.4
+ }
+}

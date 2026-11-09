@@ -1,0 +1,321 @@
+{
+ "case_id": "C0327",
+ "seed": 881834370,
+ "app_date": "2026-08-20",
+ "design": {
+  "case_id": "C0327",
+  "seed": 881834370,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 21,
+  "sex": "F",
+  "face": 500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cervical_dysplasia:cin3_pending",
+    "key": "cervical_dysplasia",
+    "variant": "cin3_pending",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cin3_pending": true
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "prediabetes:high",
+    "key": "prediabetes",
+    "variant": "high",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      6.1,
+      6.4
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury",
+   "contraception"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.868,
+   "bmi": 30.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Laura",
+  "last_name": "Cole",
+  "sex": "F",
+  "dob": "2005-07-01",
+  "age": 21,
+  "address_state": "UT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 19000,
+  "net_worth": 107000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 166.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 67,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2021-08-16",
+   "quit": "2025-03-28",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cervical_dysplasia",
+   "label": "Abnormal pap / CIN",
+   "onset": "2025-02-19",
+   "status": "in_workup",
+   "severity": "severe",
+   "details": {
+    "cin3_pending": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0327-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "prediabetes",
+   "label": "Prediabetes / impaired fasting glucose",
+   "onset": "2023-05-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 6.1
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "1000 mg",
+     "start": "2023-06-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "prediabetes"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0327-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2024-06-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2024-07-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0327-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2022-03-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "levonorgestrel IUD",
+     "dose": "52 mg",
+     "start": "2022-04-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0327-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 69,
+   "age_at_death": 89,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-10-29",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Canada",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0327-P1",
+   "name": "Dr. Joe Wilkerson",
+   "specialty": "family medicine",
+   "practice": "Mitchell-Allen Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0327-P2",
+   "name": "Dr. Casey Trujillo",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Rodriguez-Wilkerson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0327-P3",
+   "name": "Dr. Dana Newman",
+   "specialty": "endocrinology",
+   "practice": "Lambert Lawson and Perry Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 298.0,
+  "hdl": 49.0,
+  "ldl": 230.0,
+  "triglycerides": 92.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 111.0,
+  "a1c": 6.0,
+  "ast": 32.0,
+  "alt": 41.0,
+  "ggt": 13.0,
+  "alk_phos": 93.0,
+  "bilirubin": 1.1,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 71.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 12.7,
+  "cdt": 1.4,
+  "nt_probnp": 23.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

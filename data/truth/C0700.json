@@ -1,0 +1,244 @@
+{
+ "case_id": "C0700",
+ "seed": 199492095,
+ "app_date": "2026-01-14",
+ "design": {
+  "case_id": "C0700",
+  "seed": 199492095,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 27,
+  "sex": "F",
+  "face": 500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:acute_leukemia_y5-100",
+    "key": "cancer",
+    "variant": "acute_leukemia_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "acute_leukemia",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "sleep_apnea:untreated",
+    "key": "sleep_apnea",
+    "variant": "untreated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.638,
+   "bmi": 32.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Holly",
+  "last_name": "Trevino",
+  "sex": "F",
+  "dob": "1999-05-15",
+  "age": 27,
+  "address_state": "NJ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "electrician",
+  "occupation_class": "3A",
+  "annual_income": 26000,
+  "net_worth": 90000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 69.0,
+ "weight_lb": 220.0,
+ "bp_systolic": 142,
+ "bp_diastolic": 83,
+ "pulse": 75,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2015-05-05",
+   "quit": "2024-12-04",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2018-09-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "acute_leukemia",
+    "years_since_tx": 6.2,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0700-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2022-11-03",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": true,
+    "compliant": false,
+    "ahi": 12
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0700-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-05-12",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-05-12",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-06-27",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0700-P1",
+   "name": "Dr. Maria Ritter",
+   "specialty": "family medicine",
+   "practice": "Spencer Walker and Moore Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0700-P2",
+   "name": "Dr. Angela Ward",
+   "specialty": "oncology",
+   "practice": "Montgomery Chapman and Velazquez Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0700-P3",
+   "name": "Dr. Henry Heath",
+   "specialty": "pulmonology",
+   "practice": "Sosa Rogers and Martinez Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 57.0,
+  "ldl": 175.0,
+  "triglycerides": 217.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 82.0,
+  "a1c": 5.2,
+  "ast": 29.0,
+  "alt": 20.0,
+  "ggt": 21.0,
+  "alk_phos": 90.0,
+  "bilirubin": 0.9,
+  "albumin": 4.5,
+  "creatinine": 1.0,
+  "egfr": 89.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.5,
+  "cdt": 1.4,
+  "nt_probnp": 17.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

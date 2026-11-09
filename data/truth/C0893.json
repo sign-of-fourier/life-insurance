@@ -1,0 +1,249 @@
+{
+ "case_id": "C0893",
+ "seed": 902958670,
+ "app_date": "2026-08-19",
+ "design": {
+  "case_id": "C0893",
+  "seed": 902958670,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 75,
+  "sex": "F",
+  "face": 250000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "epilepsy:some",
+    "key": "epilepsy",
+    "variant": "some",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "seizures_per_year": [
+      1,
+      3
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CTR",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.858,
+   "bmi": 22.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Laura",
+  "last_name": "Clark",
+  "sex": "F",
+  "dob": "1951-05-24",
+  "age": 75,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 23280,
+  "net_worth": 582000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "UL",
+  "riders_requested": [
+   "CTR",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 137.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 75,
+ "pulse": 55,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "5/yr",
+   "start": "2021-04-28",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2011-01-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "seizures_per_year": 1,
+    "seizure_free_years": 14.6
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0893-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2024-08-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2024-08-13",
+     "stop": "2024-10-01",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0893-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-08-31",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Harborview Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0893-P1",
+   "name": "Dr. Miranda Reed",
+   "specialty": "family medicine",
+   "practice": "Hall LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0893-P2",
+   "name": "Dr. Carrie Hernandez",
+   "specialty": "neurology",
+   "practice": "Martin Grimes and Becker Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 298.0,
+  "hdl": 62.0,
+  "ldl": 214.0,
+  "triglycerides": 108.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 78.0,
+  "a1c": 5.2,
+  "ast": 30.0,
+  "alt": 24.0,
+  "ggt": 29.0,
+  "alk_phos": 64.0,
+  "bilirubin": 0.3,
+  "albumin": 4.4,
+  "creatinine": 1.1,
+  "egfr": 91.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.9,
+  "cdt": 0.9,
+  "nt_probnp": 270.0,
+  "cotinine_urine": 17.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

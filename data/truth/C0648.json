@@ -1,0 +1,542 @@
+{
+ "case_id": "C0648",
+ "seed": 922465436,
+ "app_date": "2026-05-07",
+ "design": {
+  "case_id": "C0648",
+  "seed": 922465436,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 64,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "diabetes_t1:age60-69_a1c0",
+    "key": "diabetes_t1",
+    "variant": "age60-69_a1c0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_lipids:lip_75",
+    "key": "nm_lipids",
+    "variant": "lip_75",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.736,
+   "bmi": 29.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Karen",
+  "last_name": "Salazar",
+  "sex": "F",
+  "dob": "1961-12-25",
+  "age": 64,
+  "address_state": "UT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retail store manager",
+  "occupation_class": "1A",
+  "annual_income": 33000,
+  "net_worth": 114000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 58.0,
+ "weight_lb": 139.0,
+ "bp_systolic": 119,
+ "bp_diastolic": 87,
+ "pulse": 67,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2010-02-13",
+   "quit": "2019-07-25",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2016-08-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "tenofovir",
+     "dose": "25 mg",
+     "start": "2016-10-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    },
+    {
+     "drug": "entecavir",
+     "dose": "0.5 mg",
+     "start": "2016-10-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0648-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2024-08-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F2"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0648-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2022-07-20",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 0.6
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0648-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2022-11-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": false,
+    "surgery_years_ago": 0.9
+   },
+   "meds": [
+    {
+     "drug": "azathioprine",
+     "dose": "50 mg",
+     "start": "2023-02-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    },
+    {
+     "drug": "infliximab",
+     "dose": "100 mg IV",
+     "start": "2022-12-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0648-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2011-07-20",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 6.5,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 14.8,
+    "age_at_dx": 49,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2025-08-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0648-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2025-02-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 26,
+    "colonoscopy_years_ago": 8.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0648-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2015-10-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2015-12-12",
+     "stop": "2015-11-04",
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0648-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2015-02-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2015-04-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2015-03-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0648-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 70,
+   "age_at_death": 87,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0648-P1",
+   "name": "Dr. Paula Neal",
+   "specialty": "family medicine",
+   "practice": "Morse Group Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0648-P2",
+   "name": "Dr. Denise Jones",
+   "specialty": "gastroenterology",
+   "practice": "Smith-Lucas Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0648-P3",
+   "name": "Dr. Steven Cross",
+   "specialty": "pulmonology",
+   "practice": "Peterson Simmons and Gonzales Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0648-P4",
+   "name": "Dr. Elizabeth Joseph",
+   "specialty": "endocrinology",
+   "practice": "Pena Smith and Hicks Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 410.0,
+  "hdl": 58.0,
+  "ldl": 332.0,
+  "triglycerides": 100.0,
+  "tc_hdl_ratio": 7.1,
+  "glucose_fasting": 128.0,
+  "a1c": 6.4,
+  "ast": 64.0,
+  "alt": 72.0,
+  "ggt": 43.0,
+  "alk_phos": 61.0,
+  "bilirubin": 1.1,
+  "albumin": 4.0,
+  "creatinine": 1.1,
+  "egfr": 83.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.1,
+  "cdt": 1.3,
+  "nt_probnp": 94.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

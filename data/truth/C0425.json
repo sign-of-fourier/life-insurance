@@ -1,0 +1,354 @@
+{
+ "case_id": "C0425",
+ "seed": 563589253,
+ "app_date": "2025-09-29",
+ "design": {
+  "case_id": "C0425",
+  "seed": 563589253,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 78,
+  "sex": "M",
+  "face": 100000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "frailty:findings",
+    "key": "frailty",
+    "variant": "findings",
+    "chapter": "GER",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "back_pain:opioid_benzo",
+    "key": "back_pain",
+    "variant": "opioid_benzo",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true,
+     "benzo": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad_nonobstructive:cac_400",
+    "key": "cad_nonobstructive",
+    "variant": "cac_400",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": {
+      "ge": 400
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current_heavy",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.604,
+   "bmi": 27.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Ryan",
+  "last_name": "Green",
+  "sex": "M",
+  "dob": "1947-07-23",
+  "age": 78,
+  "address_state": "MI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 13200,
+  "net_worth": 330000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": true,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 71.0,
+ "weight_lb": 199.0,
+ "bp_systolic": 117,
+ "bp_diastolic": 72,
+ "pulse": 86,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "2 ppd",
+   "start": "1974-01-23",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "frailty",
+   "label": "Frailty findings (71+)",
+   "onset": "2005-12-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "adl_dependency": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0425-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2024-01-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0425-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2011-05-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stenosis_pct": 88,
+    "cac_score": 514
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0425-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2005-05-06",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 20.4,
+    "organ": "liver"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus",
+     "dose": "1 mg",
+     "start": "2005-08-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    },
+    {
+     "drug": "mycophenolate",
+     "dose": "500 mg",
+     "start": "2005-06-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0425-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2014-07-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0425-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 62,
+   "age_at_death": 91,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-08-22",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-01-03",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0425-P1",
+   "name": "Dr. Cole Hunter",
+   "specialty": "family medicine",
+   "practice": "Collier Group Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0425-P2",
+   "name": "Dr. Dylan Barron",
+   "specialty": "cardiology",
+   "practice": "Hull-Burke Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 60.0,
+  "ldl": 189.0,
+  "triglycerides": 217.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 89.0,
+  "a1c": 5.2,
+  "ast": 17.0,
+  "alt": 36.0,
+  "ggt": 31.0,
+  "alk_phos": 81.0,
+  "bilirubin": 1.0,
+  "albumin": 4.7,
+  "creatinine": 0.9,
+  "egfr": 93.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.9,
+  "cdt": 0.9,
+  "nt_probnp": 114.0,
+  "cotinine_urine": 2726.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.1
+ }
+}

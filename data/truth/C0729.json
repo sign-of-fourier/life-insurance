@@ -1,0 +1,330 @@
+{
+ "case_id": "C0729",
+ "seed": 719624434,
+ "app_date": "2025-02-22",
+ "design": {
+  "case_id": "C0729",
+  "seed": 719624434,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 32,
+  "sex": "F",
+  "face": 1500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "gestational_dm:resolved",
+    "key": "gestational_dm",
+    "variant": "resolved",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "resolved": true
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_aviation:pilot_noifr_heavy",
+    "key": "nm_aviation",
+    "variant": "pilot_noifr_heavy",
+    "chapter": "AVI",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy",
+   "glaucoma",
+   "osteopenia",
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.589,
+   "bmi": 29.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Amber",
+  "last_name": "Wagner",
+  "sex": "F",
+  "dob": "1992-12-06",
+  "age": 32,
+  "address_state": "FL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "airline pilot",
+  "occupation_class": "1A",
+  "annual_income": 84000,
+  "net_worth": 269000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "UL",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 60.0,
+ "weight_lb": 151.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 81,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "8/yr",
+   "start": "2005-09-04",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "gestational_dm",
+   "label": "Gestational diabetes (resolved)",
+   "onset": "2016-05-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "resolved": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0729-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2020-11-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2021-01-21",
+     "stop": "2021-01-20",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0729-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2013-06-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2013-07-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0729-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2012-12-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2013-01-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0729-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2022-10-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0729-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 46,
+   "age_at_death": 50,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-08-30",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "private_aviation",
+   "details": {
+    "total_hours": 275,
+    "hours_per_year": 124,
+    "ifr": false
+   },
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0729-P1",
+   "name": "Dr. Jennifer Washington",
+   "specialty": "family medicine",
+   "practice": "Coleman LLC Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0729-P2",
+   "name": "Dr. Carlos Rogers",
+   "specialty": "endocrinology",
+   "practice": "Parker Neal and Ward Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 273.0,
+  "hdl": 55.0,
+  "ldl": 177.0,
+  "triglycerides": 201.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 83.0,
+  "a1c": 5.1,
+  "ast": 30.0,
+  "alt": 36.0,
+  "ggt": 32.0,
+  "alk_phos": 101.0,
+  "bilirubin": 0.8,
+  "albumin": 4.7,
+  "creatinine": 1.0,
+  "egfr": 83.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.3,
+  "cdt": 1.0,
+  "nt_probnp": 50.0,
+  "cotinine_urine": 45.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

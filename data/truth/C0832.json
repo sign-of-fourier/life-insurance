@@ -1,0 +1,327 @@
+{
+ "case_id": "C0832",
+ "seed": 885496484,
+ "app_date": "2026-03-13",
+ "design": {
+  "case_id": "C0832",
+  "seed": 885496484,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 53,
+  "sex": "F",
+  "face": 1000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cad:ev50-59_y0.5-1",
+    "key": "cad",
+    "variant": "ev50-59_y0.5-1",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      50,
+      59
+     ],
+     "years_since": [
+      0.5,
+      1
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "eczema",
+   "vitamin_d_deficiency",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cad:ev50-59_y0.5-1"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "LTA",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.35,
+   "bmi": 30.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Ramirez",
+  "sex": "F",
+  "dob": "1973-09-01",
+  "age": 53,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "registered nurse",
+  "occupation_class": "2A",
+  "annual_income": 190000,
+  "net_worth": 1383000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "UL",
+  "riders_requested": [
+   "LTA",
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 63.0,
+ "weight_lb": 171.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 79,
+ "pulse": 80,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2025-04-19",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 52,
+    "years_since": 0.9,
+    "event": "stent",
+    "ef": 58,
+    "angina": false,
+    "vessels": 1,
+    "ldl": 64,
+    "abnormal_stress": false,
+    "normal_stress_12mo": false,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "20 mg",
+     "start": "2025-08-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2025-06-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "clopidogrel",
+     "dose": "75 mg",
+     "start": "2025-06-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0832-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2015-05-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2015-06-09",
+     "stop": "2015-06-11",
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2015-06-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0832-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2017-12-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2017-12-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0832-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2013-09-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2013-10-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0832-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-02-29",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-01-13",
+   "code": "N04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0832-P1",
+   "name": "Dr. Maria Ingram",
+   "specialty": "family medicine",
+   "practice": "King Inc Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0832-P2",
+   "name": "Dr. Mason Perez",
+   "specialty": "cardiology",
+   "practice": "Hicks Group Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 295.0,
+  "hdl": 55.0,
+  "ldl": 217.0,
+  "triglycerides": 112.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 97.0,
+  "a1c": 5.4,
+  "ast": 16.0,
+  "alt": 22.0,
+  "ggt": 11.0,
+  "alk_phos": 70.0,
+  "bilirubin": 0.9,
+  "albumin": 4.3,
+  "creatinine": 0.7,
+  "egfr": 84.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 12.3,
+  "cdt": 1.2,
+  "nt_probnp": 25.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

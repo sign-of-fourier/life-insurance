@@ -1,0 +1,282 @@
+{
+ "case_id": "C0557",
+ "seed": 567170580,
+ "app_date": "2026-09-02",
+ "design": {
+  "case_id": "C0557",
+  "seed": 567170580,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 51,
+  "sex": "M",
+  "face": 7500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "depression_anxiety:mild_recent",
+    "key": "depression_anxiety",
+    "variant": "mild_recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "years_since_dx": {
+      "lt": 2
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_travel:tierB_long",
+    "key": "nm_travel",
+    "variant": "tierB_long",
+    "chapter": "TRV",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.843,
+   "bmi": 29.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kevin",
+  "last_name": "Oneill",
+  "sex": "M",
+  "dob": "1975-06-24",
+  "age": 51,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "roofer",
+  "occupation_class": "3A",
+  "annual_income": 593000,
+  "net_worth": 6003000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "WP"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 73.0,
+ "weight_lb": 223.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 90,
+ "pulse": 60,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2003-12-03",
+   "quit": "2021-12-08",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2024-11-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "meds_count": 1,
+    "work_loss_months": null,
+    "psychiatrist": false,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 1.8
+   },
+   "meds": [
+    {
+     "drug": "alprazolam",
+     "dose": "0.5 mg",
+     "start": "2025-03-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0557-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2014-10-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2014-12-15",
+     "stop": "2014-10-29",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0557-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 45,
+   "age_at_death": 50,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 65,
+   "age_at_death": 92,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-08-03",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2026-06-15",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Croatia",
+   "weeks_per_year": 22.0,
+   "purpose": "consulting",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0557-P1",
+   "name": "Dr. Nicole Bradford",
+   "specialty": "family medicine",
+   "practice": "Rodriguez-Bryan Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0557-P2",
+   "name": "Dr. Taylor Burton",
+   "specialty": "psychiatry",
+   "practice": "Sweeney Ross and Jones Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 259.0,
+  "hdl": 69.0,
+  "ldl": 152.0,
+  "triglycerides": 186.0,
+  "tc_hdl_ratio": 3.8,
+  "glucose_fasting": 104.0,
+  "a1c": 5.2,
+  "ast": 26.0,
+  "alt": 21.0,
+  "ggt": 23.0,
+  "alk_phos": 91.0,
+  "bilirubin": 0.6,
+  "albumin": 4.5,
+  "creatinine": 1.2,
+  "egfr": 102.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.7,
+  "cdt": 1.4,
+  "nt_probnp": 44.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.1
+ }
+}

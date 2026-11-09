@@ -1,0 +1,286 @@
+{
+ "case_id": "C0884",
+ "seed": 757139825,
+ "app_date": "2026-06-25",
+ "design": {
+  "case_id": "C0884",
+  "seed": 757139825,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 73,
+  "sex": "M",
+  "face": 1500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "bipolar:hosp_recent",
+    "key": "bipolar",
+    "variant": "hosp_recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "hospitalization_years_ago": {
+      "lt": 1
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_marijuana:mj_le2",
+    "key": "nm_marijuana",
+    "variant": "mj_le2",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "glaucoma"
+  ],
+  "grey": "GRY-12",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.683,
+   "bmi": 22.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Joseph",
+  "last_name": "Brooks",
+  "sex": "M",
+  "dob": "1953-06-14",
+  "age": 73,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "homemaker",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 4394000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "WP"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 120.0,
+ "bp_systolic": 110,
+ "bp_diastolic": 70,
+ "pulse": 85,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 1,
+   "form": "smoked",
+   "disclosure": "misremembered"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2020-11-18",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "other",
+    "stable_years": 15.5,
+    "hospitalization_years_ago": 0.2,
+    "compliant": true
+   },
+   "meds": [
+    {
+     "drug": "lamotrigine",
+     "dose": "25 mg",
+     "start": "2021-03-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    },
+    {
+     "drug": "lurasidone",
+     "dose": "80 mg",
+     "start": "2021-02-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0884-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-02-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0884-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2015-04-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2015-05-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0884-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-07-02",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0884-P1",
+   "name": "Dr. Toni Avila",
+   "specialty": "family medicine",
+   "practice": "Martin Torres and Ayala Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0884-P2",
+   "name": "Dr. Mitchell Campbell",
+   "specialty": "psychiatry",
+   "practice": "Clark PLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 58.0,
+  "ldl": 208.0,
+  "triglycerides": 131.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 78.0,
+  "a1c": 5.4,
+  "ast": 18.0,
+  "alt": 35.0,
+  "ggt": 36.0,
+  "alk_phos": 75.0,
+  "bilirubin": 0.5,
+  "albumin": 4.4,
+  "creatinine": 0.8,
+  "egfr": 92.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.5,
+  "nt_probnp": 36.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.3
+ }
+}

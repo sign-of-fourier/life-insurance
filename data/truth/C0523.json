@@ -1,0 +1,348 @@
+{
+ "case_id": "C0523",
+ "seed": 534524079,
+ "app_date": "2025-03-16",
+ "design": {
+  "case_id": "C0523",
+  "seed": 534524079,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 74,
+  "sex": "M",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_marijuana:mj_daily",
+    "key": "nm_marijuana",
+    "variant": "mj_daily",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t1:age70-120_a1c0",
+    "key": "diabetes_t1",
+    "variant": "age70-120_a1c0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "diabetes_t2:age70-120_a1c8.0-8.99",
+    "key": "diabetes_t2",
+    "variant": "age70-120_a1c8.0-8.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      8.0,
+      8.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "frailty:findings",
+    "key": "frailty",
+    "variant": "findings",
+    "chapter": "GER",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.343,
+   "bmi": 20.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tony",
+  "last_name": "Jones",
+  "sex": "M",
+  "dob": "1951-03-26",
+  "age": 74,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "homemaker",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 5827000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 122.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 87,
+ "pulse": 80,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "11/yr",
+   "start": "2012-04-25",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 10,
+   "form": "edible",
+   "disclosure": "honest"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2019-03-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 5.9,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 6.0,
+    "age_at_dx": 68,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2022-02-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 8.4,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 3.1,
+    "age_at_dx": 70,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2022-04-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "glipizide",
+     "dose": "5 mg",
+     "start": "2022-06-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0523-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "frailty",
+   "label": "Frailty findings (71+)",
+   "onset": "2014-11-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "adl_dependency": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0523-P1"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2021-01-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2021-01-23",
+     "stop": "2021-03-03",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0523-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Harborview Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0523-P1",
+   "name": "Dr. Sheila Wright",
+   "specialty": "family medicine",
+   "practice": "Foster Torres and Santana Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0523-P2",
+   "name": "Dr. Rachel Hoffman",
+   "specialty": "endocrinology",
+   "practice": "Jones-Sweeney Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 287.0,
+  "hdl": 60.0,
+  "ldl": 210.0,
+  "triglycerides": 85.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 209.0,
+  "a1c": 8.6,
+  "ast": 16.0,
+  "alt": 33.0,
+  "ggt": 47.0,
+  "alk_phos": 58.0,
+  "bilirubin": 1.1,
+  "albumin": 4.8,
+  "creatinine": 0.8,
+  "egfr": 84.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.1,
+  "nt_probnp": 71.0,
+  "cotinine_urine": 30.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.3
+ }
+}

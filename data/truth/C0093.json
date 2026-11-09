@@ -1,0 +1,547 @@
+{
+ "case_id": "C0093",
+ "seed": 48195575,
+ "app_date": "2025-08-01",
+ "design": {
+  "case_id": "C0093",
+  "seed": 48195575,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 43,
+  "sex": "F",
+  "face": 1500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "depression_anxiety:severe",
+    "key": "depression_anxiety",
+    "variant": "severe",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": {
+       "ge": 1
+      },
+      "ect": true,
+      "disability": true
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "copd:mild",
+    "key": "copd",
+    "variant": "mild",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_mvr:major2",
+    "key": "nm_mvr",
+    "variant": "major2",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "lupus:organ",
+    "key": "lupus",
+    "variant": "organ",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ_involvement": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "brca_lynch:no_surgery",
+    "key": "brca_lynch",
+    "variant": "no_surgery",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones",
+   "uti",
+   "gout",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CIA",
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.321,
+   "bmi": 27.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Veronica",
+  "last_name": "Harris",
+  "sex": "F",
+  "dob": "1982-11-09",
+  "age": 43,
+  "address_state": "MI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "correctional officer",
+  "occupation_class": "3A",
+  "annual_income": 233000,
+  "net_worth": 1315000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA",
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 63.0,
+ "weight_lb": 154.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 87,
+ "pulse": 85,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1999-08-30",
+   "quit": "2000-10-03",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2001-10-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": null,
+    "psychiatrist": false,
+    "hospitalization_years_ago": 14.2,
+    "ect": true,
+    "disability": false,
+    "years_since_dx": 23.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2008-12-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2012-10-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 84,
+    "smoker": false,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "umeclidinium-vilanterol",
+     "dose": "62.5/25",
+     "start": "2013-01-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2016-12-25",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "organ_involvement": true,
+    "kind": "other"
+   },
+   "meds": [
+    {
+     "drug": "belimumab",
+     "dose": "200 mg inj",
+     "start": "2017-02-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    },
+    {
+     "drug": "mycophenolate",
+     "dose": "500 mg",
+     "start": "2017-02-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2016-02-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "prophylactic_surgery": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P6"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2018-02-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2018-02-17",
+     "stop": "2018-03-28",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2017-09-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2017-09-22",
+     "stop": "2017-09-28",
+     "prescriber_id": null,
+     "indication": "uti"
+    },
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2017-10-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2012-06-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2012-07-08",
+     "stop": "2012-08-04",
+     "prescriber_id": null,
+     "indication": "gout"
+    },
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2012-07-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2023-08-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2023-08-27",
+     "stop": "2023-09-13",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0093-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 73,
+   "age_at_death": 79,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-07-01",
+   "code": "R03",
+   "disclosure": "omitted"
+  },
+  {
+   "date": "2024-07-10",
+   "code": "S26",
+   "disclosure": "omitted"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0093-P1",
+   "name": "Dr. Lauren Garza",
+   "specialty": "family medicine",
+   "practice": "Henderson-Hernandez Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0093-P2",
+   "name": "Dr. Adam Campbell",
+   "specialty": "psychiatry",
+   "practice": "Rogers Rivers and Thomas Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0093-P3",
+   "name": "Dr. Jessica Woods",
+   "specialty": "gastroenterology",
+   "practice": "Zimmerman Johnson and Kidd Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0093-P4",
+   "name": "Dr. Natasha Edwards",
+   "specialty": "pulmonology",
+   "practice": "Griffin Reed and Juarez Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0093-P5",
+   "name": "Dr. Paula Day",
+   "specialty": "rheumatology",
+   "practice": "Bowen-Harris Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0093-P6",
+   "name": "Dr. Sarah Robinson",
+   "specialty": "oncology",
+   "practice": "Jones-Castillo Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 46.0,
+  "ldl": 210.0,
+  "triglycerides": 94.0,
+  "tc_hdl_ratio": 6.0,
+  "glucose_fasting": 88.0,
+  "a1c": 5.6,
+  "ast": 89.0,
+  "alt": 106.0,
+  "ggt": 55.0,
+  "alk_phos": 88.0,
+  "bilirubin": 1.0,
+  "albumin": 4.6,
+  "creatinine": 0.7,
+  "egfr": 98.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.8,
+  "cdt": 1.3,
+  "nt_probnp": 54.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

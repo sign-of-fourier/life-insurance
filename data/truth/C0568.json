@@ -1,0 +1,366 @@
+{
+ "case_id": "C0568",
+ "seed": 37426698,
+ "app_date": "2025-10-18",
+ "design": {
+  "case_id": "C0568",
+  "seed": 37426698,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 77,
+  "sex": "M",
+  "face": 100000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "diabetes_t2:age70-120_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age70-120_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "bp",
+     "Standard Plus"
+    ],
+    [
+     "build",
+     "Standard Plus"
+    ],
+    [
+     "family_history",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "bph",
+   "gerd",
+   "acne",
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.893,
+   "bmi": 31.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Troy",
+  "last_name": "Jackson",
+  "sex": "M",
+  "dob": "1949-01-20",
+  "age": 77,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 8920,
+  "net_worth": 223000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 74.0,
+ "weight_lb": 244.0,
+ "bp_systolic": 150,
+ "bp_diastolic": 81,
+ "pulse": 88,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1983-11-17",
+   "quit": "2023-01-04",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2022-07-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 5.2,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 3.3,
+    "age_at_dx": 73,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2022-10-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0568-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2025-06-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2025-06-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0568-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2018-10-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2018-10-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2018-10-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0568-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2017-02-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2017-03-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0568-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2020-03-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2020-04-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0568-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 63,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "martial arts",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "New Zealand",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Atlas Assurance",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0568-P1",
+   "name": "Dr. Parker Pratt",
+   "specialty": "family medicine",
+   "practice": "Garcia Inc Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0568-P2",
+   "name": "Dr. Samuel Fuller",
+   "specialty": "endocrinology",
+   "practice": "Reese and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 255.0,
+  "hdl": 48.0,
+  "ldl": 171.0,
+  "triglycerides": 178.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 106.0,
+  "a1c": 5.5,
+  "ast": 29.0,
+  "alt": 14.0,
+  "ggt": 48.0,
+  "alk_phos": 74.0,
+  "bilirubin": 0.9,
+  "albumin": 4.0,
+  "creatinine": 0.7,
+  "egfr": 86.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.9,
+  "cdt": 1.1,
+  "nt_probnp": 123.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.5
+ }
+}

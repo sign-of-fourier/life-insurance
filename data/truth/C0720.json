@@ -1,0 +1,266 @@
+{
+ "case_id": "C0720",
+ "seed": 769430624,
+ "app_date": "2026-01-17",
+ "design": {
+  "case_id": "C0720",
+  "seed": 769430624,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 32,
+  "sex": "M",
+  "face": 150000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:melanoma_1_y5-100",
+    "key": "cancer",
+    "variant": "melanoma_1_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "type": "melanoma_1",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "osteopenia",
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ADB",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.841,
+   "bmi": 29.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jacob",
+  "last_name": "Jacobs",
+  "sex": "M",
+  "dob": "1994-03-05",
+  "age": 32,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "construction laborer",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 198000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "UL",
+  "riders_requested": [
+   "ADB",
+   "WMD"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 65.0,
+ "weight_lb": 178.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 87,
+ "pulse": 70,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2014-05-22",
+   "quit": "2023-06-05",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2019-10-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_1",
+    "years_since_tx": 5.6,
+    "stage": "I"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0720-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2014-11-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2015-01-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0720-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2024-09-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0720-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "colon cancer",
+   "age_at_onset": 55,
+   "age_at_death": 55,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Austria",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Atlas Assurance",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0720-P1",
+   "name": "Dr. Stephen Thomas",
+   "specialty": "family medicine",
+   "practice": "Rojas Waller and Carter Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0720-P2",
+   "name": "Dr. Michael Best",
+   "specialty": "oncology",
+   "practice": "Moore Kim and Hill Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 258.0,
+  "hdl": 71.0,
+  "ldl": 154.0,
+  "triglycerides": 165.0,
+  "tc_hdl_ratio": 3.6,
+  "glucose_fasting": 85.0,
+  "a1c": 5.1,
+  "ast": 35.0,
+  "alt": 23.0,
+  "ggt": 26.0,
+  "alk_phos": 99.0,
+  "bilirubin": 0.3,
+  "albumin": 4.7,
+  "creatinine": 0.8,
+  "egfr": 89.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.3,
+  "nt_probnp": 77.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

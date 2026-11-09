@@ -1,0 +1,347 @@
+{
+ "case_id": "C0630",
+ "seed": 394359502,
+ "app_date": "2026-05-07",
+ "design": {
+  "case_id": "C0630",
+  "seed": 394359502,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 41,
+  "sex": "M",
+  "face": 1000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "nm_alcohol:dpw_15_21",
+    "key": "nm_alcohol",
+    "variant": "dpw_15_21",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "afib:paroxysmal",
+    "key": "afib",
+    "variant": "paroxysmal",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "paroxysmal",
+     "echo_normal": true,
+     "chads_vasc": {
+      "le": 1
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "benign_tumor:hgd_polyp",
+    "key": "benign_tumor",
+    "variant": "hgd_polyp",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "high_grade_dysplasia": true
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "bipolar:bp2_stable",
+    "key": "bipolar",
+    "variant": "bp2_stable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "II",
+     "stable_years": {
+      "ge": 2
+     }
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.607,
+   "bmi": 22.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "John",
+  "last_name": "Shaw",
+  "sex": "M",
+  "dob": "1985-02-08",
+  "age": 41,
+  "address_state": "TX",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "HVAC technician",
+  "occupation_class": "3A",
+  "annual_income": 82000,
+  "net_worth": 703000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "UL",
+  "riders_requested": [
+   "ADB",
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 67.0,
+ "weight_lb": 140.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 78,
+ "pulse": 92,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 19.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2003-02-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "paroxysmal",
+    "echo_normal": true,
+    "chads_vasc": 1,
+    "structural": false,
+    "ablation_years": null,
+    "years_since": 23.2
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "5 mg",
+     "start": "2003-04-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0630-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2017-07-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "high_grade_dysplasia": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0630-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2011-04-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "II",
+    "stable_years": 9.7,
+    "hospitalization_years_ago": 11.0,
+    "compliant": true
+   },
+   "meds": [
+    {
+     "drug": "lithium",
+     "dose": "300 mg",
+     "start": "2011-05-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0630-P4"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2018-01-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0630-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 74,
+   "age_at_death": 91,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-10-13",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-04-12",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0630-P1",
+   "name": "Dr. Shirley Rice",
+   "specialty": "family medicine",
+   "practice": "Johnson Henderson and Hayden Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0630-P2",
+   "name": "Dr. Eric Sanchez",
+   "specialty": "cardiology",
+   "practice": "Goodman Group Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0630-P3",
+   "name": "Dr. Laura Diaz",
+   "specialty": "oncology",
+   "practice": "Kim Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0630-P4",
+   "name": "Dr. Renee Hernandez",
+   "specialty": "psychiatry",
+   "practice": "Baldwin LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 67.0,
+  "ldl": 181.0,
+  "triglycerides": 217.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 97.0,
+  "a1c": 5.6,
+  "ast": 16.0,
+  "alt": 35.0,
+  "ggt": 52.0,
+  "alk_phos": 120.0,
+  "bilirubin": 0.3,
+  "albumin": 4.9,
+  "creatinine": 1.0,
+  "egfr": 73.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.6,
+  "cdt": 1.5,
+  "nt_probnp": 20.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.8
+ }
+}

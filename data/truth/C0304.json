@@ -1,0 +1,310 @@
+{
+ "case_id": "C0304",
+ "seed": 562035454,
+ "app_date": "2026-03-07",
+ "design": {
+  "case_id": "C0304",
+  "seed": 562035454,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 64,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "suicide_attempt:recent",
+    "key": "suicide_attempt",
+    "variant": "recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "lt": 2
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "sinusitis",
+   "hernia_repaired",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "ADB",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.303,
+   "bmi": 32.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Miller",
+  "sex": "F",
+  "dob": "1962-04-11",
+  "age": 64,
+  "address_state": "CO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmacist",
+  "occupation_class": "1A",
+  "annual_income": 661000,
+  "net_worth": 4838000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 194.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 79,
+ "pulse": 66,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1 ppd",
+   "start": "1981-04-05",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2024-09-06",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 1.5
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0304-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2014-03-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2014-04-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    },
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2014-04-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0304-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2015-02-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2015-03-02",
+     "stop": "2015-03-22",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0304-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2015-09-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0304-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2018-09-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2018-11-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0304-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0304-P1",
+   "name": "Dr. David Alexander",
+   "specialty": "family medicine",
+   "practice": "White-Smith Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0304-P2",
+   "name": "Dr. Laura Holder",
+   "specialty": "psychiatry",
+   "practice": "Lee Mahoney and Shaffer Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 50.0,
+  "ldl": 210.0,
+  "triglycerides": 111.0,
+  "tc_hdl_ratio": 5.7,
+  "glucose_fasting": 91.0,
+  "a1c": 5.5,
+  "ast": 15.0,
+  "alt": 20.0,
+  "ggt": 50.0,
+  "alk_phos": 75.0,
+  "bilirubin": 0.8,
+  "albumin": 4.6,
+  "creatinine": 1.0,
+  "egfr": 82.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.2,
+  "nt_probnp": 102.0,
+  "cotinine_urine": 1106.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

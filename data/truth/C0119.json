@@ -1,0 +1,490 @@
+{
+ "case_id": "C0119",
+ "seed": 837642381,
+ "app_date": "2026-03-16",
+ "design": {
+  "case_id": "C0119",
+  "seed": 837642381,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 24,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_lipids:lip_75",
+    "key": "nm_lipids",
+    "variant": "lip_75",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "diabetes_t1:age18-39_a1c8.0",
+    "key": "diabetes_t1",
+    "variant": "age18-39_a1c8.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 200,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      8.0,
+      8.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "epilepsy:uncontrolled",
+    "key": "epilepsy",
+    "variant": "uncontrolled",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "seizures_per_year": {
+      "gt": 3
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "uti",
+   "eczema",
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ADB",
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.669,
+   "bmi": 28.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Ryan",
+  "last_name": "Doyle",
+  "sex": "M",
+  "dob": "2002-06-25",
+  "age": 24,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "insurance underwriter",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 62000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 158.0,
+ "bp_systolic": 131,
+ "bp_diastolic": 70,
+ "pulse": 92,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2020-04-23",
+   "quit": "2022-09-16",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2024-03-16",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 8.3,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 2.0,
+    "age_at_dx": 22,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2024-06-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin aspart",
+     "dose": "100 u/mL",
+     "start": "2024-05-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0119-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2025-03-16",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "seizures_per_year": 7,
+    "seizure_free_years": 17.4
+   },
+   "meds": [
+    {
+     "drug": "phenytoin",
+     "dose": "100 mg",
+     "start": "2025-03-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    },
+    {
+     "drug": "carbamazepine",
+     "dose": "200 mg",
+     "start": "2025-06-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0119-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2022-11-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": false,
+    "surgery_years_ago": 0.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0119-P4"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2018-04-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2018-05-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2018-05-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0119-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2019-01-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2019-02-14",
+     "stop": "2019-02-05",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0119-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2022-11-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2022-12-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0119-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2025-07-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2025-09-03",
+     "stop": "2025-09-05",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0119-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 63,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-10-07",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-08-23",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0119-P1",
+   "name": "Dr. James Adams",
+   "specialty": "family medicine",
+   "practice": "Hudson Cherry and Mcdaniel Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0119-P2",
+   "name": "Dr. Hannah Lopez",
+   "specialty": "endocrinology",
+   "practice": "Flores-Thompson Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0119-P3",
+   "name": "Dr. Timothy Thomas",
+   "specialty": "neurology",
+   "practice": "Kelly Stevens and Hall Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0119-P4",
+   "name": "Dr. Mark Mendoza",
+   "specialty": "gastroenterology",
+   "practice": "Weaver PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 422.0,
+  "hdl": 68.0,
+  "ldl": 336.0,
+  "triglycerides": 87.0,
+  "tc_hdl_ratio": 6.2,
+  "glucose_fasting": 189.0,
+  "a1c": 8.1,
+  "ast": 14.0,
+  "alt": 41.0,
+  "ggt": 52.0,
+  "alk_phos": 74.0,
+  "bilirubin": 0.4,
+  "albumin": 4.9,
+  "creatinine": 0.9,
+  "egfr": 81.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.3,
+  "nt_probnp": 34.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

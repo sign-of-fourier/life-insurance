@@ -1,0 +1,243 @@
+{
+ "case_id": "C0633",
+ "seed": 3867320,
+ "app_date": "2025-06-11",
+ "design": {
+  "case_id": "C0633",
+  "seed": 3867320,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 36,
+  "sex": "M",
+  "face": 750000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:other_unlisted_y5-100",
+    "key": "cancer",
+    "variant": "other_unlisted_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "other_unlisted",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.795,
+   "bmi": 23.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Robert",
+  "last_name": "Gutierrez",
+  "sex": "M",
+  "dob": "1989-05-11",
+  "age": 36,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "electrician",
+  "occupation_class": "3A",
+  "annual_income": 31000,
+  "net_worth": 356000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "UL",
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 63.0,
+ "weight_lb": 132.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 90,
+ "pulse": 64,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2008-09-10",
+   "quit": "2024-12-15",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2018-10-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "other_unlisted",
+    "years_since_tx": 5.8,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0633-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2023-05-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2023-06-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0633-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-11-23",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-03-25",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-07-06",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0633-P1",
+   "name": "Dr. Alicia Stewart",
+   "specialty": "family medicine",
+   "practice": "Walker Carter and Jackson Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0633-P2",
+   "name": "Dr. Joseph Jones",
+   "specialty": "oncology",
+   "practice": "Hernandez Inc Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 290.0,
+  "hdl": 54.0,
+  "ldl": 219.0,
+  "triglycerides": 81.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 91.0,
+  "a1c": 5.1,
+  "ast": 14.0,
+  "alt": 20.0,
+  "ggt": 48.0,
+  "alk_phos": 115.0,
+  "bilirubin": 1.1,
+  "albumin": 4.2,
+  "creatinine": 0.8,
+  "egfr": 106.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.0,
+  "cdt": 1.1,
+  "nt_probnp": 62.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

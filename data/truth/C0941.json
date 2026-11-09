@@ -1,0 +1,403 @@
+{
+ "case_id": "C0941",
+ "seed": 794111179,
+ "app_date": "2026-10-12",
+ "design": {
+  "case_id": "C0941",
+  "seed": 794111179,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 33,
+  "sex": "F",
+  "face": 3000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "bipolar:unstable",
+    "key": "bipolar",
+    "variant": "unstable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": [
+       1,
+       5
+      ],
+      "compliant": false
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "nm_alcohol:dpw_gt35",
+    "key": "nm_alcohol",
+    "variant": "dpw_gt35",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_occupation:occ_4a_hi",
+    "key": "nm_occupation",
+    "variant": "occ_4a_hi",
+    "chapter": "OCC",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 5.0,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "contraception",
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.851,
+   "bmi": 27.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Lori",
+  "last_name": "Greene",
+  "sex": "F",
+  "dob": "1994-03-10",
+  "age": 33,
+  "address_state": "AL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "crop duster pilot",
+  "occupation_class": "4A",
+  "annual_income": 117000,
+  "net_worth": 396000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "CIA"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 163.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 74,
+ "pulse": 76,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 48.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2010-12-25",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "other",
+    "stable_years": 8.4,
+    "hospitalization_years_ago": null,
+    "compliant": false
+   },
+   "meds": [
+    {
+     "drug": "divalproex",
+     "dose": "500 mg",
+     "start": "2011-01-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0941-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2016-05-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [
+    {
+     "drug": "hydrocortisone",
+     "dose": "5 mg",
+     "start": "2016-06-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0941-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2022-05-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "sertraline",
+     "dose": "25 mg",
+     "start": "2022-09-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    },
+    {
+     "drug": "prazosin",
+     "dose": "2 mg",
+     "start": "2022-08-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0941-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2021-11-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "levonorgestrel IUD",
+     "dose": "52 mg",
+     "start": "2021-11-11",
+     "stop": "2021-12-08",
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0941-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2023-11-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0941-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 69,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-12-11",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-10-31",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Belgium",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0941-P1",
+   "name": "Dr. Courtney Stanton",
+   "specialty": "family medicine",
+   "practice": "Marquez-Brown Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0941-P2",
+   "name": "Dr. Robert White",
+   "specialty": "psychiatry",
+   "practice": "Matthews-Morales Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0941-P3",
+   "name": "Dr. Michael Duke",
+   "specialty": "endocrinology",
+   "practice": "Murphy Olson and Hale Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 42.0,
+  "ldl": 208.0,
+  "triglycerides": 164.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 88.0,
+  "a1c": 4.9,
+  "ast": 64.0,
+  "alt": 27.0,
+  "ggt": 200.0,
+  "alk_phos": 69.0,
+  "bilirubin": 0.3,
+  "albumin": 4.1,
+  "creatinine": 1.2,
+  "egfr": 114.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.4,
+  "cdt": 2.1,
+  "nt_probnp": 16.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

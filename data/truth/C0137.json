@@ -1,0 +1,277 @@
+{
+ "case_id": "C0137",
+ "seed": 9408422,
+ "app_date": "2026-05-06",
+ "design": {
+  "case_id": "C0137",
+  "seed": 9408422,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 70,
+  "sex": "F",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "diabetes_t2:age70-120_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age70-120_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "vape",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury",
+   "gout"
+  ],
+  "grey": "GRY-11",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.323,
+   "bmi": 24.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kara",
+  "last_name": "Ruiz",
+  "sex": "F",
+  "dob": "1955-11-18",
+  "age": 70,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 270120,
+  "net_worth": 6753000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 60.0,
+ "weight_lb": 123.0,
+ "bp_systolic": 149,
+ "bp_diastolic": 91,
+ "pulse": 71,
+ "tobacco": [
+  {
+   "product": "vape",
+   "status": "current",
+   "frequency": "weekends",
+   "start": "2024-09-29",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2023-08-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 0.5,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 2.7,
+    "age_at_dx": 67,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "1000 mg",
+     "start": "2023-12-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0137-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2018-06-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2018-08-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0137-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2022-12-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2023-01-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    },
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2023-01-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0137-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 65,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0137-P1",
+   "name": "Dr. Damon Duncan",
+   "specialty": "family medicine",
+   "practice": "Jones PLC Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0137-P2",
+   "name": "Dr. Karen Stewart",
+   "specialty": "endocrinology",
+   "practice": "Smith Inc Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 58.0,
+  "ldl": 207.0,
+  "triglycerides": 96.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": -35.0,
+  "a1c": 0.3,
+  "ast": 34.0,
+  "alt": 35.0,
+  "ggt": 36.0,
+  "alk_phos": 71.0,
+  "bilirubin": 0.5,
+  "albumin": 4.3,
+  "creatinine": 0.7,
+  "egfr": 60.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.5,
+  "cdt": 0.9,
+  "nt_probnp": 65.0,
+  "cotinine_urine": 853.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

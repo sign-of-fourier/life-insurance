@@ -1,0 +1,278 @@
+{
+ "case_id": "C0440",
+ "seed": 841747280,
+ "app_date": "2025-12-10",
+ "design": {
+  "case_id": "C0440",
+  "seed": 841747280,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 76,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "alcohol_use_disorder:relapse",
+    "key": "alcohol_use_disorder",
+    "variant": "relapse",
+    "chapter": "ALC",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "ROP-T",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.464,
+   "bmi": 21.8,
+   "foreign_country": null,
+   "cessation_rx_quit": "2025-06-01"
+  }
+ },
+ "person": {
+  "first_name": "Thomas",
+  "last_name": "Bass",
+  "sex": "M",
+  "dob": "1949-08-26",
+  "age": 76,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 344520,
+  "net_worth": 8613000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ROP-T",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 71.0,
+ "weight_lb": 157.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 77,
+ "pulse": 77,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1978-12-22",
+   "quit": "2025-06-01",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": true,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "alcohol_use_disorder",
+   "label": "Alcohol use disorder (treated)",
+   "onset": "2017-12-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "abstinent_years": 3.9,
+    "treatment": "outpatient + AA",
+    "relapses": 1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0440-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2013-03-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2013-03-26",
+     "stop": "2013-03-30",
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0440-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2015-12-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "40 mg",
+     "start": "2016-01-26",
+     "stop": "2016-02-14",
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2016-01-06",
+     "stop": "2016-02-01",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0440-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 64,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-01-17",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Atlas Assurance",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0440-P1",
+   "name": "Dr. Jo Rivera",
+   "specialty": "family medicine",
+   "practice": "Fox-Johnson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0440-P2",
+   "name": "Dr. Ann Garcia",
+   "specialty": "addiction medicine",
+   "practice": "Fitzgerald-Allen Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 64.0,
+  "ldl": 197.0,
+  "triglycerides": 148.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 79.0,
+  "a1c": 5.4,
+  "ast": 30.0,
+  "alt": 32.0,
+  "ggt": 55.0,
+  "alk_phos": 56.0,
+  "bilirubin": 0.4,
+  "albumin": 4.6,
+  "creatinine": 1.1,
+  "egfr": 65.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.8,
+  "cdt": 0.8,
+  "nt_probnp": 161.0,
+  "cotinine_urine": 93.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.6
+ }
+}

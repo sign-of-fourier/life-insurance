@@ -1,0 +1,286 @@
+{
+ "case_id": "C0587",
+ "seed": 188312973,
+ "app_date": "2026-04-21",
+ "design": {
+  "case_id": "C0587",
+  "seed": 188312973,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 75,
+  "sex": "F",
+  "face": 250000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cardiomyopathy:low_ef",
+    "key": "cardiomyopathy",
+    "variant": "low_ef",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": {
+      "lt": 40
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.568,
+   "bmi": 21.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Marilyn",
+  "last_name": "Pope",
+  "sex": "F",
+  "dob": "1951-02-21",
+  "age": 75,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 35200,
+  "net_worth": 880000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB",
+   "CIA"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 111.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 68,
+ "pulse": 70,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2018-03-16",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "ef": 21,
+    "recovered_years": 3.4,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "furosemide",
+     "dose": "40 mg",
+     "start": "2018-04-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0587-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2020-07-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2020-07-27",
+     "stop": "2020-07-25",
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "famotidine",
+     "dose": "40 mg",
+     "start": "2020-07-07",
+     "stop": "2020-07-21",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0587-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2022-01-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2022-01-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2022-01-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0587-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-02-26",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-02-04",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0587-P1",
+   "name": "Dr. Terry Anderson",
+   "specialty": "family medicine",
+   "practice": "Kelly LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0587-P2",
+   "name": "Dr. Scott Sullivan",
+   "specialty": "cardiology",
+   "practice": "Richard-Martin Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 58.0,
+  "ldl": 189.0,
+  "triglycerides": 163.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 85.0,
+  "a1c": 4.9,
+  "ast": 25.0,
+  "alt": 26.0,
+  "ggt": 27.0,
+  "alk_phos": 109.0,
+  "bilirubin": 0.4,
+  "albumin": 4.4,
+  "creatinine": 0.8,
+  "egfr": 71.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.0,
+  "cdt": 1.2,
+  "nt_probnp": 237.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

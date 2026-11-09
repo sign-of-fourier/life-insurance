@@ -1,0 +1,243 @@
+{
+ "case_id": "C0308",
+ "seed": 860112534,
+ "app_date": "2025-06-02",
+ "design": {
+  "case_id": "C0308",
+  "seed": 860112534,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 25,
+  "sex": "F",
+  "face": 300000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cardiomyopathy:recovered",
+    "key": "cardiomyopathy",
+    "variant": "recovered",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": {
+      "ge": 50
+     },
+     "recovered_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "GIO",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.346,
+   "bmi": 32.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Brianna",
+  "last_name": "Green",
+  "sex": "F",
+  "dob": "2000-05-02",
+  "age": 25,
+  "address_state": "NE",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 243000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "GUL",
+  "riders_requested": [
+   "GIO",
+   "XCR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 63.0,
+ "weight_lb": 185.0,
+ "bp_systolic": 137,
+ "bp_diastolic": 84,
+ "pulse": 78,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2023-02-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "ef": 56,
+    "recovered_years": 4.6,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "sacubitril-valsartan",
+     "dose": "24/26 mg",
+     "start": "2023-03-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    },
+    {
+     "drug": "spironolactone",
+     "dose": "50 mg",
+     "start": "2023-05-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0308-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2021-03-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2021-03-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0308-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2019-09-11",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Japan",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0308-P1",
+   "name": "Dr. Ryan Carroll",
+   "specialty": "family medicine",
+   "practice": "Cole Lawrence and Ferrell Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0308-P2",
+   "name": "Dr. John Walters",
+   "specialty": "cardiology",
+   "practice": "Jones Harris and Roberts Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 289.0,
+  "hdl": 50.0,
+  "ldl": 212.0,
+  "triglycerides": 132.0,
+  "tc_hdl_ratio": 5.8,
+  "glucose_fasting": 83.0,
+  "a1c": 5.0,
+  "ast": 27.0,
+  "alt": 42.0,
+  "ggt": 21.0,
+  "alk_phos": 113.0,
+  "bilirubin": 0.4,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 92.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 12.4,
+  "cdt": 1.5,
+  "nt_probnp": 371.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

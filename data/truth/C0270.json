@@ -1,0 +1,367 @@
+{
+ "case_id": "C0270",
+ "seed": 656898808,
+ "app_date": "2026-01-20",
+ "design": {
+  "case_id": "C0270",
+  "seed": 656898808,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 28,
+  "sex": "F",
+  "face": 100000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "hypertension:bp_75",
+    "key": "hypertension",
+    "variant": "bp_75",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "bp_band": "161-170/101-105",
+     "agents": 1
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "tbi:residual",
+    "key": "tbi",
+    "variant": "residual",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "residual": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_lipids:lip_50",
+    "key": "nm_lipids",
+    "variant": "lip_50",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "benign_tumor:hgd_polyp",
+    "key": "benign_tumor",
+    "variant": "hgd_polyp",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "high_grade_dysplasia": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "epilepsy:uncontrolled",
+    "key": "epilepsy",
+    "variant": "uncontrolled",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "seizures_per_year": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.472,
+   "bmi": 30.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jacqueline",
+  "last_name": "Ramos",
+  "sex": "F",
+  "dob": "1997-12-16",
+  "age": 28,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "warehouse supervisor",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 132000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "CIA"
+  ],
+  "existing_coverage": 0,
+  "replacement": true,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 65.0,
+ "weight_lb": 184.0,
+ "bp_systolic": 163,
+ "bp_diastolic": 98,
+ "pulse": 77,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2019-06-22",
+   "quit": "2023-05-18",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2023-09-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "agents": 1,
+    "bp_band": "161-170/101-105"
+   },
+   "meds": [
+    {
+     "drug": "lisinopril",
+     "dose": "40 mg",
+     "start": "2023-10-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0270-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tbi",
+   "label": "Concussion / TBI",
+   "onset": "2020-05-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "residual": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0270-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2015-05-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "high_grade_dysplasia": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0270-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2025-07-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "seizures_per_year": 5,
+    "seizure_free_years": 2.3
+   },
+   "meds": [
+    {
+     "drug": "phenytoin",
+     "dose": "100 mg",
+     "start": "2025-10-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0270-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-11-15",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-05-09",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-06-23",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "France",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Atlas Assurance",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0270-P1",
+   "name": "Dr. Kyle Fox",
+   "specialty": "family medicine",
+   "practice": "West LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0270-P2",
+   "name": "Dr. Rachel Colon",
+   "specialty": "neurology",
+   "practice": "Harris LLC Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0270-P3",
+   "name": "Dr. Shannon Williams",
+   "specialty": "oncology",
+   "practice": "Simpson LLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 375.0,
+  "hdl": 44.0,
+  "ldl": 302.0,
+  "triglycerides": 143.0,
+  "tc_hdl_ratio": 8.5,
+  "glucose_fasting": 89.0,
+  "a1c": 5.0,
+  "ast": 16.0,
+  "alt": 14.0,
+  "ggt": 34.0,
+  "alk_phos": 83.0,
+  "bilirubin": 0.8,
+  "albumin": 4.5,
+  "creatinine": 1.1,
+  "egfr": 83.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.0,
+  "nt_probnp": 91.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

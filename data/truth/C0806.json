@@ -1,0 +1,278 @@
+{
+ "case_id": "C0806",
+ "seed": 374776135,
+ "app_date": "2025-06-26",
+ "design": {
+  "case_id": "C0806",
+  "seed": 374776135,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 39,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "pulmonary_embolism:recent",
+    "key": "pulmonary_embolism",
+    "variant": "recent",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "lt": 0.5
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "migraine:any",
+    "key": "migraine",
+    "variant": "any",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.42,
+   "bmi": 24.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Christopher",
+  "last_name": "Gutierrez",
+  "sex": "M",
+  "dob": "1986-05-27",
+  "age": 39,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "physician",
+  "occupation_class": "1A",
+  "annual_income": 39000,
+  "net_worth": 360000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 30",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 60.0,
+ "weight_lb": 123.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 86,
+ "pulse": 63,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2005-06-21",
+   "quit": "2022-05-12",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2025-01-31",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 0.4,
+    "recurrent": true,
+    "provoked": true
+   },
+   "meds": [
+    {
+     "drug": "rivaroxaban",
+     "dose": "20 mg",
+     "start": "2025-04-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0806-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "migraine",
+   "label": "Migraine",
+   "onset": "2022-02-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "propranolol",
+     "dose": "10 mg",
+     "start": "2022-03-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "migraine"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0806-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2014-05-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0806-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 70,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "New Zealand",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0806-P1",
+   "name": "Dr. John Brady",
+   "specialty": "family medicine",
+   "practice": "Riley Price and Casey Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0806-P2",
+   "name": "Dr. Tina Brown",
+   "specialty": "pulmonology",
+   "practice": "Garrison Inc Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0806-P3",
+   "name": "Dr. Katie Hunter",
+   "specialty": "neurology",
+   "practice": "Brown Fitzgerald and Anderson Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 59.0,
+  "ldl": 201.0,
+  "triglycerides": 153.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 96.0,
+  "a1c": 5.6,
+  "ast": 31.0,
+  "alt": 24.0,
+  "ggt": 37.0,
+  "alk_phos": 84.0,
+  "bilirubin": 0.4,
+  "albumin": 4.9,
+  "creatinine": 0.8,
+  "egfr": 92.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.2,
+  "nt_probnp": 75.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

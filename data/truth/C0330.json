@@ -1,0 +1,283 @@
+{
+ "case_id": "C0330",
+ "seed": 612187271,
+ "app_date": "2025-06-17",
+ "design": {
+  "case_id": "C0330",
+  "seed": 612187271,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 74,
+  "sex": "F",
+  "face": 500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "psoriasis:skin",
+    "key": "psoriasis",
+    "variant": "skin",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "nm_mvr:dui_5_10y",
+    "key": "nm_mvr",
+    "variant": "dui_5_10y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_aviation:pilot_noifr_heavy",
+    "key": "nm_aviation",
+    "variant": "pilot_noifr_heavy",
+    "chapter": "AVI",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.419,
+   "bmi": 28.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tiffany",
+  "last_name": "Hayes",
+  "sex": "F",
+  "dob": "1951-04-29",
+  "age": 74,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 95520,
+  "net_worth": 2388000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 64.0,
+ "weight_lb": 168.0,
+ "bp_systolic": 142,
+ "bp_diastolic": 83,
+ "pulse": 73,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1995-09-15",
+   "quit": "2019-08-11",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2017-02-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "arthritis": false,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "methotrexate",
+     "dose": "2.5 mg",
+     "start": "2017-05-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0330-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2018-04-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2018-05-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2018-05-06",
+     "stop": "2018-04-29",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0330-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 70,
+   "age_at_death": 91,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2020-05-02",
+   "code": "D06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "private_aviation",
+   "details": {
+    "total_hours": 1488,
+    "hours_per_year": 155,
+    "ifr": false
+   },
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0330-P1",
+   "name": "Dr. Chelsea Raymond",
+   "specialty": "family medicine",
+   "practice": "Smith-Rose Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0330-P2",
+   "name": "Dr. Cory Deleon",
+   "specialty": "rheumatology",
+   "practice": "Alvarez Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 251.0,
+  "hdl": 48.0,
+  "ldl": 185.0,
+  "triglycerides": 87.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 93.0,
+  "a1c": 5.5,
+  "ast": 16.0,
+  "alt": 32.0,
+  "ggt": 51.0,
+  "alk_phos": 100.0,
+  "bilirubin": 0.8,
+  "albumin": 4.2,
+  "creatinine": 0.8,
+  "egfr": 62.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.3,
+  "nt_probnp": 106.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

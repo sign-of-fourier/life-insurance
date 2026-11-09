@@ -1,0 +1,257 @@
+{
+ "case_id": "C0745",
+ "seed": 777846683,
+ "app_date": "2025-10-29",
+ "design": {
+  "case_id": "C0745",
+  "seed": 777846683,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 58,
+  "sex": "F",
+  "face": 100000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "afib:single_episode",
+    "key": "afib",
+    "variant": "single_episode",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "type": "single",
+     "years_since": {
+      "ge": 1
+     },
+     "echo_normal": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_occupation:occ_4a",
+    "key": "nm_occupation",
+    "variant": "occ_4a",
+    "chapter": "OCC",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.874,
+   "bmi": 29.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Donna",
+  "last_name": "Kerr",
+  "sex": "F",
+  "dob": "1967-05-18",
+  "age": 58,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "offshore oil rig worker",
+  "occupation_class": "4A",
+  "annual_income": 18000,
+  "net_worth": 30000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": true,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 60.0,
+ "weight_lb": 153.0,
+ "bp_systolic": 136,
+ "bp_diastolic": 89,
+ "pulse": 66,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2014-10-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "single",
+    "echo_normal": true,
+    "chads_vasc": 4,
+    "structural": false,
+    "ablation_years": null,
+    "years_since": 11.0
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0745-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2013-12-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2014-01-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0745-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "colon cancer",
+   "age_at_onset": 56,
+   "age_at_death": 52,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-01-26",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-01-26",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2017,
+   "company": "Harborview Life",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0745-P1",
+   "name": "Dr. Patricia Brown",
+   "specialty": "family medicine",
+   "practice": "Smith Williams and Marshall Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0745-P2",
+   "name": "Dr. Renee Little",
+   "specialty": "cardiology",
+   "practice": "Bell LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 64.0,
+  "ldl": 175.0,
+  "triglycerides": 198.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 86.0,
+  "a1c": 4.8,
+  "ast": 24.0,
+  "alt": 24.0,
+  "ggt": 26.0,
+  "alk_phos": 74.0,
+  "bilirubin": 1.1,
+  "albumin": 3.9,
+  "creatinine": 0.8,
+  "egfr": 79.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.4,
+  "cdt": 0.9,
+  "nt_probnp": 107.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,280 @@
+{
+ "case_id": "C0467",
+ "seed": 47620870,
+ "app_date": "2026-08-21",
+ "design": {
+  "case_id": "C0467",
+  "seed": 47620870,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 55,
+  "sex": "M",
+  "face": 5000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "cancer:thyroid_y1-5",
+    "key": "cancer",
+    "variant": "thyroid_y1-5",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "thyroid",
+     "years_since_tx": [
+      1,
+      5
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.745,
+   "bmi": 29.5,
+   "foreign_country": "Tanzania",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kenneth",
+  "last_name": "Sandoval",
+  "sex": "M",
+  "dob": "1971-04-03",
+  "age": 55,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "Tanzania",
+  "years_in_us": 4.5,
+  "visa_type": "Permanent Resident",
+  "occupation": "paramedic",
+  "occupation_class": "2A",
+  "annual_income": 447000,
+  "net_worth": 2528000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 67.0,
+ "weight_lb": 188.0,
+ "bp_systolic": 144,
+ "bp_diastolic": 89,
+ "pulse": 67,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "5/day",
+   "start": "1993-08-29",
+   "quit": null,
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2022-11-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "thyroid",
+    "years_since_tx": 3.3,
+    "stage": "I"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "125 mcg",
+     "start": "2022-12-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cancer"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0467-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2024-10-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2024-10-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2024-10-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0467-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2021-10-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0467-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-12-14",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-09-11",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0467-P1",
+   "name": "Dr. Jasmine Henderson",
+   "specialty": "family medicine",
+   "practice": "Gregory Inc Clinic",
+   "aps_style": "foreign_translated",
+   "country": "Tanzania"
+  },
+  {
+   "provider_id": "C0467-P2",
+   "name": "Dr. Clinton Villanueva",
+   "specialty": "oncology",
+   "practice": "Baird-Chang Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 57.0,
+  "ldl": 213.0,
+  "triglycerides": 101.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 86.0,
+  "a1c": 5.0,
+  "ast": 35.0,
+  "alt": 30.0,
+  "ggt": 24.0,
+  "alk_phos": 119.0,
+  "bilirubin": 1.0,
+  "albumin": 4.0,
+  "creatinine": 0.7,
+  "egfr": 90.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.0,
+  "cdt": 0.9,
+  "nt_probnp": 62.0,
+  "cotinine_urine": 2620.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.9
+ }
+}

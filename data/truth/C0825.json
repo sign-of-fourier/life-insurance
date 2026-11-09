@@ -1,0 +1,387 @@
+{
+ "case_id": "C0825",
+ "seed": 345160747,
+ "app_date": "2025-10-27",
+ "design": {
+  "case_id": "C0825",
+  "seed": 345160747,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 37,
+  "sex": "M",
+  "face": 3000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "ckd:egfr_45-59",
+    "key": "ckd",
+    "variant": "egfr_45-59",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": "45-59"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "bipolar:unstable",
+    "key": "bipolar",
+    "variant": "unstable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": [
+       1,
+       5
+      ],
+      "compliant": false
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "tbi:residual",
+    "key": "tbi",
+    "variant": "residual",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "residual": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "multiple_sclerosis:moderate",
+    "key": "multiple_sclerosis",
+    "variant": "moderate",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "edss": [
+      2.5,
+      5
+     ]
+    },
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "athena_summary"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.312,
+   "bmi": 26.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Dwayne",
+  "last_name": "Morgan",
+  "sex": "M",
+  "dob": "1988-05-25",
+  "age": 37,
+  "address_state": "TN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmaceutical sales rep",
+  "occupation_class": "2A",
+  "annual_income": 320000,
+  "net_worth": 1831000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 142.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 69,
+ "pulse": 64,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2013-08-29",
+   "quit": "2023-10-01",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "ckd",
+   "label": "Chronic kidney disease (eGFR)",
+   "onset": "2023-04-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 58
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0825-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2020-09-21",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "II",
+    "stable_years": 4.5,
+    "hospitalization_years_ago": 9.9,
+    "compliant": false
+   },
+   "meds": [
+    {
+     "drug": "lurasidone",
+     "dose": "40 mg",
+     "start": "2020-11-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0825-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tbi",
+   "label": "Concussion / TBI",
+   "onset": "2013-10-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "residual": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0825-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2012-08-15",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "progressive": false,
+    "edss": 3.0,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2020-11-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2021-01-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0825-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 53,
+   "living": false
+  },
+  {
+   "relation": "brother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 56,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-08-06",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-05-05",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0825-P1",
+   "name": "Dr. Mark Johnson",
+   "specialty": "family medicine",
+   "practice": "Stokes-Dean Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0825-P2",
+   "name": "Dr. Stephanie Harrison",
+   "specialty": "nephrology",
+   "practice": "Mitchell LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0825-P3",
+   "name": "Dr. Dean Wood",
+   "specialty": "psychiatry",
+   "practice": "Gross Simpson and Mendez Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0825-P4",
+   "name": "Dr. Taylor Walker",
+   "specialty": "neurology",
+   "practice": "Vega-Donovan Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 289.0,
+  "hdl": 70.0,
+  "ldl": 193.0,
+  "triglycerides": 129.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 81.0,
+  "a1c": 5.4,
+  "ast": 35.0,
+  "alt": 12.0,
+  "ggt": 14.0,
+  "alk_phos": 109.0,
+  "bilirubin": 0.7,
+  "albumin": 4.4,
+  "creatinine": 1.6,
+  "egfr": 58.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.5,
+  "cdt": 1.0,
+  "nt_probnp": 58.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,480 @@
+{
+ "case_id": "C0088",
+ "seed": 543261711,
+ "app_date": "2026-09-28",
+ "design": {
+  "case_id": "C0088",
+  "seed": 543261711,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 26,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hypertension:bp_50",
+    "key": "hypertension",
+    "variant": "bp_50",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "bp_band": "151-160/96-100",
+     "agents": 1
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "ckd:transplant",
+    "key": "ckd",
+    "variant": "transplant",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "transplant_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "brca_lynch:no_surgery",
+    "key": "brca_lynch",
+    "variant": "no_surgery",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "rheumatoid_arthritis:biologic",
+    "key": "rheumatoid_arthritis",
+    "variant": "biologic",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "biologic": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_lipids:lip_50",
+    "key": "nm_lipids",
+    "variant": "lip_50",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 3,
+  "evidence_path": "accel_to_fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "hospital_discharge",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.835,
+   "bmi": 20.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Nicholas",
+  "last_name": "Sanford",
+  "sex": "M",
+  "dob": "2000-09-27",
+  "age": 26,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "marketing manager",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 142000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 20",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 73.0,
+ "weight_lb": 157.0,
+ "bp_systolic": 155,
+ "bp_diastolic": 87,
+ "pulse": 87,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2019-01-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [
+    {
+     "drug": "cabergoline",
+     "dose": "0.5 mg",
+     "start": "2019-02-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0088-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2025-03-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "agents": 1,
+    "bp_band": "151-160/96-100"
+   },
+   "meds": [
+    {
+     "drug": "losartan",
+     "dose": "50 mg",
+     "start": "2025-04-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0088-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ckd",
+   "label": "Chronic kidney disease (eGFR)",
+   "onset": "2024-05-10",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "dialysis": false,
+    "transplant_years": 5.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0088-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2025-02-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "prophylactic_surgery": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0088-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "rheumatoid_arthritis",
+   "label": "Rheumatoid arthritis",
+   "onset": "2020-03-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "methotrexate",
+     "dose": "2.5 mg",
+     "start": "2020-06-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rheumatoid_arthritis"
+    },
+    {
+     "drug": "hydroxychloroquine",
+     "dose": "200 mg",
+     "start": "2020-04-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rheumatoid_arthritis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0088-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2023-09-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": 3,
+    "er_years_ago": null,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2023-11-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0088-P5"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-07-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0088-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-11-30",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-05-24",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "martial arts",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0088-P1",
+   "name": "Dr. Michelle Conley",
+   "specialty": "family medicine",
+   "practice": "Richardson Jackson and Day Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0088-P2",
+   "name": "Dr. Teresa Parker",
+   "specialty": "endocrinology",
+   "practice": "Wilson PLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0088-P3",
+   "name": "Dr. Melissa Brown",
+   "specialty": "nephrology",
+   "practice": "Rivas-Hernandez Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0088-P4",
+   "name": "Dr. Richard Tran",
+   "specialty": "oncology",
+   "practice": "Hudson and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0088-P5",
+   "name": "Dr. Patricia Ward",
+   "specialty": "pulmonology",
+   "practice": "Nolan-Clark Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 394.0,
+  "hdl": 59.0,
+  "ldl": 316.0,
+  "triglycerides": 91.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 89.0,
+  "a1c": 5.6,
+  "ast": 32.0,
+  "alt": 15.0,
+  "ggt": 55.0,
+  "alk_phos": 78.0,
+  "bilirubin": 0.4,
+  "albumin": 4.1,
+  "creatinine": 0.8,
+  "egfr": 79.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.2,
+  "cdt": 1.4,
+  "nt_probnp": 53.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

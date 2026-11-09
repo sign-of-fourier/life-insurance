@@ -1,0 +1,265 @@
+{
+ "case_id": "C0048",
+ "seed": 838258061,
+ "app_date": "2026-03-26",
+ "design": {
+  "case_id": "C0048",
+  "seed": 838258061,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 35,
+  "sex": "F",
+  "face": 7500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "pancreatitis:chronic",
+    "key": "pancreatitis",
+    "variant": "chronic",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic": true
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "gerd"
+  ],
+  "grey": "GRY-2",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.874,
+   "bmi": 20.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jessica",
+  "last_name": "Wiley",
+  "sex": "F",
+  "dob": "1990-10-12",
+  "age": 35,
+  "address_state": "TN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "real estate agent",
+  "occupation_class": "2A",
+  "annual_income": 285000,
+  "net_worth": 628000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 69.0,
+ "weight_lb": 139.0,
+ "bp_systolic": 116,
+ "bp_diastolic": 74,
+ "pulse": 73,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2010-09-01",
+   "quit": "2024-08-05",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2016-06-07",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "chronic": true,
+    "cause": "other"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0048-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2011-10-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2011-11-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0048-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2020-08-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2020-09-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "omeprazole",
+     "dose": "40 mg",
+     "start": "2020-09-22",
+     "stop": "2020-10-07",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0048-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "United Kingdom",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0048-P1",
+   "name": "Dr. Monica Mcclain",
+   "specialty": "family medicine",
+   "practice": "Mcmahon Inc Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0048-P2",
+   "name": "Dr. Jason Singh",
+   "specialty": "gastroenterology",
+   "practice": "Contreras LLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 59.0,
+  "ldl": 214.0,
+  "triglycerides": 63.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 84.0,
+  "a1c": 4.9,
+  "ast": 18.0,
+  "alt": 22.0,
+  "ggt": 21.0,
+  "alk_phos": 79.0,
+  "bilirubin": 0.4,
+  "albumin": 4.3,
+  "creatinine": 0.9,
+  "egfr": 82.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.7,
+  "cdt": 1.4,
+  "nt_probnp": 92.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,297 @@
+{
+ "case_id": "C0599",
+ "seed": 870246495,
+ "app_date": "2025-02-02",
+ "design": {
+  "case_id": "C0599",
+  "seed": 870246495,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 36,
+  "sex": "F",
+  "face": 500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:colon_3_y5-10",
+    "key": "cancer",
+    "variant": "colon_3_y5-10",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 10,
+     "years": 3
+    },
+    "params": {
+     "type": "colon_3",
+     "years_since_tx": [
+      5,
+      10
+     ]
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti",
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:colon_3_y5-10"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "ROP-T",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.632,
+   "bmi": 32.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Alyssa",
+  "last_name": "Hill",
+  "sex": "F",
+  "dob": "1988-10-14",
+  "age": 36,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "registered nurse",
+  "occupation_class": "2A",
+  "annual_income": 26000,
+  "net_worth": 195000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ROP-T",
+   "WP"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 65.0,
+ "weight_lb": 196.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 90,
+ "pulse": 74,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2008-05-20",
+   "quit": "2023-10-25",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2017-03-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "colon_3",
+    "years_since_tx": 7.1,
+    "stage": "III"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0599-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2019-04-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2019-04-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0599-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2023-07-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2023-08-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0599-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-05-10",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-05-05",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-08-28",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-04-22",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Iceland",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0599-P1",
+   "name": "Dr. Brianna Arnold",
+   "specialty": "family medicine",
+   "practice": "Baker Rodriguez and Olson Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0599-P2",
+   "name": "Dr. Linda Wilson",
+   "specialty": "oncology",
+   "practice": "Cervantes-Kim Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 264.0,
+  "hdl": 40.0,
+  "ldl": 202.0,
+  "triglycerides": 106.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 85.0,
+  "a1c": 4.9,
+  "ast": 28.0,
+  "alt": 26.0,
+  "ggt": 38.0,
+  "alk_phos": 40.0,
+  "bilirubin": 0.5,
+  "albumin": 4.6,
+  "creatinine": 0.9,
+  "egfr": 90.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.0,
+  "cdt": 0.8,
+  "nt_probnp": 56.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,398 @@
+{
+ "case_id": "C0754",
+ "seed": 974978870,
+ "app_date": "2025-05-16",
+ "design": {
+  "case_id": "C0754",
+  "seed": 974978870,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 53,
+  "sex": "M",
+  "face": 1500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "parkinsons:young_onset",
+    "key": "parkinsons",
+    "variant": "young_onset",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "age_at_onset": {
+      "lt": 50
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_c:untreated",
+    "key": "hepatitis_c",
+    "variant": "untreated",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "proteinuria:prot_101-300",
+    "key": "proteinuria",
+    "variant": "prot_101-300",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": "101-300"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "bph"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "ADB",
+   "KPE",
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.937,
+   "bmi": 31.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Cameron",
+  "last_name": "Espinoza",
+  "sex": "M",
+  "dob": "1972-01-03",
+  "age": 53,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "hair stylist",
+  "occupation_class": "2A",
+  "annual_income": 106000,
+  "net_worth": 413000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "UL",
+  "riders_requested": [
+   "ADB",
+   "KPE",
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 64.0,
+ "weight_lb": 182.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 85,
+ "pulse": 56,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2022-06-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 6.8,
+    "monotherapy": true
+   },
+   "meds": [
+    {
+     "drug": "olanzapine",
+     "dose": "5 mg",
+     "start": "2022-07-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0754-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "parkinsons",
+   "label": "Parkinson's disease",
+   "onset": "2013-11-15",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_onset": 33
+   },
+   "meds": [
+    {
+     "drug": "pramipexole",
+     "dose": "0.5 mg",
+     "start": "2014-01-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    },
+    {
+     "drug": "carbidopa-levodopa",
+     "dose": "25/100 mg",
+     "start": "2014-02-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0754-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2007-12-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": false,
+    "svr": false,
+    "years_since_tx": 6.6
+   },
+   "meds": [
+    {
+     "drug": "glecaprevir-pibrentasvir",
+     "dose": "100/40 mg",
+     "start": "2008-03-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    },
+    {
+     "drug": "ledipasvir-sofosbuvir",
+     "dose": "90/400 mg",
+     "start": "2008-02-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0754-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2021-06-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "urine_protein": 249
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0754-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2022-10-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2022-10-30",
+     "stop": "2022-11-12",
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0754-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 67,
+   "age_at_death": 75,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0754-P1",
+   "name": "Dr. Michael Nelson",
+   "specialty": "family medicine",
+   "practice": "Salinas Hawkins and Watson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0754-P2",
+   "name": "Dr. Tracy Oneill",
+   "specialty": "psychiatry",
+   "practice": "Burns LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0754-P3",
+   "name": "Dr. Matthew Martinez",
+   "specialty": "neurology",
+   "practice": "Davis and Sons Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0754-P4",
+   "name": "Dr. Kevin Hale",
+   "specialty": "gastroenterology",
+   "practice": "Aguilar Figueroa and Fleming Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0754-P5",
+   "name": "Dr. Bryan Knight",
+   "specialty": "nephrology",
+   "practice": "Chandler Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 66.0,
+  "ldl": 178.0,
+  "triglycerides": 161.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 78.0,
+  "a1c": 5.2,
+  "ast": 53.0,
+  "alt": 99.0,
+  "ggt": 14.0,
+  "alk_phos": 86.0,
+  "bilirubin": 0.4,
+  "albumin": 4.3,
+  "creatinine": 0.9,
+  "egfr": 86.0,
+  "urine_protein": 249.0,
+  "hemoglobin": 13.5,
+  "cdt": 0.9,
+  "nt_probnp": 101.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.4
+ }
+}

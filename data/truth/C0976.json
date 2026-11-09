@@ -1,0 +1,473 @@
+{
+ "case_id": "C0976",
+ "seed": 828358221,
+ "app_date": "2026-04-15",
+ "design": {
+  "case_id": "C0976",
+  "seed": 828358221,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 45,
+  "sex": "M",
+  "face": 7500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "tbi:residual",
+    "key": "tbi",
+    "variant": "residual",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "residual": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_build:over_100",
+    "key": "nm_build",
+    "variant": "over_100",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hypertension:bp_75",
+    "key": "hypertension",
+    "variant": "bp_75",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "bp_band": "161-170/101-105",
+     "agents": 1
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_alcohol:dpw_gt35",
+    "key": "nm_alcohol",
+    "variant": "dpw_gt35",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "eczema",
+   "acne",
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.339,
+   "bmi": 39.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "William",
+  "last_name": "White",
+  "sex": "M",
+  "dob": "1981-07-11",
+  "age": 45,
+  "address_state": "LA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dentist",
+  "occupation_class": "1A",
+  "annual_income": 1107000,
+  "net_worth": 7986000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 228.0,
+ "bp_systolic": 162,
+ "bp_diastolic": 105,
+ "pulse": 56,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "9/yr",
+   "start": "2008-01-30",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 56.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "tbi",
+   "label": "Concussion / TBI",
+   "onset": "2025-09-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "residual": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0976-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2021-05-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "agents": 1,
+    "bp_band": "161-170/101-105"
+   },
+   "meds": [
+    {
+     "drug": "lisinopril",
+     "dose": "10 mg",
+     "start": "2021-09-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0976-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "1999-04-16",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 27.0,
+    "organ": "liver"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0976-P1"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2014-03-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [
+    {
+     "drug": "cabergoline",
+     "dose": "0.5 mg",
+     "start": "2014-03-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    },
+    {
+     "drug": "fludrocortisone",
+     "dose": "0.1 mg",
+     "start": "2014-06-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0976-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2021-09-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2021-09-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2021-10-23",
+     "stop": "2021-09-17",
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0976-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2014-07-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2014-09-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0976-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2020-03-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2020-03-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0976-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2023-09-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0976-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0976-P1",
+   "name": "Dr. Chris Wallace",
+   "specialty": "family medicine",
+   "practice": "Kirk-Watson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0976-P2",
+   "name": "Dr. Christina Allen",
+   "specialty": "neurology",
+   "practice": "Lopez Inc Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0976-P3",
+   "name": "Dr. Bryan Chapman",
+   "specialty": "endocrinology",
+   "practice": "Hobbs and Sons Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 69.0,
+  "ldl": 183.0,
+  "triglycerides": 123.0,
+  "tc_hdl_ratio": 4.0,
+  "glucose_fasting": 81.0,
+  "a1c": 5.4,
+  "ast": 61.0,
+  "alt": 13.0,
+  "ggt": 179.0,
+  "alk_phos": 51.0,
+  "bilirubin": 1.1,
+  "albumin": 4.3,
+  "creatinine": 0.8,
+  "egfr": 89.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.0,
+  "cdt": 2.7,
+  "nt_probnp": 37.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.8
+ }
+}

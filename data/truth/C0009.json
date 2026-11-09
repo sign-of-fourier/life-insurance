@@ -1,0 +1,341 @@
+{
+ "case_id": "C0009",
+ "seed": 445542883,
+ "app_date": "2026-07-03",
+ "design": {
+  "case_id": "C0009",
+  "seed": 445542883,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 80,
+  "sex": "M",
+  "face": 250000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "diabetes_t2:age70-120_a1c9.0-9.99",
+    "key": "diabetes_t2",
+    "variant": "age70-120_a1c9.0-9.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      9.0,
+      9.99
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "cancer:hodgkin_1_2_y2-5",
+    "key": "cancer",
+    "variant": "hodgkin_1_2_y2-5",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 10,
+     "years": 5
+    },
+    "params": {
+     "type": "hodgkin_1_2",
+     "years_since_tx": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CTR",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.296,
+   "bmi": 21.3,
+   "foreign_country": "United Arab Emirates",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Joseph",
+  "last_name": "Robinson",
+  "sex": "M",
+  "dob": "1946-04-22",
+  "age": 80,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": 3.6,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 67520,
+  "net_worth": 1688000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR",
+   "WMD"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 68.0,
+ "weight_lb": 140.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 74,
+ "pulse": 58,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1972-12-20",
+   "quit": "1974-01-24",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2018-01-02",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 9.8,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 8.5,
+    "age_at_dx": 71,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2018-01-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2018-04-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "tirzepatide",
+     "dose": "10 mg",
+     "start": "2018-04-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0009-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2021-12-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "hodgkin_1_2",
+    "years_since_tx": 4.2,
+    "stage": "II"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0009-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2014-03-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "500 mg",
+     "start": "2014-03-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0009-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2024-09-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2024-09-23",
+     "stop": "2024-10-17",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0009-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0009-P1",
+   "name": "Dr. Cameron Roach",
+   "specialty": "family medicine",
+   "practice": "Jackson Reeves and Stanley Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "United Arab Emirates"
+  },
+  {
+   "provider_id": "C0009-P2",
+   "name": "Dr. Edward Walker",
+   "specialty": "endocrinology",
+   "practice": "Taylor Moreno and Wilson Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0009-P3",
+   "name": "Dr. Sarah Garcia",
+   "specialty": "oncology",
+   "practice": "Morrison Monroe and Figueroa Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 53.0,
+  "ldl": 207.0,
+  "triglycerides": 89.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 227.0,
+  "a1c": 9.8,
+  "ast": 16.0,
+  "alt": 19.0,
+  "ggt": 25.0,
+  "alk_phos": 53.0,
+  "bilirubin": 0.6,
+  "albumin": 4.3,
+  "creatinine": 1.2,
+  "egfr": 82.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.9,
+  "cdt": 0.8,
+  "nt_probnp": 216.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.8
+ }
+}

@@ -1,0 +1,263 @@
+{
+ "case_id": "C0561",
+ "seed": 906767229,
+ "app_date": "2025-05-02",
+ "design": {
+  "case_id": "C0561",
+  "seed": 906767229,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 52,
+  "sex": "M",
+  "face": 100000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:melanoma_in_situ_y0-2",
+    "key": "cancer",
+    "variant": "melanoma_in_situ_y0-2",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "melanoma_in_situ",
+     "years_since_tx": [
+      0,
+      2
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hepatitis_c:cured_recent",
+    "key": "hepatitis_c",
+    "variant": "cured_recent",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "svr": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.337,
+   "bmi": 31.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Robert",
+  "last_name": "Hancock",
+  "sex": "M",
+  "dob": "1973-01-17",
+  "age": 52,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "correctional officer",
+  "occupation_class": "3A",
+  "annual_income": 19000,
+  "net_worth": 63000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "UL",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 162.0,
+ "bp_systolic": 135,
+ "bp_diastolic": 90,
+ "pulse": 56,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2023-10-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_in_situ",
+    "years_since_tx": 0.3,
+    "stage": "0"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0561-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2010-07-15",
+   "status": "resolved",
+   "severity": "moderate",
+   "details": {
+    "cirrhosis": false,
+    "svr": true,
+    "years_since_tx": 0.8
+   },
+   "meds": [
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2010-09-22",
+     "stop": "2010-12-15",
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0561-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2023-11-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0561-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 73,
+   "age_at_death": 84,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0561-P1",
+   "name": "Dr. Angela Garza",
+   "specialty": "family medicine",
+   "practice": "Spencer LLC Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0561-P2",
+   "name": "Dr. Amy Forbes",
+   "specialty": "oncology",
+   "practice": "Wright Ltd Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0561-P3",
+   "name": "Dr. Angela Pennington",
+   "specialty": "gastroenterology",
+   "practice": "Johnson Davis and Curtis Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 300.0,
+  "hdl": 49.0,
+  "ldl": 237.0,
+  "triglycerides": 70.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 100.0,
+  "a1c": 5.2,
+  "ast": 35.0,
+  "alt": 12.0,
+  "ggt": 43.0,
+  "alk_phos": 73.0,
+  "bilirubin": 1.0,
+  "albumin": 4.3,
+  "creatinine": 1.1,
+  "egfr": 82.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.0,
+  "cdt": 1.5,
+  "nt_probnp": 23.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.7
+ }
+}

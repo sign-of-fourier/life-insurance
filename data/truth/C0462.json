@@ -1,0 +1,422 @@
+{
+ "case_id": "C0462",
+ "seed": 812432714,
+ "app_date": "2026-06-27",
+ "design": {
+  "case_id": "C0462",
+  "seed": 812432714,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 53,
+  "sex": "F",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "brca_lynch:no_surgery",
+    "key": "brca_lynch",
+    "variant": "no_surgery",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "substance_use_hard:oud_maint_ge2",
+    "key": "substance_use_hard",
+    "variant": "oud_maint_ge2",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones"
+  ],
+  "grey": "GRY-1",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "grey",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "specialist_letter",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CTR",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.679,
+   "bmi": 22.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Victoria",
+  "last_name": "Banks",
+  "sex": "F",
+  "dob": "1973-01-26",
+  "age": 53,
+  "address_state": "AL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "firefighter",
+  "occupation_class": "3A",
+  "annual_income": 29000,
+  "net_worth": 188000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [
+   "CTR",
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 64.0,
+ "weight_lb": 130.0,
+ "bp_systolic": 113,
+ "bp_diastolic": 90,
+ "pulse": 62,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1992-07-12",
+   "quit": "2005-07-21",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2019-12-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "prophylactic_surgery": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0462-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2018-03-28",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "substance": "opioids",
+    "maintenance_years": 6.4,
+    "maintenance": true
+   },
+   "meds": [
+    {
+     "drug": "methadone",
+     "dose": "10 mg",
+     "start": "2018-05-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0462-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2018-03-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true,
+    "surgery_years_ago": null
+   },
+   "meds": [
+    {
+     "drug": "mesalamine",
+     "dose": "1.2 g",
+     "start": "2018-06-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    },
+    {
+     "drug": "ustekinumab",
+     "dose": "45 mg",
+     "start": "2018-04-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0462-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2024-03-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 15.7,
+    "undetectable_months": 117,
+    "cd4": 1065,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "darunavir-cobicistat",
+     "dose": "800/150 mg",
+     "start": "2024-06-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0462-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2013-09-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2013-09-23",
+     "stop": "2013-09-28",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0462-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2026-01-22",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-07-07",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2019-02-11",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "New Zealand",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0462-P1",
+   "name": "Dr. Cheryl Mason",
+   "specialty": "family medicine",
+   "practice": "Knapp-Larson Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0462-P2",
+   "name": "Dr. Madison Jenkins",
+   "specialty": "oncology",
+   "practice": "Medina Collins and Manning Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0462-P3",
+   "name": "Dr. Kimberly Oconnor",
+   "specialty": "addiction medicine",
+   "practice": "Flowers LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0462-P4",
+   "name": "Dr. Joanna Williams",
+   "specialty": "gastroenterology",
+   "practice": "Small-Kirk Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0462-P5",
+   "name": "Dr. Ian Brock",
+   "specialty": "rheumatology",
+   "practice": "Hartman-Sanders Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 287.0,
+  "hdl": 65.0,
+  "ldl": 178.0,
+  "triglycerides": 220.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 83.0,
+  "a1c": 5.0,
+  "ast": 31.0,
+  "alt": 31.0,
+  "ggt": 30.0,
+  "alk_phos": 85.0,
+  "bilirubin": 0.6,
+  "albumin": 4.1,
+  "creatinine": 0.8,
+  "egfr": 110.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.9,
+  "cdt": 0.9,
+  "nt_probnp": 100.0,
+  "cotinine_urine": 1.0,
+  "hiv": 1.0,
+  "cocaine": 0.0
+ }
+}

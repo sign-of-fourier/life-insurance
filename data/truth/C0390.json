@@ -1,0 +1,290 @@
+{
+ "case_id": "C0390",
+ "seed": 889623317,
+ "app_date": "2025-01-26",
+ "design": {
+  "case_id": "C0390",
+  "seed": 889623317,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 39,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "alcohol_use_disorder:abst_2_5",
+    "key": "alcohol_use_disorder",
+    "variant": "abst_2_5",
+    "chapter": "ALC",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "moderate",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.749,
+   "bmi": 26.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Alicia",
+  "last_name": "Long",
+  "sex": "F",
+  "dob": "1986-01-31",
+  "age": 39,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "plumber",
+  "occupation_class": "2A",
+  "annual_income": 44000,
+  "net_worth": 228000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 65.0,
+ "weight_lb": 159.0,
+ "bp_systolic": 110,
+ "bp_diastolic": 88,
+ "pulse": 79,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2017-06-01",
+   "quit": "2018-07-06",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": true,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2014-04-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "adalimumab",
+     "dose": "40 mg inj",
+     "start": "2014-06-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0390-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "alcohol_use_disorder",
+   "label": "Alcohol use disorder (treated)",
+   "onset": "2014-03-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "abstinent_years": 4.4,
+    "treatment": "outpatient + AA",
+    "relapses": 0
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0390-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2014-03-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2014-03-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0390-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 79,
+   "age_at_death": 92,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2020-11-11",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Denmark",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0390-P1",
+   "name": "Dr. Laura Matthews",
+   "specialty": "family medicine",
+   "practice": "White Williams and Wallace Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0390-P2",
+   "name": "Dr. Dakota Webb",
+   "specialty": "rheumatology",
+   "practice": "Moreno Young and Torres Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0390-P3",
+   "name": "Dr. Shannon Miller",
+   "specialty": "addiction medicine",
+   "practice": "Anderson Ltd Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 287.0,
+  "hdl": 61.0,
+  "ldl": 210.0,
+  "triglycerides": 80.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 103.0,
+  "a1c": 5.4,
+  "ast": 28.0,
+  "alt": 26.0,
+  "ggt": 35.0,
+  "alk_phos": 87.0,
+  "bilirubin": 0.8,
+  "albumin": 3.8,
+  "creatinine": 1.0,
+  "egfr": 72.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.8,
+  "cdt": 1.0,
+  "nt_probnp": 50.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

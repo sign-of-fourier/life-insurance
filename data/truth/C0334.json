@@ -1,0 +1,287 @@
+{
+ "case_id": "C0334",
+ "seed": 665669490,
+ "app_date": "2025-07-21",
+ "design": {
+  "case_id": "C0334",
+  "seed": 665669490,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 33,
+  "sex": "F",
+  "face": 1000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "nm_lipids:lip_75",
+    "key": "nm_lipids",
+    "variant": "lip_75",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t1:age18-39_a1c0",
+    "key": "diabetes_t1",
+    "variant": "age18-39_a1c0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "kidney_stones"
+  ],
+  "grey": "GRY-7",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.925,
+   "bmi": 30.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Cheryl",
+  "last_name": "Smith",
+  "sex": "F",
+  "dob": "1993-01-09",
+  "age": 33,
+  "address_state": "AL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "real estate agent",
+  "occupation_class": "2A",
+  "annual_income": 36000,
+  "net_worth": 193000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 58.0,
+ "weight_lb": 145.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 67,
+ "pulse": 89,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2019-08-28",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 6.6,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 5.9,
+    "age_at_dx": 27,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2019-09-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin lispro",
+     "dose": "100 u/mL",
+     "start": "2019-11-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0334-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2011-10-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2011-10-23",
+     "stop": "2011-11-09",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0334-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2018-09-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2018-09-23",
+     "stop": "2018-11-12",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0334-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 69,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Harborview Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0334-P1",
+   "name": "Dr. Tamara Sanders",
+   "specialty": "family medicine",
+   "practice": "French Watson and Nguyen Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0334-P2",
+   "name": "Dr. John Molina",
+   "specialty": "endocrinology",
+   "practice": "Sampson Brooks and Williams Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 415.0,
+  "hdl": 71.0,
+  "ldl": 312.0,
+  "triglycerides": 158.0,
+  "tc_hdl_ratio": 5.8,
+  "glucose_fasting": 147.0,
+  "a1c": 6.6,
+  "ast": 15.0,
+  "alt": 20.0,
+  "ggt": 36.0,
+  "alk_phos": 108.0,
+  "bilirubin": 0.5,
+  "albumin": 4.5,
+  "creatinine": 0.8,
+  "egfr": 89.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.5,
+  "cdt": 1.1,
+  "nt_probnp": 83.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,295 @@
+{
+ "case_id": "C0146",
+ "seed": 496993965,
+ "app_date": "2026-03-07",
+ "design": {
+  "case_id": "C0146",
+  "seed": 496993965,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 75,
+  "sex": "F",
+  "face": 500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "valve:severe",
+    "key": "valve",
+    "variant": "severe",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "severity_grade": "severe"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_c:cured_recent",
+    "key": "hepatitis_c",
+    "variant": "cured_recent",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "svr": true
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.649,
+   "bmi": 21.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Schneider",
+  "sex": "F",
+  "dob": "1950-11-05",
+  "age": 75,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 61640,
+  "net_worth": 1541000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 110.0,
+ "bp_systolic": 131,
+ "bp_diastolic": 72,
+ "pulse": 58,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "valve",
+   "label": "Valvular disease / murmur",
+   "onset": "2010-09-06",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "kind": "mvp",
+    "severity_grade": "severe",
+    "repaired_years": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0146-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2010-09-06",
+   "status": "resolved",
+   "severity": "moderate",
+   "details": {
+    "cirrhosis": false,
+    "svr": true,
+    "years_since_tx": 0.7
+   },
+   "meds": [
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2010-09-30",
+     "stop": "2010-12-23",
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0146-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2013-03-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2013-03-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0146-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2012-12-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2013-01-25",
+     "stop": "2013-01-22",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0146-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 63,
+   "age_at_death": 84,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0146-P1",
+   "name": "Dr. Ashley Bonilla",
+   "specialty": "family medicine",
+   "practice": "Fisher-Miller Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0146-P2",
+   "name": "Dr. Deanna Taylor",
+   "specialty": "cardiology",
+   "practice": "Hall Perkins and Maldonado Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0146-P3",
+   "name": "Dr. Daniel Santos",
+   "specialty": "gastroenterology",
+   "practice": "Price-Robinson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 43.0,
+  "ldl": 204.0,
+  "triglycerides": 177.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 88.0,
+  "a1c": 5.1,
+  "ast": 31.0,
+  "alt": 14.0,
+  "ggt": 32.0,
+  "alk_phos": 105.0,
+  "bilirubin": 0.8,
+  "albumin": 4.2,
+  "creatinine": 1.2,
+  "egfr": 67.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.2,
+  "nt_probnp": 377.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

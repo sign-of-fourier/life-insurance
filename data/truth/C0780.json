@@ -1,0 +1,471 @@
+{
+ "case_id": "C0780",
+ "seed": 826768237,
+ "app_date": "2026-02-07",
+ "design": {
+  "case_id": "C0780",
+  "seed": 826768237,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 54,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "epilepsy:controlled_recent",
+    "key": "epilepsy",
+    "variant": "controlled_recent",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_mvr:major2",
+    "key": "nm_mvr",
+    "variant": "major2",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "diabetes_t1:age50-59_a1c9.0",
+    "key": "diabetes_t1",
+    "variant": "age50-59_a1c9.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 200,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      9.0,
+      9.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "neuropathy:idiopathic",
+    "key": "neuropathy",
+    "variant": "idiopathic",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.433,
+   "bmi": 25.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "James",
+  "last_name": "Chapman",
+  "sex": "M",
+  "dob": "1971-11-03",
+  "age": 54,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "correctional officer",
+  "occupation_class": "3A",
+  "annual_income": 115000,
+  "net_worth": 226000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 130.0,
+ "bp_systolic": 116,
+ "bp_diastolic": 88,
+ "pulse": 78,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1996-09-08",
+   "quit": "2011-10-07",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2019-08-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "seizures_per_year": null,
+    "seizure_free_years": 1.1
+   },
+   "meds": [
+    {
+     "drug": "oxcarbazepine",
+     "dose": "600 mg",
+     "start": "2019-11-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    },
+    {
+     "drug": "topiramate",
+     "dose": "25 mg",
+     "start": "2019-09-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0780-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2024-03-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": null,
+    "er_years_ago": 0.5,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2024-07-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0780-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2009-05-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 2.0
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0780-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2011-08-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 9.8,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 14.5,
+    "age_at_dx": 39,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2011-10-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin aspart",
+     "dose": "100 u/mL",
+     "start": "2011-08-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0780-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "neuropathy",
+   "label": "Peripheral neuropathy (idiopathic)",
+   "onset": "2017-04-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "duloxetine",
+     "dose": "30 mg",
+     "start": "2017-06-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "neuropathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0780-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2016-01-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2016-01-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0780-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 65,
+   "age_at_death": 79,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2021-09-16",
+   "code": "R02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-04-28",
+   "code": "R05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0780-P1",
+   "name": "Dr. Renee Tapia",
+   "specialty": "family medicine",
+   "practice": "Smith Smith and Taylor Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0780-P2",
+   "name": "Dr. Roberto Shields",
+   "specialty": "neurology",
+   "practice": "Maldonado Cruz and Ball Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0780-P3",
+   "name": "Dr. Dana Ramirez",
+   "specialty": "pulmonology",
+   "practice": "Warren-Norman Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0780-P4",
+   "name": "Dr. Kristin Davis",
+   "specialty": "endocrinology",
+   "practice": "Payne-Swanson Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 67.0,
+  "ldl": 173.0,
+  "triglycerides": 200.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 229.0,
+  "a1c": 9.9,
+  "ast": 28.0,
+  "alt": 20.0,
+  "ggt": 30.0,
+  "alk_phos": 87.0,
+  "bilirubin": 0.7,
+  "albumin": 4.6,
+  "creatinine": 0.8,
+  "egfr": 79.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.6,
+  "cdt": 1.3,
+  "nt_probnp": 70.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.8
+ }
+}

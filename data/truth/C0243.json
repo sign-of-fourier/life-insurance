@@ -1,0 +1,359 @@
+{
+ "case_id": "C0243",
+ "seed": 823346531,
+ "app_date": "2026-09-24",
+ "design": {
+  "case_id": "C0243",
+  "seed": 823346531,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 40,
+  "sex": "F",
+  "face": 100000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "eating_disorder:recovered",
+    "key": "eating_disorder",
+    "variant": "recovered",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recovered_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "cardiomyopathy:recovered",
+    "key": "cardiomyopathy",
+    "variant": "recovered",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": {
+      "ge": 50
+     },
+     "recovered_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.81,
+   "bmi": 30.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Lisa",
+  "last_name": "Lowe",
+  "sex": "F",
+  "dob": "1986-09-16",
+  "age": 40,
+  "address_state": "OH",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "correctional officer",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 141000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 58.0,
+ "weight_lb": 148.0,
+ "bp_systolic": 137,
+ "bp_diastolic": 82,
+ "pulse": 78,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2023-05-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "recovered_years": 9.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0243-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2022-02-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "ef": 52,
+    "recovered_years": 4.1,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "spironolactone",
+     "dose": "25 mg",
+     "start": "2022-05-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    },
+    {
+     "drug": "carvedilol",
+     "dose": "6.25 mg",
+     "start": "2022-05-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0243-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2016-08-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2016-08-29",
+     "stop": "2016-09-27",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2016-09-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0243-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2022-06-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2022-08-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2022-06-24",
+     "stop": "2022-07-14",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0243-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 57,
+   "living": false
+  },
+  {
+   "relation": "brother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 54,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 63,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-01-21",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "martial arts",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0243-P1",
+   "name": "Dr. Lauren Howell",
+   "specialty": "family medicine",
+   "practice": "Rivera and Sons Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0243-P2",
+   "name": "Dr. Tina Singleton",
+   "specialty": "psychiatry",
+   "practice": "David-Thomas Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0243-P3",
+   "name": "Dr. Alison Bray",
+   "specialty": "cardiology",
+   "practice": "Marsh Inc Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 300.0,
+  "hdl": 68.0,
+  "ldl": 209.0,
+  "triglycerides": 111.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 99.0,
+  "a1c": 4.8,
+  "ast": 27.0,
+  "alt": 41.0,
+  "ggt": 34.0,
+  "alk_phos": 64.0,
+  "bilirubin": 0.3,
+  "albumin": 4.3,
+  "creatinine": 0.8,
+  "egfr": 115.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.1,
+  "nt_probnp": 628.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

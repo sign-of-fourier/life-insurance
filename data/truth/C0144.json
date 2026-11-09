@@ -1,0 +1,399 @@
+{
+ "case_id": "C0144",
+ "seed": 9629099,
+ "app_date": "2026-01-23",
+ "design": {
+  "case_id": "C0144",
+  "seed": 9629099,
+  "target": "Table Tobacco 5-16",
+  "ladder": "tobacco",
+  "age": 66,
+  "sex": "M",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "pulmonary_embolism:unprovoked",
+    "key": "pulmonary_embolism",
+    "variant": "unprovoked",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "provoked": false
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "tbi:residual",
+    "key": "tbi",
+    "variant": "residual",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "residual": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cancer:prostate_le7_surgery_y1-3",
+    "key": "cancer",
+    "variant": "prostate_le7_surgery_y1-3",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 5,
+     "years": 3
+    },
+    "params": {
+     "type": "prostate_le7_surgery",
+     "years_since_tx": [
+      1,
+      3
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "epic_progress",
+   "athena_summary"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.678,
+   "bmi": 32.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "James",
+  "last_name": "Johnson",
+  "sex": "M",
+  "dob": "1960-07-05",
+  "age": 66,
+  "address_state": "AL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "attorney",
+  "occupation_class": "1A",
+  "annual_income": 294000,
+  "net_worth": 680000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 168.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 71,
+ "pulse": 58,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1/2 ppd",
+   "start": "2015-03-02",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2016-01-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "secukinumab",
+     "dose": "150 mg inj",
+     "start": "2016-05-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    },
+    {
+     "drug": "ustekinumab",
+     "dose": "45 mg",
+     "start": "2016-02-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0144-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2012-08-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": false,
+    "compliant": true,
+    "ahi": 74
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0144-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2015-01-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 11.0,
+    "recurrent": false,
+    "provoked": false
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "5 mg",
+     "start": "2015-05-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0144-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tbi",
+   "label": "Concussion / TBI",
+   "onset": "2019-03-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "residual": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0144-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2022-08-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "prostate_le7_surgery",
+    "years_since_tx": 2.6,
+    "gleason": 6,
+    "psa_undetectable": true,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0144-P5"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-06-30",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0144-P1",
+   "name": "Dr. Kristin James",
+   "specialty": "family medicine",
+   "practice": "Watts Inc Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0144-P2",
+   "name": "Dr. Victoria Booth",
+   "specialty": "rheumatology",
+   "practice": "Hart Ltd Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0144-P3",
+   "name": "Dr. Steven Hernandez",
+   "specialty": "pulmonology",
+   "practice": "Gonzalez LLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0144-P4",
+   "name": "Dr. Anthony Johnson",
+   "specialty": "neurology",
+   "practice": "Jones and Sons Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0144-P5",
+   "name": "Dr. Sara Stanley",
+   "specialty": "oncology",
+   "practice": "Williams Reyes and Herrera Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 55.0,
+  "ldl": 205.0,
+  "triglycerides": 155.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 97.0,
+  "a1c": 5.1,
+  "ast": 26.0,
+  "alt": 37.0,
+  "ggt": 43.0,
+  "alk_phos": 50.0,
+  "bilirubin": 1.0,
+  "albumin": 4.0,
+  "creatinine": 0.8,
+  "egfr": 61.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 16.0,
+  "cdt": 0.8,
+  "nt_probnp": 15.0,
+  "cotinine_urine": 634.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.05
+ }
+}

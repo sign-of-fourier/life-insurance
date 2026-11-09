@@ -1,0 +1,194 @@
+{
+ "case_id": "C0872",
+ "seed": 7913581,
+ "app_date": "2025-06-27",
+ "design": {
+  "case_id": "C0872",
+  "seed": 7913581,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 55,
+  "sex": "F",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_misrep:multi_misrep",
+    "key": "nm_misrep",
+    "variant": "multi_misrep",
+    "chapter": "GEN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   },
+   {
+    "id": "substance_use_hard:hard_gt10",
+    "key": "substance_use_hard",
+    "variant": "hard_gt10",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.657,
+   "bmi": 25.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_misrep": "multi_misrep"
+  }
+ },
+ "person": {
+  "first_name": "Caroline",
+  "last_name": "Shaw",
+  "sex": "F",
+  "dob": "1970-03-02",
+  "age": 55,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "HVAC technician",
+  "occupation_class": "3A",
+  "annual_income": 76000,
+  "net_worth": 464000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 68.0,
+ "weight_lb": 165.0,
+ "bp_systolic": 133,
+ "bp_diastolic": 90,
+ "pulse": 72,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2001-08-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "substance": "prescription opioids",
+    "years_since_last_use": 17.4,
+    "maintenance": false,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 76,
+   "age_at_death": 81,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-10-29",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0872-P1",
+   "name": "Dr. John Williams",
+   "specialty": "family medicine",
+   "practice": "Steele-Bennett Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 42.0,
+  "ldl": 222.0,
+  "triglycerides": 65.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 84.0,
+  "a1c": 5.6,
+  "ast": 25.0,
+  "alt": 18.0,
+  "ggt": 22.0,
+  "alk_phos": 104.0,
+  "bilirubin": 0.9,
+  "albumin": 4.2,
+  "creatinine": 0.9,
+  "egfr": 97.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.0,
+  "cdt": 1.1,
+  "nt_probnp": 77.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,474 @@
+{
+ "case_id": "C0341",
+ "seed": 206620315,
+ "app_date": "2026-10-05",
+ "design": {
+  "case_id": "C0341",
+  "seed": 206620315,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 22,
+  "sex": "F",
+  "face": 5000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "hepatitis_c:cured_recent",
+    "key": "hepatitis_c",
+    "variant": "cured_recent",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "svr": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "crohns:mild",
+    "key": "crohns",
+    "variant": "mild",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "arrhythmia_other:pacemaker",
+    "key": "arrhythmia_other",
+    "variant": "pacemaker",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "pacemaker"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "diabetes_t2:age18-39_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age18-39_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CIA",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.606,
+   "bmi": 20.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Raven",
+  "last_name": "Ferguson",
+  "sex": "F",
+  "dob": "2004-07-04",
+  "age": 22,
+  "address_state": "IA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "warehouse supervisor",
+  "occupation_class": "2A",
+  "annual_income": 275000,
+  "net_worth": 2198000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "UL",
+  "riders_requested": [
+   "ADB",
+   "CIA",
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 64.0,
+ "weight_lb": 120.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 88,
+ "pulse": 91,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2025-02-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0341-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2024-01-23",
+   "status": "resolved",
+   "severity": "moderate",
+   "details": {
+    "cirrhosis": false,
+    "svr": true,
+    "years_since_tx": 0.4
+   },
+   "meds": [
+    {
+     "drug": "glecaprevir-pibrentasvir",
+     "dose": "100/40 mg",
+     "start": "2024-03-04",
+     "stop": "2024-05-27",
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0341-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2022-08-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": false,
+    "surgery_years_ago": null
+   },
+   "meds": [
+    {
+     "drug": "budesonide",
+     "dose": "3 mg",
+     "start": "2022-12-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0341-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2022-07-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "pacemaker",
+    "ablated": false,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0341-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2022-06-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "paroxetine",
+     "dose": "10 mg",
+     "start": "2022-07-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0341-P5"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2034-10-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 4.0,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": -8,
+    "age_at_dx": 30,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2026-09-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0341-P6"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2021-08-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2021-09-16",
+     "stop": "2021-09-15",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0341-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-06-19",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-09-11",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Atlas Assurance",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0341-P1",
+   "name": "Dr. Connie Romero",
+   "specialty": "family medicine",
+   "practice": "Osborn Wells and Gonzales Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0341-P2",
+   "name": "Dr. Jessica Brown",
+   "specialty": "rheumatology",
+   "practice": "Martinez-Silva Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0341-P3",
+   "name": "Dr. Emily Anderson",
+   "specialty": "gastroenterology",
+   "practice": "Chandler-Buckley Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0341-P4",
+   "name": "Dr. Raven Melton",
+   "specialty": "cardiology",
+   "practice": "Rush-Yates Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0341-P5",
+   "name": "Dr. Debbie Walker",
+   "specialty": "psychiatry",
+   "practice": "Ruiz Kelly and Walker Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0341-P6",
+   "name": "Dr. Anthony Washington",
+   "specialty": "endocrinology",
+   "practice": "Green Peterson and Herring Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 72.0,
+  "ldl": 166.0,
+  "triglycerides": 215.0,
+  "tc_hdl_ratio": 3.9,
+  "glucose_fasting": 79.0,
+  "a1c": 4.2,
+  "ast": 29.0,
+  "alt": 36.0,
+  "ggt": 35.0,
+  "alk_phos": 107.0,
+  "bilirubin": 0.7,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 109.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.3,
+  "nt_probnp": 64.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,331 @@
+{
+ "case_id": "C0920",
+ "seed": 358724177,
+ "app_date": "2025-07-15",
+ "design": {
+  "case_id": "C0920",
+  "seed": 358724177,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 80,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "afib:single_episode",
+    "key": "afib",
+    "variant": "single_episode",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "type": "single",
+     "years_since": {
+      "ge": 1
+     },
+     "echo_normal": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_travel:tierB_long",
+    "key": "nm_travel",
+    "variant": "tierB_long",
+    "chapter": "TRV",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury",
+   "kidney_stones"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.779,
+   "bmi": 29.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Nicholas",
+  "last_name": "Massey",
+  "sex": "M",
+  "dob": "1945-12-06",
+  "age": 80,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "delivery driver",
+  "occupation_class": "2A",
+  "annual_income": 54000,
+  "net_worth": 385000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 10",
+  "riders_requested": [
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 67.0,
+ "weight_lb": 188.0,
+ "bp_systolic": 144,
+ "bp_diastolic": 82,
+ "pulse": 70,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1971-10-02",
+   "quit": "2021-03-15",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2017-06-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "single",
+    "echo_normal": true,
+    "chads_vasc": 3,
+    "structural": true,
+    "ablation_years": null,
+    "years_since": 8.1
+   },
+   "meds": [
+    {
+     "drug": "rivaroxaban",
+     "dose": "10 mg",
+     "start": "2017-06-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    },
+    {
+     "drug": "apixaban",
+     "dose": "2.5 mg",
+     "start": "2017-08-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0920-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2011-02-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2011-03-24",
+     "stop": "2011-03-13",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2011-03-26",
+     "stop": "2011-03-19",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0920-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2020-12-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2021-02-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0920-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "colon cancer",
+   "age_at_onset": 49,
+   "age_at_death": 52,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-05-19",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-02-13",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "martial arts",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Uruguay",
+   "weeks_per_year": 28.0,
+   "purpose": "business",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Harborview Life",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0920-P1",
+   "name": "Dr. Penny Spears",
+   "specialty": "family medicine",
+   "practice": "Tucker and Sons Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0920-P2",
+   "name": "Dr. Pamela Harrison",
+   "specialty": "cardiology",
+   "practice": "Day-Rodriguez Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 257.0,
+  "hdl": 70.0,
+  "ldl": 158.0,
+  "triglycerides": 142.0,
+  "tc_hdl_ratio": 3.7,
+  "glucose_fasting": 81.0,
+  "a1c": 4.8,
+  "ast": 21.0,
+  "alt": 32.0,
+  "ggt": 48.0,
+  "alk_phos": 49.0,
+  "bilirubin": 1.2,
+  "albumin": 4.7,
+  "creatinine": 1.2,
+  "egfr": 67.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.1,
+  "cdt": 1.4,
+  "nt_probnp": 307.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.2
+ }
+}

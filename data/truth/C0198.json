@@ -1,0 +1,236 @@
+{
+ "case_id": "C0198",
+ "seed": 620614617,
+ "app_date": "2026-07-23",
+ "design": {
+  "case_id": "C0198",
+  "seed": 620614617,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 45,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "cancer:melanoma_2_y5-10",
+    "key": "cancer",
+    "variant": "melanoma_2_y5-10",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 5,
+     "years": 3
+    },
+    "params": {
+     "type": "melanoma_2",
+     "years_since_tx": [
+      5,
+      10
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ],
+    [
+     "bp",
+     "Standard Plus"
+    ],
+    [
+     "build",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [],
+  "grey": "GRY-4",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:melanoma_2_y5-10"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.858,
+   "bmi": 30.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Juan",
+  "last_name": "Thomas",
+  "sex": "M",
+  "dob": "1981-11-18",
+  "age": 45,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "architect",
+  "occupation_class": "1A",
+  "annual_income": 43000,
+  "net_worth": 292000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 30",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 209.0,
+ "bp_systolic": 143,
+ "bp_diastolic": 87,
+ "pulse": 56,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2015-12-10",
+   "quit": "2025-03-09",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2018-09-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_2",
+    "years_since_tx": 6.7,
+    "stage": "II"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0198-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "colon cancer",
+   "age_at_onset": 51,
+   "age_at_death": 57,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-02-23",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-06-27",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-04-07",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0198-P1",
+   "name": "Dr. Jody Gonzalez",
+   "specialty": "family medicine",
+   "practice": "Williams Ltd Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0198-P2",
+   "name": "Dr. Brittany Kelly",
+   "specialty": "oncology",
+   "practice": "Richardson Group Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 273.0,
+  "hdl": 54.0,
+  "ldl": 202.0,
+  "triglycerides": 84.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 82.0,
+  "a1c": 5.5,
+  "ast": 26.0,
+  "alt": 26.0,
+  "ggt": 16.0,
+  "alk_phos": 84.0,
+  "bilirubin": 0.7,
+  "albumin": 4.1,
+  "creatinine": 0.8,
+  "egfr": 70.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.2,
+  "cdt": 0.9,
+  "nt_probnp": 59.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.2
+ }
+}

@@ -1,0 +1,397 @@
+{
+ "case_id": "C0784",
+ "seed": 779899571,
+ "app_date": "2025-04-29",
+ "design": {
+  "case_id": "C0784",
+  "seed": 779899571,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 80,
+  "sex": "F",
+  "face": 1500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "nm_build:over_25",
+    "key": "nm_build",
+    "variant": "over_25",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "ckd:egfr_30-44",
+    "key": "ckd",
+    "variant": "egfr_30-44",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": "30-44"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_travel:tierC_mid",
+    "key": "nm_travel",
+    "variant": "tierC_mid",
+    "chapter": "TRV",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CIA",
+   "OIR",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.394,
+   "bmi": 33.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Stephanie",
+  "last_name": "Gray",
+  "sex": "F",
+  "dob": "1945-04-16",
+  "age": 80,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 304680,
+  "net_worth": 7617000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "OIR",
+   "WMD"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 64.0,
+ "weight_lb": 196.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 66,
+ "pulse": 91,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2014-10-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": 3,
+    "er_years_ago": 1.9,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2015-02-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0784-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2011-06-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0784-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ckd",
+   "label": "Chronic kidney disease (eGFR)",
+   "onset": "2017-08-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 33
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0784-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2015-03-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2015-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0784-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2024-12-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2025-01-22",
+     "stop": "2025-01-04",
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2025-01-05",
+     "stop": "2024-12-27",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0784-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 77,
+   "age_at_death": 86,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Bangladesh",
+   "weeks_per_year": 8.0,
+   "purpose": "business",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0784-P1",
+   "name": "Dr. Zoe Wright",
+   "specialty": "family medicine",
+   "practice": "Richardson Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0784-P2",
+   "name": "Dr. Sean Gomez",
+   "specialty": "pulmonology",
+   "practice": "Stewart-Griffith Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0784-P3",
+   "name": "Dr. Tammie Fowler",
+   "specialty": "endocrinology",
+   "practice": "Delgado PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0784-P4",
+   "name": "Dr. Mathew Harris",
+   "specialty": "nephrology",
+   "practice": "Harrison Ltd Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 299.0,
+  "hdl": 63.0,
+  "ldl": 206.0,
+  "triglycerides": 150.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 101.0,
+  "a1c": 5.5,
+  "ast": 18.0,
+  "alt": 16.0,
+  "ggt": 22.0,
+  "alk_phos": 61.0,
+  "bilirubin": 0.9,
+  "albumin": 4.5,
+  "creatinine": 2.7,
+  "egfr": 33.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.9,
+  "cdt": 0.8,
+  "nt_probnp": 370.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

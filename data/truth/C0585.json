@@ -1,0 +1,458 @@
+{
+ "case_id": "C0585",
+ "seed": 61601499,
+ "app_date": "2025-09-21",
+ "design": {
+  "case_id": "C0585",
+  "seed": 61601499,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 53,
+  "sex": "F",
+  "face": 7500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "benign_tumor:hgd_polyp",
+    "key": "benign_tumor",
+    "variant": "hgd_polyp",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "high_grade_dysplasia": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cancer:hodgkin_1_2_y5-10",
+    "key": "cancer",
+    "variant": "hodgkin_1_2_y5-10",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "hodgkin_1_2",
+     "years_since_tx": [
+      5,
+      10
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "depression_anxiety:severe",
+    "key": "depression_anxiety",
+    "variant": "severe",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": {
+       "ge": 1
+      },
+      "ect": true,
+      "disability": true
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "cataracts",
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.838,
+   "bmi": 22.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Darlene",
+  "last_name": "Steele",
+  "sex": "F",
+  "dob": "1972-08-27",
+  "age": 53,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "graphic designer",
+  "occupation_class": "1A",
+  "annual_income": 596000,
+  "net_worth": 2703000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "UL",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 58.0,
+ "weight_lb": 106.0,
+ "bp_systolic": 110,
+ "bp_diastolic": 75,
+ "pulse": 88,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2020-07-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "high_grade_dysplasia": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0585-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2017-04-28",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 3.9,
+    "undetectable_months": 17,
+    "cd4": 977,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "bictegravir-emtricitabine-tenofovir",
+     "dose": "50/200/25 mg",
+     "start": "2017-05-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0585-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2014-11-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "hodgkin_1_2",
+    "years_since_tx": 9.8,
+    "stage": "II"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0585-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "1998-10-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 3,
+    "work_loss_months": 1,
+    "psychiatrist": false,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": true,
+    "years_since_dx": 26.9
+   },
+   "meds": [
+    {
+     "drug": "buspirone",
+     "dose": "10 mg",
+     "start": "1998-12-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    },
+    {
+     "drug": "aripiprazole",
+     "dose": "2 mg",
+     "start": "1999-02-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0585-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2014-09-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2014-10-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0585-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2014-08-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0585-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2011-07-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2011-08-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0585-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 65,
+   "age_at_death": 90,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-01-05",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-12-29",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Harborview Life",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0585-P1",
+   "name": "Dr. Jeffery Meza",
+   "specialty": "family medicine",
+   "practice": "Howard Becker and Spencer Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0585-P2",
+   "name": "Dr. Toni Martin",
+   "specialty": "oncology",
+   "practice": "Allen Ltd Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0585-P3",
+   "name": "Dr. Jason Perkins",
+   "specialty": "rheumatology",
+   "practice": "Stanley Mccarthy and Carrillo Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0585-P4",
+   "name": "Dr. Thomas Gray",
+   "specialty": "psychiatry",
+   "practice": "Taylor-Frank Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 300.0,
+  "hdl": 52.0,
+  "ldl": 218.0,
+  "triglycerides": 150.0,
+  "tc_hdl_ratio": 5.8,
+  "glucose_fasting": 81.0,
+  "a1c": 5.3,
+  "ast": 35.0,
+  "alt": 15.0,
+  "ggt": 33.0,
+  "alk_phos": 98.0,
+  "bilirubin": 0.9,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 84.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.3,
+  "nt_probnp": 40.0,
+  "cotinine_urine": 2.0,
+  "hiv": 1.0,
+  "cocaine": 0.0
+ }
+}

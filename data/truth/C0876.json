@@ -1,0 +1,333 @@
+{
+ "case_id": "C0876",
+ "seed": 662037504,
+ "app_date": "2025-03-19",
+ "design": {
+  "case_id": "C0876",
+  "seed": 662037504,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 39,
+  "sex": "F",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cad_nonobstructive:cac_100_399",
+    "key": "cad_nonobstructive",
+    "variant": "cac_100_399",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": [
+      100,
+      399
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "hernia_repaired",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "CTR",
+   "KPE",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.927,
+   "bmi": 23.7,
+   "foreign_country": "Norway",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Andrea",
+  "last_name": "Padilla",
+  "sex": "F",
+  "dob": "1985-10-12",
+  "age": 39,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "Norway",
+  "years_in_us": 1.9,
+  "visa_type": "H-1B",
+  "occupation": "marketing manager",
+  "occupation_class": "1A",
+  "annual_income": 53000,
+  "net_worth": 191000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR",
+   "KPE",
+   "OIR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 59.0,
+ "weight_lb": 118.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 67,
+ "pulse": 63,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2015-06-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stenosis_pct": 84,
+    "cac_score": 316
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0876-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2009-09-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": true,
+    "compliant": false,
+    "ahi": 49
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0876-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2012-02-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2012-04-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0876-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2021-06-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0876-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2016-07-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2016-07-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0876-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 67,
+   "age_at_death": 80,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Finland",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0876-P1",
+   "name": "Dr. Tammy Young",
+   "specialty": "family medicine",
+   "practice": "Miller-Griffin Clinic",
+   "aps_style": "foreign_translated",
+   "country": "Norway"
+  },
+  {
+   "provider_id": "C0876-P2",
+   "name": "Dr. Yolanda Thomas",
+   "specialty": "cardiology",
+   "practice": "Perez Roberts and Martin Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0876-P3",
+   "name": "Dr. Maria Lewis",
+   "specialty": "pulmonology",
+   "practice": "Thomas-Vincent Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 42.0,
+  "ldl": 206.0,
+  "triglycerides": 147.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 80.0,
+  "a1c": 5.3,
+  "ast": 21.0,
+  "alt": 22.0,
+  "ggt": 15.0,
+  "alk_phos": 54.0,
+  "bilirubin": 0.5,
+  "albumin": 4.6,
+  "creatinine": 1.1,
+  "egfr": 103.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 12.6,
+  "cdt": 1.1,
+  "nt_probnp": 71.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

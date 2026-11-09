@@ -1,0 +1,286 @@
+{
+ "case_id": "C0043",
+ "seed": 625273336,
+ "app_date": "2025-06-10",
+ "design": {
+  "case_id": "C0043",
+  "seed": 625273336,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 67,
+  "sex": "M",
+  "face": 100000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "arrhythmia_other:lbbb",
+    "key": "arrhythmia_other",
+    "variant": "lbbb",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "lbbb"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "chew",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.295,
+   "bmi": 26.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Christian",
+  "last_name": "Turner",
+  "sex": "M",
+  "dob": "1958-11-21",
+  "age": 67,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dental hygienist",
+  "occupation_class": "2A",
+  "annual_income": 67000,
+  "net_worth": 761000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 72.0,
+ "weight_lb": 195.0,
+ "bp_systolic": 115,
+ "bp_diastolic": 72,
+ "pulse": 88,
+ "tobacco": [
+  {
+   "product": "chew",
+   "status": "current",
+   "frequency": "several times/day",
+   "start": "2016-02-06",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2021-03-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "lbbb",
+    "ablated": false,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0043-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2016-09-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 16,
+    "colonoscopy_years_ago": 6.6
+   },
+   "meds": [
+    {
+     "drug": "budesonide",
+     "dose": "3 mg",
+     "start": "2016-12-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    },
+    {
+     "drug": "mesalamine",
+     "dose": "1.2 g",
+     "start": "2016-12-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0043-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2011-10-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2011-10-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    },
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2011-10-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0043-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0043-P1",
+   "name": "Dr. Steven Newman",
+   "specialty": "family medicine",
+   "practice": "Williams-Diaz Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0043-P2",
+   "name": "Dr. Tyrone Phillips",
+   "specialty": "cardiology",
+   "practice": "Shannon and Sons Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0043-P3",
+   "name": "Dr. Kelly Walker",
+   "specialty": "gastroenterology",
+   "practice": "Navarro Ballard and Rhodes Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 52.0,
+  "ldl": 201.0,
+  "triglycerides": 113.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 94.0,
+  "a1c": 5.3,
+  "ast": 17.0,
+  "alt": 12.0,
+  "ggt": 53.0,
+  "alk_phos": 63.0,
+  "bilirubin": 1.1,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 77.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.2,
+  "nt_probnp": 108.0,
+  "cotinine_urine": 1074.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.3
+ }
+}

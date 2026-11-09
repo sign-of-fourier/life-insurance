@@ -1,0 +1,362 @@
+{
+ "case_id": "C0437",
+ "seed": 831487799,
+ "app_date": "2026-01-29",
+ "design": {
+  "case_id": "C0437",
+  "seed": 831487799,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 62,
+  "sex": "M",
+  "face": 1000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "arrhythmia_other:svt",
+    "key": "arrhythmia_other",
+    "variant": "svt",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "svt"
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "brca_lynch:no_surgery",
+    "key": "brca_lynch",
+    "variant": "no_surgery",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.292,
+   "bmi": 27.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "James",
+  "last_name": "Brooks",
+  "sex": "M",
+  "dob": "1964-01-19",
+  "age": 62,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "accountant",
+  "occupation_class": "1A",
+  "annual_income": 342000,
+  "net_worth": 1624000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 63.0,
+ "weight_lb": 157.0,
+ "bp_systolic": 113,
+ "bp_diastolic": 73,
+ "pulse": 64,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2011-04-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "svt",
+    "ablated": false,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0437-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2024-01-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 22,
+    "colonoscopy_years_ago": 4.5
+   },
+   "meds": [
+    {
+     "drug": "mesalamine",
+     "dose": "1.2 g",
+     "start": "2024-03-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0437-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2018-05-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "tenofovir",
+     "dose": "25 mg",
+     "start": "2018-05-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0437-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2020-12-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "prophylactic_surgery": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0437-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2017-06-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2017-07-22",
+     "stop": "2017-07-17",
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2017-07-09",
+     "stop": "2017-07-18",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0437-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 66,
+   "age_at_death": 78,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0437-P1",
+   "name": "Dr. Bruce Peterson",
+   "specialty": "family medicine",
+   "practice": "Ramirez Henry and Harris Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0437-P2",
+   "name": "Dr. David Lee",
+   "specialty": "cardiology",
+   "practice": "Rios Santos and Schwartz Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0437-P3",
+   "name": "Dr. Michelle Hansen",
+   "specialty": "gastroenterology",
+   "practice": "Marshall-Cook Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0437-P4",
+   "name": "Dr. Angela Wright",
+   "specialty": "oncology",
+   "practice": "Arellano Ltd Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 51.0,
+  "ldl": 196.0,
+  "triglycerides": 164.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 80.0,
+  "a1c": 5.3,
+  "ast": 88.0,
+  "alt": 73.0,
+  "ggt": 10.0,
+  "alk_phos": 51.0,
+  "bilirubin": 0.3,
+  "albumin": 4.3,
+  "creatinine": 0.7,
+  "egfr": 88.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.5,
+  "nt_probnp": 64.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.1
+ }
+}

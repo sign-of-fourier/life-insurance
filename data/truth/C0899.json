@@ -1,0 +1,516 @@
+{
+ "case_id": "C0899",
+ "seed": 105432844,
+ "app_date": "2025-06-01",
+ "design": {
+  "case_id": "C0899",
+  "seed": 105432844,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 21,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t2:age18-39_a1c8.0-8.99",
+    "key": "diabetes_t2",
+    "variant": "age18-39_a1c8.0-8.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      8.0,
+      8.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne"
+  ],
+  "grey": "GRY-4",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "CTR",
+   "OIR",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.838,
+   "bmi": 32.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "William",
+  "last_name": "Thomas",
+  "sex": "M",
+  "dob": "2004-08-04",
+  "age": 21,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "roofer",
+  "occupation_class": "3A",
+  "annual_income": 29000,
+  "net_worth": 69000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "OIR",
+   "XCR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 197.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 72,
+ "pulse": 54,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2023-01-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "tenofovir",
+     "dose": "25 mg",
+     "start": "2023-02-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    },
+    {
+     "drug": "entecavir",
+     "dose": "0.5 mg",
+     "start": "2023-01-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0899-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2022-02-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true,
+    "surgery_years_ago": null
+   },
+   "meds": [
+    {
+     "drug": "budesonide",
+     "dose": "3 mg",
+     "start": "2022-04-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    },
+    {
+     "drug": "vedolizumab",
+     "dose": "300 mg IV",
+     "start": "2022-04-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0899-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2034-06-01",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 8.3,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": -9,
+    "age_at_dx": 30,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2025-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "semaglutide",
+     "dose": "0.5 mg",
+     "start": "2025-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0899-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2023-10-26",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 6,
+    "monotherapy": true
+   },
+   "meds": [
+    {
+     "drug": "paliperidone",
+     "dose": "3 mg",
+     "start": "2024-02-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    },
+    {
+     "drug": "risperidone",
+     "dose": "4 mg",
+     "start": "2024-02-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0899-P4"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2022-09-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": true,
+    "steroid_bursts_per_year": 2,
+    "er_years_ago": 0.1,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "prednisone",
+     "dose": "5 mg",
+     "start": "2023-01-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0899-P5"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2023-04-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2023-05-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2023-06-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0899-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 71,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-05-31",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-10-13",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Switzerland",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Atlas Assurance",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0899-P1",
+   "name": "Dr. Jeremy Fisher",
+   "specialty": "family medicine",
+   "practice": "Martinez-Matthews Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0899-P2",
+   "name": "Dr. Rachel Rivera",
+   "specialty": "gastroenterology",
+   "practice": "Ewing-Spencer Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0899-P3",
+   "name": "Dr. Brittany Porter",
+   "specialty": "endocrinology",
+   "practice": "Brady-Luna Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0899-P4",
+   "name": "Dr. Tammy Cruz",
+   "specialty": "psychiatry",
+   "practice": "Rodriguez Group Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0899-P5",
+   "name": "Dr. James Wise",
+   "specialty": "pulmonology",
+   "practice": "Rodriguez Mccormick and Jones Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 64.0,
+  "ldl": 194.0,
+  "triglycerides": 97.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 177.0,
+  "a1c": 8.1,
+  "ast": 66.0,
+  "alt": 101.0,
+  "ggt": 19.0,
+  "alk_phos": 58.0,
+  "bilirubin": 1.2,
+  "albumin": 4.7,
+  "creatinine": 1.1,
+  "egfr": 103.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.1,
+  "nt_probnp": 67.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

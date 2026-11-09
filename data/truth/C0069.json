@@ -1,0 +1,253 @@
+{
+ "case_id": "C0069",
+ "seed": 245267302,
+ "app_date": "2026-01-14",
+ "design": {
+  "case_id": "C0069",
+  "seed": 245267302,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 74,
+  "sex": "F",
+  "face": 1500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "multiple_sclerosis:progressive",
+    "key": "multiple_sclerosis",
+    "variant": "progressive",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "progressive": true,
+      "edss": {
+       "gt": 5
+      }
+     }
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": "GRY-5",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.824,
+   "bmi": 21.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Stephanie",
+  "last_name": "Hayes",
+  "sex": "F",
+  "dob": "1951-11-25",
+  "age": 74,
+  "address_state": "OH",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 145520,
+  "net_worth": 3638000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "WP"
+  ],
+  "existing_coverage": 500000,
+  "replacement": true,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 63.0,
+ "weight_lb": 120.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 74,
+ "pulse": 54,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "1995-06-14",
+   "quit": "2017-08-05",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2024-12-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "progressive": true,
+    "edss": 4.5
+   },
+   "meds": [
+    {
+     "drug": "fingolimod",
+     "dose": "0.5 mg",
+     "start": "2025-02-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0069-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2012-05-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2012-05-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0069-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 72,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-10-27",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-09-30",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0069-P1",
+   "name": "Dr. Amy Boyd",
+   "specialty": "family medicine",
+   "practice": "Pham-Clark Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0069-P2",
+   "name": "Dr. Derrick Ward",
+   "specialty": "neurology",
+   "practice": "Merritt-Duncan Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 44.0,
+  "ldl": 201.0,
+  "triglycerides": 185.0,
+  "tc_hdl_ratio": 6.4,
+  "glucose_fasting": 101.0,
+  "a1c": 5.2,
+  "ast": 37.0,
+  "alt": 37.0,
+  "ggt": 31.0,
+  "alk_phos": 41.0,
+  "bilirubin": 0.7,
+  "albumin": 4.9,
+  "creatinine": 1.1,
+  "egfr": 84.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.5,
+  "nt_probnp": 17.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

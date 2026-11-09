@@ -1,0 +1,337 @@
+{
+ "case_id": "C0355",
+ "seed": 376999362,
+ "app_date": "2025-03-12",
+ "design": {
+  "case_id": "C0355",
+  "seed": 376999362,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 64,
+  "sex": "M",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "hepatitis_c:cirrhosis",
+    "key": "hepatitis_c",
+    "variant": "cirrhosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cirrhosis": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "benign_tumor:hgd_polyp",
+    "key": "benign_tumor",
+    "variant": "hgd_polyp",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "high_grade_dysplasia": true
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "dental",
+   "erectile_dysfunction"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.617,
+   "bmi": 20.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Arthur",
+  "last_name": "Ewing",
+  "sex": "M",
+  "dob": "1961-04-16",
+  "age": 64,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "real estate agent",
+  "occupation_class": "2A",
+  "annual_income": 243000,
+  "net_worth": 701000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 68.0,
+ "weight_lb": 137.0,
+ "bp_systolic": 110,
+ "bp_diastolic": 79,
+ "pulse": 58,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1/2 ppd",
+   "start": "1979-02-27",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2016-09-11",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": true,
+    "svr": false,
+    "years_since_tx": 24.7
+   },
+   "meds": [
+    {
+     "drug": "ledipasvir-sofosbuvir",
+     "dose": "90/400 mg",
+     "start": "2016-11-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0355-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2023-11-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "high_grade_dysplasia": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0355-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2018-04-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2018-05-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0355-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2024-05-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2024-06-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2024-06-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0355-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2013-12-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "tadalafil",
+     "dose": "20 mg",
+     "start": "2013-12-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0355-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0355-P1",
+   "name": "Dr. Alexandria Jackson",
+   "specialty": "family medicine",
+   "practice": "Ruiz Bell and Herrera Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0355-P2",
+   "name": "Dr. Isaiah Lambert",
+   "specialty": "gastroenterology",
+   "practice": "Hinton Group Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0355-P3",
+   "name": "Dr. Leah Smith",
+   "specialty": "oncology",
+   "practice": "Harrison Vasquez and Howard Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 43.0,
+  "ldl": 224.0,
+  "triglycerides": 71.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 91.0,
+  "a1c": 5.1,
+  "ast": 58.0,
+  "alt": 92.0,
+  "ggt": 34.0,
+  "alk_phos": 70.0,
+  "bilirubin": 0.3,
+  "albumin": 4.1,
+  "creatinine": 0.7,
+  "egfr": 85.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.4,
+  "cdt": 1.3,
+  "nt_probnp": 17.0,
+  "cotinine_urine": 2884.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.9
+ }
+}

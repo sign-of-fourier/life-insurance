@@ -1,0 +1,304 @@
+{
+ "case_id": "C0953",
+ "seed": 657809034,
+ "app_date": "2025-02-11",
+ "design": {
+  "case_id": "C0953",
+  "seed": 657809034,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 59,
+  "sex": "F",
+  "face": 1500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cirrhosis:any",
+    "key": "cirrhosis",
+    "variant": "any",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea",
+   "dental",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CTR",
+   "KPE",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.818,
+   "bmi": 23.8,
+   "foreign_country": null,
+   "cessation_rx_quit": "2024-11-27"
+  }
+ },
+ "person": {
+  "first_name": "Amanda",
+  "last_name": "Wright",
+  "sex": "F",
+  "dob": "1966-04-06",
+  "age": 59,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "data scientist",
+  "occupation_class": "1A",
+  "annual_income": 122000,
+  "net_worth": 794000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "KPE",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 143.0,
+ "bp_systolic": 119,
+ "bp_diastolic": 87,
+ "pulse": 75,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1984-11-20",
+   "quit": "2024-11-27",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cirrhosis",
+   "label": "Cirrhosis",
+   "onset": "2012-10-25",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0953-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2012-03-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2012-05-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2012-05-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0953-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2015-02-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2015-03-08",
+     "stop": "2015-02-25",
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2015-03-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0953-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2013-05-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2013-05-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0953-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-08-21",
+   "code": "S99",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-05-25",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2016-03-03",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0953-P1",
+   "name": "Dr. Jason Murphy",
+   "specialty": "family medicine",
+   "practice": "Jacobson-Miller Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0953-P2",
+   "name": "Dr. Amber Singleton",
+   "specialty": "gastroenterology",
+   "practice": "Phillips-Haas Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 65.0,
+  "ldl": 199.0,
+  "triglycerides": 135.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 85.0,
+  "a1c": 5.4,
+  "ast": 35.0,
+  "alt": 23.0,
+  "ggt": 14.0,
+  "alk_phos": 105.0,
+  "bilirubin": 0.9,
+  "albumin": 3.8,
+  "creatinine": 1.0,
+  "egfr": 99.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 12.8,
+  "cdt": 1.1,
+  "nt_probnp": 88.0,
+  "cotinine_urine": 102.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

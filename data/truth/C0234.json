@@ -1,0 +1,280 @@
+{
+ "case_id": "C0234",
+ "seed": 969788751,
+ "app_date": "2025-03-19",
+ "design": {
+  "case_id": "C0234",
+  "seed": 969788751,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 48,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:melanoma_1_y0-2",
+    "key": "cancer",
+    "variant": "melanoma_1_y0-2",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 10,
+     "years": 3
+    },
+    "params": {
+     "type": "melanoma_1",
+     "years_since_tx": [
+      0,
+      2
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "lipids",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "gerd",
+   "bph"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:melanoma_1_y0-2"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "simple",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.884,
+   "bmi": 29.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Robert",
+  "last_name": "Jones",
+  "sex": "M",
+  "dob": "1977-07-18",
+  "age": 48,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "HVAC technician",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 144000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 65.0,
+ "weight_lb": 178.0,
+ "bp_systolic": 136,
+ "bp_diastolic": 79,
+ "pulse": 56,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2009-01-16",
+   "quit": "2020-12-20",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2023-12-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_1",
+    "years_since_tx": 1.0,
+    "stage": "I"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0234-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2021-06-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "40 mg",
+     "start": "2021-07-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0234-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2011-05-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "finasteride",
+     "dose": "5 mg",
+     "start": "2011-06-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0234-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 45,
+   "age_at_death": 55,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 77,
+   "age_at_death": 90,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2018-01-09",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Harborview Life",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0234-P1",
+   "name": "Dr. Jennifer Wilson",
+   "specialty": "family medicine",
+   "practice": "Escobar Little and Wilson Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0234-P2",
+   "name": "Dr. Mark Harper",
+   "specialty": "oncology",
+   "practice": "Yates-Warren Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 69.0,
+  "ldl": 205.0,
+  "triglycerides": 110.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 104.0,
+  "a1c": 5.4,
+  "ast": 27.0,
+  "alt": 18.0,
+  "ggt": 16.0,
+  "alk_phos": 56.0,
+  "bilirubin": 0.8,
+  "albumin": 4.9,
+  "creatinine": 1.1,
+  "egfr": 107.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.9,
+  "cdt": 1.5,
+  "nt_probnp": 28.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

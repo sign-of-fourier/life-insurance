@@ -1,0 +1,333 @@
+{
+ "case_id": "C0715",
+ "seed": 11135007,
+ "app_date": "2025-06-17",
+ "design": {
+  "case_id": "C0715",
+  "seed": 11135007,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 37,
+  "sex": "M",
+  "face": 5000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t1:age18-39_a1c7.0",
+    "key": "diabetes_t1",
+    "variant": "age18-39_a1c7.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      7.0,
+      7.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "uti"
+  ],
+  "grey": "GRY-8",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.773,
+   "bmi": 23.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Christopher",
+  "last_name": "Newton",
+  "sex": "M",
+  "dob": "1988-10-29",
+  "age": 37,
+  "address_state": "OH",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "electrician",
+  "occupation_class": "3A",
+  "annual_income": 215000,
+  "net_worth": 1456000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "UL",
+  "riders_requested": [
+   "KPE",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 67.0,
+ "weight_lb": 149.0,
+ "bp_systolic": 136,
+ "bp_diastolic": 79,
+ "pulse": 63,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2014-02-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "paroxetine",
+     "dose": "20 mg",
+     "start": "2014-05-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0715-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2012-01-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 7.7,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 13.4,
+    "age_at_dx": 23,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2012-03-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin aspart",
+     "dose": "100 u/mL",
+     "start": "2012-03-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0715-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2012-11-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2012-12-06",
+     "stop": "2013-01-18",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0715-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2014-07-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2014-07-30",
+     "stop": "2014-07-28",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0715-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 65,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Harborview Life",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0715-P1",
+   "name": "Dr. Alexandra Coleman",
+   "specialty": "family medicine",
+   "practice": "Sims Lynch and White Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0715-P2",
+   "name": "Dr. Tammy Green",
+   "specialty": "psychiatry",
+   "practice": "Salinas Shah and Chen Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0715-P3",
+   "name": "Dr. Mary Drake",
+   "specialty": "endocrinology",
+   "practice": "Blake Ltd Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 58.0,
+  "ldl": 212.0,
+  "triglycerides": 64.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 185.0,
+  "a1c": 7.9,
+  "ast": 32.0,
+  "alt": 35.0,
+  "ggt": 30.0,
+  "alk_phos": 68.0,
+  "bilirubin": 0.8,
+  "albumin": 4.1,
+  "creatinine": 0.7,
+  "egfr": 114.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.9,
+  "cdt": 0.9,
+  "nt_probnp": 49.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

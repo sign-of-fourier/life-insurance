@@ -1,0 +1,312 @@
+{
+ "case_id": "C0615",
+ "seed": 338618674,
+ "app_date": "2025-03-24",
+ "design": {
+  "case_id": "C0615",
+  "seed": 338618674,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 71,
+  "sex": "M",
+  "face": 1000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "neuropathy:idiopathic",
+    "key": "neuropathy",
+    "variant": "idiopathic",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_c:cured_recent",
+    "key": "hepatitis_c",
+    "variant": "cured_recent",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "svr": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "CIA",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.733,
+   "bmi": 32.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Billy",
+  "last_name": "Kelly",
+  "sex": "M",
+  "dob": "1953-12-16",
+  "age": 71,
+  "address_state": "AZ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 109160,
+  "net_worth": 2729000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 71.0,
+ "weight_lb": 233.0,
+ "bp_systolic": 141,
+ "bp_diastolic": 92,
+ "pulse": 82,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2005-12-19",
+   "quit": "2022-07-25",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "neuropathy",
+   "label": "Peripheral neuropathy (idiopathic)",
+   "onset": "2018-10-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "pregabalin",
+     "dose": "150 mg",
+     "start": "2019-02-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "neuropathy"
+    },
+    {
+     "drug": "gabapentin",
+     "dose": "600 mg",
+     "start": "2019-01-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "neuropathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0615-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2009-10-30",
+   "status": "resolved",
+   "severity": "moderate",
+   "details": {
+    "cirrhosis": false,
+    "svr": true,
+    "years_since_tx": 0.6
+   },
+   "meds": [
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2010-02-06",
+     "stop": "2010-05-01",
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0615-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2010-03-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2010-05-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0615-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 77,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-09-23",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0615-P1",
+   "name": "Dr. Hannah Cummings",
+   "specialty": "family medicine",
+   "practice": "Moore-Gonzalez Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0615-P2",
+   "name": "Dr. Jacob Park",
+   "specialty": "neurology",
+   "practice": "Torres Harris and Palmer Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0615-P3",
+   "name": "Dr. Sandra Mcdowell",
+   "specialty": "gastroenterology",
+   "practice": "Porter Sheppard and Silva Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 290.0,
+  "hdl": 57.0,
+  "ldl": 202.0,
+  "triglycerides": 152.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 91.0,
+  "a1c": 5.4,
+  "ast": 30.0,
+  "alt": 18.0,
+  "ggt": 28.0,
+  "alk_phos": 81.0,
+  "bilirubin": 1.0,
+  "albumin": 4.4,
+  "creatinine": 0.7,
+  "egfr": 60.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.4,
+  "cdt": 1.0,
+  "nt_probnp": 44.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

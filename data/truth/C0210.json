@@ -1,0 +1,452 @@
+{
+ "case_id": "C0210",
+ "seed": 936060273,
+ "app_date": "2025-09-29",
+ "design": {
+  "case_id": "C0210",
+  "seed": 936060273,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 33,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "nm_marijuana:mj_daily",
+    "key": "nm_marijuana",
+    "variant": "mj_daily",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "pad_aaa:aaa_small",
+    "key": "pad_aaa",
+    "variant": "aaa_small",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "size_cm": {
+      "lt": 4.0
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "eating_disorder:recovered",
+    "key": "eating_disorder",
+    "variant": "recovered",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recovered_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "arrhythmia_other:wpw",
+    "key": "arrhythmia_other",
+    "variant": "wpw",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "wpw"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "afib:paroxysmal",
+    "key": "afib",
+    "variant": "paroxysmal",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "paroxysmal",
+     "echo_normal": true,
+     "chads_vasc": {
+      "le": 1
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "substance_use_hard:oud_maint_ge2",
+    "key": "substance_use_hard",
+    "variant": "oud_maint_ge2",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.306,
+   "bmi": 25.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Dean",
+  "last_name": "Wu",
+  "sex": "M",
+  "dob": "1992-04-02",
+  "age": 33,
+  "address_state": "TX",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "physician",
+  "occupation_class": "1A",
+  "annual_income": 217000,
+  "net_worth": 412000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 30",
+  "riders_requested": [
+   "ADB",
+   "OIR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 71.0,
+ "weight_lb": 185.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 74,
+ "pulse": 81,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2019-09-05",
+   "quit": "2023-04-30",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 21,
+   "form": "vaped",
+   "disclosure": "honest"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2011-02-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "aaa",
+    "smoker": false,
+    "size_cm": 3.5,
+    "repaired_months": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0210-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2024-07-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "recovered_years": 7.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0210-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2011-02-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "methotrexate",
+     "dose": "2.5 mg",
+     "start": "2011-03-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    },
+    {
+     "drug": "secukinumab",
+     "dose": "150 mg inj",
+     "start": "2011-05-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0210-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2011-02-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "wpw",
+    "ablated": false,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0210-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2018-12-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "paroxysmal",
+    "echo_normal": true,
+    "chads_vasc": 1,
+    "structural": false,
+    "ablation_years": 0.2,
+    "years_since": 6.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0210-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2017-10-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "substance": "opioids",
+    "maintenance_years": 3.4,
+    "maintenance": true
+   },
+   "meds": [
+    {
+     "drug": "buprenorphine-naloxone",
+     "dose": "8/2 mg",
+     "start": "2017-11-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0210-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 62,
+   "age_at_death": 87,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0210-P1",
+   "name": "Dr. Donna Williams",
+   "specialty": "family medicine",
+   "practice": "Miller-Johnson Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0210-P2",
+   "name": "Dr. Dylan Carey",
+   "specialty": "cardiology",
+   "practice": "Gibson Hunter and Black Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0210-P3",
+   "name": "Dr. Taylor Walker",
+   "specialty": "psychiatry",
+   "practice": "Suarez-Oneill Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0210-P4",
+   "name": "Dr. Ashley Burch",
+   "specialty": "rheumatology",
+   "practice": "Fisher Thompson and Evans Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0210-P5",
+   "name": "Dr. Ryan Krueger",
+   "specialty": "addiction medicine",
+   "practice": "Dean Group Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 65.0,
+  "ldl": 178.0,
+  "triglycerides": 200.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 102.0,
+  "a1c": 5.4,
+  "ast": 25.0,
+  "alt": 20.0,
+  "ggt": 53.0,
+  "alk_phos": 95.0,
+  "bilirubin": 0.4,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 102.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.5,
+  "cdt": 0.9,
+  "nt_probnp": 34.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

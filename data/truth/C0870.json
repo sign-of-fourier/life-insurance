@@ -1,0 +1,252 @@
+{
+ "case_id": "C0870",
+ "seed": 428730300,
+ "app_date": "2026-03-17",
+ "design": {
+  "case_id": "C0870",
+  "seed": 428730300,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 49,
+  "sex": "F",
+  "face": 100000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "substance_use_hard:hard_gt10",
+    "key": "substance_use_hard",
+    "variant": "hard_gt10",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "bp",
+     "Standard Plus"
+    ],
+    [
+     "build",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "simple",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.882,
+   "bmi": 30.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Stacie",
+  "last_name": "Cuevas",
+  "sex": "F",
+  "dob": "1976-10-14",
+  "age": 49,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "graphic designer",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 57000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 30",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 58.0,
+ "weight_lb": 144.0,
+ "bp_systolic": 142,
+ "bp_diastolic": 90,
+ "pulse": 71,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2016-10-23",
+   "quit": "2021-10-09",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "1997-05-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "substance": "prescription opioids",
+    "years_since_last_use": 15.6,
+    "maintenance": false
+   },
+   "meds": [
+    {
+     "drug": "methadone",
+     "dose": "10 mg",
+     "start": "1997-06-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0870-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2012-03-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2012-04-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0870-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 52,
+   "age_at_death": 54,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-05-12",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0870-P1",
+   "name": "Dr. Destiny Leach",
+   "specialty": "family medicine",
+   "practice": "Gordon PLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0870-P2",
+   "name": "Dr. Brandon Durham",
+   "specialty": "addiction medicine",
+   "practice": "Chen-Williams Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 56.0,
+  "ldl": 202.0,
+  "triglycerides": 106.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 99.0,
+  "a1c": 5.5,
+  "ast": 36.0,
+  "alt": 35.0,
+  "ggt": 25.0,
+  "alk_phos": 51.0,
+  "bilirubin": 0.9,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 111.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.6,
+  "cdt": 0.8,
+  "nt_probnp": 85.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

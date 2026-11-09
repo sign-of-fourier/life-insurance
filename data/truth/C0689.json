@@ -1,0 +1,345 @@
+{
+ "case_id": "C0689",
+ "seed": 955755051,
+ "app_date": "2025-10-17",
+ "design": {
+  "case_id": "C0689",
+  "seed": 955755051,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 80,
+  "sex": "F",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cardiomyopathy:recovered",
+    "key": "cardiomyopathy",
+    "variant": "recovered",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": {
+      "ge": 50
+     },
+     "recovered_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea",
+   "uti",
+   "hernia_repaired",
+   "hypothyroidism_simple"
+  ],
+  "grey": "GRY-3",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.917,
+   "bmi": 23.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tracy",
+  "last_name": "Patterson",
+  "sex": "F",
+  "dob": "1945-09-08",
+  "age": 80,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 130800,
+  "net_worth": 3270000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 64.0,
+ "weight_lb": 135.0,
+ "bp_systolic": 119,
+ "bp_diastolic": 68,
+ "pulse": 69,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1971-12-15",
+   "quit": "2015-12-25",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2021-08-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "ef": 53,
+    "recovered_years": 4.8,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "spironolactone",
+     "dose": "50 mg",
+     "start": "2021-09-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    },
+    {
+     "drug": "empagliflozin",
+     "dose": "25 mg",
+     "start": "2021-08-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0689-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2020-04-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2020-04-19",
+     "stop": "2020-05-01",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0689-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2016-07-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2016-07-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0689-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2021-06-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0689-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2013-02-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2013-03-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0689-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2022-12-14",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "United Kingdom",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0689-P1",
+   "name": "Dr. Melissa Mitchell",
+   "specialty": "family medicine",
+   "practice": "Frederick LLC Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0689-P2",
+   "name": "Dr. David Ortiz",
+   "specialty": "cardiology",
+   "practice": "Farrell Miller and Adams Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 41.0,
+  "ldl": 198.0,
+  "triglycerides": 192.0,
+  "tc_hdl_ratio": 6.8,
+  "glucose_fasting": 97.0,
+  "a1c": 5.4,
+  "ast": 35.0,
+  "alt": 33.0,
+  "ggt": 49.0,
+  "alk_phos": 115.0,
+  "bilirubin": 0.9,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 73.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 12.7,
+  "cdt": 1.2,
+  "nt_probnp": 771.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

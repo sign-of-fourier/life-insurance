@@ -1,0 +1,283 @@
+{
+ "case_id": "C0713",
+ "seed": 371407729,
+ "app_date": "2025-12-16",
+ "design": {
+  "case_id": "C0713",
+  "seed": 371407729,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 34,
+  "sex": "M",
+  "face": 5000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "eating_disorder:recent",
+    "key": "eating_disorder",
+    "variant": "recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "polycystic_kidney:normal_egfr",
+    "key": "polycystic_kidney",
+    "variant": "normal_egfr",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": {
+      "ge": 60
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current_heavy",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.946,
+   "bmi": 30.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Trevor",
+  "last_name": "Rogers",
+  "sex": "M",
+  "dob": "1991-08-13",
+  "age": 34,
+  "address_state": "MN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "police officer",
+  "occupation_class": "3A",
+  "annual_income": 176000,
+  "net_worth": 1332000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 208.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 73,
+ "pulse": 72,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "2 ppd",
+   "start": "2018-08-28",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2019-05-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "recovered_years": 0.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0713-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2021-08-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 110
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0713-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2016-09-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2016-11-05",
+     "stop": "2016-11-06",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0713-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-10-29",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-03-14",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-08-26",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Northstar Life",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0713-P1",
+   "name": "Dr. Rachel Kelley",
+   "specialty": "family medicine",
+   "practice": "Harper LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0713-P2",
+   "name": "Dr. Cindy Rosales",
+   "specialty": "psychiatry",
+   "practice": "Davenport Fitzpatrick and Boyer Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0713-P3",
+   "name": "Dr. Tracy Copeland",
+   "specialty": "nephrology",
+   "practice": "Hunter and Sons Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 298.0,
+  "hdl": 62.0,
+  "ldl": 198.0,
+  "triglycerides": 190.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 79.0,
+  "a1c": 5.2,
+  "ast": 17.0,
+  "alt": 33.0,
+  "ggt": 42.0,
+  "alk_phos": 102.0,
+  "bilirubin": 0.4,
+  "albumin": 4.4,
+  "creatinine": 1.0,
+  "egfr": 88.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.5,
+  "nt_probnp": 88.0,
+  "cotinine_urine": 2265.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

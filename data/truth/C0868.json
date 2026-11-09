@@ -1,0 +1,452 @@
+{
+ "case_id": "C0868",
+ "seed": 939946353,
+ "app_date": "2025-09-27",
+ "design": {
+  "case_id": "C0868",
+  "seed": 939946353,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 32,
+  "sex": "M",
+  "face": 7500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "multiple_sclerosis:mild",
+    "key": "multiple_sclerosis",
+    "variant": "mild",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "afib:paroxysmal",
+    "key": "afib",
+    "variant": "paroxysmal",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "paroxysmal",
+     "echo_normal": true,
+     "chads_vasc": {
+      "le": 1
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "ADB",
+   "KPE",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.708,
+   "bmi": 26.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "David",
+  "last_name": "Jones",
+  "sex": "M",
+  "dob": "1993-04-20",
+  "age": 32,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dentist",
+  "occupation_class": "1A",
+  "annual_income": 353000,
+  "net_worth": 3790000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "KPE",
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "business partner"
+ },
+ "height_in": 63.0,
+ "weight_lb": 151.0,
+ "bp_systolic": 116,
+ "bp_diastolic": 68,
+ "pulse": 84,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2010-02-27",
+   "quit": "2021-01-11",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2022-05-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 15,
+    "colonoscopy_years_ago": 9.3
+   },
+   "meds": [
+    {
+     "drug": "vedolizumab",
+     "dose": "300 mg IV",
+     "start": "2022-06-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0868-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2017-12-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "progressive": false,
+    "edss": 2.0
+   },
+   "meds": [
+    {
+     "drug": "natalizumab",
+     "dose": "300 mg IV",
+     "start": "2018-03-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    },
+    {
+     "drug": "dimethyl fumarate",
+     "dose": "240 mg",
+     "start": "2018-03-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0868-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2012-03-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "paroxysmal",
+    "echo_normal": true,
+    "chads_vasc": 1,
+    "structural": false,
+    "ablation_years": null,
+    "years_since": 13.5
+   },
+   "meds": [
+    {
+     "drug": "warfarin",
+     "dose": "2 mg",
+     "start": "2012-07-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    },
+    {
+     "drug": "apixaban",
+     "dose": "2.5 mg",
+     "start": "2012-04-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0868-P4"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2019-01-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": false,
+    "compliant": false,
+    "ahi": 72,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2019-07-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2019-09-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0868-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2024-10-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2024-12-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0868-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 76,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-05-16",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Singapore",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Harborview Life",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0868-P1",
+   "name": "Dr. Alyssa Martinez",
+   "specialty": "family medicine",
+   "practice": "Walker-Sanchez Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0868-P2",
+   "name": "Dr. Jesus Garcia",
+   "specialty": "gastroenterology",
+   "practice": "Ward and Sons Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0868-P3",
+   "name": "Dr. Angela Paul",
+   "specialty": "neurology",
+   "practice": "Harris-Alvarez Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0868-P4",
+   "name": "Dr. Brandon Scott",
+   "specialty": "cardiology",
+   "practice": "Garza Vargas and Morales Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 68.0,
+  "ldl": 208.0,
+  "triglycerides": 73.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 97.0,
+  "a1c": 4.8,
+  "ast": 22.0,
+  "alt": 27.0,
+  "ggt": 44.0,
+  "alk_phos": 45.0,
+  "bilirubin": 0.9,
+  "albumin": 4.8,
+  "creatinine": 0.7,
+  "egfr": 70.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.1,
+  "nt_probnp": 23.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

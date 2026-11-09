@@ -1,0 +1,590 @@
+{
+ "case_id": "C0658",
+ "seed": 840416770,
+ "app_date": "2026-04-13",
+ "design": {
+  "case_id": "C0658",
+  "seed": 840416770,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 44,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "pad_aaa:aaa_repaired",
+    "key": "pad_aaa",
+    "variant": "aaa_repaired",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "repaired_months": {
+      "ge": 6
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "barretts:lgd",
+    "key": "barretts",
+    "variant": "lgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "low"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_mvr:dui_1_2y",
+    "key": "nm_mvr",
+    "variant": "dui_1_2y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "back_pain:opioid_benzo",
+    "key": "back_pain",
+    "variant": "opioid_benzo",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true,
+     "benzo": true
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "suicide_attempt:old",
+    "key": "suicide_attempt",
+    "variant": "old",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "lupus:systemic",
+    "key": "lupus",
+    "variant": "systemic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "systemic"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cardiomyopathy:recovered",
+    "key": "cardiomyopathy",
+    "variant": "recovered",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": {
+      "ge": 50
+     },
+     "recovered_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "KPE",
+   "OIR",
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.423,
+   "bmi": 24.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jocelyn",
+  "last_name": "Rodriguez",
+  "sex": "F",
+  "dob": "1982-07-23",
+  "age": 44,
+  "address_state": "UT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "financial analyst",
+  "occupation_class": "1A",
+  "annual_income": 236000,
+  "net_worth": 997000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 30",
+  "riders_requested": [
+   "KPE",
+   "OIR",
+   "ROP-T"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 58.0,
+ "weight_lb": 119.0,
+ "bp_systolic": 115,
+ "bp_diastolic": 75,
+ "pulse": 69,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2008-08-26",
+   "quit": "2024-03-07",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2013-04-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "aaa",
+    "smoker": false,
+    "size_cm": 4.3,
+    "repaired_months": 40
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2010-09-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "low"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2014-01-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 20,
+    "colonoscopy_years_ago": 8.9
+   },
+   "meds": [
+    {
+     "drug": "vedolizumab",
+     "dose": "300 mg IV",
+     "start": "2014-03-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    },
+    {
+     "drug": "azathioprine",
+     "dose": "50 mg",
+     "start": "2014-05-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2010-03-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": true
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2010-05-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    },
+    {
+     "drug": "oxycodone",
+     "dose": "5 mg",
+     "start": "2010-07-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P1"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2019-04-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [
+    {
+     "drug": "cabergoline",
+     "dose": "0.5 mg",
+     "start": "2019-05-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2006-03-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 20.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P5"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2022-11-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "organ_involvement": false,
+    "kind": "systemic"
+   },
+   "meds": [
+    {
+     "drug": "prednisone",
+     "dose": "5 mg",
+     "start": "2023-03-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P6"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2011-10-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "ef": 53,
+    "recovered_years": 9.3,
+    "hcm": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2014-12-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2015-02-23",
+     "stop": "2015-02-24",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0658-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-02-20",
+   "code": "D03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Atlas Assurance",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0658-P1",
+   "name": "Dr. Amy Brown",
+   "specialty": "family medicine",
+   "practice": "Hardy Cobb and Brown Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0658-P2",
+   "name": "Dr. Janet Hunt",
+   "specialty": "cardiology",
+   "practice": "Andersen-Patterson Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0658-P3",
+   "name": "Dr. Tyler White",
+   "specialty": "gastroenterology",
+   "practice": "Cannon Group Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0658-P4",
+   "name": "Dr. Harold Parsons",
+   "specialty": "endocrinology",
+   "practice": "Jackson Ltd Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0658-P5",
+   "name": "Dr. Teresa Jimenez",
+   "specialty": "psychiatry",
+   "practice": "Harrington Flores and Johnson Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0658-P6",
+   "name": "Dr. Mikayla Mueller",
+   "specialty": "rheumatology",
+   "practice": "Peterson-Livingston Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 69.0,
+  "ldl": 182.0,
+  "triglycerides": 203.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 85.0,
+  "a1c": 4.9,
+  "ast": 27.0,
+  "alt": 25.0,
+  "ggt": 55.0,
+  "alk_phos": 76.0,
+  "bilirubin": 0.5,
+  "albumin": 4.0,
+  "creatinine": 0.9,
+  "egfr": 94.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.3,
+  "cdt": 1.1,
+  "nt_probnp": 202.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

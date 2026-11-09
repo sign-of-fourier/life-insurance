@@ -1,0 +1,237 @@
+{
+ "case_id": "C0306",
+ "seed": 93201212,
+ "app_date": "2026-09-10",
+ "design": {
+  "case_id": "C0306",
+  "seed": 93201212,
+  "target": "Preferred Tobacco",
+  "ladder": "tobacco",
+  "age": 20,
+  "sex": "M",
+  "face": 7500000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "sleep_apnea:treated",
+    "key": "sleep_apnea",
+    "variant": "treated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "treated": true,
+     "compliant": true
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "nrt",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.352,
+   "bmi": 29.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Michael",
+  "last_name": "Howell",
+  "sex": "M",
+  "dob": "2006-04-25",
+  "age": 20,
+  "address_state": "AZ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "correctional officer",
+  "occupation_class": "3A",
+  "annual_income": 710000,
+  "net_worth": 762000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 30",
+  "riders_requested": [
+   "ADB",
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 172.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 90,
+ "pulse": 62,
+ "tobacco": [
+  {
+   "product": "nicotine_gum_patch",
+   "status": "current",
+   "frequency": "daily",
+   "start": "2018-05-03",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2024-11-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "treated": true,
+    "compliant": true,
+    "ahi": 49
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0306-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2023-11-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0306-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 57,
+   "age_at_death": 58,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-11-04",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-03-17",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-01-01",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0306-P1",
+   "name": "Dr. Katherine Thomas",
+   "specialty": "family medicine",
+   "practice": "Abbott Inc Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0306-P2",
+   "name": "Dr. Barry Mitchell",
+   "specialty": "pulmonology",
+   "practice": "Sullivan Harrell and Cummings Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 221.0,
+  "hdl": 41.0,
+  "ldl": 143.0,
+  "triglycerides": 181.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 78.0,
+  "a1c": 5.2,
+  "ast": 22.0,
+  "alt": 29.0,
+  "ggt": 55.0,
+  "alk_phos": 91.0,
+  "bilirubin": 0.6,
+  "albumin": 4.7,
+  "creatinine": 0.9,
+  "egfr": 94.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.4,
+  "cdt": 1.2,
+  "nt_probnp": 20.0,
+  "cotinine_urine": 967.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,427 @@
+{
+ "case_id": "C0590",
+ "seed": 835518936,
+ "app_date": "2025-02-05",
+ "design": {
+  "case_id": "C0590",
+  "seed": 835518936,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 60,
+  "sex": "F",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:hodgkin_1_2_y10-100",
+    "key": "cancer",
+    "variant": "hodgkin_1_2_y10-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "hodgkin_1_2",
+     "years_since_tx": [
+      10,
+      25
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "tbi:residual",
+    "key": "tbi",
+    "variant": "residual",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "residual": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "proteinuria:prot_101-300",
+    "key": "proteinuria",
+    "variant": "prot_101-300",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": "101-300"
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "rheumatoid_arthritis:biologic",
+    "key": "rheumatoid_arthritis",
+    "variant": "biologic",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "biologic": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "hypothyroidism_simple",
+   "hernia_repaired",
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.929,
+   "bmi": 21.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Patricia",
+  "last_name": "Jones",
+  "sex": "F",
+  "dob": "1965-06-27",
+  "age": 60,
+  "address_state": "AL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "graphic designer",
+  "occupation_class": "1A",
+  "annual_income": 71000,
+  "net_worth": 582000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 60.0,
+ "weight_lb": 110.0,
+ "bp_systolic": 119,
+ "bp_diastolic": 76,
+ "pulse": 78,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2004-07-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "hodgkin_1_2",
+    "years_since_tx": 20.3,
+    "stage": "II"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0590-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tbi",
+   "label": "Concussion / TBI",
+   "onset": "2006-07-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "residual": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0590-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2023-04-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "urine_protein": 125
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0590-P4"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "rheumatoid_arthritis",
+   "label": "Rheumatoid arthritis",
+   "onset": "2017-11-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "tofacitinib",
+     "dose": "5 mg",
+     "start": "2018-02-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rheumatoid_arthritis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0590-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2021-03-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2021-04-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0590-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2012-09-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "125 mcg",
+     "start": "2012-10-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0590-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2016-05-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0590-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2010-03-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2010-04-12",
+     "stop": "2010-04-04",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2010-04-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0590-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2018-02-27",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0590-P1",
+   "name": "Dr. Tara Pena",
+   "specialty": "family medicine",
+   "practice": "Hancock-Patterson Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0590-P2",
+   "name": "Dr. Rachel Wilson",
+   "specialty": "oncology",
+   "practice": "Scott Bryant and Williams Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0590-P3",
+   "name": "Dr. Nicole Krause",
+   "specialty": "neurology",
+   "practice": "Williams-Cooper Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0590-P4",
+   "name": "Dr. Joe Dixon",
+   "specialty": "nephrology",
+   "practice": "Martin-Mitchell Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 63.0,
+  "ldl": 208.0,
+  "triglycerides": 122.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 94.0,
+  "a1c": 5.4,
+  "ast": 18.0,
+  "alt": 29.0,
+  "ggt": 52.0,
+  "alk_phos": 109.0,
+  "bilirubin": 0.9,
+  "albumin": 4.1,
+  "creatinine": 1.2,
+  "egfr": 68.0,
+  "urine_protein": 125.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.4,
+  "nt_probnp": 36.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

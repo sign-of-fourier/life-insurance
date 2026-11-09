@@ -1,0 +1,581 @@
+{
+ "case_id": "C0362",
+ "seed": 305616750,
+ "app_date": "2026-01-09",
+ "design": {
+  "case_id": "C0362",
+  "seed": 305616750,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 37,
+  "sex": "F",
+  "face": 7500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "stroke:young",
+    "key": "stroke",
+    "variant": "young",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "age": {
+      "lt": 50
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hypertension:bp_50",
+    "key": "hypertension",
+    "variant": "bp_50",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "bp_band": "151-160/96-100",
+     "agents": 1
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "rheumatoid_arthritis:biologic",
+    "key": "rheumatoid_arthritis",
+    "variant": "biologic",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "biologic": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "suicide_attempt:old",
+    "key": "suicide_attempt",
+    "variant": "old",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t2:age18-39_a1c7.0-7.99",
+    "key": "diabetes_t2",
+    "variant": "age18-39_a1c7.0-7.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      7.0,
+      7.99
+     ]
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.846,
+   "bmi": 29.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Theresa",
+  "last_name": "Thompson",
+  "sex": "F",
+  "dob": "1989-04-11",
+  "age": 37,
+  "address_state": "FL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "homemaker",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 2962000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 162.0,
+ "bp_systolic": 157,
+ "bp_diastolic": 91,
+ "pulse": 55,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2006-09-18",
+   "quit": "2022-12-22",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "stroke",
+   "label": "Stroke (CVA)",
+   "onset": "2008-02-16",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 17.9,
+    "recurrent": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "40 mg",
+     "start": "2008-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "stroke"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2010-04-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "agents": 1,
+    "bp_band": "151-160/96-100"
+   },
+   "meds": [
+    {
+     "drug": "valsartan",
+     "dose": "80 mg",
+     "start": "2010-04-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "rheumatoid_arthritis",
+   "label": "Rheumatoid arthritis",
+   "onset": "2021-02-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "etanercept",
+     "dose": "50 mg inj",
+     "start": "2021-06-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rheumatoid_arthritis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2018-12-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 7.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2021-10-28",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 7.6,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 4.2,
+    "age_at_dx": 32,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2022-01-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "sitagliptin",
+     "dose": "50 mg",
+     "start": "2021-11-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P4"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2025-02-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F2"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2009-01-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": 3,
+    "er_years_ago": null,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2009-02-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P6"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-06-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2018-07-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2018-07-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2016-10-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2016-10-26",
+     "stop": "2016-11-23",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0362-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 73,
+   "age_at_death": 89,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0362-P1",
+   "name": "Dr. Joe Cuevas",
+   "specialty": "family medicine",
+   "practice": "Hanson-Johnson Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0362-P2",
+   "name": "Dr. James Walker",
+   "specialty": "neurology",
+   "practice": "Benson Hampton and Warren Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0362-P3",
+   "name": "Dr. Laurie Johnson",
+   "specialty": "psychiatry",
+   "practice": "Byrd-Gaines Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0362-P4",
+   "name": "Dr. Christian Weiss",
+   "specialty": "endocrinology",
+   "practice": "Rodriguez Inc Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0362-P5",
+   "name": "Dr. Andrew Walker",
+   "specialty": "gastroenterology",
+   "practice": "Smith-Bowers Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0362-P6",
+   "name": "Dr. Nicole Pena",
+   "specialty": "pulmonology",
+   "practice": "Rivera-Diaz Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 60.0,
+  "ldl": 201.0,
+  "triglycerides": 175.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 175.0,
+  "a1c": 7.6,
+  "ast": 66.0,
+  "alt": 97.0,
+  "ggt": 20.0,
+  "alk_phos": 88.0,
+  "bilirubin": 0.9,
+  "albumin": 4.5,
+  "creatinine": 0.9,
+  "egfr": 91.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.5,
+  "cdt": 0.9,
+  "nt_probnp": 51.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

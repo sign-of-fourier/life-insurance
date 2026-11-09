@@ -1,0 +1,398 @@
+{
+ "case_id": "C0733",
+ "seed": 883510778,
+ "app_date": "2025-02-22",
+ "design": {
+  "case_id": "C0733",
+  "seed": 883510778,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 69,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "sarcoidosis:stable",
+    "key": "sarcoidosis",
+    "variant": "stable",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad:ev60-69_y0.5-1",
+    "key": "cad",
+    "variant": "ev60-69_y0.5-1",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      60,
+      69
+     ],
+     "years_since": [
+      0.5,
+      1
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.581,
+   "bmi": 24.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "William",
+  "last_name": "Williams",
+  "sex": "M",
+  "dob": "1956-07-30",
+  "age": 69,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 4240,
+  "net_worth": 106000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ROP-T"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 67.0,
+ "weight_lb": 155.0,
+ "bp_systolic": 133,
+ "bp_diastolic": 86,
+ "pulse": 90,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1993-03-31",
+   "quit": "2022-12-02",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2024-08-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 4.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0733-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2024-03-31",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 68,
+    "years_since": 0.9,
+    "event": "CABG",
+    "ef": 55,
+    "angina": false,
+    "vessels": 2,
+    "ldl": 67,
+    "abnormal_stress": false,
+    "normal_stress_12mo": false,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "40 mg",
+     "start": "2024-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2024-04-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "clopidogrel",
+     "dose": "75 mg",
+     "start": "2024-04-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "100 mg",
+     "start": "2024-05-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0733-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2016-11-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F3",
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2011-06-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2011-07-07",
+     "stop": "2011-07-08",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0733-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2020-03-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2020-03-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2020-04-01",
+     "stop": "2020-05-03",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0733-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-10-25",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2017-09-29",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0733-P1",
+   "name": "Dr. Sabrina Cobb",
+   "specialty": "family medicine",
+   "practice": "Summers Inc Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0733-P2",
+   "name": "Dr. Elizabeth Gomez",
+   "specialty": "pulmonology",
+   "practice": "Miller-Joyce Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0733-P3",
+   "name": "Dr. Robert Miller",
+   "specialty": "cardiology",
+   "practice": "Dillon-Williams Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 56.0,
+  "ldl": 214.0,
+  "triglycerides": 103.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 96.0,
+  "a1c": 5.4,
+  "ast": 63.0,
+  "alt": 78.0,
+  "ggt": 14.0,
+  "alk_phos": 89.0,
+  "bilirubin": 0.4,
+  "albumin": 4.0,
+  "creatinine": 0.9,
+  "egfr": 82.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.2,
+  "cdt": 1.1,
+  "nt_probnp": 89.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.4
+ }
+}

@@ -1,0 +1,347 @@
+{
+ "case_id": "C0235",
+ "seed": 711399292,
+ "app_date": "2025-11-15",
+ "design": {
+  "case_id": "C0235",
+  "seed": 711399292,
+  "target": "Table Tobacco 5-16",
+  "ladder": "tobacco",
+  "age": 23,
+  "sex": "F",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "back_pain:opioid",
+    "key": "back_pain",
+    "variant": "opioid",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "multiple_sclerosis:mild",
+    "key": "multiple_sclerosis",
+    "variant": "mild",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "chew",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts",
+   "kidney_stones",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.807,
+   "bmi": 24.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Elizabeth",
+  "last_name": "Levine",
+  "sex": "F",
+  "dob": "2002-12-17",
+  "age": 23,
+  "address_state": "KY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "financial analyst",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 213000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 149.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 88,
+ "pulse": 81,
+ "tobacco": [
+  {
+   "product": "chew",
+   "status": "current",
+   "frequency": "several times/day",
+   "start": "2023-07-31",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2021-05-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0235-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2025-04-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "progressive": false,
+    "edss": 1.5
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0235-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2022-10-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": false,
+    "compliant": false,
+    "ahi": 72
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0235-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2024-02-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0235-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2021-06-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2021-07-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0235-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2019-08-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2019-09-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0235-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0235-P1",
+   "name": "Dr. Daniel Hunt",
+   "specialty": "family medicine",
+   "practice": "Long Gardner and Moon Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0235-P2",
+   "name": "Dr. Nathan Arias",
+   "specialty": "neurology",
+   "practice": "Navarro Randolph and Flores Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0235-P3",
+   "name": "Dr. Kathryn Parker",
+   "specialty": "pulmonology",
+   "practice": "Espinoza Villa and Mullins Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 290.0,
+  "hdl": 43.0,
+  "ldl": 227.0,
+  "triglycerides": 100.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 94.0,
+  "a1c": 5.5,
+  "ast": 15.0,
+  "alt": 26.0,
+  "ggt": 33.0,
+  "alk_phos": 76.0,
+  "bilirubin": 1.1,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 104.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.0,
+  "nt_probnp": 93.0,
+  "cotinine_urine": 1046.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

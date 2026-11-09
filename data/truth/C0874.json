@@ -1,0 +1,316 @@
+{
+ "case_id": "C0874",
+ "seed": 866113255,
+ "app_date": "2025-09-25",
+ "design": {
+  "case_id": "C0874",
+  "seed": 866113255,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 39,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "prediabetes:high",
+    "key": "prediabetes",
+    "variant": "high",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      6.1,
+      6.4
+     ]
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ],
+    [
+     "family_history",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "gout",
+   "cataracts",
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "moderate",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CTR",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.513,
+   "bmi": 29.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "David",
+  "last_name": "Cruz",
+  "sex": "M",
+  "dob": "1987-03-16",
+  "age": 39,
+  "address_state": "PA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "mechanic",
+  "occupation_class": "2A",
+  "annual_income": 48000,
+  "net_worth": 342000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 64.0,
+ "weight_lb": 173.0,
+ "bp_systolic": 133,
+ "bp_diastolic": 87,
+ "pulse": 66,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2006-04-01",
+   "quit": "2023-02-17",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "prediabetes",
+   "label": "Prediabetes / impaired fasting glucose",
+   "onset": "2008-07-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 6.2
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2008-08-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "prediabetes"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0874-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2019-09-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2019-10-18",
+     "stop": "2019-10-14",
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0874-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2024-08-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0874-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2012-10-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2012-11-16",
+     "stop": "2012-12-23",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0874-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 50,
+   "age_at_death": 46,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 55,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 72,
+   "age_at_death": 87,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-12-19",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Portugal",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0874-P1",
+   "name": "Dr. Kyle Rodriguez",
+   "specialty": "family medicine",
+   "practice": "Walker Drake and Sanchez Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0874-P2",
+   "name": "Dr. Justin Hamilton",
+   "specialty": "endocrinology",
+   "practice": "Thompson Gates and Hill Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 267.0,
+  "hdl": 55.0,
+  "ldl": 169.0,
+  "triglycerides": 214.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 115.0,
+  "a1c": 6.1,
+  "ast": 32.0,
+  "alt": 37.0,
+  "ggt": 41.0,
+  "alk_phos": 114.0,
+  "bilirubin": 0.9,
+  "albumin": 4.4,
+  "creatinine": 0.8,
+  "egfr": 92.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.5,
+  "nt_probnp": 82.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

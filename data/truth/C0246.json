@@ -1,0 +1,310 @@
+{
+ "case_id": "C0246",
+ "seed": 93039261,
+ "app_date": "2025-09-19",
+ "design": {
+  "case_id": "C0246",
+  "seed": 93039261,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 78,
+  "sex": "M",
+  "face": 1500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "diabetes_t1:age70-120_a1c10.0",
+    "key": "diabetes_t1",
+    "variant": "age70-120_a1c10.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 200,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      10.0,
+      99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "suicide_attempt:mid",
+    "key": "suicide_attempt",
+    "variant": "mid",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "ADB",
+   "GIO",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.741,
+   "bmi": 21.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Stephen",
+  "last_name": "Montgomery",
+  "sex": "M",
+  "dob": "1947-05-07",
+  "age": 78,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 161880,
+  "net_worth": 4047000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "GIO",
+   "WP"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 72.0,
+ "weight_lb": 157.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 68,
+ "pulse": 79,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2020-06-02",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 12.2,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 5.3,
+    "age_at_dx": 72,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2020-08-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin lispro",
+     "dose": "100 u/mL",
+     "start": "2020-06-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0246-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2022-12-02",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 2.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0246-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2015-02-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2015-04-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2015-03-14",
+     "stop": "2015-04-07",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0246-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 72,
+   "age_at_death": 89,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0246-P1",
+   "name": "Dr. Wendy Peterson",
+   "specialty": "family medicine",
+   "practice": "Barry LLC Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0246-P2",
+   "name": "Dr. Tracy Nguyen",
+   "specialty": "endocrinology",
+   "practice": "Marshall Ltd Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0246-P3",
+   "name": "Dr. Mark Fuentes",
+   "specialty": "psychiatry",
+   "practice": "Rose PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 290.0,
+  "hdl": 47.0,
+  "ldl": 213.0,
+  "triglycerides": 147.0,
+  "tc_hdl_ratio": 6.2,
+  "glucose_fasting": 299.0,
+  "a1c": 11.9,
+  "ast": 19.0,
+  "alt": 24.0,
+  "ggt": 19.0,
+  "alk_phos": 112.0,
+  "bilirubin": 0.5,
+  "albumin": 4.2,
+  "creatinine": 1.1,
+  "egfr": 83.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.8,
+  "cdt": 1.4,
+  "nt_probnp": 90.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.8
+ }
+}

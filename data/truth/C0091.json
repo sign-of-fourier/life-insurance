@@ -1,0 +1,291 @@
+{
+ "case_id": "C0091",
+ "seed": 857750056,
+ "app_date": "2025-02-09",
+ "design": {
+  "case_id": "C0091",
+  "seed": 857750056,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 36,
+  "sex": "F",
+  "face": 100000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_criminal:pending_felony",
+    "key": "nm_criminal",
+    "variant": "pending_felony",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_occupation:occ_4a",
+    "key": "nm_occupation",
+    "variant": "occ_4a",
+    "chapter": "OCC",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "hernia_repaired",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel",
+  "complexity": "simple",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "GIO",
+   "OIR",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.436,
+   "bmi": 27.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_criminal": "pending_felony"
+  }
+ },
+ "person": {
+  "first_name": "Amanda",
+  "last_name": "Palmer",
+  "sex": "F",
+  "dob": "1989-04-16",
+  "age": 36,
+  "address_state": "TX",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "underground miner",
+  "occupation_class": "4A",
+  "annual_income": 18000,
+  "net_worth": 162000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 20",
+  "riders_requested": [
+   "GIO",
+   "OIR",
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 68.0,
+ "weight_lb": 183.0,
+ "bp_systolic": 137,
+ "bp_diastolic": 68,
+ "pulse": 78,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2012-09-11",
+   "quit": "2013-10-16",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2022-05-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2022-06-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0091-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2013-07-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0091-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2013-08-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2013-10-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2013-10-14",
+     "stop": "2013-09-07",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0091-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 74,
+   "age_at_death": 80,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-07-17",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2017-07-30",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "United Kingdom",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Northstar Life",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0091-P1",
+   "name": "Dr. Brittany Macdonald",
+   "specialty": "family medicine",
+   "practice": "Wright-Espinoza Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 44.0,
+  "ldl": 211.0,
+  "triglycerides": 162.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 86.0,
+  "a1c": 5.1,
+  "ast": 30.0,
+  "alt": 20.0,
+  "ggt": 34.0,
+  "alk_phos": 44.0,
+  "bilirubin": 1.1,
+  "albumin": 4.8,
+  "creatinine": 0.8,
+  "egfr": 98.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.5,
+  "cdt": 1.5,
+  "nt_probnp": 31.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

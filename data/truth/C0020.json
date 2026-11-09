@@ -1,0 +1,503 @@
+{
+ "case_id": "C0020",
+ "seed": 247270667,
+ "app_date": "2025-02-21",
+ "design": {
+  "case_id": "C0020",
+  "seed": 247270667,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 64,
+  "sex": "F",
+  "face": 2000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "afib:persistent",
+    "key": "afib",
+    "variant": "persistent",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": {
+      "in": [
+       "persistent",
+       "permanent"
+      ]
+     },
+     "echo_normal": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "barretts:lgd",
+    "key": "barretts",
+    "variant": "lgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "low"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "back_pain:opioid_benzo",
+    "key": "back_pain",
+    "variant": "opioid_benzo",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true,
+     "benzo": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "parkinsons:late_onset",
+    "key": "parkinsons",
+    "variant": "late_onset",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "bipolar:unstable",
+    "key": "bipolar",
+    "variant": "unstable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 125,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": [
+       1,
+       5
+      ],
+      "compliant": false
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.645,
+   "bmi": 26.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Amber",
+  "last_name": "Cummings",
+  "sex": "F",
+  "dob": "1961-06-19",
+  "age": 64,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "registered nurse",
+  "occupation_class": "2A",
+  "annual_income": 310000,
+  "net_worth": 2071000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 59.0,
+ "weight_lb": 131.0,
+ "bp_systolic": 119,
+ "bp_diastolic": 76,
+ "pulse": 56,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2018-09-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "persistent",
+    "echo_normal": true,
+    "chads_vasc": 4,
+    "structural": false,
+    "ablation_years": null,
+    "years_since": 6.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0020-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2017-09-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "low"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0020-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2007-01-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": true
+   },
+   "meds": [
+    {
+     "drug": "oxycodone",
+     "dose": "10 mg",
+     "start": "2007-01-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    },
+    {
+     "drug": "methocarbamol",
+     "dose": "750 mg",
+     "start": "2007-03-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0020-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "parkinsons",
+   "label": "Parkinson's disease",
+   "onset": "2008-11-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_onset": 60
+   },
+   "meds": [
+    {
+     "drug": "pramipexole",
+     "dose": "0.25 mg",
+     "start": "2009-01-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    },
+    {
+     "drug": "ropinirole",
+     "dose": "0.5 mg",
+     "start": "2009-02-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0020-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "1999-02-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 26.0,
+    "organ": "liver"
+   },
+   "meds": [
+    {
+     "drug": "sirolimus",
+     "dose": "1 mg",
+     "start": "1999-03-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0020-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2024-03-30",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "other",
+    "stable_years": 13.4,
+    "hospitalization_years_ago": 7.4,
+    "compliant": false
+   },
+   "meds": [
+    {
+     "drug": "lurasidone",
+     "dose": "40 mg",
+     "start": "2024-03-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0020-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2016-07-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2016-08-19",
+     "stop": "2016-08-14",
+     "prescriber_id": null,
+     "indication": "gout"
+    },
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2016-08-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0020-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 71,
+   "age_at_death": 84,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Italy",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0020-P1",
+   "name": "Dr. Joseph Johnson",
+   "specialty": "family medicine",
+   "practice": "Swanson Hernandez and Mueller Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0020-P2",
+   "name": "Dr. Virginia Simpson",
+   "specialty": "cardiology",
+   "practice": "Long Inc Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0020-P3",
+   "name": "Dr. Melanie Smith",
+   "specialty": "gastroenterology",
+   "practice": "Stuart PLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0020-P4",
+   "name": "Dr. Brian Foster",
+   "specialty": "neurology",
+   "practice": "French Ltd Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0020-P5",
+   "name": "Dr. Michael Castro",
+   "specialty": "psychiatry",
+   "practice": "Peck Patrick and Rogers Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 47.0,
+  "ldl": 210.0,
+  "triglycerides": 170.0,
+  "tc_hdl_ratio": 6.2,
+  "glucose_fasting": 100.0,
+  "a1c": 5.0,
+  "ast": 25.0,
+  "alt": 31.0,
+  "ggt": 41.0,
+  "alk_phos": 60.0,
+  "bilirubin": 0.5,
+  "albumin": 4.7,
+  "creatinine": 0.8,
+  "egfr": 81.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.5,
+  "nt_probnp": 69.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

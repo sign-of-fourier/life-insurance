@@ -1,0 +1,242 @@
+{
+ "case_id": "C0701",
+ "seed": 304684506,
+ "app_date": "2026-03-26",
+ "design": {
+  "case_id": "C0701",
+  "seed": 304684506,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 71,
+  "sex": "M",
+  "face": 750000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:melanoma_in_situ_y2-100",
+    "key": "cancer",
+    "variant": "melanoma_in_situ_y2-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "type": "melanoma_in_situ",
+     "years_since_tx": [
+      2,
+      25
+     ]
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.934,
+   "bmi": 29.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jeffrey",
+  "last_name": "Mclaughlin",
+  "sex": "M",
+  "dob": "1955-04-16",
+  "age": 71,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "airline pilot",
+  "occupation_class": "1A",
+  "annual_income": 85000,
+  "net_worth": 1606000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "UL",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 60.0,
+ "weight_lb": 152.0,
+ "bp_systolic": 143,
+ "bp_diastolic": 90,
+ "pulse": 78,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2019-08-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_in_situ",
+    "years_since_tx": 6.1,
+    "stage": "0"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0701-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2023-09-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2023-11-08",
+     "stop": "2023-11-08",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0701-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "colon cancer",
+   "age_at_onset": 45,
+   "age_at_death": 55,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 62,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-10-05",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-07-04",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0701-P1",
+   "name": "Dr. Debra Davis",
+   "specialty": "family medicine",
+   "practice": "Nichols Phillips and King Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0701-P2",
+   "name": "Dr. Spencer Guerra",
+   "specialty": "oncology",
+   "practice": "Doyle LLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 266.0,
+  "hdl": 57.0,
+  "ldl": 186.0,
+  "triglycerides": 114.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 87.0,
+  "a1c": 5.2,
+  "ast": 30.0,
+  "alt": 38.0,
+  "ggt": 11.0,
+  "alk_phos": 116.0,
+  "bilirubin": 1.0,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 91.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.7,
+  "cdt": 1.3,
+  "nt_probnp": 82.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.2
+ }
+}

@@ -1,0 +1,360 @@
+{
+ "case_id": "C0565",
+ "seed": 448825745,
+ "app_date": "2026-07-21",
+ "design": {
+  "case_id": "C0565",
+  "seed": 448825745,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 79,
+  "sex": "M",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:prostate_le7_surgery_y3-100",
+    "key": "cancer",
+    "variant": "prostate_le7_surgery_y3-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "type": "prostate_le7_surgery",
+     "years_since_tx": [
+      3,
+      25
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ],
+    [
+     "lipids",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "eczema",
+   "acne",
+   "erectile_dysfunction",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CIA",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.633,
+   "bmi": 28.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Joshua",
+  "last_name": "Wood",
+  "sex": "M",
+  "dob": "1947-03-24",
+  "age": 79,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 252840,
+  "net_worth": 6321000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [
+   "CIA",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 61.0,
+ "weight_lb": 151.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 90,
+ "pulse": 68,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2001-10-06",
+   "quit": "2024-06-03",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2009-11-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "prostate_le7_surgery",
+    "years_since_tx": 15.3,
+    "gleason": 7,
+    "psa_undetectable": true,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0565-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2024-09-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2024-11-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0565-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2021-08-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2021-10-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2021-09-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0565-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2024-04-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "tadalafil",
+     "dose": "5 mg",
+     "start": "2024-05-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0565-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2024-09-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2024-09-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2024-11-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0565-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 46,
+   "age_at_death": 57,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 73,
+   "age_at_death": 90,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-12-28",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0565-P1",
+   "name": "Dr. Amy Gray",
+   "specialty": "family medicine",
+   "practice": "Vaughn-Washington Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0565-P2",
+   "name": "Dr. Elizabeth Brown",
+   "specialty": "oncology",
+   "practice": "Hansen PLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 238.0,
+  "hdl": 40.0,
+  "ldl": 168.0,
+  "triglycerides": 150.0,
+  "tc_hdl_ratio": 6.0,
+  "glucose_fasting": 78.0,
+  "a1c": 5.2,
+  "ast": 26.0,
+  "alt": 41.0,
+  "ggt": 55.0,
+  "alk_phos": 86.0,
+  "bilirubin": 1.1,
+  "albumin": 4.6,
+  "creatinine": 1.1,
+  "egfr": 70.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.0,
+  "cdt": 0.9,
+  "nt_probnp": 197.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.05
+ }
+}

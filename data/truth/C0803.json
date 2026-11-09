@@ -1,0 +1,306 @@
+{
+ "case_id": "C0803",
+ "seed": 1029260909,
+ "app_date": "2026-05-25",
+ "design": {
+  "case_id": "C0803",
+  "seed": 1029260909,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 59,
+  "sex": "M",
+  "face": 1000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "benign_tumor:benign",
+    "key": "benign_tumor",
+    "variant": "benign",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:mild",
+    "key": "asthma",
+    "variant": "mild",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Elite",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "lipids",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.256,
+   "bmi": 29.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Johnathan",
+  "last_name": "Hernandez",
+  "sex": "M",
+  "dob": "1967-01-12",
+  "age": 59,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "architect",
+  "occupation_class": "1A",
+  "annual_income": 260000,
+  "net_worth": 2943000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 163.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 80,
+ "pulse": 55,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1998-07-10",
+   "quit": "2024-01-08",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2024-09-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "high_grade_dysplasia": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0803-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2019-07-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": null,
+    "er_years_ago": null,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2019-09-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0803-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2012-04-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0803-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 47,
+   "age_at_death": 46,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 56,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 65,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-08-20",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Iceland",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0803-P1",
+   "name": "Dr. Jeffery Bautista",
+   "specialty": "family medicine",
+   "practice": "Murphy-West Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0803-P2",
+   "name": "Dr. Patricia Meadows",
+   "specialty": "oncology",
+   "practice": "Sandoval Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0803-P3",
+   "name": "Dr. Courtney Dennis",
+   "specialty": "pulmonology",
+   "practice": "Malone Shields and Kelly Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 299.0,
+  "hdl": 70.0,
+  "ldl": 209.0,
+  "triglycerides": 98.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 82.0,
+  "a1c": 5.2,
+  "ast": 20.0,
+  "alt": 40.0,
+  "ggt": 35.0,
+  "alk_phos": 101.0,
+  "bilirubin": 0.7,
+  "albumin": 4.7,
+  "creatinine": 0.7,
+  "egfr": 82.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.5,
+  "cdt": 1.0,
+  "nt_probnp": 25.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.1
+ }
+}

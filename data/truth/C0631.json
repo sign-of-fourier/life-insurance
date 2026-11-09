@@ -1,0 +1,457 @@
+{
+ "case_id": "C0631",
+ "seed": 519392282,
+ "app_date": "2025-06-16",
+ "design": {
+  "case_id": "C0631",
+  "seed": 519392282,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 37,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_alcohol:dpw_gt35",
+    "key": "nm_alcohol",
+    "variant": "dpw_gt35",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "glaucoma",
+   "hypothyroidism_simple",
+   "osteopenia",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "specialist_letter"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.408,
+   "bmi": 31.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Brooke",
+  "last_name": "Swanson",
+  "sex": "F",
+  "dob": "1988-03-23",
+  "age": 37,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 81000,
+  "net_worth": 639000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 69.0,
+ "weight_lb": 211.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 77,
+ "pulse": 66,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2020-03-14",
+   "quit": "2022-02-20",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 57.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2010-07-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 11.0,
+    "monotherapy": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0631-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2010-02-27",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 10.9,
+    "undetectable_months": 84,
+    "cd4": 809,
+    "aids_defining": false,
+    "hep_coinfection": false,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2023-08-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": false,
+    "compliant": true,
+    "ahi": 58
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0631-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2007-11-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 0.3
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0631-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2014-09-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2014-10-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0631-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2012-01-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "50 mcg",
+     "start": "2012-02-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0631-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2021-10-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2021-10-13",
+     "stop": "2021-10-26",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0631-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2021-07-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2021-09-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2021-09-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0631-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-12-18",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Northstar Life",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0631-P1",
+   "name": "Dr. April Walker",
+   "specialty": "family medicine",
+   "practice": "Smith Conway and Phillips Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0631-P2",
+   "name": "Dr. Dana Boyer",
+   "specialty": "psychiatry",
+   "practice": "Fox Taylor and Tucker Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0631-P3",
+   "name": "Dr. Christopher Ramsey",
+   "specialty": "pulmonology",
+   "practice": "Sloan PLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 47.0,
+  "ldl": 210.0,
+  "triglycerides": 174.0,
+  "tc_hdl_ratio": 6.2,
+  "glucose_fasting": 98.0,
+  "a1c": 5.3,
+  "ast": 55.0,
+  "alt": 32.0,
+  "ggt": 107.0,
+  "alk_phos": 96.0,
+  "bilirubin": 0.8,
+  "albumin": 4.1,
+  "creatinine": 1.1,
+  "egfr": 110.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.6,
+  "cdt": 2.4,
+  "nt_probnp": 21.0,
+  "cotinine_urine": 1.0,
+  "hiv": 1.0,
+  "cocaine": 0.0
+ }
+}

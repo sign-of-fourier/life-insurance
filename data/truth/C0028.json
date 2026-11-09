@@ -1,0 +1,358 @@
+{
+ "case_id": "C0028",
+ "seed": 952066814,
+ "app_date": "2026-01-15",
+ "design": {
+  "case_id": "C0028",
+  "seed": 952066814,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 38,
+  "sex": "F",
+  "face": 7500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "depression_anxiety:severe",
+    "key": "depression_anxiety",
+    "variant": "severe",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": {
+       "ge": 1
+      },
+      "ect": true,
+      "disability": true
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "gerd",
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.826,
+   "bmi": 23.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Sara",
+  "last_name": "Carter",
+  "sex": "F",
+  "dob": "1988-02-15",
+  "age": 38,
+  "address_state": "KY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "lineworker (utility)",
+  "occupation_class": "3A",
+  "annual_income": 302000,
+  "net_worth": 2273000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "GUL",
+  "riders_requested": [
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 63.0,
+ "weight_lb": 131.0,
+ "bp_systolic": 117,
+ "bp_diastolic": 69,
+ "pulse": 83,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2016-01-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F2"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0028-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2011-05-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 3,
+    "work_loss_months": null,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": true,
+    "years_since_dx": 14.7
+   },
+   "meds": [
+    {
+     "drug": "bupropion",
+     "dose": "300 mg",
+     "start": "2011-05-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    },
+    {
+     "drug": "fluoxetine",
+     "dose": "40 mg",
+     "start": "2011-05-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0028-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2012-04-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2012-04-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    },
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2012-04-16",
+     "stop": "2012-04-25",
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0028-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2017-02-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "40 mg",
+     "start": "2017-03-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "omeprazole",
+     "dose": "40 mg",
+     "start": "2017-03-14",
+     "stop": "2017-03-14",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0028-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2016-07-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0028-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Northstar Life",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0028-P1",
+   "name": "Dr. Mackenzie Watkins",
+   "specialty": "family medicine",
+   "practice": "Morales Montoya and Archer Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0028-P2",
+   "name": "Dr. Michael Nichols",
+   "specialty": "gastroenterology",
+   "practice": "Dorsey Tucker and Anderson Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0028-P3",
+   "name": "Dr. Claire Sims",
+   "specialty": "psychiatry",
+   "practice": "Hernandez Adams and Lowe Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 297.0,
+  "hdl": 57.0,
+  "ldl": 215.0,
+  "triglycerides": 124.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 95.0,
+  "a1c": 5.1,
+  "ast": 43.0,
+  "alt": 59.0,
+  "ggt": 10.0,
+  "alk_phos": 103.0,
+  "bilirubin": 0.7,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 100.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.0,
+  "nt_probnp": 54.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

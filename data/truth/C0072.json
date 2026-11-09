@@ -1,0 +1,340 @@
+{
+ "case_id": "C0072",
+ "seed": 350009800,
+ "app_date": "2026-02-19",
+ "design": {
+  "case_id": "C0072",
+  "seed": 350009800,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 67,
+  "sex": "M",
+  "face": 100000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "tbi:residual",
+    "key": "tbi",
+    "variant": "residual",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "residual": true
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_aviation:pilot_aerobatic",
+    "key": "nm_aviation",
+    "variant": "pilot_aerobatic",
+    "chapter": "AVI",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 7.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "CIA",
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.39,
+   "bmi": 24.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "James",
+  "last_name": "Frazier",
+  "sex": "M",
+  "dob": "1958-11-07",
+  "age": 67,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "long-haul truck driver",
+  "occupation_class": "3A",
+  "annual_income": 51000,
+  "net_worth": 533000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "GUL",
+  "riders_requested": [
+   "CIA",
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 168.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 71,
+ "pulse": 91,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2008-07-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "paroxetine",
+     "dose": "20 mg",
+     "start": "2008-09-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    },
+    {
+     "drug": "prazosin",
+     "dose": "1 mg",
+     "start": "2008-10-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0072-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tbi",
+   "label": "Concussion / TBI",
+   "onset": "2025-02-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "residual": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0072-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2014-12-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2015-01-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0072-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2014-07-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2014-08-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2014-08-06",
+     "stop": "2014-09-10",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0072-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 65,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "private_aviation",
+   "details": {
+    "total_hours": 2098,
+    "aerobatic": true
+   },
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "France",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0072-P1",
+   "name": "Dr. Cheryl Cunningham",
+   "specialty": "family medicine",
+   "practice": "Parker Kane and Grimes Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0072-P2",
+   "name": "Dr. Janice Boyd",
+   "specialty": "psychiatry",
+   "practice": "Alexander-Robinson Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0072-P3",
+   "name": "Dr. Jeremiah Morse",
+   "specialty": "neurology",
+   "practice": "Trevino Harrison and Castro Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 60.0,
+  "ldl": 199.0,
+  "triglycerides": 162.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 85.0,
+  "a1c": 5.0,
+  "ast": 17.0,
+  "alt": 31.0,
+  "ggt": 26.0,
+  "alk_phos": 85.0,
+  "bilirubin": 0.6,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 86.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.5,
+  "cdt": 1.5,
+  "nt_probnp": 108.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.7
+ }
+}

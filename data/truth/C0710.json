@@ -1,0 +1,494 @@
+{
+ "case_id": "C0710",
+ "seed": 1035181918,
+ "app_date": "2026-10-01",
+ "design": {
+  "case_id": "C0710",
+  "seed": 1035181918,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 43,
+  "sex": "F",
+  "face": 1000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "hepatitis_c:untreated",
+    "key": "hepatitis_c",
+    "variant": "untreated",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "afib:persistent",
+    "key": "afib",
+    "variant": "persistent",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": {
+      "in": [
+       "persistent",
+       "permanent"
+      ]
+     },
+     "echo_normal": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "polycystic_kidney:reduced",
+    "key": "polycystic_kidney",
+    "variant": "reduced",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "proteinuria:prot_>300",
+    "key": "proteinuria",
+    "variant": "prot_>300",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": ">300"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "glaucoma",
+   "hypothyroidism_simple",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "LTA",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.281,
+   "bmi": 26.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tonya",
+  "last_name": "Montgomery",
+  "sex": "F",
+  "dob": "1983-06-19",
+  "age": 43,
+  "address_state": "PA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "roofer",
+  "occupation_class": "3A",
+  "annual_income": 177000,
+  "net_worth": 1065000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "UL",
+  "riders_requested": [
+   "LTA",
+   "WMD"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 66.0,
+ "weight_lb": 162.0,
+ "bp_systolic": 125,
+ "bp_diastolic": 70,
+ "pulse": 73,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2025-02-24",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": false,
+    "svr": false,
+    "years_since_tx": 3.6
+   },
+   "meds": [
+    {
+     "drug": "ledipasvir-sofosbuvir",
+     "dose": "90/400 mg",
+     "start": "2025-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0710-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2022-02-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "permanent",
+    "echo_normal": true,
+    "chads_vasc": 4,
+    "structural": false,
+    "ablation_years": 0.2,
+    "years_since": 4.6
+   },
+   "meds": [
+    {
+     "drug": "diltiazem",
+     "dose": "180 mg",
+     "start": "2022-03-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0710-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2020-06-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 35,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2008-10-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": null,
+    "er_years_ago": 7.3,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2008-11-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0710-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2022-07-20",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "urine_protein": 404
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0710-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2017-12-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2018-01-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2017-12-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0710-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2025-07-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2025-09-11",
+     "stop": "2025-08-16",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0710-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2025-03-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2025-04-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0710-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 66,
+   "age_at_death": 76,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-01-18",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Northstar Life",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0710-P1",
+   "name": "Dr. Amanda Miles",
+   "specialty": "family medicine",
+   "practice": "Miller Frazier and Hansen Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0710-P2",
+   "name": "Dr. Alicia Mccarthy",
+   "specialty": "gastroenterology",
+   "practice": "Morgan-Mcclain Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0710-P3",
+   "name": "Dr. Joshua Hendricks",
+   "specialty": "cardiology",
+   "practice": "Morrison Scott and Young Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0710-P4",
+   "name": "Dr. Gregory Huerta",
+   "specialty": "pulmonology",
+   "practice": "Davis Ltd Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0710-P5",
+   "name": "Dr. Mathew York",
+   "specialty": "nephrology",
+   "practice": "Williams-Lam Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 40.0,
+  "ldl": 219.0,
+  "triglycerides": 76.0,
+  "tc_hdl_ratio": 6.9,
+  "glucose_fasting": 83.0,
+  "a1c": 4.9,
+  "ast": 55.0,
+  "alt": 61.0,
+  "ggt": 45.0,
+  "alk_phos": 76.0,
+  "bilirubin": 0.4,
+  "albumin": 3.9,
+  "creatinine": 0.8,
+  "egfr": 104.0,
+  "urine_protein": 404.0,
+  "hemoglobin": 12.5,
+  "cdt": 1.1,
+  "nt_probnp": 84.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

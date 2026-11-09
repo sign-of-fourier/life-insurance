@@ -1,0 +1,262 @@
+{
+ "case_id": "C0226",
+ "seed": 429873559,
+ "app_date": "2026-04-02",
+ "design": {
+  "case_id": "C0226",
+  "seed": 429873559,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 22,
+  "sex": "M",
+  "face": 250000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "nm_surgery:surgery_scheduled",
+    "key": "nm_surgery",
+    "variant": "surgery_scheduled",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "neuropathy:idiopathic",
+    "key": "neuropathy",
+    "variant": "idiopathic",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel",
+  "complexity": "moderate",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "ADB",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.759,
+   "bmi": 28.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_surgery": "surgery_scheduled"
+  }
+ },
+ "person": {
+  "first_name": "Timothy",
+  "last_name": "Russo",
+  "sex": "M",
+  "dob": "2004-03-21",
+  "age": 22,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 181000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 30",
+  "riders_requested": [
+   "ADB",
+   "GIO"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 175.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 71,
+ "pulse": 72,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "neuropathy",
+   "label": "Peripheral neuropathy (idiopathic)",
+   "onset": "2024-05-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "pregabalin",
+     "dose": "75 mg",
+     "start": "2024-05-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "neuropathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0226-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2025-08-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0226-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2024-02-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2024-03-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2024-02-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0226-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Pinecrest Mutual",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0226-P1",
+   "name": "Dr. Michael Luna",
+   "specialty": "family medicine",
+   "practice": "Simon-Kelly Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0226-P2",
+   "name": "Dr. John Kelly",
+   "specialty": "neurology",
+   "practice": "Walters-Parker Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 55.0,
+  "ldl": 206.0,
+  "triglycerides": 125.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 104.0,
+  "a1c": 5.2,
+  "ast": 21.0,
+  "alt": 15.0,
+  "ggt": 14.0,
+  "alk_phos": 87.0,
+  "bilirubin": 1.2,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 108.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.0,
+  "cdt": 1.1,
+  "nt_probnp": 69.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

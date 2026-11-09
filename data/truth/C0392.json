@@ -1,0 +1,334 @@
+{
+ "case_id": "C0392",
+ "seed": 437601390,
+ "app_date": "2026-08-31",
+ "design": {
+  "case_id": "C0392",
+  "seed": 437601390,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 60,
+  "sex": "M",
+  "face": 7500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "barretts:hgd",
+    "key": "barretts",
+    "variant": "hgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "high"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "polycystic_kidney:normal_egfr",
+    "key": "polycystic_kidney",
+    "variant": "normal_egfr",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": {
+      "ge": 60
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti",
+   "acne",
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "CTR",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.876,
+   "bmi": 27.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kevin",
+  "last_name": "Anderson",
+  "sex": "M",
+  "dob": "1966-05-01",
+  "age": 60,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retail store manager",
+  "occupation_class": "1A",
+  "annual_income": 570000,
+  "net_worth": 5797000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CTR",
+   "XCR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": true,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 74.0,
+ "weight_lb": 215.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 85,
+ "pulse": 72,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1/2 ppd",
+   "start": "2007-03-07",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2011-03-02",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "dysplasia": "high"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0392-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2007-06-20",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 70
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0392-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2023-02-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2023-03-02",
+     "stop": "2023-02-26",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0392-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2019-09-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2019-10-19",
+     "stop": "2019-11-26",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0392-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2020-06-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2020-07-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2020-07-14",
+     "stop": "2020-08-22",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0392-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2026-07-20",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0392-P1",
+   "name": "Dr. Lisa Smith",
+   "specialty": "family medicine",
+   "practice": "Kelly Wilson and Riggs Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0392-P2",
+   "name": "Dr. Brittany Jackson",
+   "specialty": "gastroenterology",
+   "practice": "Davidson Group Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0392-P3",
+   "name": "Dr. Nicholas Vargas",
+   "specialty": "nephrology",
+   "practice": "Bush Martin and Watkins Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 47.0,
+  "ldl": 233.0,
+  "triglycerides": 63.0,
+  "tc_hdl_ratio": 6.2,
+  "glucose_fasting": 80.0,
+  "a1c": 5.4,
+  "ast": 26.0,
+  "alt": 19.0,
+  "ggt": 16.0,
+  "alk_phos": 41.0,
+  "bilirubin": 1.1,
+  "albumin": 4.6,
+  "creatinine": 0.8,
+  "egfr": 82.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.1,
+  "nt_probnp": 24.0,
+  "cotinine_urine": 1755.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

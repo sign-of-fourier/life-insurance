@@ -1,0 +1,425 @@
+{
+ "case_id": "C0923",
+ "seed": 4595674,
+ "app_date": "2025-05-10",
+ "design": {
+  "case_id": "C0923",
+  "seed": 4595674,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 42,
+  "sex": "F",
+  "face": 7500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "stroke:young",
+    "key": "stroke",
+    "variant": "young",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "age": {
+      "lt": 50
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_marijuana:mj_daily",
+    "key": "nm_marijuana",
+    "variant": "mj_daily",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "substance_use_hard:oud_maint_ge2",
+    "key": "substance_use_hard",
+    "variant": "oud_maint_ge2",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "osteopenia",
+   "seasonal_allergy",
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.545,
+   "bmi": 27.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Barbara",
+  "last_name": "Holland",
+  "sex": "F",
+  "dob": "1982-12-11",
+  "age": 42,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmacist",
+  "occupation_class": "1A",
+  "annual_income": 687000,
+  "net_worth": 2976000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 59.0,
+ "weight_lb": 135.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 73,
+ "pulse": 77,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "5/yr",
+   "start": "2022-05-29",
+   "quit": null,
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 15,
+   "form": "smoked",
+   "disclosure": "honest"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "stroke",
+   "label": "Stroke (CVA)",
+   "onset": "2012-02-27",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 13.2,
+    "recurrent": false
+   },
+   "meds": [
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2012-06-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "stroke"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0923-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2006-07-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0923-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2014-09-06",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "substance": "opioids",
+    "maintenance_years": 5.5,
+    "maintenance": true
+   },
+   "meds": [
+    {
+     "drug": "naloxone",
+     "dose": "4 mg nasal",
+     "start": "2014-09-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0923-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2019-08-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0923-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2017-11-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2017-11-28",
+     "stop": "2017-12-06",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0923-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2021-10-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2021-11-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0923-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2022-01-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2022-01-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0923-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-11-16",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-04-14",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0923-P1",
+   "name": "Dr. Christopher Thomas",
+   "specialty": "family medicine",
+   "practice": "Phillips PLC Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0923-P2",
+   "name": "Dr. Anthony Rodriguez",
+   "specialty": "neurology",
+   "practice": "Roman Moreno and Turner Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0923-P3",
+   "name": "Dr. Matthew Perez",
+   "specialty": "rheumatology",
+   "practice": "Munoz Inc Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0923-P4",
+   "name": "Dr. Reginald Waller",
+   "specialty": "addiction medicine",
+   "practice": "Ayers-Rose Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 65.0,
+  "ldl": 196.0,
+  "triglycerides": 131.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 84.0,
+  "a1c": 5.1,
+  "ast": 24.0,
+  "alt": 38.0,
+  "ggt": 13.0,
+  "alk_phos": 76.0,
+  "bilirubin": 0.5,
+  "albumin": 3.9,
+  "creatinine": 1.2,
+  "egfr": 88.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.4,
+  "nt_probnp": 63.0,
+  "cotinine_urine": 13.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

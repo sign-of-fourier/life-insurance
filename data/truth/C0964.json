@@ -1,0 +1,258 @@
+{
+ "case_id": "C0964",
+ "seed": 454360750,
+ "app_date": "2025-09-26",
+ "design": {
+  "case_id": "C0964",
+  "seed": 454360750,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 25,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_alcohol:cdt_high_denied",
+    "key": "nm_alcohol",
+    "variant": "cdt_high_denied",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "barretts:none",
+    "key": "barretts",
+    "variant": "none",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "ADB",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.87,
+   "bmi": 28.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "David",
+  "last_name": "Mcdonald",
+  "sex": "M",
+  "dob": "2000-11-28",
+  "age": 25,
+  "address_state": "TN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "paramedic",
+  "occupation_class": "2A",
+  "annual_income": 19000,
+  "net_worth": 202000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 185.0,
+ "bp_systolic": 133,
+ "bp_diastolic": 88,
+ "pulse": 55,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 34.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2025-02-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "other"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0964-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2025-03-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2025-04-08",
+     "stop": "2025-05-03",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2025-04-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0964-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 54,
+   "living": false
+  },
+  {
+   "relation": "brother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 38,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 69,
+   "age_at_death": 81,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0964-P1",
+   "name": "Dr. Bethany Price",
+   "specialty": "family medicine",
+   "practice": "Thomas-Hanson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0964-P2",
+   "name": "Dr. Amanda Nunez",
+   "specialty": "gastroenterology",
+   "practice": "Moore-Scott Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 295.0,
+  "hdl": 44.0,
+  "ldl": 236.0,
+  "triglycerides": 74.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 98.0,
+  "a1c": 5.0,
+  "ast": 51.0,
+  "alt": 12.0,
+  "ggt": 111.0,
+  "alk_phos": 61.0,
+  "bilirubin": 0.5,
+  "albumin": 4.0,
+  "creatinine": 1.1,
+  "egfr": 77.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.4,
+  "cdt": 2.6,
+  "nt_probnp": 110.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

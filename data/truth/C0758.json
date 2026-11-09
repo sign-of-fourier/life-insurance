@@ -1,0 +1,285 @@
+{
+ "case_id": "C0758",
+ "seed": 360680863,
+ "app_date": "2025-08-05",
+ "design": {
+  "case_id": "C0758",
+  "seed": 360680863,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 61,
+  "sex": "F",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cancer:melanoma_1_y2-5",
+    "key": "cancer",
+    "variant": "melanoma_1_y2-5",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 5,
+     "years": 2
+    },
+    "params": {
+     "type": "melanoma_1",
+     "years_since_tx": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "lipids",
+     "Standard"
+    ]
+   ]
+  },
+  "benign": [
+   "hernia_repaired",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:melanoma_1_y2-5"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.515,
+   "bmi": 28.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Mary",
+  "last_name": "Clark",
+  "sex": "F",
+  "dob": "1964-08-17",
+  "age": 61,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "software engineer",
+  "occupation_class": "1A",
+  "annual_income": 58000,
+  "net_worth": 625000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [
+   "CTR",
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 58.0,
+ "weight_lb": 138.0,
+ "bp_systolic": 131,
+ "bp_diastolic": 90,
+ "pulse": 67,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2015-07-20",
+   "quit": "2022-11-12",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2022-04-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_1",
+    "years_since_tx": 2.1,
+    "stage": "I"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0758-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2015-10-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0758-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2022-09-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2022-10-13",
+     "stop": "2022-10-28",
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2022-09-05",
+     "stop": "2022-09-18",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0758-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 53,
+   "age_at_death": 55,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2020-02-20",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Netherlands",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0758-P1",
+   "name": "Dr. Jessica Huber",
+   "specialty": "family medicine",
+   "practice": "Gray Group Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0758-P2",
+   "name": "Dr. Andrew Mcbride",
+   "specialty": "oncology",
+   "practice": "Walker Inc Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 42.0,
+  "ldl": 209.0,
+  "triglycerides": 123.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 82.0,
+  "a1c": 5.0,
+  "ast": 20.0,
+  "alt": 42.0,
+  "ggt": 17.0,
+  "alk_phos": 64.0,
+  "bilirubin": 0.4,
+  "albumin": 4.8,
+  "creatinine": 1.2,
+  "egfr": 89.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.6,
+  "cdt": 1.5,
+  "nt_probnp": 72.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

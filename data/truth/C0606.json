@@ -1,0 +1,257 @@
+{
+ "case_id": "C0606",
+ "seed": 735506199,
+ "app_date": "2026-07-13",
+ "design": {
+  "case_id": "C0606",
+  "seed": 735506199,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 25,
+  "sex": "M",
+  "face": 3000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "tia:young",
+    "key": "tia",
+    "variant": "young",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "age": {
+      "lt": 50
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "CIA",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.364,
+   "bmi": 22.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Joshua",
+  "last_name": "Norton",
+  "sex": "M",
+  "dob": "2001-04-22",
+  "age": 25,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "registered nurse",
+  "occupation_class": "2A",
+  "annual_income": 274000,
+  "net_worth": 1243000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "GUL",
+  "riders_requested": [
+   "CIA",
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 121.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 89,
+ "pulse": 56,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "tia",
+   "label": "TIA",
+   "onset": "2019-02-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 7.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0606-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2020-08-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2020-09-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0606-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2018-07-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2018-08-04",
+     "stop": "2018-08-03",
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0606-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2018-04-12",
+   "code": "M08",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Spain",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0606-P1",
+   "name": "Dr. Francisco Morris",
+   "specialty": "family medicine",
+   "practice": "Lopez-Bentley Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0606-P2",
+   "name": "Dr. Eric Chavez",
+   "specialty": "neurology",
+   "practice": "Mckinney-Thomas Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 60.0,
+  "ldl": 202.0,
+  "triglycerides": 69.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 84.0,
+  "a1c": 5.1,
+  "ast": 35.0,
+  "alt": 41.0,
+  "ggt": 38.0,
+  "alk_phos": 86.0,
+  "bilirubin": 1.2,
+  "albumin": 4.1,
+  "creatinine": 0.9,
+  "egfr": 84.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.5,
+  "cdt": 0.8,
+  "nt_probnp": 37.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

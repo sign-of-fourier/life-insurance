@@ -1,0 +1,426 @@
+{
+ "case_id": "C0827",
+ "seed": 1054265184,
+ "app_date": "2026-07-10",
+ "design": {
+  "case_id": "C0827",
+  "seed": 1054265184,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 30,
+  "sex": "F",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "pulmonary_embolism:recurrent",
+    "key": "pulmonary_embolism",
+    "variant": "recurrent",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recurrent": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "multiple_sclerosis:moderate",
+    "key": "multiple_sclerosis",
+    "variant": "moderate",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "edss": [
+      2.5,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_alcohol:cdt_high_denied",
+    "key": "nm_alcohol",
+    "variant": "cdt_high_denied",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "pad_aaa:aaa_repaired",
+    "key": "pad_aaa",
+    "variant": "aaa_repaired",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "repaired_months": {
+      "ge": 6
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "tbi:residual",
+    "key": "tbi",
+    "variant": "residual",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "residual": true
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_lipids:lip_75",
+    "key": "nm_lipids",
+    "variant": "lip_75",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.759,
+   "bmi": 26.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kimberly",
+  "last_name": "Nixon",
+  "sex": "F",
+  "dob": "1996-02-03",
+  "age": 30,
+  "address_state": "LA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "electrician",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 120000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 59.0,
+ "weight_lb": 132.0,
+ "bp_systolic": 128,
+ "bp_diastolic": 90,
+ "pulse": 61,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 40.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2013-07-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 13.0,
+    "recurrent": true,
+    "provoked": true
+   },
+   "meds": [
+    {
+     "drug": "warfarin",
+     "dose": "5 mg",
+     "start": "2013-09-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    },
+    {
+     "drug": "apixaban",
+     "dose": "2.5 mg",
+     "start": "2013-07-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0827-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2018-07-10",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "progressive": false,
+    "edss": 4.0
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0827-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2020-07-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "aaa",
+    "smoker": false,
+    "size_cm": 5.1,
+    "repaired_months": 20
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0827-P4"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2021-01-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": 1,
+    "er_years_ago": 0.1,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2021-01-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0827-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tbi",
+   "label": "Concussion / TBI",
+   "onset": "2018-06-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "residual": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0827-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2021-04-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0827-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "United Kingdom",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0827-P1",
+   "name": "Dr. Donna Acosta",
+   "specialty": "family medicine",
+   "practice": "Callahan Hubbard and Martin Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0827-P2",
+   "name": "Dr. Cory Galloway",
+   "specialty": "pulmonology",
+   "practice": "Pope Thompson and Mckay Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0827-P3",
+   "name": "Dr. Robert Boyer",
+   "specialty": "neurology",
+   "practice": "Lin Lee and Bailey Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0827-P4",
+   "name": "Dr. Donald Garza",
+   "specialty": "cardiology",
+   "practice": "Grant Reed and Hunt Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 442.0,
+  "hdl": 48.0,
+  "ldl": 351.0,
+  "triglycerides": 214.0,
+  "tc_hdl_ratio": 9.2,
+  "glucose_fasting": 85.0,
+  "a1c": 5.4,
+  "ast": 62.0,
+  "alt": 18.0,
+  "ggt": 199.0,
+  "alk_phos": 68.0,
+  "bilirubin": 0.9,
+  "albumin": 4.7,
+  "creatinine": 1.1,
+  "egfr": 74.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 12.5,
+  "cdt": 2.7,
+  "nt_probnp": 76.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

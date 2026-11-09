@@ -1,0 +1,347 @@
+{
+ "case_id": "C0828",
+ "seed": 697796742,
+ "app_date": "2025-12-23",
+ "design": {
+  "case_id": "C0828",
+  "seed": 697796742,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 58,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "hiv:default",
+    "key": "hiv",
+    "variant": "default",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "ckd:egfr_45-59",
+    "key": "ckd",
+    "variant": "egfr_45-59",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": "45-59"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury",
+   "gerd",
+   "dental",
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.842,
+   "bmi": 31.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Gregg",
+  "last_name": "Clark",
+  "sex": "M",
+  "dob": "1968-03-06",
+  "age": 58,
+  "address_state": "KY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "accountant",
+  "occupation_class": "1A",
+  "annual_income": 158000,
+  "net_worth": 674000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 65.0,
+ "weight_lb": 190.0,
+ "bp_systolic": 119,
+ "bp_diastolic": 78,
+ "pulse": 81,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2022-05-19",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 9.8,
+    "undetectable_months": 17,
+    "cd4": 637,
+    "aids_defining": true,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "bictegravir-emtricitabine-tenofovir",
+     "dose": "50/200/25 mg",
+     "start": "2022-08-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0828-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ckd",
+   "label": "Chronic kidney disease (eGFR)",
+   "onset": "2020-05-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 47
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0828-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2011-01-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2011-02-26",
+     "stop": "2011-02-19",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0828-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2016-10-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2016-10-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0828-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2016-05-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2016-05-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0828-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2012-12-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2013-01-04",
+     "stop": "2013-01-28",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0828-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Northstar Life",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0828-P1",
+   "name": "Dr. Megan Phillips",
+   "specialty": "family medicine",
+   "practice": "Myers Richardson and Clark Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0828-P2",
+   "name": "Dr. Rachel Murphy",
+   "specialty": "rheumatology",
+   "practice": "Jimenez Edwards and Watson Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0828-P3",
+   "name": "Dr. Michael Oneal",
+   "specialty": "nephrology",
+   "practice": "Lam-Bell Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 52.0,
+  "ldl": 195.0,
+  "triglycerides": 170.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 88.0,
+  "a1c": 5.2,
+  "ast": 22.0,
+  "alt": 23.0,
+  "ggt": 39.0,
+  "alk_phos": 115.0,
+  "bilirubin": 0.9,
+  "albumin": 4.0,
+  "creatinine": 1.9,
+  "egfr": 47.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.5,
+  "cdt": 1.4,
+  "nt_probnp": 39.0,
+  "cotinine_urine": 3.0,
+  "hiv": 1.0,
+  "cocaine": 0.0,
+  "psa": 1.9
+ }
+}

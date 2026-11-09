@@ -1,0 +1,234 @@
+{
+ "case_id": "C0149",
+ "seed": 36888489,
+ "app_date": "2025-11-23",
+ "design": {
+  "case_id": "C0149",
+  "seed": 36888489,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 58,
+  "sex": "M",
+  "face": 1500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "substance_use_hard:hard_lt5",
+    "key": "substance_use_hard",
+    "variant": "hard_lt5",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "erectile_dysfunction"
+  ],
+  "grey": "GRY-2",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.887,
+   "bmi": 23.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Ernest",
+  "last_name": "Gibson",
+  "sex": "M",
+  "dob": "1967-06-01",
+  "age": 58,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "paramedic",
+  "occupation_class": "2A",
+  "annual_income": 112000,
+  "net_worth": 147000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "UL",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 67.0,
+ "weight_lb": 151.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 86,
+ "pulse": 68,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2018-10-06",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "substance": "heroin",
+    "years_since_last_use": 2.4,
+    "maintenance": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0149-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2022-12-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "20 mg",
+     "start": "2022-12-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0149-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-02-10",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-12-24",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "New Zealand",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0149-P1",
+   "name": "Dr. William Stephens",
+   "specialty": "family medicine",
+   "practice": "Johnson-Molina Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0149-P2",
+   "name": "Dr. Joshua Rivera",
+   "specialty": "addiction medicine",
+   "practice": "Edwards-Vincent Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 43.0,
+  "ldl": 225.0,
+  "triglycerides": 112.0,
+  "tc_hdl_ratio": 6.8,
+  "glucose_fasting": 80.0,
+  "a1c": 5.1,
+  "ast": 24.0,
+  "alt": 32.0,
+  "ggt": 51.0,
+  "alk_phos": 84.0,
+  "bilirubin": 0.8,
+  "albumin": 4.5,
+  "creatinine": 1.2,
+  "egfr": 82.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.4,
+  "cdt": 1.1,
+  "nt_probnp": 60.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.2
+ }
+}

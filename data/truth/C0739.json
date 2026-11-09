@@ -1,0 +1,308 @@
+{
+ "case_id": "C0739",
+ "seed": 725307197,
+ "app_date": "2026-07-27",
+ "design": {
+  "case_id": "C0739",
+  "seed": 725307197,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 36,
+  "sex": "F",
+  "face": 3000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:melanoma_2_y10-100",
+    "key": "cancer",
+    "variant": "melanoma_2_y10-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "melanoma_2",
+     "years_since_tx": [
+      10,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "mvr",
+     "Standard Plus"
+    ],
+    [
+     "bp",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "acne",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "CTR",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.705,
+   "bmi": 29.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kristen",
+  "last_name": "Fowler",
+  "sex": "F",
+  "dob": "1990-01-30",
+  "age": 36,
+  "address_state": "VA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "lineworker (utility)",
+  "occupation_class": "3A",
+  "annual_income": 141000,
+  "net_worth": 917000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "KPE"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 59.0,
+ "weight_lb": 146.0,
+ "bp_systolic": 143,
+ "bp_diastolic": 84,
+ "pulse": 54,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2006-04-28",
+   "quit": "2024-12-05",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2014-07-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "melanoma_2",
+    "years_since_tx": 11.4,
+    "stage": "II"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0739-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2020-06-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2020-08-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0739-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2017-04-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2017-06-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2017-06-02",
+     "stop": "2017-05-07",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0739-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 49,
+   "age_at_death": 47,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 50,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-08-11",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-06-22",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-06-04",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-04-24",
+   "code": "A03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0739-P1",
+   "name": "Dr. Erika Harris",
+   "specialty": "family medicine",
+   "practice": "Branch Group Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0739-P2",
+   "name": "Dr. Steven Miller",
+   "specialty": "oncology",
+   "practice": "Young PLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 68.0,
+  "ldl": 193.0,
+  "triglycerides": 89.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 91.0,
+  "a1c": 4.9,
+  "ast": 38.0,
+  "alt": 14.0,
+  "ggt": 18.0,
+  "alk_phos": 79.0,
+  "bilirubin": 1.0,
+  "albumin": 4.5,
+  "creatinine": 0.8,
+  "egfr": 80.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.8,
+  "cdt": 0.9,
+  "nt_probnp": 40.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

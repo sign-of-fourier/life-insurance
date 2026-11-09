@@ -1,0 +1,283 @@
+{
+ "case_id": "C0338",
+ "seed": 426140759,
+ "app_date": "2025-10-04",
+ "design": {
+  "case_id": "C0338",
+  "seed": 426140759,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 58,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "stroke:recurrent",
+    "key": "stroke",
+    "variant": "recurrent",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recurrent": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "kidney_stones",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.308,
+   "bmi": 32.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Deborah",
+  "last_name": "Weaver",
+  "sex": "F",
+  "dob": "1967-12-29",
+  "age": 58,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "roofer",
+  "occupation_class": "3A",
+  "annual_income": 432000,
+  "net_worth": 2723000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 59.0,
+ "weight_lb": 160.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 87,
+ "pulse": 80,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "stroke",
+   "label": "Stroke (CVA)",
+   "onset": "2009-04-05",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 16.5,
+    "recurrent": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0338-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2021-05-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2021-07-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0338-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2013-08-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2013-10-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0338-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2024-02-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "40 mg",
+     "start": "2024-04-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2024-03-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0338-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 78,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Switzerland",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0338-P1",
+   "name": "Dr. Natalie Garcia",
+   "specialty": "family medicine",
+   "practice": "Smith Inc Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0338-P2",
+   "name": "Dr. Stephen Jones",
+   "specialty": "neurology",
+   "practice": "Payne-Patel Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 55.0,
+  "ldl": 203.0,
+  "triglycerides": 81.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 95.0,
+  "a1c": 5.5,
+  "ast": 35.0,
+  "alt": 27.0,
+  "ggt": 37.0,
+  "alk_phos": 117.0,
+  "bilirubin": 0.6,
+  "albumin": 4.4,
+  "creatinine": 0.7,
+  "egfr": 78.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.8,
+  "cdt": 1.2,
+  "nt_probnp": 84.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

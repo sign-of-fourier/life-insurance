@@ -1,0 +1,261 @@
+{
+ "case_id": "C0940",
+ "seed": 1050166563,
+ "app_date": "2025-09-16",
+ "design": {
+  "case_id": "C0940",
+  "seed": 1050166563,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 70,
+  "sex": "M",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cirrhosis:any",
+    "key": "cirrhosis",
+    "variant": "any",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "CTR",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.658,
+   "bmi": 23.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "David",
+  "last_name": "Moreno",
+  "sex": "M",
+  "dob": "1955-06-18",
+  "age": 70,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "firefighter",
+  "occupation_class": "3A",
+  "annual_income": 303000,
+  "net_worth": 424000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 70.0,
+ "weight_lb": 164.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 82,
+ "pulse": 67,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cirrhosis",
+   "label": "Cirrhosis",
+   "onset": "2012-09-16",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0940-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2012-11-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2013-01-09",
+     "stop": "2012-12-30",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0940-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2020-05-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2020-06-18",
+     "stop": "2020-06-19",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0940-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 74,
+   "age_at_death": 79,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-05-05",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "United Kingdom",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Pinecrest Mutual",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0940-P1",
+   "name": "Dr. Nancy Garner",
+   "specialty": "family medicine",
+   "practice": "Aguilar Johnson and Mercado Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0940-P2",
+   "name": "Dr. Lisa Carter",
+   "specialty": "gastroenterology",
+   "practice": "Hardin-Banks Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 47.0,
+  "ldl": 199.0,
+  "triglycerides": 183.0,
+  "tc_hdl_ratio": 6.0,
+  "glucose_fasting": 96.0,
+  "a1c": 5.1,
+  "ast": 31.0,
+  "alt": 33.0,
+  "ggt": 13.0,
+  "alk_phos": 66.0,
+  "bilirubin": 1.1,
+  "albumin": 4.1,
+  "creatinine": 1.0,
+  "egfr": 80.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.2,
+  "cdt": 1.0,
+  "nt_probnp": 28.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.1
+ }
+}

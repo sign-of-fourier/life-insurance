@@ -1,0 +1,289 @@
+{
+ "case_id": "C0883",
+ "seed": 318843382,
+ "app_date": "2025-11-04",
+ "design": {
+  "case_id": "C0883",
+  "seed": 318843382,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 69,
+  "sex": "F",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "nm_surgery:surgery_scheduled",
+    "key": "nm_surgery",
+    "variant": "surgery_scheduled",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "bipolar:bp1_stable",
+    "key": "bipolar",
+    "variant": "bp1_stable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "I",
+     "stable_years": {
+      "ge": 2
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple",
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "OIR",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.254,
+   "bmi": 20.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_surgery": "surgery_scheduled"
+  }
+ },
+ "person": {
+  "first_name": "Elizabeth",
+  "last_name": "Gallagher",
+  "sex": "F",
+  "dob": "1956-10-04",
+  "age": 69,
+  "address_state": "CO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 94520,
+  "net_worth": 2363000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [
+   "OIR",
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 124.0,
+ "bp_systolic": 114,
+ "bp_diastolic": 76,
+ "pulse": 55,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "5/yr",
+   "start": "2012-11-07",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2008-05-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "I",
+    "stable_years": 10.7,
+    "hospitalization_years_ago": null,
+    "compliant": true
+   },
+   "meds": [
+    {
+     "drug": "olanzapine",
+     "dose": "10 mg",
+     "start": "2008-07-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0883-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2014-09-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "25 mcg",
+     "start": "2014-09-28",
+     "stop": "2014-11-13",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0883-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2019-11-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2019-12-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0883-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 70,
+   "age_at_death": 83,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-04-17",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0883-P1",
+   "name": "Dr. Anthony Smith",
+   "specialty": "family medicine",
+   "practice": "Duran-Flores Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0883-P2",
+   "name": "Dr. Kelly Marquez",
+   "specialty": "psychiatry",
+   "practice": "Williams-Lewis Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 59.0,
+  "ldl": 197.0,
+  "triglycerides": 107.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 92.0,
+  "a1c": 5.3,
+  "ast": 20.0,
+  "alt": 37.0,
+  "ggt": 31.0,
+  "alk_phos": 116.0,
+  "bilirubin": 1.1,
+  "albumin": 4.0,
+  "creatinine": 0.9,
+  "egfr": 71.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.9,
+  "cdt": 1.2,
+  "nt_probnp": 50.0,
+  "cotinine_urine": 16.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

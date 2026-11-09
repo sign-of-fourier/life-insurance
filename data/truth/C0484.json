@@ -1,0 +1,301 @@
+{
+ "case_id": "C0484",
+ "seed": 265306237,
+ "app_date": "2026-05-18",
+ "design": {
+  "case_id": "C0484",
+  "seed": 265306237,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 26,
+  "sex": "M",
+  "face": 5000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "bipolar:bp2_stable",
+    "key": "bipolar",
+    "variant": "bp2_stable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "II",
+     "stable_years": {
+      "ge": 2
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.687,
+   "bmi": 26.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "John",
+  "last_name": "Brown",
+  "sex": "M",
+  "dob": "2000-11-07",
+  "age": 26,
+  "address_state": "UT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dentist",
+  "occupation_class": "1A",
+  "annual_income": 242000,
+  "net_worth": 2313000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 60.0,
+ "weight_lb": 135.0,
+ "bp_systolic": 113,
+ "bp_diastolic": 81,
+ "pulse": 79,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2017-07-01",
+   "quit": "2024-04-27",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2021-07-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "II",
+    "stable_years": 3.9,
+    "hospitalization_years_ago": null,
+    "compliant": true
+   },
+   "meds": [
+    {
+     "drug": "olanzapine",
+     "dose": "5 mg",
+     "start": "2021-10-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0484-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2021-07-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F2"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0484-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2025-12-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "100 mg",
+     "start": "2026-01-02",
+     "stop": "2026-02-03",
+     "prescriber_id": null,
+     "indication": "gout"
+    },
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2026-02-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0484-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 65,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-12-08",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0484-P1",
+   "name": "Dr. Laura Lowe",
+   "specialty": "family medicine",
+   "practice": "Ball and Sons Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0484-P2",
+   "name": "Dr. Paula Tucker",
+   "specialty": "psychiatry",
+   "practice": "Singh-Medina Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0484-P3",
+   "name": "Dr. Matthew Carrillo",
+   "specialty": "gastroenterology",
+   "practice": "Smith Inc Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 50.0,
+  "ldl": 196.0,
+  "triglycerides": 159.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 86.0,
+  "a1c": 5.1,
+  "ast": 65.0,
+  "alt": 84.0,
+  "ggt": 40.0,
+  "alk_phos": 116.0,
+  "bilirubin": 0.6,
+  "albumin": 3.8,
+  "creatinine": 1.1,
+  "egfr": 103.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.8,
+  "cdt": 1.0,
+  "nt_probnp": 106.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

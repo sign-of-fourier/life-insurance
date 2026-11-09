@@ -1,0 +1,492 @@
+{
+ "case_id": "C0664",
+ "seed": 181459415,
+ "app_date": "2025-12-24",
+ "design": {
+  "case_id": "C0664",
+  "seed": 181459415,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 56,
+  "sex": "F",
+  "face": 2000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "diabetes_t2:age50-59_a1c8.0-8.99",
+    "key": "diabetes_t2",
+    "variant": "age50-59_a1c8.0-8.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      8.0,
+      8.99
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hypertension:bp_100",
+    "key": "hypertension",
+    "variant": "bp_100",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "bp_band": "171-180/106-110",
+     "agents": 1
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cad:ev40-49_y5-100",
+    "key": "cad",
+    "variant": "ev40-49_y5-100",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      40,
+      49
+     ],
+     "years_since": [
+      5,
+      100
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple"
+  ],
+  "grey": "GRY-6",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CIA",
+   "CTR",
+   "LTA"
+  ],
+  "_extra": {
+   "log": [
+    "cad modifier ef"
+   ],
+   "fin_ratio": 0.502,
+   "bmi": 21.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Haley",
+  "last_name": "Allen",
+  "sex": "F",
+  "dob": "1970-02-19",
+  "age": 56,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "HVAC technician",
+  "occupation_class": "3A",
+  "annual_income": 265000,
+  "net_worth": 1246000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "CTR",
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 66.0,
+ "weight_lb": 133.0,
+ "bp_systolic": 178,
+ "bp_diastolic": 108,
+ "pulse": 59,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2019-04-13",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 8.7,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 6.7,
+    "age_at_dx": 49,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "1000 mg",
+     "start": "2019-08-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2019-05-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "tirzepatide",
+     "dose": "5 mg",
+     "start": "2019-07-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0664-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2021-04-10",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "agents": 1,
+    "bp_band": "171-180/106-110"
+   },
+   "meds": [
+    {
+     "drug": "valsartan",
+     "dose": "320 mg",
+     "start": "2021-07-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0664-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2014-12-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_event": 45,
+    "years_since": 11,
+    "event": "MI",
+    "ef": 47,
+    "angina": false,
+    "vessels": 2,
+    "ldl": 106,
+    "abnormal_stress": false,
+    "normal_stress_12mo": true,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "20 mg",
+     "start": "2015-04-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2015-02-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "50 mg",
+     "start": "2014-12-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0664-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2010-05-20",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 15.6,
+    "organ": "liver"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus",
+     "dose": "1 mg",
+     "start": "2010-07-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0664-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2010-09-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": true,
+    "compliant": false,
+    "ahi": 36
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0664-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2016-11-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "25 mcg",
+     "start": "2016-12-04",
+     "stop": "2017-01-19",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0664-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 77,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-09-17",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-12-15",
+   "code": "N04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Atlas Assurance",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0664-P1",
+   "name": "Dr. Michael Rogers",
+   "specialty": "family medicine",
+   "practice": "King and Sons Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0664-P2",
+   "name": "Dr. Jimmy Ryan",
+   "specialty": "endocrinology",
+   "practice": "Daniel Group Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0664-P3",
+   "name": "Dr. Ronald Delgado",
+   "specialty": "cardiology",
+   "practice": "Marks Jackson and Rodriguez Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0664-P4",
+   "name": "Dr. Eric Wang",
+   "specialty": "pulmonology",
+   "practice": "Lee-Roman Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 72.0,
+  "ldl": 187.0,
+  "triglycerides": 132.0,
+  "tc_hdl_ratio": 4.0,
+  "glucose_fasting": 213.0,
+  "a1c": 8.9,
+  "ast": 27.0,
+  "alt": 14.0,
+  "ggt": 23.0,
+  "alk_phos": 49.0,
+  "bilirubin": 1.1,
+  "albumin": 4.6,
+  "creatinine": 1.2,
+  "egfr": 85.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.2,
+  "cdt": 1.2,
+  "nt_probnp": 535.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,282 @@
+{
+ "case_id": "C0132",
+ "seed": 803971545,
+ "app_date": "2026-09-05",
+ "design": {
+  "case_id": "C0132",
+  "seed": 803971545,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 47,
+  "sex": "M",
+  "face": 100000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_criminal:pending_felony",
+    "key": "nm_criminal",
+    "variant": "pending_felony",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "neuropathy:idiopathic",
+    "key": "neuropathy",
+    "variant": "idiopathic",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "erectile_dysfunction",
+   "vitamin_d_deficiency",
+   "hypothyroidism_simple"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.254,
+   "bmi": 23.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_criminal": "pending_felony"
+  }
+ },
+ "person": {
+  "first_name": "Kevin",
+  "last_name": "Harris",
+  "sex": "M",
+  "dob": "1979-11-21",
+  "age": 47,
+  "address_state": "MN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "marketing manager",
+  "occupation_class": "1A",
+  "annual_income": 19000,
+  "net_worth": 46000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "GUL",
+  "riders_requested": [
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 62.0,
+ "weight_lb": 126.0,
+ "bp_systolic": 125,
+ "bp_diastolic": 73,
+ "pulse": 60,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "neuropathy",
+   "label": "Peripheral neuropathy (idiopathic)",
+   "onset": "2023-12-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2021-11-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "20 mg",
+     "start": "2022-01-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0132-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2019-04-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2019-05-30",
+     "stop": "2019-04-21",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0132-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2016-06-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "75 mcg",
+     "start": "2016-08-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0132-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 75,
+   "age_at_death": 89,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-10-05",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-06-30",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0132-P1",
+   "name": "Dr. David Johnson",
+   "specialty": "family medicine",
+   "practice": "Cannon-Myers Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 51.0,
+  "ldl": 214.0,
+  "triglycerides": 85.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 78.0,
+  "a1c": 5.1,
+  "ast": 27.0,
+  "alt": 32.0,
+  "ggt": 36.0,
+  "alk_phos": 104.0,
+  "bilirubin": 0.6,
+  "albumin": 4.8,
+  "creatinine": 0.8,
+  "egfr": 98.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.4,
+  "nt_probnp": 50.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.4
+ }
+}

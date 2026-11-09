@@ -1,0 +1,267 @@
+{
+ "case_id": "C0368",
+ "seed": 854369260,
+ "app_date": "2026-09-26",
+ "design": {
+  "case_id": "C0368",
+  "seed": 854369260,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 24,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "substance_use_hard:hard_gt10",
+    "key": "substance_use_hard",
+    "variant": "hard_gt10",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "bp",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "hypothyroidism_simple"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "ADB",
+   "OIR",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.784,
+   "bmi": 29.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Louis",
+  "last_name": "Simon",
+  "sex": "M",
+  "dob": "2002-10-17",
+  "age": 24,
+  "address_state": "IA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "construction laborer",
+  "occupation_class": "3A",
+  "annual_income": 21000,
+  "net_worth": 132000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "OIR",
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 171.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 90,
+ "pulse": 82,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2020-12-28",
+   "quit": "2022-02-01",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "1996-12-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "substance": "methamphetamine",
+    "years_since_last_use": 20.3,
+    "maintenance": false
+   },
+   "meds": [
+    {
+     "drug": "methadone",
+     "dose": "10 mg",
+     "start": "1997-02-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0368-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2023-12-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "125 mcg",
+     "start": "2024-02-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0368-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 41,
+   "age_at_death": 58,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 55,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-04-27",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-03-27",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0368-P1",
+   "name": "Dr. Kathryn Olson",
+   "specialty": "family medicine",
+   "practice": "Chambers Olson and Harris Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0368-P2",
+   "name": "Dr. Grant Holmes",
+   "specialty": "addiction medicine",
+   "practice": "Fleming PLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 259.0,
+  "hdl": 54.0,
+  "ldl": 162.0,
+  "triglycerides": 213.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 87.0,
+  "a1c": 5.1,
+  "ast": 37.0,
+  "alt": 25.0,
+  "ggt": 25.0,
+  "alk_phos": 74.0,
+  "bilirubin": 1.2,
+  "albumin": 4.2,
+  "creatinine": 0.8,
+  "egfr": 72.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.3,
+  "nt_probnp": 66.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

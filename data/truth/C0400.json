@@ -1,0 +1,237 @@
+{
+ "case_id": "C0400",
+ "seed": 570687145,
+ "app_date": "2025-11-13",
+ "design": {
+  "case_id": "C0400",
+  "seed": 570687145,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 19,
+  "sex": "M",
+  "face": 7500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "pancreatitis:alcohol",
+    "key": "pancreatitis",
+    "variant": "alcohol",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cause": "alcohol"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.291,
+   "bmi": 30.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Eric",
+  "last_name": "Moore",
+  "sex": "M",
+  "dob": "2006-08-30",
+  "age": 19,
+  "address_state": "TX",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 860000,
+  "net_worth": 3572000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "GUL",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 60.0,
+ "weight_lb": 158.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 66,
+ "pulse": 64,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "12/yr",
+   "start": "2021-11-13",
+   "quit": null,
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2023-12-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic": false,
+    "cause": "alcohol"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0400-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2024-04-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2024-06-21",
+     "stop": "2024-05-16",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2024-06-12",
+     "stop": "2024-06-04",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0400-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-07-19",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-07-02",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0400-P1",
+   "name": "Dr. Brian Mitchell",
+   "specialty": "family medicine",
+   "practice": "Burton Gillespie and Hansen Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0400-P2",
+   "name": "Dr. Erin Johnson",
+   "specialty": "gastroenterology",
+   "practice": "Jarvis-Dennis Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 57.0,
+  "ldl": 203.0,
+  "triglycerides": 76.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 95.0,
+  "a1c": 5.5,
+  "ast": 22.0,
+  "alt": 13.0,
+  "ggt": 11.0,
+  "alk_phos": 54.0,
+  "bilirubin": 1.0,
+  "albumin": 4.8,
+  "creatinine": 0.8,
+  "egfr": 78.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.3,
+  "cdt": 0.9,
+  "nt_probnp": 78.0,
+  "cotinine_urine": 30.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

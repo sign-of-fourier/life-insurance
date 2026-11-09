@@ -1,0 +1,372 @@
+{
+ "case_id": "C0979",
+ "seed": 224852223,
+ "app_date": "2026-07-25",
+ "design": {
+  "case_id": "C0979",
+  "seed": 224852223,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 60,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:colon_3_y10-100",
+    "key": "cancer",
+    "variant": "colon_3_y10-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "colon_3",
+     "years_since_tx": [
+      10,
+      25
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "hypertension:two_agents",
+    "key": "hypertension",
+    "variant": "two_agents",
+    "chapter": "HTN",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "agents": 2
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.651,
+   "bmi": 31.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kristen",
+  "last_name": "Weaver",
+  "sex": "F",
+  "dob": "1966-07-01",
+  "age": 60,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "roofer",
+  "occupation_class": "3A",
+  "annual_income": 102000,
+  "net_worth": 1094000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 58.0,
+ "weight_lb": 152.0,
+ "bp_systolic": 135,
+ "bp_diastolic": 86,
+ "pulse": 64,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2003-08-15",
+   "quit": "2024-09-27",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2004-01-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "colon_3",
+    "years_since_tx": 21.6,
+    "stage": "III"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0979-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hypertension",
+   "label": "Hypertension",
+   "onset": "2024-12-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "agents": 2,
+    "bp_band": null
+   },
+   "meds": [
+    {
+     "drug": "amlodipine",
+     "dose": "10 mg",
+     "start": "2025-04-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    },
+    {
+     "drug": "chlorthalidone",
+     "dose": "25 mg",
+     "start": "2025-04-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypertension"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0979-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2023-11-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "ustekinumab",
+     "dose": "90 mg inj",
+     "start": "2023-11-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0979-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2016-04-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0979-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2014-09-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2014-09-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2014-10-29",
+     "stop": "2014-10-20",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0979-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 69,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-11-14",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-11-24",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2017-09-20",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0979-P1",
+   "name": "Dr. Gwendolyn Stephens",
+   "specialty": "family medicine",
+   "practice": "Hubbard Adams and Long Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0979-P2",
+   "name": "Dr. David Brown",
+   "specialty": "oncology",
+   "practice": "Mcdonald-Rose Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0979-P3",
+   "name": "Dr. William Boyd",
+   "specialty": "rheumatology",
+   "practice": "Johnson LLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 299.0,
+  "hdl": 56.0,
+  "ldl": 207.0,
+  "triglycerides": 176.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 90.0,
+  "a1c": 5.2,
+  "ast": 25.0,
+  "alt": 37.0,
+  "ggt": 54.0,
+  "alk_phos": 72.0,
+  "bilirubin": 0.8,
+  "albumin": 4.3,
+  "creatinine": 0.8,
+  "egfr": 90.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.1,
+  "nt_probnp": 59.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

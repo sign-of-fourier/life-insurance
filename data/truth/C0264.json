@@ -1,0 +1,285 @@
+{
+ "case_id": "C0264",
+ "seed": 225967425,
+ "app_date": "2025-06-13",
+ "design": {
+  "case_id": "C0264",
+  "seed": 225967425,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 67,
+  "sex": "M",
+  "face": 150000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "pulmonary_embolism:provoked",
+    "key": "pulmonary_embolism",
+    "variant": "provoked",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "sinusitis",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "moderate",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "LTA",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.75,
+   "bmi": 29.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Steven",
+  "last_name": "Miller",
+  "sex": "M",
+  "dob": "1958-11-02",
+  "age": 67,
+  "address_state": "NJ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 94000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "UL",
+  "riders_requested": [
+   "LTA",
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 163.0,
+ "bp_systolic": 141,
+ "bp_diastolic": 87,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2002-09-02",
+   "quit": "2023-04-08",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2015-10-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "years_since": 9.7,
+    "recurrent": false,
+    "provoked": true
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "2.5 mg",
+     "start": "2016-01-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0264-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2023-05-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2023-07-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2023-06-10",
+     "stop": "2023-06-03",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0264-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2024-06-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2024-08-02",
+     "stop": "2024-08-12",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0264-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 64,
+   "age_at_death": 87,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-05-12",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-01-31",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0264-P1",
+   "name": "Dr. Joseph Rodriguez",
+   "specialty": "family medicine",
+   "practice": "Martin-Smith Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0264-P2",
+   "name": "Dr. Matthew Roy",
+   "specialty": "pulmonology",
+   "practice": "Perez-Sanchez Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 244.0,
+  "hdl": 45.0,
+  "ldl": 180.0,
+  "triglycerides": 95.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 85.0,
+  "a1c": 5.5,
+  "ast": 37.0,
+  "alt": 31.0,
+  "ggt": 14.0,
+  "alk_phos": 46.0,
+  "bilirubin": 1.0,
+  "albumin": 4.0,
+  "creatinine": 0.8,
+  "egfr": 94.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.3,
+  "cdt": 1.1,
+  "nt_probnp": 55.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.5
+ }
+}

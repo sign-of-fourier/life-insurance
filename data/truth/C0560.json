@@ -1,0 +1,354 @@
+{
+ "case_id": "C0560",
+ "seed": 403133332,
+ "app_date": "2025-07-06",
+ "design": {
+  "case_id": "C0560",
+  "seed": 403133332,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 68,
+  "sex": "F",
+  "face": 150000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "pancreatitis:chronic",
+    "key": "pancreatitis",
+    "variant": "chronic",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic": true
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "bipolar:bp1_stable",
+    "key": "bipolar",
+    "variant": "bp1_stable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "I",
+     "stable_years": {
+      "ge": 2
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_avocation:hang_glide",
+    "key": "nm_avocation",
+    "variant": "hang_glide",
+    "chapter": "AVO",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 2.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.532,
+   "bmi": 20.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Cassandra",
+  "last_name": "Perry",
+  "sex": "F",
+  "dob": "1957-09-28",
+  "age": 68,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 17040,
+  "net_worth": 426000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 20",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 66.0,
+ "weight_lb": 128.0,
+ "bp_systolic": 119,
+ "bp_diastolic": 87,
+ "pulse": 78,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "8/yr",
+   "start": "2008-06-27",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2009-10-24",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "chronic": true,
+    "cause": "alcohol"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0560-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2017-02-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "I",
+    "stable_years": 7.2,
+    "hospitalization_years_ago": null,
+    "compliant": true
+   },
+   "meds": [
+    {
+     "drug": "lamotrigine",
+     "dose": "200 mg",
+     "start": "2017-05-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0560-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2022-09-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2022-10-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2022-10-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0560-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2014-07-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2014-08-01",
+     "stop": "2014-08-22",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0560-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 76,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-01-30",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hang_gliding",
+   "details": {
+    "flights_per_year": 14,
+    "intends_to_stop": false
+   },
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2017,
+   "company": "Harborview Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0560-P1",
+   "name": "Dr. Richard Burke",
+   "specialty": "family medicine",
+   "practice": "Bell Inc Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0560-P2",
+   "name": "Dr. Timothy Williams",
+   "specialty": "gastroenterology",
+   "practice": "Murray Rodriguez and Perez Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0560-P3",
+   "name": "Dr. John Rocha",
+   "specialty": "psychiatry",
+   "practice": "Rivera-Brady Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 294.0,
+  "hdl": 55.0,
+  "ldl": 214.0,
+  "triglycerides": 124.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 104.0,
+  "a1c": 5.2,
+  "ast": 36.0,
+  "alt": 33.0,
+  "ggt": 19.0,
+  "alk_phos": 109.0,
+  "bilirubin": 1.0,
+  "albumin": 4.7,
+  "creatinine": 1.0,
+  "egfr": 66.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.5,
+  "nt_probnp": 30.0,
+  "cotinine_urine": 34.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

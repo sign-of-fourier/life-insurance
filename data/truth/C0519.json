@@ -1,0 +1,290 @@
+{
+ "case_id": "C0519",
+ "seed": 956425834,
+ "app_date": "2025-12-05",
+ "design": {
+  "case_id": "C0519",
+  "seed": 956425834,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 58,
+  "sex": "M",
+  "face": 500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "parkinsons:late_onset",
+    "key": "parkinsons",
+    "variant": "late_onset",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "crohns:mild",
+    "key": "crohns",
+    "variant": "mild",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.539,
+   "bmi": 21.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Zachary",
+  "last_name": "Lewis",
+  "sex": "M",
+  "dob": "1968-02-16",
+  "age": 58,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retail store manager",
+  "occupation_class": "1A",
+  "annual_income": 61000,
+  "net_worth": 675000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 61.0,
+ "weight_lb": 113.0,
+ "bp_systolic": 137,
+ "bp_diastolic": 72,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2011-01-04",
+   "quit": "2022-08-19",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "parkinsons",
+   "label": "Parkinson's disease",
+   "onset": "2010-02-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_onset": 65
+   },
+   "meds": [
+    {
+     "drug": "carbidopa-levodopa",
+     "dose": "25/100 mg",
+     "start": "2010-04-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    },
+    {
+     "drug": "pramipexole",
+     "dose": "0.25 mg",
+     "start": "2010-06-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0519-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2014-07-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": false,
+    "surgery_years_ago": null
+   },
+   "meds": [
+    {
+     "drug": "ustekinumab",
+     "dose": "90 mg inj",
+     "start": "2014-08-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0519-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2016-10-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0519-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Iceland",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Pinecrest Mutual",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0519-P1",
+   "name": "Dr. Robert Moon",
+   "specialty": "family medicine",
+   "practice": "Logan Ltd Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0519-P2",
+   "name": "Dr. Kayla Nelson",
+   "specialty": "neurology",
+   "practice": "Jones Allen and Reed Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0519-P3",
+   "name": "Dr. Joshua Stokes",
+   "specialty": "gastroenterology",
+   "practice": "Heath Group Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 72.0,
+  "ldl": 200.0,
+  "triglycerides": 116.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 91.0,
+  "a1c": 5.5,
+  "ast": 47.0,
+  "alt": 69.0,
+  "ggt": 20.0,
+  "alk_phos": 92.0,
+  "bilirubin": 0.9,
+  "albumin": 4.5,
+  "creatinine": 0.9,
+  "egfr": 93.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.0,
+  "nt_probnp": 108.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.4
+ }
+}

@@ -1,0 +1,284 @@
+{
+ "case_id": "C0812",
+ "seed": 1040758491,
+ "app_date": "2026-01-10",
+ "design": {
+  "case_id": "C0812",
+  "seed": 1040758491,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 73,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "frailty:adl",
+    "key": "frailty",
+    "variant": "adl",
+    "chapter": "GER",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "adl_dependency": true
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "uti",
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.533,
+   "bmi": 28.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Richard",
+  "last_name": "Green",
+  "sex": "M",
+  "dob": "1953-02-27",
+  "age": 73,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 1877000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 74.0,
+ "weight_lb": 218.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 73,
+ "pulse": 88,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "frailty",
+   "label": "Frailty findings (71+)",
+   "onset": "2016-09-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "adl_dependency": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0812-P1"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2018-01-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2018-03-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0812-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2021-11-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2021-12-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0812-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2011-04-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2011-04-08",
+     "stop": "2011-06-01",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2011-04-11",
+     "stop": "2011-04-16",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0812-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-03-22",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Northstar Life",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0812-P1",
+   "name": "Dr. Jacob Powell",
+   "specialty": "family medicine",
+   "practice": "Keller-Brewer Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 262.0,
+  "hdl": 40.0,
+  "ldl": 189.0,
+  "triglycerides": 164.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 104.0,
+  "a1c": 4.9,
+  "ast": 28.0,
+  "alt": 16.0,
+  "ggt": 33.0,
+  "alk_phos": 82.0,
+  "bilirubin": 1.0,
+  "albumin": 4.4,
+  "creatinine": 0.7,
+  "egfr": 95.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.3,
+  "cdt": 0.8,
+  "nt_probnp": 59.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.4
+ }
+}

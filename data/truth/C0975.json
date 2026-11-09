@@ -1,0 +1,278 @@
+{
+ "case_id": "C0975",
+ "seed": 763015508,
+ "app_date": "2026-03-10",
+ "design": {
+  "case_id": "C0975",
+  "seed": 763015508,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 42,
+  "sex": "M",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_mvr:dui_two_5y",
+    "key": "nm_mvr",
+    "variant": "dui_two_5y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "barretts:lgd",
+    "key": "barretts",
+    "variant": "lgd",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "dysplasia": "low"
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "bph",
+   "uti"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.616,
+   "bmi": 32.4,
+   "foreign_country": "Brazil",
+   "cessation_rx_quit": "2025-08-14"
+  }
+ },
+ "person": {
+  "first_name": "Jason",
+  "last_name": "Reeves",
+  "sex": "M",
+  "dob": "1984-05-25",
+  "age": 42,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "Brazil",
+  "years_in_us": 2.8,
+  "visa_type": "H-1B",
+  "occupation": "farmer",
+  "occupation_class": "2A",
+  "annual_income": 81000,
+  "net_worth": 744000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 74.0,
+ "weight_lb": 252.0,
+ "bp_systolic": 131,
+ "bp_diastolic": 75,
+ "pulse": 85,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2003-09-02",
+   "quit": "2025-08-14",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "barretts",
+   "label": "Barrett's esophagus",
+   "onset": "2011-06-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "dysplasia": "low"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0975-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2016-05-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2016-05-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    },
+    {
+     "drug": "finasteride",
+     "dose": "5 mg",
+     "start": "2016-07-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0975-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2021-07-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2021-08-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0975-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-11-11",
+   "code": "D04",
+   "disclosure": "omitted"
+  },
+  {
+   "date": "2023-07-05",
+   "code": "D06",
+   "disclosure": "omitted"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0975-P1",
+   "name": "Dr. Tracy Potter",
+   "specialty": "family medicine",
+   "practice": "Henry-White Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Brazil"
+  },
+  {
+   "provider_id": "C0975-P2",
+   "name": "Dr. Robert Davis",
+   "specialty": "gastroenterology",
+   "practice": "Jimenez Hutchinson and Lawson Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 47.0,
+  "ldl": 206.0,
+  "triglycerides": 172.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 95.0,
+  "a1c": 4.9,
+  "ast": 27.0,
+  "alt": 14.0,
+  "ggt": 46.0,
+  "alk_phos": 115.0,
+  "bilirubin": 1.1,
+  "albumin": 4.4,
+  "creatinine": 1.1,
+  "egfr": 70.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.2,
+  "cdt": 1.3,
+  "nt_probnp": 105.0,
+  "cotinine_urine": 111.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.2
+ }
+}

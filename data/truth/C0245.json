@@ -1,0 +1,445 @@
+{
+ "case_id": "C0245",
+ "seed": 840727918,
+ "app_date": "2025-05-26",
+ "design": {
+  "case_id": "C0245",
+  "seed": 840727918,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 36,
+  "sex": "F",
+  "face": 5000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "valve:moderate",
+    "key": "valve",
+    "variant": "moderate",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "severity_grade": "moderate"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "arrhythmia_other:svt",
+    "key": "arrhythmia_other",
+    "variant": "svt",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "svt"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_marijuana:mj_daily",
+    "key": "nm_marijuana",
+    "variant": "mj_daily",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "eating_disorder:recovered",
+    "key": "eating_disorder",
+    "variant": "recovered",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recovered_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "diabetes_t2:age18-39_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age18-39_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones",
+   "seasonal_allergy",
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "specialist_letter",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CIA",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.568,
+   "bmi": 32.7,
+   "foreign_country": "Romania",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Breanna",
+  "last_name": "Miller",
+  "sex": "F",
+  "dob": "1989-10-10",
+  "age": 36,
+  "address_state": "MI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": 2.5,
+  "visa_type": null,
+  "occupation": "software engineer",
+  "occupation_class": "1A",
+  "annual_income": 293000,
+  "net_worth": 2447000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA",
+   "WP"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 221.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 83,
+ "pulse": 89,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2007-02-20",
+   "quit": "2023-01-07",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 12,
+   "form": "smoked",
+   "disclosure": "honest"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "valve",
+   "label": "Valvular disease / murmur",
+   "onset": "2024-07-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "mvp",
+    "severity_grade": "moderate",
+    "repaired_years": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0245-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2019-02-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "svt",
+    "ablated": false,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0245-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2024-05-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "recovered_years": 9.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0245-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2019-05-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 3.2,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 6,
+    "age_at_dx": 30,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2019-07-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0245-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2023-07-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2023-07-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0245-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2011-11-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2012-01-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2011-12-14",
+     "stop": "2011-12-07",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0245-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-04-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0245-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0245-P1",
+   "name": "Dr. Shawn Barnett",
+   "specialty": "family medicine",
+   "practice": "Hernandez Hansen and Watson Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Romania"
+  },
+  {
+   "provider_id": "C0245-P2",
+   "name": "Dr. Walter Morales",
+   "specialty": "cardiology",
+   "practice": "Higgins Chapman and Jones Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0245-P3",
+   "name": "Dr. Christopher Grant",
+   "specialty": "psychiatry",
+   "practice": "Miller-Gutierrez Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0245-P4",
+   "name": "Dr. Gerald Gross",
+   "specialty": "endocrinology",
+   "practice": "Edwards-Burns Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 284.0,
+  "hdl": 57.0,
+  "ldl": 214.0,
+  "triglycerides": 61.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 45.0,
+  "a1c": 3.4,
+  "ast": 31.0,
+  "alt": 14.0,
+  "ggt": 40.0,
+  "alk_phos": 42.0,
+  "bilirubin": 1.1,
+  "albumin": 4.7,
+  "creatinine": 1.2,
+  "egfr": 113.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.8,
+  "cdt": 1.4,
+  "nt_probnp": 21.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

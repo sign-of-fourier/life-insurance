@@ -1,0 +1,377 @@
+{
+ "case_id": "C0744",
+ "seed": 561873148,
+ "app_date": "2026-03-07",
+ "design": {
+  "case_id": "C0744",
+  "seed": 561873148,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 43,
+  "sex": "F",
+  "face": 500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "eating_disorder:recovered",
+    "key": "eating_disorder",
+    "variant": "recovered",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recovered_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cancer:nhl_aggressive_y5-100",
+    "key": "cancer",
+    "variant": "nhl_aggressive_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "nhl_aggressive",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "hypothyroidism_simple",
+   "seasonal_allergy",
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.651,
+   "bmi": 31.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Saunders",
+  "sex": "F",
+  "dob": "1983-05-02",
+  "age": 43,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "professor",
+  "occupation_class": "1A",
+  "annual_income": 38000,
+  "net_worth": 135000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "GUL",
+  "riders_requested": [
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 165.0,
+ "bp_systolic": 129,
+ "bp_diastolic": 86,
+ "pulse": 55,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2011-06-12",
+   "quit": "2024-07-19",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2014-04-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "recovered_years": 9.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0744-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2015-11-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "nhl_aggressive",
+    "years_since_tx": 10.0,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0744-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2016-08-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2016-10-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0744-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2017-11-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2017-12-08",
+     "stop": "2017-12-06",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0744-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2016-04-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2016-04-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0744-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2017-03-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2017-05-21",
+     "stop": "2017-04-23",
+     "prescriber_id": null,
+     "indication": "uti"
+    },
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2017-04-12",
+     "stop": "2017-05-02",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0744-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 78,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2020-01-16",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0744-P1",
+   "name": "Dr. Ashley Young",
+   "specialty": "family medicine",
+   "practice": "Kelly Scott and Cardenas Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0744-P2",
+   "name": "Dr. Michelle Martinez",
+   "specialty": "psychiatry",
+   "practice": "Silva-Byrd Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0744-P3",
+   "name": "Dr. Courtney Hill",
+   "specialty": "oncology",
+   "practice": "Henry-Torres Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 42.0,
+  "ldl": 203.0,
+  "triglycerides": 190.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 82.0,
+  "a1c": 5.0,
+  "ast": 21.0,
+  "alt": 40.0,
+  "ggt": 35.0,
+  "alk_phos": 95.0,
+  "bilirubin": 0.4,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 110.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.1,
+  "nt_probnp": 72.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

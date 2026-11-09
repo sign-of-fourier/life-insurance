@@ -1,0 +1,398 @@
+{
+ "case_id": "C0711",
+ "seed": 127982713,
+ "app_date": "2026-01-24",
+ "design": {
+  "case_id": "C0711",
+  "seed": 127982713,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 71,
+  "sex": "M",
+  "face": 150000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cad:ev50-59_y5-100",
+    "key": "cad",
+    "variant": "ev50-59_y5-100",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      50,
+      59
+     ],
+     "years_since": [
+      5,
+      100
+     ]
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "tia:older",
+    "key": "tia",
+    "variant": "older",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "diabetes_t1:age70-120_a1c7.0",
+    "key": "diabetes_t1",
+    "variant": "age70-120_a1c7.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      7.0,
+      7.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.747,
+   "bmi": 32.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Spencer",
+  "last_name": "Walters",
+  "sex": "M",
+  "dob": "1954-09-03",
+  "age": 71,
+  "address_state": "MN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 16040,
+  "net_worth": 401000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "GUL",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 73.0,
+ "weight_lb": 243.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 80,
+ "pulse": 73,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2014-01-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_event": 59,
+    "years_since": 12,
+    "event": "stent",
+    "ef": 57,
+    "angina": false,
+    "vessels": 2,
+    "ldl": 102,
+    "abnormal_stress": false,
+    "normal_stress_12mo": false,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "20 mg",
+     "start": "2014-04-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2014-01-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "50 mg",
+     "start": "2014-05-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0711-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tia",
+   "label": "TIA",
+   "onset": "2022-12-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 3.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0711-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2013-10-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 7.5,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 12.3,
+    "age_at_dx": 58,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2013-10-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin aspart",
+     "dose": "100 u/mL",
+     "start": "2014-01-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0711-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2011-05-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2011-06-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0711-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2021-03-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0711-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 71,
+   "age_at_death": 78,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-06-01",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0711-P1",
+   "name": "Dr. Courtney Cruz",
+   "specialty": "family medicine",
+   "practice": "Gutierrez-Peterson Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0711-P2",
+   "name": "Dr. Maria Valdez",
+   "specialty": "cardiology",
+   "practice": "Park-Hunt Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0711-P3",
+   "name": "Dr. Vanessa Bryant",
+   "specialty": "neurology",
+   "practice": "Moss-Williams Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0711-P4",
+   "name": "Dr. Thomas Anderson",
+   "specialty": "endocrinology",
+   "practice": "Smith and Sons Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 51.0,
+  "ldl": 187.0,
+  "triglycerides": 220.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 171.0,
+  "a1c": 7.7,
+  "ast": 21.0,
+  "alt": 17.0,
+  "ggt": 13.0,
+  "alk_phos": 60.0,
+  "bilirubin": 0.7,
+  "albumin": 4.2,
+  "creatinine": 0.7,
+  "egfr": 70.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.2,
+  "nt_probnp": 109.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.4
+ }
+}

@@ -1,0 +1,279 @@
+{
+ "case_id": "C0229",
+ "seed": 222410126,
+ "app_date": "2026-09-12",
+ "design": {
+  "case_id": "C0229",
+  "seed": 222410126,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 69,
+  "sex": "M",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cognitive_impairment:any",
+    "key": "cognitive_impairment",
+    "variant": "any",
+    "chapter": "GER",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "eczema"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.528,
+   "bmi": 21.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tim",
+  "last_name": "Greene",
+  "sex": "M",
+  "dob": "1958-03-01",
+  "age": 69,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 35480,
+  "net_worth": 887000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 65.0,
+ "weight_lb": 131.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 78,
+ "pulse": 81,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "1986-01-21",
+   "quit": "2018-12-07",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cognitive_impairment",
+   "label": "Dementia / MCI / failed cognitive screen",
+   "onset": "2010-10-19",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {},
+   "meds": [
+    {
+     "drug": "donepezil",
+     "dose": "10 mg",
+     "start": "2010-12-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cognitive_impairment"
+    },
+    {
+     "drug": "memantine",
+     "dose": "10 mg",
+     "start": "2011-01-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cognitive_impairment"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0229-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2020-02-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2020-03-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0229-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2022-06-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "tacrolimus topical",
+     "dose": "0.1%",
+     "start": "2022-08-22",
+     "stop": "2022-07-19",
+     "prescriber_id": null,
+     "indication": "eczema"
+    },
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2022-07-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0229-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 65,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-11-26",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-01-28",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0229-P1",
+   "name": "Dr. Timothy Sanders",
+   "specialty": "family medicine",
+   "practice": "Holt Bush and Jones Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 284.0,
+  "hdl": 63.0,
+  "ldl": 179.0,
+  "triglycerides": 210.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 83.0,
+  "a1c": 5.5,
+  "ast": 27.0,
+  "alt": 29.0,
+  "ggt": 52.0,
+  "alk_phos": 106.0,
+  "bilirubin": 0.9,
+  "albumin": 4.7,
+  "creatinine": 0.7,
+  "egfr": 69.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.0,
+  "nt_probnp": 64.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.9
+ }
+}

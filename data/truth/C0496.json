@@ -1,0 +1,235 @@
+{
+ "case_id": "C0496",
+ "seed": 64135854,
+ "app_date": "2026-08-17",
+ "design": {
+  "case_id": "C0496",
+  "seed": 64135854,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 79,
+  "sex": "F",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "frailty:adl",
+    "key": "frailty",
+    "variant": "adl",
+    "chapter": "GER",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "adl_dependency": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "alcohol_use_disorder:abst_2_5",
+    "key": "alcohol_use_disorder",
+    "variant": "abst_2_5",
+    "chapter": "ALC",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "ADB",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.935,
+   "bmi": 28.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Michelle",
+  "last_name": "Henderson",
+  "sex": "F",
+  "dob": "1947-07-13",
+  "age": 79,
+  "address_state": "VA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 64120,
+  "net_worth": 1603000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "KPE"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 62.0,
+ "weight_lb": 153.0,
+ "bp_systolic": 117,
+ "bp_diastolic": 89,
+ "pulse": 80,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": true,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "frailty",
+   "label": "Frailty findings (71+)",
+   "onset": "2022-08-17",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "adl_dependency": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0496-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "alcohol_use_disorder",
+   "label": "Alcohol use disorder (treated)",
+   "onset": "2014-06-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "abstinent_years": 4.4,
+    "treatment": "outpatient + AA",
+    "relapses": 0
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0496-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 73,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2026-05-05",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-06-19",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0496-P1",
+   "name": "Dr. April Kane",
+   "specialty": "family medicine",
+   "practice": "Atkinson-White Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0496-P2",
+   "name": "Dr. Pedro Mullins",
+   "specialty": "addiction medicine",
+   "practice": "Montgomery-Wiley Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 298.0,
+  "hdl": 61.0,
+  "ldl": 202.0,
+  "triglycerides": 171.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 104.0,
+  "a1c": 5.5,
+  "ast": 15.0,
+  "alt": 36.0,
+  "ggt": 49.0,
+  "alk_phos": 54.0,
+  "bilirubin": 0.6,
+  "albumin": 4.5,
+  "creatinine": 1.0,
+  "egfr": 94.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 12.4,
+  "cdt": 1.0,
+  "nt_probnp": 230.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

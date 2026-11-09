@@ -1,0 +1,277 @@
+{
+ "case_id": "C0878",
+ "seed": 186070362,
+ "app_date": "2026-02-08",
+ "design": {
+  "case_id": "C0878",
+  "seed": 186070362,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 71,
+  "sex": "F",
+  "face": 150000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "benign_tumor:hgd_polyp",
+    "key": "benign_tumor",
+    "variant": "hgd_polyp",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "high_grade_dysplasia": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "pad_aaa:aaa_mid",
+    "key": "pad_aaa",
+    "variant": "aaa_mid",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "size_cm": [
+      4.0,
+      5.0
+     ]
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency"
+  ],
+  "grey": "GRY-4",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.264,
+   "bmi": 26.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jasmine",
+  "last_name": "Jones",
+  "sex": "F",
+  "dob": "1955-03-23",
+  "age": 71,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 45400,
+  "net_worth": 1135000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 10",
+  "riders_requested": [
+   "OIR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 62.0,
+ "weight_lb": 146.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 68,
+ "pulse": 57,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2012-04-23",
+   "quit": "2025-08-13",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2019-08-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "high_grade_dysplasia": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0878-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2012-01-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "kind": "aaa",
+    "smoker": true,
+    "size_cm": 4.1,
+    "repaired_months": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0878-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2021-03-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2021-05-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0878-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Atlas Assurance",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0878-P1",
+   "name": "Dr. Andrew Wilcox",
+   "specialty": "family medicine",
+   "practice": "Townsend Sanchez and Williams Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0878-P2",
+   "name": "Dr. Michelle Mills",
+   "specialty": "oncology",
+   "practice": "Huynh-Johnson Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0878-P3",
+   "name": "Dr. Michael Nunez",
+   "specialty": "cardiology",
+   "practice": "Sullivan-Nichols Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 54.0,
+  "ldl": 201.0,
+  "triglycerides": 187.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 86.0,
+  "a1c": 5.0,
+  "ast": 27.0,
+  "alt": 42.0,
+  "ggt": 11.0,
+  "alk_phos": 85.0,
+  "bilirubin": 0.7,
+  "albumin": 4.2,
+  "creatinine": 0.8,
+  "egfr": 79.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.4,
+  "nt_probnp": 88.0,
+  "cotinine_urine": 1041.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

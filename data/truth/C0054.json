@@ -1,0 +1,268 @@
+{
+ "case_id": "C0054",
+ "seed": 1040108310,
+ "app_date": "2026-07-16",
+ "design": {
+  "case_id": "C0054",
+  "seed": 1040108310,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 60,
+  "sex": "F",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "depression_anxiety:mild_recent",
+    "key": "depression_anxiety",
+    "variant": "mild_recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "years_since_dx": {
+      "lt": 2
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.901,
+   "bmi": 29.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kimberly",
+  "last_name": "Jennings",
+  "sex": "F",
+  "dob": "1966-06-14",
+  "age": 60,
+  "address_state": "KY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 159000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 0,
+  "replacement": true,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 63.0,
+ "weight_lb": 167.0,
+ "bp_systolic": 144,
+ "bp_diastolic": 84,
+ "pulse": 62,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2025-11-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "meds_count": 1,
+    "work_loss_months": null,
+    "psychiatrist": false,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 0.7
+   },
+   "meds": [
+    {
+     "drug": "lorazepam",
+     "dose": "0.5 mg",
+     "start": "2026-01-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0054-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2021-12-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2022-01-16",
+     "stop": "2022-02-19",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0054-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 56,
+   "age_at_death": 57,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-06-01",
+   "code": "S99",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2026-01-01",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Norway",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0054-P1",
+   "name": "Dr. Sarah Jackson",
+   "specialty": "family medicine",
+   "practice": "Rivera-Tate Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0054-P2",
+   "name": "Dr. Matthew Johnson",
+   "specialty": "psychiatry",
+   "practice": "Travis LLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 276.0,
+  "hdl": 63.0,
+  "ldl": 187.0,
+  "triglycerides": 129.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 90.0,
+  "a1c": 5.0,
+  "ast": 14.0,
+  "alt": 40.0,
+  "ggt": 48.0,
+  "alk_phos": 70.0,
+  "bilirubin": 0.6,
+  "albumin": 4.1,
+  "creatinine": 0.9,
+  "egfr": 81.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.2,
+  "cdt": 1.1,
+  "nt_probnp": 30.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

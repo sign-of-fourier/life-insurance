@@ -1,0 +1,238 @@
+{
+ "case_id": "C0865",
+ "seed": 650814420,
+ "app_date": "2026-08-20",
+ "design": {
+  "case_id": "C0865",
+  "seed": 650814420,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 21,
+  "sex": "M",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cirrhosis:any",
+    "key": "cirrhosis",
+    "variant": "any",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.895,
+   "bmi": 22.3,
+   "foreign_country": null,
+   "cessation_rx_quit": "2026-05-01"
+  }
+ },
+ "person": {
+  "first_name": "Kenneth",
+  "last_name": "Simmons",
+  "sex": "M",
+  "dob": "2005-12-10",
+  "age": 21,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 74000,
+  "net_worth": 643000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 71.0,
+ "weight_lb": 160.0,
+ "bp_systolic": 123,
+ "bp_diastolic": 80,
+ "pulse": 79,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2021-07-14",
+   "quit": "2026-05-01",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cirrhosis",
+   "label": "Cirrhosis",
+   "onset": "2024-06-08",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0865-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2025-12-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2026-01-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2025-12-05",
+     "stop": "2026-01-10",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0865-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 64,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-02-19",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-06-29",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0865-P1",
+   "name": "Dr. Samantha Graves",
+   "specialty": "family medicine",
+   "practice": "Hunter-Fowler Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0865-P2",
+   "name": "Dr. Jennifer Harper",
+   "specialty": "gastroenterology",
+   "practice": "Charles Holden and Key Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 72.0,
+  "ldl": 175.0,
+  "triglycerides": 140.0,
+  "tc_hdl_ratio": 3.8,
+  "glucose_fasting": 96.0,
+  "a1c": 5.3,
+  "ast": 28.0,
+  "alt": 15.0,
+  "ggt": 43.0,
+  "alk_phos": 111.0,
+  "bilirubin": 0.7,
+  "albumin": 4.7,
+  "creatinine": 0.9,
+  "egfr": 97.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.8,
+  "cdt": 0.9,
+  "nt_probnp": 54.0,
+  "cotinine_urine": 141.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

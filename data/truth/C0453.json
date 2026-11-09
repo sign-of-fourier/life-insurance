@@ -1,0 +1,323 @@
+{
+ "case_id": "C0453",
+ "seed": 894191927,
+ "app_date": "2025-07-08",
+ "design": {
+  "case_id": "C0453",
+  "seed": 894191927,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 20,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "depression_anxiety:hosp_recent",
+    "key": "depression_anxiety",
+    "variant": "hosp_recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "hospitalization_years_ago": {
+      "lt": 1
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "nm_lipids:lip_25",
+    "key": "nm_lipids",
+    "variant": "lip_25",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "chew",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "kidney_stones",
+   "acne",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "CIA",
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.292,
+   "bmi": 20.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Raymond",
+  "last_name": "Chavez",
+  "sex": "M",
+  "dob": "2005-05-18",
+  "age": 20,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "teacher",
+  "occupation_class": "2A",
+  "annual_income": 57000,
+  "net_worth": 275000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CIA",
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 130.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 68,
+ "pulse": 67,
+ "tobacco": [
+  {
+   "product": "chew",
+   "status": "current",
+   "frequency": "daily",
+   "start": "2015-10-10",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2021-08-14",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": null,
+    "psychiatrist": false,
+    "hospitalization_years_ago": 0.4,
+    "ect": false,
+    "disability": true,
+    "years_since_dx": 3.9
+   },
+   "meds": [
+    {
+     "drug": "bupropion",
+     "dose": "300 mg",
+     "start": "2021-10-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    },
+    {
+     "drug": "citalopram",
+     "dose": "20 mg",
+     "start": "2021-09-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0453-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2023-10-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2023-11-19",
+     "stop": "2023-11-26",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0453-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2022-06-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2022-07-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0453-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2021-07-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2021-08-11",
+     "stop": "2021-09-06",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0453-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 63,
+   "age_at_death": 84,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0453-P1",
+   "name": "Dr. Carla Garrison",
+   "specialty": "family medicine",
+   "practice": "Brown-Bailey Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0453-P2",
+   "name": "Dr. Brittany Taylor",
+   "specialty": "psychiatry",
+   "practice": "Jones-Young Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 320.0,
+  "hdl": 69.0,
+  "ldl": 210.0,
+  "triglycerides": 203.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 103.0,
+  "a1c": 5.1,
+  "ast": 25.0,
+  "alt": 22.0,
+  "ggt": 14.0,
+  "alk_phos": 107.0,
+  "bilirubin": 1.0,
+  "albumin": 4.1,
+  "creatinine": 0.9,
+  "egfr": 102.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.0,
+  "cdt": 1.0,
+  "nt_probnp": 48.0,
+  "cotinine_urine": 1916.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

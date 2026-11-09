@@ -1,0 +1,407 @@
+{
+ "case_id": "C0815",
+ "seed": 263498820,
+ "app_date": "2025-09-24",
+ "design": {
+  "case_id": "C0815",
+  "seed": 263498820,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 20,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "copd:mild_smoker",
+    "key": "copd",
+    "variant": "mild_smoker",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "smoker": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.305,
+   "bmi": 22.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "David",
+  "last_name": "Chan",
+  "sex": "M",
+  "dob": "2005-11-17",
+  "age": 20,
+  "address_state": "OK",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmacist",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 185000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 147.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 68,
+ "pulse": 76,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2024-05-01",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "secukinumab",
+     "dose": "150 mg inj",
+     "start": "2024-05-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    },
+    {
+     "drug": "apremilast",
+     "dose": "30 mg",
+     "start": "2024-07-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0815-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2025-01-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F2"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0815-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2024-12-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0815-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2022-10-31",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 89,
+    "smoker": true,
+    "home_o2": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0815-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2024-06-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true,
+    "surgery_years_ago": 1.9
+   },
+   "meds": [
+    {
+     "drug": "infliximab",
+     "dose": "100 mg IV",
+     "start": "2024-09-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0815-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2021-12-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2022-02-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0815-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-06-16",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-07-24",
+   "code": "S99",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-05-01",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0815-P1",
+   "name": "Dr. Crystal Parsons",
+   "specialty": "family medicine",
+   "practice": "Marshall PLC Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0815-P2",
+   "name": "Dr. Ryan Norman",
+   "specialty": "rheumatology",
+   "practice": "Ryan PLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0815-P3",
+   "name": "Dr. Gregory Lucas",
+   "specialty": "gastroenterology",
+   "practice": "Phelps-Johnson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0815-P4",
+   "name": "Dr. Jeff Thomas",
+   "specialty": "pulmonology",
+   "practice": "Payne Vega and Schwartz Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 70.0,
+  "ldl": 166.0,
+  "triglycerides": 205.0,
+  "tc_hdl_ratio": 4.0,
+  "glucose_fasting": 83.0,
+  "a1c": 5.3,
+  "ast": 96.0,
+  "alt": 92.0,
+  "ggt": 25.0,
+  "alk_phos": 75.0,
+  "bilirubin": 0.6,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 87.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.0,
+  "cdt": 0.8,
+  "nt_probnp": 36.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

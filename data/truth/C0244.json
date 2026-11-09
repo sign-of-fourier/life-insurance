@@ -1,0 +1,256 @@
+{
+ "case_id": "C0244",
+ "seed": 905303261,
+ "app_date": "2025-10-06",
+ "design": {
+  "case_id": "C0244",
+  "seed": 905303261,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 62,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "brca_lynch:prophylactic_done",
+    "key": "brca_lynch",
+    "variant": "prophylactic_done",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "prophylactic_surgery": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_marijuana:mj_3_7",
+    "key": "nm_marijuana",
+    "variant": "mj_3_7",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ],
+    [
+     "bp",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "gout"
+  ],
+  "grey": "GRY-9",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.316,
+   "bmi": 29.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Michelle",
+  "last_name": "Vaughan",
+  "sex": "F",
+  "dob": "1963-06-16",
+  "age": 62,
+  "address_state": "MN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "teacher",
+  "occupation_class": "2A",
+  "annual_income": 316000,
+  "net_worth": 848000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 179.0,
+ "bp_systolic": 136,
+ "bp_diastolic": 92,
+ "pulse": 86,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2019-11-02",
+   "quit": "2021-06-24",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 7,
+   "form": "edible",
+   "disclosure": "omitted"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2019-07-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "prophylactic_surgery": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0244-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2017-07-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2017-08-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0244-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 52,
+   "age_at_death": 58,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 75,
+   "age_at_death": 81,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0244-P1",
+   "name": "Dr. Ashley Davis",
+   "specialty": "family medicine",
+   "practice": "Jacobson and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0244-P2",
+   "name": "Dr. Ashley Cole",
+   "specialty": "oncology",
+   "practice": "Schwartz Carter and Manning Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 267.0,
+  "hdl": 68.0,
+  "ldl": 155.0,
+  "triglycerides": 218.0,
+  "tc_hdl_ratio": 3.9,
+  "glucose_fasting": 103.0,
+  "a1c": 5.0,
+  "ast": 30.0,
+  "alt": 13.0,
+  "ggt": 21.0,
+  "alk_phos": 49.0,
+  "bilirubin": 0.7,
+  "albumin": 3.8,
+  "creatinine": 0.8,
+  "egfr": 88.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.6,
+  "cdt": 1.2,
+  "nt_probnp": 103.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

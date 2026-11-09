@@ -1,0 +1,266 @@
+{
+ "case_id": "C0208",
+ "seed": 206823503,
+ "app_date": "2025-03-23",
+ "design": {
+  "case_id": "C0208",
+  "seed": 206823503,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 71,
+  "sex": "M",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "suicide_attempt:recent",
+    "key": "suicide_attempt",
+    "variant": "recent",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "lt": 2
+     }
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti",
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.304,
+   "bmi": 32.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Benjamin",
+  "last_name": "Campbell",
+  "sex": "M",
+  "dob": "1953-12-17",
+  "age": 71,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 394760,
+  "net_worth": 9869000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 62.0,
+ "weight_lb": 179.0,
+ "bp_systolic": 122,
+ "bp_diastolic": 83,
+ "pulse": 61,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2000-01-26",
+   "quit": "2023-04-16",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2024-07-11",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 0.7
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0208-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2016-09-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2016-10-31",
+     "stop": "2016-11-14",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0208-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2021-08-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "500 mg",
+     "start": "2021-09-02",
+     "stop": "2021-08-19",
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2021-08-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0208-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2022-08-24",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Atlas Assurance",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0208-P1",
+   "name": "Dr. Chris Smith",
+   "specialty": "family medicine",
+   "practice": "Chambers Ltd Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0208-P2",
+   "name": "Dr. Sarah Barton",
+   "specialty": "psychiatry",
+   "practice": "Myers Thompson and Taylor Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 56.0,
+  "ldl": 193.0,
+  "triglycerides": 128.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 100.0,
+  "a1c": 5.3,
+  "ast": 15.0,
+  "alt": 19.0,
+  "ggt": 37.0,
+  "alk_phos": 110.0,
+  "bilirubin": 0.9,
+  "albumin": 4.9,
+  "creatinine": 0.9,
+  "egfr": 91.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.2,
+  "cdt": 1.4,
+  "nt_probnp": 65.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.1
+ }
+}

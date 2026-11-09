@@ -1,0 +1,344 @@
+{
+ "case_id": "C0573",
+ "seed": 315377693,
+ "app_date": "2025-02-16",
+ "design": {
+  "case_id": "C0573",
+  "seed": 315377693,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 67,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "cad:ev60-69_y1-2",
+    "key": "cad",
+    "variant": "ev60-69_y1-2",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      60,
+      69
+     ],
+     "years_since": [
+      1,
+      2
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "pancreatitis:alcohol",
+    "key": "pancreatitis",
+    "variant": "alcohol",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cause": "alcohol"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "erectile_dysfunction",
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "OIR",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.406,
+   "bmi": 20.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Michael",
+  "last_name": "Ortega",
+  "sex": "M",
+  "dob": "1957-10-09",
+  "age": 67,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "firefighter",
+  "occupation_class": "3A",
+  "annual_income": 73000,
+  "net_worth": 748000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 10",
+  "riders_requested": [
+   "OIR",
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 68.0,
+ "weight_lb": 136.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 66,
+ "pulse": 62,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2023-03-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_event": 65,
+    "years_since": 1.9,
+    "event": "stent",
+    "ef": 58,
+    "angina": false,
+    "vessels": 2,
+    "ldl": 60,
+    "abnormal_stress": false,
+    "normal_stress_12mo": false,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "10 mg",
+     "start": "2023-04-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2023-05-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "25 mg",
+     "start": "2023-05-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0573-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2019-09-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic": false,
+    "cause": "alcohol"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0573-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2010-04-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "tadalafil",
+     "dose": "5 mg",
+     "start": "2010-06-15",
+     "stop": "2010-06-02",
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    },
+    {
+     "drug": "sildenafil",
+     "dose": "100 mg",
+     "start": "2010-05-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0573-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2017-09-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2017-11-05",
+     "stop": "2017-11-08",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0573-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 71,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Luxembourg",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0573-P1",
+   "name": "Dr. Charlene Berry",
+   "specialty": "family medicine",
+   "practice": "Randall Group Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0573-P2",
+   "name": "Dr. Debra Harrington",
+   "specialty": "cardiology",
+   "practice": "White-Brewer Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0573-P3",
+   "name": "Dr. Brandon Mays",
+   "specialty": "gastroenterology",
+   "practice": "Mercer-Boyer Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 299.0,
+  "hdl": 54.0,
+  "ldl": 203.0,
+  "triglycerides": 209.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 91.0,
+  "a1c": 4.9,
+  "ast": 25.0,
+  "alt": 26.0,
+  "ggt": 43.0,
+  "alk_phos": 106.0,
+  "bilirubin": 0.5,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 67.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.9,
+  "cdt": 1.0,
+  "nt_probnp": 63.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.8
+ }
+}

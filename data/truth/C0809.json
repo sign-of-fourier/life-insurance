@@ -1,0 +1,313 @@
+{
+ "case_id": "C0809",
+ "seed": 429566146,
+ "app_date": "2026-01-25",
+ "design": {
+  "case_id": "C0809",
+  "seed": 429566146,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 60,
+  "sex": "F",
+  "face": 7500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "hepatitis_c:cured_recent",
+    "key": "hepatitis_c",
+    "variant": "cured_recent",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "svr": true
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "alcohol_use_disorder:abst_1_2",
+    "key": "alcohol_use_disorder",
+    "variant": "abst_1_2",
+    "chapter": "ALC",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "lupus:systemic",
+    "key": "lupus",
+    "variant": "systemic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "systemic"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": "GRY-8",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "grey",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed",
+   "epic_progress",
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.927,
+   "bmi": 22.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jaime",
+  "last_name": "King",
+  "sex": "F",
+  "dob": "1966-02-01",
+  "age": 60,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 6160000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 135.0,
+ "bp_systolic": 137,
+ "bp_diastolic": 86,
+ "pulse": 84,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "1998-08-23",
+   "quit": "2018-04-30",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": true,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2017-10-08",
+   "status": "resolved",
+   "severity": "moderate",
+   "details": {
+    "cirrhosis": false,
+    "svr": true,
+    "years_since_tx": 0.8
+   },
+   "meds": [
+    {
+     "drug": "glecaprevir-pibrentasvir",
+     "dose": "100/40 mg",
+     "start": "2017-12-18",
+     "stop": "2018-03-12",
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0809-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "alcohol_use_disorder",
+   "label": "Alcohol use disorder (treated)",
+   "onset": "2016-03-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "abstinent_years": 1.9,
+    "treatment": "outpatient + AA",
+    "relapses": 0
+   },
+   "meds": [
+    {
+     "drug": "naltrexone",
+     "dose": "380 mg inj",
+     "start": "2016-03-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "alcohol_use_disorder"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0809-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2007-01-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "organ_involvement": false,
+    "kind": "systemic"
+   },
+   "meds": [
+    {
+     "drug": "prednisone",
+     "dose": "5 mg",
+     "start": "2007-02-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    },
+    {
+     "drug": "mycophenolate",
+     "dose": "500 mg",
+     "start": "2007-02-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0809-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-03-17",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0809-P1",
+   "name": "Dr. Laurie Walton",
+   "specialty": "family medicine",
+   "practice": "Young Owens and Gonzales Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0809-P2",
+   "name": "Dr. Pamela Howard",
+   "specialty": "gastroenterology",
+   "practice": "Hill Jones and Johnston Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0809-P3",
+   "name": "Dr. William Davis",
+   "specialty": "addiction medicine",
+   "practice": "Garcia-Howard Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0809-P4",
+   "name": "Dr. Ronald Riley",
+   "specialty": "rheumatology",
+   "practice": "Murillo-Knight Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 298.0,
+  "hdl": 59.0,
+  "ldl": 216.0,
+  "triglycerides": 114.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 94.0,
+  "a1c": 5.2,
+  "ast": 36.0,
+  "alt": 22.0,
+  "ggt": 50.0,
+  "alk_phos": 115.0,
+  "bilirubin": 0.9,
+  "albumin": 4.0,
+  "creatinine": 0.8,
+  "egfr": 90.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.9,
+  "cdt": 1.5,
+  "nt_probnp": 58.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

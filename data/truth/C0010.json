@@ -1,0 +1,351 @@
+{
+ "case_id": "C0010",
+ "seed": 603773972,
+ "app_date": "2025-09-22",
+ "design": {
+  "case_id": "C0010",
+  "seed": 603773972,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 50,
+  "sex": "M",
+  "face": 2000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "diabetes_t2:age50-59_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age50-59_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "vitamin_d_deficiency",
+   "kidney_stones",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up diabetes_t2:age50-59_a1c0-6.99"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "simple",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.839,
+   "bmi": 32.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Richard",
+  "last_name": "King",
+  "sex": "M",
+  "dob": "1975-09-12",
+  "age": 50,
+  "address_state": "KY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 119000,
+  "net_worth": 853000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "UL",
+  "riders_requested": [
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 211.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 90,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2004-01-18",
+   "quit": "2023-06-16",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2013-08-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 3.1,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 12.1,
+    "age_at_dx": 37,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2013-09-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0010-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-04-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2018-05-05",
+     "stop": "2018-05-30",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0010-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2015-07-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2015-07-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0010-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2016-07-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2016-07-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0010-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2015-07-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2015-08-10",
+     "stop": "2015-08-19",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0010-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 69,
+   "age_at_death": 82,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-09-02",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-09-02",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-05-12",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0010-P1",
+   "name": "Dr. Kimberly Kelly",
+   "specialty": "family medicine",
+   "practice": "Moses Hickman and Mooney Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0010-P2",
+   "name": "Dr. Krista Taylor",
+   "specialty": "endocrinology",
+   "practice": "Fuller Duffy and Ross Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 56.0,
+  "ldl": 208.0,
+  "triglycerides": 136.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 37.0,
+  "a1c": 3.2,
+  "ast": 31.0,
+  "alt": 22.0,
+  "ggt": 38.0,
+  "alk_phos": 70.0,
+  "bilirubin": 0.6,
+  "albumin": 4.2,
+  "creatinine": 1.0,
+  "egfr": 110.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.1,
+  "cdt": 1.4,
+  "nt_probnp": 32.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

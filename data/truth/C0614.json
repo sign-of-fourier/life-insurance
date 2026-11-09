@@ -1,0 +1,252 @@
+{
+ "case_id": "C0614",
+ "seed": 493722323,
+ "app_date": "2025-01-18",
+ "design": {
+  "case_id": "C0614",
+  "seed": 493722323,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 80,
+  "sex": "M",
+  "face": 750000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "copd:mild_smoker",
+    "key": "copd",
+    "variant": "mild_smoker",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "smoker": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current_heavy",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "erectile_dysfunction"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CIA",
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.522,
+   "bmi": 20.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Stephen",
+  "last_name": "Meyers",
+  "sex": "M",
+  "dob": "1945-05-25",
+  "age": 80,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 114920,
+  "net_worth": 2873000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "GUL",
+  "riders_requested": [
+   "CIA",
+   "CTR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 107.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 81,
+ "pulse": 69,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "2 ppd",
+   "start": "1968-08-12",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2008-11-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 74,
+    "smoker": true,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "umeclidinium-vilanterol",
+     "dose": "62.5/25",
+     "start": "2009-02-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0614-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2023-03-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "100 mg",
+     "start": "2023-03-26",
+     "stop": "2023-04-21",
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0614-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 79,
+   "age_at_death": 76,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-05-11",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0614-P1",
+   "name": "Dr. Terry Price",
+   "specialty": "family medicine",
+   "practice": "Barnes Irwin and Watson Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0614-P2",
+   "name": "Dr. Jason Davis",
+   "specialty": "pulmonology",
+   "practice": "Thornton Rodgers and Owens Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 63.0,
+  "ldl": 183.0,
+  "triglycerides": 185.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 84.0,
+  "a1c": 5.5,
+  "ast": 37.0,
+  "alt": 42.0,
+  "ggt": 53.0,
+  "alk_phos": 50.0,
+  "bilirubin": 0.9,
+  "albumin": 4.6,
+  "creatinine": 0.9,
+  "egfr": 93.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.1,
+  "nt_probnp": 336.0,
+  "cotinine_urine": 949.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.9
+ }
+}

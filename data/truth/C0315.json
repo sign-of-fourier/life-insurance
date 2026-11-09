@@ -1,0 +1,278 @@
+{
+ "case_id": "C0315",
+ "seed": 280852246,
+ "app_date": "2025-03-28",
+ "design": {
+  "case_id": "C0315",
+  "seed": 280852246,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 53,
+  "sex": "M",
+  "face": 250000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:prostate_ge8_y5-100",
+    "key": "cancer",
+    "variant": "prostate_ge8_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": {
+     "per_k": 7.5,
+     "years": 3
+    },
+    "params": {
+     "type": "prostate_ge8",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ],
+    [
+     "bp",
+     "Standard Plus"
+    ],
+    [
+     "lipids",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "bph"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [
+   "top-up cancer:prostate_ge8_y5-100"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "S"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.658,
+   "bmi": 29.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Bobby",
+  "last_name": "Carson",
+  "sex": "M",
+  "dob": "1972-07-30",
+  "age": 53,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmaceutical sales rep",
+  "occupation_class": "2A",
+  "annual_income": 25000,
+  "net_worth": 42000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 62.0,
+ "weight_lb": 158.0,
+ "bp_systolic": 142,
+ "bp_diastolic": 83,
+ "pulse": 88,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1997-03-14",
+   "quit": "2023-10-02",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2003-12-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "prostate_ge8",
+    "years_since_tx": 20.2,
+    "gleason": 9,
+    "psa_undetectable": false,
+    "stage": null
+   },
+   "meds": [
+    {
+     "drug": "leuprolide",
+     "dose": "7.5 mg",
+     "start": "2004-01-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cancer"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0315-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2015-08-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2015-08-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0315-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 49,
+   "age_at_death": 52,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 71,
+   "age_at_death": 75,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-12-03",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-10-21",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-09-29",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0315-P1",
+   "name": "Dr. Brandy Brown",
+   "specialty": "family medicine",
+   "practice": "Harding Sweeney and Lewis Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0315-P2",
+   "name": "Dr. Louis Leonard",
+   "specialty": "oncology",
+   "practice": "Diaz-Roberts Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 298.0,
+  "hdl": 65.0,
+  "ldl": 189.0,
+  "triglycerides": 220.0,
+  "tc_hdl_ratio": 4.6,
+  "glucose_fasting": 96.0,
+  "a1c": 5.6,
+  "ast": 25.0,
+  "alt": 30.0,
+  "ggt": 43.0,
+  "alk_phos": 67.0,
+  "bilirubin": 0.4,
+  "albumin": 4.4,
+  "creatinine": 1.1,
+  "egfr": 87.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.2,
+  "cdt": 1.0,
+  "nt_probnp": 31.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 6.4
+ }
+}

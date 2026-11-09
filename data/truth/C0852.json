@@ -1,0 +1,306 @@
+{
+ "case_id": "C0852",
+ "seed": 180589413,
+ "app_date": "2025-04-09",
+ "design": {
+  "case_id": "C0852",
+  "seed": 180589413,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 29,
+  "sex": "F",
+  "face": 5000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "eating_disorder:recovered",
+    "key": "eating_disorder",
+    "variant": "recovered",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recovered_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "pancreatitis:alcohol",
+    "key": "pancreatitis",
+    "variant": "alcohol",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cause": "alcohol"
+    },
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "eczema",
+   "contraception"
+  ],
+  "grey": "GRY-1",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.752,
+   "bmi": 25.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Monique",
+  "last_name": "Mayer",
+  "sex": "F",
+  "dob": "1996-05-19",
+  "age": 29,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "warehouse supervisor",
+  "occupation_class": "2A",
+  "annual_income": 221000,
+  "net_worth": 1119000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 60.0,
+ "weight_lb": 131.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 76,
+ "pulse": 90,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2013-08-01",
+   "quit": "2021-04-29",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2023-09-03",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "recovered_years": 3.7
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0852-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2022-07-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic": false,
+    "cause": "alcohol",
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2014-03-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2014-04-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0852-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2018-05-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "levonorgestrel IUD",
+     "dose": "52 mg",
+     "start": "2018-05-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0852-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 69,
+   "age_at_death": 91,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-02-18",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-10-21",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0852-P1",
+   "name": "Dr. Christopher Tyler",
+   "specialty": "family medicine",
+   "practice": "Roy Alexander and Hinton Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0852-P2",
+   "name": "Dr. Morgan Bailey",
+   "specialty": "psychiatry",
+   "practice": "Anderson-Brown Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 68.0,
+  "ldl": 195.0,
+  "triglycerides": 77.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 99.0,
+  "a1c": 5.4,
+  "ast": 32.0,
+  "alt": 16.0,
+  "ggt": 12.0,
+  "alk_phos": 67.0,
+  "bilirubin": 0.8,
+  "albumin": 4.5,
+  "creatinine": 0.9,
+  "egfr": 106.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.4,
+  "cdt": 1.5,
+  "nt_probnp": 85.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "case_id": "C0415",
+ "seed": 641139017,
+ "app_date": "2025-03-05",
+ "design": {
+  "case_id": "C0415",
+  "seed": 641139017,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 59,
+  "sex": "M",
+  "face": 3000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "multiple_sclerosis:moderate",
+    "key": "multiple_sclerosis",
+    "variant": "moderate",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "edss": [
+      2.5,
+      5
+     ]
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "pulmonary_embolism:unprovoked",
+    "key": "pulmonary_embolism",
+    "variant": "unprovoked",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "provoked": false
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "ckd:egfr_30-44",
+    "key": "ckd",
+    "variant": "egfr_30-44",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": "30-44"
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "gout",
+   "glaucoma",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.696,
+   "bmi": 28.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Anthony",
+  "last_name": "Sims",
+  "sex": "M",
+  "dob": "1966-01-12",
+  "age": 59,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "lineworker (utility)",
+  "occupation_class": "3A",
+  "annual_income": 287000,
+  "net_worth": 1103000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "OIR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 70.0,
+ "weight_lb": 197.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 71,
+ "pulse": 69,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1998-03-27",
+   "quit": "2017-11-29",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2020-01-29",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "progressive": false,
+    "edss": 3.5
+   },
+   "meds": [
+    {
+     "drug": "natalizumab",
+     "dose": "300 mg IV",
+     "start": "2020-03-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    },
+    {
+     "drug": "glatiramer",
+     "dose": "40 mg inj",
+     "start": "2020-05-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "multiple_sclerosis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0415-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2005-06-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 19.7,
+    "recurrent": false,
+    "provoked": false
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "5 mg",
+     "start": "2005-07-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0415-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ckd",
+   "label": "Chronic kidney disease (eGFR)",
+   "onset": "2021-05-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 34
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0415-P4"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2022-08-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2022-09-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2022-09-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0415-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2013-08-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2013-08-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0415-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2015-04-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2015-05-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2015-05-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0415-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2013-03-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2013-04-16",
+     "stop": "2013-05-13",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0415-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 73,
+   "age_at_death": 81,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-04-30",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0415-P1",
+   "name": "Dr. Leslie Morris",
+   "specialty": "family medicine",
+   "practice": "Campbell Mitchell and Little Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0415-P2",
+   "name": "Dr. Kayla Hampton",
+   "specialty": "neurology",
+   "practice": "Carson-Wilkerson Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0415-P3",
+   "name": "Dr. Stephen Erickson",
+   "specialty": "pulmonology",
+   "practice": "Morse-Copeland Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0415-P4",
+   "name": "Dr. Brian Walker",
+   "specialty": "nephrology",
+   "practice": "Gordon Mitchell and Caldwell Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 294.0,
+  "hdl": 68.0,
+  "ldl": 212.0,
+  "triglycerides": 67.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 85.0,
+  "a1c": 5.4,
+  "ast": 27.0,
+  "alt": 29.0,
+  "ggt": 27.0,
+  "alk_phos": 71.0,
+  "bilirubin": 1.1,
+  "albumin": 3.9,
+  "creatinine": 2.6,
+  "egfr": 34.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.8,
+  "cdt": 0.8,
+  "nt_probnp": 40.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.6
+ }
+}

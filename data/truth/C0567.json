@@ -1,0 +1,313 @@
+{
+ "case_id": "C0567",
+ "seed": 200912178,
+ "app_date": "2026-02-06",
+ "design": {
+  "case_id": "C0567",
+  "seed": 200912178,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 38,
+  "sex": "M",
+  "face": 100000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "migraine:any",
+    "key": "migraine",
+    "variant": "any",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "brca_lynch:prophylactic_done",
+    "key": "brca_lynch",
+    "variant": "prophylactic_done",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "prophylactic_surgery": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ],
+    [
+     "family_history",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "rosacea",
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.303,
+   "bmi": 29.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "James",
+  "last_name": "Young",
+  "sex": "M",
+  "dob": "1988-06-15",
+  "age": 38,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "graphic designer",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 162000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 30",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 68.0,
+ "weight_lb": 194.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 90,
+ "pulse": 71,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "migraine",
+   "label": "Migraine",
+   "onset": "2006-05-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "amitriptyline",
+     "dose": "10 mg",
+     "start": "2006-06-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "migraine"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0567-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2022-10-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "prophylactic_surgery": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0567-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2019-02-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2019-03-04",
+     "stop": "2019-04-13",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0567-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2017-04-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2017-04-30",
+     "stop": "2017-05-20",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2017-05-13",
+     "stop": "2017-05-07",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0567-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 44,
+   "age_at_death": 46,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 58,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 79,
+   "age_at_death": 83,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0567-P1",
+   "name": "Dr. Joshua Vasquez",
+   "specialty": "family medicine",
+   "practice": "Burton Inc Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0567-P2",
+   "name": "Dr. Thomas Zavala",
+   "specialty": "neurology",
+   "practice": "Maldonado Gomez and Brewer Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0567-P3",
+   "name": "Dr. Brittany Walker",
+   "specialty": "oncology",
+   "practice": "Harrell Rosales and Wilson Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 258.0,
+  "hdl": 64.0,
+  "ldl": 154.0,
+  "triglycerides": 198.0,
+  "tc_hdl_ratio": 4.0,
+  "glucose_fasting": 99.0,
+  "a1c": 5.5,
+  "ast": 31.0,
+  "alt": 25.0,
+  "ggt": 18.0,
+  "alk_phos": 65.0,
+  "bilirubin": 1.2,
+  "albumin": 4.2,
+  "creatinine": 0.9,
+  "egfr": 75.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.4,
+  "nt_probnp": 57.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

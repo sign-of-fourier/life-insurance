@@ -1,0 +1,196 @@
+{
+ "case_id": "C0076",
+ "seed": 751896788,
+ "app_date": "2025-05-30",
+ "design": {
+  "case_id": "C0076",
+  "seed": 751896788,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 42,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.908,
+   "bmi": 30.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Brenda",
+  "last_name": "Smith",
+  "sex": "F",
+  "dob": "1983-01-30",
+  "age": 42,
+  "address_state": "IA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "accountant",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 186000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 10",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 181.0,
+ "bp_systolic": 116,
+ "bp_diastolic": 66,
+ "pulse": 66,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2013-03-18",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 12.2,
+    "organ": "liver"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0076-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 69,
+   "age_at_death": 88,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-02-15",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-08-03",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Harborview Life",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0076-P1",
+   "name": "Dr. Curtis Barnes",
+   "specialty": "family medicine",
+   "practice": "Davis-Perez Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 42.0,
+  "ldl": 217.0,
+  "triglycerides": 109.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 91.0,
+  "a1c": 5.3,
+  "ast": 34.0,
+  "alt": 19.0,
+  "ggt": 21.0,
+  "alk_phos": 117.0,
+  "bilirubin": 0.9,
+  "albumin": 4.7,
+  "creatinine": 0.8,
+  "egfr": 104.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.1,
+  "cdt": 1.4,
+  "nt_probnp": 57.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

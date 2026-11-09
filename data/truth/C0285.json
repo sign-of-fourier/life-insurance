@@ -1,0 +1,344 @@
+{
+ "case_id": "C0285",
+ "seed": 978962137,
+ "app_date": "2025-09-04",
+ "design": {
+  "case_id": "C0285",
+  "seed": 978962137,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 68,
+  "sex": "M",
+  "face": 750000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cad:ev60-69_y2-5",
+    "key": "cad",
+    "variant": "ev60-69_y2-5",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      60,
+      69
+     ],
+     "years_since": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "acne",
+   "seasonal_allergy",
+   "vitamin_d_deficiency"
+  ],
+  "grey": "GRY-6",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cad:ev60-69_y2-5"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.753,
+   "bmi": 31.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "David",
+  "last_name": "Bird",
+  "sex": "M",
+  "dob": "1957-12-07",
+  "age": 68,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "farmer",
+  "occupation_class": "2A",
+  "annual_income": 199000,
+  "net_worth": 1461000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "UL",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 181.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 67,
+ "pulse": 59,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2021-09-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_event": 64,
+    "years_since": 4,
+    "event": "CABG",
+    "ef": 61,
+    "angina": false,
+    "vessels": 1,
+    "ldl": 56,
+    "abnormal_stress": false,
+    "normal_stress_12mo": true,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "40 mg",
+     "start": "2021-12-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2021-12-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "100 mg",
+     "start": "2021-11-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0285-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2016-08-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "40 mg",
+     "start": "2016-10-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0285-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2016-07-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2016-09-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0285-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2015-03-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2015-03-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "cetirizine",
+     "dose": "10 mg",
+     "start": "2015-04-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0285-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2011-12-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2012-01-19",
+     "stop": "2012-01-04",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0285-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0285-P1",
+   "name": "Dr. Gary Figueroa",
+   "specialty": "family medicine",
+   "practice": "Montoya Clayton and Ray Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0285-P2",
+   "name": "Dr. April Ramirez",
+   "specialty": "cardiology",
+   "practice": "Aguilar LLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 289.0,
+  "hdl": 49.0,
+  "ldl": 228.0,
+  "triglycerides": 60.0,
+  "tc_hdl_ratio": 5.9,
+  "glucose_fasting": 104.0,
+  "a1c": 5.0,
+  "ast": 25.0,
+  "alt": 40.0,
+  "ggt": 46.0,
+  "alk_phos": 56.0,
+  "bilirubin": 0.7,
+  "albumin": 4.8,
+  "creatinine": 1.1,
+  "egfr": 89.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.2,
+  "cdt": 1.1,
+  "nt_probnp": 74.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.9
+ }
+}

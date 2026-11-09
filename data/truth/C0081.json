@@ -1,0 +1,335 @@
+{
+ "case_id": "C0081",
+ "seed": 112124782,
+ "app_date": "2026-07-18",
+ "design": {
+  "case_id": "C0081",
+  "seed": 112124782,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 31,
+  "sex": "F",
+  "face": 5000000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "sleep_apnea:treated",
+    "key": "sleep_apnea",
+    "variant": "treated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "treated": true,
+     "compliant": true
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy",
+   "sinusitis",
+   "dental",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.822,
+   "bmi": 29.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kimberly",
+  "last_name": "Shannon",
+  "sex": "F",
+  "dob": "1995-05-31",
+  "age": 31,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "insurance underwriter",
+  "occupation_class": "1A",
+  "annual_income": 202000,
+  "net_worth": 2280000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 30",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 162.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 88,
+ "pulse": 78,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "5/yr",
+   "start": "2009-10-25",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2018-03-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "treated": true,
+    "compliant": true,
+    "ahi": 17
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0081-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2013-04-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2013-05-27",
+     "stop": "2013-05-11",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "cetirizine",
+     "dose": "10 mg",
+     "start": "2013-05-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0081-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2013-07-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2013-07-12",
+     "stop": "2013-08-18",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0081-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2015-04-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2015-05-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0081-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2013-01-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "40 mg",
+     "start": "2013-02-16",
+     "stop": "2013-01-23",
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2013-02-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0081-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 52,
+   "age_at_death": 54,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-06-02",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-06-05",
+   "code": "M09",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0081-P1",
+   "name": "Dr. Vanessa Velasquez",
+   "specialty": "family medicine",
+   "practice": "Anderson Miller and Jenkins Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0081-P2",
+   "name": "Dr. Jonathan Jones",
+   "specialty": "pulmonology",
+   "practice": "Moore and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 268.0,
+  "hdl": 57.0,
+  "ldl": 193.0,
+  "triglycerides": 88.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 103.0,
+  "a1c": 4.8,
+  "ast": 20.0,
+  "alt": 23.0,
+  "ggt": 20.0,
+  "alk_phos": 101.0,
+  "bilirubin": 0.3,
+  "albumin": 4.4,
+  "creatinine": 1.0,
+  "egfr": 93.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.0,
+  "cdt": 1.3,
+  "nt_probnp": 105.0,
+  "cotinine_urine": 37.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

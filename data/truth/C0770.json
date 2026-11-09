@@ -1,0 +1,490 @@
+{
+ "case_id": "C0770",
+ "seed": 807979643,
+ "app_date": "2025-08-12",
+ "design": {
+  "case_id": "C0770",
+  "seed": 807979643,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 40,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_c:untreated",
+    "key": "hepatitis_c",
+    "variant": "untreated",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "copd:mild_smoker",
+    "key": "copd",
+    "variant": "mild_smoker",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "smoker": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cad_nonobstructive:cac_400",
+    "key": "cad_nonobstructive",
+    "variant": "cac_400",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": {
+      "ge": 400
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_alcohol:dpw_22_35",
+    "key": "nm_alcohol",
+    "variant": "dpw_22_35",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_financial:overins_counter",
+    "key": "nm_financial",
+    "variant": "overins_counter",
+    "chapter": "FIN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ADB",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 1.526,
+   "bmi": 21.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Timothy",
+  "last_name": "Bishop",
+  "sex": "M",
+  "dob": "1985-04-02",
+  "age": 40,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "police officer",
+  "occupation_class": "3A",
+  "annual_income": 18000,
+  "net_worth": 112000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "GIO"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 114.0,
+ "bp_systolic": 117,
+ "bp_diastolic": 89,
+ "pulse": 71,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 24.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2007-09-19",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 17.9,
+    "organ": "liver"
+   },
+   "meds": [
+    {
+     "drug": "sirolimus",
+     "dose": "1 mg",
+     "start": "2007-12-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    },
+    {
+     "drug": "cyclosporine",
+     "dose": "100 mg",
+     "start": "2007-10-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0770-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2010-03-20",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": false,
+    "svr": false,
+    "years_since_tx": 22.6
+   },
+   "meds": [
+    {
+     "drug": "ledipasvir-sofosbuvir",
+     "dose": "90/400 mg",
+     "start": "2010-07-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    },
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2010-05-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0770-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2019-08-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 12,
+    "colonoscopy_years_ago": 10.0
+   },
+   "meds": [
+    {
+     "drug": "budesonide",
+     "dose": "3 mg",
+     "start": "2019-11-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    },
+    {
+     "drug": "infliximab",
+     "dose": "100 mg IV",
+     "start": "2019-11-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0770-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2024-02-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 83,
+    "smoker": true,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "tiotropium",
+     "dose": "18 mcg",
+     "start": "2024-02-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0770-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2016-08-12",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stenosis_pct": 57,
+    "cac_score": 415
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0770-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2014-11-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2014-12-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0770-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2013-05-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0770-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-04-05",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0770-P1",
+   "name": "Dr. Warren Woods",
+   "specialty": "family medicine",
+   "practice": "Craig Sexton and Jordan Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0770-P2",
+   "name": "Dr. Christopher Davis",
+   "specialty": "gastroenterology",
+   "practice": "Tucker LLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0770-P3",
+   "name": "Dr. Julie Nguyen",
+   "specialty": "pulmonology",
+   "practice": "Ross Watkins and Jefferson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0770-P4",
+   "name": "Dr. Lisa Anderson",
+   "specialty": "cardiology",
+   "practice": "Duffy Gaines and Thompson Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 294.0,
+  "hdl": 46.0,
+  "ldl": 209.0,
+  "triglycerides": 194.0,
+  "tc_hdl_ratio": 6.4,
+  "glucose_fasting": 85.0,
+  "a1c": 5.5,
+  "ast": 68.0,
+  "alt": 127.0,
+  "ggt": 116.0,
+  "alk_phos": 109.0,
+  "bilirubin": 0.9,
+  "albumin": 4.7,
+  "creatinine": 0.9,
+  "egfr": 97.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.8,
+  "nt_probnp": 80.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.5
+ }
+}

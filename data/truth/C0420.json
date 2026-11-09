@@ -1,0 +1,311 @@
+{
+ "case_id": "C0420",
+ "seed": 991586601,
+ "app_date": "2026-01-09",
+ "design": {
+  "case_id": "C0420",
+  "seed": 991586601,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 75,
+  "sex": "F",
+  "face": 750000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "sarcoidosis:stable",
+    "key": "sarcoidosis",
+    "variant": "stable",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "lupus:systemic",
+    "key": "lupus",
+    "variant": "systemic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "systemic"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.674,
+   "bmi": 28.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Heather",
+  "last_name": "Young",
+  "sex": "F",
+  "dob": "1950-12-17",
+  "age": 75,
+  "address_state": "NV",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 89040,
+  "net_worth": 2226000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 61.0,
+ "weight_lb": 153.0,
+ "bp_systolic": 116,
+ "bp_diastolic": 68,
+ "pulse": 73,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2011-05-05",
+   "quit": "2024-03-07",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2019-06-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 19.2
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0420-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2019-08-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "organ_involvement": false,
+    "kind": "systemic"
+   },
+   "meds": [
+    {
+     "drug": "belimumab",
+     "dose": "200 mg inj",
+     "start": "2019-08-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    },
+    {
+     "drug": "hydroxychloroquine",
+     "dose": "200 mg",
+     "start": "2019-08-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0420-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2023-11-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2023-12-03",
+     "stop": "2023-12-19",
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0420-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 63,
+   "age_at_death": 75,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-05-11",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-12-12",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Luxembourg",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Atlas Assurance",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0420-P1",
+   "name": "Dr. Cassie Dillon",
+   "specialty": "family medicine",
+   "practice": "Taylor Group Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0420-P2",
+   "name": "Dr. Nicholas Nelson",
+   "specialty": "pulmonology",
+   "practice": "Holt LLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0420-P3",
+   "name": "Dr. Lori Davis",
+   "specialty": "rheumatology",
+   "practice": "Elliott Booth and Cobb Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 295.0,
+  "hdl": 72.0,
+  "ldl": 200.0,
+  "triglycerides": 113.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 83.0,
+  "a1c": 5.0,
+  "ast": 38.0,
+  "alt": 13.0,
+  "ggt": 24.0,
+  "alk_phos": 105.0,
+  "bilirubin": 0.9,
+  "albumin": 4.0,
+  "creatinine": 1.0,
+  "egfr": 92.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 12.6,
+  "cdt": 0.9,
+  "nt_probnp": 213.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

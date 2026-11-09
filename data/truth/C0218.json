@@ -1,0 +1,335 @@
+{
+ "case_id": "C0218",
+ "seed": 927799953,
+ "app_date": "2025-01-22",
+ "design": {
+  "case_id": "C0218",
+  "seed": 927799953,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 77,
+  "sex": "M",
+  "face": 150000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "diabetes_t2:age70-120_a1c7.0-7.99",
+    "key": "diabetes_t2",
+    "variant": "age70-120_a1c7.0-7.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      7.0,
+      7.99
+     ]
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "cad_nonobstructive:cac_0_99",
+    "key": "cad_nonobstructive",
+    "variant": "cac_0_99",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": [
+      0,
+      99
+     ]
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "build",
+     "Standard"
+    ]
+   ]
+  },
+  "benign": [
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CTR",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.891,
+   "bmi": 32.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Alan",
+  "last_name": "Johnson",
+  "sex": "M",
+  "dob": "1948-07-09",
+  "age": 77,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 13440,
+  "net_worth": 336000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "CTR",
+   "KPE"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "business partner"
+ },
+ "height_in": 70.0,
+ "weight_lb": 227.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 89,
+ "pulse": 70,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "1987-06-13",
+   "quit": "2022-12-28",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2011-04-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 7.1,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 13.8,
+    "age_at_dx": 63,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "1000 mg",
+     "start": "2011-06-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2011-07-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "semaglutide",
+     "dose": "2.4 mg",
+     "start": "2011-06-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0218-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2022-07-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "stenosis_pct": 63,
+    "cac_score": 25
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0218-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2023-05-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2023-06-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0218-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 74,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-04-24",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Belgium",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0218-P1",
+   "name": "Dr. Carlos Brady",
+   "specialty": "family medicine",
+   "practice": "Moore and Sons Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0218-P2",
+   "name": "Dr. Michael Baker",
+   "specialty": "endocrinology",
+   "practice": "Ortega Williams and Hendricks Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0218-P3",
+   "name": "Dr. Eric Schultz",
+   "specialty": "cardiology",
+   "practice": "Carpenter-Potter Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 62.0,
+  "ldl": 197.0,
+  "triglycerides": 98.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 155.0,
+  "a1c": 7.0,
+  "ast": 37.0,
+  "alt": 19.0,
+  "ggt": 39.0,
+  "alk_phos": 91.0,
+  "bilirubin": 0.8,
+  "albumin": 4.0,
+  "creatinine": 1.0,
+  "egfr": 73.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.3,
+  "cdt": 1.2,
+  "nt_probnp": 365.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.7
+ }
+}

@@ -1,0 +1,287 @@
+{
+ "case_id": "C0707",
+ "seed": 88444585,
+ "app_date": "2025-08-26",
+ "design": {
+  "case_id": "C0707",
+  "seed": 88444585,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 40,
+  "sex": "M",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "afib:paroxysmal",
+    "key": "afib",
+    "variant": "paroxysmal",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "paroxysmal",
+     "echo_normal": true,
+     "chads_vasc": {
+      "le": 1
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "suicide_attempt:mid",
+    "key": "suicide_attempt",
+    "variant": "mid",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "ADB",
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.725,
+   "bmi": 23.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Darrell",
+  "last_name": "Taylor",
+  "sex": "M",
+  "dob": "1985-03-29",
+  "age": 40,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retail store manager",
+  "occupation_class": "1A",
+  "annual_income": 91000,
+  "net_worth": 589000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB",
+   "WMD"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 119.0,
+ "bp_systolic": 133,
+ "bp_diastolic": 90,
+ "pulse": 61,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "8/yr",
+   "start": "2007-07-15",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2014-07-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "paroxysmal",
+    "echo_normal": true,
+    "chads_vasc": 1,
+    "structural": false,
+    "ablation_years": null,
+    "years_since": 11.1
+   },
+   "meds": [
+    {
+     "drug": "amiodarone",
+     "dose": "200 mg",
+     "start": "2014-10-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0707-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2021-11-08",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 3.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0707-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2020-06-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "25 mcg",
+     "start": "2020-06-06",
+     "stop": "2020-07-14",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0707-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2019-07-13",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0707-P1",
+   "name": "Dr. Sara Ali",
+   "specialty": "family medicine",
+   "practice": "Brown Miller and Walker Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0707-P2",
+   "name": "Dr. Raymond Wright",
+   "specialty": "cardiology",
+   "practice": "Herrera LLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0707-P3",
+   "name": "Dr. Christopher Edwards",
+   "specialty": "psychiatry",
+   "practice": "Brown Walter and James Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 60.0,
+  "ldl": 199.0,
+  "triglycerides": 115.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 78.0,
+  "a1c": 5.1,
+  "ast": 38.0,
+  "alt": 26.0,
+  "ggt": 42.0,
+  "alk_phos": 95.0,
+  "bilirubin": 0.6,
+  "albumin": 4.4,
+  "creatinine": 1.2,
+  "egfr": 82.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.2,
+  "cdt": 0.9,
+  "nt_probnp": 62.0,
+  "cotinine_urine": 48.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.5
+ }
+}

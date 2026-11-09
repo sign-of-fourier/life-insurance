@@ -1,0 +1,334 @@
+{
+ "case_id": "C0477",
+ "seed": 372183769,
+ "app_date": "2025-10-18",
+ "design": {
+  "case_id": "C0477",
+  "seed": 372183769,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 56,
+  "sex": "M",
+  "face": 3000000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "back_pain:opioid_benzo",
+    "key": "back_pain",
+    "variant": "opioid_benzo",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true,
+     "benzo": true
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "specialist_letter"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.794,
+   "bmi": 28.2,
+   "foreign_country": "Panama",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Douglas",
+  "last_name": "Reid",
+  "sex": "M",
+  "dob": "1969-12-24",
+  "age": 56,
+  "address_state": "IA",
+  "country_of_residence": "US",
+  "citizenship": "Panama",
+  "years_in_us": 2.8,
+  "visa_type": "H-1B",
+  "occupation": "lineworker (utility)",
+  "occupation_class": "3A",
+  "annual_income": 251000,
+  "net_worth": 2383000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 71.0,
+ "weight_lb": 202.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 69,
+ "pulse": 84,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2006-05-19",
+   "quit": "2022-07-22",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2007-11-25",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 18.8,
+    "undetectable_months": 103,
+    "cd4": 769,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "darunavir-cobicistat",
+     "dose": "800/150 mg",
+     "start": "2008-02-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0477-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2018-12-31",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": true
+   },
+   "meds": [
+    {
+     "drug": "oxycodone",
+     "dose": "10 mg",
+     "start": "2019-03-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0477-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2017-04-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2017-05-29",
+     "stop": "2017-05-24",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0477-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2018-02-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2018-03-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0477-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 67,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-05-16",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Denmark",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0477-P1",
+   "name": "Dr. Gary Pham",
+   "specialty": "family medicine",
+   "practice": "Edwards-Smith Clinic",
+   "aps_style": "foreign_translated",
+   "country": "Panama"
+  },
+  {
+   "provider_id": "C0477-P2",
+   "name": "Dr. Autumn Robles",
+   "specialty": "rheumatology",
+   "practice": "Wilcox PLC Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 55.0,
+  "ldl": 217.0,
+  "triglycerides": 61.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 88.0,
+  "a1c": 5.3,
+  "ast": 25.0,
+  "alt": 40.0,
+  "ggt": 27.0,
+  "alk_phos": 65.0,
+  "bilirubin": 0.7,
+  "albumin": 4.0,
+  "creatinine": 0.9,
+  "egfr": 70.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.8,
+  "cdt": 1.1,
+  "nt_probnp": 96.0,
+  "cotinine_urine": 1.0,
+  "hiv": 1.0,
+  "cocaine": 0.0,
+  "psa": 0.3
+ }
+}

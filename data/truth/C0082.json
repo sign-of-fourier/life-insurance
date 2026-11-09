@@ -1,0 +1,408 @@
+{
+ "case_id": "C0082",
+ "seed": 782671543,
+ "app_date": "2026-03-07",
+ "design": {
+  "case_id": "C0082",
+  "seed": 782671543,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 46,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "brca_lynch:prophylactic_done",
+    "key": "brca_lynch",
+    "variant": "prophylactic_done",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "prophylactic_surgery": true
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "migraine:any",
+    "key": "migraine",
+    "variant": "any",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_marijuana:mj_3_7",
+    "key": "nm_marijuana",
+    "variant": "mj_3_7",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "mvr",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "dental",
+   "gout",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.62,
+   "bmi": 29.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jason",
+  "last_name": "Scott",
+  "sex": "M",
+  "dob": "1980-07-31",
+  "age": 46,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 677000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 67.0,
+ "weight_lb": 185.0,
+ "bp_systolic": 135,
+ "bp_diastolic": 89,
+ "pulse": 86,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2007-01-05",
+   "quit": "2023-06-19",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 7,
+   "form": "smoked",
+   "disclosure": "honest"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2017-12-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "prophylactic_surgery": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0082-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "migraine",
+   "label": "Migraine",
+   "onset": "2022-09-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "rizatriptan",
+     "dose": "10 mg",
+     "start": "2022-09-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "migraine"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0082-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2014-12-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "500 mg",
+     "start": "2015-01-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0082-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2023-05-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "100 mg",
+     "start": "2023-06-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0082-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2018-08-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2018-08-29",
+     "stop": "2018-09-01",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2018-09-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0082-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 46,
+   "age_at_death": 54,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 58,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 75,
+   "age_at_death": 77,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-09-03",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-06-01",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-08-03",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Belgium",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Atlas Assurance",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0082-P1",
+   "name": "Dr. Ronald Stevens",
+   "specialty": "family medicine",
+   "practice": "Swanson Miller and Crosby Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0082-P2",
+   "name": "Dr. Joseph Davis",
+   "specialty": "oncology",
+   "practice": "Long-Turner Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0082-P3",
+   "name": "Dr. Emily Moore",
+   "specialty": "neurology",
+   "practice": "Ryan-Jackson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 257.0,
+  "hdl": 50.0,
+  "ldl": 167.0,
+  "triglycerides": 200.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 85.0,
+  "a1c": 5.0,
+  "ast": 35.0,
+  "alt": 13.0,
+  "ggt": 41.0,
+  "alk_phos": 72.0,
+  "bilirubin": 1.1,
+  "albumin": 3.9,
+  "creatinine": 1.2,
+  "egfr": 115.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.3,
+  "cdt": 1.2,
+  "nt_probnp": 97.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.9
+ }
+}

@@ -1,0 +1,281 @@
+{
+ "case_id": "C0736",
+ "seed": 284868133,
+ "app_date": "2026-08-07",
+ "design": {
+  "case_id": "C0736",
+  "seed": 284868133,
+  "target": "Standard Tobacco",
+  "ladder": "tobacco",
+  "age": 26,
+  "sex": "F",
+  "face": 150000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:colon_3_y10-100",
+    "key": "cancer",
+    "variant": "colon_3_y10-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "colon_3",
+     "years_since_tx": [
+      10,
+      25
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "chew",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.526,
+   "bmi": 24.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Krystal",
+  "last_name": "Sanchez",
+  "sex": "F",
+  "dob": "2000-06-02",
+  "age": 26,
+  "address_state": "UT",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "homemaker",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 65000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 69.0,
+ "weight_lb": 167.0,
+ "bp_systolic": 141,
+ "bp_diastolic": 82,
+ "pulse": 75,
+ "tobacco": [
+  {
+   "product": "chew",
+   "status": "current",
+   "frequency": "weekends",
+   "start": "2023-09-26",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2015-08-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "colon_3",
+    "years_since_tx": 10.2,
+    "stage": "III"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0736-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2025-03-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "40 mg",
+     "start": "2025-04-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0736-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2021-10-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2021-12-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2021-11-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0736-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 71,
+   "age_at_death": 84,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-07-28",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-02-07",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-07-28",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0736-P1",
+   "name": "Dr. John Henry",
+   "specialty": "family medicine",
+   "practice": "Hudson-Nelson Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0736-P2",
+   "name": "Dr. Melissa Richardson",
+   "specialty": "oncology",
+   "practice": "Callahan-Jones Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 56.0,
+  "ldl": 190.0,
+  "triglycerides": 191.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 88.0,
+  "a1c": 5.2,
+  "ast": 31.0,
+  "alt": 28.0,
+  "ggt": 54.0,
+  "alk_phos": 40.0,
+  "bilirubin": 0.5,
+  "albumin": 4.4,
+  "creatinine": 1.1,
+  "egfr": 111.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.9,
+  "cdt": 1.4,
+  "nt_probnp": 99.0,
+  "cotinine_urine": 706.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

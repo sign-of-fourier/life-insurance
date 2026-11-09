@@ -1,0 +1,322 @@
+{
+ "case_id": "C0522",
+ "seed": 880660765,
+ "app_date": "2026-05-01",
+ "design": {
+  "case_id": "C0522",
+  "seed": 880660765,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 18,
+  "sex": "F",
+  "face": 100000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "anemia:itp",
+    "key": "anemia",
+    "variant": "itp",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "itp"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_alcohol:dpw_15_21",
+    "key": "nm_alcohol",
+    "variant": "dpw_15_21",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "multiple_sclerosis:mild",
+    "key": "multiple_sclerosis",
+    "variant": "mild",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_occupation:occ_4a_hi",
+    "key": "nm_occupation",
+    "variant": "occ_4a_hi",
+    "chapter": "OCC",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 5.0,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "KPE",
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.461,
+   "bmi": 22.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Julie",
+  "last_name": "Holmes",
+  "sex": "F",
+  "dob": "2008-09-26",
+  "age": 18,
+  "address_state": "SC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "crop duster pilot",
+  "occupation_class": "4A",
+  "annual_income": 18000,
+  "net_worth": 48000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "Term 20",
+  "riders_requested": [
+   "KPE",
+   "ROP-T"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 59.0,
+ "weight_lb": 110.0,
+ "bp_systolic": 125,
+ "bp_diastolic": 74,
+ "pulse": 87,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 17.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2025-08-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "vte": true,
+    "kind": "itp"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0522-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2025-09-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "progressive": false,
+    "edss": 0.5
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0522-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2024-11-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2024-11-11",
+     "stop": "2024-12-07",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0522-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 49,
+   "living": false
+  },
+  {
+   "relation": "brother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 55,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-04-14",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-02-21",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0522-P1",
+   "name": "Dr. Vanessa Vega",
+   "specialty": "family medicine",
+   "practice": "Kelley-Odom Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0522-P2",
+   "name": "Dr. Gary Jackson",
+   "specialty": "hematology",
+   "practice": "Bryant Brown and Graham Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0522-P3",
+   "name": "Dr. Fred Peters",
+   "specialty": "neurology",
+   "practice": "Thompson Mitchell and Le Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 54.0,
+  "ldl": 194.0,
+  "triglycerides": 161.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 98.0,
+  "a1c": 5.5,
+  "ast": 38.0,
+  "alt": 18.0,
+  "ggt": 32.0,
+  "alk_phos": 64.0,
+  "bilirubin": 1.2,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 81.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.3,
+  "cdt": 1.1,
+  "nt_probnp": 45.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

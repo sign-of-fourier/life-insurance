@@ -1,0 +1,280 @@
+{
+ "case_id": "C0062",
+ "seed": 633940660,
+ "app_date": "2026-02-10",
+ "design": {
+  "case_id": "C0062",
+  "seed": 633940660,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 70,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_weightloss:unexplained_loss",
+    "key": "nm_weightloss",
+    "variant": "unexplained_loss",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "alcohol_use_disorder:abst_gt5",
+    "key": "alcohol_use_disorder",
+    "variant": "abst_gt5",
+    "chapter": "ALC",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "simple",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.595,
+   "bmi": 28.2,
+   "foreign_country": null,
+   "cessation_rx_quit": "2025-06-23",
+   "nm_weightloss": "unexplained_loss"
+  }
+ },
+ "person": {
+  "first_name": "Michael",
+  "last_name": "Myers",
+  "sex": "M",
+  "dob": "1956-02-01",
+  "age": 70,
+  "address_state": "MO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 53400,
+  "net_worth": 1335000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 73.0,
+ "weight_lb": 214.0,
+ "bp_systolic": 122,
+ "bp_diastolic": 83,
+ "pulse": 68,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1971-10-01",
+   "quit": "2025-06-23",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": true,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "alcohol_use_disorder",
+   "label": "Alcohol use disorder (treated)",
+   "onset": "2014-09-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "abstinent_years": 9.4,
+    "treatment": "outpatient + AA",
+    "relapses": 0
+   },
+   "meds": [
+    {
+     "drug": "acamprosate",
+     "dose": "333 mg",
+     "start": "2014-12-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "alcohol_use_disorder"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0062-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2014-05-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0062-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2014-05-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2014-06-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0062-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-06-07",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-11-30",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-05-08",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Austria",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0062-P1",
+   "name": "Dr. James Vasquez",
+   "specialty": "family medicine",
+   "practice": "Wells Johnson and Johnson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0062-P2",
+   "name": "Dr. Corey Holmes",
+   "specialty": "addiction medicine",
+   "practice": "Hodge Cox and Romero Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 52.0,
+  "ldl": 211.0,
+  "triglycerides": 90.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 90.0,
+  "a1c": 5.0,
+  "ast": 33.0,
+  "alt": 31.0,
+  "ggt": 10.0,
+  "alk_phos": 116.0,
+  "bilirubin": 1.0,
+  "albumin": 4.5,
+  "creatinine": 1.0,
+  "egfr": 61.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.2,
+  "nt_probnp": 70.0,
+  "cotinine_urine": 105.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.3
+ }
+}

@@ -1,0 +1,351 @@
+{
+ "case_id": "C0180",
+ "seed": 759336135,
+ "app_date": "2026-06-03",
+ "design": {
+  "case_id": "C0180",
+  "seed": 759336135,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 59,
+  "sex": "M",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "proteinuria:prot_101-300",
+    "key": "proteinuria",
+    "variant": "prot_101-300",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": "101-300"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cad:ev50-59_y1-2",
+    "key": "cad",
+    "variant": "ev50-59_y1-2",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      50,
+      59
+     ],
+     "years_since": [
+      1,
+      2
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_build:over_200",
+    "key": "nm_build",
+    "variant": "over_200",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 200,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "eczema"
+  ],
+  "grey": "GRY-5",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.704,
+   "bmi": 44.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "William",
+  "last_name": "Richardson",
+  "sex": "M",
+  "dob": "1967-05-27",
+  "age": 59,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "financial analyst",
+  "occupation_class": "1A",
+  "annual_income": 28000,
+  "net_worth": 58000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 270.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 69,
+ "pulse": 57,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2024-03-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "urine_protein": 114
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0180-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2024-07-10",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 57,
+    "years_since": 1.9,
+    "event": "MI",
+    "ef": 62,
+    "angina": false,
+    "vessels": 1,
+    "ldl": 91,
+    "abnormal_stress": false,
+    "normal_stress_12mo": false,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "80 mg",
+     "start": "2024-08-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2024-07-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "100 mg",
+     "start": "2024-10-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0180-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-08-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0180-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2019-05-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2019-05-11",
+     "stop": "2019-06-21",
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0180-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 76,
+   "age_at_death": 82,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2017-07-03",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Denmark",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Harborview Life",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0180-P1",
+   "name": "Dr. Deborah Garcia",
+   "specialty": "family medicine",
+   "practice": "Cox Stanley and Cooper Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0180-P2",
+   "name": "Dr. Brian Reyes",
+   "specialty": "nephrology",
+   "practice": "Chen Rowland and Craig Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0180-P3",
+   "name": "Dr. Barbara Carr",
+   "specialty": "cardiology",
+   "practice": "Ferguson LLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 67.0,
+  "ldl": 192.0,
+  "triglycerides": 90.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 101.0,
+  "a1c": 5.4,
+  "ast": 16.0,
+  "alt": 40.0,
+  "ggt": 47.0,
+  "alk_phos": 94.0,
+  "bilirubin": 1.0,
+  "albumin": 4.5,
+  "creatinine": 0.9,
+  "egfr": 76.0,
+  "urine_protein": 114.0,
+  "hemoglobin": 15.0,
+  "cdt": 0.9,
+  "nt_probnp": 110.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.4
+ }
+}

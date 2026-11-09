@@ -1,0 +1,302 @@
+{
+ "case_id": "C0686",
+ "seed": 646569178,
+ "app_date": "2026-08-12",
+ "design": {
+  "case_id": "C0686",
+  "seed": 646569178,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 75,
+  "sex": "M",
+  "face": 500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "substance_use_hard:hard_gt10",
+    "key": "substance_use_hard",
+    "variant": "hard_gt10",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "fatty_liver:simple",
+    "key": "fatty_liver",
+    "variant": "simple",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "mvr",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.262,
+   "bmi": 28.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kelly",
+  "last_name": "Riley",
+  "sex": "M",
+  "dob": "1951-03-31",
+  "age": 75,
+  "address_state": "LA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 152800,
+  "net_worth": 3820000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 67.0,
+ "weight_lb": 184.0,
+ "bp_systolic": 145,
+ "bp_diastolic": 83,
+ "pulse": 71,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1975-01-15",
+   "quit": "2024-04-19",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2010-05-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "substance": "methamphetamine",
+    "years_since_last_use": 10.8,
+    "maintenance": false
+   },
+   "meds": [
+    {
+     "drug": "buprenorphine-naloxone",
+     "dose": "8/2 mg",
+     "start": "2010-05-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0686-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2012-08-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "fibrosis": "other"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0686-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2024-06-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2024-07-04",
+     "stop": "2024-08-13",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0686-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-06-14",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-02-16",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-06-02",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0686-P1",
+   "name": "Dr. Alvin Stephenson",
+   "specialty": "family medicine",
+   "practice": "Newman Group Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0686-P2",
+   "name": "Dr. David Kelley",
+   "specialty": "addiction medicine",
+   "practice": "Anderson-Gardner Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0686-P3",
+   "name": "Dr. James Robbins",
+   "specialty": "gastroenterology",
+   "practice": "Ward Thompson and Wilson Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 274.0,
+  "hdl": 57.0,
+  "ldl": 195.0,
+  "triglycerides": 109.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 97.0,
+  "a1c": 5.3,
+  "ast": 65.0,
+  "alt": 82.0,
+  "ggt": 47.0,
+  "alk_phos": 93.0,
+  "bilirubin": 0.4,
+  "albumin": 4.7,
+  "creatinine": 0.8,
+  "egfr": 88.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.4,
+  "cdt": 0.9,
+  "nt_probnp": 157.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.8
+ }
+}

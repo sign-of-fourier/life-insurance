@@ -1,0 +1,366 @@
+{
+ "case_id": "C0089",
+ "seed": 827285977,
+ "app_date": "2026-04-02",
+ "design": {
+  "case_id": "C0089",
+  "seed": 827285977,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 36,
+  "sex": "M",
+  "face": 300000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "sarcoidosis:stable",
+    "key": "sarcoidosis",
+    "variant": "stable",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "pulmonary_embolism:recurrent",
+    "key": "pulmonary_embolism",
+    "variant": "recurrent",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recurrent": true
+    },
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy",
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.346,
+   "bmi": 24.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jeremy",
+  "last_name": "Sosa",
+  "sex": "M",
+  "dob": "1990-09-16",
+  "age": 36,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "warehouse supervisor",
+  "occupation_class": "2A",
+  "annual_income": 28000,
+  "net_worth": 226000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 61.0,
+ "weight_lb": 128.0,
+ "bp_systolic": 125,
+ "bp_diastolic": 83,
+ "pulse": 83,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2006-03-17",
+   "quit": "2014-09-02",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2019-02-25",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 15.4,
+    "monotherapy": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0089-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2013-10-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 12.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0089-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2022-11-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 3.4,
+    "recurrent": true,
+    "provoked": false,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2019-03-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2019-04-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2019-04-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0089-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-07-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2018-07-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2018-08-24",
+     "stop": "2018-07-22",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0089-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 67,
+   "age_at_death": 84,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-10-29",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "France",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Northstar Life",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0089-P1",
+   "name": "Dr. Kimberly Taylor",
+   "specialty": "family medicine",
+   "practice": "Howard Solis and Woods Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0089-P2",
+   "name": "Dr. Tracey Stone",
+   "specialty": "psychiatry",
+   "practice": "Nguyen Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0089-P3",
+   "name": "Dr. David Dunn",
+   "specialty": "pulmonology",
+   "practice": "Kelly Hebert and Rodriguez Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 289.0,
+  "hdl": 70.0,
+  "ldl": 197.0,
+  "triglycerides": 110.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 79.0,
+  "a1c": 5.5,
+  "ast": 14.0,
+  "alt": 39.0,
+  "ggt": 13.0,
+  "alk_phos": 99.0,
+  "bilirubin": 0.9,
+  "albumin": 4.1,
+  "creatinine": 0.9,
+  "egfr": 105.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.4,
+  "cdt": 1.4,
+  "nt_probnp": 28.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

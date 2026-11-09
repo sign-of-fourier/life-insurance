@@ -1,0 +1,244 @@
+{
+ "case_id": "C0371",
+ "seed": 195762746,
+ "app_date": "2025-11-29",
+ "design": {
+  "case_id": "C0371",
+  "seed": 195762746,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 77,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:breast_3_y10-100",
+    "key": "cancer",
+    "variant": "breast_3_y10-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "breast_3",
+     "years_since_tx": [
+      10,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:breast_3_y10-100"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.284,
+   "bmi": 27.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Erica",
+  "last_name": "Smith",
+  "sex": "F",
+  "dob": "1948-08-28",
+  "age": 77,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 562480,
+  "net_worth": 14062000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 66.0,
+ "weight_lb": 173.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 78,
+ "pulse": 61,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1978-03-29",
+   "quit": "2007-01-25",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2002-05-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "breast_3",
+    "years_since_tx": 22.1,
+    "stage": "III"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0371-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2017-07-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0371-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2012-09-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0371-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2019-10-22",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0371-P1",
+   "name": "Dr. Brandon Thompson",
+   "specialty": "family medicine",
+   "practice": "Perez Brown and Miller Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0371-P2",
+   "name": "Dr. Nancy Mullins",
+   "specialty": "oncology",
+   "practice": "Manning Owens and Jackson Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 68.0,
+  "ldl": 184.0,
+  "triglycerides": 121.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 103.0,
+  "a1c": 5.1,
+  "ast": 36.0,
+  "alt": 19.0,
+  "ggt": 38.0,
+  "alk_phos": 114.0,
+  "bilirubin": 0.6,
+  "albumin": 4.9,
+  "creatinine": 1.2,
+  "egfr": 83.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.0,
+  "cdt": 1.4,
+  "nt_probnp": 194.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

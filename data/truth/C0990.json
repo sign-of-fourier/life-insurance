@@ -1,0 +1,459 @@
+{
+ "case_id": "C0990",
+ "seed": 1071452982,
+ "app_date": "2025-11-22",
+ "design": {
+  "case_id": "C0990",
+  "seed": 1071452982,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 40,
+  "sex": "F",
+  "face": 3000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "pad_aaa:aaa_small",
+    "key": "pad_aaa",
+    "variant": "aaa_small",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "size_cm": {
+      "lt": 4.0
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t2:age40-49_a1c9.0-9.99",
+    "key": "diabetes_t2",
+    "variant": "age40-49_a1c9.0-9.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 175,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      9.0,
+      9.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_c:untreated",
+    "key": "hepatitis_c",
+    "variant": "untreated",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "brca_lynch:no_surgery",
+    "key": "brca_lynch",
+    "variant": "no_surgery",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "depression_anxiety:severe",
+    "key": "depression_anxiety",
+    "variant": "severe",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "hospitalization_years_ago": {
+       "ge": 1
+      },
+      "ect": true,
+      "disability": true
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "gestational_dm:resolved",
+    "key": "gestational_dm",
+    "variant": "resolved",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "resolved": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "athena_summary",
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.876,
+   "bmi": 26.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Emily",
+  "last_name": "Dunn",
+  "sex": "F",
+  "dob": "1985-11-13",
+  "age": 40,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "police officer",
+  "occupation_class": "3A",
+  "annual_income": 114000,
+  "net_worth": 129000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 20",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 65.0,
+ "weight_lb": 156.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 85,
+ "pulse": 70,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2009-09-23",
+   "quit": "2015-09-21",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2013-11-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "aaa",
+    "smoker": true,
+    "size_cm": 3.5,
+    "repaired_months": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0990-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2016-06-29",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 9.1,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 9.4,
+    "age_at_dx": 30,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2016-10-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "sitagliptin",
+     "dose": "100 mg",
+     "start": "2016-07-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0990-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2006-03-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": false,
+    "svr": false,
+    "years_since_tx": 13.6
+   },
+   "meds": [
+    {
+     "drug": "ledipasvir-sofosbuvir",
+     "dose": "90/400 mg",
+     "start": "2006-07-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0990-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "brca_lynch",
+   "label": "BRCA/Lynch positive (no cancer)",
+   "onset": "2015-10-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "prophylactic_surgery": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0990-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2003-04-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 3,
+    "work_loss_months": null,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": true,
+    "disability": true,
+    "years_since_dx": 22.6
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0990-P6"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "gestational_dm",
+   "label": "Gestational diabetes (resolved)",
+   "onset": "2012-08-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "resolved": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0990-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-08-29",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-09-18",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0990-P1",
+   "name": "Dr. Christina Thomas",
+   "specialty": "family medicine",
+   "practice": "Larson Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0990-P2",
+   "name": "Dr. Felicia Marshall",
+   "specialty": "cardiology",
+   "practice": "Mitchell Navarro and Barajas Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0990-P3",
+   "name": "Dr. Regina Hill",
+   "specialty": "endocrinology",
+   "practice": "Hayes LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0990-P4",
+   "name": "Dr. Tamara Hernandez",
+   "specialty": "gastroenterology",
+   "practice": "Hudson Burton and Sanchez Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0990-P5",
+   "name": "Dr. Jennifer Lane",
+   "specialty": "oncology",
+   "practice": "Trujillo Carroll and Jenkins Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0990-P6",
+   "name": "Dr. Cheryl Brown",
+   "specialty": "psychiatry",
+   "practice": "Davis-Mendez Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 51.0,
+  "ldl": 228.0,
+  "triglycerides": 66.0,
+  "tc_hdl_ratio": 5.7,
+  "glucose_fasting": 218.0,
+  "a1c": 9.2,
+  "ast": 98.0,
+  "alt": 50.0,
+  "ggt": 34.0,
+  "alk_phos": 69.0,
+  "bilirubin": 1.0,
+  "albumin": 4.3,
+  "creatinine": 1.2,
+  "egfr": 115.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.2,
+  "cdt": 0.8,
+  "nt_probnp": 47.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

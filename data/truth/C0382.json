@@ -1,0 +1,269 @@
+{
+ "case_id": "C0382",
+ "seed": 525842301,
+ "app_date": "2025-01-20",
+ "design": {
+  "case_id": "C0382",
+  "seed": 525842301,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 20,
+  "sex": "F",
+  "face": 1500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "suicide_attempt:old",
+    "key": "suicide_attempt",
+    "variant": "old",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "rheumatoid_arthritis:biologic",
+    "key": "rheumatoid_arthritis",
+    "variant": "biologic",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "biologic": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "handwritten_scan"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.833,
+   "bmi": 24.0,
+   "foreign_country": "Malaysia",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tracy",
+  "last_name": "Smith",
+  "sex": "F",
+  "dob": "2005-02-23",
+  "age": 20,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": 3.7,
+  "visa_type": null,
+  "occupation": "insurance underwriter",
+  "occupation_class": "1A",
+  "annual_income": 59000,
+  "net_worth": 212000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 68.0,
+ "weight_lb": 158.0,
+ "bp_systolic": 122,
+ "bp_diastolic": 74,
+ "pulse": 75,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "6/yr",
+   "start": "2010-08-14",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2019-01-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 6
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0382-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "rheumatoid_arthritis",
+   "label": "Rheumatoid arthritis",
+   "onset": "2023-10-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "methotrexate",
+     "dose": "2.5 mg",
+     "start": "2023-12-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rheumatoid_arthritis"
+    },
+    {
+     "drug": "adalimumab",
+     "dose": "40 mg inj",
+     "start": "2024-01-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rheumatoid_arthritis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0382-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2023-05-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0382-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 69,
+   "age_at_death": 79,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2018-02-09",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0382-P1",
+   "name": "Dr. Kelsey Haley",
+   "specialty": "family medicine",
+   "practice": "Whitaker and Sons Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Malaysia"
+  },
+  {
+   "provider_id": "C0382-P2",
+   "name": "Dr. Marc Wheeler",
+   "specialty": "psychiatry",
+   "practice": "Vazquez-Sanchez Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 277.0,
+  "hdl": 65.0,
+  "ldl": 181.0,
+  "triglycerides": 153.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 80.0,
+  "a1c": 5.2,
+  "ast": 30.0,
+  "alt": 35.0,
+  "ggt": 24.0,
+  "alk_phos": 100.0,
+  "bilirubin": 1.1,
+  "albumin": 4.8,
+  "creatinine": 0.8,
+  "egfr": 76.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 14.3,
+  "cdt": 0.8,
+  "nt_probnp": 72.0,
+  "cotinine_urine": 9.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

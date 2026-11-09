@@ -1,0 +1,292 @@
+{
+ "case_id": "C0227",
+ "seed": 969101363,
+ "app_date": "2025-08-29",
+ "design": {
+  "case_id": "C0227",
+  "seed": 969101363,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 41,
+  "sex": "F",
+  "face": 7500000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "neuropathy:idiopathic",
+    "key": "neuropathy",
+    "variant": "idiopathic",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "substance_use_hard:hard_gt10",
+    "key": "substance_use_hard",
+    "variant": "hard_gt10",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "lipids",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "contraception"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.422,
+   "bmi": 28.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Crystal",
+  "last_name": "Galvan",
+  "sex": "F",
+  "dob": "1984-11-08",
+  "age": 41,
+  "address_state": "OH",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "carpenter",
+  "occupation_class": "2A",
+  "annual_income": 887000,
+  "net_worth": 3608000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 7500000,
+  "product": "Term 30",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 148.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 90,
+ "pulse": 78,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "neuropathy",
+   "label": "Peripheral neuropathy (idiopathic)",
+   "onset": "2016-06-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "gabapentin",
+     "dose": "100 mg",
+     "start": "2016-08-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "neuropathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0227-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2006-08-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "substance": "heroin",
+    "years_since_last_use": 17.0,
+    "maintenance": false
+   },
+   "meds": [
+    {
+     "drug": "naloxone",
+     "dose": "4 mg nasal",
+     "start": "2006-08-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0227-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2022-05-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "norethindrone-ethinyl estradiol",
+     "dose": "1/20",
+     "start": "2022-05-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0227-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 68,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-03-10",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-10-26",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-07-15",
+   "code": "N04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0227-P1",
+   "name": "Dr. Heather Russell",
+   "specialty": "family medicine",
+   "practice": "Ramirez-Garcia Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0227-P2",
+   "name": "Dr. Sean Pitts",
+   "specialty": "neurology",
+   "practice": "Elliott and Sons Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0227-P3",
+   "name": "Dr. Lisa Robinson",
+   "specialty": "addiction medicine",
+   "practice": "Conner Inc Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 295.0,
+  "hdl": 47.0,
+  "ldl": 226.0,
+  "triglycerides": 109.0,
+  "tc_hdl_ratio": 6.3,
+  "glucose_fasting": 103.0,
+  "a1c": 5.0,
+  "ast": 19.0,
+  "alt": 12.0,
+  "ggt": 37.0,
+  "alk_phos": 40.0,
+  "bilirubin": 0.9,
+  "albumin": 4.2,
+  "creatinine": 1.0,
+  "egfr": 112.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.6,
+  "cdt": 1.0,
+  "nt_probnp": 92.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

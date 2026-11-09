@@ -1,0 +1,624 @@
+{
+ "case_id": "C0609",
+ "seed": 382616605,
+ "app_date": "2025-12-06",
+ "design": {
+  "case_id": "C0609",
+  "seed": 382616605,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 69,
+  "sex": "F",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "suicide_attempt:old",
+    "key": "suicide_attempt",
+    "variant": "old",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "parkinsons:late_onset",
+    "key": "parkinsons",
+    "variant": "late_onset",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_lipids:lip_75",
+    "key": "nm_lipids",
+    "variant": "lip_75",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "cad:ev50-59_y5-100",
+    "key": "cad",
+    "variant": "ev50-59_y5-100",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      50,
+      59
+     ],
+     "years_since": [
+      5,
+      100
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "substance_use_hard:oud_maint_ge2",
+    "key": "substance_use_hard",
+    "variant": "oud_maint_ge2",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "sleep_apnea:untreated_severe",
+    "key": "sleep_apnea",
+    "variant": "untreated_severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ahi": {
+      "gt": 30
+     }
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne"
+  ],
+  "grey": "GRY-8",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "GIO",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.396,
+   "bmi": 22.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Renee",
+  "last_name": "Johnson",
+  "sex": "F",
+  "dob": "1957-05-23",
+  "age": 69,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 163760,
+  "net_worth": 4094000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [
+   "GIO",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 67.0,
+ "weight_lb": 141.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 72,
+ "pulse": 92,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1992-08-15",
+   "quit": "2022-09-08",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2010-10-31",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 15.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0609-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "parkinsons",
+   "label": "Parkinson's disease",
+   "onset": "2022-03-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_onset": 67
+   },
+   "meds": [
+    {
+     "drug": "rasagiline",
+     "dose": "1 mg",
+     "start": "2022-06-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    },
+    {
+     "drug": "carbidopa-levodopa",
+     "dose": "25/100 mg",
+     "start": "2022-07-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0609-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2019-09-25",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 13,
+    "colonoscopy_years_ago": 6.2
+   },
+   "meds": [
+    {
+     "drug": "infliximab",
+     "dose": "100 mg IV",
+     "start": "2019-10-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    },
+    {
+     "drug": "budesonide",
+     "dose": "3 mg",
+     "start": "2019-11-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0609-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2015-12-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_event": 59,
+    "years_since": 10,
+    "event": "CABG",
+    "ef": 65,
+    "angina": false,
+    "vessels": 2,
+    "ldl": 73,
+    "abnormal_stress": false,
+    "normal_stress_12mo": true,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "40 mg",
+     "start": "2016-03-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2016-01-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "25 mg",
+     "start": "2016-03-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0609-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2019-10-07",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "substance": "opioids",
+    "maintenance_years": 3.7,
+    "maintenance": true
+   },
+   "meds": [
+    {
+     "drug": "naloxone",
+     "dose": "4 mg nasal",
+     "start": "2019-11-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0609-P6"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2016-02-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [
+    {
+     "drug": "fludrocortisone",
+     "dose": "0.1 mg",
+     "start": "2016-05-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0609-P7"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2020-02-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": false,
+    "compliant": false,
+    "ahi": 71
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0609-P8"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2023-12-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2023-12-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2023-12-07",
+     "stop": "2024-01-25",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0609-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 67,
+   "age_at_death": 85,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-05-31",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-03-14",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-07-27",
+   "code": "N02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0609-P1",
+   "name": "Dr. Chase Lopez",
+   "specialty": "family medicine",
+   "practice": "Hammond and Sons Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0609-P2",
+   "name": "Dr. Catherine Cochran",
+   "specialty": "psychiatry",
+   "practice": "Summers PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0609-P3",
+   "name": "Dr. Alexander Mason",
+   "specialty": "neurology",
+   "practice": "Hendricks LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0609-P4",
+   "name": "Dr. Kevin Drake",
+   "specialty": "gastroenterology",
+   "practice": "Brown-Gillespie Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0609-P5",
+   "name": "Dr. Daniel Rodgers",
+   "specialty": "cardiology",
+   "practice": "Torres Bell and Cook Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0609-P6",
+   "name": "Dr. Mason Reese",
+   "specialty": "addiction medicine",
+   "practice": "Ryan Ware and Frost Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0609-P7",
+   "name": "Dr. Kristin Brown",
+   "specialty": "endocrinology",
+   "practice": "Chavez Martin and Robertson Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0609-P8",
+   "name": "Dr. Jason Ingram",
+   "specialty": "pulmonology",
+   "practice": "Osborne-Campbell Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 408.0,
+  "hdl": 52.0,
+  "ldl": 333.0,
+  "triglycerides": 112.0,
+  "tc_hdl_ratio": 7.8,
+  "glucose_fasting": 87.0,
+  "a1c": 5.0,
+  "ast": 16.0,
+  "alt": 21.0,
+  "ggt": 44.0,
+  "alk_phos": 93.0,
+  "bilirubin": 0.5,
+  "albumin": 4.5,
+  "creatinine": 1.2,
+  "egfr": 73.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.2,
+  "cdt": 0.9,
+  "nt_probnp": 83.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

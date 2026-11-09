@@ -1,0 +1,333 @@
+{
+ "case_id": "C0534",
+ "seed": 863279172,
+ "app_date": "2025-09-20",
+ "design": {
+  "case_id": "C0534",
+  "seed": 863279172,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 44,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "cancer:acute_leukemia_y5-100",
+    "key": "cancer",
+    "variant": "acute_leukemia_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "acute_leukemia",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cervical_dysplasia:treated",
+    "key": "cervical_dysplasia",
+    "variant": "treated",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "anemia:fvl_vte",
+    "key": "anemia",
+    "variant": "fvl_vte",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "factor_v_leiden",
+     "vte": true
+    },
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.489,
+   "bmi": 32.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Samantha",
+  "last_name": "Sanders",
+  "sex": "F",
+  "dob": "1981-08-29",
+  "age": 44,
+  "address_state": "VA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "registered nurse",
+  "occupation_class": "2A",
+  "annual_income": 25000,
+  "net_worth": 218000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 20",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": true,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 61.0,
+ "weight_lb": 174.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 90,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2007-10-01",
+   "quit": "2024-05-11",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2004-09-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "acute_leukemia",
+    "years_since_tx": 20.7,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0534-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cervical_dysplasia",
+   "label": "Abnormal pap / CIN",
+   "onset": "2013-01-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "cin3_pending": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0534-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2006-01-08",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "vte": true,
+    "kind": "factor_v_leiden",
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2017-04-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0534-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2016-08-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2016-09-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2016-10-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0534-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 73,
+   "age_at_death": 85,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0534-P1",
+   "name": "Dr. Matthew Bush",
+   "specialty": "family medicine",
+   "practice": "Atkins LLC Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0534-P2",
+   "name": "Dr. Christopher Robinson",
+   "specialty": "oncology",
+   "practice": "Petersen Inc Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0534-P3",
+   "name": "Dr. Joshua Hale",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Miller Paul and Evans Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 56.0,
+  "ldl": 207.0,
+  "triglycerides": 77.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 86.0,
+  "a1c": 4.8,
+  "ast": 28.0,
+  "alt": 30.0,
+  "ggt": 25.0,
+  "alk_phos": 55.0,
+  "bilirubin": 1.1,
+  "albumin": 3.8,
+  "creatinine": 1.1,
+  "egfr": 110.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.8,
+  "cdt": 0.9,
+  "nt_probnp": 41.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

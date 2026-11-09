@@ -1,0 +1,364 @@
+{
+ "case_id": "C0339",
+ "seed": 584013243,
+ "app_date": "2026-08-03",
+ "design": {
+  "case_id": "C0339",
+  "seed": 584013243,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 24,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "eating_disorder:recovered",
+    "key": "eating_disorder",
+    "variant": "recovered",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recovered_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_lipids:hdl_low",
+    "key": "nm_lipids",
+    "variant": "hdl_low",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 15,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "anemia:fvl_vte",
+    "key": "anemia",
+    "variant": "fvl_vte",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "factor_v_leiden",
+     "vte": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_occupation:occ_5a",
+    "key": "nm_occupation",
+    "variant": "occ_5a",
+    "chapter": "OCC",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 7.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 3,
+  "evidence_path": "accel_to_fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_08",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "hospital_discharge",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.759,
+   "bmi": 22.1,
+   "foreign_country": "Norway",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Justin",
+  "last_name": "Sweeney",
+  "sex": "M",
+  "dob": "2002-03-14",
+  "age": 24,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "Norway",
+  "years_in_us": 2.5,
+  "visa_type": "Permanent Resident",
+  "occupation": "wildland smoke jumper",
+  "occupation_class": "5A",
+  "annual_income": 21000,
+  "net_worth": 34000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB",
+   "CTR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": true,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 65.0,
+ "weight_lb": 133.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 76,
+ "pulse": 62,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "eating_disorder",
+   "label": "Eating disorder",
+   "onset": "2021-09-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "recovered_years": 7.8
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0339-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2020-02-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "prazosin",
+     "dose": "1 mg",
+     "start": "2020-03-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0339-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2023-08-04",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "vte": true,
+    "kind": "factor_v_leiden"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0339-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2020-10-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0339-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2021-05-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2021-07-08",
+     "stop": "2021-07-17",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0339-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 74,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-07-22",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-11-17",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Harborview Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0339-P1",
+   "name": "Dr. Jessica Brown",
+   "specialty": "family medicine",
+   "practice": "Miller and Sons Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Norway"
+  },
+  {
+   "provider_id": "C0339-P2",
+   "name": "Dr. Daniel Rivera",
+   "specialty": "psychiatry",
+   "practice": "Fernandez Martinez and Martin Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0339-P3",
+   "name": "Dr. Brandon Casey",
+   "specialty": "hematology",
+   "practice": "Powell Oconnor and Gibson Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 114.0,
+  "hdl": 22.0,
+  "ldl": 56.0,
+  "triglycerides": 179.0,
+  "tc_hdl_ratio": 5.2,
+  "glucose_fasting": 98.0,
+  "a1c": 5.4,
+  "ast": 23.0,
+  "alt": 18.0,
+  "ggt": 26.0,
+  "alk_phos": 57.0,
+  "bilirubin": 0.8,
+  "albumin": 4.0,
+  "creatinine": 1.1,
+  "egfr": 79.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.4,
+  "cdt": 1.1,
+  "nt_probnp": 70.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,245 @@
+{
+ "case_id": "C0461",
+ "seed": 399254497,
+ "app_date": "2026-09-13",
+ "design": {
+  "case_id": "C0461",
+  "seed": 399254497,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 53,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_lipids:lip_25",
+    "key": "nm_lipids",
+    "variant": "lip_25",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "anemia:fvl_vte",
+    "key": "anemia",
+    "variant": "fvl_vte",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "factor_v_leiden",
+     "vte": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_occupation:occ_5a",
+    "key": "nm_occupation",
+    "variant": "occ_5a",
+    "chapter": "OCC",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 7.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current_heavy",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "moderate",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CTR",
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.435,
+   "bmi": 30.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kyle",
+  "last_name": "Wyatt",
+  "sex": "M",
+  "dob": "1974-02-25",
+  "age": 53,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "bomb disposal technician",
+  "occupation_class": "5A",
+  "annual_income": 306000,
+  "net_worth": 2770000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "ROP-T"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 64.0,
+ "weight_lb": 178.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 90,
+ "pulse": 58,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "2 ppd",
+   "start": "1991-01-04",
+   "quit": null,
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2024-05-26",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "vte": true,
+    "kind": "factor_v_leiden"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0461-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 72,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2020-02-09",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "martial arts",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Northstar Life",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0461-P1",
+   "name": "Dr. Joseph Oconnor",
+   "specialty": "family medicine",
+   "practice": "Coffey Ltd Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0461-P2",
+   "name": "Dr. Lisa Love",
+   "specialty": "hematology",
+   "practice": "Klein-Reed Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 332.0,
+  "hdl": 46.0,
+  "ldl": 261.0,
+  "triglycerides": 125.0,
+  "tc_hdl_ratio": 7.2,
+  "glucose_fasting": 78.0,
+  "a1c": 5.1,
+  "ast": 35.0,
+  "alt": 36.0,
+  "ggt": 45.0,
+  "alk_phos": 43.0,
+  "bilirubin": 0.4,
+  "albumin": 4.2,
+  "creatinine": 1.0,
+  "egfr": 84.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.1,
+  "cdt": 0.8,
+  "nt_probnp": 65.0,
+  "cotinine_urine": 3215.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

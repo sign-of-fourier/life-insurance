@@ -1,0 +1,274 @@
+{
+ "case_id": "C0035",
+ "seed": 997260551,
+ "app_date": "2026-06-14",
+ "design": {
+  "case_id": "C0035",
+  "seed": 997260551,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 29,
+  "sex": "M",
+  "face": 1000000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "substance_use_hard:oud_maint_lt2",
+    "key": "substance_use_hard",
+    "variant": "oud_maint_lt2",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple",
+   "osteopenia"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.651,
+   "bmi": 28.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jorge",
+  "last_name": "Frank",
+  "sex": "M",
+  "dob": "1997-11-01",
+  "age": 29,
+  "address_state": "CO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "marketing manager",
+  "occupation_class": "1A",
+  "annual_income": 51000,
+  "net_worth": 428000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 30",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": true,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 64.0,
+ "weight_lb": 167.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 88,
+ "pulse": 57,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2021-03-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "substance": "opioids",
+    "maintenance_years": 0.8,
+    "maintenance": true
+   },
+   "meds": [
+    {
+     "drug": "naloxone",
+     "dose": "4 mg nasal",
+     "start": "2021-06-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    },
+    {
+     "drug": "buprenorphine-naloxone",
+     "dose": "8/2 mg",
+     "start": "2021-03-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0035-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2018-08-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2018-09-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0035-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2023-06-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2023-06-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0035-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 65,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-06-15",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-07-29",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0035-P1",
+   "name": "Dr. Darrell Mccarthy",
+   "specialty": "family medicine",
+   "practice": "Morris Ltd Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0035-P2",
+   "name": "Dr. Sean Baldwin",
+   "specialty": "addiction medicine",
+   "practice": "Barnett-Morgan Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 63.0,
+  "ldl": 178.0,
+  "triglycerides": 186.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 83.0,
+  "a1c": 4.8,
+  "ast": 24.0,
+  "alt": 12.0,
+  "ggt": 51.0,
+  "alk_phos": 46.0,
+  "bilirubin": 1.2,
+  "albumin": 4.0,
+  "creatinine": 0.8,
+  "egfr": 100.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.9,
+  "cdt": 1.1,
+  "nt_probnp": 84.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,381 @@
+{
+ "case_id": "C0248",
+ "seed": 815334835,
+ "app_date": "2025-05-06",
+ "design": {
+  "case_id": "C0248",
+  "seed": 815334835,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 52,
+  "sex": "F",
+  "face": 500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "pancreatitis:alcohol",
+    "key": "pancreatitis",
+    "variant": "alcohol",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cause": "alcohol"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_mvr:dui_1_2y",
+    "key": "nm_mvr",
+    "variant": "dui_1_2y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 75,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "hepatitis_c:cured_recent",
+    "key": "hepatitis_c",
+    "variant": "cured_recent",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "svr": true
+    },
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "epic_progress"
+  ],
+  "riders_requested": [
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.903,
+   "bmi": 24.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Sarah",
+  "last_name": "Gould",
+  "sex": "F",
+  "dob": "1972-11-12",
+  "age": 52,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "airline pilot",
+  "occupation_class": "1A",
+  "annual_income": 36000,
+  "net_worth": 81000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "UL",
+  "riders_requested": [
+   "OIR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 145.0,
+ "bp_systolic": 135,
+ "bp_diastolic": 67,
+ "pulse": 65,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2023-05-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic": false,
+    "cause": "alcohol"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0248-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2006-02-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 19.1,
+    "undetectable_months": 49,
+    "cd4": 690,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "emtricitabine-tenofovir",
+     "dose": "200/25 mg",
+     "start": "2006-04-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    },
+    {
+     "drug": "bictegravir-emtricitabine-tenofovir",
+     "dose": "50/200/25 mg",
+     "start": "2006-04-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0248-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2020-02-23",
+   "status": "resolved",
+   "severity": "moderate",
+   "details": {
+    "cirrhosis": false,
+    "svr": true,
+    "years_since_tx": 0.4
+   },
+   "meds": [
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2020-02-27",
+     "stop": "2020-05-21",
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0248-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2020-11-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "100 mg",
+     "start": "2020-12-20",
+     "stop": "2020-12-03",
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0248-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-05-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2018-05-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0248-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-08-19",
+   "code": "D03",
+   "disclosure": "omitted"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Pinecrest Mutual",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0248-P1",
+   "name": "Dr. Heather Santos",
+   "specialty": "family medicine",
+   "practice": "Montoya and Sons Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0248-P2",
+   "name": "Dr. Lori Parsons",
+   "specialty": "gastroenterology",
+   "practice": "Gray-Hamilton Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0248-P3",
+   "name": "Dr. Alan Williams",
+   "specialty": "rheumatology",
+   "practice": "Thomas Gomez and Price Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 72.0,
+  "ldl": 187.0,
+  "triglycerides": 118.0,
+  "tc_hdl_ratio": 3.9,
+  "glucose_fasting": 104.0,
+  "a1c": 5.2,
+  "ast": 27.0,
+  "alt": 42.0,
+  "ggt": 13.0,
+  "alk_phos": 118.0,
+  "bilirubin": 0.9,
+  "albumin": 4.0,
+  "creatinine": 1.0,
+  "egfr": 101.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.0,
+  "nt_probnp": 100.0,
+  "cotinine_urine": 6.0,
+  "hiv": 1.0,
+  "cocaine": 0.0
+ }
+}

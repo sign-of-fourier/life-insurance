@@ -1,0 +1,348 @@
+{
+ "case_id": "C0856",
+ "seed": 728362901,
+ "app_date": "2026-02-27",
+ "design": {
+  "case_id": "C0856",
+  "seed": 728362901,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 63,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_avocation:skydive_heavy",
+    "key": "nm_avocation",
+    "variant": "skydive_heavy",
+    "chapter": "AVO",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 5.0,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "chew",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "sinusitis",
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.721,
+   "bmi": 30.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tammy",
+  "last_name": "Armstrong",
+  "sex": "F",
+  "dob": "1962-11-07",
+  "age": 63,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "airline pilot",
+  "occupation_class": "1A",
+  "annual_income": 34000,
+  "net_worth": 119000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 10",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "business partner"
+ },
+ "height_in": 63.0,
+ "weight_lb": 172.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 70,
+ "pulse": 68,
+ "tobacco": [
+  {
+   "product": "chew",
+   "status": "current",
+   "frequency": "weekends",
+   "start": "2019-03-17",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2020-05-11",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": 3,
+    "er_years_ago": 8.1,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2020-07-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0856-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2025-06-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2025-06-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0856-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2012-08-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2012-09-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2012-09-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0856-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2014-02-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "100 mg",
+     "start": "2014-02-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0856-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 80,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-09-15",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-03-03",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2017-04-10",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "skydiving",
+   "details": {
+    "jumps_per_year": 228,
+    "intends_to_stop": false
+   },
+   "disclosure": "omitted"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0856-P1",
+   "name": "Dr. Kari Nunez",
+   "specialty": "family medicine",
+   "practice": "Russell PLC Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0856-P2",
+   "name": "Dr. Kevin Mclean",
+   "specialty": "pulmonology",
+   "practice": "Stokes-Maldonado Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 56.0,
+  "ldl": 188.0,
+  "triglycerides": 172.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 99.0,
+  "a1c": 5.2,
+  "ast": 14.0,
+  "alt": 12.0,
+  "ggt": 39.0,
+  "alk_phos": 71.0,
+  "bilirubin": 1.2,
+  "albumin": 4.5,
+  "creatinine": 0.8,
+  "egfr": 70.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.0,
+  "cdt": 0.9,
+  "nt_probnp": 67.0,
+  "cotinine_urine": 1429.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,379 @@
+{
+ "case_id": "C0121",
+ "seed": 940854422,
+ "app_date": "2025-01-31",
+ "design": {
+  "case_id": "C0121",
+  "seed": 940854422,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 70,
+  "sex": "M",
+  "face": 150000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cardiomyopathy:low_ef",
+    "key": "cardiomyopathy",
+    "variant": "low_ef",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": {
+      "lt": 40
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "bipolar:bp2_stable",
+    "key": "bipolar",
+    "variant": "bp2_stable",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": "II",
+     "stable_years": {
+      "ge": 2
+     }
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "dental",
+   "erectile_dysfunction",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.383,
+   "bmi": 22.2,
+   "foreign_country": "Iceland",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Troy",
+  "last_name": "Rocha",
+  "sex": "M",
+  "dob": "1955-06-10",
+  "age": 70,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "Iceland",
+  "years_in_us": 2.8,
+  "visa_type": "H-1B",
+  "occupation": "plumber",
+  "occupation_class": "2A",
+  "annual_income": 78000,
+  "net_worth": 106000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 150000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 133.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 88,
+ "pulse": 58,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2015-08-03",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "ef": 27,
+    "recovered_years": 9.7,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "furosemide",
+     "dose": "20 mg",
+     "start": "2015-08-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0121-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "bipolar",
+   "label": "Bipolar disorder",
+   "onset": "2010-08-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "II",
+    "stable_years": 16.0,
+    "hospitalization_years_ago": null,
+    "compliant": true
+   },
+   "meds": [
+    {
+     "drug": "lurasidone",
+     "dose": "80 mg",
+     "start": "2010-08-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bipolar"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0121-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2010-03-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2010-04-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0121-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2015-04-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2015-05-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2015-05-12",
+     "stop": "2015-05-24",
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0121-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2021-12-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "sildenafil",
+     "dose": "20 mg",
+     "start": "2022-01-15",
+     "stop": "2022-01-15",
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    },
+    {
+     "drug": "tadalafil",
+     "dose": "5 mg",
+     "start": "2022-02-09",
+     "stop": "2022-01-03",
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0121-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2023-09-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2023-09-26",
+     "stop": "2023-10-29",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0121-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2021-01-03",
+   "code": "N01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0121-P1",
+   "name": "Dr. Whitney Joyce",
+   "specialty": "family medicine",
+   "practice": "Lee-Johnson Clinic",
+   "aps_style": "foreign_translated",
+   "country": "Iceland"
+  },
+  {
+   "provider_id": "C0121-P2",
+   "name": "Dr. Mark Hancock",
+   "specialty": "cardiology",
+   "practice": "Randall-Underwood Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0121-P3",
+   "name": "Dr. Crystal Scott",
+   "specialty": "psychiatry",
+   "practice": "Osborn Jackson and Horton Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 289.0,
+  "hdl": 46.0,
+  "ldl": 221.0,
+  "triglycerides": 109.0,
+  "tc_hdl_ratio": 6.3,
+  "glucose_fasting": 93.0,
+  "a1c": 5.4,
+  "ast": 18.0,
+  "alt": 42.0,
+  "ggt": 21.0,
+  "alk_phos": 107.0,
+  "bilirubin": 0.9,
+  "albumin": 3.8,
+  "creatinine": 0.9,
+  "egfr": 63.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.9,
+  "cdt": 1.2,
+  "nt_probnp": 265.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.6
+ }
+}

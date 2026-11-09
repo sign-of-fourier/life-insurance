@@ -1,0 +1,269 @@
+{
+ "case_id": "C0016",
+ "seed": 757300590,
+ "app_date": "2025-08-19",
+ "design": {
+  "case_id": "C0016",
+  "seed": 757300590,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 47,
+  "sex": "F",
+  "face": 250000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "sleep_apnea:treated",
+    "key": "sleep_apnea",
+    "variant": "treated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "treated": true,
+     "compliant": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "simple",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.263,
+   "bmi": 29.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Sherry",
+  "last_name": "Robbins",
+  "sex": "F",
+  "dob": "1978-12-15",
+  "age": 47,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "delivery driver",
+  "occupation_class": "2A",
+  "annual_income": 47000,
+  "net_worth": 125000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 58.0,
+ "weight_lb": 141.0,
+ "bp_systolic": 136,
+ "bp_diastolic": 84,
+ "pulse": 67,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "3/yr",
+   "start": "2018-01-24",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2014-12-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "treated": true,
+    "compliant": true,
+    "ahi": 27
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0016-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2022-06-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0016-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2015-08-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "800 mg",
+     "start": "2015-10-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    },
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2015-09-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0016-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 55,
+   "age_at_death": 59,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 63,
+   "age_at_death": 77,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-10-13",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-02-28",
+   "code": "N02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Northstar Life",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0016-P1",
+   "name": "Dr. David Smith",
+   "specialty": "family medicine",
+   "practice": "Wilson Ltd Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0016-P2",
+   "name": "Dr. Stephanie Rodriguez",
+   "specialty": "pulmonology",
+   "practice": "Carr-Williams Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 260.0,
+  "hdl": 69.0,
+  "ldl": 169.0,
+  "triglycerides": 108.0,
+  "tc_hdl_ratio": 3.8,
+  "glucose_fasting": 96.0,
+  "a1c": 5.4,
+  "ast": 15.0,
+  "alt": 42.0,
+  "ggt": 24.0,
+  "alk_phos": 60.0,
+  "bilirubin": 1.1,
+  "albumin": 4.9,
+  "creatinine": 1.0,
+  "egfr": 92.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.2,
+  "cdt": 1.0,
+  "nt_probnp": 63.0,
+  "cotinine_urine": 24.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

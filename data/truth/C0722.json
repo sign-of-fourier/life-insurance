@@ -1,0 +1,349 @@
+{
+ "case_id": "C0722",
+ "seed": 394775242,
+ "app_date": "2025-09-06",
+ "design": {
+  "case_id": "C0722",
+  "seed": 394775242,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 55,
+  "sex": "M",
+  "face": 3000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "lupus:organ",
+    "key": "lupus",
+    "variant": "organ",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ_involvement": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "ckd:transplant",
+    "key": "ckd",
+    "variant": "transplant",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "transplant_years": {
+      "gt": 3
+     }
+    },
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "parkinsons:young_onset",
+    "key": "parkinsons",
+    "variant": "young_onset",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "age_at_onset": {
+      "lt": 50
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter",
+   "ecw_problem_heavy",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.512,
+   "bmi": 26.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "David",
+  "last_name": "Meyer",
+  "sex": "M",
+  "dob": "1970-07-27",
+  "age": 55,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "electrician",
+  "occupation_class": "3A",
+  "annual_income": 390000,
+  "net_worth": 4550000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 67.0,
+ "weight_lb": 171.0,
+ "bp_systolic": 112,
+ "bp_diastolic": 79,
+ "pulse": 54,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1 ppd",
+   "start": "1986-02-25",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2018-08-01",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "organ_involvement": true,
+    "kind": "systemic"
+   },
+   "meds": [
+    {
+     "drug": "mycophenolate",
+     "dose": "500 mg",
+     "start": "2018-09-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    },
+    {
+     "drug": "belimumab",
+     "dose": "200 mg inj",
+     "start": "2018-11-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0722-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ckd",
+   "label": "Chronic kidney disease (eGFR)",
+   "onset": "2016-05-18",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "dialysis": false,
+    "transplant_years": 9.3,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "parkinsons",
+   "label": "Parkinson's disease",
+   "onset": "2010-12-25",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_onset": 48
+   },
+   "meds": [
+    {
+     "drug": "pramipexole",
+     "dose": "0.5 mg",
+     "start": "2011-01-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "parkinsons"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0722-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2018-08-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2018-08-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0722-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 69,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-05-30",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-02-06",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "martial arts",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0722-P1",
+   "name": "Dr. Steven Campbell",
+   "specialty": "family medicine",
+   "practice": "Oconnor-Ruiz Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0722-P2",
+   "name": "Dr. Allison Rose",
+   "specialty": "rheumatology",
+   "practice": "Taylor-Small Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0722-P3",
+   "name": "Dr. Cynthia Murphy",
+   "specialty": "neurology",
+   "practice": "Harper-Schroeder Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 278.0,
+  "hdl": 71.0,
+  "ldl": 192.0,
+  "triglycerides": 74.0,
+  "tc_hdl_ratio": 3.9,
+  "glucose_fasting": 95.0,
+  "a1c": 5.2,
+  "ast": 18.0,
+  "alt": 16.0,
+  "ggt": 50.0,
+  "alk_phos": 82.0,
+  "bilirubin": 0.7,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 100.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.3,
+  "cdt": 1.4,
+  "nt_probnp": 77.0,
+  "cotinine_urine": 3472.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.4
+ }
+}

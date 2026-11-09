@@ -1,0 +1,327 @@
+{
+ "case_id": "C0814",
+ "seed": 26489721,
+ "app_date": "2025-12-29",
+ "design": {
+  "case_id": "C0814",
+  "seed": 26489721,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 43,
+  "sex": "M",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_marijuana:mj_daily",
+    "key": "nm_marijuana",
+    "variant": "mj_daily",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired",
+   "gerd",
+   "glaucoma",
+   "rosacea"
+  ],
+  "grey": "GRY-5",
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "grey",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.264,
+   "bmi": 29.4,
+   "foreign_country": "India",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Gregory",
+  "last_name": "Clark",
+  "sex": "M",
+  "dob": "1983-04-14",
+  "age": 43,
+  "address_state": "AZ",
+  "country_of_residence": "US",
+  "citizenship": "India",
+  "years_in_us": 1.7,
+  "visa_type": "Permanent Resident",
+  "occupation": "data scientist",
+  "occupation_class": "1A",
+  "annual_income": 189000,
+  "net_worth": 1959000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 72.0,
+ "weight_lb": 217.0,
+ "bp_systolic": 123,
+ "bp_diastolic": 79,
+ "pulse": 84,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2012-07-12",
+   "quit": "2024-04-01",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 18,
+   "form": "vaped",
+   "disclosure": "honest"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2014-08-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0814-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2011-12-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2012-02-02",
+     "stop": "2012-02-05",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0814-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2019-06-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2019-06-20",
+     "stop": "2019-07-24",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2019-07-15",
+     "stop": "2019-07-31",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0814-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2013-03-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2013-05-02",
+     "stop": "2013-05-08",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2013-03-26",
+     "stop": "2013-04-24",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0814-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 51,
+   "living": false
+  },
+  {
+   "relation": "brother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 43,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-03-30",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0814-P1",
+   "name": "Dr. Laura Nichols",
+   "specialty": "family medicine",
+   "practice": "Gonzalez and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 297.0,
+  "hdl": 70.0,
+  "ldl": 192.0,
+  "triglycerides": 171.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 97.0,
+  "a1c": 5.4,
+  "ast": 32.0,
+  "alt": 29.0,
+  "ggt": 14.0,
+  "alk_phos": 88.0,
+  "bilirubin": 0.9,
+  "albumin": 3.8,
+  "creatinine": 0.8,
+  "egfr": 97.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.7,
+  "cdt": 1.4,
+  "nt_probnp": 49.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.9
+ }
+}

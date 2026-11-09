@@ -1,0 +1,316 @@
+{
+ "case_id": "C0074",
+ "seed": 911901495,
+ "app_date": "2026-05-25",
+ "design": {
+  "case_id": "C0074",
+  "seed": 911901495,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 54,
+  "sex": "M",
+  "face": 750000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:melanoma_3_4_y0-10",
+    "key": "cancer",
+    "variant": "melanoma_3_4_y0-10",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "melanoma_3_4",
+     "years_since_tx": [
+      0,
+      10
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti",
+   "hypothyroidism_simple",
+   "glaucoma",
+   "vitamin_d_deficiency"
+  ],
+  "grey": "GRY-12",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:melanoma_3_4_y0-10"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "LTA",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.726,
+   "bmi": 30.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Johnathan",
+  "last_name": "Hicks",
+  "sex": "M",
+  "dob": "1972-04-09",
+  "age": 54,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "HVAC technician",
+  "occupation_class": "3A",
+  "annual_income": 68000,
+  "net_worth": 632000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "GUL",
+  "riders_requested": [
+   "LTA",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 67.0,
+ "weight_lb": 197.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 76,
+ "pulse": 68,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2017-06-16",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "melanoma_3_4",
+    "years_since_tx": 7.9,
+    "stage": "III"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0074-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2014-10-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2014-11-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0074-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2012-04-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2012-04-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0074-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2013-07-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2013-08-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0074-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2013-10-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2013-12-23",
+     "stop": "2013-12-01",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0074-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 64,
+   "age_at_death": 91,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-01-12",
+   "code": "M04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0074-P1",
+   "name": "Dr. Kathleen Herrera",
+   "specialty": "family medicine",
+   "practice": "Frank-Zamora Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0074-P2",
+   "name": "Dr. Donald Chavez",
+   "specialty": "oncology",
+   "practice": "Gibbs Perez and Cooper Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 45.0,
+  "ldl": 201.0,
+  "triglycerides": 167.0,
+  "tc_hdl_ratio": 6.2,
+  "glucose_fasting": 80.0,
+  "a1c": 5.6,
+  "ast": 33.0,
+  "alt": 39.0,
+  "ggt": 26.0,
+  "alk_phos": 110.0,
+  "bilirubin": 0.6,
+  "albumin": 3.8,
+  "creatinine": 0.9,
+  "egfr": 112.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.0,
+  "cdt": 0.9,
+  "nt_probnp": 68.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.0
+ }
+}

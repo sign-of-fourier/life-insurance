@@ -1,0 +1,268 @@
+{
+ "case_id": "C0824",
+ "seed": 484208437,
+ "app_date": "2026-01-03",
+ "design": {
+  "case_id": "C0824",
+  "seed": 484208437,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 20,
+  "sex": "M",
+  "face": 100000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "depression_anxiety:moderate",
+    "key": "depression_anxiety",
+    "variant": "moderate",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "meds_count": {
+       "ge": 2
+      },
+      "work_loss_months": {
+       "gt": 0
+      },
+      "psychiatrist": true
+     }
+    },
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hernia_repaired"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "moderate",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.637,
+   "bmi": 28.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Robert",
+  "last_name": "Romero",
+  "sex": "M",
+  "dob": "2005-10-16",
+  "age": 20,
+  "address_state": "MA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 133000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 68.0,
+ "weight_lb": 189.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 86,
+ "pulse": 73,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2020-07-17",
+   "quit": "2022-01-20",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2025-04-23",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "paroxetine",
+     "dose": "20 mg",
+     "start": "2025-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ptsd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0824-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2023-07-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": 2,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 2.5,
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2023-05-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0824-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 68,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-06-23",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-06-07",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0824-P1",
+   "name": "Dr. Phillip Stevenson",
+   "specialty": "family medicine",
+   "practice": "Hall-Bryant Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0824-P2",
+   "name": "Dr. Jessica Arnold",
+   "specialty": "psychiatry",
+   "practice": "Davis Walker and Brown Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 44.0,
+  "ldl": 234.0,
+  "triglycerides": 62.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 97.0,
+  "a1c": 5.3,
+  "ast": 17.0,
+  "alt": 25.0,
+  "ggt": 32.0,
+  "alk_phos": 73.0,
+  "bilirubin": 0.9,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 111.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.2,
+  "cdt": 1.1,
+  "nt_probnp": 48.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

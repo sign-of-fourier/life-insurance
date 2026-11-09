@@ -1,0 +1,274 @@
+{
+ "case_id": "C0885",
+ "seed": 329311838,
+ "app_date": "2025-06-21",
+ "design": {
+  "case_id": "C0885",
+  "seed": 329311838,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 44,
+  "sex": "F",
+  "face": 500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "cardiomyopathy:low_ef",
+    "key": "cardiomyopathy",
+    "variant": "low_ef",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": {
+      "lt": 40
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "glaucoma",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "KPE",
+   "WP",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.556,
+   "bmi": 31.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Carla",
+  "last_name": "Mcintyre",
+  "sex": "F",
+  "dob": "1981-04-18",
+  "age": 44,
+  "address_state": "MD",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "carpenter",
+  "occupation_class": "2A",
+  "annual_income": 45000,
+  "net_worth": 77000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "KPE",
+   "WP",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": true,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 159.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 88,
+ "pulse": 57,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2019-04-10",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "ef": 21,
+    "recovered_years": 6.9,
+    "hcm": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0885-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2011-03-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2011-03-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0885-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2018-08-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2018-10-03",
+     "stop": "2018-08-22",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    },
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2018-09-18",
+     "stop": "2018-10-05",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0885-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-02-02",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-06-05",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Singapore",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Atlas Assurance",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0885-P1",
+   "name": "Dr. Tammy Kim",
+   "specialty": "family medicine",
+   "practice": "Jenkins Inc Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0885-P2",
+   "name": "Dr. Brian Richardson",
+   "specialty": "cardiology",
+   "practice": "Atkinson Ltd Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 283.0,
+  "hdl": 67.0,
+  "ldl": 204.0,
+  "triglycerides": 60.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 97.0,
+  "a1c": 5.0,
+  "ast": 33.0,
+  "alt": 41.0,
+  "ggt": 33.0,
+  "alk_phos": 56.0,
+  "bilirubin": 0.9,
+  "albumin": 3.8,
+  "creatinine": 1.1,
+  "egfr": 107.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.2,
+  "cdt": 0.9,
+  "nt_probnp": 517.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

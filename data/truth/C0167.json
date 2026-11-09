@@ -1,0 +1,358 @@
+{
+ "case_id": "C0167",
+ "seed": 457420307,
+ "app_date": "2026-08-14",
+ "design": {
+  "case_id": "C0167",
+  "seed": 457420307,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 67,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "diabetes_t2:age60-69_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age60-69_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "arrhythmia_other:wpw_ablated",
+    "key": "arrhythmia_other",
+    "variant": "wpw_ablated",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "wpw",
+     "ablated": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "build",
+     "Standard"
+    ]
+   ]
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "bph"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "simple",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CIA",
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.419,
+   "bmi": 32.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Kenneth",
+  "last_name": "Thompson",
+  "sex": "M",
+  "dob": "1959-11-14",
+  "age": 67,
+  "address_state": "FL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "lineworker (utility)",
+  "occupation_class": "3A",
+  "annual_income": 238000,
+  "net_worth": 1940000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CIA",
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 500000,
+  "replacement": true,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 68.0,
+ "weight_lb": 210.0,
+ "bp_systolic": 144,
+ "bp_diastolic": 79,
+ "pulse": 80,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2015-02-06",
+   "quit": "2023-12-10",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2015-06-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 0.3,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 11.2,
+    "age_at_dx": 55,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "1000 mg",
+     "start": "2015-06-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2015-08-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0167-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2025-06-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "kind": "wpw",
+    "ablated": true,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0167-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2019-01-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2019-03-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0167-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2022-04-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2022-06-07",
+     "stop": "2022-06-04",
+     "prescriber_id": null,
+     "indication": "bph"
+    },
+    {
+     "drug": "finasteride",
+     "dose": "5 mg",
+     "start": "2022-04-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0167-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 52,
+   "age_at_death": 57,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 80,
+   "age_at_death": 75,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-09-16",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-03-20",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0167-P1",
+   "name": "Dr. John Santos",
+   "specialty": "family medicine",
+   "practice": "Green and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0167-P2",
+   "name": "Dr. Victoria Meyer",
+   "specialty": "endocrinology",
+   "practice": "Murphy PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0167-P3",
+   "name": "Dr. Christopher Lopez",
+   "specialty": "cardiology",
+   "practice": "Martinez Steele and Jones Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 64.0,
+  "ldl": 180.0,
+  "triglycerides": 175.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": -41.0,
+  "a1c": 0.1,
+  "ast": 31.0,
+  "alt": 37.0,
+  "ggt": 54.0,
+  "alk_phos": 69.0,
+  "bilirubin": 1.2,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 74.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 16.1,
+  "cdt": 1.4,
+  "nt_probnp": 90.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.9
+ }
+}

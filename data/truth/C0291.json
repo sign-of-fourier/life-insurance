@@ -1,0 +1,413 @@
+{
+ "case_id": "C0291",
+ "seed": 538860846,
+ "app_date": "2026-02-26",
+ "design": {
+  "case_id": "C0291",
+  "seed": 538860846,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 48,
+  "sex": "M",
+  "face": 300000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "anemia:itp",
+    "key": "anemia",
+    "variant": "itp",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "itp"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "suicide_attempt:mid",
+    "key": "suicide_attempt",
+    "variant": "mid",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cad_nonobstructive:cac_100_399",
+    "key": "cad_nonobstructive",
+    "variant": "cac_100_399",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cac_score": [
+      100,
+      399
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts",
+   "gerd",
+   "glaucoma",
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CIA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.612,
+   "bmi": 30.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jason",
+  "last_name": "Morgan",
+  "sex": "M",
+  "dob": "1978-07-05",
+  "age": 48,
+  "address_state": "AZ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmaceutical sales rep",
+  "occupation_class": "2A",
+  "annual_income": 24000,
+  "net_worth": 269000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "Term 30",
+  "riders_requested": [
+   "ADB",
+   "CIA"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 65.0,
+ "weight_lb": 182.0,
+ "bp_systolic": 110,
+ "bp_diastolic": 68,
+ "pulse": 83,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2012-10-18",
+   "quit": "2018-10-18",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2019-11-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "vte": true,
+    "kind": "itp"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0291-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2021-11-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 4.3
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0291-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad_nonobstructive",
+   "label": "Non-obstructive CAD (<50%) / coronary calcium",
+   "onset": "2021-12-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stenosis_pct": 82,
+    "cac_score": 347
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0291-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2014-05-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0291-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2013-02-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "40 mg",
+     "start": "2013-02-25",
+     "stop": "2013-04-15",
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2013-02-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0291-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2019-06-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2019-07-22",
+     "stop": "2019-07-07",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0291-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2017-05-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2017-06-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0291-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 79,
+   "age_at_death": 80,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2017-05-02",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Sweden",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0291-P1",
+   "name": "Dr. Alan Wells",
+   "specialty": "family medicine",
+   "practice": "Evans Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0291-P2",
+   "name": "Dr. Jessica Gomez",
+   "specialty": "hematology",
+   "practice": "Smith Rangel and Evans Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0291-P3",
+   "name": "Dr. Paul Wright",
+   "specialty": "psychiatry",
+   "practice": "Pena LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0291-P4",
+   "name": "Dr. Steven Jordan",
+   "specialty": "cardiology",
+   "practice": "Evans-Whitaker Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 269.0,
+  "hdl": 41.0,
+  "ldl": 211.0,
+  "triglycerides": 82.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 87.0,
+  "a1c": 5.1,
+  "ast": 34.0,
+  "alt": 14.0,
+  "ggt": 48.0,
+  "alk_phos": 67.0,
+  "bilirubin": 0.7,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 107.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.1,
+  "cdt": 1.5,
+  "nt_probnp": 87.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.5
+ }
+}

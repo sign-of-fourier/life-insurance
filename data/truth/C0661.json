@@ -1,0 +1,301 @@
+{
+ "case_id": "C0661",
+ "seed": 327849542,
+ "app_date": "2025-01-07",
+ "design": {
+  "case_id": "C0661",
+  "seed": 327849542,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 20,
+  "sex": "M",
+  "face": 250000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "nm_criminal:pending_felony",
+    "key": "nm_criminal",
+    "variant": "pending_felony",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "neuropathy:idiopathic",
+    "key": "neuropathy",
+    "variant": "idiopathic",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea",
+   "gerd",
+   "kidney_stones"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel",
+  "complexity": "moderate",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.435,
+   "bmi": 31.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_criminal": "pending_felony"
+  }
+ },
+ "person": {
+  "first_name": "Aaron",
+  "last_name": "Walker",
+  "sex": "M",
+  "dob": "2005-03-28",
+  "age": 20,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "student",
+  "occupation_class": "1A",
+  "annual_income": 19000,
+  "net_worth": 191000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 72.0,
+ "weight_lb": 235.0,
+ "bp_systolic": 113,
+ "bp_diastolic": 90,
+ "pulse": 68,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "12/yr",
+   "start": "2005-09-21",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "neuropathy",
+   "label": "Peripheral neuropathy (idiopathic)",
+   "onset": "2022-10-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0661-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2022-12-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2022-12-29",
+     "stop": "2023-01-27",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0661-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2022-10-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2022-12-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0661-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2023-03-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2023-04-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0661-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-09-16",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-06-03",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Austria",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0661-P1",
+   "name": "Dr. Joseph Morrow",
+   "specialty": "family medicine",
+   "practice": "Kelly and Sons Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0661-P2",
+   "name": "Dr. Brenda Bright",
+   "specialty": "neurology",
+   "practice": "Fleming LLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 279.0,
+  "hdl": 66.0,
+  "ldl": 197.0,
+  "triglycerides": 79.0,
+  "tc_hdl_ratio": 4.2,
+  "glucose_fasting": 80.0,
+  "a1c": 5.1,
+  "ast": 27.0,
+  "alt": 30.0,
+  "ggt": 46.0,
+  "alk_phos": 92.0,
+  "bilirubin": 1.2,
+  "albumin": 3.9,
+  "creatinine": 0.8,
+  "egfr": 72.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 16.3,
+  "cdt": 1.1,
+  "nt_probnp": 65.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

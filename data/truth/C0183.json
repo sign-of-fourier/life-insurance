@@ -1,0 +1,249 @@
+{
+ "case_id": "C0183",
+ "seed": 278038196,
+ "app_date": "2026-04-27",
+ "design": {
+  "case_id": "C0183",
+  "seed": 278038196,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 56,
+  "sex": "M",
+  "face": 1500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "hepatitis_c:cirrhosis",
+    "key": "hepatitis_c",
+    "variant": "cirrhosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cirrhosis": true
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.451,
+   "bmi": 28.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "John",
+  "last_name": "Carrillo",
+  "sex": "M",
+  "dob": "1970-01-11",
+  "age": 56,
+  "address_state": "TN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retail store manager",
+  "occupation_class": "1A",
+  "annual_income": 221000,
+  "net_worth": 2186000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "WP"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 71.0,
+ "weight_lb": 202.0,
+ "bp_systolic": 117,
+ "bp_diastolic": 81,
+ "pulse": 84,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2010-03-11",
+   "quit": "2026-03-07",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2023-07-10",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": true,
+    "svr": false,
+    "years_since_tx": 15.2
+   },
+   "meds": [
+    {
+     "drug": "sofosbuvir-velpatasvir",
+     "dose": "400/100 mg",
+     "start": "2023-10-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0183-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2012-03-13",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2012-05-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0183-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "marathon running",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Sweden",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0183-P1",
+   "name": "Dr. Karl Stokes",
+   "specialty": "family medicine",
+   "practice": "Warner and Sons Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0183-P2",
+   "name": "Dr. Robert Adams",
+   "specialty": "gastroenterology",
+   "practice": "Evans Whitehead and Flores Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 72.0,
+  "ldl": 199.0,
+  "triglycerides": 66.0,
+  "tc_hdl_ratio": 4.0,
+  "glucose_fasting": 82.0,
+  "a1c": 4.9,
+  "ast": 92.0,
+  "alt": 57.0,
+  "ggt": 33.0,
+  "alk_phos": 50.0,
+  "bilirubin": 1.2,
+  "albumin": 4.7,
+  "creatinine": 0.9,
+  "egfr": 93.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.6,
+  "cdt": 0.8,
+  "nt_probnp": 107.0,
+  "cotinine_urine": 658.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.0
+ }
+}

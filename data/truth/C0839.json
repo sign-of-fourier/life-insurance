@@ -1,0 +1,231 @@
+{
+ "case_id": "C0839",
+ "seed": 443031316,
+ "app_date": "2025-11-12",
+ "design": {
+  "case_id": "C0839",
+  "seed": 443031316,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 45,
+  "sex": "M",
+  "face": 250000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "pancreatitis:alcohol",
+    "key": "pancreatitis",
+    "variant": "alcohol",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cause": "alcohol"
+    },
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "CTR",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.314,
+   "bmi": 32.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Scott",
+  "last_name": "Jacobson",
+  "sex": "M",
+  "dob": "1980-12-08",
+  "age": 45,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "hair stylist",
+  "occupation_class": "2A",
+  "annual_income": 39000,
+  "net_worth": 387000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 30",
+  "riders_requested": [
+   "CTR",
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 70.0,
+ "weight_lb": 227.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 90,
+ "pulse": 62,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "2/yr",
+   "start": "2023-08-23",
+   "quit": null,
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2020-03-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic": false,
+    "cause": "alcohol"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0839-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2013-09-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "cetirizine",
+     "dose": "10 mg",
+     "start": "2013-10-13",
+     "stop": "2013-10-04",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    },
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2013-10-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0839-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-06-26",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0839-P1",
+   "name": "Dr. Kevin Davis",
+   "specialty": "family medicine",
+   "practice": "Compton-Mills Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0839-P2",
+   "name": "Dr. Shannon Gutierrez",
+   "specialty": "gastroenterology",
+   "practice": "Huffman-Martinez Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 295.0,
+  "hdl": 48.0,
+  "ldl": 210.0,
+  "triglycerides": 183.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 93.0,
+  "a1c": 5.5,
+  "ast": 25.0,
+  "alt": 26.0,
+  "ggt": 33.0,
+  "alk_phos": 61.0,
+  "bilirubin": 1.0,
+  "albumin": 4.2,
+  "creatinine": 1.2,
+  "egfr": 98.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.5,
+  "cdt": 1.4,
+  "nt_probnp": 87.0,
+  "cotinine_urine": 45.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.5
+ }
+}

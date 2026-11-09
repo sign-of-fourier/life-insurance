@@ -1,0 +1,339 @@
+{
+ "case_id": "C0649",
+ "seed": 309668101,
+ "app_date": "2025-08-25",
+ "design": {
+  "case_id": "C0649",
+  "seed": 309668101,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 60,
+  "sex": "F",
+  "face": 5000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "alcohol_use_disorder:abst_2_5",
+    "key": "alcohol_use_disorder",
+    "variant": "abst_2_5",
+    "chapter": "ALC",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "acne",
+   "vitamin_d_deficiency",
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "KPE",
+   "OIR",
+   "ROP-T"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.686,
+   "bmi": 32.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Sarah",
+  "last_name": "Schwartz",
+  "sex": "F",
+  "dob": "1965-03-04",
+  "age": 60,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "physician",
+  "occupation_class": "1A",
+  "annual_income": 485000,
+  "net_worth": 4455000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "KPE",
+   "OIR",
+   "ROP-T"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "business partner"
+ },
+ "height_in": 64.0,
+ "weight_lb": 189.0,
+ "bp_systolic": 149,
+ "bp_diastolic": 87,
+ "pulse": 62,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": true,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "alcohol_use_disorder",
+   "label": "Alcohol use disorder (treated)",
+   "onset": "2016-05-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "abstinent_years": 3.4,
+    "treatment": "outpatient + AA",
+    "relapses": 0
+   },
+   "meds": [
+    {
+     "drug": "disulfiram",
+     "dose": "250 mg",
+     "start": "2016-06-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "alcohol_use_disorder"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0649-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2023-11-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2023-12-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0649-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2011-01-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2011-02-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0649-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2024-12-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2024-12-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0649-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2019-01-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2019-02-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    },
+    {
+     "drug": "allopurinol",
+     "dose": "100 mg",
+     "start": "2019-01-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0649-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 73,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-05-06",
+   "code": "S99",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-06-10",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Harborview Life",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0649-P1",
+   "name": "Dr. Cindy Garner",
+   "specialty": "family medicine",
+   "practice": "Barrett LLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0649-P2",
+   "name": "Dr. Emily Clark",
+   "specialty": "addiction medicine",
+   "practice": "Guzman-Alvarez Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 55.0,
+  "ldl": 207.0,
+  "triglycerides": 166.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 83.0,
+  "a1c": 4.8,
+  "ast": 24.0,
+  "alt": 41.0,
+  "ggt": 11.0,
+  "alk_phos": 65.0,
+  "bilirubin": 0.9,
+  "albumin": 3.9,
+  "creatinine": 0.8,
+  "egfr": 89.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.6,
+  "cdt": 1.4,
+  "nt_probnp": 87.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

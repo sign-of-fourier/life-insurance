@@ -1,0 +1,276 @@
+{
+ "case_id": "C0092",
+ "seed": 861249073,
+ "app_date": "2026-03-02",
+ "design": {
+  "case_id": "C0092",
+  "seed": 861249073,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 72,
+  "sex": "F",
+  "face": 500000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "nm_build:over_decline",
+    "key": "nm_build",
+    "variant": "over_decline",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "decline",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_aviation:pilot_aerobatic",
+    "key": "nm_aviation",
+    "variant": "pilot_aerobatic",
+    "chapter": "AVI",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 7.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne",
+   "acute_injury",
+   "kidney_stones"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.881,
+   "bmi": 47.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Fisher",
+  "sex": "F",
+  "dob": "1954-01-26",
+  "age": 72,
+  "address_state": "NE",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 83000,
+  "net_worth": 1135000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 60.0,
+ "weight_lb": 246.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 72,
+ "pulse": 73,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-07-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "doxycycline",
+     "dose": "100 mg",
+     "start": "2018-09-04",
+     "stop": "2018-07-29",
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2018-08-21",
+     "stop": "2018-09-13",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0092-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2024-03-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "ibuprofen",
+     "dose": "600 mg",
+     "start": "2024-03-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0092-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2020-02-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2020-03-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0092-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-06-22",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "private_aviation",
+   "details": {
+    "total_hours": 741,
+    "aerobatic": true
+   },
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0092-P1",
+   "name": "Dr. Michael Reed",
+   "specialty": "family medicine",
+   "practice": "Barrera-Sanders Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 292.0,
+  "hdl": 57.0,
+  "ldl": 198.0,
+  "triglycerides": 185.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 101.0,
+  "a1c": 5.3,
+  "ast": 37.0,
+  "alt": 17.0,
+  "ggt": 31.0,
+  "alk_phos": 108.0,
+  "bilirubin": 1.0,
+  "albumin": 4.8,
+  "creatinine": 0.8,
+  "egfr": 93.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.9,
+  "cdt": 0.8,
+  "nt_probnp": 69.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

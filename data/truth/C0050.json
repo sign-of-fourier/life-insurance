@@ -1,0 +1,328 @@
+{
+ "case_id": "C0050",
+ "seed": 760138516,
+ "app_date": "2026-04-27",
+ "design": {
+  "case_id": "C0050",
+  "seed": 760138516,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 78,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "pulmonary_embolism:recent",
+    "key": "pulmonary_embolism",
+    "variant": "recent",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": {
+      "lt": 0.5
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "tia:older",
+    "key": "tia",
+    "variant": "older",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG",
+   "FINQ"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.565,
+   "bmi": 22.0,
+   "foreign_country": null,
+   "cessation_rx_quit": "2025-11-25"
+  }
+ },
+ "person": {
+  "first_name": "John",
+  "last_name": "Ryan",
+  "sex": "M",
+  "dob": "1948-07-13",
+  "age": 78,
+  "address_state": "CO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 283200,
+  "net_worth": 7080000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 113.0,
+ "bp_systolic": 135,
+ "bp_diastolic": 86,
+ "pulse": 63,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1994-04-27",
+   "quit": "2025-11-25",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2026-02-13",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 0.2,
+    "recurrent": true,
+    "provoked": false
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "5 mg",
+     "start": "2026-03-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    },
+    {
+     "drug": "warfarin",
+     "dose": "2 mg",
+     "start": "2026-02-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0050-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "tia",
+   "label": "TIA",
+   "onset": "2024-03-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 2.1
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0050-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2014-08-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2014-08-26",
+     "stop": "2014-09-22",
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0050-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2022-12-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2023-02-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0050-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 71,
+   "age_at_death": 77,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-11-28",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Harborview Life",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0050-P1",
+   "name": "Dr. Shannon Alvarez",
+   "specialty": "family medicine",
+   "practice": "Flores and Sons Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0050-P2",
+   "name": "Dr. Kelsey Braun",
+   "specialty": "pulmonology",
+   "practice": "Fletcher Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0050-P3",
+   "name": "Dr. Andrew Gregory",
+   "specialty": "neurology",
+   "practice": "Sanders Collins and Thompson Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 275.0,
+  "hdl": 61.0,
+  "ldl": 196.0,
+  "triglycerides": 90.0,
+  "tc_hdl_ratio": 4.5,
+  "glucose_fasting": 88.0,
+  "a1c": 4.9,
+  "ast": 25.0,
+  "alt": 20.0,
+  "ggt": 51.0,
+  "alk_phos": 48.0,
+  "bilirubin": 0.4,
+  "albumin": 3.9,
+  "creatinine": 0.8,
+  "egfr": 72.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.4,
+  "cdt": 1.0,
+  "nt_probnp": 193.0,
+  "cotinine_urine": 348.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.8
+ }
+}

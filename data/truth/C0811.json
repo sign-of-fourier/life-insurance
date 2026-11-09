@@ -1,0 +1,315 @@
+{
+ "case_id": "C0811",
+ "seed": 639239227,
+ "app_date": "2025-07-12",
+ "design": {
+  "case_id": "C0811",
+  "seed": 639239227,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 70,
+  "sex": "F",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:breast_1_y0-1",
+    "key": "cancer",
+    "variant": "breast_1_y0-1",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "breast_1",
+     "years_since_tx": [
+      0,
+      1
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout",
+   "acute_injury",
+   "rosacea"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:breast_1_y0-1"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.329,
+   "bmi": 28.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Catherine",
+  "last_name": "Day",
+  "sex": "F",
+  "dob": "1955-12-28",
+  "age": 70,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 228600,
+  "net_worth": 5715000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 64.0,
+ "weight_lb": 167.0,
+ "bp_systolic": 118,
+ "bp_diastolic": 81,
+ "pulse": 72,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "1971-09-10",
+   "quit": "2023-10-20",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2024-01-05",
+   "status": "active",
+   "severity": "severe",
+   "details": {
+    "type": "breast_1",
+    "years_since_tx": 0.7,
+    "stage": "I"
+   },
+   "meds": [
+    {
+     "drug": "anastrozole",
+     "dose": "1 mg",
+     "start": "2024-03-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cancer"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0811-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2014-09-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "300 mg",
+     "start": "2014-11-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0811-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2022-01-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2022-01-30",
+     "stop": "2022-02-07",
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0811-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2019-03-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2019-03-26",
+     "stop": "2019-05-13",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0811-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 74,
+   "age_at_death": 75,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-04-14",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-09-02",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2017,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0811-P1",
+   "name": "Dr. Daniel Gallagher",
+   "specialty": "family medicine",
+   "practice": "Wolf Williams and Castillo Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0811-P2",
+   "name": "Dr. Robert Carroll",
+   "specialty": "oncology",
+   "practice": "Cruz LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 294.0,
+  "hdl": 49.0,
+  "ldl": 204.0,
+  "triglycerides": 203.0,
+  "tc_hdl_ratio": 6.0,
+  "glucose_fasting": 83.0,
+  "a1c": 5.2,
+  "ast": 23.0,
+  "alt": 17.0,
+  "ggt": 48.0,
+  "alk_phos": 65.0,
+  "bilirubin": 0.5,
+  "albumin": 3.8,
+  "creatinine": 0.8,
+  "egfr": 67.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.6,
+  "cdt": 1.5,
+  "nt_probnp": 90.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

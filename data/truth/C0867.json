@@ -1,0 +1,334 @@
+{
+ "case_id": "C0867",
+ "seed": 932506731,
+ "app_date": "2025-09-16",
+ "design": {
+  "case_id": "C0867",
+  "seed": 932506731,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 52,
+  "sex": "M",
+  "face": 5000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "afib:ablated",
+    "key": "afib",
+    "variant": "ablated",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "ablation_years": {
+      "ge": 1
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "mvr",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "glaucoma",
+   "eczema",
+   "bph"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CTR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.658,
+   "bmi": 29.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Matthew",
+  "last_name": "Murillo",
+  "sex": "M",
+  "dob": "1973-05-01",
+  "age": 52,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "administrative assistant",
+  "occupation_class": "1A",
+  "annual_income": 506000,
+  "net_worth": 3795000,
+  "marital_status": "married",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "GUL",
+  "riders_requested": [
+   "CTR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 176.0,
+ "bp_systolic": 135,
+ "bp_diastolic": 89,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "1991-07-21",
+   "quit": "2022-12-08",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2013-07-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "single",
+    "echo_normal": true,
+    "chads_vasc": 2,
+    "structural": false,
+    "ablation_years": 11.6,
+    "years_since": 12.2
+   },
+   "meds": [
+    {
+     "drug": "diltiazem",
+     "dose": "240 mg",
+     "start": "2013-08-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    },
+    {
+     "drug": "warfarin",
+     "dose": "7.5 mg",
+     "start": "2013-09-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0867-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2019-12-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "latanoprost",
+     "dose": "0.005%",
+     "start": "2020-01-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    },
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2020-01-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0867-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2019-09-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2019-11-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0867-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2017-02-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "finasteride",
+     "dose": "5 mg",
+     "start": "2017-02-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    },
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2017-04-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0867-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 80,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0867-P1",
+   "name": "Dr. Cindy Aguilar",
+   "specialty": "family medicine",
+   "practice": "Valdez Odom and Lee Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0867-P2",
+   "name": "Dr. Tara Cook",
+   "specialty": "cardiology",
+   "practice": "Cole Ellison and Johnson Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 260.0,
+  "hdl": 64.0,
+  "ldl": 168.0,
+  "triglycerides": 137.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 97.0,
+  "a1c": 5.4,
+  "ast": 34.0,
+  "alt": 29.0,
+  "ggt": 22.0,
+  "alk_phos": 58.0,
+  "bilirubin": 0.6,
+  "albumin": 4.1,
+  "creatinine": 1.2,
+  "egfr": 74.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.3,
+  "nt_probnp": 30.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.9
+ }
+}

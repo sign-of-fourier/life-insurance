@@ -1,0 +1,383 @@
+{
+ "case_id": "C0061",
+ "seed": 1057959328,
+ "app_date": "2025-05-29",
+ "design": {
+  "case_id": "C0061",
+  "seed": 1057959328,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 72,
+  "sex": "M",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "diabetes_t2:age70-120_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age70-120_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "back_pain:simple",
+    "key": "back_pain",
+    "variant": "simple",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cad:ev60-69_y5-100",
+    "key": "cad",
+    "variant": "ev60-69_y5-100",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      60,
+      69
+     ],
+     "years_since": [
+      5,
+      100
+     ]
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "nm_foreign:citizen_abroad_C",
+    "key": "nm_foreign",
+    "variant": "citizen_abroad_C",
+    "chapter": "FN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "hypothyroidism_simple",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "hospital_discharge"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.319,
+   "bmi": 32.2,
+   "foreign_country": "Honduras",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Charles",
+  "last_name": "Taylor",
+  "sex": "M",
+  "dob": "1953-06-29",
+  "age": 72,
+  "address_state": "N/A",
+  "country_of_residence": "Honduras",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 75160,
+  "net_worth": 1879000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 65.0,
+ "weight_lb": 193.0,
+ "bp_systolic": 148,
+ "bp_diastolic": 90,
+ "pulse": 80,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 2.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2011-11-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 2.3,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 13.5,
+    "age_at_dx": 58,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2012-02-25",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0061-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2012-05-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "chronic_opioid": false,
+    "benzo": false
+   },
+   "meds": [
+    {
+     "drug": "oxycodone",
+     "dose": "10 mg",
+     "start": "2012-08-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0061-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2013-05-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_event": 60,
+    "years_since": 12,
+    "event": "MI",
+    "ef": 57,
+    "angina": false,
+    "vessels": 1,
+    "ldl": 63,
+    "abnormal_stress": false,
+    "normal_stress_12mo": true,
+    "smoker": false
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "80 mg",
+     "start": "2013-06-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2013-09-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0061-P3"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2025-01-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "25 mcg",
+     "start": "2025-03-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0061-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2012-08-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2012-09-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0061-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0061-P1",
+   "name": "Dr. Corey Butler",
+   "specialty": "family medicine",
+   "practice": "Garcia Garcia and Greer Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Honduras"
+  },
+  {
+   "provider_id": "C0061-P2",
+   "name": "Dr. Thomas Nguyen",
+   "specialty": "endocrinology",
+   "practice": "Rivera-Nolan Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0061-P3",
+   "name": "Dr. Debra Holt",
+   "specialty": "cardiology",
+   "practice": "Ward-Brennan Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 263.0,
+  "hdl": 40.0,
+  "ldl": 193.0,
+  "triglycerides": 149.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 12.0,
+  "a1c": 2.4,
+  "ast": 20.0,
+  "alt": 22.0,
+  "ggt": 24.0,
+  "alk_phos": 104.0,
+  "bilirubin": 0.6,
+  "albumin": 4.4,
+  "creatinine": 0.8,
+  "egfr": 81.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 16.2,
+  "cdt": 1.4,
+  "nt_probnp": 39.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.4
+ }
+}

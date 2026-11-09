@@ -1,0 +1,292 @@
+{
+ "case_id": "C0427",
+ "seed": 139299227,
+ "app_date": "2025-02-17",
+ "design": {
+  "case_id": "C0427",
+  "seed": 139299227,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 22,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "neuropathy:idiopathic",
+    "key": "neuropathy",
+    "variant": "idiopathic",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "cervical_dysplasia:treated",
+    "key": "cervical_dysplasia",
+    "variant": "treated",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "build",
+     "Standard Plus"
+    ],
+    [
+     "lipids",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "contraception"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 0,
+  "evidence_path": "accel_to_fluids",
+  "complexity": "moderate",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.729,
+   "bmi": 30.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Michelle",
+  "last_name": "Williams",
+  "sex": "F",
+  "dob": "2003-02-20",
+  "age": 22,
+  "address_state": "ID",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "plumber",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 62000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 10",
+  "riders_requested": [
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 66.0,
+ "weight_lb": 190.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 80,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "2018-03-03",
+   "quit": "2023-05-03",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "neuropathy",
+   "label": "Peripheral neuropathy (idiopathic)",
+   "onset": "2023-08-20",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0427-P2"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cervical_dysplasia",
+   "label": "Abnormal pap / CIN",
+   "onset": "2020-09-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "cin3_pending": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0427-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2022-01-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "norethindrone-ethinyl estradiol",
+     "dose": "1/20",
+     "start": "2022-02-10",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0427-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 47,
+   "age_at_death": 45,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 52,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 76,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-01-08",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-04-06",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0427-P1",
+   "name": "Dr. Michael Diaz",
+   "specialty": "family medicine",
+   "practice": "Bryant Davidson and Wang Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0427-P2",
+   "name": "Dr. Ashley Johnson",
+   "specialty": "neurology",
+   "practice": "Taylor-Romero Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0427-P3",
+   "name": "Dr. Robert Lopez",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Robinson-Smith Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 48.0,
+  "ldl": 224.0,
+  "triglycerides": 101.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 78.0,
+  "a1c": 5.2,
+  "ast": 21.0,
+  "alt": 41.0,
+  "ggt": 26.0,
+  "alk_phos": 110.0,
+  "bilirubin": 1.1,
+  "albumin": 4.3,
+  "creatinine": 0.9,
+  "egfr": 74.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.2,
+  "nt_probnp": 91.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

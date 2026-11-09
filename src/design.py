@@ -17,8 +17,11 @@ import random
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import sys
+
 import yaml
 
+sys.path.insert(0, str(Path(__file__).parent))
 ROOT = Path(__file__).resolve().parents[1]
 IMP = yaml.safe_load((ROOT / "rules/impairments.yaml").read_text())
 REQ = yaml.safe_load((ROOT / "rules/requirements.yaml").read_text())
@@ -63,7 +66,24 @@ def build_pool():
             continue
         sex, age = SEX_AGE.get(key, (None, (18, 80)))
         if "profiles" in e:
+            from rules import pred_ok as _pok
+
+            def feasible_ages(prof, plist, base):
+                """ages where this profile can be the first match: its own age predicate holds and no earlier
+                age-only profile already captures that age."""
+                ok = []
+                for a in range(base[0], base[1] + 1):
+                    if "age" in (prof.get("match") or {}) and not _pok(a, prof["match"]["age"]):
+                        continue
+                    earlier = plist[:plist.index(prof)]
+                    if any(set((q.get("match") or {})) == {"age"} and _pok(a, q["match"]["age"]) for q in earlier):
+                        continue
+                    ok.append(a)
+                return (ok[0], ok[-1]) if ok else None
             for p in e["profiles"]:
+                fa = feasible_ages(p, e["profiles"], age)
+                if fa is None:
+                    continue
                 d = p.get("debits", 0)
                 d = d if isinstance(d, int) else 0
                 if "debits_per_item" in p:
@@ -75,6 +95,7 @@ def build_pool():
                     a = (20, 60)
                 if key == "parkinsons":
                     a = (40, 55) if p["id"] == "young_onset" else (55, 80)
+                a = (max(a[0], fa[0]), min(a[1], fa[1]))
                 pool.append(opt(key, p["id"], d, out, p.get("best", e.get("best")), age=a, sex=sex, params=p.get("match", {})))
         if "grid" in e and key in ("cad", "diabetes_t2"):
             g = e["grid"]
@@ -385,7 +406,7 @@ class Designer:
             if r.random() < 0.5:
                 matrix["fails"] = [[row, "Standard Plus"] for row in r.sample(rows, 3)]   # >=3 rows fail Preferred (CLS-5.2)
             else:
-                matrix["fails"] = [[r.choice(rows), "Standard"]]                           # one row fails SP (CLS-5.3)
+                matrix["fails"] = [[r.choice(["build", "lipids"]), "Standard"]]          # one row fails SP w/ 0 debits (CLS-5.3)
 
         # ---- disclosure per item (+ tobacco)
         disc = {}

@@ -1,0 +1,242 @@
+{
+ "case_id": "C0203",
+ "seed": 372319849,
+ "app_date": "2025-02-09",
+ "design": {
+  "case_id": "C0203",
+  "seed": 372319849,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 53,
+  "sex": "F",
+  "face": 300000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:thyroid_y5-100",
+    "key": "cancer",
+    "variant": "thyroid_y5-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "type": "thyroid",
+     "years_since_tx": [
+      5,
+      25
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_3_5",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "simple",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "WMD"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.444,
+   "bmi": 28.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Susan",
+  "last_name": "Johnson",
+  "sex": "F",
+  "dob": "1971-12-24",
+  "age": 53,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "mechanic",
+  "occupation_class": "2A",
+  "annual_income": 45000,
+  "net_worth": 240000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "GUL",
+  "riders_requested": [
+   "WMD"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 65.0,
+ "weight_lb": 172.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 81,
+ "pulse": 92,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2015-05-31",
+   "quit": "2021-06-23",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2006-03-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "thyroid",
+    "years_since_tx": 17.8,
+    "stage": "I"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "100 mcg",
+     "start": "2006-04-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cancer"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0203-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2021-04-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2021-05-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0203-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "colon cancer",
+   "age_at_onset": 52,
+   "age_at_death": 51,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-01-07",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0203-P1",
+   "name": "Dr. Sean Hill",
+   "specialty": "family medicine",
+   "practice": "Valenzuela-Forbes Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0203-P2",
+   "name": "Dr. Frank Cooper",
+   "specialty": "oncology",
+   "practice": "Moon Group Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 263.0,
+  "hdl": 72.0,
+  "ldl": 165.0,
+  "triglycerides": 129.0,
+  "tc_hdl_ratio": 3.7,
+  "glucose_fasting": 102.0,
+  "a1c": 5.3,
+  "ast": 35.0,
+  "alt": 32.0,
+  "ggt": 55.0,
+  "alk_phos": 49.0,
+  "bilirubin": 0.7,
+  "albumin": 4.1,
+  "creatinine": 1.1,
+  "egfr": 87.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.4,
+  "cdt": 1.4,
+  "nt_probnp": 28.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

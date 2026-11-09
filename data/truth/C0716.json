@@ -1,0 +1,412 @@
+{
+ "case_id": "C0716",
+ "seed": 777046765,
+ "app_date": "2026-07-08",
+ "design": {
+  "case_id": "C0716",
+  "seed": 777046765,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 65,
+  "sex": "M",
+  "face": 750000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "hepatitis_b:carrier",
+    "key": "hepatitis_b",
+    "variant": "carrier",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "suicide_attempt:mid",
+    "key": "suicide_attempt",
+    "variant": "mid",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": [
+      2,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "ulcerative_colitis:no_surveillance",
+    "key": "ulcerative_colitis",
+    "variant": "no_surveillance",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "duration_years": {
+      "gt": 10
+     },
+     "colonoscopy_years_ago": {
+      "gt": 3
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "lupus:organ",
+    "key": "lupus",
+    "variant": "organ",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ_involvement": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.562,
+   "bmi": 29.0,
+   "foreign_country": null,
+   "cessation_rx_quit": "2026-04-06"
+  }
+ },
+ "person": {
+  "first_name": "Joseph",
+  "last_name": "Cook",
+  "sex": "M",
+  "dob": "1961-10-04",
+  "age": 65,
+  "address_state": "NM",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmaceutical sales rep",
+  "occupation_class": "2A",
+  "annual_income": 133000,
+  "net_worth": 653000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 10",
+  "riders_requested": [
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 72.0,
+ "weight_lb": 214.0,
+ "bp_systolic": 128,
+ "bp_diastolic": 72,
+ "pulse": 83,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "1980-05-22",
+   "quit": "2026-04-06",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hepatitis_b",
+   "label": "Chronic hepatitis B",
+   "onset": "2016-09-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [
+    {
+     "drug": "tenofovir",
+     "dose": "300 mg",
+     "start": "2016-12-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_b"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0716-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "suicide_attempt",
+   "label": "Suicide attempt",
+   "onset": "2024-03-20",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 2.3
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0716-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2018-07-08",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 8.0,
+    "organ": "liver"
+   },
+   "meds": [
+    {
+     "drug": "sirolimus",
+     "dose": "1 mg",
+     "start": "2018-10-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    },
+    {
+     "drug": "mycophenolate",
+     "dose": "500 mg",
+     "start": "2018-07-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0716-P1"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "ulcerative_colitis",
+   "label": "Ulcerative colitis",
+   "onset": "2018-03-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "duration_years": 17,
+    "colonoscopy_years_ago": 7.7
+   },
+   "meds": [
+    {
+     "drug": "azathioprine",
+     "dose": "50 mg",
+     "start": "2018-04-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "ulcerative_colitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0716-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "lupus",
+   "label": "Lupus",
+   "onset": "2011-09-20",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "organ_involvement": true,
+    "kind": "systemic"
+   },
+   "meds": [
+    {
+     "drug": "hydroxychloroquine",
+     "dose": "200 mg",
+     "start": "2011-11-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    },
+    {
+     "drug": "belimumab",
+     "dose": "200 mg inj",
+     "start": "2011-12-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "lupus"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0716-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 68,
+   "age_at_death": 79,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-04-23",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0716-P1",
+   "name": "Dr. Margaret Ray",
+   "specialty": "family medicine",
+   "practice": "Walker and Sons Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0716-P2",
+   "name": "Dr. Krista Travis",
+   "specialty": "gastroenterology",
+   "practice": "Mckenzie-Reyes Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0716-P3",
+   "name": "Dr. Stephen Mitchell",
+   "specialty": "psychiatry",
+   "practice": "Williams Williamson and Jones Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0716-P4",
+   "name": "Dr. Luke Cook",
+   "specialty": "rheumatology",
+   "practice": "Pearson-Meadows Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 296.0,
+  "hdl": 45.0,
+  "ldl": 212.0,
+  "triglycerides": 193.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 89.0,
+  "a1c": 5.2,
+  "ast": 71.0,
+  "alt": 100.0,
+  "ggt": 22.0,
+  "alk_phos": 56.0,
+  "bilirubin": 0.8,
+  "albumin": 4.5,
+  "creatinine": 0.8,
+  "egfr": 84.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.4,
+  "cdt": 1.1,
+  "nt_probnp": 31.0,
+  "cotinine_urine": 447.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.7
+ }
+}

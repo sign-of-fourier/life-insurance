@@ -1,0 +1,338 @@
+{
+ "case_id": "C0624",
+ "seed": 891507024,
+ "app_date": "2026-03-09",
+ "design": {
+  "case_id": "C0624",
+  "seed": 891507024,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 36,
+  "sex": "M",
+  "face": 3000000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "diabetes_t2:age18-39_a1c10.0-99",
+    "key": "diabetes_t2",
+    "variant": "age18-39_a1c10.0-99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      10.0,
+      99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "sinusitis",
+   "hypothyroidism_simple",
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [
+   "top-up diabetes_t2:age18-39_a1c10.0-99"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "GIO",
+   "OIR",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.712,
+   "bmi": 31.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jason",
+  "last_name": "Johnson",
+  "sex": "M",
+  "dob": "1990-06-13",
+  "age": 36,
+  "address_state": "IN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "software engineer",
+  "occupation_class": "1A",
+  "annual_income": 140000,
+  "net_worth": 695000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 30",
+  "riders_requested": [
+   "GIO",
+   "OIR",
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 66.0,
+ "weight_lb": 194.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 66,
+ "pulse": 60,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2007-08-09",
+   "quit": "2010-09-04",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 10.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2020-03-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 12.1,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 6,
+    "age_at_dx": 30,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2020-03-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "empagliflozin",
+     "dose": "10 mg",
+     "start": "2020-06-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0624-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2018-06-10",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2018-07-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2018-07-24",
+     "stop": "2018-08-06",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0624-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2011-03-22",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "75 mcg",
+     "start": "2011-04-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0624-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2013-09-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2013-10-20",
+     "stop": "2013-10-26",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0624-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 78,
+   "age_at_death": 87,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-07-14",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-11-26",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-08-15",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0624-P1",
+   "name": "Dr. David Smith",
+   "specialty": "family medicine",
+   "practice": "Reid LLC Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0624-P2",
+   "name": "Dr. Nicholas Marquez",
+   "specialty": "endocrinology",
+   "practice": "Goodman-Spencer Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 263.0,
+  "hdl": 40.0,
+  "ldl": 202.0,
+  "triglycerides": 103.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 291.0,
+  "a1c": 11.8,
+  "ast": 18.0,
+  "alt": 23.0,
+  "ggt": 29.0,
+  "alk_phos": 101.0,
+  "bilirubin": 1.0,
+  "albumin": 3.9,
+  "creatinine": 1.2,
+  "egfr": 82.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.0,
+  "cdt": 1.2,
+  "nt_probnp": 23.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

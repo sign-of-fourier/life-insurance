@@ -1,0 +1,310 @@
+{
+ "case_id": "C0078",
+ "seed": 124029301,
+ "app_date": "2026-03-03",
+ "design": {
+  "case_id": "C0078",
+  "seed": 124029301,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 50,
+  "sex": "F",
+  "face": 100000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cardiomyopathy:recovered",
+    "key": "cardiomyopathy",
+    "variant": "recovered",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": {
+      "ge": 50
+     },
+     "recovered_years": {
+      "gt": 2
+     }
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gerd",
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.41,
+   "bmi": 29.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Daniel",
+  "sex": "F",
+  "dob": "1976-07-06",
+  "age": 50,
+  "address_state": "IN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "insurance underwriter",
+  "occupation_class": "1A",
+  "annual_income": 18000,
+  "net_worth": 134000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 100000,
+  "product": "GUL",
+  "riders_requested": [
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 69.0,
+ "weight_lb": 197.0,
+ "bp_systolic": 111,
+ "bp_diastolic": 76,
+ "pulse": 80,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "3/yr",
+   "start": "2014-09-14",
+   "quit": null,
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2013-03-03",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "ef": 55,
+    "recovered_years": 7.0,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "empagliflozin",
+     "dose": "10 mg",
+     "start": "2013-06-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    },
+    {
+     "drug": "spironolactone",
+     "dose": "50 mg",
+     "start": "2013-05-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0078-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2025-08-25",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2025-10-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "omeprazole",
+     "dose": "40 mg",
+     "start": "2025-08-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0078-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2011-12-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "colchicine",
+     "dose": "0.6 mg",
+     "start": "2011-12-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0078-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 80,
+   "age_at_death": 82,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-08-02",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-08-05",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2017-10-17",
+   "code": "A03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Luxembourg",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0078-P1",
+   "name": "Dr. James Williams",
+   "specialty": "family medicine",
+   "practice": "Castaneda-Gomez Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0078-P2",
+   "name": "Dr. Ralph Zimmerman",
+   "specialty": "cardiology",
+   "practice": "Ray-James Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 57.0,
+  "ldl": 200.0,
+  "triglycerides": 122.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 79.0,
+  "a1c": 5.4,
+  "ast": 38.0,
+  "alt": 14.0,
+  "ggt": 39.0,
+  "alk_phos": 93.0,
+  "bilirubin": 0.9,
+  "albumin": 4.1,
+  "creatinine": 0.9,
+  "egfr": 100.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.3,
+  "nt_probnp": 538.0,
+  "cotinine_urine": 31.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

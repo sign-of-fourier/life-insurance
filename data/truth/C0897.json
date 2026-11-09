@@ -1,0 +1,302 @@
+{
+ "case_id": "C0897",
+ "seed": 297775823,
+ "app_date": "2026-06-13",
+ "design": {
+  "case_id": "C0897",
+  "seed": 297775823,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 46,
+  "sex": "M",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:prostate_le7_surgery_y3-100",
+    "key": "cancer",
+    "variant": "prostate_le7_surgery_y3-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "type": "prostate_le7_surgery",
+     "years_since_tx": [
+      3,
+      25
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "prediabetes:high",
+    "key": "prediabetes",
+    "variant": "high",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      6.1,
+      6.4
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "bp",
+     "Standard Plus"
+    ],
+    [
+     "build",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "hypothyroidism_simple"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CIA",
+   "CTR",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.367,
+   "bmi": 30.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jorge",
+  "last_name": "Brennan",
+  "sex": "M",
+  "dob": "1980-01-22",
+  "age": 46,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "construction laborer",
+  "occupation_class": "3A",
+  "annual_income": 136000,
+  "net_worth": 1552000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [
+   "CIA",
+   "CTR",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 73.0,
+ "weight_lb": 231.0,
+ "bp_systolic": 142,
+ "bp_diastolic": 85,
+ "pulse": 71,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2005-01-31",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "type": "prostate_le7_surgery",
+    "years_since_tx": 20.5,
+    "gleason": 7,
+    "psa_undetectable": true,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0897-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "prediabetes",
+   "label": "Prediabetes / impaired fasting glucose",
+   "onset": "2011-11-07",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 6.1
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "1000 mg",
+     "start": "2011-12-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "prediabetes"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0897-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2017-03-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "50 mcg",
+     "start": "2017-03-16",
+     "stop": "2017-04-28",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0897-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 74,
+   "age_at_death": 82,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Pinecrest Mutual",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0897-P1",
+   "name": "Dr. Carly Mcgee",
+   "specialty": "family medicine",
+   "practice": "Rice Group Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0897-P2",
+   "name": "Dr. Nicholas Perkins",
+   "specialty": "oncology",
+   "practice": "Gonzalez Group Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0897-P3",
+   "name": "Dr. Kristen Brown",
+   "specialty": "endocrinology",
+   "practice": "Dixon-Daniels Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 236.0,
+  "hdl": 44.0,
+  "ldl": 173.0,
+  "triglycerides": 95.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 113.0,
+  "a1c": 5.7,
+  "ast": 22.0,
+  "alt": 29.0,
+  "ggt": 48.0,
+  "alk_phos": 49.0,
+  "bilirubin": 0.6,
+  "albumin": 4.4,
+  "creatinine": 1.1,
+  "egfr": 70.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.7,
+  "cdt": 1.3,
+  "nt_probnp": 109.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.05
+ }
+}

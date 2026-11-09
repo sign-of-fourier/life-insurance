@@ -1,0 +1,301 @@
+{
+ "case_id": "C0487",
+ "seed": 523180006,
+ "app_date": "2025-04-04",
+ "design": {
+  "case_id": "C0487",
+  "seed": 523180006,
+  "target": "Table Tobacco 1-4",
+  "ladder": "tobacco",
+  "age": 56,
+  "sex": "M",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "bph",
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.538,
+   "bmi": 30.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Brandon",
+  "last_name": "Price",
+  "sex": "M",
+  "dob": "1969-02-12",
+  "age": 56,
+  "address_state": "IL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "mechanic",
+  "occupation_class": "2A",
+  "annual_income": 248000,
+  "net_worth": 532000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 74.0,
+ "weight_lb": 233.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 84,
+ "pulse": 70,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2007-04-15",
+   "quit": "2024-08-25",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2015-04-05",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 7.9,
+    "undetectable_months": 94,
+    "cd4": 1109,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "bictegravir-emtricitabine-tenofovir",
+     "dose": "50/200/25 mg",
+     "start": "2015-05-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0487-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2017-03-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "finasteride",
+     "dose": "5 mg",
+     "start": "2017-03-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    },
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2017-04-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0487-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2014-01-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2014-01-20",
+     "stop": "2014-03-09",
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0487-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 63,
+   "age_at_death": 85,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2022-10-30",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-06-10",
+   "code": "S25",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Atlas Assurance",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0487-P1",
+   "name": "Dr. Matthew Brown",
+   "specialty": "family medicine",
+   "practice": "Bryant Pierce and Cobb Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0487-P2",
+   "name": "Dr. Kerri Mckinney",
+   "specialty": "rheumatology",
+   "practice": "Taylor-Chandler Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 44.0,
+  "ldl": 216.0,
+  "triglycerides": 125.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 82.0,
+  "a1c": 5.5,
+  "ast": 32.0,
+  "alt": 22.0,
+  "ggt": 24.0,
+  "alk_phos": 41.0,
+  "bilirubin": 0.4,
+  "albumin": 4.1,
+  "creatinine": 0.8,
+  "egfr": 73.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.9,
+  "cdt": 0.9,
+  "nt_probnp": 24.0,
+  "cotinine_urine": 1034.0,
+  "hiv": 1.0,
+  "cocaine": 0.0,
+  "psa": 1.4
+ }
+}

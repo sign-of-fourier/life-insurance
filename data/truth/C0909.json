@@ -1,0 +1,421 @@
+{
+ "case_id": "C0909",
+ "seed": 287798064,
+ "app_date": "2026-08-24",
+ "design": {
+  "case_id": "C0909",
+  "seed": 287798064,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 50,
+  "sex": "F",
+  "face": 1500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "diabetes_t1:age50-59_a1c7.0",
+    "key": "diabetes_t1",
+    "variant": "age50-59_a1c7.0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      7.0,
+      7.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_avocation:climb_extreme",
+    "key": "nm_avocation",
+    "variant": "climb_extreme",
+    "chapter": "AVO",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": {
+     "per_k": 7.5,
+     "years": null
+    },
+    "params": {},
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "cigars_cot_neg",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts",
+   "contraception",
+   "osteopenia",
+   "acne"
+  ],
+  "grey": "GRY-8",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CIA",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.503,
+   "bmi": 32.8,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Lauren",
+  "last_name": "Roman",
+  "sex": "F",
+  "dob": "1976-06-29",
+  "age": 50,
+  "address_state": "WI",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "architect",
+  "occupation_class": "1A",
+  "annual_income": 149000,
+  "net_worth": 1029000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 62.0,
+ "weight_lb": 179.0,
+ "bp_systolic": 127,
+ "bp_diastolic": 76,
+ "pulse": 82,
+ "tobacco": [
+  {
+   "product": "cigar",
+   "status": "current",
+   "frequency": "5/yr",
+   "start": "2021-11-01",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2019-06-13",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 7.8,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 7.2,
+    "age_at_dx": 42,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2019-07-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin lispro",
+     "dose": "100 u/mL",
+     "start": "2019-09-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0909-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2024-06-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 2.1,
+    "undetectable_months": 57,
+    "cd4": 796,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "darunavir-cobicistat",
+     "dose": "800/150 mg",
+     "start": "2024-08-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0909-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2021-07-19",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0909-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2024-03-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "levonorgestrel IUD",
+     "dose": "52 mg",
+     "start": "2024-04-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0909-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2022-02-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2022-04-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0909-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2021-11-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2021-12-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0909-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "mountain_climbing",
+   "details": {
+    "max_altitude_ft": 21457,
+    "technical": true,
+    "intends_to_stop": false
+   },
+   "disclosure": "omitted"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Switzerland",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0909-P1",
+   "name": "Dr. Jessica Taylor",
+   "specialty": "family medicine",
+   "practice": "Herrera LLC Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0909-P2",
+   "name": "Dr. Nicholas Oconnor",
+   "specialty": "endocrinology",
+   "practice": "Hanson Ltd Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0909-P3",
+   "name": "Dr. Laura Marshall",
+   "specialty": "rheumatology",
+   "practice": "Clark and Sons Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 290.0,
+  "hdl": 70.0,
+  "ldl": 184.0,
+  "triglycerides": 176.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 164.0,
+  "a1c": 7.7,
+  "ast": 37.0,
+  "alt": 26.0,
+  "ggt": 28.0,
+  "alk_phos": 65.0,
+  "bilirubin": 1.1,
+  "albumin": 4.0,
+  "creatinine": 0.8,
+  "egfr": 91.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.5,
+  "nt_probnp": 61.0,
+  "cotinine_urine": 58.0,
+  "hiv": 1.0,
+  "cocaine": 0.0
+ }
+}

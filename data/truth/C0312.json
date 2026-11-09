@@ -1,0 +1,339 @@
+{
+ "case_id": "C0312",
+ "seed": 238035077,
+ "app_date": "2025-04-16",
+ "design": {
+  "case_id": "C0312",
+  "seed": 238035077,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 46,
+  "sex": "M",
+  "face": 1000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "epilepsy:controlled_recent",
+    "key": "epilepsy",
+    "variant": "controlled_recent",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "back_pain:opioid",
+    "key": "back_pain",
+    "variant": "opioid",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "bph",
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.532,
+   "bmi": 30.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Brent",
+  "last_name": "Young",
+  "sex": "M",
+  "dob": "1979-01-25",
+  "age": 46,
+  "address_state": "TN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "homemaker",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 459000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 158.0,
+ "bp_systolic": 137,
+ "bp_diastolic": 82,
+ "pulse": 79,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "1998-12-21",
+   "quit": "2018-04-05",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "epilepsy",
+   "label": "Epilepsy / seizure disorder",
+   "onset": "2021-02-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "seizures_per_year": null,
+    "seizure_free_years": 2.0
+   },
+   "meds": [
+    {
+     "drug": "levetiracetam",
+     "dose": "500 mg",
+     "start": "2021-04-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "epilepsy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0312-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2011-12-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": false
+   },
+   "meds": [
+    {
+     "drug": "oxycodone",
+     "dose": "10 mg",
+     "start": "2011-12-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0312-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "bph",
+   "onset": "2011-10-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "bph"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2011-11-28",
+     "stop": "2011-12-04",
+     "prescriber_id": null,
+     "indication": "bph"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0312-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2022-11-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "montelukast",
+     "dose": "10 mg",
+     "start": "2022-11-28",
+     "stop": "2022-12-25",
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0312-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 53,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 42,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 65,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2022,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0312-P1",
+   "name": "Dr. James Melendez",
+   "specialty": "family medicine",
+   "practice": "Gordon-Edwards Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0312-P2",
+   "name": "Dr. Megan Miller",
+   "specialty": "neurology",
+   "practice": "Marshall-Roberts Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 53.0,
+  "ldl": 222.0,
+  "triglycerides": 86.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 82.0,
+  "a1c": 4.9,
+  "ast": 19.0,
+  "alt": 25.0,
+  "ggt": 11.0,
+  "alk_phos": 70.0,
+  "bilirubin": 1.0,
+  "albumin": 4.1,
+  "creatinine": 0.9,
+  "egfr": 109.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.6,
+  "cdt": 0.9,
+  "nt_probnp": 107.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 2.0
+ }
+}

@@ -1,0 +1,262 @@
+{
+ "case_id": "C0751",
+ "seed": 133982686,
+ "app_date": "2026-10-11",
+ "design": {
+  "case_id": "C0751",
+  "seed": 133982686,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 32,
+  "sex": "M",
+  "face": 3000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_04",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.579,
+   "bmi": 30.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Mark",
+  "last_name": "Craig",
+  "sex": "M",
+  "dob": "1994-04-29",
+  "age": 32,
+  "address_state": "NY",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "chef",
+  "occupation_class": "2A",
+  "annual_income": 172000,
+  "net_worth": 1345000,
+  "marital_status": "divorced",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 10",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": true,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 73.0,
+ "weight_lb": 230.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 67,
+ "pulse": 76,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "2021-09-07",
+   "quit": "2025-09-11",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2017-06-24",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": false,
+    "steroid_bursts_per_year": 3,
+    "er_years_ago": null,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2017-07-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0751-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2018-07-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2018-08-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0751-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 62,
+   "age_at_death": 88,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-01-06",
+   "code": "M06",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2025-09-16",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Pinecrest Mutual",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0751-P1",
+   "name": "Dr. Terry Oliver",
+   "specialty": "family medicine",
+   "practice": "Cruz LLC Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0751-P2",
+   "name": "Dr. James Salinas",
+   "specialty": "pulmonology",
+   "practice": "Vargas-Alvarez Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 291.0,
+  "hdl": 44.0,
+  "ldl": 221.0,
+  "triglycerides": 128.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 104.0,
+  "a1c": 5.2,
+  "ast": 17.0,
+  "alt": 33.0,
+  "ggt": 35.0,
+  "alk_phos": 73.0,
+  "bilirubin": 1.1,
+  "albumin": 4.2,
+  "creatinine": 1.0,
+  "egfr": 105.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.3,
+  "cdt": 1.0,
+  "nt_probnp": 51.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

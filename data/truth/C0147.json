@@ -1,0 +1,381 @@
+{
+ "case_id": "C0147",
+ "seed": 1030946409,
+ "app_date": "2025-07-01",
+ "design": {
+  "case_id": "C0147",
+  "seed": 1030946409,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 59,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "polycystic_kidney:reduced",
+    "key": "polycystic_kidney",
+    "variant": "reduced",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "alcohol_use_disorder:abst_2_5",
+    "key": "alcohol_use_disorder",
+    "variant": "abst_2_5",
+    "chapter": "ALC",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_lipids:trig_high",
+    "key": "nm_lipids",
+    "variant": "trig_high",
+    "chapter": "LIP",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "minimized"
+   },
+   {
+    "id": "fatty_liver:fibrosis",
+    "key": "fatty_liver",
+    "variant": "fibrosis",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fibrosis": {
+      "in": [
+       "F2",
+       "F3"
+      ]
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "gout"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "complex",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "OIR",
+   "WP",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.689,
+   "bmi": 28.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Carrie",
+  "last_name": "Gregory",
+  "sex": "F",
+  "dob": "1966-03-30",
+  "age": 59,
+  "address_state": "GA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "data scientist",
+  "occupation_class": "1A",
+  "annual_income": 193000,
+  "net_worth": 1053000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "OIR",
+   "WP",
+   "XCR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 61.0,
+ "weight_lb": 153.0,
+ "bp_systolic": 122,
+ "bp_diastolic": 76,
+ "pulse": 71,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "1989-10-24",
+   "quit": "2023-10-19",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": true,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2015-03-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 24
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0147-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "alcohol_use_disorder",
+   "label": "Alcohol use disorder (treated)",
+   "onset": "2015-12-11",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "abstinent_years": 4.3,
+    "treatment": "inpatient rehab",
+    "relapses": 0
+   },
+   "meds": [
+    {
+     "drug": "disulfiram",
+     "dose": "250 mg",
+     "start": "2016-01-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "alcohol_use_disorder"
+    },
+    {
+     "drug": "acamprosate",
+     "dose": "333 mg",
+     "start": "2016-04-02",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "alcohol_use_disorder"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0147-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "fatty_liver",
+   "label": "NAFLD / fatty liver",
+   "onset": "2011-04-20",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fibrosis": "F3"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0147-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gout",
+   "onset": "2016-08-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gout"
+   },
+   "meds": [
+    {
+     "drug": "allopurinol",
+     "dose": "100 mg",
+     "start": "2016-09-23",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gout"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0147-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 47,
+   "living": false
+  },
+  {
+   "relation": "brother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 52,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 62,
+   "age_at_death": 88,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-11-20",
+   "code": "M05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-01-22",
+   "code": "N04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0147-P1",
+   "name": "Dr. Courtney Sullivan",
+   "specialty": "family medicine",
+   "practice": "Pope PLC Medical Group",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0147-P2",
+   "name": "Dr. Stacey Jones",
+   "specialty": "nephrology",
+   "practice": "Schwartz Inc Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0147-P3",
+   "name": "Dr. Sean Moreno",
+   "specialty": "addiction medicine",
+   "practice": "Carlson-Barton Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0147-P4",
+   "name": "Dr. Michelle Franklin",
+   "specialty": "gastroenterology",
+   "practice": "Morgan-Wong Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 49.0,
+  "ldl": 65.0,
+  "triglycerides": 858.0,
+  "tc_hdl_ratio": 5.8,
+  "glucose_fasting": 89.0,
+  "a1c": 5.1,
+  "ast": 66.0,
+  "alt": 93.0,
+  "ggt": 49.0,
+  "alk_phos": 70.0,
+  "bilirubin": 0.7,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 79.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.1,
+  "nt_probnp": 64.0,
+  "cotinine_urine": 4.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,294 @@
+{
+ "case_id": "C0888",
+ "seed": 690589246,
+ "app_date": "2025-08-14",
+ "design": {
+  "case_id": "C0888",
+  "seed": 690589246,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 59,
+  "sex": "F",
+  "face": 5000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cervical_dysplasia:cin3_pending",
+    "key": "cervical_dysplasia",
+    "variant": "cin3_pending",
+    "chapter": "OBS",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cin3_pending": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_foreign:visa_eligible",
+    "key": "nm_foreign",
+    "variant": "visa_eligible",
+    "chapter": "FN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "rosacea",
+   "uti"
+  ],
+  "grey": "GRY-8",
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "FINQ",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.578,
+   "bmi": 30.5,
+   "foreign_country": "Poland",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Cindy",
+  "last_name": "Casey",
+  "sex": "F",
+  "dob": "1966-11-30",
+  "age": 59,
+  "address_state": "AR",
+  "country_of_residence": "US",
+  "citizenship": "Poland",
+  "years_in_us": 4.3,
+  "visa_type": "O-1",
+  "occupation": "financial analyst",
+  "occupation_class": "1A",
+  "annual_income": 576000,
+  "net_worth": 1328000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 5000000,
+  "product": "GUL",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 65.0,
+ "weight_lb": 183.0,
+ "bp_systolic": 120,
+ "bp_diastolic": 70,
+ "pulse": 59,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cervical_dysplasia",
+   "label": "Abnormal pap / CIN",
+   "onset": "2011-01-08",
+   "status": "in_workup",
+   "severity": "severe",
+   "details": {
+    "cin3_pending": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0888-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2013-04-30",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2013-05-03",
+     "stop": "2013-06-10",
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0888-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2021-12-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "ivermectin topical",
+     "dose": "1%",
+     "start": "2022-01-04",
+     "stop": "2022-02-01",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0888-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2012-09-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2012-11-10",
+     "stop": "2012-10-16",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0888-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-02-02",
+   "code": "M09",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-05-25",
+   "code": "S25",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-01-19",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0888-P1",
+   "name": "Dr. Douglas Garcia",
+   "specialty": "family medicine",
+   "practice": "Wilson-Larsen Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Poland"
+  },
+  {
+   "provider_id": "C0888-P2",
+   "name": "Dr. Maria Stevens",
+   "specialty": "obstetrics/gynecology",
+   "practice": "Mason Hayes and Flores Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 281.0,
+  "hdl": 52.0,
+  "ldl": 205.0,
+  "triglycerides": 117.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 90.0,
+  "a1c": 5.5,
+  "ast": 27.0,
+  "alt": 35.0,
+  "ggt": 28.0,
+  "alk_phos": 93.0,
+  "bilirubin": 0.7,
+  "albumin": 4.4,
+  "creatinine": 1.1,
+  "egfr": 93.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.4,
+  "nt_probnp": 86.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

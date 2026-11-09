@@ -1,0 +1,274 @@
+{
+ "case_id": "C0123",
+ "seed": 622654584,
+ "app_date": "2025-10-08",
+ "design": {
+  "case_id": "C0123",
+  "seed": 622654584,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 50,
+  "sex": "F",
+  "face": 250000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "proteinuria:prot_31-100",
+    "key": "proteinuria",
+    "variant": "prot_31-100",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": "31-100"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hepatitis_c:untreated",
+    "key": "hepatitis_c",
+    "variant": "untreated",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "specialist_letter"
+  ],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.79,
+   "bmi": 20.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Mary",
+  "last_name": "Lee",
+  "sex": "F",
+  "dob": "1975-12-29",
+  "age": 50,
+  "address_state": "MO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "teacher",
+  "occupation_class": "2A",
+  "annual_income": 18000,
+  "net_worth": 70000,
+  "marital_status": "divorced",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 250000,
+  "product": "Term 30",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 136.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 67,
+ "pulse": 65,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2024-08-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "urine_protein": 56
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0123-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hepatitis_c",
+   "label": "Hepatitis C",
+   "onset": "2010-01-26",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "cirrhosis": false,
+    "svr": false,
+    "years_since_tx": 11.3
+   },
+   "meds": [
+    {
+     "drug": "ledipasvir-sofosbuvir",
+     "dose": "90/400 mg",
+     "start": "2010-02-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hepatitis_c"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0123-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2025-04-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2025-05-21",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0123-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 78,
+   "age_at_death": 85,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-05-30",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-12-16",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0123-P1",
+   "name": "Dr. Sharon Kent",
+   "specialty": "family medicine",
+   "practice": "Baker LLC Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0123-P2",
+   "name": "Dr. Troy Campbell",
+   "specialty": "nephrology",
+   "practice": "Smith Gonzalez and Schwartz Clinic",
+   "aps_style": "specialist_letter",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0123-P3",
+   "name": "Dr. Samuel Dillon",
+   "specialty": "gastroenterology",
+   "practice": "Smith Ltd Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 294.0,
+  "hdl": 48.0,
+  "ldl": 207.0,
+  "triglycerides": 195.0,
+  "tc_hdl_ratio": 6.1,
+  "glucose_fasting": 93.0,
+  "a1c": 5.4,
+  "ast": 55.0,
+  "alt": 94.0,
+  "ggt": 18.0,
+  "alk_phos": 46.0,
+  "bilirubin": 0.7,
+  "albumin": 4.9,
+  "creatinine": 0.9,
+  "egfr": 104.0,
+  "urine_protein": 56.0,
+  "hemoglobin": 12.5,
+  "cdt": 1.4,
+  "nt_probnp": 33.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

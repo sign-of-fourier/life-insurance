@@ -1,0 +1,361 @@
+{
+ "case_id": "C0080",
+ "seed": 1056880225,
+ "app_date": "2026-04-09",
+ "design": {
+  "case_id": "C0080",
+  "seed": 1056880225,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 31,
+  "sex": "M",
+  "face": 1500000,
+  "product": "Term 30",
+  "items": [
+   {
+    "id": "substance_use_hard:hard_gt10",
+    "key": "substance_use_hard",
+    "variant": "hard_gt10",
+    "chapter": "DRG",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "insomnia:only",
+    "key": "insomnia",
+    "variant": "only",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "family_history",
+     "Standard Plus"
+    ],
+    [
+     "build",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "hernia_repaired",
+   "glaucoma",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "simple",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.946,
+   "bmi": 30.5,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jermaine",
+  "last_name": "Whitehead",
+  "sex": "M",
+  "dob": "1995-05-01",
+  "age": 31,
+  "address_state": "NE",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "unemployed",
+  "occupation_class": "1A",
+  "annual_income": 0,
+  "net_worth": 465000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "Term 30",
+  "riders_requested": [],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 68.0,
+ "weight_lb": 200.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 88,
+ "pulse": 90,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "substance_use_hard",
+   "label": "Cocaine / methamphetamine / opioid misuse",
+   "onset": "2001-06-06",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "substance": "methamphetamine",
+    "years_since_last_use": 12.1,
+    "maintenance": false
+   },
+   "meds": [
+    {
+     "drug": "naloxone",
+     "dose": "4 mg nasal",
+     "start": "2001-06-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    },
+    {
+     "drug": "methadone",
+     "dose": "10 mg",
+     "start": "2001-07-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "substance_use_hard"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0080-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "insomnia",
+   "label": "Insomnia only",
+   "onset": "2017-12-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {},
+   "meds": [
+    {
+     "drug": "eszopiclone",
+     "dose": "3 mg",
+     "start": "2018-02-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "insomnia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0080-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hernia repaired",
+   "onset": "2020-01-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hernia_repaired"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0080-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2016-06-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2016-08-08",
+     "stop": "2016-08-10",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0080-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2014-09-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "pantoprazole",
+     "dose": "40 mg",
+     "start": "2014-10-26",
+     "stop": "2014-10-19",
+     "prescriber_id": null,
+     "indication": "gerd"
+    },
+    {
+     "drug": "omeprazole",
+     "dose": "40 mg",
+     "start": "2014-09-23",
+     "stop": "2014-10-24",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0080-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "breast cancer",
+   "age_at_onset": 48,
+   "age_at_death": 51,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "stroke",
+   "age_at_onset": null,
+   "age_at_death": 50,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "hypertension",
+   "age_at_onset": 78,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [
+  {
+   "activity": "skiing",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Pinecrest Mutual",
+   "outcome": "not taken"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0080-P1",
+   "name": "Dr. Jonathan Thomas",
+   "specialty": "family medicine",
+   "practice": "Peters Tyler and Wise Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0080-P2",
+   "name": "Dr. Elaine Crawford",
+   "specialty": "addiction medicine",
+   "practice": "Robinson-Lopez Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0080-P3",
+   "name": "Dr. David Sanders",
+   "specialty": "psychiatry",
+   "practice": "Carpenter-Payne Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 229.0,
+  "hdl": 43.0,
+  "ldl": 158.0,
+  "triglycerides": 138.0,
+  "tc_hdl_ratio": 5.3,
+  "glucose_fasting": 99.0,
+  "a1c": 5.3,
+  "ast": 22.0,
+  "alt": 26.0,
+  "ggt": 11.0,
+  "alk_phos": 40.0,
+  "bilirubin": 0.7,
+  "albumin": 4.7,
+  "creatinine": 1.1,
+  "egfr": 98.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 15.5,
+  "cdt": 1.1,
+  "nt_probnp": 37.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

@@ -1,0 +1,420 @@
+{
+ "case_id": "C0003",
+ "seed": 901267088,
+ "app_date": "2025-05-11",
+ "design": {
+  "case_id": "C0003",
+  "seed": 901267088,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 28,
+  "sex": "M",
+  "face": 3000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "sleep_apnea:untreated",
+    "key": "sleep_apnea",
+    "variant": "untreated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "proteinuria:prot_101-300",
+    "key": "proteinuria",
+    "variant": "prot_101-300",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": "101-300"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "omitted",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_03",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "epic_progress"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.943,
+   "bmi": 26.0,
+   "foreign_country": "Colombia",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Scott",
+  "last_name": "Kelly",
+  "sex": "M",
+  "dob": "1997-05-09",
+  "age": 28,
+  "address_state": "FL",
+  "country_of_residence": "US",
+  "citizenship": "Colombia",
+  "years_in_us": 1.3,
+  "visa_type": "H-1B",
+  "occupation": "machinist",
+  "occupation_class": "2A",
+  "annual_income": 106000,
+  "net_worth": 1176000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 70.0,
+ "weight_lb": 181.0,
+ "bp_systolic": 135,
+ "bp_diastolic": 71,
+ "pulse": 92,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2014-01-31",
+   "quit": "2015-03-07",
+   "disclosure": "omitted"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2024-04-05",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": false,
+    "compliant": false,
+    "ahi": 24
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0003-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2021-01-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "urine_protein": 119
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0003-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2024-02-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true,
+    "surgery_years_ago": null
+   },
+   "meds": [
+    {
+     "drug": "ustekinumab",
+     "dose": "45 mg",
+     "start": "2024-04-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    },
+    {
+     "drug": "mesalamine",
+     "dose": "1.2 g",
+     "start": "2024-05-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0003-P4"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2023-05-12",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 2.4,
+    "undetectable_months": 45,
+    "cd4": 685,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "emtricitabine-tenofovir",
+     "dose": "200/300 mg",
+     "start": "2023-08-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    },
+    {
+     "drug": "dolutegravir",
+     "dose": "50 mg",
+     "start": "2023-08-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0003-P5"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2014-05-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2014-06-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0003-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 76,
+   "age_at_death": 79,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2021-11-12",
+   "code": "S10",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "recreational boating",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "Belgium",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0003-P1",
+   "name": "Dr. Veronica Hardin",
+   "specialty": "family medicine",
+   "practice": "Ward-May Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Colombia"
+  },
+  {
+   "provider_id": "C0003-P2",
+   "name": "Dr. George Moyer",
+   "specialty": "pulmonology",
+   "practice": "Gutierrez-Keller Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0003-P3",
+   "name": "Dr. Lawrence Smith",
+   "specialty": "nephrology",
+   "practice": "Russell-Martin Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0003-P4",
+   "name": "Dr. Haley Martinez",
+   "specialty": "gastroenterology",
+   "practice": "Hernandez-Silva Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0003-P5",
+   "name": "Dr. Melissa Flores",
+   "specialty": "rheumatology",
+   "practice": "Richard-Mccoy Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 289.0,
+  "hdl": 50.0,
+  "ldl": 212.0,
+  "triglycerides": 134.0,
+  "tc_hdl_ratio": 5.8,
+  "glucose_fasting": 103.0,
+  "a1c": 5.1,
+  "ast": 34.0,
+  "alt": 15.0,
+  "ggt": 30.0,
+  "alk_phos": 86.0,
+  "bilirubin": 1.1,
+  "albumin": 4.6,
+  "creatinine": 0.8,
+  "egfr": 95.0,
+  "urine_protein": 119.0,
+  "hemoglobin": 15.4,
+  "cdt": 1.4,
+  "nt_probnp": 51.0,
+  "cotinine_urine": 5.0,
+  "hiv": 1.0,
+  "cocaine": 0.0
+ }
+}

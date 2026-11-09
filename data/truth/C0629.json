@@ -1,0 +1,411 @@
+{
+ "case_id": "C0629",
+ "seed": 300091121,
+ "app_date": "2026-05-22",
+ "design": {
+  "case_id": "C0629",
+  "seed": 300091121,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 49,
+  "sex": "M",
+  "face": 1000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "tia:young",
+    "key": "tia",
+    "variant": "young",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "age": {
+      "lt": 50
+     }
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "copd:mild_smoker",
+    "key": "copd",
+    "variant": "mild_smoker",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "smoker": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "anemia:fvl_vte",
+    "key": "anemia",
+    "variant": "fvl_vte",
+    "chapter": "HEM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "factor_v_leiden",
+     "vte": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "sleep_apnea:untreated",
+    "key": "sleep_apnea",
+    "variant": "untreated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.678,
+   "bmi": 31.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "John",
+  "last_name": "Carroll",
+  "sex": "M",
+  "dob": "1977-01-31",
+  "age": 49,
+  "address_state": "CA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "carpenter",
+  "occupation_class": "2A",
+  "annual_income": 73000,
+  "net_worth": 622000,
+  "marital_status": "single",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "CTR",
+   "GIO"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 65.0,
+ "weight_lb": 190.0,
+ "bp_systolic": 129,
+ "bp_diastolic": 67,
+ "pulse": 56,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2021-03-01",
+   "quit": "2025-03-17",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "tia",
+   "label": "TIA",
+   "onset": "2005-05-22",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 21.0
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0629-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2010-06-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 70,
+    "smoker": true,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "umeclidinium-vilanterol",
+     "dose": "62.5/25",
+     "start": "2010-10-01",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0629-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "anemia",
+   "label": "Anemia / blood disorders",
+   "onset": "2022-11-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "vte": true,
+    "kind": "factor_v_leiden"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0629-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2013-10-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": false,
+    "compliant": false,
+    "ahi": 26
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0629-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2017-06-28",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 5.8,
+    "monotherapy": true
+   },
+   "meds": [
+    {
+     "drug": "paliperidone",
+     "dose": "9 mg",
+     "start": "2017-07-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0629-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "Alzheimer's",
+   "age_at_onset": 71,
+   "age_at_death": 80,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-10-15",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-12-15",
+   "code": "S15",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-11-11",
+   "code": "N04",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Sweden",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2023,
+   "company": "Harborview Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0629-P1",
+   "name": "Dr. Cheryl Sutton",
+   "specialty": "family medicine",
+   "practice": "Bass LLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0629-P2",
+   "name": "Dr. Victoria Morris",
+   "specialty": "neurology",
+   "practice": "Hale LLC Medical Group",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0629-P3",
+   "name": "Dr. Shane Odonnell",
+   "specialty": "pulmonology",
+   "practice": "Martinez-Wilkinson Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0629-P4",
+   "name": "Dr. Lacey Jones",
+   "specialty": "hematology",
+   "practice": "Lewis and Sons Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0629-P5",
+   "name": "Dr. Joseph Roberts",
+   "specialty": "psychiatry",
+   "practice": "Davis Webb and Acosta Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 67.0,
+  "ldl": 185.0,
+  "triglycerides": 168.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 86.0,
+  "a1c": 5.6,
+  "ast": 24.0,
+  "alt": 32.0,
+  "ggt": 27.0,
+  "alk_phos": 89.0,
+  "bilirubin": 1.1,
+  "albumin": 3.8,
+  "creatinine": 0.9,
+  "egfr": 84.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 16.2,
+  "cdt": 1.0,
+  "nt_probnp": 36.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.4
+ }
+}

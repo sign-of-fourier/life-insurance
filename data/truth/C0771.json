@@ -1,0 +1,239 @@
+{
+ "case_id": "C0771",
+ "seed": 140927647,
+ "app_date": "2025-03-03",
+ "design": {
+  "case_id": "C0771",
+  "seed": 140927647,
+  "target": "Preferred",
+  "ladder": "non_tobacco",
+  "age": 37,
+  "sex": "F",
+  "face": 750000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "gestational_dm:resolved",
+    "key": "gestational_dm",
+    "variant": "resolved",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {
+     "resolved": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_foreign:visa_eligible",
+    "key": "nm_foreign",
+    "variant": "visa_eligible",
+    "chapter": "FN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": []
+  },
+  "benign": [
+   "uti"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 1,
+  "evidence_path": "accel_to_fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_05",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated"
+  ],
+  "riders_requested": [
+   "GIO",
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.825,
+   "bmi": 29.2,
+   "foreign_country": "United Kingdom",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Susan",
+  "last_name": "Brown",
+  "sex": "F",
+  "dob": "1988-02-10",
+  "age": 37,
+  "address_state": "MN",
+  "country_of_residence": "US",
+  "citizenship": "United Kingdom",
+  "years_in_us": 5.7,
+  "visa_type": "TN",
+  "occupation": "lineworker (utility)",
+  "occupation_class": "3A",
+  "annual_income": 30000,
+  "net_worth": 44000,
+  "marital_status": "divorced",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "UL",
+  "riders_requested": [
+   "GIO",
+   "LTA"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 62.0,
+ "weight_lb": 160.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 90,
+ "pulse": 77,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "gestational_dm",
+   "label": "Gestational diabetes (resolved)",
+   "onset": "2005-04-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "resolved": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0771-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2023-09-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2023-10-03",
+     "stop": "2023-10-16",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0771-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 75,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-11-16",
+   "code": "S20",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Harborview Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0771-P1",
+   "name": "Dr. Randall Underwood",
+   "specialty": "family medicine",
+   "practice": "Heath Inc Clinic",
+   "aps_style": "foreign_translated",
+   "country": "United Kingdom"
+  },
+  {
+   "provider_id": "C0771-P2",
+   "name": "Dr. Dorothy Rivera",
+   "specialty": "endocrinology",
+   "practice": "Long Gardner and Cole Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 205.0,
+  "hdl": 40.0,
+  "ldl": 122.0,
+  "triglycerides": 212.0,
+  "tc_hdl_ratio": 5.1,
+  "glucose_fasting": 79.0,
+  "a1c": 4.9,
+  "ast": 30.0,
+  "alt": 36.0,
+  "ggt": 35.0,
+  "alk_phos": 81.0,
+  "bilirubin": 1.0,
+  "albumin": 3.8,
+  "creatinine": 0.9,
+  "egfr": 100.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.0,
+  "nt_probnp": 31.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

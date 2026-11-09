@@ -1,0 +1,410 @@
+{
+ "case_id": "C0077",
+ "seed": 922510292,
+ "app_date": "2026-10-13",
+ "design": {
+  "case_id": "C0077",
+  "seed": 922510292,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 63,
+  "sex": "M",
+  "face": 1500000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "ptsd:outpatient",
+    "key": "ptsd",
+    "variant": "outpatient",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "benign_tumor:hgd_polyp",
+    "key": "benign_tumor",
+    "variant": "hgd_polyp",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "high_grade_dysplasia": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_marijuana:mj_daily",
+    "key": "nm_marijuana",
+    "variant": "mj_daily",
+    "chapter": "DRG",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "diabetes_t2:age60-69_a1c7.0-7.99",
+    "key": "diabetes_t2",
+    "variant": "age60-69_a1c7.0-7.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      7.0,
+      7.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "sinusitis",
+   "acne"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "hospital_discharge",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "CIA",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.298,
+   "bmi": 20.0,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Thomas",
+  "last_name": "Murphy",
+  "sex": "M",
+  "dob": "1963-10-27",
+  "age": 63,
+  "address_state": "IA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "dentist",
+  "occupation_class": "1A",
+  "annual_income": 503000,
+  "net_worth": 5074000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1500000,
+  "product": "UL",
+  "riders_requested": [
+   "CIA",
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 71.0,
+ "weight_lb": 143.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 80,
+ "pulse": 57,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2000-09-28",
+   "quit": "2020-08-09",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [
+  {
+   "substance": "marijuana",
+   "per_week": 18,
+   "form": "vaped",
+   "disclosure": "omitted_untraceable"
+  }
+ ],
+ "conditions": [
+  {
+   "condition_key": "ptsd",
+   "label": "PTSD",
+   "onset": "2008-05-20",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {},
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0077-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2025-01-31",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "high_grade_dysplasia": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0077-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2012-11-19",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "a1c_avg": 7.7,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 13.9,
+    "age_at_dx": 49,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2013-03-06",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "glipizide",
+     "dose": "5 mg",
+     "start": "2013-01-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0077-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2020-06-02",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "amoxicillin-clavulanate",
+     "dose": "875/125 mg",
+     "start": "2020-06-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    },
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2020-06-02",
+     "stop": "2020-06-12",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0077-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2018-01-24",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2018-03-10",
+     "stop": "2018-02-11",
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2018-03-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0077-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-08-07",
+   "code": "S10",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-02-15",
+   "code": "S99",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Switzerland",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0077-P1",
+   "name": "Dr. Carlos Mckenzie",
+   "specialty": "family medicine",
+   "practice": "Franklin-Brown Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0077-P2",
+   "name": "Dr. Jennifer Schultz",
+   "specialty": "psychiatry",
+   "practice": "Andersen LLC Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0077-P3",
+   "name": "Dr. Monica Ortiz",
+   "specialty": "oncology",
+   "practice": "Hill and Sons Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0077-P4",
+   "name": "Dr. Chad Schwartz",
+   "specialty": "endocrinology",
+   "practice": "Harris Wilkerson and Massey Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 269.0,
+  "hdl": 40.0,
+  "ldl": 200.0,
+  "triglycerides": 145.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 159.0,
+  "a1c": 7.5,
+  "ast": 36.0,
+  "alt": 32.0,
+  "ggt": 30.0,
+  "alk_phos": 96.0,
+  "bilirubin": 0.5,
+  "albumin": 4.5,
+  "creatinine": 0.9,
+  "egfr": 80.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.6,
+  "cdt": 1.3,
+  "nt_probnp": 22.0,
+  "cotinine_urine": 1.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.0
+ }
+}

@@ -1,0 +1,450 @@
+{
+ "case_id": "C0433",
+ "seed": 122056075,
+ "app_date": "2025-08-14",
+ "design": {
+  "case_id": "C0433",
+  "seed": 122056075,
+  "target": "Table 9-16",
+  "ladder": "non_tobacco",
+  "age": 27,
+  "sex": "M",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "polycystic_kidney:normal_egfr",
+    "key": "polycystic_kidney",
+    "variant": "normal_egfr",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "egfr": {
+      "ge": 60
+     }
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "afib:persistent",
+    "key": "afib",
+    "variant": "persistent",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "type": {
+      "in": [
+       "persistent",
+       "permanent"
+      ]
+     },
+     "echo_normal": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "back_pain:opioid",
+    "key": "back_pain",
+    "variant": "opioid",
+    "chapter": "MSK",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "chronic_opioid": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "hiv:insurable",
+    "key": "hiv",
+    "variant": "insurable",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "art_years": {
+      "ge": 2
+     },
+     "undetectable_months": {
+      "ge": 12
+     },
+     "cd4": {
+      "ge": 500
+     },
+     "age": [
+      20,
+      60
+     ],
+     "aids_defining": false,
+     "hep_coinfection": false
+    },
+    "disclosure": "misremembered"
+   },
+   {
+    "id": "arrhythmia_other:pacemaker",
+    "key": "arrhythmia_other",
+    "variant": "pacemaker",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "pacemaker"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "sarcoidosis:active",
+    "key": "sarcoidosis",
+    "variant": "active",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "quit_10plus",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge",
+   "hospital_discharge",
+   "athena_summary"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.442,
+   "bmi": 23.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Daniel",
+  "last_name": "Rogers",
+  "sex": "M",
+  "dob": "1998-03-30",
+  "age": 27,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmaceutical sales rep",
+  "occupation_class": "2A",
+  "annual_income": 150000,
+  "net_worth": 578000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 68.0,
+ "weight_lb": 152.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 87,
+ "pulse": 63,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2014-05-23",
+   "quit": "2015-06-27",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2025-01-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 76
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0433-P2"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "afib",
+   "label": "Atrial fibrillation / flutter",
+   "onset": "2021-08-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "type": "persistent",
+    "echo_normal": true,
+    "chads_vasc": 4,
+    "structural": false,
+    "ablation_years": null,
+    "years_since": 4.0
+   },
+   "meds": [
+    {
+     "drug": "amiodarone",
+     "dose": "200 mg",
+     "start": "2021-12-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "afib"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0433-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "back_pain",
+   "label": "Back pain / spine",
+   "onset": "2020-07-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic_opioid": true,
+    "benzo": false
+   },
+   "meds": [
+    {
+     "drug": "methocarbamol",
+     "dose": "750 mg",
+     "start": "2020-10-04",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "back_pain"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0433-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "hiv",
+   "label": "HIV",
+   "onset": "2023-07-09",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "art_years": 5.8,
+    "undetectable_months": 22,
+    "cd4": 508,
+    "aids_defining": false,
+    "hep_coinfection": false
+   },
+   "meds": [
+    {
+     "drug": "dolutegravir",
+     "dose": "50 mg",
+     "start": "2023-09-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "hiv"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0433-P4"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "arrhythmia_other",
+   "label": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+   "onset": "2023-08-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "pacemaker",
+    "ablated": true,
+    "echo_normal": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0433-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "sarcoidosis",
+   "label": "Pulmonary sarcoidosis",
+   "onset": "2022-04-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "stable_years": 0.4
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0433-P5"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-06-22",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-10-10",
+   "code": "N02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Canada",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0433-P1",
+   "name": "Dr. Kevin Willis",
+   "specialty": "family medicine",
+   "practice": "Williams Payne and Compton Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0433-P2",
+   "name": "Dr. John Matthews",
+   "specialty": "nephrology",
+   "practice": "Richmond and Sons Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0433-P3",
+   "name": "Dr. Deborah Smith",
+   "specialty": "cardiology",
+   "practice": "Fowler Myers and Johnson Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0433-P4",
+   "name": "Dr. Kimberly Joyce",
+   "specialty": "rheumatology",
+   "practice": "Proctor-Hendricks Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0433-P5",
+   "name": "Dr. John Thomas",
+   "specialty": "pulmonology",
+   "practice": "Johnson-Henry Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 51.0,
+  "ldl": 198.0,
+  "triglycerides": 179.0,
+  "tc_hdl_ratio": 5.6,
+  "glucose_fasting": 97.0,
+  "a1c": 5.0,
+  "ast": 37.0,
+  "alt": 38.0,
+  "ggt": 48.0,
+  "alk_phos": 48.0,
+  "bilirubin": 0.9,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 78.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.8,
+  "cdt": 1.2,
+  "nt_probnp": 17.0,
+  "cotinine_urine": 7.0,
+  "hiv": 1.0,
+  "cocaine": 0.0
+ }
+}

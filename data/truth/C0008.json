@@ -1,0 +1,292 @@
+{
+ "case_id": "C0008",
+ "seed": 561944264,
+ "app_date": "2025-06-19",
+ "design": {
+  "case_id": "C0008",
+  "seed": 561944264,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 18,
+  "sex": "M",
+  "face": 3000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "benign_tumor:benign",
+    "key": "benign_tumor",
+    "variant": "benign",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "build",
+     "Standard"
+    ]
+   ]
+  },
+  "benign": [
+   "eczema",
+   "kidney_stones",
+   "uti"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "simple",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "GIO",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.504,
+   "bmi": 32.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Christopher",
+  "last_name": "Humphrey",
+  "sex": "M",
+  "dob": "2007-03-08",
+  "age": 18,
+  "address_state": "MO",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "warehouse supervisor",
+  "occupation_class": "2A",
+  "annual_income": 198000,
+  "net_worth": 844000,
+  "marital_status": "single",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "GIO",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 63.0,
+ "weight_lb": 185.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 88,
+ "pulse": 70,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "benign_tumor",
+   "label": "Benign tumor / polyps",
+   "onset": "2024-11-12",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "high_grade_dysplasia": false
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0008-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "eczema",
+   "onset": "2024-12-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "eczema"
+   },
+   "meds": [
+    {
+     "drug": "triamcinolone topical",
+     "dose": "0.1%",
+     "start": "2025-02-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "eczema"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0008-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "kidney stones",
+   "onset": "2024-12-26",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "kidney_stones"
+   },
+   "meds": [
+    {
+     "drug": "tamsulosin",
+     "dose": "0.4 mg",
+     "start": "2025-01-02",
+     "stop": "2025-02-16",
+     "prescriber_id": null,
+     "indication": "kidney_stones"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0008-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "uti",
+   "onset": "2024-11-14",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "uti"
+   },
+   "meds": [
+    {
+     "drug": "nitrofurantoin",
+     "dose": "100 mg",
+     "start": "2024-12-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "uti"
+    },
+    {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2024-12-29",
+     "stop": "2024-12-30",
+     "prescriber_id": null,
+     "indication": "uti"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0008-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "colon cancer",
+   "age_at_onset": 56,
+   "age_at_death": 57,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-11-24",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2019-06-02",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0008-P1",
+   "name": "Dr. Shannon Lara",
+   "specialty": "family medicine",
+   "practice": "Adams-Rangel Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0008-P2",
+   "name": "Dr. William Montgomery",
+   "specialty": "oncology",
+   "practice": "Burnett LLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 269.0,
+  "hdl": 61.0,
+  "ldl": 179.0,
+  "triglycerides": 142.0,
+  "tc_hdl_ratio": 4.4,
+  "glucose_fasting": 86.0,
+  "a1c": 5.0,
+  "ast": 27.0,
+  "alt": 26.0,
+  "ggt": 12.0,
+  "alk_phos": 43.0,
+  "bilirubin": 0.4,
+  "albumin": 3.9,
+  "creatinine": 0.7,
+  "egfr": 111.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.6,
+  "cdt": 1.1,
+  "nt_probnp": 57.0,
+  "cotinine_urine": 6.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

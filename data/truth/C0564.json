@@ -1,0 +1,533 @@
+{
+ "case_id": "C0564",
+ "seed": 120101505,
+ "app_date": "2026-09-03",
+ "design": {
+  "case_id": "C0564",
+  "seed": 120101505,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 23,
+  "sex": "M",
+  "face": 500000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "asthma:severe",
+    "key": "asthma",
+    "variant": "severe",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "steroid_bursts_per_year": {
+       "ge": 2
+      },
+      "er_years_ago": {
+       "lt": 2
+      },
+      "biologic": true
+     }
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "adrenal_pituitary:adrenal",
+    "key": "adrenal_pituitary",
+    "variant": "adrenal",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "adrenal"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cardiomyopathy:mid_ef",
+    "key": "cardiomyopathy",
+    "variant": "mid_ef",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": [
+      40,
+      49
+     ]
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "multiple_sclerosis:moderate",
+    "key": "multiple_sclerosis",
+    "variant": "moderate",
+    "chapter": "NEU",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "edss": [
+      2.5,
+      5
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_foreign:visa_eligible",
+    "key": "nm_foreign",
+    "variant": "visa_eligible",
+    "chapter": "FN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Preferred",
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acute_injury",
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "ACCEL"
+  ],
+  "n_aps": 2,
+  "evidence_path": "accel_to_fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "CTR",
+   "GIO",
+   "WP"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.355,
+   "bmi": 23.3,
+   "foreign_country": "Luxembourg",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Tyler",
+  "last_name": "Kennedy",
+  "sex": "M",
+  "dob": "2003-07-04",
+  "age": 23,
+  "address_state": "IN",
+  "country_of_residence": "US",
+  "citizenship": "Luxembourg",
+  "years_in_us": 7.4,
+  "visa_type": "L-1",
+  "occupation": "warehouse supervisor",
+  "occupation_class": "2A",
+  "annual_income": 46000,
+  "net_worth": 483000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "Term 10",
+  "riders_requested": [
+   "CTR",
+   "GIO",
+   "WP"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 60.0,
+ "weight_lb": 119.0,
+ "bp_systolic": 140,
+ "bp_diastolic": 76,
+ "pulse": 66,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2019-08-29",
+   "quit": "2026-01-11",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2025-12-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 5.3,
+    "monotherapy": true
+   },
+   "meds": [
+    {
+     "drug": "risperidone",
+     "dose": "4 mg",
+     "start": "2026-03-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    },
+    {
+     "drug": "clozapine",
+     "dose": "100 mg",
+     "start": "2026-02-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0564-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "asthma",
+   "label": "Asthma",
+   "onset": "2022-01-27",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "controller": true,
+    "steroid_bursts_per_year": 1,
+    "er_years_ago": 0.7,
+    "biologic": false
+   },
+   "meds": [
+    {
+     "drug": "albuterol",
+     "dose": "90 mcg",
+     "start": "2022-03-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    },
+    {
+     "drug": "fluticasone-salmeterol",
+     "dose": "100/50",
+     "start": "2022-03-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0564-P3"
+   ],
+   "disclosure": "minimized",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "adrenal_pituitary",
+   "label": "Adrenal insufficiency / pituitary adenoma",
+   "onset": "2022-04-10",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "adrenal"
+   },
+   "meds": [
+    {
+     "drug": "hydrocortisone",
+     "dose": "10 mg",
+     "start": "2022-04-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "adrenal_pituitary"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0564-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2021-01-27",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "ef": 49,
+    "recovered_years": 4.2,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "furosemide",
+     "dose": "40 mg",
+     "start": "2021-04-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    },
+    {
+     "drug": "spironolactone",
+     "dose": "25 mg",
+     "start": "2021-01-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0564-P5"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "multiple_sclerosis",
+   "label": "Multiple sclerosis",
+   "onset": "2022-12-22",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "progressive": false,
+    "edss": 3.0
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0564-P6"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2024-02-01",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "5 mg",
+     "start": "2024-02-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0564-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2020-10-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2020-12-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0564-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2026-02-04",
+   "code": "S15",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "martial arts",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Atlas Assurance",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0564-P1",
+   "name": "Dr. Matthew Cole",
+   "specialty": "family medicine",
+   "practice": "Cook Inc Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Luxembourg"
+  },
+  {
+   "provider_id": "C0564-P2",
+   "name": "Dr. Jorge Noble",
+   "specialty": "psychiatry",
+   "practice": "Smith Inc Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0564-P3",
+   "name": "Dr. Jonathan Hansen",
+   "specialty": "pulmonology",
+   "practice": "Lambert-Calderon Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0564-P4",
+   "name": "Dr. Jack James",
+   "specialty": "endocrinology",
+   "practice": "Wilson Ball and Wiggins Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0564-P5",
+   "name": "Dr. Patrick Fletcher",
+   "specialty": "cardiology",
+   "practice": "Smith-Thornton Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0564-P6",
+   "name": "Dr. Kyle Campbell",
+   "specialty": "neurology",
+   "practice": "Stewart Allen and Bailey Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 293.0,
+  "hdl": 59.0,
+  "ldl": 213.0,
+  "triglycerides": 105.0,
+  "tc_hdl_ratio": 5.0,
+  "glucose_fasting": 97.0,
+  "a1c": 5.0,
+  "ast": 29.0,
+  "alt": 14.0,
+  "ggt": 35.0,
+  "alk_phos": 57.0,
+  "bilirubin": 0.6,
+  "albumin": 3.9,
+  "creatinine": 1.1,
+  "egfr": 77.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.2,
+  "nt_probnp": 429.0,
+  "cotinine_urine": 780.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

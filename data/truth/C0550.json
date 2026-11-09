@@ -1,0 +1,277 @@
+{
+ "case_id": "C0550",
+ "seed": 1650393,
+ "app_date": "2026-02-16",
+ "design": {
+  "case_id": "C0550",
+  "seed": 1650393,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 67,
+  "sex": "F",
+  "face": 750000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "nm_workup:pending_workup",
+    "key": "nm_workup",
+    "variant": "pending_workup",
+    "chapter": "CLS",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "crohns:mild",
+    "key": "crohns",
+    "variant": "mild",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current_heavy",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "acute_injury"
+  ],
+  "grey": "GRY-5",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "grey",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "ADB"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.67,
+   "bmi": 31.3,
+   "foreign_country": null,
+   "cessation_rx_quit": null,
+   "nm_workup": "pending_workup"
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Richardson",
+  "sex": "F",
+  "dob": "1959-02-13",
+  "age": 67,
+  "address_state": "NC",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "hair stylist",
+  "occupation_class": "2A",
+  "annual_income": 223000,
+  "net_worth": 1639000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 750000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "trust"
+ },
+ "height_in": 62.0,
+ "weight_lb": 171.0,
+ "bp_systolic": 126,
+ "bp_diastolic": 72,
+ "pulse": 83,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "2 ppd",
+   "start": "1976-02-22",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 8.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2006-10-30",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": false,
+    "surgery_years_ago": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0550-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2025-07-15",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2025-07-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0550-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acute injury",
+   "onset": "2024-09-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acute_injury"
+   },
+   "meds": [
+    {
+     "drug": "cyclobenzaprine",
+     "dose": "10 mg",
+     "start": "2024-09-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acute_injury"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0550-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 79,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-06-26",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Northstar Life",
+   "outcome": "issued Table 2"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0550-P1",
+   "name": "Dr. Jessica Brown",
+   "specialty": "family medicine",
+   "practice": "Shaw Cox and Golden Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0550-P2",
+   "name": "Dr. Allison Alvarez",
+   "specialty": "gastroenterology",
+   "practice": "Odom-Jones Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 71.0,
+  "ldl": 196.0,
+  "triglycerides": 102.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 95.0,
+  "a1c": 5.3,
+  "ast": 21.0,
+  "alt": 25.0,
+  "ggt": 31.0,
+  "alk_phos": 112.0,
+  "bilirubin": 0.9,
+  "albumin": 4.3,
+  "creatinine": 1.1,
+  "egfr": 69.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.6,
+  "cdt": 0.8,
+  "nt_probnp": 82.0,
+  "cotinine_urine": 710.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

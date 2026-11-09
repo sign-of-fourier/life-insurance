@@ -1,0 +1,329 @@
+{
+ "case_id": "C0672",
+ "seed": 366254706,
+ "app_date": "2025-07-30",
+ "design": {
+  "case_id": "C0672",
+  "seed": 366254706,
+  "target": "Postpone",
+  "ladder": "tobacco",
+  "age": 51,
+  "sex": "F",
+  "face": 2000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "thyroid:graves_active",
+    "key": "thyroid",
+    "variant": "graves_active",
+    "chapter": "END",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "graves_active"
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "copd:mild",
+    "key": "copd",
+    "variant": "mild",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cessation_rx_only",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "osteopenia",
+   "dental"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_11",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB",
+   "XCR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.75,
+   "bmi": 25.6,
+   "foreign_country": null,
+   "cessation_rx_quit": "2024-12-09"
+  }
+ },
+ "person": {
+  "first_name": "Christina",
+  "last_name": "Leblanc",
+  "sex": "F",
+  "dob": "1974-05-08",
+  "age": 51,
+  "address_state": "ME",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "data scientist",
+  "occupation_class": "1A",
+  "annual_income": 177000,
+  "net_worth": 564000,
+  "marital_status": "married",
+  "dependents": 3
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "XCR"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 63.0,
+ "weight_lb": 144.0,
+ "bp_systolic": 115,
+ "bp_diastolic": 71,
+ "pulse": 63,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1 ppd",
+   "start": "2013-05-16",
+   "quit": "2024-12-09",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 3.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "thyroid",
+   "label": "Thyroid disorder",
+   "onset": "2012-09-05",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "kind": "graves_active"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0672-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2017-05-18",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "fev1_pct": 95,
+    "smoker": false,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "roflumilast",
+     "dose": "500 mcg",
+     "start": "2017-07-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    },
+    {
+     "drug": "fluticasone-umeclidinium-vilanterol",
+     "dose": "100/62.5/25",
+     "start": "2017-06-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0672-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "osteopenia",
+   "onset": "2023-11-05",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "osteopenia"
+   },
+   "meds": [
+    {
+     "drug": "alendronate",
+     "dose": "70 mg",
+     "start": "2023-12-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "osteopenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0672-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2016-04-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "10/325 mg",
+     "start": "2016-05-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    },
+    {
+     "drug": "amoxicillin",
+     "dose": "875 mg",
+     "start": "2016-04-26",
+     "stop": "2016-05-16",
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0672-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2023-10-21",
+   "code": "S05",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-11-13",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2017,
+   "company": "Atlas Assurance",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0672-P1",
+   "name": "Dr. Katie Espinoza",
+   "specialty": "family medicine",
+   "practice": "Dunlap PLC Medical Group",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0672-P2",
+   "name": "Dr. Tiffany Brown",
+   "specialty": "endocrinology",
+   "practice": "Deleon LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0672-P3",
+   "name": "Dr. Ryan Mcdonald",
+   "specialty": "pulmonology",
+   "practice": "Macias LLC Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 59.0,
+  "ldl": 205.0,
+  "triglycerides": 102.0,
+  "tc_hdl_ratio": 4.8,
+  "glucose_fasting": 87.0,
+  "a1c": 5.2,
+  "ast": 20.0,
+  "alt": 13.0,
+  "ggt": 28.0,
+  "alk_phos": 52.0,
+  "bilirubin": 0.5,
+  "albumin": 4.4,
+  "creatinine": 0.9,
+  "egfr": 106.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 12.6,
+  "cdt": 1.3,
+  "nt_probnp": 110.0,
+  "cotinine_urine": 44.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

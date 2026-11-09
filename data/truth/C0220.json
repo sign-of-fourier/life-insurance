@@ -1,0 +1,288 @@
+{
+ "case_id": "C0220",
+ "seed": 808112966,
+ "app_date": "2026-02-28",
+ "design": {
+  "case_id": "C0220",
+  "seed": 808112966,
+  "target": "Postpone",
+  "ladder": "non_tobacco",
+  "age": 71,
+  "sex": "M",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "cad:recent_lt6mo",
+    "key": "cad",
+    "variant": "recent_lt6mo",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "postpone",
+    "best": null,
+    "fe": null,
+    "params": {
+     "years_since": [
+      0,
+      0.49
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "pad_aaa:aaa_small",
+    "key": "pad_aaa",
+    "variant": "aaa_small",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "kind": "aaa",
+     "size_cm": {
+      "lt": 4.0
+     }
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_07",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.875,
+   "bmi": 29.4,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jason",
+  "last_name": "Thomas",
+  "sex": "M",
+  "dob": "1955-06-17",
+  "age": 71,
+  "address_state": "AL",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 27400,
+  "net_worth": 685000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 68.0,
+ "weight_lb": 193.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 75,
+ "pulse": 69,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 6.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2025-11-11",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "age_at_event": 71,
+    "years_since": 0.3,
+    "event": "stent",
+    "ef": 60
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "80 mg",
+     "start": "2025-11-24",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2026-01-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "clopidogrel",
+     "dose": "75 mg",
+     "start": "2025-11-29",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "25 mg",
+     "start": "2026-02-08",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0220-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pad_aaa",
+   "label": "Peripheral arterial disease / aortic aneurysm",
+   "onset": "2021-02-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "aaa",
+    "smoker": false,
+    "size_cm": 3.1,
+    "repaired_months": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0220-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 77,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2021-04-10",
+   "code": "M06",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [
+  {
+   "country": "United Kingdom",
+   "weeks_per_year": 3.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Northstar Life",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0220-P1",
+   "name": "Dr. Christopher Duarte",
+   "specialty": "family medicine",
+   "practice": "Ward Group Medical Group",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0220-P2",
+   "name": "Dr. Mark Arnold",
+   "specialty": "cardiology",
+   "practice": "Sutton Maldonado and Harris Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 280.0,
+  "hdl": 60.0,
+  "ldl": 205.0,
+  "triglycerides": 75.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 101.0,
+  "a1c": 5.3,
+  "ast": 25.0,
+  "alt": 41.0,
+  "ggt": 32.0,
+  "alk_phos": 116.0,
+  "bilirubin": 0.6,
+  "albumin": 3.8,
+  "creatinine": 0.8,
+  "egfr": 89.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 15.5,
+  "cdt": 1.1,
+  "nt_probnp": 30.0,
+  "cotinine_urine": 8.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.9
+ }
+}

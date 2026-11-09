@@ -1,0 +1,337 @@
+{
+ "case_id": "C0097",
+ "seed": 547684955,
+ "app_date": "2026-03-14",
+ "design": {
+  "case_id": "C0097",
+  "seed": 547684955,
+  "target": "Table 3-4",
+  "ladder": "non_tobacco",
+  "age": 46,
+  "sex": "F",
+  "face": 1000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "nm_family:fh_two_cvd",
+    "key": "nm_family",
+    "variant": "fh_two_cvd",
+    "chapter": "FH",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "diabetes_t1:age40-49_a1c0",
+    "key": "diabetes_t1",
+    "variant": "age40-49_a1c0",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "cataracts",
+   "acne",
+   "contraception"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "simple",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "ADB",
+   "CTR",
+   "KPE"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.863,
+   "bmi": 24.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jennifer",
+  "last_name": "Massey",
+  "sex": "F",
+  "dob": "1980-04-05",
+  "age": 46,
+  "address_state": "OR",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "attorney",
+  "occupation_class": "1A",
+  "annual_income": 57000,
+  "net_worth": 320000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "ADB",
+   "CTR",
+   "KPE"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "business partner"
+ },
+ "height_in": 58.0,
+ "weight_lb": 119.0,
+ "bp_systolic": 130,
+ "bp_diastolic": 82,
+ "pulse": 67,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t1",
+   "label": "Type 1 diabetes",
+   "onset": "2019-09-13",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "a1c_avg": 1.6,
+    "a1c_available": true,
+    "insulin": true,
+    "duration_years": 6.5,
+    "age_at_dx": 39,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2019-11-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    },
+    {
+     "drug": "insulin aspart",
+     "dose": "100 u/mL",
+     "start": "2019-11-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t1"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0097-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "cataracts",
+   "onset": "2019-11-27",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "cataracts"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0097-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2014-04-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2014-05-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0097-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "contraception",
+   "onset": "2016-08-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "contraception"
+   },
+   "meds": [
+    {
+     "drug": "levonorgestrel IUD",
+     "dose": "52 mg",
+     "start": "2016-09-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "contraception"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0097-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": null,
+   "age_at_death": 42,
+   "living": false
+  },
+  {
+   "relation": "brother",
+   "condition": "sudden cardiac death",
+   "age_at_onset": null,
+   "age_at_death": 42,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "COPD",
+   "age_at_onset": 75,
+   "age_at_death": 84,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2025-03-07",
+   "code": "M01",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2022-12-09",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2024,
+   "company": "Atlas Assurance",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0097-P1",
+   "name": "Dr. Anthony Martinez",
+   "specialty": "family medicine",
+   "practice": "Fisher-Cox Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0097-P2",
+   "name": "Dr. Andrea Gray",
+   "specialty": "endocrinology",
+   "practice": "Smith LLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 69.0,
+  "ldl": 184.0,
+  "triglycerides": 158.0,
+  "tc_hdl_ratio": 4.1,
+  "glucose_fasting": 13.0,
+  "a1c": 1.8,
+  "ast": 35.0,
+  "alt": 14.0,
+  "ggt": 19.0,
+  "alk_phos": 56.0,
+  "bilirubin": 0.8,
+  "albumin": 3.9,
+  "creatinine": 0.9,
+  "egfr": 113.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.2,
+  "cdt": 1.4,
+  "nt_probnp": 34.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

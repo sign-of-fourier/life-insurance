@@ -1,0 +1,395 @@
+{
+ "case_id": "C0320",
+ "seed": 278150340,
+ "app_date": "2025-04-18",
+ "design": {
+  "case_id": "C0320",
+  "seed": 278150340,
+  "target": "Table 5-8",
+  "ladder": "non_tobacco",
+  "age": 67,
+  "sex": "F",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "sleep_apnea:untreated",
+    "key": "sleep_apnea",
+    "variant": "untreated",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "psoriasis:psa_biologic",
+    "key": "psoriasis",
+    "variant": "psa_biologic",
+    "chapter": "IMM",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "arthritis": true,
+     "biologic": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "cardiomyopathy:hcm",
+    "key": "cardiomyopathy",
+    "variant": "hcm",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "hcm": true
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "crohns:mild",
+    "key": "crohns",
+    "variant": "mild",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "misremembered"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "dental"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 3,
+  "evidence_path": "fluids+aps3",
+  "complexity": "complex",
+  "persona": "uw_02",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBS",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "hospital_discharge",
+   "small_practice_typed"
+  ],
+  "riders_requested": [],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.902,
+   "bmi": 22.1,
+   "foreign_country": "Colombia",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Pamela",
+  "last_name": "Garcia",
+  "sex": "F",
+  "dob": "1958-03-30",
+  "age": 67,
+  "address_state": "MN",
+  "country_of_residence": "US",
+  "citizenship": "Colombia",
+  "years_in_us": 1.2,
+  "visa_type": "H-1B",
+  "occupation": "accountant",
+  "occupation_class": "1A",
+  "annual_income": 66000,
+  "net_worth": 762000,
+  "marital_status": "widowed",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [],
+  "existing_coverage": 250000,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 59.0,
+ "weight_lb": 110.0,
+ "bp_systolic": 132,
+ "bp_diastolic": 88,
+ "pulse": 65,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1988-11-28",
+   "quit": "2023-10-08",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "sleep_apnea",
+   "label": "Obstructive sleep apnea",
+   "onset": "2007-08-07",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "treated": false,
+    "compliant": true,
+    "ahi": 7
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0320-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "psoriasis",
+   "label": "Psoriasis / psoriatic arthritis",
+   "onset": "2020-03-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "arthritis": true,
+    "biologic": true
+   },
+   "meds": [
+    {
+     "drug": "adalimumab",
+     "dose": "40 mg inj",
+     "start": "2020-06-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "psoriasis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0320-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2022-08-06",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "ef": 29,
+    "recovered_years": 9.2,
+    "hcm": true
+   },
+   "meds": [
+    {
+     "drug": "carvedilol",
+     "dose": "6.25 mg",
+     "start": "2022-10-17",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    },
+    {
+     "drug": "empagliflozin",
+     "dose": "10 mg",
+     "start": "2022-11-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0320-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2012-03-13",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": false,
+    "surgery_years_ago": 14.3
+   },
+   "meds": [
+    {
+     "drug": "budesonide",
+     "dose": "3 mg",
+     "start": "2012-06-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0320-P5"
+   ],
+   "disclosure": "misremembered",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "dental",
+   "onset": "2019-05-16",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "dental"
+   },
+   "meds": [
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "dose": "5/325 mg",
+     "start": "2019-06-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "dental"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0320-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "MI",
+   "age_at_onset": 66,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2021-09-04",
+   "code": "M07",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hunting",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0320-P1",
+   "name": "Dr. Philip Huynh",
+   "specialty": "family medicine",
+   "practice": "Diaz-Phillips Medical Group",
+   "aps_style": "foreign_translated",
+   "country": "Colombia"
+  },
+  {
+   "provider_id": "C0320-P2",
+   "name": "Dr. Matthew Rose",
+   "specialty": "pulmonology",
+   "practice": "Martin Ltd Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0320-P3",
+   "name": "Dr. Marissa Frey",
+   "specialty": "rheumatology",
+   "practice": "Curry-Roy Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0320-P4",
+   "name": "Dr. Jennifer Ortiz",
+   "specialty": "cardiology",
+   "practice": "Martinez PLC Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0320-P5",
+   "name": "Dr. Nicole Meadows",
+   "specialty": "gastroenterology",
+   "practice": "Mason-Reyes Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 282.0,
+  "hdl": 66.0,
+  "ldl": 192.0,
+  "triglycerides": 116.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 79.0,
+  "a1c": 5.3,
+  "ast": 36.0,
+  "alt": 42.0,
+  "ggt": 42.0,
+  "alk_phos": 71.0,
+  "bilirubin": 0.8,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 61.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.1,
+  "nt_probnp": 507.0,
+  "cotinine_urine": 5.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

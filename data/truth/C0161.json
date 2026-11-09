@@ -1,0 +1,359 @@
+{
+ "case_id": "C0161",
+ "seed": 503131682,
+ "app_date": "2026-10-03",
+ "design": {
+  "case_id": "C0161",
+  "seed": 503131682,
+  "target": "Standard Plus",
+  "ladder": "non_tobacco",
+  "age": 63,
+  "sex": "M",
+  "face": 300000,
+  "product": "UL",
+  "items": [
+   {
+    "id": "prediabetes:high",
+    "key": "prediabetes",
+    "variant": "high",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      6.1,
+      6.4
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_2_3",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "bp",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "rosacea",
+   "gerd",
+   "erectile_dysfunction",
+   "glaucoma"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_09",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "hospital_discharge"
+  ],
+  "riders_requested": [
+   "GIO",
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.464,
+   "bmi": 29.6,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Ronald",
+  "last_name": "Ayala",
+  "sex": "M",
+  "dob": "1963-10-21",
+  "age": 63,
+  "address_state": "KS",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "pharmacist",
+  "occupation_class": "1A",
+  "annual_income": 64000,
+  "net_worth": 355000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "UL",
+  "riders_requested": [
+   "GIO",
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 74.0,
+ "weight_lb": 231.0,
+ "bp_systolic": 148,
+ "bp_diastolic": 86,
+ "pulse": 69,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1.5 ppd",
+   "start": "1987-07-28",
+   "quit": "2023-11-11",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "prediabetes",
+   "label": "Prediabetes / impaired fasting glucose",
+   "onset": "2013-08-28",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 6.2
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "500 mg",
+     "start": "2013-12-19",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "prediabetes"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0161-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2023-04-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2023-05-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0161-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2020-07-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "omeprazole",
+     "dose": "20 mg",
+     "start": "2020-07-22",
+     "stop": "2020-08-24",
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0161-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "erectile dysfunction",
+   "onset": "2018-05-29",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "erectile_dysfunction"
+   },
+   "meds": [
+    {
+     "drug": "tadalafil",
+     "dose": "5 mg",
+     "start": "2018-07-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "erectile_dysfunction"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0161-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "glaucoma",
+   "onset": "2021-03-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "glaucoma"
+   },
+   "meds": [
+    {
+     "drug": "timolol ophthalmic",
+     "dose": "0.5%",
+     "start": "2021-04-06",
+     "stop": "2021-05-10",
+     "prescriber_id": null,
+     "indication": "glaucoma"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0161-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 54,
+   "age_at_death": 54,
+   "living": false
+  },
+  {
+   "relation": "father",
+   "condition": "hypertension",
+   "age_at_onset": 78,
+   "age_at_death": null,
+   "living": true
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-04-13",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-07-21",
+   "code": "M03",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [
+  {
+   "country": "Italy",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Harborview Life",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0161-P1",
+   "name": "Dr. Christine Miller",
+   "specialty": "family medicine",
+   "practice": "Perry Hayden and Perez Clinic",
+   "aps_style": "hospital_discharge",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0161-P2",
+   "name": "Dr. Brooke Simpson",
+   "specialty": "endocrinology",
+   "practice": "Cruz Smith and Newman Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 249.0,
+  "hdl": 46.0,
+  "ldl": 178.0,
+  "triglycerides": 121.0,
+  "tc_hdl_ratio": 5.4,
+  "glucose_fasting": 109.0,
+  "a1c": 6.1,
+  "ast": 28.0,
+  "alt": 26.0,
+  "ggt": 20.0,
+  "alk_phos": 66.0,
+  "bilirubin": 0.4,
+  "albumin": 4.3,
+  "creatinine": 1.0,
+  "egfr": 92.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 15.4,
+  "cdt": 1.1,
+  "nt_probnp": 56.0,
+  "cotinine_urine": 7.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.9
+ }
+}

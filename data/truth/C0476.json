@@ -1,0 +1,295 @@
+{
+ "case_id": "C0476",
+ "seed": 540830605,
+ "app_date": "2026-10-08",
+ "design": {
+  "case_id": "C0476",
+  "seed": 540830605,
+  "target": "Standard",
+  "ladder": "non_tobacco",
+  "age": 67,
+  "sex": "M",
+  "face": 300000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "diabetes_t2:age60-69_a1c0-6.99",
+    "key": "diabetes_t2",
+    "variant": "age60-69_a1c0-6.99",
+    "chapter": "DM",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "a1c_avg": [
+      0,
+      6.99
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "pancreatitis:gallstone",
+    "key": "pancreatitis",
+    "variant": "gallstone",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted_untraceable"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Preferred",
+   "fails": [
+    [
+     "bp",
+     "Standard Plus"
+    ],
+    [
+     "lipids",
+     "Standard Plus"
+    ],
+    [
+     "mvr",
+     "Standard Plus"
+    ]
+   ]
+  },
+  "benign": [
+   "sinusitis"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 0,
+  "evidence_path": "fluids",
+  "complexity": "moderate",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2024",
+   "paramed": "PMX",
+   "lab": "MIL"
+  },
+  "aps_styles": [],
+  "riders_requested": [
+   "KPE",
+   "LTA",
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.441,
+   "bmi": 28.7,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Mario",
+  "last_name": "Crane",
+  "sex": "M",
+  "dob": "1959-06-16",
+  "age": 67,
+  "address_state": "LA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "architect",
+  "occupation_class": "1A",
+  "annual_income": 136000,
+  "net_worth": 604000,
+  "marital_status": "married",
+  "dependents": 1
+ },
+ "coverage": {
+  "face_amount": 300000,
+  "product": "GUL",
+  "riders_requested": [
+   "KPE",
+   "LTA",
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 69.0,
+ "weight_lb": 194.0,
+ "bp_systolic": 139,
+ "bp_diastolic": 92,
+ "pulse": 76,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 0.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "diabetes_t2",
+   "label": "Type 2 diabetes",
+   "onset": "2025-04-09",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "a1c_avg": 0.9,
+    "a1c_available": true,
+    "insulin": false,
+    "duration_years": 1.5,
+    "age_at_dx": 65,
+    "microalbuminuria": false,
+    "neuropathy": false,
+    "retinopathy": false,
+    "cad": false
+   },
+   "meds": [
+    {
+     "drug": "metformin",
+     "dose": "850 mg",
+     "start": "2025-08-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0476-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2016-10-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "chronic": false,
+    "cause": "other",
+    "untraceable": true
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "sinusitis",
+   "onset": "2012-10-04",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "sinusitis"
+   },
+   "meds": [
+    {
+     "drug": "azithromycin",
+     "dose": "250 mg",
+     "start": "2012-11-12",
+     "stop": "2012-11-19",
+     "prescriber_id": null,
+     "indication": "sinusitis"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0476-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "colon cancer",
+   "age_at_onset": 53,
+   "age_at_death": 59,
+   "living": false
+  },
+  {
+   "relation": "mother",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 68,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Pinecrest Mutual",
+   "outcome": "declined"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0476-P1",
+   "name": "Dr. Dylan Perez",
+   "specialty": "family medicine",
+   "practice": "Bennett and Sons Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0476-P2",
+   "name": "Dr. Walter Olson",
+   "specialty": "endocrinology",
+   "practice": "Jones Wilson and Jones Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 286.0,
+  "hdl": 58.0,
+  "ldl": 191.0,
+  "triglycerides": 183.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": -17.0,
+  "a1c": 0.7,
+  "ast": 19.0,
+  "alt": 38.0,
+  "ggt": 27.0,
+  "alk_phos": 100.0,
+  "bilirubin": 1.2,
+  "albumin": 4.1,
+  "creatinine": 1.0,
+  "egfr": 66.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.6,
+  "cdt": 1.2,
+  "nt_probnp": 108.0,
+  "cotinine_urine": 3.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.1
+ }
+}

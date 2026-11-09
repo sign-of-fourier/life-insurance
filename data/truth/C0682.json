@@ -1,0 +1,311 @@
+{
+ "case_id": "C0682",
+ "seed": 701600034,
+ "app_date": "2026-06-09",
+ "design": {
+  "case_id": "C0682",
+  "seed": 701600034,
+  "target": "Table 1-2",
+  "ladder": "non_tobacco",
+  "age": 77,
+  "sex": "M",
+  "face": 1000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "polycystic_kidney:reduced",
+    "key": "polycystic_kidney",
+    "variant": "reduced",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "valve:moderate",
+    "key": "valve",
+    "variant": "moderate",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "severity_grade": "moderate"
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "never",
+  "tobacco_disclosure": "na",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "vitamin_d_deficiency",
+   "gerd"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_01",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBS",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "HSC",
+   "lab": "MIL"
+  },
+  "aps_styles": [
+   "ecw_problem_heavy",
+   "ecw_problem_heavy"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.878,
+   "bmi": 27.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Jonathon",
+  "last_name": "Johnson",
+  "sex": "M",
+  "dob": "1949-11-23",
+  "age": 77,
+  "address_state": "NJ",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 91080,
+  "net_worth": 2277000,
+  "marital_status": "widowed",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 500000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 60.0,
+ "weight_lb": 143.0,
+ "bp_systolic": 124,
+ "bp_diastolic": 86,
+ "pulse": 85,
+ "tobacco": [],
+ "alcohol_drinks_per_week": 12.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "polycystic_kidney",
+   "label": "Polycystic kidney disease",
+   "onset": "2018-06-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "egfr": 29
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0682-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "valve",
+   "label": "Valvular disease / murmur",
+   "onset": "2017-11-02",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "kind": "mvp",
+    "severity_grade": "moderate",
+    "repaired_years": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0682-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "vitamin d deficiency",
+   "onset": "2013-04-03",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "vitamin_d_deficiency"
+   },
+   "meds": [
+    {
+     "drug": "ergocalciferol",
+     "dose": "50000 IU",
+     "start": "2013-05-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "vitamin_d_deficiency"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0682-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "gerd",
+   "onset": "2024-04-21",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "gerd"
+   },
+   "meds": [
+    {
+     "drug": "famotidine",
+     "dose": "20 mg",
+     "start": "2024-06-15",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0682-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 68,
+   "age_at_death": 84,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2024-03-22",
+   "code": "M04",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2020-04-18",
+   "code": "M02",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [
+  {
+   "activity": "hiking",
+   "details": {},
+   "disclosure": "honest"
+  }
+ ],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2025,
+   "company": "Atlas Assurance",
+   "outcome": "issued Standard"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0682-P1",
+   "name": "Dr. Angela Mcdonald",
+   "specialty": "family medicine",
+   "practice": "Cantu and Sons Clinic",
+   "aps_style": "ecw_problem_heavy",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0682-P2",
+   "name": "Dr. Cassidy Zuniga",
+   "specialty": "nephrology",
+   "practice": "Austin Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0682-P3",
+   "name": "Dr. Duane Cruz",
+   "specialty": "cardiology",
+   "practice": "Freeman-Silva Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 269.0,
+  "hdl": 40.0,
+  "ldl": 206.0,
+  "triglycerides": 113.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 104.0,
+  "a1c": 5.2,
+  "ast": 29.0,
+  "alt": 21.0,
+  "ggt": 49.0,
+  "alk_phos": 91.0,
+  "bilirubin": 1.2,
+  "albumin": 4.0,
+  "creatinine": 0.9,
+  "egfr": 73.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.9,
+  "cdt": 1.5,
+  "nt_probnp": 386.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 1.2
+ }
+}

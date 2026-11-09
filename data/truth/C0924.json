@@ -1,0 +1,253 @@
+{
+ "case_id": "C0924",
+ "seed": 315551110,
+ "app_date": "2026-06-01",
+ "design": {
+  "case_id": "C0924",
+  "seed": 315551110,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 66,
+  "sex": "F",
+  "face": 2000000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "cancer:lung_pancreas_esophagus_brain_y0-100",
+    "key": "cancer",
+    "variant": "lung_pancreas_esophagus_brain_y0-100",
+    "chapter": "CA",
+    "kind": "med",
+    "debits": 0,
+    "outcome": "decline",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "type": "lung_pancreas_esophagus_brain",
+     "years_since_tx": [
+      0,
+      25
+     ]
+    },
+    "disclosure": "omitted"
+   }
+  ],
+  "tobacco": "quit_5_10",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "seasonal_allergy"
+  ],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [
+   "top-up cancer:lung_pancreas_esophagus_brain_y0-100"
+  ],
+  "topped": true,
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS"
+  ],
+  "n_aps": 1,
+  "evidence_path": "fluids+aps",
+  "complexity": "moderate",
+  "persona": "uw_06",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan"
+  ],
+  "riders_requested": [
+   "ADB",
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.886,
+   "bmi": 30.9,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Susan",
+  "last_name": "Sandoval",
+  "sex": "F",
+  "dob": "1959-12-28",
+  "age": 66,
+  "address_state": "IN",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "police officer",
+  "occupation_class": "3A",
+  "annual_income": 451000,
+  "net_worth": 4184000,
+  "marital_status": "single",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 2000000,
+  "product": "GUL",
+  "riders_requested": [
+   "ADB",
+   "GIO"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "children"
+ },
+ "height_in": 63.0,
+ "weight_lb": 174.0,
+ "bp_systolic": 138,
+ "bp_diastolic": 77,
+ "pulse": 55,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "2001-09-30",
+   "quit": "2018-11-06",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 1.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cancer",
+   "label": "Cancer (see type table)",
+   "onset": "2012-08-23",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "type": "lung_pancreas_esophagus_brain",
+    "years_since_tx": 12.4,
+    "stage": null
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0924-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2024-11-18",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "loratadine",
+     "dose": "10 mg",
+     "start": "2025-01-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0924-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "Alzheimer's",
+   "age_at_onset": 80,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
+ "mvr": [
+  {
+   "date": "2023-07-10",
+   "code": "M03",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-09-14",
+   "code": "M05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2019,
+   "company": "Pinecrest Mutual",
+   "outcome": "postponed"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0924-P1",
+   "name": "Dr. Regina Goodwin",
+   "specialty": "family medicine",
+   "practice": "Rivera-Ruiz Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0924-P2",
+   "name": "Dr. Patricia Bridges",
+   "specialty": "oncology",
+   "practice": "Cordova-Mason Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 285.0,
+  "hdl": 66.0,
+  "ldl": 185.0,
+  "triglycerides": 170.0,
+  "tc_hdl_ratio": 4.3,
+  "glucose_fasting": 104.0,
+  "a1c": 4.8,
+  "ast": 37.0,
+  "alt": 39.0,
+  "ggt": 10.0,
+  "alk_phos": 119.0,
+  "bilirubin": 0.5,
+  "albumin": 4.0,
+  "creatinine": 1.0,
+  "egfr": 68.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.3,
+  "nt_probnp": 55.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

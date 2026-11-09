@@ -1,0 +1,361 @@
+{
+ "case_id": "C0644",
+ "seed": 216196217,
+ "app_date": "2025-12-02",
+ "design": {
+  "case_id": "C0644",
+  "seed": 216196217,
+  "target": "Decline",
+  "ladder": "tobacco",
+  "age": 78,
+  "sex": "F",
+  "face": 500000,
+  "product": "GUL",
+  "items": [
+   {
+    "id": "schizophrenia:stable5",
+    "key": "schizophrenia",
+    "variant": "stable5",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "stable_years": {
+      "gt": 5
+     },
+     "monotherapy": true
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "cad:ev70-120_y1-2",
+    "key": "cad",
+    "variant": "ev70-120_y1-2",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {
+     "age_at_event": [
+      70,
+      120
+     ],
+     "years_since": [
+      1,
+      2
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "nm_build:over_200",
+    "key": "nm_build",
+    "variant": "over_200",
+    "chapter": "BLD",
+    "kind": "nm",
+    "debits": 200,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_quit_lt12",
+  "tobacco_disclosure": "minimized",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "rosacea",
+   "hypothyroidism_simple"
+  ],
+  "grey": "GRY-3",
+  "foreign": false,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG",
+   "APS",
+   "COG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "grey",
+  "persona": "uw_10",
+  "vendors": {
+   "rx": "RXP",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "handwritten_scan",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "LTA"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.628,
+   "bmi": 43.1,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Erica",
+  "last_name": "Hart",
+  "sex": "F",
+  "dob": "1947-08-18",
+  "age": 78,
+  "address_state": "WA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "retired",
+  "occupation_class": "1A",
+  "annual_income": 63680,
+  "net_worth": 1592000,
+  "marital_status": "married",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 500000,
+  "product": "GUL",
+  "riders_requested": [
+   "LTA"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 63.0,
+ "weight_lb": 243.0,
+ "bp_systolic": 121,
+ "bp_diastolic": 73,
+ "pulse": 69,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "10/day",
+   "start": "1990-10-27",
+   "quit": "2025-05-29",
+   "disclosure": "minimized"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "schizophrenia",
+   "label": "Schizophrenia / schizoaffective",
+   "onset": "2024-12-02",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "stable_years": 19.5,
+    "monotherapy": true
+   },
+   "meds": [
+    {
+     "drug": "olanzapine",
+     "dose": "10 mg",
+     "start": "2024-12-31",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "schizophrenia"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0644-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "cad",
+   "label": "Coronary artery disease / MI / stent / CABG",
+   "onset": "2024-01-09",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "age_at_event": 76,
+    "years_since": 1.9,
+    "event": "MI",
+    "ef": 56,
+    "angina": false,
+    "vessels": 2,
+    "ldl": 55,
+    "abnormal_stress": false,
+    "normal_stress_12mo": false,
+    "smoker": true
+   },
+   "meds": [
+    {
+     "drug": "atorvastatin",
+     "dose": "10 mg",
+     "start": "2024-01-27",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "aspirin",
+     "dose": "81 mg",
+     "start": "2024-01-11",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    },
+    {
+     "drug": "metoprolol",
+     "dose": "50 mg",
+     "start": "2024-03-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cad"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0644-P3"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "rosacea",
+   "onset": "2015-04-17",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "rosacea"
+   },
+   "meds": [
+    {
+     "drug": "metronidazole topical",
+     "dose": "1%",
+     "start": "2015-04-26",
+     "stop": "2015-06-14",
+     "prescriber_id": null,
+     "indication": "rosacea"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0644-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "hypothyroidism simple",
+   "onset": "2011-09-23",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "hypothyroidism_simple"
+   },
+   "meds": [
+    {
+     "drug": "levothyroxine",
+     "dose": "25 mcg",
+     "start": "2011-11-03",
+     "stop": "2011-10-04",
+     "prescriber_id": null,
+     "indication": "hypothyroidism_simple"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0644-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2020-06-26",
+   "code": "M08",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0644-P1",
+   "name": "Dr. Jeremy Jacobson",
+   "specialty": "family medicine",
+   "practice": "Dodson and Sons Clinic",
+   "aps_style": "handwritten_scan",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0644-P2",
+   "name": "Dr. Kyle Mccormick",
+   "specialty": "psychiatry",
+   "practice": "Baldwin LLC Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0644-P3",
+   "name": "Dr. Steven Wilson",
+   "specialty": "cardiology",
+   "practice": "Becker and Sons Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 288.0,
+  "hdl": 52.0,
+  "ldl": 194.0,
+  "triglycerides": 209.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 80.0,
+  "a1c": 5.6,
+  "ast": 36.0,
+  "alt": 18.0,
+  "ggt": 47.0,
+  "alk_phos": 110.0,
+  "bilirubin": 0.4,
+  "albumin": 4.8,
+  "creatinine": 1.0,
+  "egfr": 69.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.0,
+  "nt_probnp": 347.0,
+  "cotinine_urine": 2.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

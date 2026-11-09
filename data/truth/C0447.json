@@ -1,0 +1,307 @@
+{
+ "case_id": "C0447",
+ "seed": 811208032,
+ "app_date": "2025-06-23",
+ "design": {
+  "case_id": "C0447",
+  "seed": 811208032,
+  "target": "Table Tobacco 5-16",
+  "ladder": "tobacco",
+  "age": 32,
+  "sex": "M",
+  "face": 3000000,
+  "product": "Term 20",
+  "items": [
+   {
+    "id": "crohns:moderate",
+    "key": "crohns",
+    "variant": "moderate",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "any_of": {
+      "biologic": true,
+      "surgery_years_ago": {
+       "lt": 2
+      }
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "proteinuria:prot_101-300",
+    "key": "proteinuria",
+    "variant": "prot_101-300",
+    "chapter": "REN",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "urine_protein": "101-300"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "pulmonary_embolism:recurrent",
+    "key": "pulmonary_embolism",
+    "variant": "recurrent",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 75,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "recurrent": true
+    },
+    "disclosure": "honest"
+   }
+  ],
+  "tobacco": "cig_current",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [],
+  "grey": null,
+  "foreign": false,
+  "legacy_lab": true,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "STATE",
+   "app": "APP-2019",
+   "paramed": "PMX",
+   "lab": "APX"
+  },
+  "aps_styles": [
+   "epic_progress",
+   "small_practice_typed"
+  ],
+  "riders_requested": [
+   "OIR"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.445,
+   "bmi": 26.2,
+   "foreign_country": null,
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Todd",
+  "last_name": "Stewart",
+  "sex": "M",
+  "dob": "1993-07-11",
+  "age": 32,
+  "address_state": "PA",
+  "country_of_residence": "US",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "real estate agent",
+  "occupation_class": "2A",
+  "annual_income": 224000,
+  "net_worth": 2338000,
+  "marital_status": "single",
+  "dependents": 2
+ },
+ "coverage": {
+  "face_amount": 3000000,
+  "product": "Term 20",
+  "riders_requested": [
+   "OIR"
+  ],
+  "existing_coverage": 0,
+  "replacement": false,
+  "beneficiary_relation": "spouse"
+ },
+ "height_in": 64.0,
+ "weight_lb": 153.0,
+ "bp_systolic": 134,
+ "bp_diastolic": 87,
+ "pulse": 91,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "current",
+   "frequency": "1/2 ppd",
+   "start": "2012-04-10",
+   "quit": null,
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 4.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "crohns",
+   "label": "Crohn's disease",
+   "onset": "2021-11-17",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "biologic": true,
+    "surgery_years_ago": null
+   },
+   "meds": [
+    {
+     "drug": "mesalamine",
+     "dose": "1.2 g",
+     "start": "2022-01-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "crohns"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0447-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "proteinuria",
+   "label": "Proteinuria",
+   "onset": "2021-08-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "urine_protein": 295
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0447-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pulmonary_embolism",
+   "label": "Pulmonary embolism / DVT",
+   "onset": "2019-01-29",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "years_since": 6.4,
+    "recurrent": true,
+    "provoked": false
+   },
+   "meds": [
+    {
+     "drug": "apixaban",
+     "dose": "2.5 mg",
+     "start": "2019-03-22",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "pulmonary_embolism"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0447-P4"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2025-02-12",
+   "code": "M01",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [
+  {
+   "year": 2021,
+   "company": "Atlas Assurance",
+   "outcome": "issued Preferred"
+  }
+ ],
+ "providers": [
+  {
+   "provider_id": "C0447-P1",
+   "name": "Dr. Joshua Garrison",
+   "specialty": "family medicine",
+   "practice": "Sandoval Ltd Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0447-P2",
+   "name": "Dr. Kevin Doyle",
+   "specialty": "gastroenterology",
+   "practice": "Webb-Holloway Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0447-P3",
+   "name": "Dr. Ana Fernandez",
+   "specialty": "nephrology",
+   "practice": "Robinson Ltd Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0447-P4",
+   "name": "Dr. Philip Jones",
+   "specialty": "pulmonology",
+   "practice": "Flores-Green Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 262.0,
+  "hdl": 40.0,
+  "ldl": 200.0,
+  "triglycerides": 106.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 104.0,
+  "a1c": 5.1,
+  "ast": 22.0,
+  "alt": 26.0,
+  "ggt": 39.0,
+  "alk_phos": 89.0,
+  "bilirubin": 0.7,
+  "albumin": 4.6,
+  "creatinine": 1.2,
+  "egfr": 100.0,
+  "urine_protein": 295.0,
+  "hemoglobin": 15.2,
+  "cdt": 1.3,
+  "nt_probnp": 93.0,
+  "cotinine_urine": 1969.0,
+  "hiv": 0.0,
+  "cocaine": 0.0
+ }
+}

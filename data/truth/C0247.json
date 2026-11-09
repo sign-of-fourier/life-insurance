@@ -1,0 +1,416 @@
+{
+ "case_id": "C0247",
+ "seed": 412333156,
+ "app_date": "2025-07-28",
+ "design": {
+  "case_id": "C0247",
+  "seed": 412333156,
+  "target": "Decline",
+  "ladder": "non_tobacco",
+  "age": 69,
+  "sex": "M",
+  "face": 1000000,
+  "product": "Term 10",
+  "items": [
+   {
+    "id": "cardiomyopathy:mid_ef",
+    "key": "cardiomyopathy",
+    "variant": "mid_ef",
+    "chapter": "CV",
+    "kind": "med",
+    "debits": 100,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "ef": [
+      40,
+      49
+     ]
+    },
+    "disclosure": "honest"
+   },
+   {
+    "id": "organ_transplant_other:liver_5yr",
+    "key": "organ_transplant_other",
+    "variant": "liver_5yr",
+    "chapter": "MISC",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "organ": "liver",
+     "years_since": {
+      "gt": 5
+     }
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "pancreatitis:alcohol",
+    "key": "pancreatitis",
+    "variant": "alcohol",
+    "chapter": "GI",
+    "kind": "med",
+    "debits": 50,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "cause": "alcohol"
+    },
+    "disclosure": "omitted"
+   },
+   {
+    "id": "nm_alcohol:dpw_22_35",
+    "key": "nm_alcohol",
+    "variant": "dpw_22_35",
+    "chapter": "ALC",
+    "kind": "nm",
+    "debits": 50,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "honest"
+   },
+   {
+    "id": "copd:moderate_smoker",
+    "key": "copd",
+    "variant": "moderate_smoker",
+    "chapter": "RSP",
+    "kind": "med",
+    "debits": 150,
+    "outcome": "rate",
+    "best": null,
+    "fe": null,
+    "params": {
+     "fev1_pct": [
+      50,
+      69
+     ],
+     "smoker": true
+    },
+    "disclosure": "minimized"
+   },
+   {
+    "id": "nm_foreign:citizen_abroad_C",
+    "key": "nm_foreign",
+    "variant": "citizen_abroad_C",
+    "chapter": "FN",
+    "kind": "nm",
+    "debits": 0,
+    "outcome": "rate",
+    "best": "Standard",
+    "fe": null,
+    "params": {},
+    "disclosure": "na"
+   }
+  ],
+  "tobacco": "quit_1_2",
+  "tobacco_disclosure": "honest",
+  "matrix": {
+   "base": "Standard",
+   "fails": []
+  },
+  "benign": [
+   "acne"
+  ],
+  "grey": null,
+  "foreign": true,
+  "legacy_lab": false,
+  "notes": [],
+  "requirements_grid": [
+   "PM",
+   "B",
+   "U",
+   "EKG"
+  ],
+  "n_aps": 2,
+  "evidence_path": "fluids+aps2",
+  "complexity": "complex",
+  "persona": "uw_12",
+  "vendors": {
+   "rx": "SCR",
+   "mib": "MIBF",
+   "mvr": "ACD",
+   "app": "APP-2024",
+   "paramed": "HSC",
+   "lab": "NGL"
+  },
+  "aps_styles": [
+   "foreign_translated",
+   "athena_summary"
+  ],
+  "riders_requested": [
+   "GIO"
+  ],
+  "_extra": {
+   "log": [],
+   "fin_ratio": 0.399,
+   "bmi": 24.4,
+   "foreign_country": "Nigeria",
+   "cessation_rx_quit": null
+  }
+ },
+ "person": {
+  "first_name": "Cristian",
+  "last_name": "Merritt",
+  "sex": "M",
+  "dob": "1956-06-21",
+  "age": 69,
+  "address_state": "N/A",
+  "country_of_residence": "Nigeria",
+  "citizenship": "US",
+  "years_in_us": null,
+  "visa_type": null,
+  "occupation": "firefighter",
+  "occupation_class": "3A",
+  "annual_income": 501000,
+  "net_worth": 1018000,
+  "marital_status": "divorced",
+  "dependents": 0
+ },
+ "coverage": {
+  "face_amount": 1000000,
+  "product": "Term 10",
+  "riders_requested": [
+   "GIO"
+  ],
+  "existing_coverage": 100000,
+  "replacement": false,
+  "beneficiary_relation": "estate"
+ },
+ "height_in": 68.0,
+ "weight_lb": 161.0,
+ "bp_systolic": 128,
+ "bp_diastolic": 73,
+ "pulse": 88,
+ "tobacco": [
+  {
+   "product": "cigarette",
+   "status": "former",
+   "frequency": "1/2 ppd",
+   "start": "1995-12-14",
+   "quit": "2024-04-09",
+   "disclosure": "honest"
+  }
+ ],
+ "alcohol_drinks_per_week": 35.0,
+ "alcohol_treatment": false,
+ "drug_use": [],
+ "conditions": [
+  {
+   "condition_key": "cardiomyopathy",
+   "label": "Heart failure / cardiomyopathy",
+   "onset": "2024-03-04",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "ef": 49,
+    "recovered_years": 6.4,
+    "hcm": false
+   },
+   "meds": [
+    {
+     "drug": "spironolactone",
+     "dose": "25 mg",
+     "start": "2024-06-07",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "cardiomyopathy"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0247-P2"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "organ_transplant_other",
+   "label": "Non-kidney organ transplant",
+   "onset": "2014-11-15",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "years_since": 10.7,
+    "organ": "liver"
+   },
+   "meds": [
+    {
+     "drug": "cyclosporine",
+     "dose": "100 mg",
+     "start": "2014-12-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "organ_transplant_other"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0247-P1"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "pancreatitis",
+   "label": "Pancreatitis",
+   "onset": "2018-11-15",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "chronic": false,
+    "cause": "alcohol"
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0247-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "copd",
+   "label": "COPD",
+   "onset": "2022-03-05",
+   "status": "controlled",
+   "severity": "severe",
+   "details": {
+    "fev1_pct": 65,
+    "smoker": true,
+    "home_o2": false
+   },
+   "meds": [
+    {
+     "drug": "umeclidinium-vilanterol",
+     "dose": "62.5/25",
+     "start": "2022-06-14",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "copd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0247-P4"
+   ],
+   "disclosure": "minimized",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "acne",
+   "onset": "2021-09-11",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "acne"
+   },
+   "meds": [
+    {
+     "drug": "tretinoin",
+     "dose": "0.05%",
+     "start": "2021-10-12",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "acne"
+    },
+    {
+     "drug": "minocycline",
+     "dose": "100 mg",
+     "start": "2021-09-21",
+     "stop": "2021-10-29",
+     "prescriber_id": null,
+     "indication": "acne"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0247-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  }
+ ],
+ "family_history": [],
+ "mvr": [
+  {
+   "date": "2024-03-11",
+   "code": "S05",
+   "disclosure": "honest"
+  }
+ ],
+ "avocations": [],
+ "travel": [],
+ "prior_apps": [],
+ "providers": [
+  {
+   "provider_id": "C0247-P1",
+   "name": "Dr. Jessica Knight",
+   "specialty": "family medicine",
+   "practice": "Hill Group Clinic",
+   "aps_style": "foreign_translated",
+   "country": "Nigeria"
+  },
+  {
+   "provider_id": "C0247-P2",
+   "name": "Dr. Patricia Bean",
+   "specialty": "cardiology",
+   "practice": "Peterson Brown and Fields Clinic",
+   "aps_style": "athena_summary",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0247-P3",
+   "name": "Dr. Melissa Moody",
+   "specialty": "gastroenterology",
+   "practice": "Chase PLC Clinic",
+   "aps_style": "epic_progress",
+   "country": "US"
+  },
+  {
+   "provider_id": "C0247-P4",
+   "name": "Dr. Richard Strickland",
+   "specialty": "pulmonology",
+   "practice": "Russell Group Medical Group",
+   "aps_style": "athena_summary",
+   "country": "US"
+  }
+ ],
+ "true_labs": {
+  "tc": 300.0,
+  "hdl": 55.0,
+  "ldl": 221.0,
+  "triglycerides": 117.0,
+  "tc_hdl_ratio": 5.5,
+  "glucose_fasting": 87.0,
+  "a1c": 5.6,
+  "ast": 44.0,
+  "alt": 23.0,
+  "ggt": 122.0,
+  "alk_phos": 120.0,
+  "bilirubin": 0.9,
+  "albumin": 4.4,
+  "creatinine": 0.7,
+  "egfr": 88.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 14.4,
+  "cdt": 2.2,
+  "nt_probnp": 259.0,
+  "cotinine_urine": 0.0,
+  "hiv": 0.0,
+  "cocaine": 0.0,
+  "psa": 0.3
+ }
+}
