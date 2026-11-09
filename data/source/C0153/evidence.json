@@ -166,6 +166,23 @@
    "fact_id": "C0153-F014",
    "doc_id": "C0153-D02",
    "kind": "app_answer",
+   "key": "other:benign_no_rating",
+   "value": {
+    "condition": "eczema",
+    "diagnosed": "05/2026",
+    "treatment": "tacrolimus topical",
+    "physician": "Dr. Monique Pitts"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "conditions[3]",
+   "note": null
+  },
+  {
+   "fact_id": "C0153-F015",
+   "doc_id": "C0153-D02",
+   "kind": "app_answer",
    "key": "stated_build",
    "value": "5'6\" 127.0 lbs",
    "unit": null,
@@ -175,7 +192,7 @@
    "note": null
   },
   {
-   "fact_id": "C0153-F015",
+   "fact_id": "C0153-F016",
    "doc_id": "C0153-D03",
    "kind": "rx_fill",
    "key": "cetirizine",
@@ -193,32 +210,50 @@
    "note": null
   },
   {
-   "fact_id": "C0153-F016",
+   "fact_id": "C0153-F017",
    "doc_id": "C0153-D03",
    "kind": "rx_fill",
    "key": "omeprazole",
    "value": {
     "strength": "40 mg",
-    "n_fills": 1,
+    "n_fills": 40,
     "first": "2021-09-13",
-    "last": "2021-09-13",
+    "last": "2026-09-30",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2021-09-13",
+   "as_of": "2026-09-30",
    "relevant": false,
    "truth_ref": "conditions[1]",
    "note": null
   },
   {
-   "fact_id": "C0153-F017",
+   "fact_id": "C0153-F018",
+   "doc_id": "C0153-D03",
+   "kind": "rx_fill",
+   "key": "timolol ophthalmic",
+   "value": {
+    "strength": "0.5%",
+    "n_fills": 40,
+    "first": "2019-10-05",
+    "last": "2026-09-30",
+    "prescriber_specialty": "family medicine"
+   },
+   "unit": null,
+   "as_of": "2026-09-30",
+   "relevant": false,
+   "truth_ref": "conditions[2]",
+   "note": null
+  },
+  {
+   "fact_id": "C0153-F019",
    "doc_id": "C0153-D03",
    "kind": "rx_fill",
    "key": "tacrolimus topical",
    "value": {
     "strength": "0.1%",
-    "n_fills": 2,
-    "first": "2021-08-19",
+    "n_fills": 8,
+    "first": "2026-07-19",
     "last": "2026-09-30",
     "prescriber_specialty": "family medicine"
    },
@@ -229,21 +264,33 @@
    "note": null
   },
   {
-   "fact_id": "C0153-F018",
+   "fact_id": "C0153-F020",
    "doc_id": "C0153-D03",
    "kind": "rx_fill",
    "key": "prednisone",
    "value": {
-    "strength": "20 mg",
+    "strength": "5 mg",
     "n_fills": 1,
-    "first": "2020-02-13",
-    "last": "2020-02-13",
+    "first": "2022-01-05",
+    "last": "2022-01-05",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2020-02-13",
+   "as_of": "2022-01-05",
    "relevant": false,
    "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0153-F021",
+   "doc_id": "C0153-D04",
+   "kind": "mib_code",
+   "key": "200225",
+   "value": "2026-08-08",
+   "unit": null,
+   "as_of": "2026-08-08",
+   "relevant": false,
+   "truth_ref": "conditions[3]",
    "note": null
   }
  ],
@@ -285,7 +332,8 @@
     "C0153-F011",
     "C0153-F012",
     "C0153-F013",
-    "C0153-F014"
+    "C0153-F014",
+    "C0153-F015"
    ]
   },
   {
@@ -294,27 +342,12 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2026-10-03T09:16:00",
-   "received_at": "2026-10-03T09:40:00",
+   "received_at": "2026-10-03T09:22:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0153/C0153-D04.txt",
-   "fact_ids": []
-  },
-  {
-   "doc_id": "C0153-D03",
-   "case_id": "C0153",
-   "doc_type": "rx",
-   "vendor_id": "SCR",
-   "ordered_at": "2026-10-03T09:16:00",
-   "received_at": "2026-10-03T09:45:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0153/C0153-D03.txt",
    "fact_ids": [
-    "C0153-F015",
-    "C0153-F016",
-    "C0153-F017",
-    "C0153-F018"
+    "C0153-F021"
    ]
   },
   {
@@ -323,11 +356,29 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2026-10-03T09:16:00",
-   "received_at": "2026-10-03T10:13:00",
+   "received_at": "2026-10-03T09:27:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0153/C0153-D05.txt",
    "fact_ids": []
+  },
+  {
+   "doc_id": "C0153-D03",
+   "case_id": "C0153",
+   "doc_type": "rx",
+   "vendor_id": "SCR",
+   "ordered_at": "2026-10-03T09:16:00",
+   "received_at": "2026-10-03T09:55:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0153/C0153-D03.txt",
+   "fact_ids": [
+    "C0153-F016",
+    "C0153-F017",
+    "C0153-F018",
+    "C0153-F019",
+    "C0153-F020"
+   ]
   }
  ]
 }

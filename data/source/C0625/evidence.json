@@ -54,7 +54,7 @@
    "doc_id": "C0625-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 0,
+   "value": 100000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -127,16 +127,12 @@
    "fact_id": "C0625-F011",
    "doc_id": "C0625-D01",
    "kind": "app_answer",
-   "key": "foreign_travel",
-   "value": {
-    "country": "Luxembourg",
-    "weeks_per_year": 3.0,
-    "purpose": "vacation"
-   },
+   "key": "prior_application",
+   "value": "2021 Harborview Life: issued Preferred",
    "unit": null,
    "as_of": null,
    "relevant": false,
-   "truth_ref": "travel[0]",
+   "truth_ref": null,
    "note": null
   },
   {
@@ -144,7 +140,7 @@
    "doc_id": "C0625-D02",
    "kind": "app_answer",
    "key": "tobacco",
-   "value": "Former cigarette, quit 07/2023",
+   "value": "Former cigarette, quit 05/2024",
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -156,7 +152,7 @@
    "doc_id": "C0625-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 10.0,
+   "value": 4.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -186,7 +182,7 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "vitamin d deficiency",
+    "condition": "vitamin D deficiency",
     "diagnosed": "06/2022",
     "treatment": "ergocalciferol",
     "physician": "Dr. Gilbert Gomez"
@@ -215,9 +211,26 @@
    "kind": "app_answer",
    "key": "family_history",
    "value": {
-    "relation": "mother",
-    "condition": "type 2 diabetes",
-    "age_at_onset": 72,
+    "relation": "father",
+    "condition": "colon cancer",
+    "age_at_onset": 50,
+    "age_at_death": 59
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0625-F018",
+   "doc_id": "C0625-D02",
+   "kind": "app_answer",
+   "key": "family_history",
+   "value": {
+    "relation": "father",
+    "condition": "COPD",
+    "age_at_onset": 63,
     "age_at_death": null
    },
    "unit": null,
@@ -227,43 +240,55 @@
    "note": null
   },
   {
-   "fact_id": "C0625-F018",
+   "fact_id": "C0625-F019",
    "doc_id": "C0625-D03",
    "kind": "rx_fill",
    "key": "ergocalciferol",
    "value": {
     "strength": "50000 IU",
-    "n_fills": 1,
+    "n_fills": 40,
     "first": "2022-06-19",
-    "last": "2022-06-19",
+    "last": "2025-06-07",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2022-06-19",
-   "relevant": false,
-   "truth_ref": "conditions[1]",
-   "note": null
-  },
-  {
-   "fact_id": "C0625-F019",
-   "doc_id": "C0625-D04",
-   "kind": "mib_code",
-   "key": "940256",
-   "value": "2024-12-08",
-   "unit": null,
-   "as_of": "2024-12-08",
+   "as_of": "2025-06-07",
    "relevant": false,
    "truth_ref": "conditions[1]",
    "note": null
   },
   {
    "fact_id": "C0625-F020",
+   "doc_id": "C0625-D04",
+   "kind": "mib_code",
+   "key": "010000",
+   "value": "2021-07-15",
+   "unit": null,
+   "as_of": "2021-07-15",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0625-F021",
    "doc_id": "C0625-D05",
    "kind": "mvr_violation",
-   "key": "S15",
-   "value": "Speeding 11-15 over limit",
+   "key": "M04",
+   "value": "Following too closely",
    "unit": null,
-   "as_of": "2021-05-19",
+   "as_of": "2024-05-30",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0625-F022",
+   "doc_id": "C0625-D05",
+   "kind": "mvr_violation",
+   "key": "S25",
+   "value": "Speeding 21-25 over limit",
+   "unit": null,
+   "as_of": "2020-01-02",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -310,7 +335,8 @@
     "C0625-F014",
     "C0625-F015",
     "C0625-F016",
-    "C0625-F017"
+    "C0625-F017",
+    "C0625-F018"
    ]
   },
   {
@@ -319,12 +345,12 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-06-10T09:03:00",
-   "received_at": "2025-06-10T09:10:00",
+   "received_at": "2025-06-10T09:24:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0625/C0625-D04.txt",
    "fact_ids": [
-    "C0625-F019"
+    "C0625-F020"
    ]
   },
   {
@@ -333,12 +359,12 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-06-10T09:03:00",
-   "received_at": "2025-06-10T09:14:00",
+   "received_at": "2025-06-10T09:36:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0625/C0625-D03.txt",
    "fact_ids": [
-    "C0625-F018"
+    "C0625-F019"
    ]
   },
   {
@@ -347,12 +373,13 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2025-06-10T09:03:00",
-   "received_at": "2025-06-10T10:29:00",
+   "received_at": "2025-06-10T09:55:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0625/C0625-D05.txt",
    "fact_ids": [
-    "C0625-F020"
+    "C0625-F021",
+    "C0625-F022"
    ]
   }
  ]

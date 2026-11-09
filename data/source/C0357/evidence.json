@@ -214,13 +214,13 @@
    "key": "fluticasone nasal",
    "value": {
     "strength": "50 mcg",
-    "n_fills": 1,
+    "n_fills": 40,
     "first": "2020-01-23",
-    "last": "2020-01-23",
+    "last": "2025-11-29",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2020-01-23",
+   "as_of": "2025-11-29",
    "relevant": false,
    "truth_ref": "conditions[0]",
    "note": null
@@ -250,55 +250,31 @@
    "key": "minocycline",
    "value": {
     "strength": "100 mg",
-    "n_fills": 1,
+    "n_fills": 40,
     "first": "2024-08-24",
-    "last": "2024-08-24",
+    "last": "2025-11-29",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2024-08-24",
+   "as_of": "2025-11-29",
    "relevant": false,
    "truth_ref": "conditions[2]",
    "note": null
   },
   {
    "fact_id": "C0357-F020",
-   "doc_id": "C0357-D03",
-   "kind": "rx_fill",
-   "key": "prednisone",
-   "value": {
-    "strength": "10 mg",
-    "n_fills": 1,
-    "first": "2022-06-08",
-    "last": "2022-06-08",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0357-D04",
+   "kind": "mib_code",
+   "key": "890747",
+   "value": "2016-07-01",
    "unit": null,
-   "as_of": "2022-06-08",
+   "as_of": "2016-07-01",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0357-F021",
-   "doc_id": "C0357-D03",
-   "kind": "rx_fill",
-   "key": "ibuprofen",
-   "value": {
-    "strength": "600 mg",
-    "n_fills": 1,
-    "first": "2020-07-23",
-    "last": "2020-07-23",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2020-07-23",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0357-F022",
    "doc_id": "C0357-D05",
    "kind": "mvr_violation",
    "key": "M03",
@@ -310,7 +286,7 @@
    "note": null
   },
   {
-   "fact_id": "C0357-F023",
+   "fact_id": "C0357-F022",
    "doc_id": "C0357-D05",
    "kind": "mvr_violation",
    "key": "M03",
@@ -322,7 +298,7 @@
    "note": null
   },
   {
-   "fact_id": "C0357-F024",
+   "fact_id": "C0357-F023",
    "doc_id": "C0357-D05",
    "kind": "mvr_violation",
    "key": "M09",
@@ -334,16 +310,47 @@
    "note": null
   },
   {
-   "fact_id": "C0357-F025",
+   "fact_id": "C0357-F024",
    "doc_id": "C0357-D06",
    "kind": "paramed",
    "key": "build",
    "value": {
     "height_in": 63.0,
-    "weight_lb": 180.0
+    "weight_lb": 178.0
    },
    "unit": null,
-   "as_of": "2025-12-13",
+   "as_of": "2025-12-16",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0357-F025",
+   "doc_id": "C0357-D06",
+   "kind": "paramed",
+   "key": "bp",
+   "value": {
+    "readings": [
+     [
+      145,
+      87
+     ],
+     [
+      142,
+      87
+     ],
+     [
+      146,
+      94
+     ]
+    ],
+    "avg": [
+     144,
+     89
+    ]
+   },
+   "unit": null,
+   "as_of": "2025-12-16",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -352,42 +359,23 @@
    "fact_id": "C0357-F026",
    "doc_id": "C0357-D06",
    "kind": "paramed",
-   "key": "bp",
-   "value": {
-    "readings": [
-     [
-      141,
-      94
-     ],
-     [
-      144,
-      92
-     ],
-     [
-      141,
-      90
-     ]
-    ],
-    "avg": [
-     142,
-     92
-    ]
-   },
-   "unit": null,
-   "as_of": "2025-12-13",
-   "relevant": true,
+   "key": "pulse",
+   "value": 91,
+   "unit": "bpm",
+   "as_of": "2025-12-16",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0357-F027",
-   "doc_id": "C0357-D06",
-   "kind": "paramed",
-   "key": "pulse",
-   "value": 91,
-   "unit": "bpm",
-   "as_of": "2025-12-13",
-   "relevant": false,
+   "doc_id": "C0357-D07",
+   "kind": "lab_value",
+   "key": "cotinine_saliva",
+   "value": 276,
+   "unit": "ng/mL",
+   "as_of": "2025-12-16",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -395,11 +383,11 @@
    "fact_id": "C0357-F028",
    "doc_id": "C0357-D07",
    "kind": "lab_value",
-   "key": "cotinine_saliva",
-   "value": 244,
-   "unit": "ng/mL",
-   "as_of": "2025-12-13",
-   "relevant": true,
+   "key": "hiv",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2025-12-16",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -407,22 +395,10 @@
    "fact_id": "C0357-F029",
    "doc_id": "C0357-D07",
    "kind": "lab_value",
-   "key": "hiv",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2025-12-13",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0357-F030",
-   "doc_id": "C0357-D07",
-   "kind": "lab_value",
    "key": "cocaine",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2025-12-13",
+   "as_of": "2025-12-16",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -477,11 +453,13 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-12-02T09:20:00",
-   "received_at": "2025-12-02T09:30:00",
+   "received_at": "2025-12-02T09:44:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0357/C0357-D04.txt",
-   "fact_ids": []
+   "fact_ids": [
+    "C0357-F020"
+   ]
   },
   {
    "doc_id": "C0357-D03",
@@ -489,16 +467,14 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-12-02T09:20:00",
-   "received_at": "2025-12-02T09:38:00",
+   "received_at": "2025-12-02T09:45:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0357/C0357-D03.txt",
    "fact_ids": [
     "C0357-F017",
     "C0357-F018",
-    "C0357-F019",
-    "C0357-F020",
-    "C0357-F021"
+    "C0357-F019"
    ]
   },
   {
@@ -507,14 +483,14 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2025-12-02T09:20:00",
-   "received_at": "2025-12-02T09:43:00",
+   "received_at": "2025-12-02T10:29:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0357/C0357-D05.txt",
    "fact_ids": [
+    "C0357-F021",
     "C0357-F022",
-    "C0357-F023",
-    "C0357-F024"
+    "C0357-F023"
    ]
   },
   {
@@ -523,14 +499,14 @@
    "doc_type": "paramed",
    "vendor_id": "PMX",
    "ordered_at": "2025-12-02T12:19:00",
-   "received_at": "2025-12-14T02:19:00",
+   "received_at": "2025-12-16T21:19:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0357/C0357-D06.txt",
    "fact_ids": [
+    "C0357-F024",
     "C0357-F025",
-    "C0357-F026",
-    "C0357-F027"
+    "C0357-F026"
    ]
   },
   {
@@ -538,15 +514,15 @@
    "case_id": "C0357",
    "doc_type": "lab_saliva",
    "vendor_id": "APX",
-   "ordered_at": "2025-12-12T20:19:00",
-   "received_at": "2025-12-15T20:19:00",
+   "ordered_at": "2025-12-15T15:19:00",
+   "received_at": "2025-12-19T15:19:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0357/C0357-D07.txt",
    "fact_ids": [
+    "C0357-F027",
     "C0357-F028",
-    "C0357-F029",
-    "C0357-F030"
+    "C0357-F029"
    ]
   }
  ]

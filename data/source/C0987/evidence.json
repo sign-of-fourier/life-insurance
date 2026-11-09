@@ -188,26 +188,9 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "acute injury",
-    "diagnosed": "09/2015",
-    "treatment": "cyclobenzaprine",
-    "physician": "Dr. Jonathan Adams"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[1]",
-   "note": null
-  },
-  {
-   "fact_id": "C0987-F016",
-   "doc_id": "C0987-D02",
-   "kind": "app_answer",
-   "key": "other:benign_no_rating",
-   "value": {
-    "condition": "sinusitis",
-    "diagnosed": "01/2023",
-    "treatment": "azithromycin",
+    "condition": "acute sinusitis",
+    "diagnosed": "05/2024",
+    "treatment": "amoxicillin-clavulanate",
     "physician": "Dr. Jonathan Adams"
    },
    "unit": null,
@@ -217,7 +200,7 @@
    "note": null
   },
   {
-   "fact_id": "C0987-F017",
+   "fact_id": "C0987-F016",
    "doc_id": "C0987-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -229,7 +212,7 @@
    "note": null
   },
   {
-   "fact_id": "C0987-F018",
+   "fact_id": "C0987-F017",
    "doc_id": "C0987-D02",
    "kind": "app_answer",
    "key": "family_history",
@@ -246,43 +229,19 @@
    "note": null
   },
   {
+   "fact_id": "C0987-F018",
+   "doc_id": "C0987-D04",
+   "kind": "mib_code",
+   "key": "730217",
+   "value": "2025-01-21",
+   "unit": null,
+   "as_of": "2025-01-21",
+   "relevant": false,
+   "truth_ref": "conditions[0]",
+   "note": null
+  },
+  {
    "fact_id": "C0987-F019",
-   "doc_id": "C0987-D03",
-   "kind": "rx_fill",
-   "key": "azithromycin",
-   "value": {
-    "strength": "250 mg",
-    "n_fills": 40,
-    "first": "2023-01-01",
-    "last": "2026-08-18",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2026-08-18",
-   "relevant": false,
-   "truth_ref": "conditions[2]",
-   "note": null
-  },
-  {
-   "fact_id": "C0987-F020",
-   "doc_id": "C0987-D03",
-   "kind": "rx_fill",
-   "key": "prednisone",
-   "value": {
-    "strength": "5 mg",
-    "n_fills": 1,
-    "first": "2022-07-14",
-    "last": "2022-07-14",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2022-07-14",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0987-F021",
    "doc_id": "C0987-D05",
    "kind": "mvr_violation",
    "key": "S20",
@@ -294,7 +253,7 @@
    "note": null
   },
   {
-   "fact_id": "C0987-F022",
+   "fact_id": "C0987-F020",
    "doc_id": "C0987-D06",
    "kind": "questionnaire",
    "key": "FINQ:income",
@@ -306,7 +265,7 @@
    "note": null
   },
   {
-   "fact_id": "C0987-F023",
+   "fact_id": "C0987-F021",
    "doc_id": "C0987-D06",
    "kind": "questionnaire",
    "key": "FINQ:net_worth",
@@ -318,7 +277,7 @@
    "note": null
   },
   {
-   "fact_id": "C0987-F024",
+   "fact_id": "C0987-F022",
    "doc_id": "C0987-D06",
    "kind": "questionnaire",
    "key": "FINQ:existing",
@@ -330,7 +289,7 @@
    "note": null
   },
   {
-   "fact_id": "C0987-F025",
+   "fact_id": "C0987-F023",
    "doc_id": "C0987-D06",
    "kind": "questionnaire",
    "key": "FINQ:purpose",
@@ -383,9 +342,20 @@
     "C0987-F014",
     "C0987-F015",
     "C0987-F016",
-    "C0987-F017",
-    "C0987-F018"
+    "C0987-F017"
    ]
+  },
+  {
+   "doc_id": "C0987-D03",
+   "case_id": "C0987",
+   "doc_type": "rx",
+   "vendor_id": "SCR",
+   "ordered_at": "2026-08-21T09:43:00",
+   "received_at": "2026-08-21T09:55:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0987/C0987-D03.txt",
+   "fact_ids": []
   },
   {
    "doc_id": "C0987-D04",
@@ -397,21 +367,8 @@
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0987/C0987-D04.txt",
-   "fact_ids": []
-  },
-  {
-   "doc_id": "C0987-D03",
-   "case_id": "C0987",
-   "doc_type": "rx",
-   "vendor_id": "SCR",
-   "ordered_at": "2026-08-21T09:43:00",
-   "received_at": "2026-08-21T10:00:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0987/C0987-D03.txt",
    "fact_ids": [
-    "C0987-F019",
-    "C0987-F020"
+    "C0987-F018"
    ]
   },
   {
@@ -420,12 +377,12 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2026-08-21T09:43:00",
-   "received_at": "2026-08-21T10:42:00",
+   "received_at": "2026-08-21T10:26:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0987/C0987-D05.txt",
    "fact_ids": [
-    "C0987-F021"
+    "C0987-F019"
    ]
   },
   {
@@ -434,15 +391,15 @@
    "doc_type": "other",
    "vendor_id": "FINQ",
    "ordered_at": "2026-08-21T11:42:00",
-   "received_at": "2026-09-03T09:42:00",
+   "received_at": "2026-09-05T09:42:00",
    "order_reason": "FIN-2 over limit / KPE",
    "pages": 1,
    "text_path": "data/source/C0987/C0987-D06.txt",
    "fact_ids": [
+    "C0987-F020",
+    "C0987-F021",
     "C0987-F022",
-    "C0987-F023",
-    "C0987-F024",
-    "C0987-F025"
+    "C0987-F023"
    ]
   }
  ]

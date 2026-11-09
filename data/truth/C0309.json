@@ -149,11 +149,11 @@
  },
  "height_in": 60.0,
  "weight_lb": 119.0,
- "bp_systolic": 113,
- "bp_diastolic": 74,
- "pulse": 76,
+ "bp_systolic": 127,
+ "bp_diastolic": 70,
+ "pulse": 90,
  "tobacco": [],
- "alcohol_drinks_per_week": 3.0,
+ "alcohol_drinks_per_week": 10.0,
  "alcohol_treatment": false,
  "drug_use": [],
  "conditions": [
@@ -282,7 +282,7 @@
   },
   {
    "condition_key": "benign_no_rating",
-   "label": "gerd",
+   "label": "GERD",
    "onset": "2023-08-13",
    "status": "controlled",
    "severity": "mild",
@@ -294,9 +294,36 @@
      "drug": "pantoprazole",
      "dose": "40 mg",
      "start": "2023-08-27",
-     "stop": "2023-08-30",
+     "stop": null,
      "prescriber_id": null,
      "indication": "gerd"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0309-P1"
+   ],
+   "disclosure": "honest",
+   "in_mib": false,
+   "irrelevant": true
+  },
+  {
+   "condition_key": "benign_no_rating",
+   "label": "seasonal allergy",
+   "onset": "2021-06-08",
+   "status": "controlled",
+   "severity": "mild",
+   "details": {
+    "member": "seasonal_allergy"
+   },
+   "meds": [
+    {
+     "drug": "fluticasone nasal",
+     "dose": "50 mcg",
+     "start": "2021-08-03",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "seasonal_allergy"
     }
    ],
    "procedures": [],
@@ -306,46 +333,50 @@
    "disclosure": "omitted",
    "in_mib": false,
    "irrelevant": true
-  },
-  {
-   "condition_key": "benign_no_rating",
-   "label": "seasonal allergy",
-   "onset": "2015-02-14",
-   "status": "controlled",
-   "severity": "mild",
-   "details": {
-    "member": "seasonal_allergy"
-   },
-   "meds": [
-    {
-     "drug": "cetirizine",
-     "dose": "10 mg",
-     "start": "2015-04-06",
-     "stop": "2015-04-09",
-     "prescriber_id": null,
-     "indication": "seasonal_allergy"
-    }
-   ],
-   "procedures": [],
-   "treating_provider_ids": [
-    "C0309-P1"
-   ],
-   "disclosure": "honest",
-   "in_mib": true,
-   "irrelevant": true
   }
  ],
- "family_history": [],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "MI",
+   "age_at_onset": 75,
+   "age_at_death": 91,
+   "living": false
+  }
+ ],
  "mvr": [
   {
-   "date": "2025-02-06",
-   "code": "S15",
+   "date": "2024-12-01",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2023-11-22",
+   "code": "S20",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2021-04-02",
+   "code": "M06",
    "disclosure": "honest"
   }
  ],
  "avocations": [],
- "travel": [],
- "prior_apps": [],
+ "travel": [
+  {
+   "country": "Iceland",
+   "weeks_per_year": 1.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2020,
+   "company": "Pinecrest Mutual",
+   "outcome": "postponed"
+  }
+ ],
  "providers": [
   {
    "provider_id": "C0309-P1",
@@ -381,28 +412,28 @@
   }
  ],
  "true_labs": {
-  "tc": 279.0,
-  "hdl": 62.0,
-  "ldl": 202.0,
-  "triglycerides": 72.0,
-  "tc_hdl_ratio": 4.5,
-  "glucose_fasting": 263.0,
-  "a1c": 10.9,
-  "ast": 16.0,
-  "alt": 30.0,
-  "ggt": 36.0,
-  "alk_phos": 115.0,
-  "bilirubin": 0.8,
-  "albumin": 4.4,
-  "creatinine": 1.0,
-  "egfr": 85.0,
-  "urine_protein": 10.0,
+  "tc": 298.0,
+  "hdl": 61.0,
+  "ldl": 195.0,
+  "triglycerides": 206.0,
+  "tc_hdl_ratio": 4.9,
+  "glucose_fasting": 266.0,
+  "a1c": 11.2,
+  "ast": 21.0,
+  "alt": 28.0,
+  "ggt": 49.0,
+  "alk_phos": 81.0,
+  "bilirubin": 0.7,
+  "albumin": 4.1,
+  "creatinine": 1.1,
+  "egfr": 93.0,
+  "urine_protein": 0.0,
   "hemoglobin": 14.1,
-  "cdt": 1.0,
-  "nt_probnp": 40.0,
-  "cotinine_urine": 0.0,
+  "cdt": 1.3,
+  "nt_probnp": 72.0,
+  "cotinine_urine": 3.0,
   "hiv": 0.0,
   "cocaine": 0.0,
-  "psa": 1.0
+  "psa": 1.5
  }
 }

@@ -139,6 +139,22 @@
   },
   {
    "fact_id": "C0498-F012",
+   "doc_id": "C0498-D01",
+   "kind": "app_answer",
+   "key": "foreign_travel",
+   "value": {
+    "country": "United Kingdom",
+    "weeks_per_year": 3.0,
+    "purpose": "vacation"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "travel[0]",
+   "note": null
+  },
+  {
+   "fact_id": "C0498-F013",
    "doc_id": "C0498-D02",
    "kind": "app_answer",
    "key": "tobacco",
@@ -150,11 +166,11 @@
    "note": "minimized: quit date understated"
   },
   {
-   "fact_id": "C0498-F013",
+   "fact_id": "C0498-F014",
    "doc_id": "C0498-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 10.0,
+   "value": 2.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -162,7 +178,7 @@
    "note": null
   },
   {
-   "fact_id": "C0498-F014",
+   "fact_id": "C0498-F015",
    "doc_id": "C0498-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
@@ -179,7 +195,24 @@
    "note": null
   },
   {
-   "fact_id": "C0498-F015",
+   "fact_id": "C0498-F016",
+   "doc_id": "C0498-D02",
+   "kind": "app_answer",
+   "key": "other:benign_no_rating",
+   "value": {
+    "condition": "musculoskeletal injury",
+    "diagnosed": "09/2020",
+    "treatment": "cyclobenzaprine, ibuprofen",
+    "physician": "Dr. Jennifer Mason"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
+   "fact_id": "C0498-F017",
    "doc_id": "C0498-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -191,72 +224,37 @@
    "note": null
   },
   {
-   "fact_id": "C0498-F016",
-   "doc_id": "C0498-D02",
-   "kind": "app_answer",
-   "key": "family_history",
-   "value": {
-    "relation": "father",
-    "condition": "type 2 diabetes",
-    "age_at_onset": 69,
-    "age_at_death": null
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0498-F017",
+   "fact_id": "C0498-F018",
    "doc_id": "C0498-D03",
    "kind": "rx_fill",
    "key": "levonorgestrel IUD",
    "value": {
     "strength": "52 mg",
-    "n_fills": 1,
+    "n_fills": 40,
     "first": "2022-04-16",
-    "last": "2022-04-16",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2022-04-16",
-   "relevant": false,
-   "truth_ref": "conditions[0]",
-   "note": null
-  },
-  {
-   "fact_id": "C0498-F018",
-   "doc_id": "C0498-D03",
-   "kind": "rx_fill",
-   "key": "cyclobenzaprine",
-   "value": {
-    "strength": "5 mg",
-    "n_fills": 3,
-    "first": "2021-06-06",
     "last": "2026-06-02",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
    "as_of": "2026-06-02",
    "relevant": false,
-   "truth_ref": "conditions[1]",
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0498-F019",
    "doc_id": "C0498-D03",
    "kind": "rx_fill",
-   "key": "azithromycin",
+   "key": "ibuprofen",
    "value": {
-    "strength": "250 mg",
+    "strength": "600 mg",
     "n_fills": 1,
-    "first": "2025-04-25",
-    "last": "2025-04-25",
+    "first": "2024-09-09",
+    "last": "2024-09-09",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2025-04-25",
+   "as_of": "2024-09-09",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -266,9 +264,9 @@
    "doc_id": "C0498-D04",
    "kind": "mib_code",
    "key": "021040",
-   "value": "2024-09-04",
+   "value": "2024-11-06",
    "unit": null,
-   "as_of": "2024-09-04",
+   "as_of": "2024-11-06",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -277,23 +275,26 @@
    "fact_id": "C0498-F021",
    "doc_id": "C0498-D05",
    "kind": "mvr_violation",
-   "key": "S15",
-   "value": "Speeding 11-15 over limit",
+   "key": "S10",
+   "value": "Speeding 6-10 over limit",
    "unit": null,
-   "as_of": "2026-03-26",
+   "as_of": "2025-01-26",
    "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0498-F022",
-   "doc_id": "C0498-D05",
-   "kind": "mvr_violation",
-   "key": "N01",
-   "value": "Expired registration",
+   "doc_id": "C0498-D06",
+   "kind": "paramed",
+   "key": "build",
+   "value": {
+    "height_in": 65.0,
+    "weight_lb": 176.0
+   },
    "unit": null,
-   "as_of": "2021-06-11",
-   "relevant": false,
+   "as_of": "2026-06-13",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -301,13 +302,25 @@
    "fact_id": "C0498-F023",
    "doc_id": "C0498-D06",
    "kind": "paramed",
-   "key": "build",
+   "key": "bp",
    "value": {
-    "height_in": 65.5,
-    "weight_lb": 178.0
+    "readings": [
+     [
+      105,
+      66
+     ],
+     [
+      115,
+      63
+     ]
+    ],
+    "avg": [
+     110,
+     64
+    ]
    },
    "unit": null,
-   "as_of": "2026-06-17",
+   "as_of": "2026-06-13",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -316,38 +329,23 @@
    "fact_id": "C0498-F024",
    "doc_id": "C0498-D06",
    "kind": "paramed",
-   "key": "bp",
-   "value": {
-    "readings": [
-     [
-      116,
-      62
-     ],
-     [
-      113,
-      69
-     ]
-    ],
-    "avg": [
-     114,
-     66
-    ]
-   },
-   "unit": null,
-   "as_of": "2026-06-17",
-   "relevant": true,
+   "key": "pulse",
+   "value": 88,
+   "unit": "bpm",
+   "as_of": "2026-06-13",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0498-F025",
-   "doc_id": "C0498-D06",
-   "kind": "paramed",
-   "key": "pulse",
-   "value": 79,
-   "unit": "bpm",
-   "as_of": "2026-06-17",
-   "relevant": false,
+   "doc_id": "C0498-D07",
+   "kind": "lab_value",
+   "key": "cotinine_saliva",
+   "value": 1,
+   "unit": "ng/mL",
+   "as_of": "2026-06-13",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -355,11 +353,11 @@
    "fact_id": "C0498-F026",
    "doc_id": "C0498-D07",
    "kind": "lab_value",
-   "key": "cotinine_saliva",
-   "value": 1,
-   "unit": "ng/mL",
-   "as_of": "2026-06-17",
-   "relevant": true,
+   "key": "hiv",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2026-06-13",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -367,35 +365,23 @@
    "fact_id": "C0498-F027",
    "doc_id": "C0498-D07",
    "kind": "lab_value",
-   "key": "hiv",
+   "key": "cocaine",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2026-06-17",
+   "as_of": "2026-06-13",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0498-F028",
-   "doc_id": "C0498-D07",
-   "kind": "lab_value",
-   "key": "cocaine",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2026-06-17",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0498-F029",
    "doc_id": "C0498-D08",
    "kind": "questionnaire",
    "key": "AVOQ:activities",
    "value": [
     {
      "activity": "scuba",
-     "max_depth_ft": 234,
+     "max_depth_ft": 282,
      "intends_to_stop": false
     }
    ],
@@ -406,7 +392,7 @@
    "note": null
   },
   {
-   "fact_id": "C0498-F030",
+   "fact_id": "C0498-F029",
    "doc_id": "C0498-D09",
    "kind": "questionnaire",
    "key": "FINQ:income",
@@ -418,7 +404,7 @@
    "note": null
   },
   {
-   "fact_id": "C0498-F031",
+   "fact_id": "C0498-F030",
    "doc_id": "C0498-D09",
    "kind": "questionnaire",
    "key": "FINQ:net_worth",
@@ -430,7 +416,7 @@
    "note": null
   },
   {
-   "fact_id": "C0498-F032",
+   "fact_id": "C0498-F031",
    "doc_id": "C0498-D09",
    "kind": "questionnaire",
    "key": "FINQ:existing",
@@ -442,7 +428,7 @@
    "note": null
   },
   {
-   "fact_id": "C0498-F033",
+   "fact_id": "C0498-F032",
    "doc_id": "C0498-D09",
    "kind": "questionnaire",
    "key": "FINQ:purpose",
@@ -476,7 +462,8 @@
     "C0498-F008",
     "C0498-F009",
     "C0498-F010",
-    "C0498-F011"
+    "C0498-F011",
+    "C0498-F012"
    ]
   },
   {
@@ -490,11 +477,11 @@
    "pages": 1,
    "text_path": "data/source/C0498/C0498-D02.txt",
    "fact_ids": [
-    "C0498-F012",
     "C0498-F013",
     "C0498-F014",
     "C0498-F015",
-    "C0498-F016"
+    "C0498-F016",
+    "C0498-F017"
    ]
   },
   {
@@ -503,7 +490,7 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2026-06-05T09:30:00",
-   "received_at": "2026-06-05T09:34:00",
+   "received_at": "2026-06-05T09:44:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0498/C0498-D04.txt",
@@ -517,12 +504,11 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2026-06-05T09:30:00",
-   "received_at": "2026-06-05T09:54:00",
+   "received_at": "2026-06-05T09:45:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0498/C0498-D03.txt",
    "fact_ids": [
-    "C0498-F017",
     "C0498-F018",
     "C0498-F019"
    ]
@@ -533,30 +519,12 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2026-06-05T09:30:00",
-   "received_at": "2026-06-05T10:45:00",
+   "received_at": "2026-06-05T10:13:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0498/C0498-D05.txt",
    "fact_ids": [
-    "C0498-F021",
-    "C0498-F022"
-   ]
-  },
-  {
-   "doc_id": "C0498-D09",
-   "case_id": "C0498",
-   "doc_type": "other",
-   "vendor_id": "FINQ",
-   "ordered_at": "2026-06-05T11:29:00",
-   "received_at": "2026-06-08T09:29:00",
-   "order_reason": "FIN-2 over limit / KPE",
-   "pages": 1,
-   "text_path": "data/source/C0498/C0498-D09.txt",
-   "fact_ids": [
-    "C0498-F030",
-    "C0498-F031",
-    "C0498-F032",
-    "C0498-F033"
+    "C0498-F021"
    ]
   },
   {
@@ -565,14 +533,14 @@
    "doc_type": "paramed",
    "vendor_id": "HSC",
    "ordered_at": "2026-06-05T12:29:00",
-   "received_at": "2026-06-18T01:29:00",
+   "received_at": "2026-06-13T20:29:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0498/C0498-D06.txt",
    "fact_ids": [
+    "C0498-F022",
     "C0498-F023",
-    "C0498-F024",
-    "C0498-F025"
+    "C0498-F024"
    ]
   },
   {
@@ -581,12 +549,29 @@
    "doc_type": "other",
    "vendor_id": "AVOQ",
    "ordered_at": "2026-06-05T11:29:00",
-   "received_at": "2026-06-18T09:29:00",
+   "received_at": "2026-06-15T09:29:00",
    "order_reason": "REQ-2.5 avocation/aviation disclosed or indicated",
    "pages": 1,
    "text_path": "data/source/C0498/C0498-D08.txt",
    "fact_ids": [
-    "C0498-F029"
+    "C0498-F028"
+   ]
+  },
+  {
+   "doc_id": "C0498-D09",
+   "case_id": "C0498",
+   "doc_type": "other",
+   "vendor_id": "FINQ",
+   "ordered_at": "2026-06-05T11:29:00",
+   "received_at": "2026-06-17T09:29:00",
+   "order_reason": "FIN-2 over limit / KPE",
+   "pages": 1,
+   "text_path": "data/source/C0498/C0498-D09.txt",
+   "fact_ids": [
+    "C0498-F029",
+    "C0498-F030",
+    "C0498-F031",
+    "C0498-F032"
    ]
   },
   {
@@ -594,15 +579,15 @@
    "case_id": "C0498",
    "doc_type": "lab_saliva",
    "vendor_id": "MIL",
-   "ordered_at": "2026-06-16T19:29:00",
-   "received_at": "2026-06-20T19:29:00",
+   "ordered_at": "2026-06-12T14:29:00",
+   "received_at": "2026-06-17T14:29:00",
    "order_reason": "REQ-2.3 tobacco evidence ambiguous",
    "pages": 1,
    "text_path": "data/source/C0498/C0498-D07.txt",
    "fact_ids": [
+    "C0498-F025",
     "C0498-F026",
-    "C0498-F027",
-    "C0498-F028"
+    "C0498-F027"
    ]
   }
  ]

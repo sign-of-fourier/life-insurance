@@ -54,7 +54,7 @@
    "doc_id": "C0260-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 0,
+   "value": 500000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -123,6 +123,22 @@
   },
   {
    "fact_id": "C0260-F011",
+   "doc_id": "C0260-D01",
+   "kind": "app_answer",
+   "key": "foreign_travel",
+   "value": {
+    "country": "Germany",
+    "weeks_per_year": 3.0,
+    "purpose": "vacation"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "travel[0]",
+   "note": null
+  },
+  {
+   "fact_id": "C0260-F012",
    "doc_id": "C0260-D02",
    "kind": "app_answer",
    "key": "tobacco",
@@ -134,7 +150,7 @@
    "note": "omitted"
   },
   {
-   "fact_id": "C0260-F012",
+   "fact_id": "C0260-F013",
    "doc_id": "C0260-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
@@ -146,13 +162,13 @@
    "note": null
   },
   {
-   "fact_id": "C0260-F013",
+   "fact_id": "C0260-F014",
    "doc_id": "C0260-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "acute injury",
-    "diagnosed": "05/2016",
+    "condition": "musculoskeletal injury",
+    "diagnosed": "02/2024",
     "treatment": "ibuprofen, cyclobenzaprine",
     "physician": "Dr. Amanda Perez"
    },
@@ -163,14 +179,31 @@
    "note": null
   },
   {
-   "fact_id": "C0260-F014",
+   "fact_id": "C0260-F015",
+   "doc_id": "C0260-D02",
+   "kind": "app_answer",
+   "key": "respiratory:benign_no_rating",
+   "value": {
+    "condition": "seasonal allergy",
+    "diagnosed": "08/2015",
+    "treatment": "fluticasone nasal",
+    "physician": "Dr. Amanda Perez"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "conditions[2]",
+   "note": null
+  },
+  {
+   "fact_id": "C0260-F016",
    "doc_id": "C0260-D02",
    "kind": "app_answer",
    "key": "digestive:benign_no_rating",
    "value": {
-    "condition": "gerd",
-    "diagnosed": "09/2014",
-    "treatment": "omeprazole",
+    "condition": "GERD",
+    "diagnosed": "12/2020",
+    "treatment": "pantoprazole, famotidine",
     "physician": "Dr. Amanda Perez"
    },
    "unit": null,
@@ -180,7 +213,7 @@
    "note": null
   },
   {
-   "fact_id": "C0260-F015",
+   "fact_id": "C0260-F017",
    "doc_id": "C0260-D02",
    "kind": "app_answer",
    "key": "weight_change",
@@ -192,7 +225,7 @@
    "note": null
   },
   {
-   "fact_id": "C0260-F016",
+   "fact_id": "C0260-F018",
    "doc_id": "C0260-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -204,67 +237,13 @@
    "note": null
   },
   {
-   "fact_id": "C0260-F017",
-   "doc_id": "C0260-D03",
-   "kind": "rx_fill",
-   "key": "sulfamethoxazole-trimethoprim",
-   "value": {
-    "strength": "800/160 mg",
-    "n_fills": 3,
-    "first": "2018-05-16",
-    "last": "2025-05-11",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2025-05-11",
-   "relevant": false,
-   "truth_ref": "conditions[0]",
-   "note": null
-  },
-  {
-   "fact_id": "C0260-F018",
-   "doc_id": "C0260-D03",
-   "kind": "rx_fill",
-   "key": "nitrofurantoin",
-   "value": {
-    "strength": "100 mg",
-    "n_fills": 40,
-    "first": "2018-05-16",
-    "last": "2025-05-11",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2025-05-11",
-   "relevant": false,
-   "truth_ref": "conditions[0]",
-   "note": null
-  },
-  {
    "fact_id": "C0260-F019",
-   "doc_id": "C0260-D03",
-   "kind": "rx_fill",
-   "key": "ibuprofen",
-   "value": {
-    "strength": "600 mg",
-    "n_fills": 40,
-    "first": "2018-05-16",
-    "last": "2025-05-11",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2025-05-11",
-   "relevant": false,
-   "truth_ref": "conditions[1]",
-   "note": null
-  },
-  {
-   "fact_id": "C0260-F020",
    "doc_id": "C0260-D03",
    "kind": "rx_fill",
    "key": "fluticasone nasal",
    "value": {
     "strength": "50 mcg",
-    "n_fills": 2,
+    "n_fills": 40,
     "first": "2018-05-16",
     "last": "2025-05-11",
     "prescriber_specialty": "family medicine"
@@ -276,14 +255,32 @@
    "note": null
   },
   {
+   "fact_id": "C0260-F020",
+   "doc_id": "C0260-D03",
+   "kind": "rx_fill",
+   "key": "pantoprazole",
+   "value": {
+    "strength": "40 mg",
+    "n_fills": 40,
+    "first": "2020-12-30",
+    "last": "2025-05-11",
+    "prescriber_specialty": "family medicine"
+   },
+   "unit": null,
+   "as_of": "2025-05-11",
+   "relevant": false,
+   "truth_ref": "conditions[3]",
+   "note": null
+  },
+  {
    "fact_id": "C0260-F021",
    "doc_id": "C0260-D03",
    "kind": "rx_fill",
-   "key": "omeprazole",
+   "key": "famotidine",
    "value": {
-    "strength": "20 mg",
+    "strength": "40 mg",
     "n_fills": 40,
-    "first": "2018-05-16",
+    "first": "2021-02-12",
     "last": "2025-05-11",
     "prescriber_specialty": "family medicine"
    },
@@ -297,16 +294,16 @@
    "fact_id": "C0260-F022",
    "doc_id": "C0260-D03",
    "kind": "rx_fill",
-   "key": "hydrocodone-acetaminophen",
+   "key": "ibuprofen",
    "value": {
-    "strength": "10/325 mg",
+    "strength": "800 mg",
     "n_fills": 1,
-    "first": "2024-06-17",
-    "last": "2024-06-17",
+    "first": "2022-02-18",
+    "last": "2022-02-18",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2024-06-17",
+   "as_of": "2022-02-18",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -315,46 +312,40 @@
    "fact_id": "C0260-F023",
    "doc_id": "C0260-D03",
    "kind": "rx_fill",
-   "key": "azithromycin",
+   "key": "cyclobenzaprine",
    "value": {
-    "strength": "250 mg",
+    "strength": "10 mg",
     "n_fills": 1,
-    "first": "2023-04-02",
-    "last": "2023-04-02",
+    "first": "2023-01-19",
+    "last": "2023-01-19",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2023-04-02",
+   "as_of": "2023-01-19",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0260-F024",
-   "doc_id": "C0260-D03",
-   "kind": "rx_fill",
-   "key": "ibuprofen",
-   "value": {
-    "strength": "600 mg",
-    "n_fills": 1,
-    "first": "2024-01-06",
-    "last": "2024-01-06",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0260-D04",
+   "kind": "mib_code",
+   "key": "907216",
+   "value": "2022-01-31",
    "unit": null,
-   "as_of": "2024-01-06",
+   "as_of": "2022-01-31",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[3]",
    "note": null
   },
   {
    "fact_id": "C0260-F025",
    "doc_id": "C0260-D04",
    "kind": "mib_code",
-   "key": "050076",
-   "value": "2023-03-02",
+   "key": "050006",
+   "value": "2023-02-14",
    "unit": null,
-   "as_of": "2023-03-02",
+   "as_of": "2023-02-14",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -363,10 +354,10 @@
    "fact_id": "C0260-F026",
    "doc_id": "C0260-D05",
    "kind": "mvr_violation",
-   "key": "M09",
-   "value": "Careless driving",
+   "key": "M05",
+   "value": "Improper turn",
    "unit": null,
-   "as_of": "2024-05-01",
+   "as_of": "2024-05-23",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -375,10 +366,10 @@
    "fact_id": "C0260-F027",
    "doc_id": "C0260-D05",
    "kind": "mvr_violation",
-   "key": "M02",
-   "value": "Disregard traffic signal / stop sign",
+   "key": "S10",
+   "value": "Speeding 6-10 over limit",
    "unit": null,
-   "as_of": "2023-10-26",
+   "as_of": "2022-08-27",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -387,10 +378,10 @@
    "fact_id": "C0260-F028",
    "doc_id": "C0260-D05",
    "kind": "mvr_violation",
-   "key": "M05",
-   "value": "Improper turn",
+   "key": "S99",
+   "value": "Speeding, amount not reported",
    "unit": null,
-   "as_of": "2020-09-24",
+   "as_of": "2018-07-02",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -402,10 +393,10 @@
    "key": "build",
    "value": {
     "height_in": 65.0,
-    "weight_lb": 136.0
+    "weight_lb": 133.0
    },
    "unit": null,
-   "as_of": "2025-05-21",
+   "as_of": "2025-05-19",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -418,25 +409,25 @@
    "value": {
     "readings": [
      [
-      140,
-      85
+      121,
+      70
      ],
      [
-      140,
-      81
+      127,
+      66
      ],
      [
-      138,
-      85
+      125,
+      70
      ]
     ],
     "avg": [
-     139,
-     84
+     124,
+     69
     ]
    },
    "unit": null,
-   "as_of": "2025-05-21",
+   "as_of": "2025-05-19",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -446,9 +437,9 @@
    "doc_id": "C0260-D06",
    "kind": "paramed",
    "key": "pulse",
-   "value": 63,
+   "value": 84,
    "unit": "bpm",
-   "as_of": "2025-05-21",
+   "as_of": "2025-05-19",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -460,7 +451,7 @@
    "key": "cotinine_saliva",
    "value": 1,
    "unit": "ng/mL",
-   "as_of": "2025-05-21",
+   "as_of": "2025-05-19",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -472,7 +463,7 @@
    "key": "hiv",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2025-05-21",
+   "as_of": "2025-05-19",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -484,7 +475,7 @@
    "key": "cocaine",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2025-05-21",
+   "as_of": "2025-05-19",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -511,7 +502,8 @@
     "C0260-F007",
     "C0260-F008",
     "C0260-F009",
-    "C0260-F010"
+    "C0260-F010",
+    "C0260-F011"
    ]
   },
   {
@@ -525,12 +517,13 @@
    "pages": 1,
    "text_path": "data/source/C0260/C0260-D02.txt",
    "fact_ids": [
-    "C0260-F011",
     "C0260-F012",
     "C0260-F013",
     "C0260-F014",
     "C0260-F015",
-    "C0260-F016"
+    "C0260-F016",
+    "C0260-F017",
+    "C0260-F018"
    ]
   },
   {
@@ -539,11 +532,12 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-05-14T09:19:00",
-   "received_at": "2025-05-14T09:25:00",
+   "received_at": "2025-05-14T09:28:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0260/C0260-D04.txt",
    "fact_ids": [
+    "C0260-F024",
     "C0260-F025"
    ]
   },
@@ -553,19 +547,16 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-05-14T09:19:00",
-   "received_at": "2025-05-14T09:42:00",
+   "received_at": "2025-05-14T09:30:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0260/C0260-D03.txt",
    "fact_ids": [
-    "C0260-F017",
-    "C0260-F018",
     "C0260-F019",
     "C0260-F020",
     "C0260-F021",
     "C0260-F022",
-    "C0260-F023",
-    "C0260-F024"
+    "C0260-F023"
    ]
   },
   {
@@ -574,7 +565,7 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2025-05-14T09:19:00",
-   "received_at": "2025-05-14T10:30:00",
+   "received_at": "2025-05-14T10:06:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0260/C0260-D05.txt",
@@ -590,7 +581,7 @@
    "doc_type": "paramed",
    "vendor_id": "PMX",
    "ordered_at": "2025-05-14T12:18:00",
-   "received_at": "2025-05-21T20:18:00",
+   "received_at": "2025-05-20T01:18:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0260/C0260-D06.txt",
@@ -605,8 +596,8 @@
    "case_id": "C0260",
    "doc_type": "lab_saliva",
    "vendor_id": "APX",
-   "ordered_at": "2025-05-20T14:18:00",
-   "received_at": "2025-05-24T14:18:00",
+   "ordered_at": "2025-05-18T19:18:00",
+   "received_at": "2025-05-22T19:18:00",
    "order_reason": "REQ-2.3 tobacco evidence ambiguous",
    "pages": 1,
    "text_path": "data/source/C0260/C0260-D07.txt",

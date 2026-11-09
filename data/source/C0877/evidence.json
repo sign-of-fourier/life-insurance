@@ -54,7 +54,7 @@
    "doc_id": "C0877-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 0,
+   "value": 100000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -128,16 +128,12 @@
    "fact_id": "C0877-F011",
    "doc_id": "C0877-D01",
    "kind": "app_answer",
-   "key": "foreign_travel",
-   "value": {
-    "country": "Denmark",
-    "weeks_per_year": 3.0,
-    "purpose": "vacation"
-   },
+   "key": "prior_application",
+   "value": "2020 Pinecrest Mutual: issued Table 2",
    "unit": null,
    "as_of": null,
-   "relevant": false,
-   "truth_ref": "travel[0]",
+   "relevant": true,
+   "truth_ref": null,
    "note": null
   },
   {
@@ -145,7 +141,7 @@
    "doc_id": "C0877-D02",
    "kind": "app_answer",
    "key": "tobacco",
-   "value": "Current chew, daily",
+   "value": "Current chew, weekends",
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -157,7 +153,7 @@
    "doc_id": "C0877-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 12.0,
+   "value": 10.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -170,36 +166,19 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "rosacea",
-    "diagnosed": "07/2023",
-    "treatment": "metronidazole topical, ivermectin topical",
+    "condition": "dental abscess",
+    "diagnosed": "01/2020",
+    "treatment": "amoxicillin",
     "physician": "Dr. April Anderson"
    },
    "unit": null,
    "as_of": null,
    "relevant": false,
-   "truth_ref": "conditions[2]",
+   "truth_ref": "conditions[4]",
    "note": null
   },
   {
    "fact_id": "C0877-F015",
-   "doc_id": "C0877-D02",
-   "kind": "app_answer",
-   "key": "other:benign_no_rating",
-   "value": {
-    "condition": "uti",
-    "diagnosed": "12/2012",
-    "treatment": "sulfamethoxazole-trimethoprim",
-    "physician": "Dr. April Anderson"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[3]",
-   "note": null
-  },
-  {
-   "fact_id": "C0877-F016",
    "doc_id": "C0877-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -211,30 +190,13 @@
    "note": null
   },
   {
-   "fact_id": "C0877-F017",
-   "doc_id": "C0877-D02",
-   "kind": "app_answer",
-   "key": "family_history",
-   "value": {
-    "relation": "father",
-    "condition": "COPD",
-    "age_at_onset": 77,
-    "age_at_death": 84
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0877-F018",
+   "fact_id": "C0877-F016",
    "doc_id": "C0877-D03",
    "kind": "rx_fill",
    "key": "montelukast",
    "value": {
     "strength": "10 mg",
-    "n_fills": 2,
+    "n_fills": 40,
     "first": "2020-10-05",
     "last": "2025-10-01",
     "prescriber_specialty": "family medicine"
@@ -246,115 +208,97 @@
    "note": null
   },
   {
-   "fact_id": "C0877-F019",
+   "fact_id": "C0877-F017",
    "doc_id": "C0877-D03",
    "kind": "rx_fill",
    "key": "metronidazole topical",
    "value": {
     "strength": "1%",
-    "n_fills": 1,
+    "n_fills": 27,
     "first": "2023-08-08",
-    "last": "2023-08-08",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2023-08-08",
-   "relevant": false,
-   "truth_ref": "conditions[2]",
-   "note": null
-  },
-  {
-   "fact_id": "C0877-F020",
-   "doc_id": "C0877-D03",
-   "kind": "rx_fill",
-   "key": "ivermectin topical",
-   "value": {
-    "strength": "1%",
-    "n_fills": 1,
-    "first": "2023-08-24",
-    "last": "2023-08-24",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2023-08-24",
-   "relevant": false,
-   "truth_ref": "conditions[2]",
-   "note": null
-  },
-  {
-   "fact_id": "C0877-F021",
-   "doc_id": "C0877-D03",
-   "kind": "rx_fill",
-   "key": "sulfamethoxazole-trimethoprim",
-   "value": {
-    "strength": "800/160 mg",
-    "n_fills": 2,
-    "first": "2020-10-05",
     "last": "2025-10-01",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
    "as_of": "2025-10-01",
    "relevant": false,
-   "truth_ref": "conditions[3]",
+   "truth_ref": "conditions[2]",
    "note": null
   },
   {
-   "fact_id": "C0877-F022",
+   "fact_id": "C0877-F018",
    "doc_id": "C0877-D03",
    "kind": "rx_fill",
-   "key": "ondansetron",
+   "key": "ivermectin topical",
    "value": {
-    "strength": "8 mg",
+    "strength": "1%",
+    "n_fills": 26,
+    "first": "2023-08-24",
+    "last": "2025-10-01",
+    "prescriber_specialty": "family medicine"
+   },
+   "unit": null,
+   "as_of": "2025-10-01",
+   "relevant": false,
+   "truth_ref": "conditions[2]",
+   "note": null
+  },
+  {
+   "fact_id": "C0877-F019",
+   "doc_id": "C0877-D03",
+   "kind": "rx_fill",
+   "key": "cyclobenzaprine",
+   "value": {
+    "strength": "5 mg",
     "n_fills": 1,
-    "first": "2025-07-19",
-    "last": "2025-07-19",
+    "first": "2024-11-05",
+    "last": "2024-11-05",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2025-07-19",
+   "as_of": "2024-11-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0877-F023",
+   "fact_id": "C0877-F020",
    "doc_id": "C0877-D04",
    "kind": "mib_code",
    "key": "809217",
-   "value": "2015-11-17",
+   "value": "2025-07-19",
    "unit": null,
-   "as_of": "2015-11-17",
-   "relevant": false,
+   "as_of": "2025-07-19",
+   "relevant": true,
    "truth_ref": "conditions[0]",
    "note": null
   },
   {
-   "fact_id": "C0877-F024",
+   "fact_id": "C0877-F021",
    "doc_id": "C0877-D04",
    "kind": "mib_code",
-   "key": "390044",
-   "value": "2013-07-01",
+   "key": "010070",
+   "value": "2020-06-15",
    "unit": null,
-   "as_of": "2013-07-01",
+   "as_of": "2020-06-15",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0877-F025",
+   "fact_id": "C0877-F022",
    "doc_id": "C0877-D05",
    "kind": "mvr_violation",
-   "key": "S20",
-   "value": "Speeding 16-20 over limit",
+   "key": "M09",
+   "value": "Careless driving",
    "unit": null,
-   "as_of": "2024-07-26",
+   "as_of": "2024-05-04",
    "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0877-F026",
+   "fact_id": "C0877-F023",
    "doc_id": "C0877-D06",
    "kind": "aps_finding",
    "key": "dx:cancer",
@@ -367,45 +311,45 @@
     "stage": null
    },
    "unit": null,
-   "as_of": "2025-02-15",
+   "as_of": "2025-06-14",
    "relevant": true,
    "truth_ref": "conditions[0]",
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0877-F027",
+   "fact_id": "C0877-F024",
    "doc_id": "C0877-D06",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "126/93",
-    "134/88",
-    "132/88"
+    "137/88",
+    "135/86",
+    "141/86"
    ],
    "unit": null,
-   "as_of": "2025-02-15",
+   "as_of": "2025-06-14",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0877-F028",
+   "fact_id": "C0877-F025",
    "doc_id": "C0877-D06",
    "kind": "aps_finding",
    "key": "legacy_lab",
    "value": {
     "vendor": "HRT",
-    "date": "2014-01-09",
+    "date": "2009-12-12",
     "results": {
-     "tc": 275.0,
+     "tc": 282.0,
      "hdl": 48.0,
-     "fructosamine": 289,
+     "fructosamine": 256,
      "cotinine_qual": "POS",
-     "ggt": 54
+     "ggt": 60
     }
    },
    "unit": null,
-   "as_of": "2014-01-09",
+   "as_of": "2009-12-12",
    "relevant": false,
    "truth_ref": null,
    "note": "legacy method"
@@ -450,9 +394,7 @@
     "C0877-F012",
     "C0877-F013",
     "C0877-F014",
-    "C0877-F015",
-    "C0877-F016",
-    "C0877-F017"
+    "C0877-F015"
    ]
   },
   {
@@ -461,31 +403,13 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-10-04T09:18:00",
-   "received_at": "2025-10-04T09:32:00",
+   "received_at": "2025-10-04T09:31:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0877/C0877-D04.txt",
    "fact_ids": [
-    "C0877-F023",
-    "C0877-F024"
-   ]
-  },
-  {
-   "doc_id": "C0877-D03",
-   "case_id": "C0877",
-   "doc_type": "rx",
-   "vendor_id": "RXP",
-   "ordered_at": "2025-10-04T09:18:00",
-   "received_at": "2025-10-04T09:45:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0877/C0877-D03.txt",
-   "fact_ids": [
-    "C0877-F018",
-    "C0877-F019",
     "C0877-F020",
-    "C0877-F021",
-    "C0877-F022"
+    "C0877-F021"
    ]
   },
   {
@@ -494,12 +418,29 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2025-10-04T09:18:00",
-   "received_at": "2025-10-04T09:56:00",
+   "received_at": "2025-10-04T09:47:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0877/C0877-D05.txt",
    "fact_ids": [
-    "C0877-F025"
+    "C0877-F022"
+   ]
+  },
+  {
+   "doc_id": "C0877-D03",
+   "case_id": "C0877",
+   "doc_type": "rx",
+   "vendor_id": "RXP",
+   "ordered_at": "2025-10-04T09:18:00",
+   "received_at": "2025-10-04T09:50:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0877/C0877-D03.txt",
+   "fact_ids": [
+    "C0877-F016",
+    "C0877-F017",
+    "C0877-F018",
+    "C0877-F019"
    ]
   },
   {
@@ -508,14 +449,14 @@
    "doc_type": "aps",
    "vendor_id": "small_practice_typed",
    "ordered_at": "2025-10-04T11:17:00",
-   "received_at": "2025-11-12T11:17:00",
+   "received_at": "2025-10-20T11:17:00",
    "order_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "pages": 1,
+   "pages": 3,
    "text_path": "data/source/C0877/C0877-D06.txt",
    "fact_ids": [
-    "C0877-F026",
-    "C0877-F027",
-    "C0877-F028"
+    "C0877-F023",
+    "C0877-F024",
+    "C0877-F025"
    ]
   }
  ]

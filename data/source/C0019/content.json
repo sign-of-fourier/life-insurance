@@ -1,9 +1,9 @@
 {
  "meta": {
   "requirements": {
-   "PM": "REQ-3 accel fails (high-impact Rx) -> next column",
-   "B": "REQ-3 accel fails (high-impact Rx) -> next column",
-   "U": "REQ-3 accel fails (high-impact Rx) -> next column"
+   "PM": "REQ-3 accel fails (high-impact Rx, MIB code) -> next column",
+   "B": "REQ-3 accel fails (high-impact Rx, MIB code) -> next column",
+   "U": "REQ-3 accel fails (high-impact Rx, MIB code) -> next column"
   },
   "aps": [
    [
@@ -32,9 +32,9 @@
    "face": 100000,
    "product": "UL",
    "riders": [],
-   "existing": 250000,
+   "existing": 0,
    "replacement": false,
-   "beneficiary": "spouse",
+   "beneficiary": "estate",
    "signed": "2025-03-21",
    "signed_in_us": true
   },
@@ -72,7 +72,7 @@
      "answer": "No"
     },
     "alcohol": {
-     "answer": "12.0 drinks/week"
+     "answer": "8.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -123,9 +123,15 @@
      "answer": "Yes",
      "details": [
       {
+       "condition": "urinary tract infection",
+       "diagnosed": "06/2012",
+       "treatment": "sulfamethoxazole-trimethoprim, nitrofurantoin",
+       "physician": "Dr. Roger Jones"
+      },
+      {
        "condition": "acne",
-       "diagnosed": "02/2013",
-       "treatment": "tretinoin, doxycycline",
+       "diagnosed": "06/2022",
+       "treatment": "doxycycline",
        "physician": "Dr. Roger Jones"
       }
      ]
@@ -137,13 +143,13 @@
      "answer": "No"
     },
     "current_meds": {
-     "answer": "doxycycline, tretinoin"
+     "answer": "doxycycline"
     },
     "physician": {
      "answer": "Dr. Roger Jones, Lang Hernandez and Murphy Medical Group; last visit 12/2024"
     },
     "family_history": {
-     "answer": "none known"
+     "answer": "father: type 2 diabetes, died 78"
     },
     "weight_change": {
      "answer": "No"
@@ -157,9 +163,9 @@
    "vendor": "RXP",
    "fills": [
     {
-     "drug": "etanercept",
-     "brand": "Enbrel",
-     "strength": "50 mg inj",
+     "drug": "adalimumab",
+     "brand": "Humira",
+     "strength": "40 mg inj",
      "fills": [
       "2020-03-22",
       "2020-05-07",
@@ -208,21 +214,9 @@
      "cond_index": 0
     },
     {
-     "drug": "sulfamethoxazole-trimethoprim",
-     "brand": "Bactrim DS",
-     "strength": "800/160 mg",
-     "fills": [
-      "2023-05-09"
-     ],
-     "days_supply": 10,
-     "prescriber": "Dr. Roger Jones",
-     "specialty": "family medicine",
-     "cond_index": 1
-    },
-    {
-     "drug": "tretinoin",
-     "brand": "Retin-A",
-     "strength": "0.05%",
+     "drug": "methotrexate",
+     "brand": "Trexall",
+     "strength": "2.5 mg",
      "fills": [
       "2020-03-22",
       "2020-05-07",
@@ -268,58 +262,63 @@
      "days_supply": 30,
      "prescriber": "Dr. Roger Jones",
      "specialty": "family medicine",
-     "cond_index": 3
+     "cond_index": 0
     },
     {
      "drug": "doxycycline",
      "brand": "Vibramycin",
      "strength": "100 mg",
      "fills": [
-      "2020-03-22",
-      "2020-05-07",
-      "2020-06-23",
-      "2020-08-09",
-      "2020-09-24",
-      "2020-11-10",
-      "2020-12-27",
-      "2021-02-12",
-      "2021-03-30",
-      "2021-05-16",
-      "2021-07-02",
-      "2021-08-17",
-      "2021-10-03",
-      "2021-11-19",
-      "2022-01-05",
-      "2022-02-20",
-      "2022-04-08",
-      "2022-05-25",
-      "2022-07-10",
-      "2022-08-26",
-      "2022-10-12",
-      "2022-11-28",
-      "2023-01-13",
-      "2023-03-01",
-      "2023-04-17",
-      "2023-06-02",
-      "2023-07-19",
-      "2023-09-04",
+      "2022-07-26",
+      "2022-08-25",
+      "2022-09-24",
+      "2022-10-24",
+      "2022-11-23",
+      "2022-12-23",
+      "2023-01-23",
+      "2023-02-22",
+      "2023-03-24",
+      "2023-04-23",
+      "2023-05-23",
+      "2023-06-23",
+      "2023-07-23",
+      "2023-08-22",
+      "2023-09-21",
       "2023-10-21",
-      "2023-12-06",
-      "2024-01-22",
-      "2024-03-09",
-      "2024-04-24",
-      "2024-06-10",
-      "2024-07-27",
-      "2024-09-12",
-      "2024-10-28",
-      "2024-12-14",
-      "2025-01-30",
+      "2023-11-21",
+      "2023-12-21",
+      "2024-01-20",
+      "2024-02-19",
+      "2024-03-20",
+      "2024-04-19",
+      "2024-05-20",
+      "2024-06-19",
+      "2024-07-19",
+      "2024-08-18",
+      "2024-09-17",
+      "2024-10-18",
+      "2024-11-17",
+      "2024-12-17",
+      "2025-01-16",
+      "2025-02-15",
       "2025-03-18"
      ],
-     "days_supply": 10,
+     "days_supply": 30,
      "prescriber": "Dr. Roger Jones",
      "specialty": "family medicine",
      "cond_index": 3
+    },
+    {
+     "drug": "ondansetron",
+     "brand": "Zofran",
+     "strength": "4 mg",
+     "fills": [
+      "2024-03-07"
+     ],
+     "days_supply": 5,
+     "prescriber": "Dr. Nguyen (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
     }
    ],
    "no_history": false
@@ -328,9 +327,15 @@
    "vendor": "MIBS",
    "codes": [
     {
-     "code": "890940",
-     "reported": "2015-02-01",
-     "cond_index": null
+     "code": "906312",
+     "reported": "2016-06-09",
+     "cond_index": 0
+    },
+    {
+     "code": "225715",
+     "reported": "2023-07-27",
+     "cond_index": null,
+     "uncorroborated": true
     }
    ],
    "no_hit": false
@@ -341,9 +346,14 @@
    "status": "VALID",
    "events": [
     {
-     "date": "2021-08-26",
-     "code": "M05",
-     "desc": "Improper turn"
+     "date": "2023-01-03",
+     "code": "M02",
+     "desc": "Disregard traffic signal / stop sign"
+    },
+    {
+     "date": "2023-12-07",
+     "code": "M01",
+     "desc": "Failure to yield right of way"
     }
    ],
    "no_record": false,
@@ -351,60 +361,60 @@
   },
   "C0019-D06": {
    "vendor": "PMX",
-   "exam_date": "2025-04-01",
+   "exam_date": "2025-04-02",
    "height_in": 60.0,
-   "weight_lb": 109.0,
+   "weight_lb": 110.0,
    "bp": [
     [
-     113,
-     72
+     115,
+     83
     ],
     [
-     117,
-     79
+     118,
+     81
     ],
     [
-     119,
-     73
+     114,
+     87
     ]
    ],
-   "pulse": 88,
+   "pulse": 60,
    "examiner_notes": {}
   },
   "C0019-D07": {
    "vendor": "APX",
-   "collected": "2025-04-01",
+   "collected": "2025-04-02",
    "fasting": true,
    "results": {
-    "tc": 297.0,
-    "hdl": 66.0,
-    "ldl": 203.0,
-    "triglycerides": 139.0,
-    "tc_hdl_ratio": 4.5,
-    "glucose_fasting": 101.0,
-    "a1c": 5.3,
-    "ast": 16.0,
-    "alt": 31.0,
-    "ggt": 47.0,
-    "alk_phos": 54.0,
-    "bilirubin": 0.6,
-    "albumin": 3.9,
-    "creatinine": 0.9,
-    "egfr": 111.0,
-    "hemoglobin": 14.8,
+    "tc": 287.0,
+    "hdl": 48.0,
+    "ldl": 216.0,
+    "triglycerides": 111.0,
+    "tc_hdl_ratio": 6.0,
+    "glucose_fasting": 80.0,
+    "a1c": 4.8,
+    "ast": 35.0,
+    "alt": 22.0,
+    "ggt": 25.0,
+    "alk_phos": 44.0,
+    "bilirubin": 0.4,
+    "albumin": 4.6,
+    "creatinine": 1.1,
+    "egfr": 99.0,
+    "hemoglobin": 13.7,
     "hiv": 0.0,
-    "cdt": 1.3
+    "cdt": 1.2
    }
   },
   "C0019-D08": {
    "vendor": "APX",
-   "collected": "2025-04-01",
+   "collected": "2025-04-02",
    "results": {
-    "cotinine_urine": 2.0,
-    "urine_protein": 20.0,
+    "cotinine_urine": 6.0,
+    "urine_protein": 0.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
-    "urine_rbc": 2
+    "urine_rbc": 1
    }
   },
   "C0019-D09": {
@@ -418,7 +428,7 @@
    },
    "style": "specialist_letter",
    "ordered_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "last_visit": "2024-09-06",
+   "last_visit": "2025-02-03",
    "stale": false,
    "problems": [
     {
@@ -431,55 +441,57 @@
       "biologic": true
      },
      "meds": [
-      "etanercept 50 mg inj"
+      "adalimumab 40 mg inj",
+      "methotrexate 2.5 mg"
      ]
     },
     {
      "cond_index": 1,
-     "dx": "uti",
+     "dx": "urinary tract infection",
      "key": "benign_no_rating",
-     "onset": "2023-03-20",
+     "onset": "2012-06-02",
      "status": "controlled",
      "details": {
       "member": "uti"
      },
      "meds": [
-      "sulfamethoxazole-trimethoprim 800/160 mg"
+      "sulfamethoxazole-trimethoprim 800/160 mg",
+      "nitrofurantoin 100 mg"
      ]
     },
     {
      "cond_index": 2,
-     "dx": "dental",
+     "dx": "dental abscess",
      "key": "benign_no_rating",
-     "onset": "2019-06-21",
+     "onset": "2019-05-13",
      "status": "controlled",
      "details": {
       "member": "dental"
      },
      "meds": [
-      "hydrocodone-acetaminophen 5/325 mg"
+      "hydrocodone-acetaminophen 10/325 mg",
+      "amoxicillin 500 mg"
      ]
     },
     {
      "cond_index": 3,
      "dx": "acne",
      "key": "benign_no_rating",
-     "onset": "2013-02-02",
+     "onset": "2022-06-21",
      "status": "controlled",
      "details": {
       "member": "acne"
      },
      "meds": [
-      "tretinoin 0.05%",
       "doxycycline 100 mg"
      ]
     }
    ],
    "visits": [
     {
-     "date": "2024-09-06",
-     "reason": "Rheumatoid arthritis",
-     "bp": "107/75",
+     "date": "2025-02-03",
+     "reason": "dental abscess",
+     "bp": "108/85",
      "weight_lb": 113.0
     }
    ],
@@ -496,8 +508,16 @@
     "sex": "M"
    },
    "tobacco_documented": [],
-   "alcohol_dpw": 12.0,
-   "family_history": []
+   "alcohol_dpw": 8.0,
+   "family_history": [
+    {
+     "relation": "father",
+     "condition": "type 2 diabetes",
+     "age_at_onset": 64,
+     "age_at_death": 78,
+     "living": false
+    }
+   ]
   }
  }
 }

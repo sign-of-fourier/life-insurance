@@ -40,9 +40,9 @@
     "KPE",
     "XCR"
    ],
-   "existing": 0,
+   "existing": 100000,
    "replacement": false,
-   "beneficiary": "spouse",
+   "beneficiary": "business partner",
    "signed": "2026-02-26",
    "signed_in_us": true
   },
@@ -80,7 +80,7 @@
      "answer": "No"
     },
     "alcohol": {
-     "answer": "2.0 drinks/week"
+     "answer": "3.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -181,7 +181,7 @@
      "answer": "Dr. Jessica Frederick, Wheeler-Scott Clinic; last visit 01/2026"
     },
     "family_history": {
-     "answer": "mother: type 2 diabetes, dx 68"
+     "answer": "none known"
     },
     "weight_change": {
      "answer": "No"
@@ -352,8 +352,7 @@
      "brand": "Flomax",
      "strength": "0.4 mg",
      "fills": [
-      "2024-02-15",
-      "2024-03-31"
+      "2024-02-15"
      ],
      "days_supply": 30,
      "prescriber": "Dr. Jessica Frederick",
@@ -361,13 +360,25 @@
      "cond_index": 4
     },
     {
-     "drug": "azithromycin",
-     "brand": "Zithromax",
-     "strength": "250 mg",
+     "drug": "cyclobenzaprine",
+     "brand": "Flexeril",
+     "strength": "5 mg",
      "fills": [
-      "2021-08-10"
+      "2024-07-04"
      ],
-     "days_supply": 10,
+     "days_supply": 7,
+     "prescriber": "Dr. Nguyen (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
+    },
+    {
+     "drug": "ondansetron",
+     "brand": "Zofran",
+     "strength": "4 mg",
+     "fills": [
+      "2022-10-01"
+     ],
+     "days_supply": 5,
      "prescriber": "Dr. Garcia (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
@@ -379,20 +390,15 @@
    "vendor": "MIBS",
    "codes": [
     {
-     "code": "201377",
-     "reported": "2020-11-21",
+     "code": "201327",
+     "reported": "2025-04-23",
      "cond_index": 2
     },
     {
-     "code": "205266",
-     "reported": "2024-07-13",
-     "cond_index": 4
-    },
-    {
-     "code": "010970",
-     "reported": "2024-05-15",
+     "code": "525775",
+     "reported": "2024-01-08",
      "cond_index": null,
-     "admin": true
+     "uncorroborated": true
     }
    ],
    "no_hit": false
@@ -407,67 +413,67 @@
   },
   "C0641-D06": {
    "vendor": "PMX",
-   "exam_date": "2026-03-01",
+   "exam_date": "2026-03-07",
    "height_in": 66.0,
    "weight_lb": 181.0,
    "bp": [
     [
-     122,
-     83
+     134,
+     64
     ],
     [
-     122,
-     80
+     145,
+     69
     ],
     [
-     113,
-     84
+     145,
+     66
     ]
    ],
-   "pulse": 57,
+   "pulse": 61,
    "examiner_notes": {}
   },
   "C0641-D07": {
    "vendor": "APX",
-   "collected": "2026-03-01",
-   "fasting": false,
+   "collected": "2026-03-07",
+   "fasting": true,
    "results": {
-    "tc": 276.0,
-    "hdl": 70.0,
-    "ldl": 183.0,
-    "triglycerides": 114.0,
-    "tc_hdl_ratio": 3.9,
-    "a1c": 8.4,
-    "ast": 18.0,
-    "alt": 22.0,
-    "ggt": 16.0,
-    "alk_phos": 101.0,
-    "bilirubin": 0.4,
-    "albumin": 4.7,
-    "creatinine": 0.8,
-    "egfr": 98.0,
-    "hemoglobin": 16.4,
+    "tc": 281.0,
+    "hdl": 65.0,
+    "ldl": 176.0,
+    "triglycerides": 197.0,
+    "tc_hdl_ratio": 4.3,
+    "glucose_fasting": 209.0,
+    "a1c": 8.8,
+    "ast": 20.0,
+    "alt": 40.0,
+    "ggt": 38.0,
+    "alk_phos": 52.0,
+    "bilirubin": 0.3,
+    "albumin": 3.9,
+    "creatinine": 0.7,
+    "egfr": 84.0,
+    "hemoglobin": 15.5,
     "hiv": 0.0,
-    "cdt": 1.2,
-    "glucose_random": 234.0
+    "cdt": 0.9
    }
   },
   "C0641-D08": {
    "vendor": "APX",
-   "collected": "2026-03-01",
+   "collected": "2026-03-07",
    "results": {
-    "cotinine_urine": 2.0,
-    "urine_protein": 10.0,
+    "cotinine_urine": 6.0,
+    "urine_protein": 0.0,
     "cocaine": 0.0,
     "urine_glucose": 1,
-    "urine_rbc": 1
+    "urine_rbc": 2
    }
   },
   "C0641-D09": {
    "type": "FINQ",
    "income": 18000,
    "net_worth": 207000,
-   "existing": 0,
+   "existing": 100000,
    "purpose": "business"
   },
   "C0641-D10": {
@@ -503,26 +509,28 @@
     {
      "date": "2025-11-15",
      "reason": "Peripheral arterial disease / aortic aneurysm",
-     "bp": "119/80",
+     "bp": "142/66",
      "weight_lb": 188.0
     }
    ],
    "series": {},
    "noncompliant": false,
-   "rule_outs": [],
+   "rule_outs": [
+    "Pulmonary nodule"
+   ],
    "legacy_lab": {
     "vendor": "HRT",
-    "date": "2009-07-15",
+    "date": "2012-10-07",
     "results": {
-     "tc": 282.0,
-     "hdl": 67.0,
-     "fructosamine": 297,
+     "tc": 289.0,
+     "hdl": 62.0,
+     "fructosamine": 232,
      "cotinine_qual": "NEG",
-     "ggt": 30
+     "ggt": 54
     }
    },
    "exercise_documented": false,
-   "pages": 3,
+   "pages": 1,
    "copy_forward": false,
    "patient": {
     "name": "Jason Montgomery",
@@ -530,16 +538,8 @@
     "sex": "M"
    },
    "tobacco_documented": [],
-   "alcohol_dpw": 2.0,
-   "family_history": [
-    {
-     "relation": "mother",
-     "condition": "type 2 diabetes",
-     "age_at_onset": 68,
-     "age_at_death": null,
-     "living": false
-    }
-   ]
+   "alcohol_dpw": 3.0,
+   "family_history": []
   },
   "C0641-D11": {
    "provider": {
@@ -552,7 +552,7 @@
    },
    "style": "small_practice_typed",
    "ordered_reason": "REQ-2.1 impairment may rate >= +50",
-   "last_visit": "2025-07-25",
+   "last_visit": "2025-10-01",
    "stale": false,
    "problems": [
     {
@@ -580,78 +580,62 @@
    ],
    "visits": [
     {
-     "date": "2025-07-25",
-     "reason": "Type 1 diabetes",
-     "bp": "113/79",
-     "weight_lb": 186.0
-    },
-    {
-     "date": "2025-04-11",
-     "reason": "Type 1 diabetes",
-     "bp": "112/74",
+     "date": "2025-10-01",
+     "reason": "back strain",
+     "bp": "143/64",
      "weight_lb": 182.0
     },
     {
      "date": "2024-12-27",
+     "reason": "annual physical",
+     "bp": "133/69",
+     "weight_lb": 182.0
+    },
+    {
+     "date": "2024-03-24",
      "reason": "Type 1 diabetes",
-     "bp": "115/79",
+     "bp": "138/65",
      "weight_lb": 183.0
     },
     {
-     "date": "2024-09-13",
+     "date": "2023-06-19",
      "reason": "Type 1 diabetes",
-     "bp": "121/82",
+     "bp": "144/68",
      "weight_lb": 184.0
     },
     {
-     "date": "2024-05-30",
+     "date": "2022-09-14",
      "reason": "URI",
-     "bp": "125/77",
-     "weight_lb": 178.0
-    },
-    {
-     "date": "2024-02-15",
-     "reason": "Type 1 diabetes",
-     "bp": "121/83",
-     "weight_lb": 180.0
-    },
-    {
-     "date": "2023-11-02",
-     "reason": "Type 1 diabetes",
-     "bp": "122/78",
-     "weight_lb": 176.0
-    },
-    {
-     "date": "2023-07-19",
-     "reason": "Type 1 diabetes",
-     "bp": "120/76",
+     "bp": "148/63",
      "weight_lb": 178.0
     }
    ],
    "series": {
     "a1c": [
      {
-      "date": "2025-07-25",
-      "value": 8.6
-     },
-     {
-      "date": "2025-04-11",
-      "value": 8.4
+      "date": "2025-10-01",
+      "value": 8.7
      },
      {
       "date": "2024-12-27",
-      "value": 8.6
+      "value": 8.7
      },
      {
-      "date": "2024-09-13",
-      "value": 8.6
+      "date": "2024-03-24",
+      "value": 8.4
+     },
+     {
+      "date": "2023-06-19",
+      "value": 8.5
      }
     ]
    },
    "noncompliant": false,
-   "rule_outs": [],
+   "rule_outs": [
+    "Pulmonary nodule"
+   ],
    "legacy_lab": null,
-   "exercise_documented": true,
+   "exercise_documented": false,
    "pages": 4,
    "copy_forward": false,
    "patient": {
@@ -660,16 +644,8 @@
     "sex": "M"
    },
    "tobacco_documented": [],
-   "alcohol_dpw": 2.0,
-   "family_history": [
-    {
-     "relation": "mother",
-     "condition": "type 2 diabetes",
-     "age_at_onset": 68,
-     "age_at_death": null,
-     "living": false
-    }
-   ]
+   "alcohol_dpw": 3.0,
+   "family_history": []
   }
  }
 }

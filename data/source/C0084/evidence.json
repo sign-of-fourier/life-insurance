@@ -151,7 +151,7 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "dental",
+    "condition": "dental abscess",
     "diagnosed": "05/2010",
     "treatment": "hydrocodone-acetaminophen",
     "physician": "Dr. Ryan Perry"
@@ -168,8 +168,8 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "hernia repaired",
-    "diagnosed": "06/2012",
+    "condition": "inguinal hernia s/p repair",
+    "diagnosed": "04/2010",
     "treatment": "none",
     "physician": "Dr. Ryan Perry"
    },
@@ -212,22 +212,34 @@
    "fact_id": "C0084-F017",
    "doc_id": "C0084-D03",
    "kind": "rx_fill",
-   "key": "hydrocodone-acetaminophen",
+   "key": "ibuprofen",
    "value": {
-    "strength": "5/325 mg",
-    "n_fills": 2,
-    "first": "2020-03-04",
-    "last": "2025-02-28",
-    "prescriber_specialty": "family medicine"
+    "strength": "600 mg",
+    "n_fills": 1,
+    "first": "2022-05-27",
+    "last": "2022-05-27",
+    "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2025-02-28",
+   "as_of": "2022-05-27",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0084-F018",
+   "doc_id": "C0084-D04",
+   "kind": "mib_code",
+   "key": "710277",
+   "value": "2024-09-07",
+   "unit": null,
+   "as_of": "2024-09-07",
    "relevant": false,
    "truth_ref": "conditions[0]",
    "note": null
   },
   {
-   "fact_id": "C0084-F018",
+   "fact_id": "C0084-F019",
    "doc_id": "C0084-D05",
    "kind": "mvr_violation",
    "key": "M09",
@@ -288,11 +300,13 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2025-03-03T09:28:00",
-   "received_at": "2025-03-03T09:41:00",
+   "received_at": "2025-03-03T09:51:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0084/C0084-D04.txt",
-   "fact_ids": []
+   "fact_ids": [
+    "C0084-F018"
+   ]
   },
   {
    "doc_id": "C0084-D03",
@@ -300,7 +314,7 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2025-03-03T09:28:00",
-   "received_at": "2025-03-03T09:43:00",
+   "received_at": "2025-03-03T10:04:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0084/C0084-D03.txt",
@@ -314,12 +328,12 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2025-03-03T09:28:00",
-   "received_at": "2025-03-03T10:46:00",
+   "received_at": "2025-03-03T10:22:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0084/C0084-D05.txt",
    "fact_ids": [
-    "C0084-F018"
+    "C0084-F019"
    ]
   }
  ]

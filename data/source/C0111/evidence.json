@@ -126,7 +126,7 @@
    "doc_id": "C0111-D02",
    "kind": "app_answer",
    "key": "tobacco",
-   "value": "Current vape, several times/day",
+   "value": "Current vape, weekends",
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -138,7 +138,7 @@
    "doc_id": "C0111-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 8.0,
+   "value": 4.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -147,6 +147,23 @@
   },
   {
    "fact_id": "C0111-F013",
+   "doc_id": "C0111-D02",
+   "kind": "app_answer",
+   "key": "other:benign_no_rating",
+   "value": {
+    "condition": "eczema",
+    "diagnosed": "07/2020",
+    "treatment": "triamcinolone topical, tacrolimus topical",
+    "physician": "Dr. Mark Blevins"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
+   "fact_id": "C0111-F014",
    "doc_id": "C0111-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -158,30 +175,13 @@
    "note": null
   },
   {
-   "fact_id": "C0111-F014",
-   "doc_id": "C0111-D02",
-   "kind": "app_answer",
-   "key": "family_history",
-   "value": {
-    "relation": "mother",
-    "condition": "MI",
-    "age_at_onset": 73,
-    "age_at_death": 76
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
    "fact_id": "C0111-F015",
    "doc_id": "C0111-D03",
    "kind": "rx_fill",
    "key": "triamcinolone topical",
    "value": {
     "strength": "0.1%",
-    "n_fills": 2,
+    "n_fills": 40,
     "first": "2020-09-07",
     "last": "2025-09-03",
     "prescriber_specialty": "family medicine"
@@ -194,6 +194,24 @@
   },
   {
    "fact_id": "C0111-F016",
+   "doc_id": "C0111-D03",
+   "kind": "rx_fill",
+   "key": "tacrolimus topical",
+   "value": {
+    "strength": "0.1%",
+    "n_fills": 40,
+    "first": "2020-09-07",
+    "last": "2025-09-03",
+    "prescriber_specialty": "family medicine"
+   },
+   "unit": null,
+   "as_of": "2025-09-03",
+   "relevant": false,
+   "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
+   "fact_id": "C0111-F017",
    "doc_id": "C0111-D03",
    "kind": "rx_fill",
    "key": "prednisone",
@@ -211,7 +229,7 @@
    "note": null
   },
   {
-   "fact_id": "C0111-F017",
+   "fact_id": "C0111-F018",
    "doc_id": "C0111-D04",
    "kind": "mib_code",
    "key": "690135",
@@ -223,7 +241,7 @@
    "note": null
   },
   {
-   "fact_id": "C0111-F018",
+   "fact_id": "C0111-F019",
    "doc_id": "C0111-D04",
    "kind": "mib_code",
    "key": "170775",
@@ -233,18 +251,6 @@
    "relevant": true,
    "truth_ref": null,
    "note": "uncorroborated"
-  },
-  {
-   "fact_id": "C0111-F019",
-   "doc_id": "C0111-D05",
-   "kind": "mvr_violation",
-   "key": "S05",
-   "value": "Speeding 1-5 over limit",
-   "unit": null,
-   "as_of": "2022-10-21",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
   },
   {
    "fact_id": "C0111-F020",
@@ -269,21 +275,21 @@
    "value": {
     "readings": [
      [
+      148,
+      78
+     ],
+     [
       143,
-      90
+      82
      ],
      [
-      138,
-      94
-     ],
-     [
-      142,
-      94
+      147,
+      82
      ]
     ],
     "avg": [
-     141,
-     93
+     146,
+     81
     ]
    },
    "unit": null,
@@ -297,7 +303,7 @@
    "doc_id": "C0111-D06",
    "kind": "paramed",
    "key": "pulse",
-   "value": 55,
+   "value": 92,
    "unit": "bpm",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -309,7 +315,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "tc",
-   "value": 292.0,
+   "value": 290.0,
    "unit": "mg/dL",
    "as_of": "2025-09-14",
    "relevant": true,
@@ -321,7 +327,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "hdl",
-   "value": 60.0,
+   "value": 56.0,
    "unit": "mg/dL",
    "as_of": "2025-09-14",
    "relevant": true,
@@ -333,7 +339,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "ldl",
-   "value": 203.0,
+   "value": 207.0,
    "unit": "mg/dL",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -345,7 +351,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "triglycerides",
-   "value": 145.0,
+   "value": 131.0,
    "unit": "mg/dL",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -357,7 +363,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "tc_hdl_ratio",
-   "value": 4.9,
+   "value": 5.2,
    "unit": "ratio",
    "as_of": "2025-09-14",
    "relevant": true,
@@ -381,7 +387,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "ast",
-   "value": 21.0,
+   "value": 14.0,
    "unit": "U/L",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -393,7 +399,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "alt",
-   "value": 22.0,
+   "value": 17.0,
    "unit": "U/L",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -405,7 +411,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "ggt",
-   "value": 55.0,
+   "value": 33.0,
    "unit": "U/L",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -417,7 +423,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "alk_phos",
-   "value": 104.0,
+   "value": 70.0,
    "unit": "U/L",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -429,7 +435,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "bilirubin",
-   "value": 0.7,
+   "value": 1.0,
    "unit": "mg/dL",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -441,7 +447,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "albumin",
-   "value": 4.7,
+   "value": 4.9,
    "unit": "g/dL",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -453,7 +459,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "creatinine",
-   "value": 0.8,
+   "value": 0.9,
    "unit": "mg/dL",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -465,7 +471,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "egfr",
-   "value": 63.0,
+   "value": 74.0,
    "unit": "mL/min/1.73m2",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -477,7 +483,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "hemoglobin",
-   "value": 14.9,
+   "value": 14.2,
    "unit": "g/dL",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -501,7 +507,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "cdt",
-   "value": 0.9,
+   "value": 1.1,
    "unit": "%dCDT",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -513,7 +519,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "nt_probnp",
-   "value": 74.0,
+   "value": 93.0,
    "unit": "pg/mL",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -525,7 +531,7 @@
    "doc_id": "C0111-D07",
    "kind": "lab_value",
    "key": "glucose_random",
-   "value": 134.0,
+   "value": 130.0,
    "unit": "mg/dL",
    "as_of": "2025-09-14",
    "relevant": false,
@@ -537,7 +543,7 @@
    "doc_id": "C0111-D08",
    "kind": "lab_value",
    "key": "cotinine_urine",
-   "value": 738.0,
+   "value": 2220.0,
    "unit": "ng/mL",
    "as_of": "2025-09-14",
    "relevant": true,
@@ -646,7 +652,8 @@
    "text_path": "data/source/C0111/C0111-D03.txt",
    "fact_ids": [
     "C0111-F015",
-    "C0111-F016"
+    "C0111-F016",
+    "C0111-F017"
    ]
   },
   {
@@ -660,8 +667,8 @@
    "pages": 1,
    "text_path": "data/source/C0111/C0111-D04.txt",
    "fact_ids": [
-    "C0111-F017",
-    "C0111-F018"
+    "C0111-F018",
+    "C0111-F019"
    ]
   },
   {
@@ -674,9 +681,7 @@
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0111/C0111-D05.txt",
-   "fact_ids": [
-    "C0111-F019"
-   ]
+   "fact_ids": []
   },
   {
    "doc_id": "C0111-D06",

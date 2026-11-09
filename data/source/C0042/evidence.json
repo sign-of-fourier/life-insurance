@@ -54,7 +54,7 @@
    "doc_id": "C0042-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 100000,
+   "value": 0,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -126,6 +126,22 @@
   },
   {
    "fact_id": "C0042-F011",
+   "doc_id": "C0042-D01",
+   "kind": "app_answer",
+   "key": "foreign_travel",
+   "value": {
+    "country": "Portugal",
+    "weeks_per_year": 3.0,
+    "purpose": "vacation"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "travel[0]",
+   "note": null
+  },
+  {
+   "fact_id": "C0042-F012",
    "doc_id": "C0042-D02",
    "kind": "app_answer",
    "key": "tobacco",
@@ -137,7 +153,7 @@
    "note": null
   },
   {
-   "fact_id": "C0042-F012",
+   "fact_id": "C0042-F013",
    "doc_id": "C0042-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
@@ -149,30 +165,13 @@
    "note": null
   },
   {
-   "fact_id": "C0042-F013",
-   "doc_id": "C0042-D02",
-   "kind": "app_answer",
-   "key": "other:benign_no_rating",
-   "value": {
-    "condition": "gout",
-    "diagnosed": "12/2024",
-    "treatment": "colchicine",
-    "physician": "Dr. Aaron Chan"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[0]",
-   "note": null
-  },
-  {
    "fact_id": "C0042-F014",
    "doc_id": "C0042-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "sinusitis",
-    "diagnosed": "07/2023",
+    "condition": "acute sinusitis",
+    "diagnosed": "09/2024",
     "treatment": "amoxicillin-clavulanate",
     "physician": "Dr. Aaron Chan"
    },
@@ -186,6 +185,23 @@
    "fact_id": "C0042-F015",
    "doc_id": "C0042-D02",
    "kind": "app_answer",
+   "key": "respiratory:benign_no_rating",
+   "value": {
+    "condition": "seasonal allergy",
+    "diagnosed": "05/2023",
+    "treatment": "cetirizine",
+    "physician": "Dr. Aaron Chan"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "conditions[2]",
+   "note": null
+  },
+  {
+   "fact_id": "C0042-F016",
+   "doc_id": "C0042-D02",
+   "kind": "app_answer",
    "key": "stated_build",
    "value": "5'1\" 114.0 lbs",
    "unit": null,
@@ -195,67 +211,49 @@
    "note": null
   },
   {
-   "fact_id": "C0042-F016",
+   "fact_id": "C0042-F017",
    "doc_id": "C0042-D02",
    "kind": "app_answer",
    "key": "family_history",
    "value": {
-    "relation": "mother",
-    "condition": "hypertension",
+    "relation": "father",
+    "condition": "MI",
     "age_at_onset": 75,
-    "age_at_death": 75
+    "age_at_death": 87
    },
    "unit": null,
    "as_of": null,
-   "relevant": false,
+   "relevant": true,
    "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0042-F017",
-   "doc_id": "C0042-D03",
-   "kind": "rx_fill",
-   "key": "amoxicillin-clavulanate",
-   "value": {
-    "strength": "875/125 mg",
-    "n_fills": 2,
-    "first": "2023-09-14",
-    "last": "2026-06-05",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2026-06-05",
-   "relevant": false,
-   "truth_ref": "conditions[1]",
    "note": null
   },
   {
    "fact_id": "C0042-F018",
    "doc_id": "C0042-D03",
    "kind": "rx_fill",
-   "key": "cetirizine",
+   "key": "colchicine",
    "value": {
-    "strength": "10 mg",
-    "n_fills": 3,
-    "first": "2024-06-19",
+    "strength": "0.6 mg",
+    "n_fills": 16,
+    "first": "2025-02-26",
     "last": "2026-06-05",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
    "as_of": "2026-06-05",
    "relevant": false,
-   "truth_ref": "conditions[2]",
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0042-F019",
    "doc_id": "C0042-D03",
    "kind": "rx_fill",
-   "key": "loratadine",
+   "key": "cetirizine",
    "value": {
     "strength": "10 mg",
-    "n_fills": 3,
-    "first": "2024-04-29",
+    "n_fills": 36,
+    "first": "2023-06-24",
     "last": "2026-06-05",
     "prescriber_specialty": "family medicine"
    },
@@ -267,60 +265,6 @@
   },
   {
    "fact_id": "C0042-F020",
-   "doc_id": "C0042-D03",
-   "kind": "rx_fill",
-   "key": "cyclobenzaprine",
-   "value": {
-    "strength": "5 mg",
-    "n_fills": 1,
-    "first": "2025-11-25",
-    "last": "2025-11-25",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2025-11-25",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0042-F021",
-   "doc_id": "C0042-D03",
-   "kind": "rx_fill",
-   "key": "azithromycin",
-   "value": {
-    "strength": "250 mg",
-    "n_fills": 1,
-    "first": "2022-06-25",
-    "last": "2022-06-25",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2022-06-25",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0042-F022",
-   "doc_id": "C0042-D03",
-   "kind": "rx_fill",
-   "key": "amoxicillin",
-   "value": {
-    "strength": "500 mg",
-    "n_fills": 1,
-    "first": "2026-04-17",
-    "last": "2026-04-17",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2026-04-17",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0042-F023",
    "doc_id": "C0042-D06",
    "kind": "questionnaire",
    "key": "FINQ:income",
@@ -332,7 +276,7 @@
    "note": null
   },
   {
-   "fact_id": "C0042-F024",
+   "fact_id": "C0042-F021",
    "doc_id": "C0042-D06",
    "kind": "questionnaire",
    "key": "FINQ:net_worth",
@@ -344,11 +288,11 @@
    "note": null
   },
   {
-   "fact_id": "C0042-F025",
+   "fact_id": "C0042-F022",
    "doc_id": "C0042-D06",
    "kind": "questionnaire",
    "key": "FINQ:existing",
-   "value": 100000,
+   "value": 0,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -356,7 +300,7 @@
    "note": null
   },
   {
-   "fact_id": "C0042-F026",
+   "fact_id": "C0042-F023",
    "doc_id": "C0042-D06",
    "kind": "questionnaire",
    "key": "FINQ:purpose",
@@ -389,7 +333,8 @@
     "C0042-F007",
     "C0042-F008",
     "C0042-F009",
-    "C0042-F010"
+    "C0042-F010",
+    "C0042-F011"
    ]
   },
   {
@@ -403,12 +348,12 @@
    "pages": 1,
    "text_path": "data/source/C0042/C0042-D02.txt",
    "fact_ids": [
-    "C0042-F011",
     "C0042-F012",
     "C0042-F013",
     "C0042-F014",
     "C0042-F015",
-    "C0042-F016"
+    "C0042-F016",
+    "C0042-F017"
    ]
   },
   {
@@ -417,7 +362,7 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2026-06-08T09:24:00",
-   "received_at": "2026-06-08T09:34:00",
+   "received_at": "2026-06-08T09:44:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0042/C0042-D04.txt",
@@ -429,17 +374,13 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2026-06-08T09:24:00",
-   "received_at": "2026-06-08T09:49:00",
+   "received_at": "2026-06-08T09:51:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0042/C0042-D03.txt",
    "fact_ids": [
-    "C0042-F017",
     "C0042-F018",
-    "C0042-F019",
-    "C0042-F020",
-    "C0042-F021",
-    "C0042-F022"
+    "C0042-F019"
    ]
   },
   {
@@ -448,7 +389,7 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2026-06-08T09:24:00",
-   "received_at": "2026-06-08T10:27:00",
+   "received_at": "2026-06-08T10:44:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0042/C0042-D05.txt",
@@ -460,15 +401,15 @@
    "doc_type": "other",
    "vendor_id": "FINQ",
    "ordered_at": "2026-06-08T11:23:00",
-   "received_at": "2026-06-12T09:23:00",
+   "received_at": "2026-06-18T09:23:00",
    "order_reason": "FIN-2 over limit / KPE",
    "pages": 1,
    "text_path": "data/source/C0042/C0042-D06.txt",
    "fact_ids": [
-    "C0042-F023",
-    "C0042-F024",
-    "C0042-F025",
-    "C0042-F026"
+    "C0042-F020",
+    "C0042-F021",
+    "C0042-F022",
+    "C0042-F023"
    ]
   }
  ]

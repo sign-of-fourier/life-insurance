@@ -216,13 +216,13 @@
    "key": "tretinoin",
    "value": {
     "strength": "0.05%",
-    "n_fills": 2,
+    "n_fills": 40,
     "first": "2020-06-18",
-    "last": "2020-07-01",
+    "last": "2025-06-14",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2020-07-01",
+   "as_of": "2025-06-14",
    "relevant": false,
    "truth_ref": "conditions[0]",
    "note": null
@@ -235,7 +235,7 @@
    "value": {
     "strength": "100 mg",
     "n_fills": 40,
-    "first": "2020-06-17",
+    "first": "2020-05-29",
     "last": "2025-06-14",
     "prescriber_specialty": "family medicine"
    },
@@ -247,60 +247,18 @@
   },
   {
    "fact_id": "C0344-F019",
-   "doc_id": "C0344-D03",
-   "kind": "rx_fill",
-   "key": "prednisone",
-   "value": {
-    "strength": "10 mg",
-    "n_fills": 1,
-    "first": "2022-10-06",
-    "last": "2022-10-06",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0344-D04",
+   "kind": "mib_code",
+   "key": "890806",
+   "value": "2011-11-01",
    "unit": null,
-   "as_of": "2022-10-06",
+   "as_of": "2011-11-01",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0344-F020",
-   "doc_id": "C0344-D03",
-   "kind": "rx_fill",
-   "key": "prednisone",
-   "value": {
-    "strength": "20 mg",
-    "n_fills": 1,
-    "first": "2020-12-14",
-    "last": "2020-12-14",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2020-12-14",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0344-F021",
-   "doc_id": "C0344-D03",
-   "kind": "rx_fill",
-   "key": "ibuprofen",
-   "value": {
-    "strength": "800 mg",
-    "n_fills": 1,
-    "first": "2022-06-03",
-    "last": "2022-06-03",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2022-06-03",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0344-F022",
    "doc_id": "C0344-D06",
    "kind": "questionnaire",
    "key": "AVOQ:activities",
@@ -318,7 +276,7 @@
    "note": null
   },
   {
-   "fact_id": "C0344-F023",
+   "fact_id": "C0344-F021",
    "doc_id": "C0344-D07",
    "kind": "questionnaire",
    "key": "FINQ:income",
@@ -330,7 +288,7 @@
    "note": null
   },
   {
-   "fact_id": "C0344-F024",
+   "fact_id": "C0344-F022",
    "doc_id": "C0344-D07",
    "kind": "questionnaire",
    "key": "FINQ:net_worth",
@@ -342,7 +300,7 @@
    "note": null
   },
   {
-   "fact_id": "C0344-F025",
+   "fact_id": "C0344-F023",
    "doc_id": "C0344-D07",
    "kind": "questionnaire",
    "key": "FINQ:existing",
@@ -354,7 +312,7 @@
    "note": null
   },
   {
-   "fact_id": "C0344-F026",
+   "fact_id": "C0344-F024",
    "doc_id": "C0344-D07",
    "kind": "questionnaire",
    "key": "FINQ:purpose",
@@ -410,21 +368,32 @@
    ]
   },
   {
+   "doc_id": "C0344-D04",
+   "case_id": "C0344",
+   "doc_type": "mib",
+   "vendor_id": "MIBF",
+   "ordered_at": "2025-06-17T09:48:00",
+   "received_at": "2025-06-17T09:59:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0344/C0344-D04.txt",
+   "fact_ids": [
+    "C0344-F019"
+   ]
+  },
+  {
    "doc_id": "C0344-D03",
    "case_id": "C0344",
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-06-17T09:48:00",
-   "received_at": "2025-06-17T09:58:00",
+   "received_at": "2025-06-17T10:25:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0344/C0344-D03.txt",
    "fact_ids": [
     "C0344-F017",
-    "C0344-F018",
-    "C0344-F019",
-    "C0344-F020",
-    "C0344-F021"
+    "C0344-F018"
    ]
   },
   {
@@ -433,40 +402,11 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2025-06-17T09:48:00",
-   "received_at": "2025-06-17T10:03:00",
+   "received_at": "2025-06-17T11:15:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0344/C0344-D05.txt",
    "fact_ids": []
-  },
-  {
-   "doc_id": "C0344-D04",
-   "case_id": "C0344",
-   "doc_type": "mib",
-   "vendor_id": "MIBF",
-   "ordered_at": "2025-06-17T09:48:00",
-   "received_at": "2025-06-17T10:17:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0344/C0344-D04.txt",
-   "fact_ids": []
-  },
-  {
-   "doc_id": "C0344-D07",
-   "case_id": "C0344",
-   "doc_type": "other",
-   "vendor_id": "FINQ",
-   "ordered_at": "2025-06-17T11:47:00",
-   "received_at": "2025-06-21T09:47:00",
-   "order_reason": "FIN-2 over limit / KPE",
-   "pages": 1,
-   "text_path": "data/source/C0344/C0344-D07.txt",
-   "fact_ids": [
-    "C0344-F023",
-    "C0344-F024",
-    "C0344-F025",
-    "C0344-F026"
-   ]
   },
   {
    "doc_id": "C0344-D06",
@@ -474,12 +414,29 @@
    "doc_type": "other",
    "vendor_id": "AVOQ",
    "ordered_at": "2025-06-17T11:47:00",
-   "received_at": "2025-06-28T09:47:00",
+   "received_at": "2025-06-24T09:47:00",
    "order_reason": "REQ-2.5 avocation/aviation disclosed or indicated",
    "pages": 1,
    "text_path": "data/source/C0344/C0344-D06.txt",
    "fact_ids": [
-    "C0344-F022"
+    "C0344-F020"
+   ]
+  },
+  {
+   "doc_id": "C0344-D07",
+   "case_id": "C0344",
+   "doc_type": "other",
+   "vendor_id": "FINQ",
+   "ordered_at": "2025-06-17T11:47:00",
+   "received_at": "2025-07-01T09:47:00",
+   "order_reason": "FIN-2 over limit / KPE",
+   "pages": 1,
+   "text_path": "data/source/C0344/C0344-D07.txt",
+   "fact_ids": [
+    "C0344-F021",
+    "C0344-F022",
+    "C0344-F023",
+    "C0344-F024"
    ]
   }
  ]

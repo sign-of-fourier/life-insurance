@@ -233,8 +233,8 @@ class EvidenceGen:
                     continue
                 days = r.choice([30, 30, 90]) if not c.irrelevant else r.choice([10, 30])
                 n = max(1, min(40, (e - s).days // days + 1))
-                if c.irrelevant and r.random() < 0.6:
-                    n = min(n, r.randint(1, 3))
+                if c.irrelevant and m.stop:
+                    n = min(n, r.randint(1, 2))
                 pid = c.treating_provider_ids[0] if c.treating_provider_ids else t.providers[0].provider_id
                 pr = prov.get(pid, t.providers[0])
                 dates = sorted({s + timedelta(days=int(k * (e - s).days / max(1, n - 1))) if n > 1 else s for k in range(n)})

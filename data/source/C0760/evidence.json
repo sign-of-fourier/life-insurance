@@ -54,7 +54,7 @@
    "doc_id": "C0760-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 0,
+   "value": 500000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -127,6 +127,20 @@
   },
   {
    "fact_id": "C0760-F011",
+   "doc_id": "C0760-D01",
+   "kind": "app_answer",
+   "key": "avocation",
+   "value": {
+    "activity": "marathon running"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "avocations[0]",
+   "note": null
+  },
+  {
+   "fact_id": "C0760-F012",
    "doc_id": "C0760-D02",
    "kind": "app_answer",
    "key": "tobacco",
@@ -138,7 +152,7 @@
    "note": null
   },
   {
-   "fact_id": "C0760-F012",
+   "fact_id": "C0760-F013",
    "doc_id": "C0760-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
@@ -150,7 +164,7 @@
    "note": null
   },
   {
-   "fact_id": "C0760-F013",
+   "fact_id": "C0760-F014",
    "doc_id": "C0760-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
@@ -167,7 +181,7 @@
    "note": null
   },
   {
-   "fact_id": "C0760-F014",
+   "fact_id": "C0760-F015",
    "doc_id": "C0760-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -179,15 +193,15 @@
    "note": null
   },
   {
-   "fact_id": "C0760-F015",
+   "fact_id": "C0760-F016",
    "doc_id": "C0760-D02",
    "kind": "app_answer",
    "key": "family_history",
    "value": {
-    "relation": "mother",
+    "relation": "father",
     "condition": "Alzheimer's",
-    "age_at_onset": 72,
-    "age_at_death": 89
+    "age_at_onset": 69,
+    "age_at_death": 85
    },
    "unit": null,
    "as_of": null,
@@ -196,7 +210,7 @@
    "note": null
   },
   {
-   "fact_id": "C0760-F016",
+   "fact_id": "C0760-F017",
    "doc_id": "C0760-D03",
    "kind": "rx_fill",
    "key": "atorvastatin",
@@ -214,7 +228,7 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0760-F017",
+   "fact_id": "C0760-F018",
    "doc_id": "C0760-D03",
    "kind": "rx_fill",
    "key": "aspirin",
@@ -232,7 +246,7 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0760-F018",
+   "fact_id": "C0760-F019",
    "doc_id": "C0760-D03",
    "kind": "rx_fill",
    "key": "clopidogrel",
@@ -250,7 +264,7 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0760-F019",
+   "fact_id": "C0760-F020",
    "doc_id": "C0760-D03",
    "kind": "rx_fill",
    "key": "metoprolol",
@@ -268,80 +282,56 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0760-F020",
-   "doc_id": "C0760-D03",
-   "kind": "rx_fill",
-   "key": "ibuprofen",
-   "value": {
-    "strength": "800 mg",
-    "n_fills": 1,
-    "first": "2021-04-01",
-    "last": "2021-04-01",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2021-04-01",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
    "fact_id": "C0760-F021",
    "doc_id": "C0760-D03",
    "kind": "rx_fill",
-   "key": "ondansetron",
+   "key": "alendronate",
    "value": {
-    "strength": "8 mg",
-    "n_fills": 1,
-    "first": "2023-12-09",
-    "last": "2023-12-09",
-    "prescriber_specialty": "urgent care"
+    "strength": "70 mg",
+    "n_fills": 40,
+    "first": "2021-05-17",
+    "last": "2025-12-08",
+    "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2023-12-09",
+   "as_of": "2025-12-08",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[1]",
    "note": null
   },
   {
    "fact_id": "C0760-F022",
-   "doc_id": "C0760-D06",
-   "kind": "paramed",
-   "key": "build",
+   "doc_id": "C0760-D03",
+   "kind": "rx_fill",
+   "key": "hydrocodone-acetaminophen",
    "value": {
-    "height_in": 63.0,
-    "weight_lb": 167.0
+    "strength": "10/325 mg",
+    "n_fills": 1,
+    "first": "2023-04-29",
+    "last": "2023-04-29",
+    "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2025-12-16",
-   "relevant": true,
+   "as_of": "2023-04-29",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0760-F023",
-   "doc_id": "C0760-D06",
-   "kind": "paramed",
-   "key": "bp",
+   "doc_id": "C0760-D03",
+   "kind": "rx_fill",
+   "key": "azithromycin",
    "value": {
-    "readings": [
-     [
-      138,
-      75
-     ],
-     [
-      135,
-      79
-     ]
-    ],
-    "avg": [
-     136,
-     77
-    ]
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2024-10-04",
+    "last": "2024-10-04",
+    "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2025-12-16",
-   "relevant": true,
+   "as_of": "2024-10-04",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -349,34 +339,52 @@
    "fact_id": "C0760-F024",
    "doc_id": "C0760-D06",
    "kind": "paramed",
-   "key": "pulse",
-   "value": 66,
-   "unit": "bpm",
-   "as_of": "2025-12-16",
-   "relevant": false,
+   "key": "build",
+   "value": {
+    "height_in": 63.0,
+    "weight_lb": 171.0
+   },
+   "unit": null,
+   "as_of": "2025-12-17",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0760-F025",
-   "doc_id": "C0760-D07",
-   "kind": "lab_value",
-   "key": "cotinine_saliva",
-   "value": 0,
-   "unit": "ng/mL",
-   "as_of": "2025-12-16",
+   "doc_id": "C0760-D06",
+   "kind": "paramed",
+   "key": "bp",
+   "value": {
+    "readings": [
+     [
+      129,
+      73
+     ],
+     [
+      133,
+      73
+     ]
+    ],
+    "avg": [
+     131,
+     73
+    ]
+   },
+   "unit": null,
+   "as_of": "2025-12-17",
    "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0760-F026",
-   "doc_id": "C0760-D07",
-   "kind": "lab_value",
-   "key": "hiv",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2025-12-16",
+   "doc_id": "C0760-D06",
+   "kind": "paramed",
+   "key": "pulse",
+   "value": 57,
+   "unit": "bpm",
+   "as_of": "2025-12-17",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -385,16 +393,40 @@
    "fact_id": "C0760-F027",
    "doc_id": "C0760-D07",
    "kind": "lab_value",
-   "key": "cocaine",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2025-12-16",
-   "relevant": false,
+   "key": "cotinine_saliva",
+   "value": 1,
+   "unit": "ng/mL",
+   "as_of": "2025-12-17",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0760-F028",
+   "doc_id": "C0760-D07",
+   "kind": "lab_value",
+   "key": "hiv",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2025-12-17",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0760-F029",
+   "doc_id": "C0760-D07",
+   "kind": "lab_value",
+   "key": "cocaine",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2025-12-17",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0760-F030",
    "doc_id": "C0760-D08",
    "kind": "aps_finding",
    "key": "dx:cad",
@@ -414,14 +446,14 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0760-F029",
+   "fact_id": "C0760-F031",
    "doc_id": "C0760-D08",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "137/73",
-    "130/82",
-    "137/81"
+    "141/75",
+    "137/79",
+    "128/72"
    ],
    "unit": null,
    "as_of": "2025-08-05",
@@ -451,7 +483,8 @@
     "C0760-F007",
     "C0760-F008",
     "C0760-F009",
-    "C0760-F010"
+    "C0760-F010",
+    "C0760-F011"
    ]
   },
   {
@@ -465,11 +498,11 @@
    "pages": 1,
    "text_path": "data/source/C0760/C0760-D02.txt",
    "fact_ids": [
-    "C0760-F011",
     "C0760-F012",
     "C0760-F013",
     "C0760-F014",
-    "C0760-F015"
+    "C0760-F015",
+    "C0760-F016"
    ]
   },
   {
@@ -478,10 +511,22 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2025-12-11T09:43:00",
-   "received_at": "2025-12-11T09:49:00",
+   "received_at": "2025-12-11T09:57:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0760/C0760-D04.txt",
+   "fact_ids": []
+  },
+  {
+   "doc_id": "C0760-D05",
+   "case_id": "C0760",
+   "doc_type": "mvr",
+   "vendor_id": "STATE",
+   "ordered_at": "2025-12-11T09:43:00",
+   "received_at": "2025-12-11T10:04:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0760/C0760-D05.txt",
    "fact_ids": []
   },
   {
@@ -490,30 +535,19 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2025-12-11T09:43:00",
-   "received_at": "2025-12-11T09:59:00",
+   "received_at": "2025-12-11T10:18:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0760/C0760-D03.txt",
    "fact_ids": [
-    "C0760-F016",
     "C0760-F017",
     "C0760-F018",
     "C0760-F019",
     "C0760-F020",
-    "C0760-F021"
+    "C0760-F021",
+    "C0760-F022",
+    "C0760-F023"
    ]
-  },
-  {
-   "doc_id": "C0760-D05",
-   "case_id": "C0760",
-   "doc_type": "mvr",
-   "vendor_id": "STATE",
-   "ordered_at": "2025-12-11T09:43:00",
-   "received_at": "2025-12-11T11:10:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0760/C0760-D05.txt",
-   "fact_ids": []
   },
   {
    "doc_id": "C0760-D06",
@@ -521,14 +555,14 @@
    "doc_type": "paramed",
    "vendor_id": "HSC",
    "ordered_at": "2025-12-11T12:42:00",
-   "received_at": "2025-12-17T01:42:00",
+   "received_at": "2025-12-17T23:42:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0760/C0760-D06.txt",
    "fact_ids": [
-    "C0760-F022",
-    "C0760-F023",
-    "C0760-F024"
+    "C0760-F024",
+    "C0760-F025",
+    "C0760-F026"
    ]
   },
   {
@@ -536,15 +570,15 @@
    "case_id": "C0760",
    "doc_type": "lab_saliva",
    "vendor_id": "APX",
-   "ordered_at": "2025-12-15T19:42:00",
-   "received_at": "2025-12-20T19:42:00",
+   "ordered_at": "2025-12-16T17:42:00",
+   "received_at": "2025-12-21T17:42:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0760/C0760-D07.txt",
    "fact_ids": [
-    "C0760-F025",
-    "C0760-F026",
-    "C0760-F027"
+    "C0760-F027",
+    "C0760-F028",
+    "C0760-F029"
    ]
   },
   {
@@ -552,14 +586,14 @@
    "case_id": "C0760",
    "doc_type": "aps",
    "vendor_id": "epic_progress",
-   "ordered_at": "2025-12-13T11:42:00",
-   "received_at": "2026-01-12T11:42:00",
+   "ordered_at": "2025-12-11T15:42:00",
+   "received_at": "2025-12-24T15:42:00",
    "order_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "pages": 8,
+   "pages": 10,
    "text_path": "data/source/C0760/C0760-D08.txt",
    "fact_ids": [
-    "C0760-F028",
-    "C0760-F029"
+    "C0760-F030",
+    "C0760-F031"
    ]
   }
  ]

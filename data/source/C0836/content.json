@@ -1,9 +1,9 @@
 {
  "meta": {
   "requirements": {
-   "PM": "REQ-3 accel fails (Part 2 yes, MIB code, foreign) -> next column",
-   "B": "REQ-3 accel fails (Part 2 yes, MIB code, foreign) -> next column",
-   "U": "REQ-3 accel fails (Part 2 yes, MIB code, foreign) -> next column",
+   "PM": "REQ-3 accel fails (Part 2 yes, foreign) -> next column",
+   "B": "REQ-3 accel fails (Part 2 yes, foreign) -> next column",
+   "U": "REQ-3 accel fails (Part 2 yes, foreign) -> next column",
    "FINQ": "FIN-2 over limit / KPE"
   },
   "aps": [
@@ -35,9 +35,9 @@
    "riders": [
     "CTR"
    ],
-   "existing": 250000,
+   "existing": 500000,
    "replacement": false,
-   "beneficiary": "estate",
+   "beneficiary": "spouse",
    "signed": "2025-06-11",
    "signed_in_us": true
   },
@@ -109,12 +109,6 @@
        "diagnosed": "03/2019",
        "treatment": "none",
        "physician": "Dr. Jeremy Zimmerman"
-      },
-      {
-       "condition": "gerd",
-       "diagnosed": "12/2021",
-       "treatment": "pantoprazole",
-       "physician": "Dr. Shawna Ayala"
       }
      ]
     },
@@ -140,7 +134,7 @@
      "answer": "Yes",
      "details": [
       {
-       "condition": "hypothyroidism simple",
+       "condition": "hypothyroidism",
        "diagnosed": "09/2019",
        "treatment": "levothyroxine",
        "physician": "Dr. Shawna Ayala"
@@ -160,7 +154,7 @@
      "answer": "Dr. Shawna Ayala, Daniels Fernandez and Valdez Medical Group; last visit 10/2024"
     },
     "family_history": {
-     "answer": "none known"
+     "answer": "mother: MI, died 75"
     },
     "weight_change": {
      "answer": "No"
@@ -229,27 +223,122 @@
      "brand": "Protonix",
      "strength": "40 mg",
      "fills": [
-      "2022-01-28"
+      "2022-01-28",
+      "2022-02-28",
+      "2022-03-31",
+      "2022-05-02",
+      "2022-06-02",
+      "2022-07-04",
+      "2022-08-04",
+      "2022-09-05",
+      "2022-10-06",
+      "2022-11-07",
+      "2022-12-08",
+      "2023-01-09",
+      "2023-02-09",
+      "2023-03-13",
+      "2023-04-13",
+      "2023-05-14",
+      "2023-06-15",
+      "2023-07-16",
+      "2023-08-17",
+      "2023-09-17",
+      "2023-10-19",
+      "2023-11-19",
+      "2023-12-21",
+      "2024-01-21",
+      "2024-02-22",
+      "2024-03-24",
+      "2024-04-25",
+      "2024-05-26",
+      "2024-06-26",
+      "2024-07-28",
+      "2024-08-28",
+      "2024-09-29",
+      "2024-10-30",
+      "2024-12-01",
+      "2025-01-01",
+      "2025-02-02",
+      "2025-03-05",
+      "2025-04-06",
+      "2025-05-07",
+      "2025-06-08"
+     ],
+     "days_supply": 30,
+     "prescriber": "Dr. Shawna Ayala",
+     "specialty": "family medicine",
+     "cond_index": 2
+    },
+    {
+     "drug": "alendronate",
+     "brand": "Fosamax",
+     "strength": "70 mg",
+     "fills": [
+      "2022-10-07",
+      "2022-11-01",
+      "2022-11-26",
+      "2022-12-21",
+      "2023-01-15",
+      "2023-02-09",
+      "2023-03-06",
+      "2023-03-31",
+      "2023-04-25",
+      "2023-05-20",
+      "2023-06-14",
+      "2023-07-09",
+      "2023-08-03",
+      "2023-08-28",
+      "2023-09-22",
+      "2023-10-17",
+      "2023-11-11",
+      "2023-12-06",
+      "2023-12-31",
+      "2024-01-25",
+      "2024-02-19",
+      "2024-03-15",
+      "2024-04-09",
+      "2024-05-04",
+      "2024-05-29",
+      "2024-06-23",
+      "2024-07-18",
+      "2024-08-12",
+      "2024-09-06",
+      "2024-10-01",
+      "2024-10-26",
+      "2024-11-20",
+      "2024-12-15",
+      "2025-01-09",
+      "2025-02-03",
+      "2025-02-28",
+      "2025-03-25",
+      "2025-04-19",
+      "2025-05-14",
+      "2025-06-08"
      ],
      "days_supply": 10,
      "prescriber": "Dr. Shawna Ayala",
      "specialty": "family medicine",
-     "cond_index": 2
+     "cond_index": 3
+    },
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "brand": "Norco",
+     "strength": "5/325 mg",
+     "fills": [
+      "2024-11-21"
+     ],
+     "days_supply": 5,
+     "prescriber": "Dr. Nguyen (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
     }
    ],
    "no_history": false
   },
   "C0836-D04": {
    "vendor": "MIBS",
-   "codes": [
-    {
-     "code": "170776",
-     "reported": "2020-02-14",
-     "cond_index": null,
-     "uncorroborated": true
-    }
-   ],
-   "no_hit": false
+   "codes": [],
+   "no_hit": true
   },
   "C0836-D05": {
    "vendor": "ACD",
@@ -257,14 +346,9 @@
    "status": "VALID",
    "events": [
     {
-     "date": "2023-08-11",
+     "date": "2021-11-07",
      "code": "M04",
      "desc": "Following too closely"
-    },
-    {
-     "date": "2022-11-24",
-     "code": "M05",
-     "desc": "Improper turn"
     }
    ],
    "no_record": false,
@@ -272,52 +356,52 @@
   },
   "C0836-D06": {
    "vendor": "HSC",
-   "exam_date": "2025-06-22",
-   "height_in": 69.0,
+   "exam_date": "2025-06-16",
+   "height_in": 68.5,
    "weight_lb": 152.0,
    "bp": [
     [
-     138,
-     86
+     135,
+     74
     ],
     [
-     140,
-     81
+     139,
+     69
     ]
    ],
-   "pulse": 69,
+   "pulse": 90,
    "examiner_notes": {}
   },
   "C0836-D07": {
    "vendor": "NGL",
-   "collected": "2025-06-22",
+   "collected": "2025-06-16",
    "fasting": true,
    "results": {
-    "tc": 285.0,
-    "hdl": 65.0,
-    "ldl": 180.0,
-    "triglycerides": 198.0,
-    "tc_hdl_ratio": 4.4,
-    "glucose_fasting": 97.0,
-    "a1c": 5.4,
-    "ast": 31.0,
-    "alt": 12.0,
-    "ggt": 28.0,
-    "alk_phos": 50.0,
-    "bilirubin": 1.0,
-    "albumin": 4.0,
-    "creatinine": 0.8,
-    "egfr": 79.0,
-    "hemoglobin": 12.8,
+    "tc": 294.0,
+    "hdl": 55.0,
+    "ldl": 214.0,
+    "triglycerides": 121.0,
+    "tc_hdl_ratio": 5.3,
+    "glucose_fasting": 103.0,
+    "a1c": 5.2,
+    "ast": 34.0,
+    "alt": 28.0,
+    "ggt": 46.0,
+    "alk_phos": 48.0,
+    "bilirubin": 0.7,
+    "albumin": 3.9,
+    "creatinine": 1.1,
+    "egfr": 108.0,
+    "hemoglobin": 14.7,
     "hiv": 0.0,
-    "cdt": 1.2
+    "cdt": 0.9
    }
   },
   "C0836-D08": {
    "vendor": "NGL",
-   "collected": "2025-06-22",
+   "collected": "2025-06-16",
    "results": {
-    "cotinine_urine": 1.0,
+    "cotinine_urine": 7.0,
     "urine_protein": 20.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
@@ -328,7 +412,7 @@
    "type": "FINQ",
    "income": 18000,
    "net_worth": 24000,
-   "existing": 250000,
+   "existing": 500000,
    "purpose": "estate"
   },
   "C0836-D10": {
@@ -359,25 +443,25 @@
     {
      "date": "2024-12-27",
      "reason": "Cirrhosis",
-     "bp": "140/79",
+     "bp": "141/67",
      "weight_lb": 146.0
     },
     {
      "date": "2023-11-21",
      "reason": "Cirrhosis",
-     "bp": "142/88",
+     "bp": "143/76",
      "weight_lb": 151.0
     },
     {
      "date": "2022-10-15",
      "reason": "Cirrhosis",
-     "bp": "128/80",
+     "bp": "129/68",
      "weight_lb": 146.0
     },
     {
      "date": "2021-09-08",
      "reason": "Cirrhosis",
-     "bp": "143/77",
+     "bp": "144/65",
      "weight_lb": 150.0
     }
    ],
@@ -386,7 +470,7 @@
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 2,
+   "pages": 6,
    "copy_forward": false,
    "patient": {
     "name": "Brittany Hunter",
@@ -395,7 +479,15 @@
    },
    "tobacco_documented": [],
    "alcohol_dpw": 1.0,
-   "family_history": []
+   "family_history": [
+    {
+     "relation": "mother",
+     "condition": "MI",
+     "age_at_onset": 79,
+     "age_at_death": 75,
+     "living": true
+    }
+   ]
   }
  }
 }

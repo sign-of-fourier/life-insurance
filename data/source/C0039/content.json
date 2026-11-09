@@ -42,9 +42,9 @@
     "LTA",
     "XCR"
    ],
-   "existing": 0,
+   "existing": 500000,
    "replacement": false,
-   "beneficiary": "spouse",
+   "beneficiary": "estate",
    "signed": "2025-06-10",
    "signed_in_us": true
   },
@@ -79,10 +79,10 @@
    },
    "answers": {
     "tobacco": {
-     "answer": "Current cigarette, 5/day"
+     "answer": "Current cigarette, 1/2 ppd"
     },
     "alcohol": {
-     "answer": "0.0 drinks/week"
+     "answer": "2.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -157,15 +157,15 @@
      "answer": "Yes",
      "details": [
       {
-       "condition": "vitamin d deficiency",
+       "condition": "vitamin D deficiency",
        "diagnosed": "10/2011",
        "treatment": "ergocalciferol",
        "physician": "Dr. Hannah Fisher"
       },
       {
-       "condition": "dental",
-       "diagnosed": "10/2021",
-       "treatment": "hydrocodone-acetaminophen",
+       "condition": "dental abscess",
+       "diagnosed": "08/2011",
+       "treatment": "hydrocodone-acetaminophen, amoxicillin",
        "physician": "Dr. Hannah Fisher"
       }
      ]
@@ -177,7 +177,7 @@
      "answer": "No"
     },
     "current_meds": {
-     "answer": "hydrocodone-acetaminophen, tenofovir"
+     "answer": "ergocalciferol, tenofovir"
     },
     "physician": {
      "answer": "Dr. Hannah Fisher, Garcia Roy and Christensen Medical Group; last visit 06/2024"
@@ -299,77 +299,89 @@
      "cond_index": 3
     },
     {
-     "drug": "hydrocodone-acetaminophen",
-     "brand": "Norco",
-     "strength": "10/325 mg",
+     "drug": "ergocalciferol",
+     "brand": "Drisdol",
+     "strength": "50000 IU",
      "fills": [
-      "2021-12-01",
-      "2022-01-02",
-      "2022-02-04",
-      "2022-03-09",
-      "2022-04-11",
-      "2022-05-14",
-      "2022-06-16",
-      "2022-07-19",
-      "2022-08-21",
-      "2022-09-23",
-      "2022-10-26",
-      "2022-11-28",
-      "2022-12-31",
-      "2023-02-02",
-      "2023-03-06",
-      "2023-04-08",
-      "2023-05-11",
-      "2023-06-13",
-      "2023-07-16",
-      "2023-08-18",
-      "2023-09-20",
-      "2023-10-23",
-      "2023-11-25",
-      "2023-12-28",
-      "2024-01-30",
-      "2024-03-03",
-      "2024-04-05",
-      "2024-05-07",
-      "2024-06-09",
-      "2024-07-12",
-      "2024-08-14",
-      "2024-09-16",
-      "2024-10-19",
-      "2024-11-21",
-      "2024-12-24",
-      "2025-01-26",
-      "2025-02-28",
+      "2018-06-12",
+      "2018-08-16",
+      "2018-10-20",
+      "2018-12-25",
+      "2019-02-28",
+      "2019-05-05",
+      "2019-07-09",
+      "2019-09-13",
+      "2019-11-17",
+      "2020-01-21",
+      "2020-03-27",
+      "2020-05-31",
+      "2020-08-05",
+      "2020-10-09",
+      "2020-12-14",
+      "2021-02-17",
+      "2021-04-23",
+      "2021-06-28",
+      "2021-09-01",
+      "2021-11-06",
+      "2022-01-10",
+      "2022-03-17",
+      "2022-05-21",
+      "2022-07-26",
+      "2022-09-29",
+      "2022-12-03",
+      "2023-02-07",
+      "2023-04-13",
+      "2023-06-18",
+      "2023-08-22",
+      "2023-10-27",
+      "2023-12-31",
+      "2024-03-05",
+      "2024-05-10",
+      "2024-07-14",
+      "2024-09-18",
+      "2024-11-22",
+      "2025-01-27",
       "2025-04-02",
-      "2025-05-05",
       "2025-06-07"
      ],
      "days_supply": 10,
      "prescriber": "Dr. Hannah Fisher",
      "specialty": "family medicine",
-     "cond_index": 5
+     "cond_index": 4
     },
     {
      "drug": "cyclobenzaprine",
      "brand": "Flexeril",
-     "strength": "5 mg",
+     "strength": "10 mg",
      "fills": [
-      "2019-03-23"
+      "2019-01-23"
      ],
-     "days_supply": 5,
+     "days_supply": 10,
+     "prescriber": "Dr. Smith (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
+    },
+    {
+     "drug": "amoxicillin",
+     "brand": "Amoxil",
+     "strength": "875 mg",
+     "fills": [
+      "2022-10-21"
+     ],
+     "days_supply": 7,
      "prescriber": "Dr. Garcia (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
     },
     {
-     "drug": "ibuprofen",
-     "brand": "Motrin",
-     "strength": "600 mg",
+     "drug": "azithromycin",
+     "brand": "Zithromax",
+     "strength": "250 mg",
      "fills": [
-      "2021-05-12"
+      "2020-10-07"
      ],
      "days_supply": 7,
-     "prescriber": "Dr. Garcia (Urgent Care)",
+     "prescriber": "Dr. Smith (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
     }
@@ -380,41 +392,47 @@
    "vendor": "MIBS",
    "codes": [
     {
-     "code": "151327",
-     "reported": "2020-03-27",
+     "code": "151377",
+     "reported": "2018-05-26",
      "cond_index": 1
+    },
+    {
+     "code": "010979",
+     "reported": "2020-09-15",
+     "cond_index": null,
+     "admin": true
     }
    ],
    "no_hit": false
   },
   "C0039-D05": {
    "vendor": "HSC",
-   "exam_date": "2025-06-21",
-   "height_in": 64.5,
-   "weight_lb": 120.0,
+   "exam_date": "2025-06-23",
+   "height_in": 65.0,
+   "weight_lb": 122.0,
    "bp": [
     [
-     133,
-     82
+     112,
+     71
     ],
     [
-     133,
-     81
+     111,
+     75
     ]
    ],
-   "pulse": 89,
+   "pulse": 73,
    "examiner_notes": {}
   },
   "C0039-D06": {
    "vendor": "APX",
-   "collected": "2025-06-21",
+   "collected": "2025-06-23",
    "fasting": true,
    "results": {
-    "tc": 290.0,
-    "hdl": 67.0,
-    "ldl": 204.0,
-    "triglycerides": 93.0,
-    "tc_hdl_ratio": 4.3,
+    "tc": 278.0,
+    "hdl": 48.0,
+    "ldl": 203.0,
+    "triglycerides": 133.0,
+    "tc_hdl_ratio": 5.8,
     "glucose_fasting": 92.0,
     "a1c": 4.8,
     "ast": 95.0,
@@ -434,18 +452,18 @@
   },
   "C0039-D07": {
    "vendor": "APX",
-   "collected": "2025-06-21",
+   "collected": "2025-06-23",
    "results": {
-    "cotinine_urine": 3638.0,
+    "cotinine_urine": 2260.0,
     "urine_protein": 10.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
-    "urine_rbc": 1
+    "urine_rbc": 0
    }
   },
   "C0039-D08": {
    "interpretation": "atrial fibrillation, controlled ventricular rate",
-   "rate": 89
+   "rate": 77
   },
   "C0039-D09": {
    "provider": {
@@ -458,7 +476,7 @@
    },
    "style": "hospital_discharge",
    "ordered_reason": "REQ-2.1 impairment may rate >= +50",
-   "last_visit": "2024-10-24",
+   "last_visit": "2024-11-19",
    "stale": false,
    "problems": [
     {
@@ -475,40 +493,28 @@
    ],
    "visits": [
     {
-     "date": "2024-10-24",
+     "date": "2024-11-19",
      "reason": "Pulmonary sarcoidosis",
-     "bp": "134/81",
-     "weight_lb": 119.0
+     "bp": "113/71",
+     "weight_lb": 126.0
     },
     {
-     "date": "2024-04-29",
+     "date": "2023-12-14",
      "reason": "Pulmonary sarcoidosis",
-     "bp": "145/84",
-     "weight_lb": 125.0
+     "bp": "114/70",
+     "weight_lb": 116.0
     },
     {
-     "date": "2023-11-03",
-     "reason": "back strain",
-     "bp": "133/87",
-     "weight_lb": 124.0
+     "date": "2023-01-07",
+     "reason": "lab review",
+     "bp": "107/71",
+     "weight_lb": 129.0
     },
     {
-     "date": "2023-05-09",
+     "date": "2022-01-30",
      "reason": "Pulmonary sarcoidosis",
-     "bp": "146/80",
-     "weight_lb": 125.0
-    },
-    {
-     "date": "2022-11-12",
-     "reason": "Pulmonary sarcoidosis",
-     "bp": "135/88",
-     "weight_lb": 127.0
-    },
-    {
-     "date": "2022-05-18",
-     "reason": "ankle sprain",
-     "bp": "130/85",
-     "weight_lb": 115.0
+     "bp": "110/68",
+     "weight_lb": 118.0
     }
    ],
    "series": {},
@@ -516,7 +522,7 @@
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 6,
+   "pages": 5,
    "copy_forward": false,
    "patient": {
     "name": "Christian Duncan",
@@ -527,13 +533,13 @@
     {
      "product": "cigarette",
      "status": "current",
-     "frequency": "5/day",
-     "start": "1986-04-23",
+     "frequency": "1/2 ppd",
+     "start": "1998-06-01",
      "quit": null,
      "disclosure": "honest"
     }
    ],
-   "alcohol_dpw": 0.0,
+   "alcohol_dpw": 2.0,
    "family_history": [
     {
      "relation": "father",
@@ -555,7 +561,7 @@
    },
    "style": "athena_summary",
    "ordered_reason": "REQ-2.1 impairment may rate >= +50",
-   "last_visit": "2024-09-14",
+   "last_visit": "2025-04-14",
    "stale": false,
    "problems": [
     {
@@ -593,36 +599,54 @@
    ],
    "visits": [
     {
-     "date": "2024-09-14",
+     "date": "2025-04-14",
      "reason": "Peripheral arterial disease / aortic aneurysm",
-     "bp": "146/79",
+     "bp": "123/76",
+     "weight_lb": 120.0
+    },
+    {
+     "date": "2024-08-06",
+     "reason": "Peripheral arterial disease / aortic aneurysm",
+     "bp": "123/68",
      "weight_lb": 126.0
     },
     {
-     "date": "2023-09-03",
+     "date": "2023-11-28",
      "reason": "Peripheral arterial disease / aortic aneurysm",
-     "bp": "141/84",
+     "bp": "118/73",
      "weight_lb": 122.0
     },
     {
-     "date": "2022-08-22",
+     "date": "2023-03-21",
      "reason": "Atrial fibrillation / flutter",
-     "bp": "144/82",
+     "bp": "121/71",
      "weight_lb": 118.0
     },
     {
-     "date": "2021-08-10",
+     "date": "2022-07-13",
      "reason": "Atrial fibrillation / flutter",
-     "bp": "136/81",
+     "bp": "113/70",
      "weight_lb": 128.0
+    },
+    {
+     "date": "2021-11-03",
+     "reason": "Peripheral arterial disease / aortic aneurysm",
+     "bp": "112/67",
+     "weight_lb": 115.0
+    },
+    {
+     "date": "2021-02-24",
+     "reason": "Peripheral arterial disease / aortic aneurysm",
+     "bp": "118/67",
+     "weight_lb": 127.0
     }
    ],
    "series": {},
    "noncompliant": false,
    "rule_outs": [],
    "legacy_lab": null,
-   "exercise_documented": true,
-   "pages": 6,
+   "exercise_documented": false,
+   "pages": 4,
    "copy_forward": false,
    "patient": {
     "name": "Christian Duncan",
@@ -633,13 +657,13 @@
     {
      "product": "cigarette",
      "status": "current",
-     "frequency": "5/day",
-     "start": "1986-04-23",
+     "frequency": "1/2 ppd",
+     "start": "1998-06-01",
      "quit": null,
      "disclosure": "honest"
     }
    ],
-   "alcohol_dpw": 0.0,
+   "alcohol_dpw": 2.0,
    "family_history": [
     {
      "relation": "father",

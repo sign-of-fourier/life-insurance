@@ -169,7 +169,7 @@
    "kind": "app_answer",
    "key": "digestive:benign_no_rating",
    "value": {
-    "condition": "gerd",
+    "condition": "GERD",
     "diagnosed": "04/2019",
     "treatment": "pantoprazole",
     "physician": "Dr. Jerome Lucas"
@@ -216,7 +216,7 @@
    "key": "pantoprazole",
    "value": {
     "strength": "40 mg",
-    "n_fills": 3,
+    "n_fills": 40,
     "first": "2019-06-05",
     "last": "2026-02-03",
     "prescriber_specialty": "family medicine"
@@ -231,16 +231,16 @@
    "fact_id": "C0471-F018",
    "doc_id": "C0471-D03",
    "kind": "rx_fill",
-   "key": "amoxicillin",
+   "key": "ondansetron",
    "value": {
-    "strength": "875 mg",
+    "strength": "4 mg",
     "n_fills": 1,
-    "first": "2024-11-14",
-    "last": "2024-11-14",
+    "first": "2022-01-11",
+    "last": "2022-01-11",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2024-11-14",
+   "as_of": "2022-01-11",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -253,24 +253,30 @@
    "value": {
     "strength": "5/325 mg",
     "n_fills": 1,
-    "first": "2020-02-24",
-    "last": "2020-02-24",
+    "first": "2023-03-16",
+    "last": "2023-03-16",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2020-02-24",
+   "as_of": "2023-03-16",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0471-F020",
-   "doc_id": "C0471-D04",
-   "kind": "mib_code",
-   "key": "090968",
-   "value": "2010-10-01",
+   "doc_id": "C0471-D03",
+   "kind": "rx_fill",
+   "key": "azithromycin",
+   "value": {
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2020-05-21",
+    "last": "2020-05-21",
+    "prescriber_specialty": "urgent care"
+   },
    "unit": null,
-   "as_of": "2010-10-01",
+   "as_of": "2020-05-21",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -293,11 +299,11 @@
    "kind": "paramed",
    "key": "build",
    "value": {
-    "height_in": 65.5,
+    "height_in": 66.5,
     "weight_lb": 170.0
    },
    "unit": null,
-   "as_of": "2026-02-20",
+   "as_of": "2026-02-18",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -310,21 +316,21 @@
    "value": {
     "readings": [
      [
-      127,
-      79
+      132,
+      74
      ],
      [
-      128,
-      78
+      137,
+      79
      ]
     ],
     "avg": [
-     128,
-     78
+     134,
+     76
     ]
    },
    "unit": null,
-   "as_of": "2026-02-20",
+   "as_of": "2026-02-18",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -336,7 +342,7 @@
    "key": "pulse",
    "value": 54,
    "unit": "bpm",
-   "as_of": "2026-02-20",
+   "as_of": "2026-02-18",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -348,7 +354,7 @@
    "key": "cotinine_saliva",
    "value": 1,
    "unit": "ng/mL",
-   "as_of": "2026-02-20",
+   "as_of": "2026-02-18",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -360,7 +366,7 @@
    "key": "hiv",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2026-02-20",
+   "as_of": "2026-02-18",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -372,7 +378,7 @@
    "key": "cocaine",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2026-02-20",
+   "as_of": "2026-02-18",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -422,32 +428,31 @@
    ]
   },
   {
+   "doc_id": "C0471-D04",
+   "case_id": "C0471",
+   "doc_type": "mib",
+   "vendor_id": "MIBF",
+   "ordered_at": "2026-02-06T09:24:00",
+   "received_at": "2026-02-06T09:43:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0471/C0471-D04.txt",
+   "fact_ids": []
+  },
+  {
    "doc_id": "C0471-D03",
    "case_id": "C0471",
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2026-02-06T09:24:00",
-   "received_at": "2026-02-06T09:53:00",
+   "received_at": "2026-02-06T09:55:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0471/C0471-D03.txt",
    "fact_ids": [
     "C0471-F017",
     "C0471-F018",
-    "C0471-F019"
-   ]
-  },
-  {
-   "doc_id": "C0471-D04",
-   "case_id": "C0471",
-   "doc_type": "mib",
-   "vendor_id": "MIBF",
-   "ordered_at": "2026-02-06T09:24:00",
-   "received_at": "2026-02-06T09:53:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0471/C0471-D04.txt",
-   "fact_ids": [
+    "C0471-F019",
     "C0471-F020"
    ]
   },
@@ -457,7 +462,7 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2026-02-06T09:24:00",
-   "received_at": "2026-02-06T10:22:00",
+   "received_at": "2026-02-06T10:37:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0471/C0471-D05.txt",
@@ -471,7 +476,7 @@
    "doc_type": "paramed",
    "vendor_id": "HSC",
    "ordered_at": "2026-02-06T12:23:00",
-   "received_at": "2026-02-21T02:23:00",
+   "received_at": "2026-02-19T00:23:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0471/C0471-D06.txt",
@@ -486,8 +491,8 @@
    "case_id": "C0471",
    "doc_type": "lab_saliva",
    "vendor_id": "MIL",
-   "ordered_at": "2026-02-19T20:23:00",
-   "received_at": "2026-02-22T20:23:00",
+   "ordered_at": "2026-02-17T18:23:00",
+   "received_at": "2026-02-21T18:23:00",
    "order_reason": "REQ-2.3 tobacco evidence ambiguous",
    "pages": 1,
    "text_path": "data/source/C0471/C0471-D07.txt",

@@ -35,9 +35,9 @@
     "CTR",
     "XCR"
    ],
-   "existing": 500000,
+   "existing": 0,
    "replacement": false,
-   "beneficiary": "children",
+   "beneficiary": "spouse",
    "signed": "2026-04-04",
    "signed_in_us": true
   },
@@ -75,7 +75,7 @@
      "answer": "No"
     },
     "alcohol": {
-     "answer": "7 drinks/week"
+     "answer": "8 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -134,14 +134,14 @@
      "answer": "Yes",
      "details": [
       {
-       "condition": "hernia repaired",
-       "diagnosed": "06/2025",
-       "treatment": "none",
+       "condition": "urinary tract infection",
+       "diagnosed": "08/2021",
+       "treatment": "sulfamethoxazole-trimethoprim, nitrofurantoin",
        "physician": "Dr. Sara Jones"
       },
       {
        "condition": "cataracts",
-       "diagnosed": "03/2015",
+       "diagnosed": "05/2023",
        "treatment": "none",
        "physician": "Dr. Sara Jones"
       }
@@ -160,7 +160,7 @@
      "answer": "Dr. Sara Jones, Martinez-Krueger Clinic; last visit 01/2026"
     },
     "family_history": {
-     "answer": "mother: type 2 diabetes, dx 69"
+     "answer": "none known"
     },
     "weight_change": {
      "answer": "No"
@@ -174,12 +174,11 @@
    "vendor": "RXP",
    "fills": [
     {
-     "drug": "sulfamethoxazole-trimethoprim",
-     "brand": "Bactrim DS",
-     "strength": "800/160 mg",
+     "drug": "nitrofurantoin",
+     "brand": "Macrobid",
+     "strength": "100 mg",
      "fills": [
-      "2021-09-26",
-      "2026-04-01"
+      "2021-08-12"
      ],
      "days_supply": 10,
      "prescriber": "Dr. Sara Jones",
@@ -187,18 +186,16 @@
      "cond_index": 1
     },
     {
-     "drug": "nitrofurantoin",
-     "brand": "Macrobid",
-     "strength": "100 mg",
+     "drug": "hydrocodone-acetaminophen",
+     "brand": "Norco",
+     "strength": "10/325 mg",
      "fills": [
-      "2021-08-12",
-      "2021-08-22",
-      "2021-09-01"
+      "2026-01-14"
      ],
-     "days_supply": 10,
-     "prescriber": "Dr. Sara Jones",
-     "specialty": "family medicine",
-     "cond_index": 1
+     "days_supply": 5,
+     "prescriber": "Dr. Garcia (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
     },
     {
      "drug": "hydrocodone-acetaminophen",
@@ -211,18 +208,6 @@
      "prescriber": "Dr. Nguyen (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
-    },
-    {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "10 mg",
-     "fills": [
-      "2021-08-13"
-     ],
-     "days_supply": 10,
-     "prescriber": "Dr. Garcia (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
     }
    ],
    "no_history": false
@@ -232,13 +217,8 @@
    "codes": [
     {
      "code": "515317",
-     "reported": "2020-04-14",
+     "reported": "2022-02-20",
      "cond_index": 0
-    },
-    {
-     "code": "050006",
-     "reported": "2025-04-20",
-     "cond_index": null
     }
    ],
    "no_hit": false
@@ -247,58 +227,64 @@
    "vendor": "ACD",
    "license_state": "GA",
    "status": "VALID",
-   "events": [],
-   "no_record": true,
+   "events": [
+    {
+     "date": "2024-06-10",
+     "code": "M03",
+     "desc": "Improper lane change"
+    }
+   ],
+   "no_record": false,
    "foreign_license": false
   },
   "C0446-D06": {
    "vendor": "HSC",
-   "exam_date": "2026-04-14",
+   "exam_date": "2026-04-07",
    "height_in": 62.0,
-   "weight_lb": 165.0,
+   "weight_lb": 170.0,
    "bp": [
     [
-     116,
-     88
+     121,
+     82
     ],
     [
-     110,
-     86
+     115,
+     79
     ]
    ],
-   "pulse": 80,
+   "pulse": 69,
    "examiner_notes": {}
   },
   "C0446-D07": {
    "vendor": "MIL",
-   "collected": "2026-04-14",
-   "fasting": false,
+   "collected": "2026-04-07",
+   "fasting": true,
    "results": {
-    "tc": 285.0,
-    "hdl": 54.0,
-    "ldl": 209.0,
-    "triglycerides": 109.0,
-    "tc_hdl_ratio": 5.3,
-    "a1c": 5.5,
-    "ast": 17.0,
-    "alt": 17.0,
-    "ggt": 22.0,
-    "alk_phos": 83.0,
+    "tc": 283.0,
+    "hdl": 57.0,
+    "ldl": 202.0,
+    "triglycerides": 118.0,
+    "tc_hdl_ratio": 5.0,
+    "glucose_fasting": 102.0,
+    "a1c": 5.3,
+    "ast": 20.0,
+    "alt": 30.0,
+    "ggt": 10.0,
+    "alk_phos": 64.0,
     "bilirubin": 1.0,
-    "albumin": 4.7,
-    "creatinine": 1.0,
-    "egfr": 100.0,
-    "hemoglobin": 13.6,
+    "albumin": 4.8,
+    "creatinine": 1.1,
+    "egfr": 76.0,
+    "hemoglobin": 12.8,
     "hiv": 0.0,
-    "cdt": 1.0,
-    "glucose_random": 105.0
+    "cdt": 1.0
    }
   },
   "C0446-D08": {
    "vendor": "MIL",
-   "collected": "2026-04-14",
+   "collected": "2026-04-07",
    "results": {
-    "cotinine_urine": 6.0,
+    "cotinine_urine": 8.0,
     "urine_protein": 0.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
@@ -316,7 +302,7 @@
    },
    "style": "small_practice_typed",
    "ordered_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "last_visit": "2026-02-27",
+   "last_visit": "2025-12-09",
    "stale": false,
    "problems": [
     {
@@ -333,58 +319,34 @@
    ],
    "visits": [
     {
-     "date": "2026-02-27",
+     "date": "2025-12-09",
      "reason": "Pulmonary sarcoidosis",
-     "bp": "105/95",
-     "weight_lb": 167.0
-    },
-    {
-     "date": "2025-09-10",
-     "reason": "Pulmonary sarcoidosis",
-     "bp": "116/95",
-     "weight_lb": 169.0
-    },
-    {
-     "date": "2025-03-23",
-     "reason": "Pulmonary sarcoidosis",
-     "bp": "105/89",
-     "weight_lb": 164.0
-    },
-    {
-     "date": "2024-10-03",
-     "reason": "Pulmonary sarcoidosis",
-     "bp": "104/89",
+     "bp": "124/73",
      "weight_lb": 166.0
     },
     {
-     "date": "2024-04-15",
+     "date": "2025-05-27",
      "reason": "Pulmonary sarcoidosis",
-     "bp": "111/93",
+     "bp": "122/79",
+     "weight_lb": 169.0
+    },
+    {
+     "date": "2024-11-11",
+     "reason": "Pulmonary sarcoidosis",
+     "bp": "114/79",
+     "weight_lb": 164.0
+    },
+    {
+     "date": "2024-04-28",
+     "reason": "Pulmonary sarcoidosis",
+     "bp": "113/79",
+     "weight_lb": 166.0
+    },
+    {
+     "date": "2023-10-15",
+     "reason": "Pulmonary sarcoidosis",
+     "bp": "120/83",
      "weight_lb": 175.0
-    },
-    {
-     "date": "2023-10-28",
-     "reason": "Pulmonary sarcoidosis",
-     "bp": "119/89",
-     "weight_lb": 168.0
-    },
-    {
-     "date": "2023-05-10",
-     "reason": "Pulmonary sarcoidosis",
-     "bp": "111/89",
-     "weight_lb": 161.0
-    },
-    {
-     "date": "2022-11-20",
-     "reason": "Pulmonary sarcoidosis",
-     "bp": "108/91",
-     "weight_lb": 167.0
-    },
-    {
-     "date": "2022-06-02",
-     "reason": "Pulmonary sarcoidosis",
-     "bp": "118/86",
-     "weight_lb": 163.0
     }
    ],
    "series": {},
@@ -392,7 +354,7 @@
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 3,
+   "pages": 1,
    "copy_forward": false,
    "patient": {
     "name": "Jessica Sparks",
@@ -403,22 +365,14 @@
     {
      "product": "cigarette",
      "status": "former",
-     "frequency": "1/2 ppd",
-     "start": "2019-12-05",
-     "quit": "2021-01-08",
+     "frequency": "1.5 ppd",
+     "start": "2011-04-12",
+     "quit": "2020-04-11",
      "disclosure": "omitted"
     }
    ],
-   "alcohol_dpw": 16.0,
-   "family_history": [
-    {
-     "relation": "mother",
-     "condition": "type 2 diabetes",
-     "age_at_onset": 69,
-     "age_at_death": null,
-     "living": false
-    }
-   ]
+   "alcohol_dpw": 18.0,
+   "family_history": []
   }
  }
 }

@@ -140,7 +140,7 @@
    "doc_id": "C0726-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 0.0,
+   "value": 12.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -153,25 +153,8 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "erectile dysfunction",
-    "diagnosed": "01/2013",
-    "treatment": "tadalafil",
-    "physician": "Dr. Cory Clark"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[1]",
-   "note": null
-  },
-  {
-   "fact_id": "C0726-F014",
-   "doc_id": "C0726-D02",
-   "kind": "app_answer",
-   "key": "other:benign_no_rating",
-   "value": {
-    "condition": "dental",
-    "diagnosed": "03/2011",
+    "condition": "dental abscess",
+    "diagnosed": "05/2017",
     "treatment": "hydrocodone-acetaminophen",
     "physician": "Dr. Cory Clark"
    },
@@ -182,7 +165,7 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F015",
+   "fact_id": "C0726-F014",
    "doc_id": "C0726-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -194,15 +177,15 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F016",
+   "fact_id": "C0726-F015",
    "doc_id": "C0726-D02",
    "kind": "app_answer",
    "key": "family_history",
    "value": {
     "relation": "father",
     "condition": "MI",
-    "age_at_onset": 48,
-    "age_at_death": 59
+    "age_at_onset": 45,
+    "age_at_death": 53
    },
    "unit": null,
    "as_of": null,
@@ -211,15 +194,15 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F017",
+   "fact_id": "C0726-F016",
    "doc_id": "C0726-D02",
    "kind": "app_answer",
    "key": "family_history",
    "value": {
-    "relation": "mother",
-    "condition": "hypertension",
-    "age_at_onset": 72,
-    "age_at_death": 90
+    "relation": "father",
+    "condition": "type 2 diabetes",
+    "age_at_onset": 75,
+    "age_at_death": 85
    },
    "unit": null,
    "as_of": null,
@@ -228,7 +211,7 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F018",
+   "fact_id": "C0726-F017",
    "doc_id": "C0726-D03",
    "kind": "rx_fill",
    "key": "apixaban",
@@ -246,19 +229,67 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0726-F019",
-   "doc_id": "C0726-D04",
-   "kind": "mib_code",
-   "key": "690005",
-   "value": "2012-09-01",
+   "fact_id": "C0726-F018",
+   "doc_id": "C0726-D03",
+   "kind": "rx_fill",
+   "key": "tadalafil",
+   "value": {
+    "strength": "20 mg",
+    "n_fills": 40,
+    "first": "2020-12-29",
+    "last": "2025-12-25",
+    "prescriber_specialty": "family medicine"
+   },
    "unit": null,
-   "as_of": "2012-09-01",
+   "as_of": "2025-12-25",
+   "relevant": false,
+   "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
+   "fact_id": "C0726-F019",
+   "doc_id": "C0726-D03",
+   "kind": "rx_fill",
+   "key": "azithromycin",
+   "value": {
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2025-02-15",
+    "last": "2025-02-15",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2025-02-15",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0726-F020",
+   "doc_id": "C0726-D05",
+   "kind": "mvr_violation",
+   "key": "S20",
+   "value": "Speeding 16-20 over limit",
+   "unit": null,
+   "as_of": "2023-06-04",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0726-F021",
+   "doc_id": "C0726-D05",
+   "kind": "mvr_violation",
+   "key": "M07",
+   "value": "Use of handheld device while driving",
+   "unit": null,
+   "as_of": "2021-09-11",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0726-F022",
    "doc_id": "C0726-D06",
    "kind": "paramed",
    "key": "build",
@@ -273,23 +304,23 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F021",
+   "fact_id": "C0726-F023",
    "doc_id": "C0726-D06",
    "kind": "paramed",
    "key": "bp",
    "value": {
     "readings": [
      [
-      139,
-      85
+      145,
+      86
      ],
      [
-      141,
-      86
+      147,
+      87
      ]
     ],
     "avg": [
-     140,
+     146,
      86
     ]
    },
@@ -300,11 +331,11 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F022",
+   "fact_id": "C0726-F024",
    "doc_id": "C0726-D06",
    "kind": "paramed",
    "key": "pulse",
-   "value": 88,
+   "value": 61,
    "unit": "bpm",
    "as_of": "2026-01-10",
    "relevant": false,
@@ -312,38 +343,14 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F023",
-   "doc_id": "C0726-D07",
-   "kind": "lab_value",
-   "key": "tc",
-   "value": 272.0,
-   "unit": "mg/dL",
-   "as_of": "2026-01-10",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0726-F024",
-   "doc_id": "C0726-D07",
-   "kind": "lab_value",
-   "key": "hdl",
-   "value": 52.0,
-   "unit": "mg/dL",
-   "as_of": "2026-01-10",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
    "fact_id": "C0726-F025",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "ldl",
-   "value": 176.0,
+   "key": "tc",
+   "value": 280.0,
    "unit": "mg/dL",
    "as_of": "2026-01-10",
-   "relevant": false,
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -351,8 +358,20 @@
    "fact_id": "C0726-F026",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "triglycerides",
-   "value": 216.0,
+   "key": "hdl",
+   "value": 54.0,
+   "unit": "mg/dL",
+   "as_of": "2026-01-10",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0726-F027",
+   "doc_id": "C0726-D07",
+   "kind": "lab_value",
+   "key": "ldl",
+   "value": 196.0,
    "unit": "mg/dL",
    "as_of": "2026-01-10",
    "relevant": false,
@@ -360,7 +379,19 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F027",
+   "fact_id": "C0726-F028",
+   "doc_id": "C0726-D07",
+   "kind": "lab_value",
+   "key": "triglycerides",
+   "value": 150.0,
+   "unit": "mg/dL",
+   "as_of": "2026-01-10",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0726-F029",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
    "key": "tc_hdl_ratio",
@@ -372,36 +403,12 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F028",
-   "doc_id": "C0726-D07",
-   "kind": "lab_value",
-   "key": "glucose_fasting",
-   "value": 78.0,
-   "unit": "mg/dL",
-   "as_of": "2026-01-10",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0726-F029",
-   "doc_id": "C0726-D07",
-   "kind": "lab_value",
-   "key": "a1c",
-   "value": 5.1,
-   "unit": "%",
-   "as_of": "2026-01-10",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
    "fact_id": "C0726-F030",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "ast",
-   "value": 20.0,
-   "unit": "U/L",
+   "key": "glucose_fasting",
+   "value": 98.0,
+   "unit": "mg/dL",
    "as_of": "2026-01-10",
    "relevant": false,
    "truth_ref": null,
@@ -411,9 +418,9 @@
    "fact_id": "C0726-F031",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "alt",
-   "value": 19.0,
-   "unit": "U/L",
+   "key": "a1c",
+   "value": 5.0,
+   "unit": "%",
    "as_of": "2026-01-10",
    "relevant": false,
    "truth_ref": null,
@@ -423,8 +430,8 @@
    "fact_id": "C0726-F032",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "ggt",
-   "value": 51.0,
+   "key": "ast",
+   "value": 30.0,
    "unit": "U/L",
    "as_of": "2026-01-10",
    "relevant": false,
@@ -435,8 +442,8 @@
    "fact_id": "C0726-F033",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "alk_phos",
-   "value": 74.0,
+   "key": "alt",
+   "value": 34.0,
    "unit": "U/L",
    "as_of": "2026-01-10",
    "relevant": false,
@@ -447,9 +454,9 @@
    "fact_id": "C0726-F034",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "bilirubin",
-   "value": 0.8,
-   "unit": "mg/dL",
+   "key": "ggt",
+   "value": 43.0,
+   "unit": "U/L",
    "as_of": "2026-01-10",
    "relevant": false,
    "truth_ref": null,
@@ -459,9 +466,9 @@
    "fact_id": "C0726-F035",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "albumin",
-   "value": 4.6,
-   "unit": "g/dL",
+   "key": "alk_phos",
+   "value": 58.0,
+   "unit": "U/L",
    "as_of": "2026-01-10",
    "relevant": false,
    "truth_ref": null,
@@ -471,8 +478,8 @@
    "fact_id": "C0726-F036",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "creatinine",
-   "value": 0.8,
+   "key": "bilirubin",
+   "value": 0.5,
    "unit": "mg/dL",
    "as_of": "2026-01-10",
    "relevant": false,
@@ -483,9 +490,9 @@
    "fact_id": "C0726-F037",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "egfr",
-   "value": 68.0,
-   "unit": "mL/min/1.73m2",
+   "key": "albumin",
+   "value": 4.5,
+   "unit": "g/dL",
    "as_of": "2026-01-10",
    "relevant": false,
    "truth_ref": null,
@@ -495,9 +502,9 @@
    "fact_id": "C0726-F038",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
-   "key": "hemoglobin",
-   "value": 16.4,
-   "unit": "g/dL",
+   "key": "creatinine",
+   "value": 1.2,
+   "unit": "mg/dL",
    "as_of": "2026-01-10",
    "relevant": false,
    "truth_ref": null,
@@ -505,6 +512,30 @@
   },
   {
    "fact_id": "C0726-F039",
+   "doc_id": "C0726-D07",
+   "kind": "lab_value",
+   "key": "egfr",
+   "value": 65.0,
+   "unit": "mL/min/1.73m2",
+   "as_of": "2026-01-10",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0726-F040",
+   "doc_id": "C0726-D07",
+   "kind": "lab_value",
+   "key": "hemoglobin",
+   "value": 15.2,
+   "unit": "g/dL",
+   "as_of": "2026-01-10",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0726-F041",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
    "key": "hiv",
@@ -516,11 +547,11 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F040",
+   "fact_id": "C0726-F042",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
    "key": "cdt",
-   "value": 1.2,
+   "value": 0.9,
    "unit": "%dCDT",
    "as_of": "2026-01-10",
    "relevant": false,
@@ -528,11 +559,11 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F041",
+   "fact_id": "C0726-F043",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
    "key": "psa",
-   "value": 0.4,
+   "value": 1.2,
    "unit": "ng/mL",
    "as_of": "2026-01-10",
    "relevant": false,
@@ -540,11 +571,11 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F042",
+   "fact_id": "C0726-F044",
    "doc_id": "C0726-D07",
    "kind": "lab_value",
    "key": "nt_probnp",
-   "value": 132.0,
+   "value": 340.0,
    "unit": "pg/mL",
    "as_of": "2026-01-10",
    "relevant": true,
@@ -552,11 +583,11 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F043",
+   "fact_id": "C0726-F045",
    "doc_id": "C0726-D08",
    "kind": "lab_value",
    "key": "cotinine_urine",
-   "value": 0.0,
+   "value": 5.0,
    "unit": "ng/mL",
    "as_of": "2026-01-10",
    "relevant": true,
@@ -564,11 +595,11 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F044",
+   "fact_id": "C0726-F046",
    "doc_id": "C0726-D08",
    "kind": "lab_value",
    "key": "urine_protein",
-   "value": 0.0,
+   "value": 20.0,
    "unit": "mg/dL",
    "as_of": "2026-01-10",
    "relevant": false,
@@ -576,7 +607,7 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F045",
+   "fact_id": "C0726-F047",
    "doc_id": "C0726-D08",
    "kind": "lab_value",
    "key": "cocaine",
@@ -588,7 +619,7 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F046",
+   "fact_id": "C0726-F048",
    "doc_id": "C0726-D08",
    "kind": "lab_value",
    "key": "urine_glucose",
@@ -600,7 +631,7 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F047",
+   "fact_id": "C0726-F049",
    "doc_id": "C0726-D08",
    "kind": "lab_value",
    "key": "urine_rbc",
@@ -612,7 +643,7 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F048",
+   "fact_id": "C0726-F050",
    "doc_id": "C0726-D09",
    "kind": "aps_finding",
    "key": "dx:afib",
@@ -634,14 +665,14 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0726-F049",
+   "fact_id": "C0726-F051",
    "doc_id": "C0726-D09",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "132/91",
-    "129/85",
-    "136/83"
+    "138/92",
+    "135/86",
+    "142/84"
    ],
    "unit": null,
    "as_of": "2025-03-14",
@@ -650,7 +681,7 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F050",
+   "fact_id": "C0726-F052",
    "doc_id": "C0726-D10",
    "kind": "aps_finding",
    "key": "dx:afib",
@@ -672,7 +703,7 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0726-F051",
+   "fact_id": "C0726-F053",
    "doc_id": "C0726-D10",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
@@ -689,13 +720,13 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F052",
+   "fact_id": "C0726-F054",
    "doc_id": "C0726-D10",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
    "value": {
-    "dx": "dental",
-    "onset": "2011-03-08",
+    "dx": "dental abscess",
+    "onset": "2017-05-23",
     "status": "controlled",
     "member": "dental"
    },
@@ -706,14 +737,14 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F053",
+   "fact_id": "C0726-F055",
    "doc_id": "C0726-D10",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "131/88",
-    "133/95",
-    "138/83"
+    "137/89",
+    "139/96",
+    "144/84"
    ],
    "unit": null,
    "as_of": "2025-07-18",
@@ -722,7 +753,7 @@
    "note": null
   },
   {
-   "fact_id": "C0726-F054",
+   "fact_id": "C0726-F056",
    "doc_id": "C0726-D10",
    "kind": "aps_finding",
    "key": "exercise",
@@ -774,8 +805,7 @@
     "C0726-F013",
     "C0726-F014",
     "C0726-F015",
-    "C0726-F016",
-    "C0726-F017"
+    "C0726-F016"
    ]
   },
   {
@@ -788,9 +818,7 @@
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0726/C0726-D04.txt",
-   "fact_ids": [
-    "C0726-F019"
-   ]
+   "fact_ids": []
   },
   {
    "doc_id": "C0726-D03",
@@ -798,12 +826,14 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2025-12-28T09:13:00",
-   "received_at": "2025-12-28T09:27:00",
+   "received_at": "2025-12-28T09:37:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0726/C0726-D03.txt",
    "fact_ids": [
-    "C0726-F018"
+    "C0726-F017",
+    "C0726-F018",
+    "C0726-F019"
    ]
   },
   {
@@ -816,7 +846,10 @@
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0726/C0726-D05.txt",
-   "fact_ids": []
+   "fact_ids": [
+    "C0726-F020",
+    "C0726-F021"
+   ]
   },
   {
    "doc_id": "C0726-D09",
@@ -829,8 +862,8 @@
    "pages": 3,
    "text_path": "data/source/C0726/C0726-D09.txt",
    "fact_ids": [
-    "C0726-F048",
-    "C0726-F049"
+    "C0726-F050",
+    "C0726-F051"
    ]
   },
   {
@@ -844,9 +877,9 @@
    "pages": 1,
    "text_path": "data/source/C0726/C0726-D06.txt",
    "fact_ids": [
-    "C0726-F020",
-    "C0726-F021",
-    "C0726-F022"
+    "C0726-F022",
+    "C0726-F023",
+    "C0726-F024"
    ]
   },
   {
@@ -860,8 +893,6 @@
    "pages": 1,
    "text_path": "data/source/C0726/C0726-D07.txt",
    "fact_ids": [
-    "C0726-F023",
-    "C0726-F024",
     "C0726-F025",
     "C0726-F026",
     "C0726-F027",
@@ -879,7 +910,9 @@
     "C0726-F039",
     "C0726-F040",
     "C0726-F041",
-    "C0726-F042"
+    "C0726-F042",
+    "C0726-F043",
+    "C0726-F044"
    ]
   },
   {
@@ -893,11 +926,11 @@
    "pages": 1,
    "text_path": "data/source/C0726/C0726-D08.txt",
    "fact_ids": [
-    "C0726-F043",
-    "C0726-F044",
     "C0726-F045",
     "C0726-F046",
-    "C0726-F047"
+    "C0726-F047",
+    "C0726-F048",
+    "C0726-F049"
    ]
   },
   {
@@ -911,11 +944,11 @@
    "pages": 12,
    "text_path": "data/source/C0726/C0726-D10.txt",
    "fact_ids": [
-    "C0726-F050",
-    "C0726-F051",
     "C0726-F052",
     "C0726-F053",
-    "C0726-F054"
+    "C0726-F054",
+    "C0726-F055",
+    "C0726-F056"
    ]
   }
  ]

@@ -54,7 +54,7 @@
    "doc_id": "C0292-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 250000,
+   "value": 100000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -126,22 +126,6 @@
   },
   {
    "fact_id": "C0292-F011",
-   "doc_id": "C0292-D01",
-   "kind": "app_answer",
-   "key": "foreign_travel",
-   "value": {
-    "country": "Spain",
-    "weeks_per_year": 2.0,
-    "purpose": "vacation"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "travel[0]",
-   "note": null
-  },
-  {
-   "fact_id": "C0292-F012",
    "doc_id": "C0292-D02",
    "kind": "app_answer",
    "key": "tobacco",
@@ -153,7 +137,7 @@
    "note": null
   },
   {
-   "fact_id": "C0292-F013",
+   "fact_id": "C0292-F012",
    "doc_id": "C0292-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
@@ -165,12 +149,12 @@
    "note": null
   },
   {
-   "fact_id": "C0292-F014",
+   "fact_id": "C0292-F013",
    "doc_id": "C0292-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "dental",
+    "condition": "dental abscess",
     "diagnosed": "03/2015",
     "treatment": "amoxicillin",
     "physician": "Dr. Michael Leon"
@@ -182,14 +166,14 @@
    "note": null
   },
   {
-   "fact_id": "C0292-F015",
+   "fact_id": "C0292-F014",
    "doc_id": "C0292-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
     "condition": "acne",
-    "diagnosed": "10/2017",
-    "treatment": "tretinoin",
+    "diagnosed": "05/2023",
+    "treatment": "doxycycline, tretinoin",
     "physician": "Dr. Michael Leon"
    },
    "unit": null,
@@ -199,7 +183,7 @@
    "note": null
   },
   {
-   "fact_id": "C0292-F016",
+   "fact_id": "C0292-F015",
    "doc_id": "C0292-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -211,139 +195,211 @@
    "note": null
   },
   {
+   "fact_id": "C0292-F016",
+   "doc_id": "C0292-D03",
+   "kind": "rx_fill",
+   "key": "doxycycline",
+   "value": {
+    "strength": "100 mg",
+    "n_fills": 40,
+    "first": "2023-05-24",
+    "last": "2026-10-22",
+    "prescriber_specialty": "family medicine"
+   },
+   "unit": null,
+   "as_of": "2026-10-22",
+   "relevant": false,
+   "truth_ref": "conditions[2]",
+   "note": null
+  },
+  {
    "fact_id": "C0292-F017",
    "doc_id": "C0292-D03",
    "kind": "rx_fill",
-   "key": "cyclobenzaprine",
+   "key": "tretinoin",
    "value": {
-    "strength": "10 mg",
+    "strength": "0.05%",
+    "n_fills": 40,
+    "first": "2023-05-13",
+    "last": "2026-10-22",
+    "prescriber_specialty": "family medicine"
+   },
+   "unit": null,
+   "as_of": "2026-10-22",
+   "relevant": false,
+   "truth_ref": "conditions[2]",
+   "note": null
+  },
+  {
+   "fact_id": "C0292-F018",
+   "doc_id": "C0292-D03",
+   "kind": "rx_fill",
+   "key": "ibuprofen",
+   "value": {
+    "strength": "600 mg",
     "n_fills": 1,
-    "first": "2021-05-30",
-    "last": "2021-05-30",
+    "first": "2021-04-14",
+    "last": "2021-04-14",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2021-05-30",
+   "as_of": "2021-04-14",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0292-F018",
-   "doc_id": "C0292-D04",
-   "kind": "mib_code",
-   "key": "806416",
-   "value": "2025-05-12",
-   "unit": null,
-   "as_of": "2025-05-12",
-   "relevant": true,
-   "truth_ref": "conditions[0]",
-   "note": null
-  },
-  {
    "fact_id": "C0292-F019",
-   "doc_id": "C0292-D04",
-   "kind": "mib_code",
-   "key": "390510",
-   "value": "2014-11-01",
+   "doc_id": "C0292-D03",
+   "kind": "rx_fill",
+   "key": "ibuprofen",
+   "value": {
+    "strength": "600 mg",
+    "n_fills": 1,
+    "first": "2025-05-14",
+    "last": "2025-05-14",
+    "prescriber_specialty": "urgent care"
+   },
    "unit": null,
-   "as_of": "2014-11-01",
+   "as_of": "2025-05-14",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0292-F020",
-   "doc_id": "C0292-D06",
-   "kind": "paramed",
-   "key": "build",
+   "doc_id": "C0292-D03",
+   "kind": "rx_fill",
+   "key": "ibuprofen",
    "value": {
-    "height_in": 62.5,
-    "weight_lb": 138.0
+    "strength": "600 mg",
+    "n_fills": 1,
+    "first": "2025-10-19",
+    "last": "2025-10-19",
+    "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2026-10-28",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0292-F021",
-   "doc_id": "C0292-D06",
-   "kind": "paramed",
-   "key": "bp",
-   "value": {
-    "readings": [
-     [
-      118,
-      90
-     ],
-     [
-      106,
-      92
-     ]
-    ],
-    "avg": [
-     112,
-     91
-    ]
-   },
-   "unit": null,
-   "as_of": "2026-10-28",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0292-F022",
-   "doc_id": "C0292-D06",
-   "kind": "paramed",
-   "key": "pulse",
-   "value": 58,
-   "unit": "bpm",
-   "as_of": "2026-10-28",
+   "as_of": "2025-10-19",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
+   "fact_id": "C0292-F021",
+   "doc_id": "C0292-D04",
+   "kind": "mib_code",
+   "key": "806956",
+   "value": "2025-05-03",
+   "unit": null,
+   "as_of": "2025-05-03",
+   "relevant": true,
+   "truth_ref": "conditions[0]",
+   "note": null
+  },
+  {
+   "fact_id": "C0292-F022",
+   "doc_id": "C0292-D04",
+   "kind": "mib_code",
+   "key": "925277",
+   "value": "2024-11-25",
+   "unit": null,
+   "as_of": "2024-11-25",
+   "relevant": false,
+   "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
    "fact_id": "C0292-F023",
-   "doc_id": "C0292-D07",
-   "kind": "lab_value",
-   "key": "cotinine_saliva",
-   "value": 0,
-   "unit": "ng/mL",
-   "as_of": "2026-10-28",
+   "doc_id": "C0292-D06",
+   "kind": "paramed",
+   "key": "build",
+   "value": {
+    "height_in": 63.0,
+    "weight_lb": 134.0
+   },
+   "unit": null,
+   "as_of": "2026-11-08",
    "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0292-F024",
-   "doc_id": "C0292-D07",
-   "kind": "lab_value",
-   "key": "hiv",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2026-10-28",
-   "relevant": false,
+   "doc_id": "C0292-D06",
+   "kind": "paramed",
+   "key": "bp",
+   "value": {
+    "readings": [
+     [
+      143,
+      73
+     ],
+     [
+      139,
+      79
+     ]
+    ],
+    "avg": [
+     141,
+     76
+    ]
+   },
+   "unit": null,
+   "as_of": "2026-11-08",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0292-F025",
-   "doc_id": "C0292-D07",
-   "kind": "lab_value",
-   "key": "cocaine",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2026-10-28",
+   "doc_id": "C0292-D06",
+   "kind": "paramed",
+   "key": "pulse",
+   "value": 67,
+   "unit": "bpm",
+   "as_of": "2026-11-08",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0292-F026",
+   "doc_id": "C0292-D07",
+   "kind": "lab_value",
+   "key": "cotinine_saliva",
+   "value": 1,
+   "unit": "ng/mL",
+   "as_of": "2026-11-08",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0292-F027",
+   "doc_id": "C0292-D07",
+   "kind": "lab_value",
+   "key": "hiv",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2026-11-08",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0292-F028",
+   "doc_id": "C0292-D07",
+   "kind": "lab_value",
+   "key": "cocaine",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2026-11-08",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0292-F029",
    "doc_id": "C0292-D08",
    "kind": "aps_finding",
    "key": "dx:cancer",
@@ -356,23 +412,23 @@
     "stage": "I"
    },
    "unit": null,
-   "as_of": "2026-07-23",
+   "as_of": "2026-10-12",
    "relevant": true,
    "truth_ref": "conditions[0]",
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0292-F027",
+   "fact_id": "C0292-F030",
    "doc_id": "C0292-D08",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "119/83",
-    "106/86",
-    "117/86"
+    "131/72",
+    "133/82",
+    "136/75"
    ],
    "unit": null,
-   "as_of": "2026-07-23",
+   "as_of": "2026-10-12",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -399,8 +455,7 @@
     "C0292-F007",
     "C0292-F008",
     "C0292-F009",
-    "C0292-F010",
-    "C0292-F011"
+    "C0292-F010"
    ]
   },
   {
@@ -414,11 +469,11 @@
    "pages": 1,
    "text_path": "data/source/C0292/C0292-D02.txt",
    "fact_ids": [
+    "C0292-F011",
     "C0292-F012",
     "C0292-F013",
     "C0292-F014",
-    "C0292-F015",
-    "C0292-F016"
+    "C0292-F015"
    ]
   },
   {
@@ -427,12 +482,16 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2026-10-25T09:15:00",
-   "received_at": "2026-10-25T09:25:00",
+   "received_at": "2026-10-25T09:41:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0292/C0292-D03.txt",
    "fact_ids": [
-    "C0292-F017"
+    "C0292-F016",
+    "C0292-F017",
+    "C0292-F018",
+    "C0292-F019",
+    "C0292-F020"
    ]
   },
   {
@@ -441,13 +500,13 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2026-10-25T09:15:00",
-   "received_at": "2026-10-25T09:28:00",
+   "received_at": "2026-10-25T09:41:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0292/C0292-D04.txt",
    "fact_ids": [
-    "C0292-F018",
-    "C0292-F019"
+    "C0292-F021",
+    "C0292-F022"
    ]
   },
   {
@@ -456,7 +515,7 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2026-10-25T09:15:00",
-   "received_at": "2026-10-25T09:56:00",
+   "received_at": "2026-10-25T10:38:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0292/C0292-D05.txt",
@@ -468,26 +527,10 @@
    "doc_type": "paramed",
    "vendor_id": "HSC",
    "ordered_at": "2026-10-25T12:14:00",
-   "received_at": "2026-10-29T02:14:00",
+   "received_at": "2026-11-08T20:14:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0292/C0292-D06.txt",
-   "fact_ids": [
-    "C0292-F020",
-    "C0292-F021",
-    "C0292-F022"
-   ]
-  },
-  {
-   "doc_id": "C0292-D07",
-   "case_id": "C0292",
-   "doc_type": "lab_saliva",
-   "vendor_id": "APX",
-   "ordered_at": "2026-10-27T20:14:00",
-   "received_at": "2026-10-31T20:14:00",
-   "order_reason": "REQ-1 grid",
-   "pages": 1,
-   "text_path": "data/source/C0292/C0292-D07.txt",
    "fact_ids": [
     "C0292-F023",
     "C0292-F024",
@@ -495,18 +538,34 @@
    ]
   },
   {
+   "doc_id": "C0292-D07",
+   "case_id": "C0292",
+   "doc_type": "lab_saliva",
+   "vendor_id": "APX",
+   "ordered_at": "2026-11-07T14:14:00",
+   "received_at": "2026-11-11T14:14:00",
+   "order_reason": "REQ-1 grid",
+   "pages": 1,
+   "text_path": "data/source/C0292/C0292-D07.txt",
+   "fact_ids": [
+    "C0292-F026",
+    "C0292-F027",
+    "C0292-F028"
+   ]
+  },
+  {
    "doc_id": "C0292-D08",
    "case_id": "C0292",
    "doc_type": "aps",
    "vendor_id": "small_practice_typed",
-   "ordered_at": "2026-10-26T14:14:00",
-   "received_at": "2026-11-12T14:14:00",
+   "ordered_at": "2026-10-25T10:14:00",
+   "received_at": "2026-11-20T10:14:00",
    "order_reason": "REQ-2.2 app vs 3rd-party discrepancy",
    "pages": 1,
    "text_path": "data/source/C0292/C0292-D08.txt",
    "fact_ids": [
-    "C0292-F026",
-    "C0292-F027"
+    "C0292-F029",
+    "C0292-F030"
    ]
   }
  ]

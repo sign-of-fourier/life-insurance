@@ -135,13 +135,13 @@
      "answer": "Yes",
      "details": [
       {
-       "condition": "hypothyroidism simple",
+       "condition": "hypothyroidism",
        "diagnosed": "05/2021",
        "treatment": "levothyroxine",
        "physician": "Dr. Kim Barnes"
       },
       {
-       "condition": "sinusitis",
+       "condition": "acute sinusitis",
        "diagnosed": "10/2016",
        "treatment": "azithromycin",
        "physician": "Dr. Kim Barnes"
@@ -155,7 +155,7 @@
      "answer": "No"
     },
     "current_meds": {
-     "answer": "azithromycin, levothyroxine"
+     "answer": "levothyroxine"
     },
     "physician": {
      "answer": "Dr. Kim Barnes, Farmer PLC Medical Group; last visit 05/2026"
@@ -226,17 +226,28 @@
      "cond_index": 1
     },
     {
-     "drug": "azithromycin",
-     "brand": "Zithromax",
-     "strength": "250 mg",
+     "drug": "ibuprofen",
+     "brand": "Motrin",
+     "strength": "800 mg",
      "fills": [
-      "2021-10-25",
-      "2026-10-21"
+      "2026-03-23"
      ],
-     "days_supply": 30,
-     "prescriber": "Dr. Kim Barnes",
-     "specialty": "family medicine",
-     "cond_index": 2
+     "days_supply": 5,
+     "prescriber": "Dr. Kim (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
+    },
+    {
+     "drug": "amoxicillin",
+     "brand": "Amoxil",
+     "strength": "875 mg",
+     "fills": [
+      "2023-12-22"
+     ],
+     "days_supply": 5,
+     "prescriber": "Dr. Nguyen (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
     }
    ],
    "no_history": false
@@ -245,9 +256,14 @@
    "vendor": "MIBS",
    "codes": [
     {
-     "code": "705416",
-     "reported": "2024-11-08",
+     "code": "706476",
+     "reported": "2026-04-27",
      "cond_index": 0
+    },
+    {
+     "code": "390459",
+     "reported": "2014-02-01",
+     "cond_index": null
     }
    ],
    "no_hit": false
@@ -273,37 +289,36 @@
   },
   "C0540-D06": {
    "vendor": "PMX",
-   "exam_date": "2026-11-04",
-   "height_in": 74.5,
-   "weight_lb": 188.0,
+   "exam_date": "2026-11-02",
+   "height_in": 74.0,
+   "weight_lb": 189.0,
    "bp": [
     [
-     127,
-     68
+     126,
+     71
+    ],
+    [
+     131,
+     67
     ],
     [
      136,
-     70
-    ],
-    [
-     129,
-     70
+     69
     ]
    ],
-   "pulse": 62,
+   "pulse": 69,
    "examiner_notes": {}
   },
   "C0540-D07": {
    "vendor": "MIL",
-   "collected": "2026-11-04",
-   "fasting": true,
+   "collected": "2026-11-02",
+   "fasting": false,
    "results": {
     "tc": 295.0,
     "hdl": 69.0,
     "ldl": 209.0,
     "triglycerides": 81.0,
     "tc_hdl_ratio": 4.3,
-    "glucose_fasting": 96.0,
     "a1c": 5.1,
     "ast": 14.0,
     "alt": 41.0,
@@ -315,18 +330,19 @@
     "egfr": 70.0,
     "hemoglobin": 15.9,
     "hiv": 0.0,
-    "cdt": 1.3
+    "cdt": 1.3,
+    "glucose_random": 112.0
    }
   },
   "C0540-D08": {
    "vendor": "MIL",
-   "collected": "2026-11-04",
+   "collected": "2026-11-02",
    "results": {
     "cotinine_urine": 6.0,
     "urine_protein": 0.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
-    "urine_rbc": 1
+    "urine_rbc": 0
    }
   },
   "C0540-D09": {
@@ -338,7 +354,7 @@
    "income": 315000,
    "net_worth": 1764000,
    "existing": 100000,
-   "purpose": "estate"
+   "purpose": "income replacement"
   },
   "C0540-D11": {
    "provider": {
@@ -351,7 +367,7 @@
    },
    "style": "athena_summary",
    "ordered_reason": "REQ-2.1 impairment may rate >= +50",
-   "last_visit": "2026-04-27",
+   "last_visit": "2026-05-17",
    "stale": false,
    "problems": [
     {
@@ -369,22 +385,52 @@
    ],
    "visits": [
     {
-     "date": "2026-04-27",
-     "reason": "medication refill",
-     "bp": "137/69",
-     "weight_lb": 181.0
-    },
-    {
-     "date": "2025-03-08",
-     "reason": "Chronic kidney disease (eGFR)",
-     "bp": "125/70",
-     "weight_lb": 189.0
-    },
-    {
-     "date": "2024-01-18",
+     "date": "2026-05-17",
      "reason": "Chronic kidney disease (eGFR)",
      "bp": "137/72",
      "weight_lb": 188.0
+    },
+    {
+     "date": "2026-01-12",
+     "reason": "Chronic kidney disease (eGFR)",
+     "bp": "131/72",
+     "weight_lb": 180.0
+    },
+    {
+     "date": "2025-09-08",
+     "reason": "Chronic kidney disease (eGFR)",
+     "bp": "129/64",
+     "weight_lb": 184.0
+    },
+    {
+     "date": "2025-05-06",
+     "reason": "back strain",
+     "bp": "131/70",
+     "weight_lb": 193.0
+    },
+    {
+     "date": "2024-12-31",
+     "reason": "Chronic kidney disease (eGFR)",
+     "bp": "124/75",
+     "weight_lb": 181.0
+    },
+    {
+     "date": "2024-08-27",
+     "reason": "Chronic kidney disease (eGFR)",
+     "bp": "130/64",
+     "weight_lb": 189.0
+    },
+    {
+     "date": "2024-04-24",
+     "reason": "Chronic kidney disease (eGFR)",
+     "bp": "131/75",
+     "weight_lb": 182.0
+    },
+    {
+     "date": "2023-12-20",
+     "reason": "flu shot",
+     "bp": "132/64",
+     "weight_lb": 187.0
     }
    ],
    "series": {},
@@ -392,7 +438,7 @@
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 4,
+   "pages": 5,
    "copy_forward": false,
    "patient": {
     "name": "Martin Garrett",

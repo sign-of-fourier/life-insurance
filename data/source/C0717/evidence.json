@@ -165,8 +165,25 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
+    "condition": "vitamin D deficiency",
+    "diagnosed": "01/2023",
+    "treatment": "ergocalciferol",
+    "physician": "Dr. Taylor Bryant"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "conditions[0]",
+   "note": null
+  },
+  {
+   "fact_id": "C0717-F015",
+   "doc_id": "C0717-D02",
+   "kind": "app_answer",
+   "key": "other:benign_no_rating",
+   "value": {
     "condition": "eczema",
-    "diagnosed": "11/2019",
+    "diagnosed": "07/2021",
     "treatment": "triamcinolone topical",
     "physician": "Dr. Taylor Bryant"
    },
@@ -177,14 +194,14 @@
    "note": null
   },
   {
-   "fact_id": "C0717-F015",
+   "fact_id": "C0717-F016",
    "doc_id": "C0717-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
     "condition": "glaucoma",
-    "diagnosed": "03/2020",
-    "treatment": "latanoprost",
+    "diagnosed": "03/2023",
+    "treatment": "timolol ophthalmic",
     "physician": "Dr. Taylor Bryant"
    },
    "unit": null,
@@ -194,7 +211,7 @@
    "note": null
   },
   {
-   "fact_id": "C0717-F016",
+   "fact_id": "C0717-F017",
    "doc_id": "C0717-D02",
    "kind": "app_answer",
    "key": "pending_tests",
@@ -206,7 +223,7 @@
    "note": null
   },
   {
-   "fact_id": "C0717-F017",
+   "fact_id": "C0717-F018",
    "doc_id": "C0717-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -218,79 +235,85 @@
    "note": null
   },
   {
-   "fact_id": "C0717-F018",
-   "doc_id": "C0717-D03",
-   "kind": "rx_fill",
-   "key": "latanoprost",
-   "value": {
-    "strength": "0.005%",
-    "n_fills": 1,
-    "first": "2021-01-02",
-    "last": "2021-01-02",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2021-01-02",
-   "relevant": false,
-   "truth_ref": "conditions[2]",
-   "note": null
-  },
-  {
    "fact_id": "C0717-F019",
    "doc_id": "C0717-D03",
    "kind": "rx_fill",
-   "key": "ibuprofen",
+   "key": "ergocalciferol",
    "value": {
-    "strength": "800 mg",
-    "n_fills": 3,
-    "first": "2021-01-02",
+    "strength": "50000 IU",
+    "n_fills": 35,
+    "first": "2023-03-01",
     "last": "2025-12-29",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
    "as_of": "2025-12-29",
    "relevant": false,
-   "truth_ref": "conditions[3]",
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0717-F020",
    "doc_id": "C0717-D03",
    "kind": "rx_fill",
-   "key": "hydrocodone-acetaminophen",
+   "key": "triamcinolone topical",
    "value": {
-    "strength": "5/325 mg",
-    "n_fills": 1,
-    "first": "2025-05-12",
-    "last": "2025-05-12",
-    "prescriber_specialty": "urgent care"
+    "strength": "0.1%",
+    "n_fills": 40,
+    "first": "2021-07-27",
+    "last": "2025-12-29",
+    "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2025-05-12",
+   "as_of": "2025-12-29",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[1]",
    "note": null
   },
   {
    "fact_id": "C0717-F021",
-   "doc_id": "C0717-D04",
-   "kind": "mib_code",
-   "key": "321217",
-   "value": "2023-06-18",
+   "doc_id": "C0717-D03",
+   "kind": "rx_fill",
+   "key": "timolol ophthalmic",
+   "value": {
+    "strength": "0.5%",
+    "n_fills": 35,
+    "first": "2023-03-13",
+    "last": "2025-12-29",
+    "prescriber_specialty": "family medicine"
+   },
    "unit": null,
-   "as_of": "2023-06-18",
+   "as_of": "2025-12-29",
    "relevant": false,
    "truth_ref": "conditions[2]",
    "note": null
   },
   {
    "fact_id": "C0717-F022",
+   "doc_id": "C0717-D03",
+   "kind": "rx_fill",
+   "key": "hydrocodone-acetaminophen",
+   "value": {
+    "strength": "5/325 mg",
+    "n_fills": 1,
+    "first": "2024-07-05",
+    "last": "2024-07-05",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2024-07-05",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0717-F023",
    "doc_id": "C0717-D04",
    "kind": "mib_code",
-   "key": "010900",
-   "value": "2022-04-15",
+   "key": "010000",
+   "value": "2022-11-15",
    "unit": null,
-   "as_of": "2022-04-15",
+   "as_of": "2022-11-15",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -337,22 +360,8 @@
     "C0717-F014",
     "C0717-F015",
     "C0717-F016",
-    "C0717-F017"
-   ]
-  },
-  {
-   "doc_id": "C0717-D04",
-   "case_id": "C0717",
-   "doc_type": "mib",
-   "vendor_id": "MIBS",
-   "ordered_at": "2026-01-01T09:09:00",
-   "received_at": "2026-01-01T09:25:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0717/C0717-D04.txt",
-   "fact_ids": [
-    "C0717-F021",
-    "C0717-F022"
+    "C0717-F017",
+    "C0717-F018"
    ]
   },
   {
@@ -361,14 +370,15 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2026-01-01T09:09:00",
-   "received_at": "2026-01-01T09:39:00",
+   "received_at": "2026-01-01T09:19:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0717/C0717-D03.txt",
    "fact_ids": [
-    "C0717-F018",
     "C0717-F019",
-    "C0717-F020"
+    "C0717-F020",
+    "C0717-F021",
+    "C0717-F022"
    ]
   },
   {
@@ -377,11 +387,25 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2026-01-01T09:09:00",
-   "received_at": "2026-01-01T10:35:00",
+   "received_at": "2026-01-01T09:22:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0717/C0717-D05.txt",
    "fact_ids": []
+  },
+  {
+   "doc_id": "C0717-D04",
+   "case_id": "C0717",
+   "doc_type": "mib",
+   "vendor_id": "MIBS",
+   "ordered_at": "2026-01-01T09:09:00",
+   "received_at": "2026-01-01T09:36:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0717/C0717-D04.txt",
+   "fact_ids": [
+    "C0717-F023"
+   ]
   }
  ]
 }

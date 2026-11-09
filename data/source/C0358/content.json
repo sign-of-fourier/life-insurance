@@ -1,7 +1,9 @@
 {
  "meta": {
   "requirements": {
-   "ACCEL": "REQ-1 grid"
+   "PM": "REQ-3 accel fails (MIB code) -> next column",
+   "B": "REQ-3 accel fails (MIB code) -> next column",
+   "U": "REQ-3 accel fails (MIB code) -> next column"
   },
   "aps": [],
   "untraced": []
@@ -28,9 +30,9 @@
     "CTR",
     "ROP-T"
    ],
-   "existing": 0,
+   "existing": 250000,
    "replacement": false,
-   "beneficiary": "spouse",
+   "beneficiary": "estate",
    "signed": "2025-05-24",
    "signed_in_us": true
   },
@@ -65,10 +67,10 @@
    },
    "answers": {
     "tobacco": {
-     "answer": "Current vape, weekends"
+     "answer": "Current vape, daily"
     },
     "alcohol": {
-     "answer": "2.0 drinks/week"
+     "answer": "12.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -133,7 +135,7 @@
      "answer": "No"
     },
     "current_meds": {
-     "answer": "none"
+     "answer": "allopurinol, colchicine"
     },
     "physician": {
      "answer": "Dr. Justin Fisher, York Murray and Williams Clinic; last visit 12/2024"
@@ -153,26 +155,116 @@
    "vendor": "RXP",
    "fills": [
     {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "5 mg",
+     "drug": "colchicine",
+     "brand": "Colcrys",
+     "strength": "0.6 mg",
      "fills": [
-      "2021-11-06"
+      "2020-05-25",
+      "2020-07-10",
+      "2020-08-26",
+      "2020-10-12",
+      "2020-11-27",
+      "2021-01-13",
+      "2021-03-01",
+      "2021-04-17",
+      "2021-06-02",
+      "2021-07-19",
+      "2021-09-04",
+      "2021-10-20",
+      "2021-12-06",
+      "2022-01-22",
+      "2022-03-10",
+      "2022-04-25",
+      "2022-06-11",
+      "2022-07-28",
+      "2022-09-12",
+      "2022-10-29",
+      "2022-12-15",
+      "2023-01-31",
+      "2023-03-18",
+      "2023-05-04",
+      "2023-06-20",
+      "2023-08-05",
+      "2023-09-21",
+      "2023-11-07",
+      "2023-12-24",
+      "2024-02-08",
+      "2024-03-26",
+      "2024-05-12",
+      "2024-06-27",
+      "2024-08-13",
+      "2024-09-29",
+      "2024-11-15",
+      "2024-12-31",
+      "2025-02-16",
+      "2025-04-04",
+      "2025-05-21"
      ],
-     "days_supply": 5,
-     "prescriber": "Dr. Garcia (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
+     "days_supply": 30,
+     "prescriber": "Dr. Justin Fisher",
+     "specialty": "family medicine",
+     "cond_index": 0
     },
     {
-     "drug": "ibuprofen",
-     "brand": "Motrin",
-     "strength": "800 mg",
+     "drug": "allopurinol",
+     "brand": "Zyloprim",
+     "strength": "100 mg",
      "fills": [
-      "2021-04-02"
+      "2020-05-25",
+      "2020-07-10",
+      "2020-08-26",
+      "2020-10-12",
+      "2020-11-27",
+      "2021-01-13",
+      "2021-03-01",
+      "2021-04-17",
+      "2021-06-02",
+      "2021-07-19",
+      "2021-09-04",
+      "2021-10-20",
+      "2021-12-06",
+      "2022-01-22",
+      "2022-03-10",
+      "2022-04-25",
+      "2022-06-11",
+      "2022-07-28",
+      "2022-09-12",
+      "2022-10-29",
+      "2022-12-15",
+      "2023-01-31",
+      "2023-03-18",
+      "2023-05-04",
+      "2023-06-20",
+      "2023-08-05",
+      "2023-09-21",
+      "2023-11-07",
+      "2023-12-24",
+      "2024-02-08",
+      "2024-03-26",
+      "2024-05-12",
+      "2024-06-27",
+      "2024-08-13",
+      "2024-09-29",
+      "2024-11-15",
+      "2024-12-31",
+      "2025-02-16",
+      "2025-04-04",
+      "2025-05-21"
      ],
-     "days_supply": 5,
-     "prescriber": "Dr. Patel (Urgent Care)",
+     "days_supply": 10,
+     "prescriber": "Dr. Justin Fisher",
+     "specialty": "family medicine",
+     "cond_index": 0
+    },
+    {
+     "drug": "cyclobenzaprine",
+     "brand": "Flexeril",
+     "strength": "10 mg",
+     "fills": [
+      "2023-08-13"
+     ],
+     "days_supply": 10,
+     "prescriber": "Dr. Garcia (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
     }
@@ -183,9 +275,15 @@
    "vendor": "MIBF",
    "codes": [
     {
-     "code": "490320",
-     "reported": "2010-08-01",
+     "code": "490383",
+     "reported": "2014-03-01",
      "cond_index": null
+    },
+    {
+     "code": "525716",
+     "reported": "2023-11-21",
+     "cond_index": null,
+     "uncorroborated": true
     }
    ],
    "no_hit": false
@@ -197,6 +295,60 @@
    "events": [],
    "no_record": true,
    "foreign_license": false
+  },
+  "C0358-D06": {
+   "vendor": "HSC",
+   "exam_date": "2025-06-05",
+   "height_in": 74.0,
+   "weight_lb": 257.0,
+   "bp": [
+    [
+     148,
+     87
+    ],
+    [
+     144,
+     84
+    ]
+   ],
+   "pulse": 63,
+   "examiner_notes": {}
+  },
+  "C0358-D07": {
+   "vendor": "MIL",
+   "collected": "2025-06-05",
+   "fasting": false,
+   "results": {
+    "tc": 273.0,
+    "hdl": 41.0,
+    "ldl": 198.0,
+    "triglycerides": 167.0,
+    "tc_hdl_ratio": 6.7,
+    "a1c": 5.2,
+    "ast": 14.0,
+    "alt": 42.0,
+    "ggt": 19.0,
+    "alk_phos": 100.0,
+    "bilirubin": 0.6,
+    "albumin": 4.1,
+    "creatinine": 0.9,
+    "egfr": 78.0,
+    "hemoglobin": 16.4,
+    "hiv": 0.0,
+    "cdt": 1.2,
+    "glucose_random": 120.0
+   }
+  },
+  "C0358-D08": {
+   "vendor": "MIL",
+   "collected": "2025-06-05",
+   "results": {
+    "cotinine_urine": 2261.0,
+    "urine_protein": 10.0,
+    "cocaine": 0.0,
+    "urine_glucose": 0,
+    "urine_rbc": 0
+   }
   }
  }
 }

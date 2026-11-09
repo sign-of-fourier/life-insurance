@@ -205,7 +205,7 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "sinusitis",
+    "condition": "acute sinusitis",
     "diagnosed": "12/2016",
     "treatment": "azithromycin, amoxicillin-clavulanate",
     "physician": "Dr. Pamela Horn"
@@ -265,21 +265,15 @@
   },
   {
    "fact_id": "C0262-F020",
-   "doc_id": "C0262-D03",
-   "kind": "rx_fill",
-   "key": "amoxicillin-clavulanate",
-   "value": {
-    "strength": "875/125 mg",
-    "n_fills": 3,
-    "first": "2018-03-14",
-    "last": "2025-03-09",
-    "prescriber_specialty": "family medicine"
-   },
+   "doc_id": "C0262-D04",
+   "kind": "mib_code",
+   "key": "170715",
+   "value": "2020-12-30",
    "unit": null,
-   "as_of": "2025-03-09",
-   "relevant": false,
-   "truth_ref": "conditions[3]",
-   "note": null
+   "as_of": "2020-12-30",
+   "relevant": true,
+   "truth_ref": null,
+   "note": "uncorroborated"
   },
   {
    "fact_id": "C0262-F021",
@@ -735,6 +729,18 @@
   },
   {
    "fact_id": "C0262-F056",
+   "doc_id": "C0262-D10",
+   "kind": "aps_finding",
+   "key": "rule_out",
+   "value": "r/o Abnormal EKG",
+   "unit": null,
+   "as_of": "2024-07-18",
+   "relevant": true,
+   "truth_ref": null,
+   "note": "uncorroborated suspicion"
+  },
+  {
+   "fact_id": "C0262-F057",
    "doc_id": "C0262-D11",
    "kind": "aps_finding",
    "key": "dx:lupus",
@@ -746,23 +752,35 @@
     "kind": "systemic"
    },
    "unit": null,
-   "as_of": "2024-11-26",
+   "as_of": "2024-09-22",
    "relevant": true,
    "truth_ref": "conditions[2]",
    "note": null
   },
   {
-   "fact_id": "C0262-F057",
+   "fact_id": "C0262-F058",
    "doc_id": "C0262-D11",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "127/77",
-    "127/86",
-    "131/83"
+    "117/82",
+    "124/80",
+    "122/89"
    ],
    "unit": null,
-   "as_of": "2024-11-26",
+   "as_of": "2024-09-22",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0262-F059",
+   "doc_id": "C0262-D11",
+   "kind": "aps_finding",
+   "key": "exercise",
+   "value": "runs 3-4x/week",
+   "unit": null,
+   "as_of": "2024-09-22",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -814,29 +832,30 @@
    ]
   },
   {
-   "doc_id": "C0262-D04",
-   "case_id": "C0262",
-   "doc_type": "mib",
-   "vendor_id": "MIBF",
-   "ordered_at": "2025-03-12T09:43:00",
-   "received_at": "2025-03-12T10:05:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0262/C0262-D04.txt",
-   "fact_ids": []
-  },
-  {
    "doc_id": "C0262-D03",
    "case_id": "C0262",
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-03-12T09:43:00",
-   "received_at": "2025-03-12T10:10:00",
+   "received_at": "2025-03-12T10:02:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0262/C0262-D03.txt",
    "fact_ids": [
-    "C0262-F019",
+    "C0262-F019"
+   ]
+  },
+  {
+   "doc_id": "C0262-D04",
+   "case_id": "C0262",
+   "doc_type": "mib",
+   "vendor_id": "MIBF",
+   "ordered_at": "2025-03-12T09:43:00",
+   "received_at": "2025-03-12T10:07:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0262/C0262-D04.txt",
+   "fact_ids": [
     "C0262-F020"
    ]
   },
@@ -880,7 +899,7 @@
    "vendor_id": "PMX",
    "ordered_at": "2025-03-12T12:42:00",
    "received_at": "2025-03-24T23:42:00",
-   "order_reason": "REQ-3 accel fails (Part 2 yes) -> next column",
+   "order_reason": "REQ-3 accel fails (Part 2 yes, MIB code) -> next column",
    "pages": 1,
    "text_path": "data/source/C0262/C0262-D06.txt",
    "fact_ids": [
@@ -896,7 +915,7 @@
    "vendor_id": "APX",
    "ordered_at": "2025-03-23T17:42:00",
    "received_at": "2025-03-27T17:42:00",
-   "order_reason": "REQ-3 accel fails (Part 2 yes) -> next column",
+   "order_reason": "REQ-3 accel fails (Part 2 yes, MIB code) -> next column",
    "pages": 1,
    "text_path": "data/source/C0262/C0262-D07.txt",
    "fact_ids": [
@@ -927,7 +946,7 @@
    "vendor_id": "APX",
    "ordered_at": "2025-03-23T17:42:00",
    "received_at": "2025-03-27T17:47:00",
-   "order_reason": "REQ-3 accel fails (Part 2 yes) -> next column",
+   "order_reason": "REQ-3 accel fails (Part 2 yes, MIB code) -> next column",
    "pages": 1,
    "text_path": "data/source/C0262/C0262-D08.txt",
    "fact_ids": [
@@ -943,14 +962,15 @@
    "case_id": "C0262",
    "doc_type": "aps",
    "vendor_id": "small_practice_typed",
-   "ordered_at": "2025-03-14T15:42:00",
-   "received_at": "2025-04-07T15:42:00",
+   "ordered_at": "2025-03-14T12:42:00",
+   "received_at": "2025-04-02T12:42:00",
    "order_reason": "REQ-2.1 impairment may rate >= +50",
-   "pages": 2,
+   "pages": 1,
    "text_path": "data/source/C0262/C0262-D11.txt",
    "fact_ids": [
-    "C0262-F056",
-    "C0262-F057"
+    "C0262-F057",
+    "C0262-F058",
+    "C0262-F059"
    ]
   },
   {
@@ -965,7 +985,8 @@
    "text_path": "data/source/C0262/C0262-D10.txt",
    "fact_ids": [
     "C0262-F054",
-    "C0262-F055"
+    "C0262-F055",
+    "C0262-F056"
    ]
   }
  ]

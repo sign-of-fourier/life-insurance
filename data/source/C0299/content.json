@@ -1,9 +1,9 @@
 {
  "meta": {
   "requirements": {
-   "PM": "REQ-3 accel fails (Part 2 yes, high-impact Rx) -> next column",
-   "B": "REQ-3 accel fails (Part 2 yes, high-impact Rx) -> next column",
-   "U": "REQ-3 accel fails (Part 2 yes, high-impact Rx) -> next column",
+   "PM": "REQ-3 accel fails (Part 2 yes) -> next column",
+   "B": "REQ-3 accel fails (Part 2 yes) -> next column",
+   "U": "REQ-3 accel fails (Part 2 yes) -> next column",
    "FINQ": "FIN-2 over limit / KPE"
   },
   "aps": [],
@@ -30,9 +30,9 @@
    "riders": [
     "KPE"
    ],
-   "existing": 0,
+   "existing": 250000,
    "replacement": false,
-   "beneficiary": "spouse",
+   "beneficiary": "trust",
    "signed": "2025-04-18",
    "signed_in_us": true
   },
@@ -70,7 +70,7 @@
      "answer": "Former cigar; quit 08/2021"
     },
     "alcohol": {
-     "answer": "3.0 drinks/week"
+     "answer": "10.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -114,7 +114,7 @@
       {
        "condition": "Rheumatoid arthritis",
        "diagnosed": "03/2022",
-       "treatment": "tofacitinib, adalimumab",
+       "treatment": "prednisone, hydroxychloroquine",
        "physician": "Dr. Mike Smith"
       }
      ]
@@ -133,6 +133,18 @@
        "diagnosed": "10/2022",
        "treatment": "doxycycline",
        "physician": "Dr. Mike Smith"
+      },
+      {
+       "condition": "acute sinusitis",
+       "diagnosed": "05/2020",
+       "treatment": "amoxicillin-clavulanate, azithromycin",
+       "physician": "Dr. Mike Smith"
+      },
+      {
+       "condition": "vitamin D deficiency",
+       "diagnosed": "02/2022",
+       "treatment": "ergocalciferol",
+       "physician": "Dr. Mike Smith"
       }
      ]
     },
@@ -143,13 +155,13 @@
      "answer": "No"
     },
     "current_meds": {
-     "answer": "adalimumab, doxycycline, tofacitinib"
+     "answer": "doxycycline, ergocalciferol, hydroxychloroquine, prednisone"
     },
     "physician": {
      "answer": "Dr. Mike Smith, Hanson LLC Medical Group; last visit 11/2024"
     },
     "family_history": {
-     "answer": "father: MI, died 52; mother: hypertension, dx 69"
+     "answer": "mother: MI, died 89"
     },
     "weight_change": {
      "answer": "No"
@@ -163,9 +175,9 @@
    "vendor": "RXP",
    "fills": [
     {
-     "drug": "tofacitinib",
-     "brand": "Xeljanz",
-     "strength": "5 mg",
+     "drug": "prednisone",
+     "brand": "Deltasone",
+     "strength": "20 mg",
      "fills": [
       "2022-04-09",
       "2022-07-09",
@@ -187,21 +199,22 @@
      "cond_index": 0
     },
     {
-     "drug": "adalimumab",
-     "brand": "Humira",
-     "strength": "40 mg inj",
+     "drug": "hydroxychloroquine",
+     "brand": "Plaquenil",
+     "strength": "200 mg",
      "fills": [
-      "2022-05-17",
-      "2022-08-21",
-      "2022-11-26",
-      "2023-03-03",
-      "2023-06-07",
-      "2023-09-12",
-      "2023-12-18",
-      "2024-03-24",
-      "2024-06-28",
-      "2024-10-03",
-      "2025-01-08",
+      "2022-03-13",
+      "2022-06-15",
+      "2022-09-17",
+      "2022-12-20",
+      "2023-03-24",
+      "2023-06-26",
+      "2023-09-28",
+      "2023-12-31",
+      "2024-04-03",
+      "2024-07-06",
+      "2024-10-08",
+      "2025-01-10",
       "2025-04-15"
      ],
      "days_supply": 90,
@@ -214,7 +227,46 @@
      "brand": "Vibramycin",
      "strength": "100 mg",
      "fills": [
-      "2022-10-21"
+      "2022-10-21",
+      "2022-11-13",
+      "2022-12-06",
+      "2022-12-29",
+      "2023-01-22",
+      "2023-02-14",
+      "2023-03-09",
+      "2023-04-01",
+      "2023-04-25",
+      "2023-05-18",
+      "2023-06-10",
+      "2023-07-03",
+      "2023-07-27",
+      "2023-08-19",
+      "2023-09-11",
+      "2023-10-04",
+      "2023-10-28",
+      "2023-11-20",
+      "2023-12-13",
+      "2024-01-05",
+      "2024-01-29",
+      "2024-02-21",
+      "2024-03-15",
+      "2024-04-07",
+      "2024-05-01",
+      "2024-05-24",
+      "2024-06-16",
+      "2024-07-09",
+      "2024-08-02",
+      "2024-08-25",
+      "2024-09-17",
+      "2024-10-10",
+      "2024-11-03",
+      "2024-11-26",
+      "2024-12-19",
+      "2025-01-11",
+      "2025-02-04",
+      "2025-02-27",
+      "2025-03-22",
+      "2025-04-15"
      ],
      "days_supply": 10,
      "prescriber": "Dr. Mike Smith",
@@ -228,20 +280,7 @@
      "fills": [
       "2020-06-05"
      ],
-     "days_supply": 10,
-     "prescriber": "Dr. Mike Smith",
-     "specialty": "family medicine",
-     "cond_index": 2
-    },
-    {
-     "drug": "azithromycin",
-     "brand": "Zithromax",
-     "strength": "250 mg",
-     "fills": [
-      "2020-06-17",
-      "2025-04-15"
-     ],
-     "days_supply": 10,
+     "days_supply": 30,
      "prescriber": "Dr. Mike Smith",
      "specialty": "family medicine",
      "cond_index": 2
@@ -251,46 +290,61 @@
      "brand": "Drisdol",
      "strength": "50000 IU",
      "fills": [
-      "2023-04-30"
+      "2022-03-29",
+      "2022-04-26",
+      "2022-05-25",
+      "2022-06-22",
+      "2022-07-21",
+      "2022-08-18",
+      "2022-09-16",
+      "2022-10-14",
+      "2022-11-12",
+      "2022-12-10",
+      "2023-01-08",
+      "2023-02-05",
+      "2023-03-06",
+      "2023-04-04",
+      "2023-05-02",
+      "2023-05-31",
+      "2023-06-28",
+      "2023-07-27",
+      "2023-08-24",
+      "2023-09-22",
+      "2023-10-20",
+      "2023-11-18",
+      "2023-12-16",
+      "2024-01-14",
+      "2024-02-11",
+      "2024-03-11",
+      "2024-04-09",
+      "2024-05-07",
+      "2024-06-05",
+      "2024-07-03",
+      "2024-08-01",
+      "2024-08-29",
+      "2024-09-27",
+      "2024-10-25",
+      "2024-11-23",
+      "2024-12-21",
+      "2025-01-19",
+      "2025-02-16",
+      "2025-03-17",
+      "2025-04-15"
      ],
-     "days_supply": 30,
+     "days_supply": 10,
      "prescriber": "Dr. Mike Smith",
      "specialty": "family medicine",
      "cond_index": 3
     },
     {
-     "drug": "amoxicillin",
-     "brand": "Amoxil",
-     "strength": "875 mg",
+     "drug": "prednisone",
+     "brand": "Deltasone",
+     "strength": "20 mg",
      "fills": [
-      "2020-11-21"
-     ],
-     "days_supply": 10,
-     "prescriber": "Dr. Garcia (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
-    },
-    {
-     "drug": "ondansetron",
-     "brand": "Zofran",
-     "strength": "8 mg",
-     "fills": [
-      "2021-07-29"
-     ],
-     "days_supply": 7,
-     "prescriber": "Dr. Garcia (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
-    },
-    {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "10 mg",
-     "fills": [
-      "2022-08-26"
+      "2021-08-26"
      ],
      "days_supply": 5,
-     "prescriber": "Dr. Garcia (Urgent Care)",
+     "prescriber": "Dr. Patel (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
     }
@@ -301,13 +355,13 @@
    "vendor": "MIBF",
    "codes": [
     {
-     "code": "906222",
-     "reported": "2025-01-13",
+     "code": "906252",
+     "reported": "2023-11-29",
      "cond_index": 0
     },
     {
-     "code": "010070",
-     "reported": "2023-11-15",
+     "code": "010979",
+     "reported": "2020-11-15",
      "cond_index": null,
      "admin": true
     }
@@ -320,14 +374,9 @@
    "status": "VALID",
    "events": [
     {
-     "date": "2023-09-11",
-     "code": "M09",
-     "desc": "Careless driving"
-    },
-    {
-     "date": "2023-08-22",
-     "code": "S15",
-     "desc": "Speeding 11-15 over limit"
+     "date": "2021-06-20",
+     "code": "S99",
+     "desc": "Speeding, amount not reported"
     }
    ],
    "no_record": false,
@@ -335,67 +384,67 @@
   },
   "C0299-D06": {
    "vendor": "PMX",
-   "exam_date": "2025-04-21",
-   "height_in": 66.5,
-   "weight_lb": 183.0,
+   "exam_date": "2025-04-22",
+   "height_in": 67.0,
+   "weight_lb": 186.0,
    "bp": [
     [
      136,
-     87
+     86
     ],
     [
-     128,
-     91
+     132,
+     90
     ],
     [
-     130,
-     88
+     143,
+     89
     ]
    ],
-   "pulse": 85,
+   "pulse": 67,
    "examiner_notes": {}
   },
   "C0299-D07": {
    "vendor": "MIL",
-   "collected": "2025-04-21",
-   "fasting": false,
+   "collected": "2025-04-22",
+   "fasting": true,
    "results": {
-    "tc": 220.0,
-    "hdl": 42.0,
-    "ldl": 141.0,
-    "triglycerides": 182.0,
-    "tc_hdl_ratio": 5.2,
-    "a1c": 5.4,
-    "ast": 26.0,
-    "alt": 32.0,
-    "ggt": 44.0,
-    "alk_phos": 117.0,
-    "bilirubin": 1.1,
-    "albumin": 4.9,
-    "creatinine": 1.2,
-    "egfr": 93.0,
-    "hemoglobin": 16.3,
+    "tc": 274.0,
+    "hdl": 61.0,
+    "ldl": 169.0,
+    "triglycerides": 216.0,
+    "tc_hdl_ratio": 4.5,
+    "glucose_fasting": 83.0,
+    "a1c": 5.2,
+    "ast": 36.0,
+    "alt": 23.0,
+    "ggt": 13.0,
+    "alk_phos": 85.0,
+    "bilirubin": 1.0,
+    "albumin": 4.7,
+    "creatinine": 0.8,
+    "egfr": 105.0,
+    "hemoglobin": 14.5,
     "hiv": 0.0,
-    "cdt": 1.1,
-    "glucose_random": 131.0
+    "cdt": 0.9
    }
   },
   "C0299-D08": {
    "vendor": "MIL",
-   "collected": "2025-04-21",
+   "collected": "2025-04-22",
    "results": {
-    "cotinine_urine": 284.0,
-    "urine_protein": 20.0,
+    "cotinine_urine": 899.0,
+    "urine_protein": 0.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
-    "urine_rbc": 8
+    "urine_rbc": 0
    }
   },
   "C0299-D09": {
    "type": "FINQ",
    "income": 18000,
    "net_worth": 18000,
-   "existing": 0,
+   "existing": 250000,
    "purpose": "business"
   }
  }

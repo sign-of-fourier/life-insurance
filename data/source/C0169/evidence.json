@@ -138,7 +138,7 @@
    "doc_id": "C0169-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 2.0,
+   "value": 8.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -232,7 +232,7 @@
    "key": "ivermectin topical",
    "value": {
     "strength": "1%",
-    "n_fills": 3,
+    "n_fills": 40,
     "first": "2023-09-09",
     "last": "2025-02-22",
     "prescriber_specialty": "family medicine"
@@ -247,28 +247,34 @@
    "fact_id": "C0169-F019",
    "doc_id": "C0169-D03",
    "kind": "rx_fill",
-   "key": "tamsulosin",
+   "key": "ondansetron",
    "value": {
-    "strength": "0.4 mg",
-    "n_fills": 40,
-    "first": "2018-02-27",
-    "last": "2025-02-22",
-    "prescriber_specialty": "family medicine"
+    "strength": "8 mg",
+    "n_fills": 1,
+    "first": "2018-12-09",
+    "last": "2018-12-09",
+    "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2025-02-22",
+   "as_of": "2018-12-09",
    "relevant": false,
-   "truth_ref": "conditions[2]",
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0169-F020",
-   "doc_id": "C0169-D04",
-   "kind": "mib_code",
-   "key": "180656",
-   "value": "2011-08-01",
+   "doc_id": "C0169-D03",
+   "kind": "rx_fill",
+   "key": "amoxicillin",
+   "value": {
+    "strength": "500 mg",
+    "n_fills": 1,
+    "first": "2020-07-28",
+    "last": "2020-07-28",
+    "prescriber_specialty": "urgent care"
+   },
    "unit": null,
-   "as_of": "2011-08-01",
+   "as_of": "2020-07-28",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -277,13 +283,13 @@
    "fact_id": "C0169-F021",
    "doc_id": "C0169-D04",
    "kind": "mib_code",
-   "key": "170716",
-   "value": "2021-05-20",
+   "key": "730262",
+   "value": "2022-01-22",
    "unit": null,
-   "as_of": "2021-05-20",
-   "relevant": true,
-   "truth_ref": null,
-   "note": "uncorroborated"
+   "as_of": "2022-01-22",
+   "relevant": false,
+   "truth_ref": "conditions[2]",
+   "note": null
   },
   {
    "fact_id": "C0169-F022",
@@ -320,16 +326,16 @@
    "value": {
     "readings": [
      [
-      145,
-      75
+      149,
+      76
      ],
      [
-      145,
-      80
+      149,
+      81
      ]
     ],
     "avg": [
-     145,
+     149,
      78
     ]
    },
@@ -356,7 +362,7 @@
    "doc_id": "C0169-D07",
    "kind": "lab_value",
    "key": "tc",
-   "value": 254.0,
+   "value": 256.0,
    "unit": "mg/dL",
    "as_of": "2025-03-09",
    "relevant": true,
@@ -368,7 +374,7 @@
    "doc_id": "C0169-D07",
    "kind": "lab_value",
    "key": "hdl",
-   "value": 47.0,
+   "value": 60.0,
    "unit": "mg/dL",
    "as_of": "2025-03-09",
    "relevant": true,
@@ -380,7 +386,7 @@
    "doc_id": "C0169-D07",
    "kind": "lab_value",
    "key": "ldl",
-   "value": 170.0,
+   "value": 177.0,
    "unit": "mg/dL",
    "as_of": "2025-03-09",
    "relevant": false,
@@ -392,7 +398,7 @@
    "doc_id": "C0169-D07",
    "kind": "lab_value",
    "key": "triglycerides",
-   "value": 182.0,
+   "value": 91.0,
    "unit": "mg/dL",
    "as_of": "2025-03-09",
    "relevant": false,
@@ -404,7 +410,7 @@
    "doc_id": "C0169-D07",
    "kind": "lab_value",
    "key": "tc_hdl_ratio",
-   "value": 5.4,
+   "value": 4.3,
    "unit": "ratio",
    "as_of": "2025-03-09",
    "relevant": true,
@@ -596,7 +602,7 @@
    "doc_id": "C0169-D08",
    "kind": "lab_value",
    "key": "cotinine_urine",
-   "value": 522.0,
+   "value": 769.0,
    "unit": "ng/mL",
    "as_of": "2025-03-09",
    "relevant": true,
@@ -692,9 +698,9 @@
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "135/79",
-    "142/72",
-    "143/82"
+    "139/80",
+    "146/73",
+    "147/83"
    ],
    "unit": null,
    "as_of": "2024-11-16",
@@ -753,12 +759,11 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2025-02-25T09:11:00",
-   "received_at": "2025-02-25T09:34:00",
+   "received_at": "2025-02-25T09:31:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0169/C0169-D04.txt",
    "fact_ids": [
-    "C0169-F020",
     "C0169-F021"
    ]
   },
@@ -768,13 +773,14 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-02-25T09:11:00",
-   "received_at": "2025-02-25T09:40:00",
+   "received_at": "2025-02-25T09:35:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0169/C0169-D03.txt",
    "fact_ids": [
     "C0169-F018",
-    "C0169-F019"
+    "C0169-F019",
+    "C0169-F020"
    ]
   },
   {

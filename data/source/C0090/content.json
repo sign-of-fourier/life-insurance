@@ -129,15 +129,9 @@
      "answer": "Yes",
      "details": [
       {
-       "condition": "sinusitis",
-       "diagnosed": "11/2023",
-       "treatment": "amoxicillin-clavulanate",
-       "physician": "Dr. Valerie Ferguson"
-      },
-      {
-       "condition": "acute injury",
-       "diagnosed": "09/2015",
-       "treatment": "cyclobenzaprine",
+       "condition": "musculoskeletal injury",
+       "diagnosed": "05/2020",
+       "treatment": "cyclobenzaprine, ibuprofen",
        "physician": "Dr. Valerie Ferguson"
       }
      ]
@@ -149,7 +143,7 @@
      "answer": "No"
     },
     "current_meds": {
-     "answer": "amoxicillin-clavulanate"
+     "answer": "none"
     },
     "physician": {
      "answer": "Dr. Valerie Ferguson, Martin Inc Medical Group; last visit 04/2026"
@@ -167,64 +161,15 @@
   },
   "C0090-D03": {
    "vendor": "SCR",
-   "fills": [
-    {
-     "drug": "amoxicillin-clavulanate",
-     "brand": "Augmentin",
-     "strength": "875/125 mg",
-     "fills": [
-      "2024-01-05"
-     ],
-     "days_supply": 10,
-     "prescriber": "Dr. Valerie Ferguson",
-     "specialty": "family medicine",
-     "cond_index": 0
-    },
-    {
-     "drug": "azithromycin",
-     "brand": "Zithromax",
-     "strength": "250 mg",
-     "fills": [
-      "2026-04-06"
-     ],
-     "days_supply": 7,
-     "prescriber": "Dr. Garcia (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
-    },
-    {
-     "drug": "amoxicillin",
-     "brand": "Amoxil",
-     "strength": "875 mg",
-     "fills": [
-      "2025-01-20"
-     ],
-     "days_supply": 10,
-     "prescriber": "Dr. Nguyen (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
-    },
-    {
-     "drug": "ondansetron",
-     "brand": "Zofran",
-     "strength": "8 mg",
-     "fills": [
-      "2021-10-17"
-     ],
-     "days_supply": 7,
-     "prescriber": "Dr. Garcia (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
-    }
-   ],
-   "no_history": false
+   "fills": [],
+   "no_history": true
   },
   "C0090-D04": {
    "vendor": "MIBS",
    "codes": [
     {
-     "code": "010900",
-     "reported": "2023-03-15",
+     "code": "010070",
+     "reported": "2023-01-15",
      "cond_index": null,
      "admin": true
     }
@@ -232,37 +177,51 @@
    "no_hit": false
   },
   "C0090-D05": {
-   "vendor": "PMX",
-   "exam_date": "2026-11-03",
-   "height_in": 64.0,
-   "weight_lb": 188.0,
-   "bp": [
-    [
-     145,
-     88
-    ],
-    [
-     147,
-     93
-    ],
-    [
-     148,
-     90
-    ]
+   "vendor": "STATE",
+   "license_state": "NJ",
+   "status": "VALID",
+   "events": [
+    {
+     "date": "2026-02-14",
+     "code": "S25",
+     "desc": "Speeding 21-25 over limit"
+    }
    ],
-   "pulse": 87,
-   "examiner_notes": {}
+   "no_record": false,
+   "foreign_license": false
   },
   "C0090-D06": {
+   "vendor": "PMX",
+   "exam_date": "2026-11-08",
+   "height_in": 64.0,
+   "weight_lb": 189.0,
+   "bp": [
+    [
+     134,
+     90
+    ],
+    [
+     134,
+     90
+    ],
+    [
+     134,
+     93
+    ]
+   ],
+   "pulse": 82,
+   "examiner_notes": {}
+  },
+  "C0090-D07": {
    "vendor": "MIL",
-   "collected": "2026-11-03",
+   "collected": "2026-11-08",
    "fasting": false,
    "results": {
-    "tc": 275.0,
-    "hdl": 59.0,
-    "ldl": 184.0,
-    "triglycerides": 160.0,
-    "tc_hdl_ratio": 4.7,
+    "tc": 276.0,
+    "hdl": 65.0,
+    "ldl": 182.0,
+    "triglycerides": 145.0,
+    "tc_hdl_ratio": 4.2,
     "a1c": 5.0,
     "ast": 32.0,
     "alt": 32.0,
@@ -276,25 +235,25 @@
     "hiv": 0.0,
     "cdt": 1.2,
     "nt_probnp": 317.0,
-    "glucose_random": 117.0
-   }
-  },
-  "C0090-D07": {
-   "vendor": "MIL",
-   "collected": "2026-11-03",
-   "results": {
-    "cotinine_urine": 1.0,
-    "urine_protein": 10.0,
-    "cocaine": 0.0,
-    "urine_glucose": 0,
-    "urine_rbc": 1
+    "glucose_random": 119.0
    }
   },
   "C0090-D08": {
+   "vendor": "MIL",
+   "collected": "2026-11-08",
+   "results": {
+    "cotinine_urine": 2.0,
+    "urine_protein": 10.0,
+    "cocaine": 0.0,
+    "urine_glucose": 0,
+    "urine_rbc": 0
+   }
+  },
+  "C0090-D09": {
    "interpretation": "normal sinus rhythm",
    "rate": 84
   },
-  "C0090-D09": {
+  "C0090-D10": {
    "provider": {
     "provider_id": "C0090-P1",
     "name": "Dr. Valerie Ferguson",
@@ -305,12 +264,12 @@
    },
    "style": "specialist_letter",
    "ordered_reason": "REQ-1 grid",
-   "last_visit": "2026-06-20",
+   "last_visit": "2026-09-17",
    "stale": false,
    "problems": [
     {
      "cond_index": 0,
-     "dx": "sinusitis",
+     "dx": "acute sinusitis",
      "key": "benign_no_rating",
      "onset": "2023-11-19",
      "status": "controlled",
@@ -323,31 +282,32 @@
     },
     {
      "cond_index": 1,
-     "dx": "acute injury",
+     "dx": "musculoskeletal injury",
      "key": "benign_no_rating",
-     "onset": "2015-09-02",
+     "onset": "2020-05-24",
      "status": "controlled",
      "details": {
       "member": "acute_injury"
      },
      "meds": [
-      "cyclobenzaprine 5 mg"
+      "cyclobenzaprine 5 mg",
+      "ibuprofen 800 mg"
      ]
     }
    ],
    "visits": [
     {
-     "date": "2026-06-20",
-     "reason": "sinusitis",
-     "bp": "149/88",
-     "weight_lb": 184.0
+     "date": "2026-09-17",
+     "reason": "acute sinusitis",
+     "bp": "141/96",
+     "weight_lb": 191.0
     }
    ],
    "series": {},
    "noncompliant": false,
    "rule_outs": [],
    "legacy_lab": null,
-   "exercise_documented": false,
+   "exercise_documented": true,
    "pages": 3,
    "copy_forward": false,
    "patient": {

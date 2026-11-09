@@ -226,7 +226,7 @@
    "key": "sildenafil",
    "value": {
     "strength": "20 mg",
-    "n_fills": 2,
+    "n_fills": 40,
     "first": "2019-05-11",
     "last": "2026-05-06",
     "prescriber_specialty": "family medicine"
@@ -241,16 +241,16 @@
    "fact_id": "C0723-F019",
    "doc_id": "C0723-D03",
    "kind": "rx_fill",
-   "key": "azithromycin",
+   "key": "hydrocodone-acetaminophen",
    "value": {
-    "strength": "250 mg",
+    "strength": "5/325 mg",
     "n_fills": 1,
-    "first": "2019-09-05",
-    "last": "2019-09-05",
+    "first": "2022-04-12",
+    "last": "2022-04-12",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2019-09-05",
+   "as_of": "2022-04-12",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -259,23 +259,26 @@
    "fact_id": "C0723-F020",
    "doc_id": "C0723-D04",
    "kind": "mib_code",
-   "key": "010970",
-   "value": "2021-11-15",
+   "key": "010070",
+   "value": "2021-12-15",
    "unit": null,
-   "as_of": "2021-11-15",
+   "as_of": "2021-12-15",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0723-F021",
-   "doc_id": "C0723-D04",
-   "kind": "mib_code",
-   "key": "090867",
-   "value": "2012-06-01",
+   "doc_id": "C0723-D06",
+   "kind": "paramed",
+   "key": "build",
+   "value": {
+    "height_in": 68.5,
+    "weight_lb": 176.0
+   },
    "unit": null,
-   "as_of": "2012-06-01",
-   "relevant": false,
+   "as_of": "2026-05-18",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -283,13 +286,29 @@
    "fact_id": "C0723-F022",
    "doc_id": "C0723-D06",
    "kind": "paramed",
-   "key": "build",
+   "key": "bp",
    "value": {
-    "height_in": 69.0,
-    "weight_lb": 179.0
+    "readings": [
+     [
+      133,
+      72
+     ],
+     [
+      130,
+      65
+     ],
+     [
+      127,
+      68
+     ]
+    ],
+    "avg": [
+     130,
+     68
+    ]
    },
    "unit": null,
-   "as_of": "2026-05-12",
+   "as_of": "2026-05-18",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -298,42 +317,23 @@
    "fact_id": "C0723-F023",
    "doc_id": "C0723-D06",
    "kind": "paramed",
-   "key": "bp",
-   "value": {
-    "readings": [
-     [
-      125,
-      66
-     ],
-     [
-      124,
-      73
-     ],
-     [
-      127,
-      70
-     ]
-    ],
-    "avg": [
-     125,
-     70
-    ]
-   },
-   "unit": null,
-   "as_of": "2026-05-12",
-   "relevant": true,
+   "key": "pulse",
+   "value": 92,
+   "unit": "bpm",
+   "as_of": "2026-05-18",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0723-F024",
-   "doc_id": "C0723-D06",
-   "kind": "paramed",
-   "key": "pulse",
-   "value": 92,
-   "unit": "bpm",
-   "as_of": "2026-05-12",
-   "relevant": false,
+   "doc_id": "C0723-D07",
+   "kind": "lab_value",
+   "key": "cotinine_saliva",
+   "value": 1,
+   "unit": "ng/mL",
+   "as_of": "2026-05-18",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -341,11 +341,11 @@
    "fact_id": "C0723-F025",
    "doc_id": "C0723-D07",
    "kind": "lab_value",
-   "key": "cotinine_saliva",
-   "value": 1,
-   "unit": "ng/mL",
-   "as_of": "2026-05-12",
-   "relevant": true,
+   "key": "hiv",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2026-05-18",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -353,22 +353,10 @@
    "fact_id": "C0723-F026",
    "doc_id": "C0723-D07",
    "kind": "lab_value",
-   "key": "hiv",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2026-05-12",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0723-F027",
-   "doc_id": "C0723-D07",
-   "kind": "lab_value",
    "key": "cocaine",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2026-05-12",
+   "as_of": "2026-05-18",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -424,13 +412,12 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2026-05-09T09:14:00",
-   "received_at": "2026-05-09T09:31:00",
+   "received_at": "2026-05-09T09:17:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0723/C0723-D04.txt",
    "fact_ids": [
-    "C0723-F020",
-    "C0723-F021"
+    "C0723-F020"
    ]
   },
   {
@@ -439,7 +426,7 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2026-05-09T09:14:00",
-   "received_at": "2026-05-09T09:51:00",
+   "received_at": "2026-05-09T09:19:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0723/C0723-D03.txt",
@@ -454,7 +441,7 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2026-05-09T09:14:00",
-   "received_at": "2026-05-09T10:19:00",
+   "received_at": "2026-05-09T10:34:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0723/C0723-D05.txt",
@@ -466,14 +453,14 @@
    "doc_type": "paramed",
    "vendor_id": "PMX",
    "ordered_at": "2026-05-09T12:13:00",
-   "received_at": "2026-05-12T22:13:00",
+   "received_at": "2026-05-19T01:13:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0723/C0723-D06.txt",
    "fact_ids": [
+    "C0723-F021",
     "C0723-F022",
-    "C0723-F023",
-    "C0723-F024"
+    "C0723-F023"
    ]
   },
   {
@@ -481,15 +468,15 @@
    "case_id": "C0723",
    "doc_type": "lab_saliva",
    "vendor_id": "MIL",
-   "ordered_at": "2026-05-11T16:13:00",
-   "received_at": "2026-05-15T16:13:00",
+   "ordered_at": "2026-05-17T19:13:00",
+   "received_at": "2026-05-20T19:13:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0723/C0723-D07.txt",
    "fact_ids": [
+    "C0723-F024",
     "C0723-F025",
-    "C0723-F026",
-    "C0723-F027"
+    "C0723-F026"
    ]
   }
  ]

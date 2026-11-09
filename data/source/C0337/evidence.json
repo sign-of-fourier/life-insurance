@@ -54,7 +54,7 @@
    "doc_id": "C0337-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 100000,
+   "value": 0,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -129,8 +129,8 @@
    "kind": "app_answer",
    "key": "foreign_travel",
    "value": {
-    "country": "Denmark",
-    "weeks_per_year": 1.0,
+    "country": "Canada",
+    "weeks_per_year": 3.0,
     "purpose": "vacation"
    },
    "unit": null,
@@ -169,25 +169,8 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "dental",
-    "diagnosed": "11/2024",
-    "treatment": "amoxicillin",
-    "physician": "Dr. Lori Williams"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[0]",
-   "note": null
-  },
-  {
-   "fact_id": "C0337-F015",
-   "doc_id": "C0337-D02",
-   "kind": "app_answer",
-   "key": "other:benign_no_rating",
-   "value": {
     "condition": "osteopenia",
-    "diagnosed": "06/2021",
+    "diagnosed": "04/2024",
     "treatment": "alendronate",
     "physician": "Dr. Lori Williams"
    },
@@ -198,7 +181,7 @@
    "note": null
   },
   {
-   "fact_id": "C0337-F016",
+   "fact_id": "C0337-F015",
    "doc_id": "C0337-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -210,7 +193,7 @@
    "note": null
   },
   {
-   "fact_id": "C0337-F017",
+   "fact_id": "C0337-F016",
    "doc_id": "C0337-D02",
    "kind": "app_answer",
    "key": "family_history",
@@ -227,33 +210,51 @@
    "note": null
   },
   {
-   "fact_id": "C0337-F018",
+   "fact_id": "C0337-F017",
    "doc_id": "C0337-D03",
    "kind": "rx_fill",
-   "key": "amoxicillin",
+   "key": "alendronate",
    "value": {
-    "strength": "500 mg",
-    "n_fills": 1,
-    "first": "2025-01-07",
-    "last": "2025-01-07",
+    "strength": "70 mg",
+    "n_fills": 40,
+    "first": "2024-04-23",
+    "last": "2025-08-23",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2025-01-07",
+   "as_of": "2025-08-23",
    "relevant": false,
-   "truth_ref": "conditions[0]",
+   "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
+   "fact_id": "C0337-F018",
+   "doc_id": "C0337-D03",
+   "kind": "rx_fill",
+   "key": "azithromycin",
+   "value": {
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2025-01-09",
+    "last": "2025-01-09",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2025-01-09",
+   "relevant": false,
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0337-F019",
    "doc_id": "C0337-D04",
    "kind": "mib_code",
-   "key": "630212",
-   "value": "2025-07-11",
+   "key": "190069",
+   "value": "2012-02-01",
    "unit": null,
-   "as_of": "2025-07-11",
+   "as_of": "2012-02-01",
    "relevant": false,
-   "truth_ref": "conditions[0]",
+   "truth_ref": null,
    "note": null
   }
  ],
@@ -297,34 +298,7 @@
     "C0337-F013",
     "C0337-F014",
     "C0337-F015",
-    "C0337-F016",
-    "C0337-F017"
-   ]
-  },
-  {
-   "doc_id": "C0337-D05",
-   "case_id": "C0337",
-   "doc_type": "mvr",
-   "vendor_id": "ACD",
-   "ordered_at": "2025-08-26T09:30:00",
-   "received_at": "2025-08-26T09:45:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0337/C0337-D05.txt",
-   "fact_ids": []
-  },
-  {
-   "doc_id": "C0337-D03",
-   "case_id": "C0337",
-   "doc_type": "rx",
-   "vendor_id": "SCR",
-   "ordered_at": "2025-08-26T09:30:00",
-   "received_at": "2025-08-26T09:48:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0337/C0337-D03.txt",
-   "fact_ids": [
-    "C0337-F018"
+    "C0337-F016"
    ]
   },
   {
@@ -333,13 +307,40 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-08-26T09:30:00",
-   "received_at": "2025-08-26T09:59:00",
+   "received_at": "2025-08-26T09:36:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0337/C0337-D04.txt",
    "fact_ids": [
     "C0337-F019"
    ]
+  },
+  {
+   "doc_id": "C0337-D03",
+   "case_id": "C0337",
+   "doc_type": "rx",
+   "vendor_id": "SCR",
+   "ordered_at": "2025-08-26T09:30:00",
+   "received_at": "2025-08-26T10:07:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0337/C0337-D03.txt",
+   "fact_ids": [
+    "C0337-F017",
+    "C0337-F018"
+   ]
+  },
+  {
+   "doc_id": "C0337-D05",
+   "case_id": "C0337",
+   "doc_type": "mvr",
+   "vendor_id": "ACD",
+   "ordered_at": "2025-08-26T09:30:00",
+   "received_at": "2025-08-26T10:22:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0337/C0337-D05.txt",
+   "fact_ids": []
   }
  ]
 }

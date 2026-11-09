@@ -35,9 +35,9 @@
     "ADB",
     "GIO"
    ],
-   "existing": 250000,
+   "existing": 0,
    "replacement": false,
-   "beneficiary": "spouse",
+   "beneficiary": "estate",
    "signed": "2026-04-02",
    "signed_in_us": true
   },
@@ -75,7 +75,7 @@
      "answer": "No"
     },
     "alcohol": {
-     "answer": "2.0 drinks/week"
+     "answer": "3.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -123,7 +123,15 @@
      "answer": "No"
     },
     "other": {
-     "answer": "No"
+     "answer": "Yes",
+     "details": [
+      {
+       "condition": "acute sinusitis",
+       "diagnosed": "02/2024",
+       "treatment": "amoxicillin-clavulanate, azithromycin",
+       "physician": "Dr. Michael Luna"
+      }
+     ]
     },
     "pending_tests": {
      "answer": "Yes",
@@ -187,11 +195,11 @@
      "cond_index": 0
     },
     {
-     "drug": "amoxicillin-clavulanate",
-     "brand": "Augmentin",
-     "strength": "875/125 mg",
+     "drug": "azithromycin",
+     "brand": "Zithromax",
+     "strength": "250 mg",
      "fills": [
-      "2024-03-23"
+      "2024-02-11"
      ],
      "days_supply": 30,
      "prescriber": "Dr. Michael Luna",
@@ -199,76 +207,13 @@
      "cond_index": 2
     },
     {
-     "drug": "azithromycin",
-     "brand": "Zithromax",
-     "strength": "250 mg",
+     "drug": "amoxicillin",
+     "brand": "Amoxil",
+     "strength": "875 mg",
      "fills": [
-      "2024-02-16",
-      "2024-03-06",
-      "2024-03-26",
-      "2024-04-15",
-      "2024-05-05",
-      "2024-05-25",
-      "2024-06-13",
-      "2024-07-03",
-      "2024-07-23",
-      "2024-08-12",
-      "2024-09-01",
-      "2024-09-21",
-      "2024-10-10",
-      "2024-10-30",
-      "2024-11-19",
-      "2024-12-09",
-      "2024-12-29",
-      "2025-01-17",
-      "2025-02-06",
-      "2025-02-26",
-      "2025-03-18",
-      "2025-04-07",
-      "2025-04-27",
-      "2025-05-16",
-      "2025-06-05",
-      "2025-06-25",
-      "2025-07-15",
-      "2025-08-04",
-      "2025-08-23",
-      "2025-09-12",
-      "2025-10-02",
-      "2025-10-22",
-      "2025-11-11",
-      "2025-12-01",
-      "2025-12-20",
-      "2026-01-09",
-      "2026-01-29",
-      "2026-02-18",
-      "2026-03-10",
-      "2026-03-30"
+      "2024-10-13"
      ],
-     "days_supply": 10,
-     "prescriber": "Dr. Michael Luna",
-     "specialty": "family medicine",
-     "cond_index": 2
-    },
-    {
-     "drug": "azithromycin",
-     "brand": "Zithromax",
-     "strength": "250 mg",
-     "fills": [
-      "2023-03-18"
-     ],
-     "days_supply": 10,
-     "prescriber": "Dr. Kim (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
-    },
-    {
-     "drug": "ondansetron",
-     "brand": "Zofran",
-     "strength": "4 mg",
-     "fills": [
-      "2024-11-27"
-     ],
-     "days_supply": 5,
+     "days_supply": 7,
      "prescriber": "Dr. Nguyen (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
@@ -278,7 +223,7 @@
      "brand": "Norco",
      "strength": "10/325 mg",
      "fills": [
-      "2019-05-28"
+      "2023-03-18"
      ],
      "days_supply": 10,
      "prescriber": "Dr. Kim (Urgent Care)",
@@ -292,20 +237,26 @@
    "vendor": "MIBF",
    "codes": [
     {
-     "code": "325256",
-     "reported": "2024-12-01",
+     "code": "325216",
+     "reported": "2026-02-15",
      "cond_index": 0
     },
     {
-     "code": "730275",
-     "reported": "2025-09-16",
+     "code": "735255",
+     "reported": "2026-02-21",
      "cond_index": 1
     },
     {
-     "code": "010970",
-     "reported": "2020-03-15",
+     "code": "010070",
+     "reported": "2019-09-15",
      "cond_index": null,
      "admin": true
+    },
+    {
+     "code": "525775",
+     "reported": "2023-01-15",
+     "cond_index": null,
+     "uncorroborated": true
     }
    ],
    "no_hit": false
@@ -314,66 +265,84 @@
    "vendor": "ACD",
    "license_state": "SC",
    "status": "VALID",
-   "events": [],
-   "no_record": true,
+   "events": [
+    {
+     "date": "2024-09-30",
+     "code": "S99",
+     "desc": "Speeding, amount not reported"
+    },
+    {
+     "date": "2023-11-25",
+     "code": "S25",
+     "desc": "Speeding 21-25 over limit"
+    },
+    {
+     "date": "2020-02-19",
+     "code": "A03",
+     "desc": "Accident - not at fault"
+    }
+   ],
+   "no_record": false,
    "foreign_license": false
   },
   "C0226-D06": {
    "vendor": "PMX",
    "exam_date": "2026-04-07",
-   "height_in": 65.5,
-   "weight_lb": 174.0,
+   "height_in": 66.0,
+   "weight_lb": 173.0,
    "bp": [
     [
-     130,
-     70
+     125,
+     86
     ],
     [
-     129,
-     74
+     115,
+     87
     ],
     [
-     133,
-     71
+     120,
+     87
     ]
    ],
-   "pulse": 68,
-   "examiner_notes": {}
+   "pulse": 63,
+   "examiner_notes": {
+    "Peripheral neuropathy (idiopathic)": "applicant mentioned to examiner"
+   }
   },
   "C0226-D07": {
    "vendor": "MIL",
    "collected": "2026-04-07",
-   "fasting": true,
+   "fasting": false,
    "results": {
-    "tc": 286.0,
-    "hdl": 55.0,
-    "ldl": 206.0,
-    "triglycerides": 125.0,
-    "tc_hdl_ratio": 5.2,
-    "glucose_fasting": 104.0,
-    "a1c": 5.2,
-    "ast": 21.0,
-    "alt": 15.0,
-    "ggt": 14.0,
-    "alk_phos": 87.0,
-    "bilirubin": 1.2,
-    "albumin": 4.8,
+    "tc": 289.0,
+    "hdl": 62.0,
+    "ldl": 205.0,
+    "triglycerides": 106.0,
+    "tc_hdl_ratio": 4.7,
+    "a1c": 4.9,
+    "ast": 25.0,
+    "alt": 24.0,
+    "ggt": 32.0,
+    "alk_phos": 113.0,
+    "bilirubin": 0.8,
+    "albumin": 4.4,
     "creatinine": 0.9,
-    "egfr": 108.0,
-    "hemoglobin": 15.0,
+    "egfr": 97.0,
+    "hemoglobin": 13.9,
     "hiv": 0.0,
-    "cdt": 1.1
+    "cdt": 0.9,
+    "glucose_random": 112.0
    }
   },
   "C0226-D08": {
    "vendor": "MIL",
    "collected": "2026-04-07",
    "results": {
-    "cotinine_urine": 8.0,
-    "urine_protein": 20.0,
+    "cotinine_urine": 2.0,
+    "urine_protein": 10.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
-    "urine_rbc": 2
+    "urine_rbc": 1
    }
   },
   "C0226-D09": {
@@ -387,7 +356,7 @@
    },
    "style": "epic_progress",
    "ordered_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "last_visit": "2025-12-30",
+   "last_visit": "2025-12-23",
    "stale": false,
    "problems": [
     {
@@ -404,36 +373,36 @@
    ],
    "visits": [
     {
-     "date": "2025-12-30",
+     "date": "2025-12-23",
+     "reason": "rash",
+     "bp": "116/81",
+     "weight_lb": 174.0
+    },
+    {
+     "date": "2024-11-09",
      "reason": "lab review",
-     "bp": "132/76",
+     "bp": "117/91",
      "weight_lb": 170.0
     },
     {
-     "date": "2025-06-01",
+     "date": "2023-09-27",
      "reason": "Peripheral neuropathy (idiopathic)",
-     "bp": "129/70",
+     "bp": "114/85",
      "weight_lb": 175.0
     },
     {
-     "date": "2024-11-01",
+     "date": "2022-08-14",
      "reason": "Peripheral neuropathy (idiopathic)",
-     "bp": "129/71",
+     "bp": "114/86",
      "weight_lb": 169.0
-    },
-    {
-     "date": "2024-04-02",
-     "reason": "Peripheral neuropathy (idiopathic)",
-     "bp": "135/67",
-     "weight_lb": 174.0
     }
    ],
    "series": {},
-   "noncompliant": true,
+   "noncompliant": false,
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 12,
+   "pages": 5,
    "copy_forward": false,
    "patient": {
     "name": "Timothy Russo",
@@ -441,7 +410,7 @@
     "sex": "M"
    },
    "tobacco_documented": [],
-   "alcohol_dpw": 2.0,
+   "alcohol_dpw": 3.0,
    "family_history": []
   }
  }

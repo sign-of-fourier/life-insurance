@@ -37,9 +37,9 @@
    "face": 500000,
    "product": "GUL",
    "riders": [],
-   "existing": 100000,
+   "existing": 500000,
    "replacement": false,
-   "beneficiary": "children",
+   "beneficiary": "estate",
    "signed": "2025-08-08",
    "signed_in_us": true
   },
@@ -74,10 +74,10 @@
    },
    "answers": {
     "tobacco": {
-     "answer": "Former cigarette, quit 01/2023"
+     "answer": "Former cigarette, quit 10/2022"
     },
     "alcohol": {
-     "answer": "1.0 drinks/week"
+     "answer": "10.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -144,7 +144,7 @@
      "answer": "Yes",
      "details": [
       {
-       "condition": "uti",
+       "condition": "urinary tract infection",
        "diagnosed": "02/2012",
        "treatment": "sulfamethoxazole-trimethoprim",
        "physician": "Dr. Jason Fox"
@@ -158,13 +158,13 @@
      "answer": "No"
     },
     "current_meds": {
-     "answer": "sulfamethoxazole-trimethoprim, topiramate"
+     "answer": "topiramate"
     },
     "physician": {
      "answer": "Dr. Jason Fox, Powell-Nelson Medical Group; last visit 02/2025"
     },
     "family_history": {
-     "answer": "mother: MI, died 56"
+     "answer": "mother: MI, died 59; mother: hypertension, died 84"
     },
     "weight_change": {
      "answer": "No"
@@ -218,17 +218,28 @@
      "cond_index": 1
     },
     {
-     "drug": "sulfamethoxazole-trimethoprim",
-     "brand": "Bactrim DS",
-     "strength": "800/160 mg",
+     "drug": "amoxicillin",
+     "brand": "Amoxil",
+     "strength": "875 mg",
      "fills": [
-      "2018-08-10",
-      "2025-08-05"
+      "2020-12-31"
      ],
-     "days_supply": 30,
-     "prescriber": "Dr. Jason Fox",
-     "specialty": "family medicine",
-     "cond_index": 2
+     "days_supply": 10,
+     "prescriber": "Dr. Smith (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
+    },
+    {
+     "drug": "hydrocodone-acetaminophen",
+     "brand": "Norco",
+     "strength": "10/325 mg",
+     "fills": [
+      "2024-03-14"
+     ],
+     "days_supply": 5,
+     "prescriber": "Dr. Smith (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
     }
    ],
    "no_history": false
@@ -237,9 +248,14 @@
    "vendor": "MIBF",
    "codes": [
     {
-     "code": "305252",
-     "reported": "2024-07-16",
+     "code": "306277",
+     "reported": "2019-11-02",
      "cond_index": 1
+    },
+    {
+     "code": "090278",
+     "reported": "2010-05-01",
+     "cond_index": null
     }
    ],
    "no_hit": false
@@ -250,14 +266,19 @@
    "status": "VALID",
    "events": [
     {
-     "date": "2022-12-22",
-     "code": "M09",
-     "desc": "Careless driving"
+     "date": "2024-05-11",
+     "code": "S10",
+     "desc": "Speeding 6-10 over limit"
     },
     {
-     "date": "2021-10-04",
-     "code": "N04",
-     "desc": "Parking violation"
+     "date": "2025-03-11",
+     "code": "M03",
+     "desc": "Improper lane change"
+    },
+    {
+     "date": "2018-08-20",
+     "code": "N02",
+     "desc": "Equipment violation"
     }
    ],
    "no_record": false,
@@ -265,62 +286,62 @@
   },
   "C0524-D06": {
    "vendor": "HSC",
-   "exam_date": "2025-08-13",
-   "height_in": 66.5,
-   "weight_lb": 193.0,
+   "exam_date": "2025-08-12",
+   "height_in": 65.5,
+   "weight_lb": 191.0,
    "bp": [
     [
-     144,
-     92
+     143,
+     82
     ],
     [
-     144,
-     94
+     152,
+     88
     ]
    ],
-   "pulse": 59,
+   "pulse": 57,
    "examiner_notes": {}
   },
   "C0524-D07": {
    "vendor": "MIL",
-   "collected": "2025-08-13",
-   "fasting": false,
+   "collected": "2025-08-12",
+   "fasting": true,
    "results": {
-    "tc": 296.0,
-    "hdl": 68.0,
-    "ldl": 186.0,
-    "triglycerides": 209.0,
-    "tc_hdl_ratio": 4.4,
-    "a1c": 5.4,
-    "ast": 38.0,
-    "alt": 39.0,
-    "ggt": 41.0,
-    "alk_phos": 94.0,
-    "bilirubin": 1.1,
-    "albumin": 4.2,
+    "tc": 279.0,
+    "hdl": 66.0,
+    "ldl": 178.0,
+    "triglycerides": 174.0,
+    "tc_hdl_ratio": 4.2,
+    "glucose_fasting": 88.0,
+    "a1c": 5.0,
+    "ast": 18.0,
+    "alt": 20.0,
+    "ggt": 37.0,
+    "alk_phos": 66.0,
+    "bilirubin": 0.5,
+    "albumin": 4.5,
     "creatinine": 0.9,
-    "egfr": 69.0,
-    "hemoglobin": 13.5,
+    "egfr": 62.0,
+    "hemoglobin": 14.7,
     "hiv": 0.0,
-    "cdt": 1.3,
-    "nt_probnp": 49.0,
-    "glucose_random": 98.0
+    "cdt": 0.9,
+    "nt_probnp": 21.0
    }
   },
   "C0524-D08": {
    "vendor": "MIL",
-   "collected": "2025-08-13",
+   "collected": "2025-08-12",
    "results": {
-    "cotinine_urine": 6.0,
-    "urine_protein": 10.0,
+    "cotinine_urine": 1.0,
+    "urine_protein": 0.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
-    "urine_rbc": 2
+    "urine_rbc": 0
    }
   },
   "C0524-D09": {
    "interpretation": "normal sinus rhythm",
-   "rate": 61
+   "rate": 59
   },
   "C0524-D10": {
    "provider": {
@@ -333,7 +354,7 @@
    },
    "style": "epic_progress",
    "ordered_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "last_visit": "2025-05-18",
+   "last_visit": "2025-06-06",
    "stale": false,
    "problems": [
     {
@@ -351,36 +372,54 @@
    ],
    "visits": [
     {
-     "date": "2025-05-18",
-     "reason": "Non-obstructive CAD (<50%) / coronary calcium",
-     "bp": "137/90",
+     "date": "2025-06-06",
+     "reason": "annual physical",
+     "bp": "144/89",
+     "weight_lb": 190.0
+    },
+    {
+     "date": "2025-02-11",
+     "reason": "medication refill",
+     "bp": "157/86",
      "weight_lb": 192.0
     },
     {
-     "date": "2024-06-04",
+     "date": "2024-10-18",
      "reason": "Non-obstructive CAD (<50%) / coronary calcium",
-     "bp": "137/87",
-     "weight_lb": 184.0
-    },
-    {
-     "date": "2023-06-21",
-     "reason": "Non-obstructive CAD (<50%) / coronary calcium",
-     "bp": "141/94",
+     "bp": "151/78",
      "weight_lb": 189.0
     },
     {
-     "date": "2022-07-08",
+     "date": "2024-06-24",
      "reason": "Non-obstructive CAD (<50%) / coronary calcium",
-     "bp": "143/89",
+     "bp": "141/85",
      "weight_lb": 192.0
+    },
+    {
+     "date": "2024-02-29",
+     "reason": "Non-obstructive CAD (<50%) / coronary calcium",
+     "bp": "146/84",
+     "weight_lb": 197.0
+    },
+    {
+     "date": "2023-11-05",
+     "reason": "annual physical",
+     "bp": "151/86",
+     "weight_lb": 191.0
+    },
+    {
+     "date": "2023-07-12",
+     "reason": "Non-obstructive CAD (<50%) / coronary calcium",
+     "bp": "147/85",
+     "weight_lb": 190.0
     }
    ],
    "series": {},
-   "noncompliant": true,
+   "noncompliant": false,
    "rule_outs": [],
    "legacy_lab": null,
-   "exercise_documented": true,
-   "pages": 12,
+   "exercise_documented": false,
+   "pages": 11,
    "copy_forward": false,
    "patient": {
     "name": "Tina Bolton",
@@ -391,19 +430,26 @@
     {
      "product": "cigarette",
      "status": "former",
-     "frequency": "1.5 ppd",
-     "start": "1995-12-11",
-     "quit": "2023-01-30",
+     "frequency": "1 ppd",
+     "start": "1994-12-09",
+     "quit": "2022-10-14",
      "disclosure": "honest"
     }
    ],
-   "alcohol_dpw": 1.0,
+   "alcohol_dpw": 10.0,
    "family_history": [
     {
      "relation": "mother",
      "condition": "MI",
      "age_at_onset": 51,
-     "age_at_death": 56,
+     "age_at_death": 59,
+     "living": false
+    },
+    {
+     "relation": "mother",
+     "condition": "hypertension",
+     "age_at_onset": 74,
+     "age_at_death": 84,
      "living": false
     }
    ]
@@ -419,7 +465,7 @@
    },
    "style": "small_practice_typed",
    "ordered_reason": "chapter order: confirm control/class cap",
-   "last_visit": "2025-02-06",
+   "last_visit": "2025-05-12",
    "stale": false,
    "problems": [
     {
@@ -439,22 +485,22 @@
    ],
    "visits": [
     {
-     "date": "2025-02-06",
+     "date": "2025-05-12",
      "reason": "Epilepsy / seizure disorder",
-     "bp": "136/87",
-     "weight_lb": 192.0
+     "bp": "151/83",
+     "weight_lb": 197.0
     },
     {
-     "date": "2023-12-13",
+     "date": "2024-02-28",
      "reason": "Epilepsy / seizure disorder",
-     "bp": "137/87",
-     "weight_lb": 188.0
+     "bp": "148/78",
+     "weight_lb": 185.0
     },
     {
-     "date": "2022-10-17",
-     "reason": "rash",
-     "bp": "142/91",
-     "weight_lb": 186.0
+     "date": "2022-12-16",
+     "reason": "Epilepsy / seizure disorder",
+     "bp": "143/88",
+     "weight_lb": 184.0
     }
    ],
    "series": {},
@@ -462,7 +508,7 @@
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 2,
+   "pages": 4,
    "copy_forward": false,
    "patient": {
     "name": "Tina Bolton",
@@ -473,19 +519,26 @@
     {
      "product": "cigarette",
      "status": "former",
-     "frequency": "1.5 ppd",
-     "start": "1995-12-11",
-     "quit": "2023-01-30",
+     "frequency": "1 ppd",
+     "start": "1994-12-09",
+     "quit": "2022-10-14",
      "disclosure": "honest"
     }
    ],
-   "alcohol_dpw": 1.0,
+   "alcohol_dpw": 10.0,
    "family_history": [
     {
      "relation": "mother",
      "condition": "MI",
      "age_at_onset": 51,
-     "age_at_death": 56,
+     "age_at_death": 59,
+     "living": false
+    },
+    {
+     "relation": "mother",
+     "condition": "hypertension",
+     "age_at_onset": 74,
+     "age_at_death": 84,
      "living": false
     }
    ]

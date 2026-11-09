@@ -124,15 +124,15 @@
   "riders_requested": [],
   "existing_coverage": 250000,
   "replacement": false,
-  "beneficiary_relation": "spouse"
+  "beneficiary_relation": "children"
  },
  "height_in": 66.0,
  "weight_lb": 224.0,
- "bp_systolic": 124,
- "bp_diastolic": 88,
- "pulse": 56,
+ "bp_systolic": 116,
+ "bp_diastolic": 86,
+ "pulse": 76,
  "tobacco": [],
- "alcohol_drinks_per_week": 3.0,
+ "alcohol_drinks_per_week": 6.0,
  "alcohol_treatment": false,
  "drug_use": [],
  "conditions": [
@@ -193,7 +193,7 @@
   },
   {
    "condition_key": "benign_no_rating",
-   "label": "acute injury",
+   "label": "musculoskeletal injury",
    "onset": "2017-07-04",
    "status": "controlled",
    "severity": "mild",
@@ -205,7 +205,7 @@
      "drug": "cyclobenzaprine",
      "dose": "5 mg",
      "start": "2017-07-27",
-     "stop": "2017-07-27",
+     "stop": "2017-07-25",
      "prescriber_id": null,
      "indication": "acute_injury"
     }
@@ -214,14 +214,14 @@
    "treating_provider_ids": [
     "C0566-P1"
    ],
-   "disclosure": "honest",
+   "disclosure": "omitted",
    "in_mib": false,
    "irrelevant": true
   },
   {
    "condition_key": "benign_no_rating",
    "label": "osteopenia",
-   "onset": "2018-10-23",
+   "onset": "2019-02-02",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -231,8 +231,8 @@
     {
      "drug": "alendronate",
      "dose": "70 mg",
-     "start": "2018-11-17",
-     "stop": "2018-12-01",
+     "start": "2019-03-18",
+     "stop": null,
      "prescriber_id": null,
      "indication": "osteopenia"
     }
@@ -247,8 +247,8 @@
   },
   {
    "condition_key": "benign_no_rating",
-   "label": "vitamin d deficiency",
-   "onset": "2011-05-12",
+   "label": "vitamin D deficiency",
+   "onset": "2018-06-06",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -258,8 +258,8 @@
     {
      "drug": "ergocalciferol",
      "dose": "50000 IU",
-     "start": "2011-07-09",
-     "stop": "2011-07-08",
+     "start": "2018-06-07",
+     "stop": null,
      "prescriber_id": null,
      "indication": "vitamin_d_deficiency"
     }
@@ -268,14 +268,14 @@
    "treating_provider_ids": [
     "C0566-P1"
    ],
-   "disclosure": "omitted",
+   "disclosure": "honest",
    "in_mib": false,
    "irrelevant": true
   },
   {
    "condition_key": "benign_no_rating",
-   "label": "uti",
-   "onset": "2020-01-14",
+   "label": "urinary tract infection",
+   "onset": "2011-12-27",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -283,10 +283,18 @@
    },
    "meds": [
     {
+     "drug": "sulfamethoxazole-trimethoprim",
+     "dose": "800/160 mg",
+     "start": "2012-01-06",
+     "stop": "2012-01-07",
+     "prescriber_id": null,
+     "indication": "uti"
+    },
+    {
      "drug": "nitrofurantoin",
      "dose": "100 mg",
-     "start": "2020-01-31",
-     "stop": null,
+     "start": "2012-01-09",
+     "stop": "2012-01-07",
      "prescriber_id": null,
      "indication": "uti"
     }
@@ -300,11 +308,29 @@
    "irrelevant": true
   }
  ],
- "family_history": [],
+ "family_history": [
+  {
+   "relation": "father",
+   "condition": "type 2 diabetes",
+   "age_at_onset": 67,
+   "age_at_death": null,
+   "living": false
+  }
+ ],
  "mvr": [
   {
-   "date": "2016-08-08",
-   "code": "S20",
+   "date": "2023-01-05",
+   "code": "M02",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2024-12-14",
+   "code": "M07",
+   "disclosure": "honest"
+  },
+  {
+   "date": "2018-07-24",
+   "code": "M06",
    "disclosure": "honest"
   }
  ],
@@ -338,26 +364,26 @@
   }
  ],
  "true_labs": {
-  "tc": 278.0,
-  "hdl": 55.0,
-  "ldl": 209.0,
-  "triglycerides": 69.0,
-  "tc_hdl_ratio": 5.1,
-  "glucose_fasting": 98.0,
-  "a1c": 5.2,
-  "ast": 23.0,
-  "alt": 36.0,
-  "ggt": 21.0,
-  "alk_phos": 113.0,
-  "bilirubin": 0.4,
-  "albumin": 4.2,
-  "creatinine": 1.0,
-  "egfr": 95.0,
-  "urine_protein": 10.0,
-  "hemoglobin": 14.0,
-  "cdt": 0.8,
-  "nt_probnp": 60.0,
-  "cotinine_urine": 1.0,
+  "tc": 280.0,
+  "hdl": 59.0,
+  "ldl": 197.0,
+  "triglycerides": 120.0,
+  "tc_hdl_ratio": 4.7,
+  "glucose_fasting": 89.0,
+  "a1c": 5.4,
+  "ast": 34.0,
+  "alt": 35.0,
+  "ggt": 52.0,
+  "alk_phos": 111.0,
+  "bilirubin": 0.6,
+  "albumin": 4.9,
+  "creatinine": 0.9,
+  "egfr": 60.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.2,
+  "cdt": 1.4,
+  "nt_probnp": 17.0,
+  "cotinine_urine": 7.0,
   "hiv": 0.0,
   "cocaine": 0.0
  }

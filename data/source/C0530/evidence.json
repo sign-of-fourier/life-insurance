@@ -184,7 +184,7 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "vitamin d deficiency",
+    "condition": "vitamin D deficiency",
     "diagnosed": "08/2023",
     "treatment": "ergocalciferol",
     "physician": "Dr. John Johnson"
@@ -276,6 +276,18 @@
    "relevant": false,
    "truth_ref": "conditions[1]",
    "note": null
+  },
+  {
+   "fact_id": "C0530-F021",
+   "doc_id": "C0530-D04",
+   "kind": "mib_code",
+   "key": "390327",
+   "value": "2009-10-01",
+   "unit": null,
+   "as_of": "2009-10-01",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
   }
  ],
  "docs": [
@@ -329,7 +341,7 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2025-11-06T09:46:00",
-   "received_at": "2025-11-06T10:00:00",
+   "received_at": "2025-11-06T09:50:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0530/C0530-D03.txt",
@@ -339,28 +351,30 @@
    ]
   },
   {
-   "doc_id": "C0530-D04",
-   "case_id": "C0530",
-   "doc_type": "mib",
-   "vendor_id": "MIBF",
-   "ordered_at": "2025-11-06T09:46:00",
-   "received_at": "2025-11-06T10:03:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0530/C0530-D04.txt",
-   "fact_ids": []
-  },
-  {
    "doc_id": "C0530-D05",
    "case_id": "C0530",
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2025-11-06T09:46:00",
-   "received_at": "2025-11-06T11:02:00",
+   "received_at": "2025-11-06T09:55:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0530/C0530-D05.txt",
    "fact_ids": []
+  },
+  {
+   "doc_id": "C0530-D04",
+   "case_id": "C0530",
+   "doc_type": "mib",
+   "vendor_id": "MIBF",
+   "ordered_at": "2025-11-06T09:46:00",
+   "received_at": "2025-11-06T09:57:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0530/C0530-D04.txt",
+   "fact_ids": [
+    "C0530-F021"
+   ]
   }
  ]
 }

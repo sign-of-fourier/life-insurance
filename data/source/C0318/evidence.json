@@ -152,7 +152,7 @@
    "doc_id": "C0318-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 0.0,
+   "value": 10.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -183,7 +183,7 @@
    "key": "other:benign_no_rating",
    "value": {
     "condition": "osteopenia",
-    "diagnosed": "01/2021",
+    "diagnosed": "06/2017",
     "treatment": "alendronate",
     "physician": "Dr. Bryan Santana"
    },
@@ -209,41 +209,53 @@
    "fact_id": "C0318-F017",
    "doc_id": "C0318-D03",
    "kind": "rx_fill",
-   "key": "alendronate",
+   "key": "cetirizine",
    "value": {
-    "strength": "70 mg",
-    "n_fills": 1,
-    "first": "2021-03-06",
-    "last": "2021-03-06",
+    "strength": "10 mg",
+    "n_fills": 36,
+    "first": "2022-03-13",
+    "last": "2025-02-07",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2021-03-06",
-   "relevant": false,
-   "truth_ref": "conditions[1]",
-   "note": null
-  },
-  {
-   "fact_id": "C0318-F018",
-   "doc_id": "C0318-D04",
-   "kind": "mib_code",
-   "key": "940252",
-   "value": "2024-05-18",
-   "unit": null,
-   "as_of": "2024-05-18",
+   "as_of": "2025-02-07",
    "relevant": false,
    "truth_ref": "conditions[0]",
    "note": null
   },
   {
-   "fact_id": "C0318-F019",
-   "doc_id": "C0318-D05",
-   "kind": "mvr_violation",
-   "key": "M02",
-   "value": "Disregard traffic signal / stop sign",
+   "fact_id": "C0318-F018",
+   "doc_id": "C0318-D03",
+   "kind": "rx_fill",
+   "key": "alendronate",
+   "value": {
+    "strength": "70 mg",
+    "n_fills": 40,
+    "first": "2018-02-12",
+    "last": "2025-02-07",
+    "prescriber_specialty": "family medicine"
+   },
    "unit": null,
-   "as_of": "2024-07-20",
-   "relevant": true,
+   "as_of": "2025-02-07",
+   "relevant": false,
+   "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
+   "fact_id": "C0318-F019",
+   "doc_id": "C0318-D03",
+   "kind": "rx_fill",
+   "key": "ondansetron",
+   "value": {
+    "strength": "4 mg",
+    "n_fills": 1,
+    "first": "2024-11-30",
+    "last": "2024-11-30",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2024-11-30",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   }
@@ -292,31 +304,31 @@
    ]
   },
   {
-   "doc_id": "C0318-D03",
-   "case_id": "C0318",
-   "doc_type": "rx",
-   "vendor_id": "SCR",
-   "ordered_at": "2025-02-10T09:29:00",
-   "received_at": "2025-02-10T09:37:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0318/C0318-D03.txt",
-   "fact_ids": [
-    "C0318-F017"
-   ]
-  },
-  {
    "doc_id": "C0318-D04",
    "case_id": "C0318",
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-02-10T09:29:00",
-   "received_at": "2025-02-10T09:40:00",
+   "received_at": "2025-02-10T09:43:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0318/C0318-D04.txt",
+   "fact_ids": []
+  },
+  {
+   "doc_id": "C0318-D03",
+   "case_id": "C0318",
+   "doc_type": "rx",
+   "vendor_id": "SCR",
+   "ordered_at": "2025-02-10T09:29:00",
+   "received_at": "2025-02-10T10:00:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0318/C0318-D03.txt",
    "fact_ids": [
-    "C0318-F018"
+    "C0318-F017",
+    "C0318-F018",
+    "C0318-F019"
    ]
   },
   {
@@ -325,13 +337,11 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2025-02-10T09:29:00",
-   "received_at": "2025-02-10T09:43:00",
+   "received_at": "2025-02-10T10:10:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0318/C0318-D05.txt",
-   "fact_ids": [
-    "C0318-F019"
-   ]
+   "fact_ids": []
   }
  ]
 }

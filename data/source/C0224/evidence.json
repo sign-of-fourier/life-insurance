@@ -199,7 +199,7 @@
    "kind": "app_answer",
    "key": "digestive:benign_no_rating",
    "value": {
-    "condition": "gerd",
+    "condition": "GERD",
     "diagnosed": "04/2026",
     "treatment": "famotidine",
     "physician": "Dr. Brandon Anderson"
@@ -263,7 +263,7 @@
    "key": "famotidine",
    "value": {
     "strength": "20 mg",
-    "n_fills": 2,
+    "n_fills": 3,
     "first": "2026-06-02",
     "last": "2026-08-29",
     "prescriber_specialty": "family medicine"
@@ -278,61 +278,55 @@
    "fact_id": "C0224-F021",
    "doc_id": "C0224-D03",
    "kind": "rx_fill",
-   "key": "ondansetron",
+   "key": "prednisone",
    "value": {
-    "strength": "4 mg",
+    "strength": "10 mg",
     "n_fills": 1,
-    "first": "2024-12-21",
-    "last": "2024-12-21",
+    "first": "2022-09-18",
+    "last": "2022-09-18",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2024-12-21",
+   "as_of": "2022-09-18",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0224-F022",
-   "doc_id": "C0224-D03",
-   "kind": "rx_fill",
-   "key": "amoxicillin",
-   "value": {
-    "strength": "500 mg",
-    "n_fills": 1,
-    "first": "2020-04-12",
-    "last": "2020-04-12",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0224-D04",
+   "kind": "mib_code",
+   "key": "806816",
+   "value": "2025-05-23",
    "unit": null,
-   "as_of": "2020-04-12",
-   "relevant": false,
-   "truth_ref": null,
+   "as_of": "2025-05-23",
+   "relevant": true,
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0224-F023",
    "doc_id": "C0224-D04",
    "kind": "mib_code",
-   "key": "806216",
-   "value": "2023-03-01",
+   "key": "010909",
+   "value": "2022-02-15",
    "unit": null,
-   "as_of": "2023-03-01",
-   "relevant": true,
-   "truth_ref": "conditions[0]",
+   "as_of": "2022-02-15",
+   "relevant": false,
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0224-F024",
    "doc_id": "C0224-D04",
    "kind": "mib_code",
-   "key": "010070",
-   "value": "2022-04-15",
+   "key": "114775",
+   "value": "2024-11-07",
    "unit": null,
-   "as_of": "2022-04-15",
-   "relevant": false,
+   "as_of": "2024-11-07",
+   "relevant": true,
    "truth_ref": null,
-   "note": null
+   "note": "uncorroborated"
   },
   {
    "fact_id": "C0224-F025",
@@ -742,32 +736,20 @@
    "key": "legacy_lab",
    "value": {
     "vendor": "HRT",
-    "date": "2012-04-28",
+    "date": "2010-06-24",
     "results": {
-     "tc": 261.0,
-     "hdl": 73.0,
-     "fructosamine": 239,
+     "tc": 248.0,
+     "hdl": 64.0,
+     "fructosamine": 234,
      "cotinine_qual": "NEG",
-     "ggt": 23
+     "ggt": 25
     }
    },
    "unit": null,
-   "as_of": "2012-04-28",
+   "as_of": "2010-06-24",
    "relevant": false,
    "truth_ref": null,
    "note": "legacy method"
-  },
-  {
-   "fact_id": "C0224-F057",
-   "doc_id": "C0224-D10",
-   "kind": "aps_finding",
-   "key": "exercise",
-   "value": "runs 3-4x/week",
-   "unit": null,
-   "as_of": "2026-02-28",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
   }
  ],
  "docs": [
@@ -817,34 +799,34 @@
    ]
   },
   {
-   "doc_id": "C0224-D04",
-   "case_id": "C0224",
-   "doc_type": "mib",
-   "vendor_id": "MIBS",
-   "ordered_at": "2026-09-01T09:21:00",
-   "received_at": "2026-09-01T09:49:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0224/C0224-D04.txt",
-   "fact_ids": [
-    "C0224-F023",
-    "C0224-F024"
-   ]
-  },
-  {
    "doc_id": "C0224-D03",
    "case_id": "C0224",
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2026-09-01T09:21:00",
-   "received_at": "2026-09-01T09:55:00",
+   "received_at": "2026-09-01T09:33:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0224/C0224-D03.txt",
    "fact_ids": [
     "C0224-F020",
-    "C0224-F021",
-    "C0224-F022"
+    "C0224-F021"
+   ]
+  },
+  {
+   "doc_id": "C0224-D04",
+   "case_id": "C0224",
+   "doc_type": "mib",
+   "vendor_id": "MIBS",
+   "ordered_at": "2026-09-01T09:21:00",
+   "received_at": "2026-09-01T09:36:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0224/C0224-D04.txt",
+   "fact_ids": [
+    "C0224-F022",
+    "C0224-F023",
+    "C0224-F024"
    ]
   },
   {
@@ -954,8 +936,7 @@
    "fact_ids": [
     "C0224-F054",
     "C0224-F055",
-    "C0224-F056",
-    "C0224-F057"
+    "C0224-F056"
    ]
   }
  ]

@@ -54,7 +54,7 @@
    "doc_id": "C0817-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 100000,
+   "value": 0,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -126,7 +126,7 @@
    "doc_id": "C0817-D02",
    "kind": "app_answer",
    "key": "tobacco",
-   "value": "Former cigarette, quit 11/1997",
+   "value": "Former cigarette, quit 06/1998",
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -138,7 +138,7 @@
    "doc_id": "C0817-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 10.0,
+   "value": 6.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -168,15 +168,15 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "sinusitis",
-    "diagnosed": "05/2020",
-    "treatment": "azithromycin",
+    "condition": "dental abscess",
+    "diagnosed": "07/2019",
+    "treatment": "hydrocodone-acetaminophen",
     "physician": "Dr. Johnny Love"
    },
    "unit": null,
    "as_of": null,
    "relevant": false,
-   "truth_ref": "conditions[1]",
+   "truth_ref": "conditions[2]",
    "note": null
   },
   {
@@ -193,6 +193,23 @@
   },
   {
    "fact_id": "C0817-F016",
+   "doc_id": "C0817-D02",
+   "kind": "app_answer",
+   "key": "family_history",
+   "value": {
+    "relation": "mother",
+    "condition": "MI",
+    "age_at_onset": 64,
+    "age_at_death": 76
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0817-F017",
    "doc_id": "C0817-D03",
    "kind": "rx_fill",
    "key": "umeclidinium-vilanterol",
@@ -210,103 +227,85 @@
    "note": null
   },
   {
-   "fact_id": "C0817-F017",
+   "fact_id": "C0817-F018",
    "doc_id": "C0817-D03",
    "kind": "rx_fill",
    "key": "azithromycin",
    "value": {
     "strength": "250 mg",
-    "n_fills": 40,
+    "n_fills": 1,
     "first": "2020-05-28",
-    "last": "2026-07-01",
+    "last": "2020-05-28",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2026-07-01",
+   "as_of": "2020-05-28",
    "relevant": false,
    "truth_ref": "conditions[1]",
    "note": null
   },
   {
-   "fact_id": "C0817-F018",
-   "doc_id": "C0817-D03",
-   "kind": "rx_fill",
-   "key": "amoxicillin",
-   "value": {
-    "strength": "875 mg",
-    "n_fills": 1,
-    "first": "2019-07-06",
-    "last": "2019-07-06",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2019-07-06",
-   "relevant": false,
-   "truth_ref": "conditions[2]",
-   "note": null
-  },
-  {
    "fact_id": "C0817-F019",
-   "doc_id": "C0817-D03",
-   "kind": "rx_fill",
-   "key": "cyclobenzaprine",
-   "value": {
-    "strength": "5 mg",
-    "n_fills": 1,
-    "first": "2023-04-27",
-    "last": "2023-04-27",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0817-D04",
+   "kind": "mib_code",
+   "key": "630217",
+   "value": "2023-06-16",
    "unit": null,
-   "as_of": "2023-04-27",
+   "as_of": "2023-06-16",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[1]",
    "note": null
   },
   {
    "fact_id": "C0817-F020",
-   "doc_id": "C0817-D03",
-   "kind": "rx_fill",
-   "key": "hydrocodone-acetaminophen",
-   "value": {
-    "strength": "5/325 mg",
-    "n_fills": 1,
-    "first": "2023-01-12",
-    "last": "2023-01-12",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0817-D05",
+   "kind": "mvr_violation",
+   "key": "M03",
+   "value": "Improper lane change",
    "unit": null,
-   "as_of": "2023-01-12",
-   "relevant": false,
+   "as_of": "2025-07-19",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0817-F021",
-   "doc_id": "C0817-D03",
-   "kind": "rx_fill",
-   "key": "ibuprofen",
+   "doc_id": "C0817-D06",
+   "kind": "paramed",
+   "key": "build",
    "value": {
-    "strength": "600 mg",
-    "n_fills": 1,
-    "first": "2020-06-24",
-    "last": "2020-06-24",
-    "prescriber_specialty": "urgent care"
+    "height_in": 73.5,
+    "weight_lb": 205.0
    },
    "unit": null,
-   "as_of": "2020-06-24",
-   "relevant": false,
+   "as_of": "2026-07-14",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0817-F022",
-   "doc_id": "C0817-D05",
-   "kind": "mvr_violation",
-   "key": "M06",
-   "value": "Failure to signal",
+   "doc_id": "C0817-D06",
+   "kind": "paramed",
+   "key": "bp",
+   "value": {
+    "readings": [
+     [
+      110,
+      85
+     ],
+     [
+      119,
+      80
+     ]
+    ],
+    "avg": [
+     114,
+     82
+    ]
+   },
    "unit": null,
-   "as_of": "2023-10-28",
+   "as_of": "2026-07-14",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -315,52 +314,34 @@
    "fact_id": "C0817-F023",
    "doc_id": "C0817-D06",
    "kind": "paramed",
-   "key": "build",
-   "value": {
-    "height_in": 73.0,
-    "weight_lb": 206.0
-   },
-   "unit": null,
-   "as_of": "2026-07-11",
-   "relevant": true,
+   "key": "pulse",
+   "value": 78,
+   "unit": "bpm",
+   "as_of": "2026-07-14",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0817-F024",
-   "doc_id": "C0817-D06",
-   "kind": "paramed",
-   "key": "bp",
-   "value": {
-    "readings": [
-     [
-      118,
-      62
-     ],
-     [
-      122,
-      62
-     ]
-    ],
-    "avg": [
-     120,
-     62
-    ]
-   },
-   "unit": null,
-   "as_of": "2026-07-11",
+   "doc_id": "C0817-D07",
+   "kind": "lab_value",
+   "key": "cotinine_saliva",
+   "value": 1,
+   "unit": "ng/mL",
+   "as_of": "2026-07-14",
    "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0817-F025",
-   "doc_id": "C0817-D06",
-   "kind": "paramed",
-   "key": "pulse",
-   "value": 57,
-   "unit": "bpm",
-   "as_of": "2026-07-11",
+   "doc_id": "C0817-D07",
+   "kind": "lab_value",
+   "key": "hiv",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2026-07-14",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -369,40 +350,16 @@
    "fact_id": "C0817-F026",
    "doc_id": "C0817-D07",
    "kind": "lab_value",
-   "key": "cotinine_saliva",
-   "value": 1,
-   "unit": "ng/mL",
-   "as_of": "2026-07-11",
-   "relevant": true,
+   "key": "cocaine",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2026-07-14",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0817-F027",
-   "doc_id": "C0817-D07",
-   "kind": "lab_value",
-   "key": "hiv",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2026-07-11",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0817-F028",
-   "doc_id": "C0817-D07",
-   "kind": "lab_value",
-   "key": "cocaine",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2026-07-11",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0817-F029",
    "doc_id": "C0817-D08",
    "kind": "aps_finding",
    "key": "dx:copd",
@@ -415,23 +372,23 @@
     "home_o2": false
    },
    "unit": null,
-   "as_of": "2026-01-10",
+   "as_of": "2026-03-19",
    "relevant": true,
    "truth_ref": "conditions[0]",
    "note": null
   },
   {
-   "fact_id": "C0817-F030",
+   "fact_id": "C0817-F028",
    "doc_id": "C0817-D08",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "110/62",
-    "122/62",
-    "117/71"
+    "117/82",
+    "116/75",
+    "111/80"
    ],
    "unit": null,
-   "as_of": "2026-01-10",
+   "as_of": "2026-03-19",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -476,7 +433,8 @@
     "C0817-F012",
     "C0817-F013",
     "C0817-F014",
-    "C0817-F015"
+    "C0817-F015",
+    "C0817-F016"
    ]
   },
   {
@@ -485,11 +443,13 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2026-07-04T09:26:00",
-   "received_at": "2026-07-04T09:41:00",
+   "received_at": "2026-07-04T09:29:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0817/C0817-D04.txt",
-   "fact_ids": []
+   "fact_ids": [
+    "C0817-F019"
+   ]
   },
   {
    "doc_id": "C0817-D03",
@@ -497,17 +457,13 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2026-07-04T09:26:00",
-   "received_at": "2026-07-04T09:45:00",
+   "received_at": "2026-07-04T09:59:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0817/C0817-D03.txt",
    "fact_ids": [
-    "C0817-F016",
     "C0817-F017",
-    "C0817-F018",
-    "C0817-F019",
-    "C0817-F020",
-    "C0817-F021"
+    "C0817-F018"
    ]
   },
   {
@@ -516,12 +472,12 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2026-07-04T09:26:00",
-   "received_at": "2026-07-04T10:17:00",
+   "received_at": "2026-07-04T10:00:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0817/C0817-D05.txt",
    "fact_ids": [
-    "C0817-F022"
+    "C0817-F020"
    ]
   },
   {
@@ -530,14 +486,14 @@
    "doc_type": "paramed",
    "vendor_id": "HSC",
    "ordered_at": "2026-07-04T12:25:00",
-   "received_at": "2026-07-12T02:25:00",
+   "received_at": "2026-07-14T22:25:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0817/C0817-D06.txt",
    "fact_ids": [
-    "C0817-F023",
-    "C0817-F024",
-    "C0817-F025"
+    "C0817-F021",
+    "C0817-F022",
+    "C0817-F023"
    ]
   },
   {
@@ -545,15 +501,15 @@
    "case_id": "C0817",
    "doc_type": "lab_saliva",
    "vendor_id": "MIL",
-   "ordered_at": "2026-07-10T20:25:00",
-   "received_at": "2026-07-14T20:25:00",
+   "ordered_at": "2026-07-13T16:25:00",
+   "received_at": "2026-07-18T16:25:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0817/C0817-D07.txt",
    "fact_ids": [
-    "C0817-F026",
-    "C0817-F027",
-    "C0817-F028"
+    "C0817-F024",
+    "C0817-F025",
+    "C0817-F026"
    ]
   },
   {
@@ -561,14 +517,14 @@
    "case_id": "C0817",
    "doc_type": "aps",
    "vendor_id": "athena_summary",
-   "ordered_at": "2026-07-06T12:25:00",
-   "received_at": "2026-08-08T12:25:00",
+   "ordered_at": "2026-07-05T12:25:00",
+   "received_at": "2026-08-14T12:25:00",
    "order_reason": "REQ-2.1 impairment may rate >= +50",
-   "pages": 2,
+   "pages": 3,
    "text_path": "data/source/C0817/C0817-D08.txt",
    "fact_ids": [
-    "C0817-F029",
-    "C0817-F030"
+    "C0817-F027",
+    "C0817-F028"
    ]
   }
  ]

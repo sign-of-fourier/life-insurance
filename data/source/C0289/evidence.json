@@ -54,7 +54,7 @@
    "doc_id": "C0289-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 0,
+   "value": 500000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -127,20 +127,30 @@
    "fact_id": "C0289-F011",
    "doc_id": "C0289-D01",
    "kind": "app_answer",
-   "key": "foreign_travel",
+   "key": "avocation",
    "value": {
-    "country": "Netherlands",
-    "weeks_per_year": 3.0,
-    "purpose": "vacation"
+    "activity": "hiking"
    },
    "unit": null,
    "as_of": null,
    "relevant": false,
-   "truth_ref": "travel[0]",
+   "truth_ref": "avocations[0]",
    "note": null
   },
   {
    "fact_id": "C0289-F012",
+   "doc_id": "C0289-D01",
+   "kind": "app_answer",
+   "key": "prior_application",
+   "value": "2023 Harborview Life: issued Preferred",
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0289-F013",
    "doc_id": "C0289-D02",
    "kind": "app_answer",
    "key": "tobacco",
@@ -152,7 +162,7 @@
    "note": null
   },
   {
-   "fact_id": "C0289-F013",
+   "fact_id": "C0289-F014",
    "doc_id": "C0289-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
@@ -161,23 +171,6 @@
    "as_of": null,
    "relevant": false,
    "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0289-F014",
-   "doc_id": "C0289-D02",
-   "kind": "app_answer",
-   "key": "other:benign_no_rating",
-   "value": {
-    "condition": "osteopenia",
-    "diagnosed": "01/2017",
-    "treatment": "alendronate",
-    "physician": "Dr. Gabriel Cruz"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[0]",
    "note": null
   },
   {
@@ -208,67 +201,43 @@
    "fact_id": "C0289-F017",
    "doc_id": "C0289-D03",
    "kind": "rx_fill",
-   "key": "amoxicillin",
+   "key": "alendronate",
    "value": {
-    "strength": "875 mg",
-    "n_fills": 1,
-    "first": "2021-05-28",
-    "last": "2021-05-28",
-    "prescriber_specialty": "urgent care"
+    "strength": "70 mg",
+    "n_fills": 40,
+    "first": "2018-11-22",
+    "last": "2025-11-17",
+    "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2021-05-28",
+   "as_of": "2025-11-17",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0289-F018",
-   "doc_id": "C0289-D03",
-   "kind": "rx_fill",
-   "key": "amoxicillin",
-   "value": {
-    "strength": "875 mg",
-    "n_fills": 1,
-    "first": "2021-04-08",
-    "last": "2021-04-08",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0289-D04",
+   "kind": "mib_code",
+   "key": "010970",
+   "value": "2023-02-15",
    "unit": null,
-   "as_of": "2021-04-08",
+   "as_of": "2023-02-15",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0289-F019",
-   "doc_id": "C0289-D03",
-   "kind": "rx_fill",
-   "key": "hydrocodone-acetaminophen",
-   "value": {
-    "strength": "10/325 mg",
-    "n_fills": 1,
-    "first": "2022-06-24",
-    "last": "2022-06-24",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0289-D05",
+   "kind": "mvr_violation",
+   "key": "M07",
+   "value": "Use of handheld device while driving",
    "unit": null,
-   "as_of": "2022-06-24",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0289-F020",
-   "doc_id": "C0289-D04",
-   "kind": "mib_code",
-   "key": "816715",
-   "value": "2025-01-27",
-   "unit": null,
-   "as_of": "2025-01-27",
+   "as_of": "2024-03-16",
    "relevant": true,
    "truth_ref": null,
-   "note": "uncorroborated"
+   "note": null
   }
  ],
  "docs": [
@@ -293,7 +262,8 @@
     "C0289-F008",
     "C0289-F009",
     "C0289-F010",
-    "C0289-F011"
+    "C0289-F011",
+    "C0289-F012"
    ]
   },
   {
@@ -307,7 +277,6 @@
    "pages": 1,
    "text_path": "data/source/C0289/C0289-D02.txt",
    "fact_ids": [
-    "C0289-F012",
     "C0289-F013",
     "C0289-F014",
     "C0289-F015",
@@ -320,12 +289,12 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-11-20T09:50:00",
-   "received_at": "2025-11-20T09:54:00",
+   "received_at": "2025-11-20T10:04:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0289/C0289-D04.txt",
    "fact_ids": [
-    "C0289-F020"
+    "C0289-F018"
    ]
   },
   {
@@ -334,14 +303,12 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-11-20T09:50:00",
-   "received_at": "2025-11-20T10:03:00",
+   "received_at": "2025-11-20T10:19:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0289/C0289-D03.txt",
    "fact_ids": [
-    "C0289-F017",
-    "C0289-F018",
-    "C0289-F019"
+    "C0289-F017"
    ]
   },
   {
@@ -350,11 +317,13 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2025-11-20T09:50:00",
-   "received_at": "2025-11-20T11:00:00",
+   "received_at": "2025-11-20T10:36:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0289/C0289-D05.txt",
-   "fact_ids": []
+   "fact_ids": [
+    "C0289-F019"
+   ]
   }
  ]
 }

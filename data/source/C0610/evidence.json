@@ -166,7 +166,7 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "hypothyroidism simple",
+    "condition": "hypothyroidism",
     "diagnosed": "02/2020",
     "treatment": "levothyroxine",
     "physician": "Dr. Debbie Arnold"
@@ -213,7 +213,7 @@
    "key": "levothyroxine",
    "value": {
     "strength": "100 mcg",
-    "n_fills": 2,
+    "n_fills": 40,
     "first": "2020-04-06",
     "last": "2025-04-02",
     "prescriber_specialty": "family medicine"
@@ -226,45 +226,39 @@
   },
   {
    "fact_id": "C0610-F018",
-   "doc_id": "C0610-D03",
-   "kind": "rx_fill",
-   "key": "amoxicillin",
-   "value": {
-    "strength": "500 mg",
-    "n_fills": 1,
-    "first": "2022-03-23",
-    "last": "2022-03-23",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0610-D04",
+   "kind": "mib_code",
+   "key": "650272",
+   "value": "2020-09-08",
    "unit": null,
-   "as_of": "2022-03-23",
+   "as_of": "2020-09-08",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0610-F019",
    "doc_id": "C0610-D04",
    "kind": "mib_code",
-   "key": "735272",
-   "value": "2021-03-06",
+   "key": "010900",
+   "value": "2023-08-15",
    "unit": null,
-   "as_of": "2021-03-06",
+   "as_of": "2023-08-15",
    "relevant": false,
-   "truth_ref": "conditions[0]",
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0610-F020",
    "doc_id": "C0610-D04",
    "kind": "mib_code",
-   "key": "010970",
-   "value": "2023-07-15",
+   "key": "525716",
+   "value": "2022-09-26",
    "unit": null,
-   "as_of": "2023-07-15",
-   "relevant": false,
+   "as_of": "2022-09-26",
+   "relevant": true,
    "truth_ref": null,
-   "note": null
+   "note": "uncorroborated"
   },
   {
    "fact_id": "C0610-F021",
@@ -284,8 +278,8 @@
    "kind": "paramed",
    "key": "build",
    "value": {
-    "height_in": 60.5,
-    "weight_lb": 142.0
+    "height_in": 60.0,
+    "weight_lb": 141.0
    },
    "unit": null,
    "as_of": "2025-04-19",
@@ -301,21 +295,21 @@
    "value": {
     "readings": [
      [
+      140,
+      87
+     ],
+     [
       135,
+      85
+     ],
+     [
+      129,
       81
-     ],
-     [
-      136,
-      89
-     ],
-     [
-      128,
-      88
      ]
     ],
     "avg": [
-     133,
-     86
+     135,
+     84
     ]
    },
    "unit": null,
@@ -605,10 +599,10 @@
    "doc_id": "C0610-D08",
    "kind": "lab_value",
    "key": "urine_rbc",
-   "value": 0,
+   "value": 8,
    "unit": "/hpf",
    "as_of": "2025-04-19",
-   "relevant": false,
+   "relevant": true,
    "truth_ref": null,
    "note": null
   }
@@ -662,11 +656,12 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2025-04-05T09:12:00",
-   "received_at": "2025-04-05T09:16:00",
+   "received_at": "2025-04-05T09:19:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0610/C0610-D04.txt",
    "fact_ids": [
+    "C0610-F018",
     "C0610-F019",
     "C0610-F020"
    ]
@@ -677,13 +672,12 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-04-05T09:12:00",
-   "received_at": "2025-04-05T09:21:00",
+   "received_at": "2025-04-05T09:24:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0610/C0610-D03.txt",
    "fact_ids": [
-    "C0610-F017",
-    "C0610-F018"
+    "C0610-F017"
    ]
   },
   {
@@ -692,7 +686,7 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2025-04-05T09:12:00",
-   "received_at": "2025-04-05T09:23:00",
+   "received_at": "2025-04-05T09:56:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0610/C0610-D05.txt",
@@ -706,7 +700,7 @@
    "doc_type": "paramed",
    "vendor_id": "PMX",
    "ordered_at": "2025-04-05T12:11:00",
-   "received_at": "2025-04-19T19:11:00",
+   "received_at": "2025-04-20T02:11:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0610/C0610-D06.txt",
@@ -721,8 +715,8 @@
    "case_id": "C0610",
    "doc_type": "lab_blood",
    "vendor_id": "APX",
-   "ordered_at": "2025-04-18T13:11:00",
-   "received_at": "2025-04-21T13:11:00",
+   "ordered_at": "2025-04-18T20:11:00",
+   "received_at": "2025-04-24T20:11:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0610/C0610-D07.txt",
@@ -752,8 +746,8 @@
    "case_id": "C0610",
    "doc_type": "lab_urine",
    "vendor_id": "APX",
-   "ordered_at": "2025-04-18T13:11:00",
-   "received_at": "2025-04-21T13:16:00",
+   "ordered_at": "2025-04-18T20:11:00",
+   "received_at": "2025-04-24T20:16:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0610/C0610-D08.txt",

@@ -169,8 +169,25 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
+    "condition": "acute sinusitis",
+    "diagnosed": "11/2022",
+    "treatment": "azithromycin, amoxicillin-clavulanate",
+    "physician": "Dr. Michelle Kramer"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
+   "fact_id": "C0840-F015",
+   "doc_id": "C0840-D02",
+   "kind": "app_answer",
+   "key": "other:benign_no_rating",
+   "value": {
     "condition": "eczema",
-    "diagnosed": "09/2010",
+    "diagnosed": "04/2025",
     "treatment": "tacrolimus topical",
     "physician": "Dr. Michelle Kramer"
    },
@@ -181,7 +198,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F015",
+   "fact_id": "C0840-F016",
    "doc_id": "C0840-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
@@ -198,7 +215,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F016",
+   "fact_id": "C0840-F017",
    "doc_id": "C0840-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -210,7 +227,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F017",
+   "fact_id": "C0840-F018",
    "doc_id": "C0840-D02",
    "kind": "app_answer",
    "key": "family_history",
@@ -227,7 +244,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F018",
+   "fact_id": "C0840-F019",
    "doc_id": "C0840-D02",
    "kind": "app_answer",
    "key": "family_history",
@@ -244,7 +261,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F019",
+   "fact_id": "C0840-F020",
    "doc_id": "C0840-D02",
    "kind": "app_answer",
    "key": "family_history",
@@ -261,37 +278,19 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F020",
-   "doc_id": "C0840-D03",
-   "kind": "rx_fill",
-   "key": "azithromycin",
-   "value": {
-    "strength": "250 mg",
-    "n_fills": 40,
-    "first": "2022-11-30",
-    "last": "2025-07-25",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2025-07-25",
-   "relevant": false,
-   "truth_ref": "conditions[1]",
-   "note": null
-  },
-  {
    "fact_id": "C0840-F021",
    "doc_id": "C0840-D03",
    "kind": "rx_fill",
    "key": "amoxicillin-clavulanate",
    "value": {
     "strength": "875/125 mg",
-    "n_fills": 3,
-    "first": "2022-11-27",
-    "last": "2025-07-25",
+    "n_fills": 1,
+    "first": "2022-11-08",
+    "last": "2022-11-08",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2025-07-25",
+   "as_of": "2022-11-08",
    "relevant": false,
    "truth_ref": "conditions[1]",
    "note": null
@@ -300,58 +299,100 @@
    "fact_id": "C0840-F022",
    "doc_id": "C0840-D03",
    "kind": "rx_fill",
+   "key": "tacrolimus topical",
+   "value": {
+    "strength": "0.1%",
+    "n_fills": 4,
+    "first": "2025-04-15",
+    "last": "2025-07-25",
+    "prescriber_specialty": "family medicine"
+   },
+   "unit": null,
+   "as_of": "2025-07-25",
+   "relevant": false,
+   "truth_ref": "conditions[2]",
+   "note": null
+  },
+  {
+   "fact_id": "C0840-F023",
+   "doc_id": "C0840-D03",
+   "kind": "rx_fill",
    "key": "ondansetron",
    "value": {
     "strength": "8 mg",
     "n_fills": 1,
-    "first": "2022-07-27",
-    "last": "2022-07-27",
+    "first": "2024-07-13",
+    "last": "2024-07-13",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2022-07-27",
+   "as_of": "2024-07-13",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0840-F023",
+   "fact_id": "C0840-F024",
+   "doc_id": "C0840-D03",
+   "kind": "rx_fill",
+   "key": "cyclobenzaprine",
+   "value": {
+    "strength": "5 mg",
+    "n_fills": 1,
+    "first": "2022-07-01",
+    "last": "2022-07-01",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2022-07-01",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0840-F025",
+   "doc_id": "C0840-D03",
+   "kind": "rx_fill",
+   "key": "hydrocodone-acetaminophen",
+   "value": {
+    "strength": "10/325 mg",
+    "n_fills": 1,
+    "first": "2021-11-17",
+    "last": "2021-11-17",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2021-11-17",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0840-F026",
    "doc_id": "C0840-D04",
    "kind": "mib_code",
-   "key": "803237",
-   "value": "2024-02-18",
+   "key": "803217",
+   "value": "2018-10-29",
    "unit": null,
-   "as_of": "2024-02-18",
+   "as_of": "2018-10-29",
    "relevant": true,
    "truth_ref": "conditions[0]",
    "note": null
   },
   {
-   "fact_id": "C0840-F024",
+   "fact_id": "C0840-F027",
    "doc_id": "C0840-D04",
    "kind": "mib_code",
-   "key": "650212",
-   "value": "2023-03-11",
+   "key": "905216",
+   "value": "2024-03-01",
    "unit": null,
-   "as_of": "2023-03-11",
-   "relevant": false,
-   "truth_ref": "conditions[1]",
-   "note": null
-  },
-  {
-   "fact_id": "C0840-F025",
-   "doc_id": "C0840-D04",
-   "kind": "mib_code",
-   "key": "235266",
-   "value": "2023-10-11",
-   "unit": null,
-   "as_of": "2023-10-11",
+   "as_of": "2024-03-01",
    "relevant": false,
    "truth_ref": "conditions[3]",
    "note": null
   },
   {
-   "fact_id": "C0840-F026",
+   "fact_id": "C0840-F028",
    "doc_id": "C0840-D06",
    "kind": "questionnaire",
    "key": "FINQ:income",
@@ -363,7 +404,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F027",
+   "fact_id": "C0840-F029",
    "doc_id": "C0840-D06",
    "kind": "questionnaire",
    "key": "FINQ:net_worth",
@@ -375,7 +416,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F028",
+   "fact_id": "C0840-F030",
    "doc_id": "C0840-D06",
    "kind": "questionnaire",
    "key": "FINQ:existing",
@@ -387,7 +428,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F029",
+   "fact_id": "C0840-F031",
    "doc_id": "C0840-D06",
    "kind": "questionnaire",
    "key": "FINQ:purpose",
@@ -399,7 +440,7 @@
    "note": null
   },
   {
-   "fact_id": "C0840-F030",
+   "fact_id": "C0840-F032",
    "doc_id": "C0840-D07",
    "kind": "aps_finding",
    "key": "dx:cancer",
@@ -418,7 +459,7 @@
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0840-F031",
+   "fact_id": "C0840-F033",
    "doc_id": "C0840-D07",
    "kind": "aps_finding",
    "key": "bp_readings",
@@ -477,23 +518,8 @@
     "C0840-F016",
     "C0840-F017",
     "C0840-F018",
-    "C0840-F019"
-   ]
-  },
-  {
-   "doc_id": "C0840-D04",
-   "case_id": "C0840",
-   "doc_type": "mib",
-   "vendor_id": "MIBS",
-   "ordered_at": "2025-07-28T09:10:00",
-   "received_at": "2025-07-28T09:25:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0840/C0840-D04.txt",
-   "fact_ids": [
-    "C0840-F023",
-    "C0840-F024",
-    "C0840-F025"
+    "C0840-F019",
+    "C0840-F020"
    ]
   },
   {
@@ -502,14 +528,31 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2025-07-28T09:10:00",
-   "received_at": "2025-07-28T09:48:00",
+   "received_at": "2025-07-28T09:16:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0840/C0840-D03.txt",
    "fact_ids": [
-    "C0840-F020",
     "C0840-F021",
-    "C0840-F022"
+    "C0840-F022",
+    "C0840-F023",
+    "C0840-F024",
+    "C0840-F025"
+   ]
+  },
+  {
+   "doc_id": "C0840-D04",
+   "case_id": "C0840",
+   "doc_type": "mib",
+   "vendor_id": "MIBS",
+   "ordered_at": "2025-07-28T09:10:00",
+   "received_at": "2025-07-28T09:27:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0840/C0840-D04.txt",
+   "fact_ids": [
+    "C0840-F026",
+    "C0840-F027"
    ]
   },
   {
@@ -518,7 +561,7 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2025-07-28T09:10:00",
-   "received_at": "2025-07-28T10:20:00",
+   "received_at": "2025-07-28T09:45:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0840/C0840-D05.txt",
@@ -530,15 +573,15 @@
    "doc_type": "other",
    "vendor_id": "FINQ",
    "ordered_at": "2025-07-28T11:09:00",
-   "received_at": "2025-08-03T09:09:00",
+   "received_at": "2025-08-12T09:09:00",
    "order_reason": "FIN-2 over limit / KPE",
    "pages": 1,
    "text_path": "data/source/C0840/C0840-D06.txt",
    "fact_ids": [
-    "C0840-F026",
-    "C0840-F027",
     "C0840-F028",
-    "C0840-F029"
+    "C0840-F029",
+    "C0840-F030",
+    "C0840-F031"
    ]
   },
   {
@@ -552,8 +595,8 @@
    "pages": 2,
    "text_path": "data/source/C0840/C0840-D07.txt",
    "fact_ids": [
-    "C0840-F030",
-    "C0840-F031"
+    "C0840-F032",
+    "C0840-F033"
    ]
   }
  ]

@@ -42,6 +42,8 @@ CAP_GLOBAL = float(os.environ.get("UW_CAP_GLOBAL", 25))
 
 SESSION_ID = os.environ.get("UW_SESSION_ID") or uuid.uuid4().hex[:8]
 _session_spent = 0.0
+import threading
+LOCK = threading.RLock()
 
 
 class BudgetExceeded(RuntimeError):
@@ -120,7 +122,10 @@ def call(model: str, system: str, prompt: str, *, max_tokens: int = 2000, temper
     global _session_spent
     model_id = PRICES[model][0]
     worst = cost(model, est_tokens(system) + est_tokens(prompt), max_tokens)
-    _check(worst, budget)
+    with LOCK:
+        _check(worst, budget)
+        if budget:
+            budget.spent += worst          # reserve worst case while in flight (released below)
     t0 = time.time()
     r = _bedrock().converse(
         modelId=model_id,
@@ -130,11 +135,17 @@ def call(model: str, system: str, prompt: str, *, max_tokens: int = 2000, temper
     )
     u = r["usage"]
     usd = cost(model, u["inputTokens"], u["outputTokens"])
-    _session_spent += usd
-    if budget:
-        budget.spent += usd
-        budget.calls += 1
-    USAGE_LOG.parent.mkdir(parents=True, exist_ok=True)
+    with LOCK:
+        _session_spent += usd
+        if budget:
+            budget.spent += usd - worst
+            budget.calls += 1
+        USAGE_LOG.parent.mkdir(parents=True, exist_ok=True)
+        _append_usage(model, u, usd, budget, tag, t0, r)
+    return "".join(c.get("text", "") for c in r["output"]["message"]["content"])
+
+
+def _append_usage(model, u, usd, budget, tag, t0, r):
     with USAGE_LOG.open("a") as f:
         f.write(json.dumps({
             "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"), "session": SESSION_ID,
@@ -142,7 +153,6 @@ def call(model: str, system: str, prompt: str, *, max_tokens: int = 2000, temper
             "in": u["inputTokens"], "out": u["outputTokens"], "usd": round(usd, 6),
             "secs": round(time.time() - t0, 2), "stop": r.get("stopReason"),
         }) + "\n")
-    return "".join(c.get("text", "") for c in r["output"]["message"]["content"])
 
 
 def estimate(model: str, in_tok: int, out_tok: int, n: int) -> float:

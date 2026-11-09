@@ -207,26 +207,26 @@
   "face_amount": 7500000,
   "product": "Term 20",
   "riders_requested": [],
-  "existing_coverage": 100000,
-  "replacement": false,
-  "beneficiary_relation": "spouse"
+  "existing_coverage": 250000,
+  "replacement": true,
+  "beneficiary_relation": "children"
  },
  "height_in": 62.0,
  "weight_lb": 162.0,
- "bp_systolic": 157,
- "bp_diastolic": 91,
- "pulse": 55,
+ "bp_systolic": 160,
+ "bp_diastolic": 99,
+ "pulse": 85,
  "tobacco": [
   {
    "product": "cigarette",
    "status": "former",
    "frequency": "10/day",
-   "start": "2006-09-18",
-   "quit": "2022-12-22",
+   "start": "2008-12-27",
+   "quit": "2021-09-30",
    "disclosure": "honest"
   }
  ],
- "alcohol_drinks_per_week": 6.0,
+ "alcohol_drinks_per_week": 3.0,
  "alcohol_treatment": false,
  "drug_use": [],
  "conditions": [
@@ -297,9 +297,17 @@
    },
    "meds": [
     {
-     "drug": "etanercept",
-     "dose": "50 mg inj",
-     "start": "2021-06-07",
+     "drug": "adalimumab",
+     "dose": "40 mg inj",
+     "start": "2021-05-09",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "rheumatoid_arthritis"
+    },
+    {
+     "drug": "methotrexate",
+     "dose": "2.5 mg",
+     "start": "2021-03-29",
      "stop": null,
      "prescriber_id": null,
      "indication": "rheumatoid_arthritis"
@@ -310,17 +318,17 @@
     "C0362-P1"
    ],
    "disclosure": "honest",
-   "in_mib": false,
+   "in_mib": true,
    "irrelevant": false
   },
   {
    "condition_key": "suicide_attempt",
    "label": "Suicide attempt",
-   "onset": "2018-12-04",
+   "onset": "2008-03-23",
    "status": "controlled",
    "severity": "moderate",
    "details": {
-    "years_since": 7.1
+    "years_since": 17.8
    },
    "meds": [],
    "procedures": [],
@@ -334,14 +342,14 @@
   {
    "condition_key": "diabetes_t2",
    "label": "Type 2 diabetes",
-   "onset": "2021-10-28",
+   "onset": "2021-12-04",
    "status": "controlled",
    "severity": "severe",
    "details": {
-    "a1c_avg": 7.6,
+    "a1c_avg": 7.5,
     "a1c_available": true,
-    "insulin": false,
-    "duration_years": 4.2,
+    "insulin": true,
+    "duration_years": 4.1,
     "age_at_dx": 32,
     "microalbuminuria": false,
     "neuropathy": false,
@@ -351,16 +359,24 @@
    "meds": [
     {
      "drug": "metformin",
-     "dose": "850 mg",
-     "start": "2022-01-01",
+     "dose": "500 mg",
+     "start": "2022-01-30",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "diabetes_t2"
+    },
+    {
+     "drug": "insulin glargine",
+     "dose": "100 u/mL",
+     "start": "2021-12-06",
      "stop": null,
      "prescriber_id": null,
      "indication": "diabetes_t2"
     },
     {
      "drug": "sitagliptin",
-     "dose": "50 mg",
-     "start": "2021-11-30",
+     "dose": "100 mg",
+     "start": "2022-02-22",
      "stop": null,
      "prescriber_id": null,
      "indication": "diabetes_t2"
@@ -377,7 +393,7 @@
   {
    "condition_key": "fatty_liver",
    "label": "NAFLD / fatty liver",
-   "onset": "2025-02-15",
+   "onset": "2020-09-22",
    "status": "controlled",
    "severity": "moderate",
    "details": {
@@ -395,20 +411,28 @@
   {
    "condition_key": "asthma",
    "label": "Asthma",
-   "onset": "2009-01-09",
+   "onset": "2017-02-15",
    "status": "controlled",
    "severity": "moderate",
    "details": {
-    "controller": false,
-    "steroid_bursts_per_year": 3,
-    "er_years_ago": null,
+    "controller": true,
+    "steroid_bursts_per_year": null,
+    "er_years_ago": 0.1,
     "biologic": false
    },
    "meds": [
     {
+     "drug": "mometasone",
+     "dose": "220 mcg",
+     "start": "2017-04-16",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "asthma"
+    },
+    {
      "drug": "albuterol",
      "dose": "90 mcg",
-     "start": "2009-02-18",
+     "start": "2017-03-31",
      "stop": null,
      "prescriber_id": null,
      "indication": "asthma"
@@ -425,7 +449,7 @@
   {
    "condition_key": "benign_no_rating",
    "label": "acne",
-   "onset": "2018-06-15",
+   "onset": "2022-10-21",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -435,15 +459,7 @@
     {
      "drug": "minocycline",
      "dose": "100 mg",
-     "start": "2018-07-04",
-     "stop": null,
-     "prescriber_id": null,
-     "indication": "acne"
-    },
-    {
-     "drug": "doxycycline",
-     "dose": "100 mg",
-     "start": "2018-07-14",
+     "start": "2022-11-04",
      "stop": null,
      "prescriber_id": null,
      "indication": "acne"
@@ -460,7 +476,7 @@
   {
    "condition_key": "benign_no_rating",
    "label": "osteopenia",
-   "onset": "2016-10-19",
+   "onset": "2019-11-08",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -470,8 +486,8 @@
     {
      "drug": "alendronate",
      "dose": "70 mg",
-     "start": "2016-10-26",
-     "stop": "2016-11-23",
+     "start": "2019-11-20",
+     "stop": null,
      "prescriber_id": null,
      "indication": "osteopenia"
     }
@@ -480,7 +496,7 @@
    "treating_provider_ids": [
     "C0362-P1"
    ],
-   "disclosure": "honest",
+   "disclosure": "omitted",
    "in_mib": false,
    "irrelevant": true
   }
@@ -488,20 +504,20 @@
  "family_history": [
   {
    "relation": "father",
-   "condition": "type 2 diabetes",
-   "age_at_onset": 73,
-   "age_at_death": 89,
+   "condition": "hypertension",
+   "age_at_onset": 80,
+   "age_at_death": null,
    "living": false
   }
  ],
- "mvr": [],
- "avocations": [
+ "mvr": [
   {
-   "activity": "hunting",
-   "details": {},
+   "date": "2025-03-16",
+   "code": "M02",
    "disclosure": "honest"
   }
  ],
+ "avocations": [],
  "travel": [],
  "prior_apps": [],
  "providers": [
@@ -525,8 +541,8 @@
    "provider_id": "C0362-P3",
    "name": "Dr. Laurie Johnson",
    "specialty": "psychiatry",
-   "practice": "Byrd-Gaines Clinic",
-   "aps_style": "athena_summary",
+   "practice": "Byrd-Gaines Medical Group",
+   "aps_style": "epic_progress",
    "country": "US"
   },
   {
@@ -534,7 +550,7 @@
    "name": "Dr. Christian Weiss",
    "specialty": "endocrinology",
    "practice": "Rodriguez Inc Medical Group",
-   "aps_style": "small_practice_typed",
+   "aps_style": "epic_progress",
    "country": "US"
   },
   {
@@ -542,7 +558,7 @@
    "name": "Dr. Andrew Walker",
    "specialty": "gastroenterology",
    "practice": "Smith-Bowers Clinic",
-   "aps_style": "athena_summary",
+   "aps_style": "small_practice_typed",
    "country": "US"
   },
   {
@@ -550,31 +566,31 @@
    "name": "Dr. Nicole Pena",
    "specialty": "pulmonology",
    "practice": "Rivera-Diaz Medical Group",
-   "aps_style": "small_practice_typed",
+   "aps_style": "athena_summary",
    "country": "US"
   }
  ],
  "true_labs": {
-  "tc": 296.0,
-  "hdl": 60.0,
-  "ldl": 201.0,
-  "triglycerides": 175.0,
-  "tc_hdl_ratio": 4.9,
+  "tc": 287.0,
+  "hdl": 69.0,
+  "ldl": 206.0,
+  "triglycerides": 60.0,
+  "tc_hdl_ratio": 4.2,
   "glucose_fasting": 175.0,
-  "a1c": 7.6,
-  "ast": 66.0,
-  "alt": 97.0,
-  "ggt": 20.0,
-  "alk_phos": 88.0,
-  "bilirubin": 0.9,
+  "a1c": 7.7,
+  "ast": 65.0,
+  "alt": 98.0,
+  "ggt": 41.0,
+  "alk_phos": 58.0,
+  "bilirubin": 1.0,
   "albumin": 4.5,
-  "creatinine": 0.9,
-  "egfr": 91.0,
+  "creatinine": 1.1,
+  "egfr": 84.0,
   "urine_protein": 0.0,
-  "hemoglobin": 12.5,
-  "cdt": 0.9,
-  "nt_probnp": 51.0,
-  "cotinine_urine": 7.0,
+  "hemoglobin": 13.7,
+  "cdt": 1.3,
+  "nt_probnp": 79.0,
+  "cotinine_urine": 6.0,
   "hiv": 0.0,
   "cocaine": 0.0
  }

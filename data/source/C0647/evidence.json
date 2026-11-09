@@ -54,7 +54,7 @@
    "doc_id": "C0647-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 250000,
+   "value": 500000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -125,34 +125,6 @@
   },
   {
    "fact_id": "C0647-F011",
-   "doc_id": "C0647-D01",
-   "kind": "app_answer",
-   "key": "foreign_travel",
-   "value": {
-    "country": "Switzerland",
-    "weeks_per_year": 3.0,
-    "purpose": "vacation"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "travel[0]",
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F012",
-   "doc_id": "C0647-D01",
-   "kind": "app_answer",
-   "key": "prior_application",
-   "value": "2021 Harborview Life: issued Table 2",
-   "unit": null,
-   "as_of": null,
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F013",
    "doc_id": "C0647-D02",
    "kind": "app_answer",
    "key": "tobacco",
@@ -164,7 +136,7 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F014",
+   "fact_id": "C0647-F012",
    "doc_id": "C0647-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
@@ -176,7 +148,7 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F015",
+   "fact_id": "C0647-F013",
    "doc_id": "C0647-D02",
    "kind": "app_answer",
    "key": "mental:depression_anxiety",
@@ -193,7 +165,7 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F016",
+   "fact_id": "C0647-F014",
    "doc_id": "C0647-D02",
    "kind": "app_answer",
    "key": "neuro:frailty",
@@ -210,7 +182,7 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F017",
+   "fact_id": "C0647-F015",
    "doc_id": "C0647-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
@@ -227,12 +199,12 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F018",
+   "fact_id": "C0647-F016",
    "doc_id": "C0647-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "acute injury",
+    "condition": "musculoskeletal injury",
     "diagnosed": "09/2021",
     "treatment": "cyclobenzaprine",
     "physician": "Dr. Terry Faulkner"
@@ -244,30 +216,13 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F019",
+   "fact_id": "C0647-F017",
    "doc_id": "C0647-D02",
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "gout",
-    "diagnosed": "07/2012",
-    "treatment": "colchicine, allopurinol",
-    "physician": "Dr. Terry Faulkner"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[4]",
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F020",
-   "doc_id": "C0647-D02",
-   "kind": "app_answer",
-   "key": "other:benign_no_rating",
-   "value": {
-    "condition": "sinusitis",
-    "diagnosed": "04/2018",
+    "condition": "acute sinusitis",
+    "diagnosed": "08/2019",
     "treatment": "azithromycin",
     "physician": "Dr. Terry Faulkner"
    },
@@ -278,7 +233,7 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F021",
+   "fact_id": "C0647-F018",
    "doc_id": "C0647-D02",
    "kind": "app_answer",
    "key": "stated_build",
@@ -290,30 +245,13 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F022",
-   "doc_id": "C0647-D02",
-   "kind": "app_answer",
-   "key": "family_history",
-   "value": {
-    "relation": "father",
-    "condition": "MI",
-    "age_at_onset": 74,
-    "age_at_death": 89
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F023",
+   "fact_id": "C0647-F019",
    "doc_id": "C0647-D03",
    "kind": "rx_fill",
-   "key": "azithromycin",
+   "key": "colchicine",
    "value": {
-    "strength": "250 mg",
-    "n_fills": 3,
+    "strength": "0.6 mg",
+    "n_fills": 40,
     "first": "2020-10-24",
     "last": "2025-10-20",
     "prescriber_specialty": "family medicine"
@@ -321,123 +259,165 @@
    "unit": null,
    "as_of": "2025-10-20",
    "relevant": false,
-   "truth_ref": "conditions[5]",
+   "truth_ref": "conditions[4]",
    "note": null
   },
   {
-   "fact_id": "C0647-F024",
+   "fact_id": "C0647-F020",
    "doc_id": "C0647-D03",
    "kind": "rx_fill",
-   "key": "ibuprofen",
+   "key": "prednisone",
    "value": {
-    "strength": "600 mg",
+    "strength": "10 mg",
     "n_fills": 1,
-    "first": "2025-05-18",
-    "last": "2025-05-18",
+    "first": "2022-10-08",
+    "last": "2022-10-08",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2025-05-18",
+   "as_of": "2022-10-08",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0647-F025",
-   "doc_id": "C0647-D03",
-   "kind": "rx_fill",
-   "key": "ondansetron",
-   "value": {
-    "strength": "8 mg",
-    "n_fills": 1,
-    "first": "2024-01-28",
-    "last": "2024-01-28",
-    "prescriber_specialty": "urgent care"
-   },
-   "unit": null,
-   "as_of": "2024-01-28",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F026",
+   "fact_id": "C0647-F021",
    "doc_id": "C0647-D04",
    "kind": "mib_code",
-   "key": "951337",
-   "value": "2023-06-26",
+   "key": "951967",
+   "value": "2023-01-25",
    "unit": null,
-   "as_of": "2023-06-26",
+   "as_of": "2023-01-25",
    "relevant": true,
    "truth_ref": "conditions[1]",
    "note": null
   },
   {
-   "fact_id": "C0647-F027",
-   "doc_id": "C0647-D04",
-   "kind": "mib_code",
-   "key": "010900",
-   "value": "2021-01-15",
-   "unit": null,
-   "as_of": "2021-01-15",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F028",
+   "fact_id": "C0647-F022",
    "doc_id": "C0647-D05",
    "kind": "paramed",
    "key": "build",
    "value": {
-    "height_in": 65.0,
+    "height_in": 65.5,
     "weight_lb": 194.0
    },
    "unit": null,
-   "as_of": "2025-10-27",
+   "as_of": "2025-10-31",
    "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0647-F029",
+   "fact_id": "C0647-F023",
    "doc_id": "C0647-D05",
    "kind": "paramed",
    "key": "bp",
    "value": {
     "readings": [
      [
-      120,
-      79
+      132,
+      84
      ],
      [
-      121,
-      76
+      124,
+      92
      ],
      [
-      115,
-      77
+      128,
+      85
      ]
     ],
     "avg": [
-     119,
-     77
+     128,
+     87
     ]
    },
    "unit": null,
-   "as_of": "2025-10-27",
+   "as_of": "2025-10-31",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0647-F024",
+   "doc_id": "C0647-D05",
+   "kind": "paramed",
+   "key": "pulse",
+   "value": 69,
+   "unit": "bpm",
+   "as_of": "2025-10-31",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0647-F025",
+   "doc_id": "C0647-D06",
+   "kind": "lab_value",
+   "key": "tc",
+   "value": 285.0,
+   "unit": "mg/dL",
+   "as_of": "2025-10-31",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0647-F026",
+   "doc_id": "C0647-D06",
+   "kind": "lab_value",
+   "key": "hdl",
+   "value": 69.0,
+   "unit": "mg/dL",
+   "as_of": "2025-10-31",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0647-F027",
+   "doc_id": "C0647-D06",
+   "kind": "lab_value",
+   "key": "ldl",
+   "value": 203.0,
+   "unit": "mg/dL",
+   "as_of": "2025-10-31",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0647-F028",
+   "doc_id": "C0647-D06",
+   "kind": "lab_value",
+   "key": "triglycerides",
+   "value": 61.0,
+   "unit": "mg/dL",
+   "as_of": "2025-10-31",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0647-F029",
+   "doc_id": "C0647-D06",
+   "kind": "lab_value",
+   "key": "tc_hdl_ratio",
+   "value": 4.1,
+   "unit": "ratio",
+   "as_of": "2025-10-31",
    "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0647-F030",
-   "doc_id": "C0647-D05",
-   "kind": "paramed",
-   "key": "pulse",
-   "value": 62,
-   "unit": "bpm",
-   "as_of": "2025-10-27",
+   "doc_id": "C0647-D06",
+   "kind": "lab_value",
+   "key": "a1c",
+   "value": 5.1,
+   "unit": "%",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -446,11 +426,11 @@
    "fact_id": "C0647-F031",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "tc",
-   "value": 294.0,
-   "unit": "mg/dL",
-   "as_of": "2025-10-27",
-   "relevant": true,
+   "key": "ast",
+   "value": 36.0,
+   "unit": "U/L",
+   "as_of": "2025-10-31",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -458,11 +438,11 @@
    "fact_id": "C0647-F032",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "hdl",
-   "value": 52.0,
-   "unit": "mg/dL",
-   "as_of": "2025-10-27",
-   "relevant": true,
+   "key": "alt",
+   "value": 16.0,
+   "unit": "U/L",
+   "as_of": "2025-10-31",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -470,10 +450,10 @@
    "fact_id": "C0647-F033",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "ldl",
-   "value": 217.0,
-   "unit": "mg/dL",
-   "as_of": "2025-10-27",
+   "key": "ggt",
+   "value": 31.0,
+   "unit": "U/L",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -482,10 +462,10 @@
    "fact_id": "C0647-F034",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "triglycerides",
-   "value": 122.0,
-   "unit": "mg/dL",
-   "as_of": "2025-10-27",
+   "key": "alk_phos",
+   "value": 87.0,
+   "unit": "U/L",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -494,11 +474,11 @@
    "fact_id": "C0647-F035",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "tc_hdl_ratio",
-   "value": 5.7,
-   "unit": "ratio",
-   "as_of": "2025-10-27",
-   "relevant": true,
+   "key": "bilirubin",
+   "value": 1.1,
+   "unit": "mg/dL",
+   "as_of": "2025-10-31",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -506,10 +486,10 @@
    "fact_id": "C0647-F036",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "glucose_fasting",
-   "value": 86.0,
-   "unit": "mg/dL",
-   "as_of": "2025-10-27",
+   "key": "albumin",
+   "value": 4.5,
+   "unit": "g/dL",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -518,10 +498,10 @@
    "fact_id": "C0647-F037",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "a1c",
-   "value": 5.2,
-   "unit": "%",
-   "as_of": "2025-10-27",
+   "key": "creatinine",
+   "value": 0.9,
+   "unit": "mg/dL",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -530,10 +510,10 @@
    "fact_id": "C0647-F038",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "ast",
-   "value": 27.0,
-   "unit": "U/L",
-   "as_of": "2025-10-27",
+   "key": "egfr",
+   "value": 73.0,
+   "unit": "mL/min/1.73m2",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -542,10 +522,10 @@
    "fact_id": "C0647-F039",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "alt",
-   "value": 41.0,
-   "unit": "U/L",
-   "as_of": "2025-10-27",
+   "key": "hemoglobin",
+   "value": 13.9,
+   "unit": "g/dL",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -554,10 +534,10 @@
    "fact_id": "C0647-F040",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "ggt",
-   "value": 35.0,
-   "unit": "U/L",
-   "as_of": "2025-10-27",
+   "key": "hiv",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -566,10 +546,10 @@
    "fact_id": "C0647-F041",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "alk_phos",
-   "value": 71.0,
-   "unit": "U/L",
-   "as_of": "2025-10-27",
+   "key": "cdt",
+   "value": 0.8,
+   "unit": "%dCDT",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -578,10 +558,10 @@
    "fact_id": "C0647-F042",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "bilirubin",
-   "value": 0.4,
-   "unit": "mg/dL",
-   "as_of": "2025-10-27",
+   "key": "nt_probnp",
+   "value": 71.0,
+   "unit": "pg/mL",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -590,148 +570,76 @@
    "fact_id": "C0647-F043",
    "doc_id": "C0647-D06",
    "kind": "lab_value",
-   "key": "albumin",
-   "value": 4.0,
-   "unit": "g/dL",
-   "as_of": "2025-10-27",
+   "key": "glucose_random",
+   "value": 123.0,
+   "unit": "mg/dL",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0647-F044",
-   "doc_id": "C0647-D06",
+   "doc_id": "C0647-D07",
    "kind": "lab_value",
-   "key": "creatinine",
-   "value": 0.8,
-   "unit": "mg/dL",
-   "as_of": "2025-10-27",
-   "relevant": false,
+   "key": "cotinine_urine",
+   "value": 3.0,
+   "unit": "ng/mL",
+   "as_of": "2025-10-31",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0647-F045",
-   "doc_id": "C0647-D06",
+   "doc_id": "C0647-D07",
    "kind": "lab_value",
-   "key": "egfr",
-   "value": 91.0,
-   "unit": "mL/min/1.73m2",
-   "as_of": "2025-10-27",
+   "key": "urine_protein",
+   "value": 20.0,
+   "unit": "mg/dL",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0647-F046",
-   "doc_id": "C0647-D06",
+   "doc_id": "C0647-D07",
    "kind": "lab_value",
-   "key": "hemoglobin",
-   "value": 13.6,
-   "unit": "g/dL",
-   "as_of": "2025-10-27",
+   "key": "cocaine",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0647-F047",
-   "doc_id": "C0647-D06",
+   "doc_id": "C0647-D07",
    "kind": "lab_value",
-   "key": "hiv",
-   "value": 0.0,
+   "key": "urine_glucose",
+   "value": 0,
    "unit": "qual",
-   "as_of": "2025-10-27",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0647-F048",
-   "doc_id": "C0647-D06",
+   "doc_id": "C0647-D07",
    "kind": "lab_value",
-   "key": "cdt",
-   "value": 1.5,
-   "unit": "%dCDT",
-   "as_of": "2025-10-27",
+   "key": "urine_rbc",
+   "value": 0,
+   "unit": "/hpf",
+   "as_of": "2025-10-31",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0647-F049",
-   "doc_id": "C0647-D06",
-   "kind": "lab_value",
-   "key": "nt_probnp",
-   "value": 320.0,
-   "unit": "pg/mL",
-   "as_of": "2025-10-27",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F050",
-   "doc_id": "C0647-D07",
-   "kind": "lab_value",
-   "key": "cotinine_urine",
-   "value": 4.0,
-   "unit": "ng/mL",
-   "as_of": "2025-10-27",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F051",
-   "doc_id": "C0647-D07",
-   "kind": "lab_value",
-   "key": "urine_protein",
-   "value": 10.0,
-   "unit": "mg/dL",
-   "as_of": "2025-10-27",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F052",
-   "doc_id": "C0647-D07",
-   "kind": "lab_value",
-   "key": "cocaine",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2025-10-27",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F053",
-   "doc_id": "C0647-D07",
-   "kind": "lab_value",
-   "key": "urine_glucose",
-   "value": 0,
-   "unit": "qual",
-   "as_of": "2025-10-27",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F054",
-   "doc_id": "C0647-D07",
-   "kind": "lab_value",
-   "key": "urine_rbc",
-   "value": 0,
-   "unit": "/hpf",
-   "as_of": "2025-10-27",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0647-F055",
    "doc_id": "C0647-D08",
    "kind": "questionnaire",
    "key": "FINQ:income",
@@ -743,7 +651,7 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F056",
+   "fact_id": "C0647-F050",
    "doc_id": "C0647-D08",
    "kind": "questionnaire",
    "key": "FINQ:net_worth",
@@ -755,11 +663,11 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F057",
+   "fact_id": "C0647-F051",
    "doc_id": "C0647-D08",
    "kind": "questionnaire",
    "key": "FINQ:existing",
-   "value": 250000,
+   "value": 500000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -767,7 +675,7 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F058",
+   "fact_id": "C0647-F052",
    "doc_id": "C0647-D08",
    "kind": "questionnaire",
    "key": "FINQ:purpose",
@@ -779,7 +687,7 @@
    "note": null
   },
   {
-   "fact_id": "C0647-F059",
+   "fact_id": "C0647-F053",
    "doc_id": "C0647-D09",
    "kind": "aps_finding",
    "key": "dx:depression_anxiety",
@@ -796,29 +704,41 @@
     "years_since_dx": 4.3
    },
    "unit": null,
-   "as_of": "2025-05-13",
+   "as_of": "2025-10-08",
    "relevant": true,
    "truth_ref": "conditions[0]",
    "note": null
   },
   {
-   "fact_id": "C0647-F060",
+   "fact_id": "C0647-F054",
    "doc_id": "C0647-D09",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "129/78",
-    "128/81",
-    "113/75"
+    "127/82",
+    "138/86",
+    "134/91"
    ],
    "unit": null,
-   "as_of": "2025-05-13",
+   "as_of": "2025-10-08",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
-   "fact_id": "C0647-F061",
+   "fact_id": "C0647-F055",
+   "doc_id": "C0647-D09",
+   "kind": "aps_finding",
+   "key": "noncompliance",
+   "value": "patient non-compliant with medications / missed follow-ups",
+   "unit": null,
+   "as_of": "2025-10-08",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0647-F056",
    "doc_id": "C0647-D10",
    "kind": "aps_finding",
    "key": "dx:depression_anxiety",
@@ -835,13 +755,13 @@
     "years_since_dx": 4.3
    },
    "unit": null,
-   "as_of": "2025-04-17",
+   "as_of": "2025-04-07",
    "relevant": true,
    "truth_ref": "conditions[0]",
    "note": null
   },
   {
-   "fact_id": "C0647-F062",
+   "fact_id": "C0647-F057",
    "doc_id": "C0647-D10",
    "kind": "aps_finding",
    "key": "dx:frailty",
@@ -852,13 +772,13 @@
     "adl_dependency": false
    },
    "unit": null,
-   "as_of": "2025-04-17",
+   "as_of": "2025-04-07",
    "relevant": true,
    "truth_ref": "conditions[1]",
    "note": null
   },
   {
-   "fact_id": "C0647-F063",
+   "fact_id": "C0647-F058",
    "doc_id": "C0647-D10",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
@@ -869,72 +789,72 @@
     "member": "cataracts"
    },
    "unit": null,
-   "as_of": "2025-04-17",
+   "as_of": "2025-04-07",
    "relevant": false,
    "truth_ref": "conditions[2]",
    "note": null
   },
   {
-   "fact_id": "C0647-F064",
+   "fact_id": "C0647-F059",
    "doc_id": "C0647-D10",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
    "value": {
-    "dx": "acute injury",
+    "dx": "musculoskeletal injury",
     "onset": "2021-09-15",
     "status": "controlled",
     "member": "acute_injury"
    },
    "unit": null,
-   "as_of": "2025-04-17",
+   "as_of": "2025-04-07",
    "relevant": false,
    "truth_ref": "conditions[3]",
    "note": null
   },
   {
-   "fact_id": "C0647-F065",
+   "fact_id": "C0647-F060",
    "doc_id": "C0647-D10",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
    "value": {
     "dx": "gout",
-    "onset": "2012-07-26",
+    "onset": "2017-11-21",
     "status": "controlled",
     "member": "gout"
    },
    "unit": null,
-   "as_of": "2025-04-17",
+   "as_of": "2025-04-07",
    "relevant": false,
    "truth_ref": "conditions[4]",
    "note": null
   },
   {
-   "fact_id": "C0647-F066",
+   "fact_id": "C0647-F061",
    "doc_id": "C0647-D10",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
    "value": {
-    "dx": "sinusitis",
-    "onset": "2018-04-06",
+    "dx": "acute sinusitis",
+    "onset": "2019-08-13",
     "status": "controlled",
     "member": "sinusitis"
    },
    "unit": null,
-   "as_of": "2025-04-17",
+   "as_of": "2025-04-07",
    "relevant": false,
    "truth_ref": "conditions[5]",
    "note": null
   },
   {
-   "fact_id": "C0647-F067",
+   "fact_id": "C0647-F062",
    "doc_id": "C0647-D10",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "129/81"
+    "135/90"
    ],
    "unit": null,
-   "as_of": "2025-04-17",
+   "as_of": "2025-04-07",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -961,9 +881,7 @@
     "C0647-F007",
     "C0647-F008",
     "C0647-F009",
-    "C0647-F010",
-    "C0647-F011",
-    "C0647-F012"
+    "C0647-F010"
    ]
   },
   {
@@ -977,16 +895,14 @@
    "pages": 1,
    "text_path": "data/source/C0647/C0647-D02.txt",
    "fact_ids": [
+    "C0647-F011",
+    "C0647-F012",
     "C0647-F013",
     "C0647-F014",
     "C0647-F015",
     "C0647-F016",
     "C0647-F017",
-    "C0647-F018",
-    "C0647-F019",
-    "C0647-F020",
-    "C0647-F021",
-    "C0647-F022"
+    "C0647-F018"
    ]
   },
   {
@@ -995,14 +911,13 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2025-10-23T09:07:00",
-   "received_at": "2025-10-23T09:25:00",
+   "received_at": "2025-10-23T09:20:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0647/C0647-D03.txt",
    "fact_ids": [
-    "C0647-F023",
-    "C0647-F024",
-    "C0647-F025"
+    "C0647-F019",
+    "C0647-F020"
    ]
   },
   {
@@ -1011,29 +926,12 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-10-23T09:07:00",
-   "received_at": "2025-10-23T09:34:00",
+   "received_at": "2025-10-23T09:21:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0647/C0647-D04.txt",
    "fact_ids": [
-    "C0647-F026",
-    "C0647-F027"
-   ]
-  },
-  {
-   "doc_id": "C0647-D05",
-   "case_id": "C0647",
-   "doc_type": "paramed",
-   "vendor_id": "PMX",
-   "ordered_at": "2025-10-23T12:06:00",
-   "received_at": "2025-10-27T19:06:00",
-   "order_reason": "REQ-1 grid",
-   "pages": 1,
-   "text_path": "data/source/C0647/C0647-D05.txt",
-   "fact_ids": [
-    "C0647-F028",
-    "C0647-F029",
-    "C0647-F030"
+    "C0647-F021"
    ]
   },
   {
@@ -1042,15 +940,31 @@
    "doc_type": "other",
    "vendor_id": "FINQ",
    "ordered_at": "2025-10-23T11:06:00",
-   "received_at": "2025-10-28T09:06:00",
+   "received_at": "2025-10-31T09:06:00",
    "order_reason": "FIN-2 over limit / KPE",
    "pages": 1,
    "text_path": "data/source/C0647/C0647-D08.txt",
    "fact_ids": [
-    "C0647-F055",
-    "C0647-F056",
-    "C0647-F057",
-    "C0647-F058"
+    "C0647-F049",
+    "C0647-F050",
+    "C0647-F051",
+    "C0647-F052"
+   ]
+  },
+  {
+   "doc_id": "C0647-D05",
+   "case_id": "C0647",
+   "doc_type": "paramed",
+   "vendor_id": "PMX",
+   "ordered_at": "2025-10-23T12:06:00",
+   "received_at": "2025-11-01T01:06:00",
+   "order_reason": "REQ-1 grid",
+   "pages": 1,
+   "text_path": "data/source/C0647/C0647-D05.txt",
+   "fact_ids": [
+    "C0647-F022",
+    "C0647-F023",
+    "C0647-F024"
    ]
   },
   {
@@ -1058,12 +972,18 @@
    "case_id": "C0647",
    "doc_type": "lab_blood",
    "vendor_id": "APX",
-   "ordered_at": "2025-10-26T13:06:00",
-   "received_at": "2025-10-30T13:06:00",
+   "ordered_at": "2025-10-30T19:06:00",
+   "received_at": "2025-11-02T19:06:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0647/C0647-D06.txt",
    "fact_ids": [
+    "C0647-F025",
+    "C0647-F026",
+    "C0647-F027",
+    "C0647-F028",
+    "C0647-F029",
+    "C0647-F030",
     "C0647-F031",
     "C0647-F032",
     "C0647-F033",
@@ -1076,13 +996,7 @@
     "C0647-F040",
     "C0647-F041",
     "C0647-F042",
-    "C0647-F043",
-    "C0647-F044",
-    "C0647-F045",
-    "C0647-F046",
-    "C0647-F047",
-    "C0647-F048",
-    "C0647-F049"
+    "C0647-F043"
    ]
   },
   {
@@ -1090,17 +1004,17 @@
    "case_id": "C0647",
    "doc_type": "lab_urine",
    "vendor_id": "APX",
-   "ordered_at": "2025-10-26T13:06:00",
-   "received_at": "2025-10-30T13:11:00",
+   "ordered_at": "2025-10-30T19:06:00",
+   "received_at": "2025-11-02T19:11:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0647/C0647-D07.txt",
    "fact_ids": [
-    "C0647-F050",
-    "C0647-F051",
-    "C0647-F052",
-    "C0647-F053",
-    "C0647-F054"
+    "C0647-F044",
+    "C0647-F045",
+    "C0647-F046",
+    "C0647-F047",
+    "C0647-F048"
    ]
   },
   {
@@ -1108,14 +1022,15 @@
    "case_id": "C0647",
    "doc_type": "aps",
    "vendor_id": "ecw_problem_heavy",
-   "ordered_at": "2025-10-23T10:06:00",
-   "received_at": "2025-11-07T10:06:00",
+   "ordered_at": "2025-10-24T13:06:00",
+   "received_at": "2025-11-19T13:06:00",
    "order_reason": "REQ-2.1 impairment may rate >= +50",
-   "pages": 8,
+   "pages": 4,
    "text_path": "data/source/C0647/C0647-D09.txt",
    "fact_ids": [
-    "C0647-F059",
-    "C0647-F060"
+    "C0647-F053",
+    "C0647-F054",
+    "C0647-F055"
    ]
   },
   {
@@ -1123,19 +1038,19 @@
    "case_id": "C0647",
    "doc_type": "aps",
    "vendor_id": "specialist_letter",
-   "ordered_at": "2025-10-24T10:06:00",
-   "received_at": "2025-11-13T10:06:00",
+   "ordered_at": "2025-10-25T10:06:00",
+   "received_at": "2025-12-02T10:06:00",
    "order_reason": "REQ-2.1 impairment may rate >= +50",
    "pages": 1,
    "text_path": "data/source/C0647/C0647-D10.txt",
    "fact_ids": [
+    "C0647-F056",
+    "C0647-F057",
+    "C0647-F058",
+    "C0647-F059",
+    "C0647-F060",
     "C0647-F061",
-    "C0647-F062",
-    "C0647-F063",
-    "C0647-F064",
-    "C0647-F065",
-    "C0647-F066",
-    "C0647-F067"
+    "C0647-F062"
    ]
   }
  ]

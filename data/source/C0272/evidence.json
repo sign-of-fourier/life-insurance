@@ -54,7 +54,7 @@
    "doc_id": "C0272-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 100000,
+   "value": 500000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -131,8 +131,8 @@
    "key": "avocation",
    "value": {
     "activity": "private_aviation",
-    "total_hours": 31,
-    "hours_per_year": 75,
+    "total_hours": 26,
+    "hours_per_year": 45,
     "ifr": false
    },
    "unit": null,
@@ -143,22 +143,10 @@
   },
   {
    "fact_id": "C0272-F012",
-   "doc_id": "C0272-D01",
-   "kind": "app_answer",
-   "key": "prior_application",
-   "value": "2021 Pinecrest Mutual: issued Standard",
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0272-F013",
    "doc_id": "C0272-D02",
    "kind": "app_answer",
    "key": "tobacco",
-   "value": "Former cigarette, quit 07/2022",
+   "value": "Former cigarette, quit 07/2021",
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -166,11 +154,11 @@
    "note": null
   },
   {
-   "fact_id": "C0272-F014",
+   "fact_id": "C0272-F013",
    "doc_id": "C0272-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 10.0,
+   "value": 0.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -178,7 +166,7 @@
    "note": null
   },
   {
-   "fact_id": "C0272-F015",
+   "fact_id": "C0272-F014",
    "doc_id": "C0272-D02",
    "kind": "app_answer",
    "key": "diabetes:prediabetes",
@@ -195,7 +183,7 @@
    "note": null
   },
   {
-   "fact_id": "C0272-F016",
+   "fact_id": "C0272-F015",
    "doc_id": "C0272-D02",
    "kind": "app_answer",
    "key": "respiratory:benign_no_rating",
@@ -209,6 +197,23 @@
    "as_of": null,
    "relevant": false,
    "truth_ref": "conditions[1]",
+   "note": null
+  },
+  {
+   "fact_id": "C0272-F016",
+   "doc_id": "C0272-D02",
+   "kind": "app_answer",
+   "key": "other:benign_no_rating",
+   "value": {
+    "condition": "urinary tract infection",
+    "diagnosed": "12/2021",
+    "treatment": "nitrofurantoin, sulfamethoxazole-trimethoprim",
+    "physician": "Dr. Elizabeth White"
+   },
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": "conditions[2]",
    "note": null
   },
   {
@@ -229,10 +234,10 @@
    "kind": "app_answer",
    "key": "family_history",
    "value": {
-    "relation": "father",
-    "condition": "MI",
-    "age_at_onset": 56,
-    "age_at_death": 54
+    "relation": "mother",
+    "condition": "colon cancer",
+    "age_at_onset": 53,
+    "age_at_death": 57
    },
    "unit": null,
    "as_of": null,
@@ -246,10 +251,10 @@
    "kind": "app_answer",
    "key": "family_history",
    "value": {
-    "relation": "father",
-    "condition": "Alzheimer's",
-    "age_at_onset": 79,
-    "age_at_death": null
+    "relation": "mother",
+    "condition": "type 2 diabetes",
+    "age_at_onset": 70,
+    "age_at_death": 90
    },
    "unit": null,
    "as_of": null,
@@ -282,7 +287,7 @@
    "key": "montelukast",
    "value": {
     "strength": "10 mg",
-    "n_fills": 3,
+    "n_fills": 40,
     "first": "2022-10-12",
     "last": "2026-03-22",
     "prescriber_specialty": "family medicine"
@@ -297,34 +302,34 @@
    "fact_id": "C0272-F022",
    "doc_id": "C0272-D03",
    "kind": "rx_fill",
-   "key": "nitrofurantoin",
+   "key": "colchicine",
    "value": {
-    "strength": "100 mg",
+    "strength": "0.6 mg",
     "n_fills": 40,
-    "first": "2022-02-16",
+    "first": "2019-03-27",
     "last": "2026-03-22",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
    "as_of": "2026-03-22",
    "relevant": false,
-   "truth_ref": "conditions[2]",
+   "truth_ref": "conditions[3]",
    "note": null
   },
   {
    "fact_id": "C0272-F023",
    "doc_id": "C0272-D03",
    "kind": "rx_fill",
-   "key": "azithromycin",
+   "key": "ondansetron",
    "value": {
-    "strength": "250 mg",
+    "strength": "8 mg",
     "n_fills": 1,
-    "first": "2020-08-03",
-    "last": "2020-08-03",
+    "first": "2021-12-02",
+    "last": "2021-12-02",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2020-08-03",
+   "as_of": "2021-12-02",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -333,71 +338,65 @@
    "fact_id": "C0272-F024",
    "doc_id": "C0272-D03",
    "kind": "rx_fill",
-   "key": "ibuprofen",
+   "key": "prednisone",
    "value": {
-    "strength": "800 mg",
+    "strength": "20 mg",
     "n_fills": 1,
-    "first": "2024-09-26",
-    "last": "2024-09-26",
+    "first": "2024-10-05",
+    "last": "2024-10-05",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2024-09-26",
+   "as_of": "2024-10-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0272-F025",
-   "doc_id": "C0272-D03",
-   "kind": "rx_fill",
-   "key": "ibuprofen",
-   "value": {
-    "strength": "600 mg",
-    "n_fills": 1,
-    "first": "2024-07-25",
-    "last": "2024-07-25",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0272-D04",
+   "kind": "mib_code",
+   "key": "605232",
+   "value": "2021-05-30",
    "unit": null,
-   "as_of": "2024-07-25",
-   "relevant": false,
-   "truth_ref": null,
+   "as_of": "2021-05-30",
+   "relevant": true,
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0272-F026",
    "doc_id": "C0272-D04",
    "kind": "mib_code",
-   "key": "606277",
-   "value": "2022-07-21",
+   "key": "321952",
+   "value": "2023-10-27",
    "unit": null,
-   "as_of": "2022-07-21",
-   "relevant": true,
-   "truth_ref": "conditions[0]",
+   "as_of": "2023-10-27",
+   "relevant": false,
+   "truth_ref": "conditions[2]",
    "note": null
   },
   {
    "fact_id": "C0272-F027",
    "doc_id": "C0272-D04",
    "kind": "mib_code",
-   "key": "010970",
-   "value": "2021-01-15",
+   "key": "025080",
+   "value": "2022-12-15",
    "unit": null,
-   "as_of": "2021-01-15",
-   "relevant": false,
+   "as_of": "2022-12-15",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0272-F028",
-   "doc_id": "C0272-D04",
-   "kind": "mib_code",
-   "key": "180815",
-   "value": "2017-10-01",
+   "doc_id": "C0272-D05",
+   "kind": "mvr_violation",
+   "key": "M05",
+   "value": "Improper turn",
    "unit": null,
-   "as_of": "2017-10-01",
-   "relevant": false,
+   "as_of": "2025-12-24",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -407,11 +406,11 @@
    "kind": "paramed",
    "key": "build",
    "value": {
-    "height_in": 63.0,
-    "weight_lb": 168.0
+    "height_in": 63.5,
+    "weight_lb": 162.0
    },
    "unit": null,
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -424,25 +423,25 @@
    "value": {
     "readings": [
      [
-      129,
-      89
+      141,
+      85
      ],
      [
-      131,
-      86
+      145,
+      85
      ],
      [
-      136,
-      91
+      138,
+      92
      ]
     ],
     "avg": [
-     132,
-     89
+     141,
+     87
     ]
    },
    "unit": null,
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -452,9 +451,9 @@
    "doc_id": "C0272-D06",
    "kind": "paramed",
    "key": "pulse",
-   "value": 54,
+   "value": 72,
    "unit": "bpm",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -464,9 +463,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "tc",
-   "value": 244.0,
+   "value": 264.0,
    "unit": "mg/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -476,9 +475,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "hdl",
-   "value": 48.0,
+   "value": 50.0,
    "unit": "mg/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -488,9 +487,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "ldl",
-   "value": 165.0,
+   "value": 195.0,
    "unit": "mg/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -500,9 +499,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "triglycerides",
-   "value": 155.0,
+   "value": 93.0,
    "unit": "mg/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -512,9 +511,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "tc_hdl_ratio",
-   "value": 5.1,
+   "value": 5.3,
    "unit": "ratio",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -524,10 +523,10 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "glucose_fasting",
-   "value": 112.0,
+   "value": 104.0,
    "unit": "mg/dL",
-   "as_of": "2026-03-30",
-   "relevant": true,
+   "as_of": "2026-04-05",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -538,7 +537,7 @@
    "key": "a1c",
    "value": 5.9,
    "unit": "%",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -548,9 +547,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "ast",
-   "value": 16.0,
+   "value": 29.0,
    "unit": "U/L",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -560,9 +559,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "alt",
-   "value": 16.0,
+   "value": 22.0,
    "unit": "U/L",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -572,9 +571,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "ggt",
-   "value": 55.0,
+   "value": 14.0,
    "unit": "U/L",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -584,9 +583,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "alk_phos",
-   "value": 104.0,
+   "value": 59.0,
    "unit": "U/L",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -596,9 +595,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "bilirubin",
-   "value": 1.1,
+   "value": 1.0,
    "unit": "mg/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -608,9 +607,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "albumin",
-   "value": 4.5,
+   "value": 4.4,
    "unit": "g/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -620,9 +619,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "creatinine",
-   "value": 0.8,
+   "value": 1.1,
    "unit": "mg/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -634,7 +633,7 @@
    "key": "egfr",
    "value": 69.0,
    "unit": "mL/min/1.73m2",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -644,9 +643,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "hemoglobin",
-   "value": 12.5,
+   "value": 14.5,
    "unit": "g/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -658,7 +657,7 @@
    "key": "hiv",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -668,9 +667,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "cdt",
-   "value": 1.5,
+   "value": 0.9,
    "unit": "%dCDT",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -680,9 +679,9 @@
    "doc_id": "C0272-D07",
    "kind": "lab_value",
    "key": "nt_probnp",
-   "value": 34.0,
+   "value": 106.0,
    "unit": "pg/mL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -692,9 +691,9 @@
    "doc_id": "C0272-D08",
    "kind": "lab_value",
    "key": "cotinine_urine",
-   "value": 7.0,
+   "value": 8.0,
    "unit": "ng/mL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -706,7 +705,7 @@
    "key": "urine_protein",
    "value": 0.0,
    "unit": "mg/dL",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -718,7 +717,7 @@
    "key": "cocaine",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -730,7 +729,7 @@
    "key": "urine_glucose",
    "value": 0,
    "unit": "qual",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -742,7 +741,7 @@
    "key": "urine_rbc",
    "value": 0,
    "unit": "/hpf",
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -754,7 +753,7 @@
    "key": "interpretation",
    "value": "normal sinus rhythm",
    "unit": null,
-   "as_of": "2026-03-30",
+   "as_of": "2026-04-05",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -767,8 +766,8 @@
    "value": [
     {
      "activity": "private_aviation",
-     "total_hours": 31,
-     "hours_per_year": 75,
+     "total_hours": 26,
+     "hours_per_year": 45,
      "ifr": false
     }
    ],
@@ -790,7 +789,7 @@
     "a1c_avg": 5.9
    },
    "unit": null,
-   "as_of": "2025-09-16",
+   "as_of": "2025-10-02",
    "relevant": true,
    "truth_ref": "conditions[0]",
    "note": null
@@ -802,20 +801,24 @@
    "key": "series:a1c",
    "value": [
     {
-     "date": "2025-09-16",
-     "value": 5.7
-    },
-    {
-     "date": "2024-01-24",
-     "value": 6.1
-    },
-    {
-     "date": "2022-06-01",
+     "date": "2025-10-02",
      "value": 6.0
+    },
+    {
+     "date": "2025-06-06",
+     "value": 5.9
+    },
+    {
+     "date": "2025-02-07",
+     "value": 5.9
+    },
+    {
+     "date": "2024-10-11",
+     "value": 5.9
     }
    ],
    "unit": null,
-   "as_of": "2025-09-16",
+   "as_of": "2025-10-02",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -826,12 +829,12 @@
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "135/89",
-    "127/85",
-    "122/88"
+    "140/89",
+    "143/88",
+    "135/84"
    ],
    "unit": null,
-   "as_of": "2025-09-16",
+   "as_of": "2025-10-02",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -859,8 +862,7 @@
     "C0272-F008",
     "C0272-F009",
     "C0272-F010",
-    "C0272-F011",
-    "C0272-F012"
+    "C0272-F011"
    ]
   },
   {
@@ -874,6 +876,7 @@
    "pages": 1,
    "text_path": "data/source/C0272/C0272-D02.txt",
    "fact_ids": [
+    "C0272-F012",
     "C0272-F013",
     "C0272-F014",
     "C0272-F015",
@@ -889,7 +892,7 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2026-03-25T09:18:00",
-   "received_at": "2026-03-25T09:27:00",
+   "received_at": "2026-03-25T09:40:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0272/C0272-D03.txt",
@@ -898,8 +901,7 @@
     "C0272-F021",
     "C0272-F022",
     "C0272-F023",
-    "C0272-F024",
-    "C0272-F025"
+    "C0272-F024"
    ]
   },
   {
@@ -908,14 +910,14 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2026-03-25T09:18:00",
-   "received_at": "2026-03-25T09:38:00",
+   "received_at": "2026-03-25T09:43:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0272/C0272-D04.txt",
    "fact_ids": [
+    "C0272-F025",
     "C0272-F026",
-    "C0272-F027",
-    "C0272-F028"
+    "C0272-F027"
    ]
   },
   {
@@ -924,11 +926,27 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2026-03-25T09:18:00",
-   "received_at": "2026-03-25T09:39:00",
+   "received_at": "2026-03-25T09:52:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0272/C0272-D05.txt",
-   "fact_ids": []
+   "fact_ids": [
+    "C0272-F028"
+   ]
+  },
+  {
+   "doc_id": "C0272-D10",
+   "case_id": "C0272",
+   "doc_type": "other",
+   "vendor_id": "AVOQ",
+   "ordered_at": "2026-03-25T11:17:00",
+   "received_at": "2026-04-04T09:17:00",
+   "order_reason": "REQ-2.5 avocation/aviation disclosed or indicated",
+   "pages": 1,
+   "text_path": "data/source/C0272/C0272-D10.txt",
+   "fact_ids": [
+    "C0272-F057"
+   ]
   },
   {
    "doc_id": "C0272-D06",
@@ -936,7 +954,7 @@
    "doc_type": "paramed",
    "vendor_id": "PMX",
    "ordered_at": "2026-03-25T12:17:00",
-   "received_at": "2026-03-31T02:17:00",
+   "received_at": "2026-04-06T01:17:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0272/C0272-D06.txt",
@@ -951,8 +969,8 @@
    "case_id": "C0272",
    "doc_type": "ekg",
    "vendor_id": "PMX",
-   "ordered_at": "2026-03-29T20:17:00",
-   "received_at": "2026-03-31T04:17:00",
+   "ordered_at": "2026-04-04T19:17:00",
+   "received_at": "2026-04-06T03:17:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0272/C0272-D09.txt",
@@ -961,26 +979,12 @@
    ]
   },
   {
-   "doc_id": "C0272-D10",
-   "case_id": "C0272",
-   "doc_type": "other",
-   "vendor_id": "AVOQ",
-   "ordered_at": "2026-03-25T11:17:00",
-   "received_at": "2026-03-31T09:17:00",
-   "order_reason": "REQ-2.5 avocation/aviation disclosed or indicated",
-   "pages": 1,
-   "text_path": "data/source/C0272/C0272-D10.txt",
-   "fact_ids": [
-    "C0272-F057"
-   ]
-  },
-  {
    "doc_id": "C0272-D07",
    "case_id": "C0272",
    "doc_type": "lab_blood",
    "vendor_id": "APX",
-   "ordered_at": "2026-03-29T20:17:00",
-   "received_at": "2026-04-03T20:17:00",
+   "ordered_at": "2026-04-04T19:17:00",
+   "received_at": "2026-04-09T19:17:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0272/C0272-D07.txt",
@@ -1011,8 +1015,8 @@
    "case_id": "C0272",
    "doc_type": "lab_urine",
    "vendor_id": "APX",
-   "ordered_at": "2026-03-29T20:17:00",
-   "received_at": "2026-04-03T20:22:00",
+   "ordered_at": "2026-04-04T19:17:00",
+   "received_at": "2026-04-09T19:22:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0272/C0272-D08.txt",
@@ -1029,10 +1033,10 @@
    "case_id": "C0272",
    "doc_type": "aps",
    "vendor_id": "epic_progress",
-   "ordered_at": "2026-03-26T10:17:00",
-   "received_at": "2026-04-26T10:17:00",
+   "ordered_at": "2026-03-25T12:17:00",
+   "received_at": "2026-04-22T12:17:00",
    "order_reason": "chapter order: confirm control/class cap",
-   "pages": 6,
+   "pages": 9,
    "text_path": "data/source/C0272/C0272-D11.txt",
    "fact_ids": [
     "C0272-F058",

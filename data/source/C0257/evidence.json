@@ -183,15 +183,15 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "gout",
-    "diagnosed": "02/2012",
-    "treatment": "allopurinol, colchicine",
+    "condition": "acute sinusitis",
+    "diagnosed": "11/2022",
+    "treatment": "azithromycin",
     "physician": "Dr. Carlos Rodriguez"
    },
    "unit": null,
    "as_of": null,
    "relevant": false,
-   "truth_ref": "conditions[2]",
+   "truth_ref": "conditions[1]",
    "note": null
   },
   {
@@ -227,9 +227,9 @@
    "fact_id": "C0257-F018",
    "doc_id": "C0257-D03",
    "kind": "rx_fill",
-   "key": "colchicine",
+   "key": "allopurinol",
    "value": {
-    "strength": "0.6 mg",
+    "strength": "300 mg",
     "n_fills": 40,
     "first": "2020-08-18",
     "last": "2025-08-14",
@@ -245,53 +245,44 @@
    "fact_id": "C0257-F019",
    "doc_id": "C0257-D03",
    "kind": "rx_fill",
-   "key": "amoxicillin",
+   "key": "colchicine",
    "value": {
-    "strength": "500 mg",
-    "n_fills": 1,
-    "first": "2024-04-26",
-    "last": "2024-04-26",
-    "prescriber_specialty": "urgent care"
+    "strength": "0.6 mg",
+    "n_fills": 40,
+    "first": "2020-08-18",
+    "last": "2025-08-14",
+    "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2024-04-26",
+   "as_of": "2025-08-14",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[2]",
    "note": null
   },
   {
    "fact_id": "C0257-F020",
-   "doc_id": "C0257-D03",
-   "kind": "rx_fill",
-   "key": "prednisone",
-   "value": {
-    "strength": "10 mg",
-    "n_fills": 1,
-    "first": "2022-03-17",
-    "last": "2022-03-17",
-    "prescriber_specialty": "urgent care"
-   },
+   "doc_id": "C0257-D04",
+   "kind": "mib_code",
+   "key": "816776",
+   "value": "2023-07-15",
    "unit": null,
-   "as_of": "2022-03-17",
-   "relevant": false,
+   "as_of": "2023-07-15",
+   "relevant": true,
    "truth_ref": null,
-   "note": null
+   "note": "uncorroborated"
   },
   {
    "fact_id": "C0257-F021",
-   "doc_id": "C0257-D03",
-   "kind": "rx_fill",
-   "key": "ibuprofen",
+   "doc_id": "C0257-D06",
+   "kind": "paramed",
+   "key": "build",
    "value": {
-    "strength": "800 mg",
-    "n_fills": 1,
-    "first": "2021-11-27",
-    "last": "2021-11-27",
-    "prescriber_specialty": "urgent care"
+    "height_in": 66.0,
+    "weight_lb": 194.0
    },
    "unit": null,
-   "as_of": "2021-11-27",
-   "relevant": false,
+   "as_of": "2025-08-25",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -299,13 +290,29 @@
    "fact_id": "C0257-F022",
    "doc_id": "C0257-D06",
    "kind": "paramed",
-   "key": "build",
+   "key": "bp",
    "value": {
-    "height_in": 66.5,
-    "weight_lb": 192.0
+    "readings": [
+     [
+      125,
+      89
+     ],
+     [
+      122,
+      87
+     ],
+     [
+      125,
+      89
+     ]
+    ],
+    "avg": [
+     124,
+     88
+    ]
    },
    "unit": null,
-   "as_of": "2025-08-26",
+   "as_of": "2025-08-25",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -314,42 +321,23 @@
    "fact_id": "C0257-F023",
    "doc_id": "C0257-D06",
    "kind": "paramed",
-   "key": "bp",
-   "value": {
-    "readings": [
-     [
-      125,
-      85
-     ],
-     [
-      128,
-      84
-     ],
-     [
-      134,
-      81
-     ]
-    ],
-    "avg": [
-     129,
-     83
-    ]
-   },
-   "unit": null,
-   "as_of": "2025-08-26",
-   "relevant": true,
+   "key": "pulse",
+   "value": 90,
+   "unit": "bpm",
+   "as_of": "2025-08-25",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0257-F024",
-   "doc_id": "C0257-D06",
-   "kind": "paramed",
-   "key": "pulse",
-   "value": 90,
-   "unit": "bpm",
-   "as_of": "2025-08-26",
-   "relevant": false,
+   "doc_id": "C0257-D07",
+   "kind": "lab_value",
+   "key": "cotinine_saliva",
+   "value": 109,
+   "unit": "ng/mL",
+   "as_of": "2025-08-25",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -357,11 +345,11 @@
    "fact_id": "C0257-F025",
    "doc_id": "C0257-D07",
    "kind": "lab_value",
-   "key": "cotinine_saliva",
-   "value": 94,
-   "unit": "ng/mL",
-   "as_of": "2025-08-26",
-   "relevant": true,
+   "key": "hiv",
+   "value": 0.0,
+   "unit": "qual",
+   "as_of": "2025-08-25",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -369,24 +357,29 @@
    "fact_id": "C0257-F026",
    "doc_id": "C0257-D07",
    "kind": "lab_value",
-   "key": "hiv",
+   "key": "cocaine",
    "value": 0.0,
    "unit": "qual",
-   "as_of": "2025-08-26",
+   "as_of": "2025-08-25",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0257-F027",
-   "doc_id": "C0257-D07",
-   "kind": "lab_value",
-   "key": "cocaine",
-   "value": 0.0,
-   "unit": "qual",
-   "as_of": "2025-08-26",
+   "doc_id": "C0257-D08",
+   "kind": "aps_finding",
+   "key": "dx:benign_no_rating",
+   "value": {
+    "dx": "acute sinusitis",
+    "onset": "2022-11-21",
+    "status": "controlled",
+    "member": "sinusitis"
+   },
+   "unit": null,
+   "as_of": "2025-02-20",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[1]",
    "note": null
   },
   {
@@ -395,49 +388,44 @@
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
    "value": {
-    "dx": "sinusitis",
-    "onset": "2022-11-21",
+    "dx": "gout",
+    "onset": "2019-12-15",
     "status": "controlled",
-    "member": "sinusitis"
+    "member": "gout"
    },
    "unit": null,
-   "as_of": "2025-01-11",
+   "as_of": "2025-02-20",
    "relevant": false,
-   "truth_ref": "conditions[1]",
+   "truth_ref": "conditions[2]",
    "note": null
   },
   {
    "fact_id": "C0257-F029",
    "doc_id": "C0257-D08",
    "kind": "aps_finding",
-   "key": "dx:benign_no_rating",
-   "value": {
-    "dx": "gout",
-    "onset": "2012-02-07",
-    "status": "controlled",
-    "member": "gout"
-   },
+   "key": "bp_readings",
+   "value": [
+    "127/85",
+    "129/80",
+    "120/90"
+   ],
    "unit": null,
-   "as_of": "2025-01-11",
+   "as_of": "2025-02-20",
    "relevant": false,
-   "truth_ref": "conditions[2]",
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0257-F030",
    "doc_id": "C0257-D08",
    "kind": "aps_finding",
-   "key": "bp_readings",
-   "value": [
-    "123/85",
-    "131/80",
-    "127/88"
-   ],
+   "key": "rule_out",
+   "value": "r/o Breast mass / biopsy",
    "unit": null,
-   "as_of": "2025-01-11",
-   "relevant": false,
+   "as_of": "2025-02-20",
+   "relevant": true,
    "truth_ref": null,
-   "note": null
+   "note": "uncorroborated suspicion"
   }
  ],
  "docs": [
@@ -485,32 +473,18 @@
    ]
   },
   {
-   "doc_id": "C0257-D04",
-   "case_id": "C0257",
-   "doc_type": "mib",
-   "vendor_id": "MIBS",
-   "ordered_at": "2025-08-17T09:50:00",
-   "received_at": "2025-08-17T09:58:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0257/C0257-D04.txt",
-   "fact_ids": []
-  },
-  {
    "doc_id": "C0257-D03",
    "case_id": "C0257",
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2025-08-17T09:50:00",
-   "received_at": "2025-08-17T10:15:00",
+   "received_at": "2025-08-17T10:08:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0257/C0257-D03.txt",
    "fact_ids": [
     "C0257-F018",
-    "C0257-F019",
-    "C0257-F020",
-    "C0257-F021"
+    "C0257-F019"
    ]
   },
   {
@@ -519,11 +493,25 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2025-08-17T09:50:00",
-   "received_at": "2025-08-17T10:54:00",
+   "received_at": "2025-08-17T10:09:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0257/C0257-D05.txt",
    "fact_ids": []
+  },
+  {
+   "doc_id": "C0257-D04",
+   "case_id": "C0257",
+   "doc_type": "mib",
+   "vendor_id": "MIBS",
+   "ordered_at": "2025-08-17T09:50:00",
+   "received_at": "2025-08-17T10:15:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0257/C0257-D04.txt",
+   "fact_ids": [
+    "C0257-F020"
+   ]
   },
   {
    "doc_id": "C0257-D06",
@@ -531,30 +519,14 @@
    "doc_type": "paramed",
    "vendor_id": "PMX",
    "ordered_at": "2025-08-17T12:49:00",
-   "received_at": "2025-08-27T02:49:00",
+   "received_at": "2025-08-26T00:49:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0257/C0257-D06.txt",
    "fact_ids": [
+    "C0257-F021",
     "C0257-F022",
-    "C0257-F023",
-    "C0257-F024"
-   ]
-  },
-  {
-   "doc_id": "C0257-D07",
-   "case_id": "C0257",
-   "doc_type": "lab_saliva",
-   "vendor_id": "APX",
-   "ordered_at": "2025-08-25T20:49:00",
-   "received_at": "2025-08-29T20:49:00",
-   "order_reason": "REQ-1 grid",
-   "pages": 1,
-   "text_path": "data/source/C0257/C0257-D07.txt",
-   "fact_ids": [
-    "C0257-F025",
-    "C0257-F026",
-    "C0257-F027"
+    "C0257-F023"
    ]
   },
   {
@@ -562,15 +534,32 @@
    "case_id": "C0257",
    "doc_type": "aps",
    "vendor_id": "hospital_discharge",
-   "ordered_at": "2025-08-19T11:49:00",
-   "received_at": "2025-09-15T11:49:00",
+   "ordered_at": "2025-08-17T15:49:00",
+   "received_at": "2025-08-27T15:49:00",
    "order_reason": "REQ-4 additional treating provider",
    "pages": 4,
    "text_path": "data/source/C0257/C0257-D08.txt",
    "fact_ids": [
+    "C0257-F027",
     "C0257-F028",
     "C0257-F029",
     "C0257-F030"
+   ]
+  },
+  {
+   "doc_id": "C0257-D07",
+   "case_id": "C0257",
+   "doc_type": "lab_saliva",
+   "vendor_id": "APX",
+   "ordered_at": "2025-08-24T18:49:00",
+   "received_at": "2025-08-28T18:49:00",
+   "order_reason": "REQ-1 grid",
+   "pages": 1,
+   "text_path": "data/source/C0257/C0257-D07.txt",
+   "fact_ids": [
+    "C0257-F024",
+    "C0257-F025",
+    "C0257-F026"
    ]
   }
  ]

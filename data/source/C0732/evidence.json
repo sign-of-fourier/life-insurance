@@ -54,7 +54,7 @@
    "doc_id": "C0732-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 0,
+   "value": 100000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -141,7 +141,7 @@
    "doc_id": "C0732-D02",
    "kind": "app_answer",
    "key": "tobacco",
-   "value": "Former cigarette, quit 12/2017",
+   "value": "Former cigarette, quit 02/2019",
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -153,7 +153,7 @@
    "doc_id": "C0732-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 6.0,
+   "value": 12.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
@@ -166,7 +166,7 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "dental",
+    "condition": "dental abscess",
     "diagnosed": "12/2024",
     "treatment": "amoxicillin",
     "physician": "Dr. Jacob Rodriguez"
@@ -197,8 +197,8 @@
    "value": {
     "relation": "mother",
     "condition": "colon cancer",
-    "age_at_onset": 55,
-    "age_at_death": 51
+    "age_at_onset": 45,
+    "age_at_death": 56
    },
    "unit": null,
    "as_of": null,
@@ -213,13 +213,13 @@
    "key": "family_history",
    "value": {
     "relation": "mother",
-    "condition": "MI",
-    "age_at_onset": 67,
-    "age_at_death": 75
+    "condition": "type 2 diabetes",
+    "age_at_onset": 65,
+    "age_at_death": null
    },
    "unit": null,
    "as_of": null,
-   "relevant": true,
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -291,6 +291,18 @@
   },
   {
    "fact_id": "C0732-F022",
+   "doc_id": "C0732-D05",
+   "kind": "mvr_violation",
+   "key": "D06",
+   "value": "Wet reckless (alcohol-related reckless, plea)",
+   "unit": null,
+   "as_of": "2019-05-05",
+   "relevant": true,
+   "truth_ref": null,
+   "note": "not disclosed"
+  },
+  {
+   "fact_id": "C0732-F023",
    "doc_id": "C0732-D06",
    "kind": "paramed",
    "key": "build",
@@ -305,24 +317,24 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F023",
+   "fact_id": "C0732-F024",
    "doc_id": "C0732-D06",
    "kind": "paramed",
    "key": "bp",
    "value": {
     "readings": [
      [
-      149,
-      82
+      138,
+      87
      ],
      [
-      137,
-      86
+      126,
+      91
      ]
     ],
     "avg": [
-     143,
-     84
+     132,
+     89
     ]
    },
    "unit": null,
@@ -332,11 +344,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F024",
+   "fact_id": "C0732-F025",
    "doc_id": "C0732-D06",
    "kind": "paramed",
    "key": "pulse",
-   "value": 75,
+   "value": 58,
    "unit": "bpm",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -344,23 +356,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F025",
-   "doc_id": "C0732-D07",
-   "kind": "lab_value",
-   "key": "tc",
-   "value": 258.0,
-   "unit": "mg/dL",
-   "as_of": "2025-07-11",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
    "fact_id": "C0732-F026",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "hdl",
-   "value": 56.0,
+   "key": "tc",
+   "value": 247.0,
    "unit": "mg/dL",
    "as_of": "2025-07-11",
    "relevant": true,
@@ -371,11 +371,11 @@
    "fact_id": "C0732-F027",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "ldl",
-   "value": 174.0,
+   "key": "hdl",
+   "value": 46.0,
    "unit": "mg/dL",
    "as_of": "2025-07-11",
-   "relevant": false,
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -383,8 +383,8 @@
    "fact_id": "C0732-F028",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "triglycerides",
-   "value": 136.0,
+   "key": "ldl",
+   "value": 176.0,
    "unit": "mg/dL",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -395,11 +395,11 @@
    "fact_id": "C0732-F029",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "tc_hdl_ratio",
-   "value": 4.6,
-   "unit": "ratio",
+   "key": "triglycerides",
+   "value": 125.0,
+   "unit": "mg/dL",
    "as_of": "2025-07-11",
-   "relevant": true,
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -407,11 +407,11 @@
    "fact_id": "C0732-F030",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "a1c",
-   "value": 5.3,
-   "unit": "%",
+   "key": "tc_hdl_ratio",
+   "value": 5.4,
+   "unit": "ratio",
    "as_of": "2025-07-11",
-   "relevant": false,
+   "relevant": true,
    "truth_ref": null,
    "note": null
   },
@@ -419,9 +419,9 @@
    "fact_id": "C0732-F031",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "ast",
-   "value": 26.0,
-   "unit": "U/L",
+   "key": "a1c",
+   "value": 5.5,
+   "unit": "%",
    "as_of": "2025-07-11",
    "relevant": false,
    "truth_ref": null,
@@ -431,8 +431,8 @@
    "fact_id": "C0732-F032",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "alt",
-   "value": 30.0,
+   "key": "ast",
+   "value": 34.0,
    "unit": "U/L",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -443,8 +443,8 @@
    "fact_id": "C0732-F033",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "ggt",
-   "value": 37.0,
+   "key": "alt",
+   "value": 33.0,
    "unit": "U/L",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -455,8 +455,8 @@
    "fact_id": "C0732-F034",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "alk_phos",
-   "value": 66.0,
+   "key": "ggt",
+   "value": 14.0,
    "unit": "U/L",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -467,9 +467,9 @@
    "fact_id": "C0732-F035",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "bilirubin",
-   "value": 0.4,
-   "unit": "mg/dL",
+   "key": "alk_phos",
+   "value": 89.0,
+   "unit": "U/L",
    "as_of": "2025-07-11",
    "relevant": false,
    "truth_ref": null,
@@ -479,9 +479,9 @@
    "fact_id": "C0732-F036",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
-   "key": "albumin",
-   "value": 4.6,
-   "unit": "g/dL",
+   "key": "bilirubin",
+   "value": 0.8,
+   "unit": "mg/dL",
    "as_of": "2025-07-11",
    "relevant": false,
    "truth_ref": null,
@@ -489,6 +489,18 @@
   },
   {
    "fact_id": "C0732-F037",
+   "doc_id": "C0732-D07",
+   "kind": "lab_value",
+   "key": "albumin",
+   "value": 4.3,
+   "unit": "g/dL",
+   "as_of": "2025-07-11",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0732-F038",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
    "key": "creatinine",
@@ -500,11 +512,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F038",
+   "fact_id": "C0732-F039",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
    "key": "egfr",
-   "value": 68.0,
+   "value": 91.0,
    "unit": "mL/min/1.73m2",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -512,11 +524,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F039",
+   "fact_id": "C0732-F040",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
    "key": "hemoglobin",
-   "value": 13.2,
+   "value": 14.7,
    "unit": "g/dL",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -524,7 +536,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F040",
+   "fact_id": "C0732-F041",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
    "key": "hiv",
@@ -536,11 +548,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F041",
+   "fact_id": "C0732-F042",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
    "key": "cdt",
-   "value": 1.2,
+   "value": 1.4,
    "unit": "%dCDT",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -548,11 +560,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F042",
+   "fact_id": "C0732-F043",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
    "key": "nt_probnp",
-   "value": 202.0,
+   "value": 226.0,
    "unit": "pg/mL",
    "as_of": "2025-07-11",
    "relevant": true,
@@ -560,11 +572,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F043",
+   "fact_id": "C0732-F044",
    "doc_id": "C0732-D07",
    "kind": "lab_value",
    "key": "glucose_random",
-   "value": 127.0,
+   "value": 118.0,
    "unit": "mg/dL",
    "as_of": "2025-07-11",
    "relevant": false,
@@ -572,11 +584,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F044",
+   "fact_id": "C0732-F045",
    "doc_id": "C0732-D08",
    "kind": "lab_value",
    "key": "cotinine_urine",
-   "value": 2.0,
+   "value": 8.0,
    "unit": "ng/mL",
    "as_of": "2025-07-11",
    "relevant": true,
@@ -584,7 +596,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F045",
+   "fact_id": "C0732-F046",
    "doc_id": "C0732-D08",
    "kind": "lab_value",
    "key": "urine_protein",
@@ -596,7 +608,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F046",
+   "fact_id": "C0732-F047",
    "doc_id": "C0732-D08",
    "kind": "lab_value",
    "key": "cocaine",
@@ -608,7 +620,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F047",
+   "fact_id": "C0732-F048",
    "doc_id": "C0732-D08",
    "kind": "lab_value",
    "key": "urine_glucose",
@@ -620,7 +632,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F048",
+   "fact_id": "C0732-F049",
    "doc_id": "C0732-D08",
    "kind": "lab_value",
    "key": "urine_rbc",
@@ -632,7 +644,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F049",
+   "fact_id": "C0732-F050",
    "doc_id": "C0732-D09",
    "kind": "ekg",
    "key": "interpretation",
@@ -644,7 +656,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F050",
+   "fact_id": "C0732-F051",
    "doc_id": "C0732-D10",
    "kind": "questionnaire",
    "key": "FINQ:income",
@@ -656,7 +668,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F051",
+   "fact_id": "C0732-F052",
    "doc_id": "C0732-D10",
    "kind": "questionnaire",
    "key": "FINQ:net_worth",
@@ -668,11 +680,11 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F052",
+   "fact_id": "C0732-F053",
    "doc_id": "C0732-D10",
    "kind": "questionnaire",
    "key": "FINQ:existing",
-   "value": 0,
+   "value": 100000,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -680,7 +692,7 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F053",
+   "fact_id": "C0732-F054",
    "doc_id": "C0732-D10",
    "kind": "questionnaire",
    "key": "FINQ:purpose",
@@ -692,12 +704,12 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F054",
+   "fact_id": "C0732-F055",
    "doc_id": "C0732-D11",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
    "value": {
-    "dx": "dental",
+    "dx": "dental abscess",
     "onset": "2024-12-25",
     "status": "controlled",
     "member": "dental"
@@ -709,14 +721,14 @@
    "note": null
   },
   {
-   "fact_id": "C0732-F055",
+   "fact_id": "C0732-F056",
    "doc_id": "C0732-D11",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "138/83",
-    "146/81",
-    "149/80"
+    "127/88",
+    "135/86",
+    "138/85"
    ],
    "unit": null,
    "as_of": "2024-12-02",
@@ -809,7 +821,9 @@
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0732/C0732-D05.txt",
-   "fact_ids": []
+   "fact_ids": [
+    "C0732-F022"
+   ]
   },
   {
    "doc_id": "C0732-D10",
@@ -822,10 +836,10 @@
    "pages": 1,
    "text_path": "data/source/C0732/C0732-D10.txt",
    "fact_ids": [
-    "C0732-F050",
     "C0732-F051",
     "C0732-F052",
-    "C0732-F053"
+    "C0732-F053",
+    "C0732-F054"
    ]
   },
   {
@@ -839,9 +853,9 @@
    "pages": 1,
    "text_path": "data/source/C0732/C0732-D06.txt",
    "fact_ids": [
-    "C0732-F022",
     "C0732-F023",
-    "C0732-F024"
+    "C0732-F024",
+    "C0732-F025"
    ]
   },
   {
@@ -855,7 +869,7 @@
    "pages": 1,
    "text_path": "data/source/C0732/C0732-D09.txt",
    "fact_ids": [
-    "C0732-F049"
+    "C0732-F050"
    ]
   },
   {
@@ -869,7 +883,6 @@
    "pages": 1,
    "text_path": "data/source/C0732/C0732-D07.txt",
    "fact_ids": [
-    "C0732-F025",
     "C0732-F026",
     "C0732-F027",
     "C0732-F028",
@@ -887,7 +900,8 @@
     "C0732-F040",
     "C0732-F041",
     "C0732-F042",
-    "C0732-F043"
+    "C0732-F043",
+    "C0732-F044"
    ]
   },
   {
@@ -901,11 +915,11 @@
    "pages": 1,
    "text_path": "data/source/C0732/C0732-D08.txt",
    "fact_ids": [
-    "C0732-F044",
     "C0732-F045",
     "C0732-F046",
     "C0732-F047",
-    "C0732-F048"
+    "C0732-F048",
+    "C0732-F049"
    ]
   },
   {
@@ -919,8 +933,8 @@
    "pages": 3,
    "text_path": "data/source/C0732/C0732-D11.txt",
    "fact_ids": [
-    "C0732-F054",
-    "C0732-F055"
+    "C0732-F055",
+    "C0732-F056"
    ]
   }
  ]

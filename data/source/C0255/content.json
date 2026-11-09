@@ -1,7 +1,9 @@
 {
  "meta": {
   "requirements": {
-   "ACCEL": "REQ-1 grid"
+   "PM": "REQ-3 accel fails (MIB code) -> next column",
+   "B": "REQ-3 accel fails (MIB code) -> next column",
+   "U": "REQ-3 accel fails (MIB code) -> next column"
   },
   "aps": [],
   "untraced": []
@@ -65,7 +67,7 @@
      "answer": "No"
     },
     "alcohol": {
-     "answer": "2.0 drinks/week"
+     "answer": "0.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -113,21 +115,7 @@
      "answer": "No"
     },
     "other": {
-     "answer": "Yes",
-     "details": [
-      {
-       "condition": "kidney stones",
-       "diagnosed": "11/2021",
-       "treatment": "tamsulosin",
-       "physician": "Dr. Kevin Rosales"
-      },
-      {
-       "condition": "glaucoma",
-       "diagnosed": "02/2023",
-       "treatment": "latanoprost",
-       "physician": "Dr. Kevin Rosales"
-      }
-     ]
+     "answer": "No"
     },
     "pending_tests": {
      "answer": "No"
@@ -136,7 +124,7 @@
      "answer": "No"
     },
     "current_meds": {
-     "answer": "tamsulosin"
+     "answer": "none"
     },
     "physician": {
      "answer": "Dr. Kevin Rosales, Marquez-Thompson Clinic; last visit 03/2025"
@@ -156,49 +144,75 @@
    "vendor": "SCR",
    "fills": [
     {
-     "drug": "tamsulosin",
-     "brand": "Flomax",
-     "strength": "0.4 mg",
+     "drug": "timolol ophthalmic",
+     "brand": "Timoptic",
+     "strength": "0.5%",
      "fills": [
-      "2021-11-24",
+      "2021-02-17",
+      "2021-04-05",
+      "2021-05-22",
+      "2021-07-08",
+      "2021-08-24",
+      "2021-10-10",
+      "2021-11-26",
+      "2022-01-12",
+      "2022-02-28",
+      "2022-04-16",
+      "2022-06-02",
+      "2022-07-19",
+      "2022-09-04",
+      "2022-10-22",
+      "2022-12-08",
+      "2023-01-24",
+      "2023-03-12",
+      "2023-04-28",
+      "2023-06-14",
+      "2023-07-31",
+      "2023-09-16",
+      "2023-11-02",
+      "2023-12-19",
+      "2024-02-04",
+      "2024-03-22",
+      "2024-05-08",
+      "2024-06-25",
+      "2024-08-11",
+      "2024-09-27",
+      "2024-11-13",
+      "2024-12-30",
+      "2025-02-15",
+      "2025-04-03",
+      "2025-05-20",
+      "2025-07-06",
+      "2025-08-22",
+      "2025-10-08",
+      "2025-11-24",
+      "2026-01-10",
       "2026-02-27"
      ],
      "days_supply": 10,
      "prescriber": "Dr. Kevin Rosales",
      "specialty": "family medicine",
-     "cond_index": 0
-    },
-    {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "10 mg",
-     "fills": [
-      "2022-06-02"
-     ],
-     "days_supply": 5,
-     "prescriber": "Dr. Nguyen (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
-    },
-    {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "5 mg",
-     "fills": [
-      "2023-01-20"
-     ],
-     "days_supply": 7,
-     "prescriber": "Dr. Kim (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
+     "cond_index": 1
     }
    ],
    "no_history": false
   },
   "C0255-D04": {
    "vendor": "MIBS",
-   "codes": [],
-   "no_hit": true
+   "codes": [
+    {
+     "code": "715232",
+     "reported": "2021-03-31",
+     "cond_index": 1
+    },
+    {
+     "code": "170775",
+     "reported": "2023-11-06",
+     "cond_index": null,
+     "uncorroborated": true
+    }
+   ],
+   "no_hit": false
   },
   "C0255-D05": {
    "vendor": "ACD",
@@ -207,6 +221,64 @@
    "events": [],
    "no_record": true,
    "foreign_license": false
+  },
+  "C0255-D06": {
+   "vendor": "PMX",
+   "exam_date": "2026-03-05",
+   "height_in": 58.0,
+   "weight_lb": 112.0,
+   "bp": [
+    [
+     124,
+     81
+    ],
+    [
+     124,
+     80
+    ],
+    [
+     131,
+     80
+    ]
+   ],
+   "pulse": 88,
+   "examiner_notes": {}
+  },
+  "C0255-D07": {
+   "vendor": "MIL",
+   "collected": "2026-03-05",
+   "fasting": true,
+   "results": {
+    "tc": 207.0,
+    "hdl": 59.0,
+    "ldl": 111.0,
+    "triglycerides": 181.0,
+    "tc_hdl_ratio": 3.5,
+    "glucose_fasting": 82.0,
+    "a1c": 5.4,
+    "ast": 32.0,
+    "alt": 15.0,
+    "ggt": 31.0,
+    "alk_phos": 96.0,
+    "bilirubin": 0.5,
+    "albumin": 4.2,
+    "creatinine": 1.0,
+    "egfr": 105.0,
+    "hemoglobin": 12.5,
+    "hiv": 0.0,
+    "cdt": 1.3
+   }
+  },
+  "C0255-D08": {
+   "vendor": "MIL",
+   "collected": "2026-03-05",
+   "results": {
+    "cotinine_urine": 2.0,
+    "urine_protein": 10.0,
+    "cocaine": 0.0,
+    "urine_glucose": 0,
+    "urine_rbc": 0
+   }
   }
  }
 }

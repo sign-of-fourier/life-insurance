@@ -1,9 +1,9 @@
 {
  "meta": {
   "requirements": {
-   "PM": "REQ-3 accel fails (MIB code, foreign) -> next column",
-   "B": "REQ-3 accel fails (MIB code, foreign) -> next column",
-   "U": "REQ-3 accel fails (MIB code, foreign) -> next column",
+   "PM": "REQ-3 accel fails (foreign) -> next column",
+   "B": "REQ-3 accel fails (foreign) -> next column",
+   "U": "REQ-3 accel fails (foreign) -> next column",
    "AVOQ": "REQ-2.5 avocation/aviation disclosed or indicated",
    "FORQ": "REQ-2.6 foreign national / travel"
   },
@@ -29,8 +29,8 @@
    "face": 750000,
    "product": "Term 30",
    "riders": [],
-   "existing": 0,
-   "replacement": true,
+   "existing": 100000,
+   "replacement": false,
    "beneficiary": "spouse",
    "signed": "2025-04-20",
    "signed_in_us": true
@@ -69,7 +69,7 @@
      "answer": "Former cigarette; quit 04/2022"
     },
     "alcohol": {
-     "answer": "2.0 drinks/week"
+     "answer": "10.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -120,9 +120,9 @@
      "answer": "Yes",
      "details": [
       {
-       "condition": "uti",
-       "diagnosed": "06/2019",
-       "treatment": "sulfamethoxazole-trimethoprim, nitrofurantoin",
+       "condition": "kidney stones",
+       "diagnosed": "09/2021",
+       "treatment": "tamsulosin",
        "physician": "Dr. Steven Hancock"
       }
      ]
@@ -140,7 +140,7 @@
      "answer": "Dr. Steven Hancock, Mitchell-Harrison Clinic; last visit 05/2024"
     },
     "family_history": {
-     "answer": "mother: MI, died 59; father: MI, dx 67"
+     "answer": "father: type 2 diabetes, dx 62"
     },
     "weight_change": {
      "answer": "No"
@@ -184,16 +184,16 @@
    "vendor": "MIBF",
    "codes": [
     {
-     "code": "021000",
-     "reported": "2022-05-06",
+     "code": "010900",
+     "reported": "2024-09-15",
      "cond_index": null,
-     "avocation": 0
+     "admin": true
     },
     {
-     "code": "170716",
-     "reported": "2020-02-19",
+     "code": "021000",
+     "reported": "2024-06-27",
      "cond_index": null,
-     "uncorroborated": true
+     "avocation": 0
     }
    ],
    "no_hit": false
@@ -202,8 +202,19 @@
    "vendor": "STATE",
    "license_state": "CA",
    "status": "VALID",
-   "events": [],
-   "no_record": true,
+   "events": [
+    {
+     "date": "2024-10-03",
+     "code": "M06",
+     "desc": "Failure to signal"
+    },
+    {
+     "date": "2024-08-23",
+     "code": "M02",
+     "desc": "Disregard traffic signal / stop sign"
+    }
+   ],
+   "no_record": false,
    "foreign_license": false
   },
   "C0709-D06": {
@@ -213,15 +224,15 @@
    "weight_lb": 178.0,
    "bp": [
     [
-     134,
-     88
+     125,
+     89
     ],
     [
-     139,
-     81
+     130,
+     82
     ]
    ],
-   "pulse": 74,
+   "pulse": 52,
    "examiner_notes": {}
   },
   "C0709-D07": {
@@ -229,11 +240,11 @@
    "collected": "2025-05-03",
    "fasting": true,
    "results": {
-    "tc": 276.0,
-    "hdl": 60.0,
-    "ldl": 203.0,
-    "triglycerides": 64.0,
-    "tc_hdl_ratio": 4.6,
+    "tc": 294.0,
+    "hdl": 69.0,
+    "ldl": 188.0,
+    "triglycerides": 184.0,
+    "tc_hdl_ratio": 4.3,
     "glucose_fasting": 94.0,
     "a1c": 5.2,
     "ast": 33.0,
@@ -253,7 +264,7 @@
    "vendor": "NGL",
    "collected": "2025-05-03",
    "results": {
-    "cotinine_urine": 4.0,
+    "cotinine_urine": 6.0,
     "urine_protein": 20.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
@@ -265,7 +276,7 @@
    "activities": [
     {
      "activity": "scuba",
-     "max_depth_ft": 186,
+     "max_depth_ft": 180,
      "cave": true,
      "intends_to_stop": false
     }

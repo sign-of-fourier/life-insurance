@@ -83,7 +83,7 @@
      "answer": "No"
     },
     "alcohol": {
-     "answer": "6.0 drinks/week"
+     "answer": "3.0 drinks/week"
     },
     "alcohol_treatment": {
      "answer": "No"
@@ -147,7 +147,15 @@
      "answer": "No"
     },
     "other": {
-     "answer": "No"
+     "answer": "Yes",
+     "details": [
+      {
+       "condition": "musculoskeletal injury",
+       "diagnosed": "02/2015",
+       "treatment": "cyclobenzaprine, ibuprofen",
+       "physician": "Dr. Wendy Peterson"
+      }
+     ]
     },
     "pending_tests": {
      "answer": "No"
@@ -240,52 +248,38 @@
      "cond_index": 0
     },
     {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "5 mg",
+     "drug": "ondansetron",
+     "brand": "Zofran",
+     "strength": "8 mg",
      "fills": [
-      "2020-09-20",
-      "2023-03-20",
-      "2025-09-16"
-     ],
-     "days_supply": 30,
-     "prescriber": "Dr. Wendy Peterson",
-     "specialty": "family medicine",
-     "cond_index": 2
-    },
-    {
-     "drug": "ibuprofen",
-     "brand": "Motrin",
-     "strength": "600 mg",
-     "fills": [
-      "2022-03-07"
+      "2023-01-23"
      ],
      "days_supply": 7,
+     "prescriber": "Dr. Smith (Urgent Care)",
+     "specialty": "urgent care",
+     "cond_index": null
+    },
+    {
+     "drug": "cyclobenzaprine",
+     "brand": "Flexeril",
+     "strength": "10 mg",
+     "fills": [
+      "2024-07-09"
+     ],
+     "days_supply": 5,
      "prescriber": "Dr. Nguyen (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
     },
     {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "5 mg",
+     "drug": "azithromycin",
+     "brand": "Zithromax",
+     "strength": "250 mg",
      "fills": [
-      "2024-04-30"
-     ],
-     "days_supply": 10,
-     "prescriber": "Dr. Smith (Urgent Care)",
-     "specialty": "urgent care",
-     "cond_index": null
-    },
-    {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "5 mg",
-     "fills": [
-      "2023-08-21"
+      "2022-06-11"
      ],
      "days_supply": 5,
-     "prescriber": "Dr. Smith (Urgent Care)",
+     "prescriber": "Dr. Nguyen (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
     }
@@ -300,43 +294,47 @@
      "reported": "2022-03-15",
      "cond_index": null,
      "admin": true
+    },
+    {
+     "code": "190759",
+     "reported": "2013-05-01",
+     "cond_index": null
     }
    ],
    "no_hit": false
   },
   "C0246-D05": {
    "vendor": "PMX",
-   "exam_date": "2025-09-24",
+   "exam_date": "2025-09-22",
    "height_in": 72.0,
-   "weight_lb": 154.0,
+   "weight_lb": 157.0,
    "bp": [
     [
-     133,
-     67
+     122,
+     71
     ],
     [
-     128,
-     70
+     126,
+     66
     ],
     [
-     127,
-     72
+     124,
+     64
     ]
    ],
-   "pulse": 82,
+   "pulse": 80,
    "examiner_notes": {}
   },
   "C0246-D06": {
    "vendor": "MIL",
-   "collected": "2025-09-24",
-   "fasting": true,
+   "collected": "2025-09-22",
+   "fasting": false,
    "results": {
-    "tc": 290.0,
-    "hdl": 47.0,
-    "ldl": 213.0,
-    "triglycerides": 147.0,
-    "tc_hdl_ratio": 6.2,
-    "glucose_fasting": 299.0,
+    "tc": 275.0,
+    "hdl": 60.0,
+    "ldl": 197.0,
+    "triglycerides": 90.0,
+    "tc_hdl_ratio": 4.6,
     "a1c": 11.9,
     "ast": 19.0,
     "alt": 24.0,
@@ -350,18 +348,19 @@
     "hiv": 0.0,
     "cdt": 1.4,
     "psa": 1.8,
-    "nt_probnp": 90.0
+    "nt_probnp": 90.0,
+    "glucose_random": 321.0
    }
   },
   "C0246-D07": {
    "vendor": "MIL",
-   "collected": "2025-09-24",
+   "collected": "2025-09-22",
    "results": {
-    "cotinine_urine": 2.0,
+    "cotinine_urine": 3.0,
     "urine_protein": 0.0,
     "cocaine": 0.0,
     "urine_glucose": 1,
-    "urine_rbc": 1
+    "urine_rbc": 2
    }
   },
   "C0246-D08": {
@@ -386,7 +385,7 @@
    },
    "style": "athena_summary",
    "ordered_reason": "REQ-2.1 impairment may rate >= +50",
-   "last_visit": "2025-05-15",
+   "last_visit": "2025-05-04",
    "stale": false,
    "problems": [
     {
@@ -414,47 +413,77 @@
    ],
    "visits": [
     {
-     "date": "2025-05-15",
+     "date": "2025-05-04",
      "reason": "Type 1 diabetes",
-     "bp": "125/74",
-     "weight_lb": 152.0
-    },
-    {
-     "date": "2024-11-12",
-     "reason": "flu shot",
-     "bp": "134/72",
+     "bp": "129/71",
      "weight_lb": 159.0
     },
     {
-     "date": "2024-05-12",
+     "date": "2025-01-30",
      "reason": "Type 1 diabetes",
-     "bp": "132/65",
+     "bp": "127/64",
      "weight_lb": 153.0
     },
     {
-     "date": "2023-11-10",
+     "date": "2024-10-28",
      "reason": "Type 1 diabetes",
-     "bp": "123/70",
+     "bp": "118/69",
+     "weight_lb": 154.0
+    },
+    {
+     "date": "2024-07-26",
+     "reason": "back strain",
+     "bp": "117/70",
+     "weight_lb": 152.0
+    },
+    {
+     "date": "2024-04-22",
+     "reason": "Type 1 diabetes",
+     "bp": "123/62",
+     "weight_lb": 152.0
+    },
+    {
+     "date": "2024-01-19",
+     "reason": "Type 1 diabetes",
+     "bp": "125/73",
+     "weight_lb": 155.0
+    },
+    {
+     "date": "2023-10-17",
+     "reason": "Type 1 diabetes",
+     "bp": "126/72",
+     "weight_lb": 154.0
+    },
+    {
+     "date": "2023-07-15",
+     "reason": "Type 1 diabetes",
+     "bp": "130/63",
+     "weight_lb": 152.0
+    },
+    {
+     "date": "2023-04-11",
+     "reason": "Type 1 diabetes",
+     "bp": "120/67",
      "weight_lb": 154.0
     }
    ],
    "series": {
     "a1c": [
      {
-      "date": "2025-05-15",
-      "value": 12.4
-     },
-     {
-      "date": "2024-11-12",
-      "value": 12.1
-     },
-     {
-      "date": "2024-05-12",
+      "date": "2025-05-04",
       "value": 12.2
      },
      {
-      "date": "2023-11-10",
-      "value": 12.7
+      "date": "2025-01-30",
+      "value": 12.3
+     },
+     {
+      "date": "2024-10-28",
+      "value": 12.3
+     },
+     {
+      "date": "2024-07-26",
+      "value": 11.9
      }
     ]
    },
@@ -462,7 +491,7 @@
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 3,
+   "pages": 4,
    "copy_forward": false,
    "patient": {
     "name": "Stephen Montgomery",
@@ -470,7 +499,7 @@
     "sex": "M"
    },
    "tobacco_documented": [],
-   "alcohol_dpw": 6.0,
+   "alcohol_dpw": 3.0,
    "family_history": [
     {
      "relation": "mother",
@@ -492,7 +521,7 @@
    },
    "style": "epic_progress",
    "ordered_reason": "REQ-2.1 impairment may rate >= +50",
-   "last_visit": "2025-04-24",
+   "last_visit": "2025-06-03",
    "stale": false,
    "problems": [
     {
@@ -509,27 +538,21 @@
    ],
    "visits": [
     {
-     "date": "2025-04-24",
+     "date": "2025-06-03",
      "reason": "Suicide attempt",
-     "bp": "131/73",
-     "weight_lb": 154.0
+     "bp": "117/69",
+     "weight_lb": 150.0
     },
     {
-     "date": "2024-03-30",
+     "date": "2024-06-13",
      "reason": "Suicide attempt",
-     "bp": "135/64",
-     "weight_lb": 152.0
+     "bp": "123/71",
+     "weight_lb": 150.0
     },
     {
-     "date": "2023-03-06",
+     "date": "2023-06-23",
      "reason": "Suicide attempt",
-     "bp": "125/68",
-     "weight_lb": 154.0
-    },
-    {
-     "date": "2022-02-09",
-     "reason": "URI",
-     "bp": "135/64",
+     "bp": "123/65",
      "weight_lb": 152.0
     }
    ],
@@ -538,7 +561,7 @@
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 11,
+   "pages": 4,
    "copy_forward": false,
    "patient": {
     "name": "Stephen Montgomery",
@@ -546,7 +569,7 @@
     "sex": "M"
    },
    "tobacco_documented": [],
-   "alcohol_dpw": 6.0,
+   "alcohol_dpw": 3.0,
    "family_history": [
     {
      "relation": "mother",

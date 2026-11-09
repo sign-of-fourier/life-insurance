@@ -46,6 +46,13 @@ NUM = {
     "years_since_tx": (0.2, 25, "f", 0), "recovered_years_": (0, 10, "f", 0),
 }
 P_TRUE = 0.3
+BIOLOGICS = {"adalimumab", "infliximab", "ustekinumab", "vedolizumab", "etanercept", "secukinumab", "dupilumab", "ocrelizumab",
+             "natalizumab", "belimumab", "tofacitinib"}
+CHRONIC_BENIGN = {"seasonal_allergy", "gerd", "glaucoma", "bph", "osteopenia", "gout", "hypothyroidism_simple", "contraception",
+                  "erectile_dysfunction", "rosacea", "eczema", "acne", "vitamin_d_deficiency"}
+BENIGN_LABEL = {"dental": "dental abscess", "uti": "urinary tract infection", "acute_injury": "musculoskeletal injury", "hernia_repaired": "inguinal hernia s/p repair",
+                "sinusitis": "acute sinusitis", "hypothyroidism_simple": "hypothyroidism", "vitamin_d_deficiency": "vitamin D deficiency",
+                "bph": "BPH", "gerd": "GERD"}
 
 
 def r1(x):
@@ -583,15 +590,28 @@ class TruthGen:
                 picks = ["levothyroxine"]
             elif t.startswith("prostate_ge8"):
                 picks = ["leuprolide"]
-        elif key == "hepatitis_c" and details.get("svr"):
-            picks = [r.choice(["sofosbuvir-velpatasvir", "glecaprevir-pibrentasvir"])]
+        elif key == "hepatitis_c":
+            picks = [r.choice(["sofosbuvir-velpatasvir", "glecaprevir-pibrentasvir"])] if details.get("svr") else []
+            if not details.get("svr"):
+                details.pop("years_since_tx", None)
+        elif key == "sleep_apnea" or (key == "cad_nonobstructive"):
+            picks = ["atorvastatin"] if key == "cad_nonobstructive" and r.random() < 0.6 else []
         elif key in ("cad",):
             picks = ["atorvastatin", "aspirin"] + (["clopidogrel"] if details.get("years_since", 5) < 1.5 else []) + \
                 (["metoprolol"] if r.random() < 0.6 else [])
         elif key in ("asthma",) and not details.get("controller"):
             picks = ["albuterol"]
         elif r.random() < 0.85:
-            picks = r.sample(rx, min(len(rx), r.choice([1, 1, 2])))
+            pool = list(rx)
+            if "biologic" in details:
+                bio = [d for d in pool if d in BIOLOGICS]
+                pool = [d for d in pool if d not in BIOLOGICS]
+                if details["biologic"] and bio:
+                    picks = [r.choice(bio)]
+            if key == "asthma" and details.get("controller"):
+                picks = [r.choice(["fluticasone-salmeterol", "budesonide-formoterol", "mometasone"])]
+                pool = ["albuterol", "montelukast"]
+            picks += r.sample(pool, min(len(pool), r.choice([0, 1, 1]) if picks else r.choice([1, 1, 2])))
         out = []
         for d in picks:
             if d not in RX:
@@ -616,10 +636,12 @@ class TruthGen:
         r = self.r
         drugs = IMP["benign_no_rating"]["members"][name]
         onset = self.ago(r.uniform(0.3, min(15, self.age - 16)))
+        chronic = name in CHRONIC_BENIGN
         meds = [MedUse(drug=d, dose=r.choice(RX[d][1]), start=min(onset + timedelta(days=r.randint(0, 60)), self.app_date - timedelta(days=10)),
-                       stop=None if r.random() < 0.6 else onset + timedelta(days=r.randint(10, 60)), indication=name)
+                       stop=(None if r.random() < 0.7 else None) if chronic else
+                       min(onset + timedelta(days=r.randint(7, 21)), self.app_date - timedelta(days=5)), indication=name)
                 for d in r.sample(drugs, min(len(drugs), r.choice([1, 1, 2])))]
-        return Condition(condition_key="benign_no_rating", label=name.replace("_", " "), onset=onset, status="controlled",
+        return Condition(condition_key="benign_no_rating", label=BENIGN_LABEL.get(name, name.replace("_", " ")), onset=onset, status="controlled",
                          severity="mild", details={"member": name}, meds=meds,
                          treating_provider_ids=[self.provider("family medicine").provider_id], disclosure=r.choice(["honest", "honest", "omitted"]),
                          in_mib=r.random() < 0.1, irrelevant=True)

@@ -151,7 +151,7 @@
    "kind": "app_answer",
    "key": "digestive:benign_no_rating",
    "value": {
-    "condition": "gerd",
+    "condition": "GERD",
     "diagnosed": "05/2026",
     "treatment": "omeprazole, famotidine",
     "physician": "Dr. Brandon Herman"
@@ -232,7 +232,7 @@
    "key": "omeprazole",
    "value": {
     "strength": "20 mg",
-    "n_fills": 3,
+    "n_fills": 8,
     "first": "2026-06-28",
     "last": "2026-09-15",
     "prescriber_specialty": "family medicine"
@@ -250,7 +250,7 @@
    "key": "famotidine",
    "value": {
     "strength": "20 mg",
-    "n_fills": 3,
+    "n_fills": 4,
     "first": "2026-06-08",
     "last": "2026-09-15",
     "prescriber_specialty": "family medicine"
@@ -286,7 +286,7 @@
    "key": "allopurinol",
    "value": {
     "strength": "300 mg",
-    "n_fills": 25,
+    "n_fills": 40,
     "first": "2024-09-15",
     "last": "2026-09-15",
     "prescriber_specialty": "family medicine"
@@ -304,7 +304,7 @@
    "key": "cetirizine",
    "value": {
     "strength": "10 mg",
-    "n_fills": 3,
+    "n_fills": 40,
     "first": "2020-01-22",
     "last": "2026-09-15",
     "prescriber_specialty": "family medicine"
@@ -322,13 +322,13 @@
    "key": "fluticasone nasal",
    "value": {
     "strength": "50 mcg",
-    "n_fills": 1,
+    "n_fills": 40,
     "first": "2020-01-10",
-    "last": "2020-01-10",
+    "last": "2026-09-15",
     "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": "2020-01-10",
+   "as_of": "2026-09-15",
    "relevant": false,
    "truth_ref": "conditions[3]",
    "note": null
@@ -337,22 +337,58 @@
    "fact_id": "C0581-F024",
    "doc_id": "C0581-D03",
    "kind": "rx_fill",
-   "key": "prednisone",
+   "key": "hydrocodone-acetaminophen",
    "value": {
-    "strength": "20 mg",
+    "strength": "10/325 mg",
     "n_fills": 1,
-    "first": "2024-05-21",
-    "last": "2024-05-21",
+    "first": "2021-10-01",
+    "last": "2021-10-01",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2024-05-21",
+   "as_of": "2021-10-01",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0581-F025",
+   "doc_id": "C0581-D03",
+   "kind": "rx_fill",
+   "key": "azithromycin",
+   "value": {
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2024-12-28",
+    "last": "2024-12-28",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2024-12-28",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0581-F026",
+   "doc_id": "C0581-D03",
+   "kind": "rx_fill",
+   "key": "azithromycin",
+   "value": {
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2020-02-20",
+    "last": "2020-02-20",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2020-02-20",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0581-F027",
    "doc_id": "C0581-D05",
    "kind": "mvr_violation",
    "key": "M07",
@@ -364,24 +400,24 @@
    "note": null
   },
   {
-   "fact_id": "C0581-F026",
+   "fact_id": "C0581-F028",
    "doc_id": "C0581-D06",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
    "value": {
-    "dx": "gerd",
+    "dx": "GERD",
     "onset": "2026-05-16",
     "status": "controlled",
     "member": "gerd"
    },
    "unit": null,
-   "as_of": "2026-01-08",
+   "as_of": "2026-06-23",
    "relevant": false,
    "truth_ref": "conditions[1]",
    "note": null
   },
   {
-   "fact_id": "C0581-F027",
+   "fact_id": "C0581-F029",
    "doc_id": "C0581-D06",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
@@ -392,13 +428,13 @@
     "member": "gout"
    },
    "unit": null,
-   "as_of": "2026-01-08",
+   "as_of": "2026-06-23",
    "relevant": false,
    "truth_ref": "conditions[2]",
    "note": null
   },
   {
-   "fact_id": "C0581-F028",
+   "fact_id": "C0581-F030",
    "doc_id": "C0581-D06",
    "kind": "aps_finding",
    "key": "dx:benign_no_rating",
@@ -409,24 +445,36 @@
     "member": "seasonal_allergy"
    },
    "unit": null,
-   "as_of": "2026-01-08",
+   "as_of": "2026-06-23",
    "relevant": false,
    "truth_ref": "conditions[3]",
    "note": null
   },
   {
-   "fact_id": "C0581-F029",
+   "fact_id": "C0581-F031",
    "doc_id": "C0581-D06",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "137/90",
-    "140/87",
-    "131/84"
+    "144/83",
+    "135/81",
+    "135/79"
    ],
    "unit": null,
-   "as_of": "2026-01-08",
+   "as_of": "2026-06-23",
    "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0581-F032",
+   "doc_id": "C0581-D06",
+   "kind": "aps_finding",
+   "key": "noncompliance",
+   "value": "patient non-compliant with medications / missed follow-ups",
+   "unit": null,
+   "as_of": "2026-06-23",
+   "relevant": true,
    "truth_ref": null,
    "note": null
   }
@@ -481,7 +529,7 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2026-09-18T09:29:00",
-   "received_at": "2026-09-18T09:46:00",
+   "received_at": "2026-09-18T09:41:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0581/C0581-D04.txt",
@@ -493,7 +541,7 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2026-09-18T09:29:00",
-   "received_at": "2026-09-18T09:58:00",
+   "received_at": "2026-09-18T10:04:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0581/C0581-D03.txt",
@@ -504,7 +552,9 @@
     "C0581-F021",
     "C0581-F022",
     "C0581-F023",
-    "C0581-F024"
+    "C0581-F024",
+    "C0581-F025",
+    "C0581-F026"
    ]
   },
   {
@@ -513,12 +563,12 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2026-09-18T09:29:00",
-   "received_at": "2026-09-18T10:20:00",
+   "received_at": "2026-09-18T10:55:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0581/C0581-D05.txt",
    "fact_ids": [
-    "C0581-F025"
+    "C0581-F027"
    ]
   },
   {
@@ -526,16 +576,17 @@
    "case_id": "C0581",
    "doc_type": "aps",
    "vendor_id": "epic_progress",
-   "ordered_at": "2026-09-18T12:28:00",
-   "received_at": "2026-10-07T12:28:00",
+   "ordered_at": "2026-09-18T13:28:00",
+   "received_at": "2026-10-08T13:28:00",
    "order_reason": "REQ-4 additional treating provider",
    "pages": 11,
    "text_path": "data/source/C0581/C0581-D06.txt",
    "fact_ids": [
-    "C0581-F026",
-    "C0581-F027",
     "C0581-F028",
-    "C0581-F029"
+    "C0581-F029",
+    "C0581-F030",
+    "C0581-F031",
+    "C0581-F032"
    ]
   }
  ]

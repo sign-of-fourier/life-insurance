@@ -187,7 +187,7 @@
    "kind": "app_answer",
    "key": "digestive:benign_no_rating",
    "value": {
-    "condition": "gerd",
+    "condition": "GERD",
     "diagnosed": "08/2012",
     "treatment": "omeprazole",
     "physician": "Dr. Kimberly Holt"
@@ -234,7 +234,7 @@
    "key": "omeprazole",
    "value": {
     "strength": "20 mg",
-    "n_fills": 3,
+    "n_fills": 40,
     "first": "2019-02-08",
     "last": "2026-02-03",
     "prescriber_specialty": "family medicine"
@@ -247,6 +247,24 @@
   },
   {
    "fact_id": "C0702-F019",
+   "doc_id": "C0702-D03",
+   "kind": "rx_fill",
+   "key": "ibuprofen",
+   "value": {
+    "strength": "800 mg",
+    "n_fills": 1,
+    "first": "2025-04-25",
+    "last": "2025-04-25",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2025-04-25",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0702-F020",
    "doc_id": "C0702-D05",
    "kind": "mvr_violation",
    "key": "M07",
@@ -258,40 +276,13 @@
    "note": null
   },
   {
-   "fact_id": "C0702-F020",
+   "fact_id": "C0702-F021",
    "doc_id": "C0702-D06",
    "kind": "paramed",
    "key": "build",
    "value": {
-    "height_in": 61.5,
-    "weight_lb": 132.0
-   },
-   "unit": null,
-   "as_of": "2026-02-09",
-   "relevant": true,
-   "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0702-F021",
-   "doc_id": "C0702-D06",
-   "kind": "paramed",
-   "key": "bp",
-   "value": {
-    "readings": [
-     [
-      130,
-      85
-     ],
-     [
-      131,
-      86
-     ]
-    ],
-    "avg": [
-     130,
-     86
-    ]
+    "height_in": 62.0,
+    "weight_lb": 137.0
    },
    "unit": null,
    "as_of": "2026-02-09",
@@ -303,6 +294,33 @@
    "fact_id": "C0702-F022",
    "doc_id": "C0702-D06",
    "kind": "paramed",
+   "key": "bp",
+   "value": {
+    "readings": [
+     [
+      142,
+      86
+     ],
+     [
+      140,
+      88
+     ]
+    ],
+    "avg": [
+     141,
+     87
+    ]
+   },
+   "unit": null,
+   "as_of": "2026-02-09",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0702-F023",
+   "doc_id": "C0702-D06",
+   "kind": "paramed",
    "key": "pulse",
    "value": 58,
    "unit": "bpm",
@@ -312,11 +330,11 @@
    "note": null
   },
   {
-   "fact_id": "C0702-F023",
+   "fact_id": "C0702-F024",
    "doc_id": "C0702-D07",
    "kind": "lab_value",
    "key": "cotinine_saliva",
-   "value": 0,
+   "value": 1,
    "unit": "ng/mL",
    "as_of": "2026-02-09",
    "relevant": true,
@@ -324,7 +342,7 @@
    "note": null
   },
   {
-   "fact_id": "C0702-F024",
+   "fact_id": "C0702-F025",
    "doc_id": "C0702-D07",
    "kind": "lab_value",
    "key": "hiv",
@@ -336,7 +354,7 @@
    "note": null
   },
   {
-   "fact_id": "C0702-F025",
+   "fact_id": "C0702-F026",
    "doc_id": "C0702-D07",
    "kind": "lab_value",
    "key": "cocaine",
@@ -348,7 +366,7 @@
    "note": null
   },
   {
-   "fact_id": "C0702-F026",
+   "fact_id": "C0702-F027",
    "doc_id": "C0702-D08",
    "kind": "aps_finding",
    "key": "dx:valve",
@@ -361,36 +379,24 @@
     "repaired_years": 0.5
    },
    "unit": null,
-   "as_of": "2025-05-13",
+   "as_of": "2025-07-30",
    "relevant": true,
    "truth_ref": "conditions[0]",
-   "note": null
-  },
-  {
-   "fact_id": "C0702-F027",
-   "doc_id": "C0702-D08",
-   "kind": "aps_finding",
-   "key": "bp_readings",
-   "value": [
-    "128/83",
-    "132/92",
-    "141/89"
-   ],
-   "unit": null,
-   "as_of": "2025-05-13",
-   "relevant": false,
-   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0702-F028",
    "doc_id": "C0702-D08",
    "kind": "aps_finding",
-   "key": "noncompliance",
-   "value": "patient non-compliant with medications / missed follow-ups",
+   "key": "bp_readings",
+   "value": [
+    "130/94",
+    "132/92",
+    "141/89"
+   ],
    "unit": null,
-   "as_of": "2025-05-13",
-   "relevant": true,
+   "as_of": "2025-07-30",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -401,7 +407,7 @@
    "key": "exercise",
    "value": "runs 3-4x/week",
    "unit": null,
-   "as_of": "2025-05-13",
+   "as_of": "2025-07-30",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -457,7 +463,7 @@
    "doc_type": "mib",
    "vendor_id": "MIBF",
    "ordered_at": "2026-02-06T09:33:00",
-   "received_at": "2026-02-06T09:42:00",
+   "received_at": "2026-02-06T09:48:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0702/C0702-D04.txt",
@@ -469,12 +475,13 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2026-02-06T09:33:00",
-   "received_at": "2026-02-06T09:57:00",
+   "received_at": "2026-02-06T09:51:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0702/C0702-D03.txt",
    "fact_ids": [
-    "C0702-F018"
+    "C0702-F018",
+    "C0702-F019"
    ]
   },
   {
@@ -483,12 +490,12 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2026-02-06T09:33:00",
-   "received_at": "2026-02-06T10:30:00",
+   "received_at": "2026-02-06T10:01:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0702/C0702-D05.txt",
    "fact_ids": [
-    "C0702-F019"
+    "C0702-F020"
    ]
   },
   {
@@ -497,14 +504,14 @@
    "doc_type": "paramed",
    "vendor_id": "HSC",
    "ordered_at": "2026-02-06T12:32:00",
-   "received_at": "2026-02-09T20:32:00",
+   "received_at": "2026-02-09T19:32:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0702/C0702-D06.txt",
    "fact_ids": [
-    "C0702-F020",
     "C0702-F021",
-    "C0702-F022"
+    "C0702-F022",
+    "C0702-F023"
    ]
   },
   {
@@ -512,15 +519,15 @@
    "case_id": "C0702",
    "doc_type": "lab_saliva",
    "vendor_id": "APX",
-   "ordered_at": "2026-02-08T14:32:00",
-   "received_at": "2026-02-12T14:32:00",
+   "ordered_at": "2026-02-08T13:32:00",
+   "received_at": "2026-02-13T13:32:00",
    "order_reason": "REQ-1 grid",
    "pages": 1,
    "text_path": "data/source/C0702/C0702-D07.txt",
    "fact_ids": [
-    "C0702-F023",
     "C0702-F024",
-    "C0702-F025"
+    "C0702-F025",
+    "C0702-F026"
    ]
   },
   {
@@ -528,13 +535,12 @@
    "case_id": "C0702",
    "doc_type": "aps",
    "vendor_id": "athena_summary",
-   "ordered_at": "2026-02-08T13:32:00",
-   "received_at": "2026-03-20T13:32:00",
+   "ordered_at": "2026-02-08T14:32:00",
+   "received_at": "2026-03-19T14:32:00",
    "order_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "pages": 5,
+   "pages": 6,
    "text_path": "data/source/C0702/C0702-D08.txt",
    "fact_ids": [
-    "C0702-F026",
     "C0702-F027",
     "C0702-F028",
     "C0702-F029"

@@ -54,7 +54,7 @@
    "doc_id": "C0633-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 500000,
+   "value": 0,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -128,22 +128,36 @@
    "fact_id": "C0633-F011",
    "doc_id": "C0633-D01",
    "kind": "app_answer",
-   "key": "avocation",
+   "key": "foreign_travel",
    "value": {
-    "activity": "marathon running"
+    "country": "Spain",
+    "weeks_per_year": 2.0,
+    "purpose": "vacation"
    },
    "unit": null,
    "as_of": null,
    "relevant": false,
-   "truth_ref": "avocations[0]",
+   "truth_ref": "travel[0]",
    "note": null
   },
   {
    "fact_id": "C0633-F012",
+   "doc_id": "C0633-D01",
+   "kind": "app_answer",
+   "key": "prior_application",
+   "value": "2018 Northstar Life: issued Preferred",
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0633-F013",
    "doc_id": "C0633-D02",
    "kind": "app_answer",
    "key": "tobacco",
-   "value": "Former cigarette, quit 12/2024",
+   "value": "Former cigarette, quit 04/2025",
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -151,32 +165,15 @@
    "note": null
   },
   {
-   "fact_id": "C0633-F013",
+   "fact_id": "C0633-F014",
    "doc_id": "C0633-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 12.0,
+   "value": 10.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
    "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0633-F014",
-   "doc_id": "C0633-D02",
-   "kind": "app_answer",
-   "key": "other:benign_no_rating",
-   "value": {
-    "condition": "acute injury",
-    "diagnosed": "05/2023",
-    "treatment": "cyclobenzaprine",
-    "physician": "Dr. Alicia Stewart"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[1]",
    "note": null
   },
   {
@@ -193,90 +190,113 @@
   },
   {
    "fact_id": "C0633-F016",
-   "doc_id": "C0633-D03",
-   "kind": "rx_fill",
-   "key": "cyclobenzaprine",
+   "doc_id": "C0633-D02",
+   "kind": "app_answer",
+   "key": "family_history",
    "value": {
-    "strength": "10 mg",
-    "n_fills": 25,
-    "first": "2023-06-07",
-    "last": "2025-06-08",
-    "prescriber_specialty": "family medicine"
+    "relation": "mother",
+    "condition": "COPD",
+    "age_at_onset": 73,
+    "age_at_death": null
    },
    "unit": null,
-   "as_of": "2025-06-08",
+   "as_of": null,
    "relevant": false,
-   "truth_ref": "conditions[1]",
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0633-F017",
    "doc_id": "C0633-D03",
    "kind": "rx_fill",
-   "key": "prednisone",
+   "key": "cyclobenzaprine",
    "value": {
-    "strength": "5 mg",
+    "strength": "10 mg",
     "n_fills": 1,
-    "first": "2024-09-02",
-    "last": "2024-09-02",
+    "first": "2023-11-22",
+    "last": "2023-11-22",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2024-09-02",
+   "as_of": "2023-11-22",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0633-F018",
-   "doc_id": "C0633-D04",
-   "kind": "mib_code",
-   "key": "812217",
-   "value": "2023-06-17",
+   "doc_id": "C0633-D03",
+   "kind": "rx_fill",
+   "key": "azithromycin",
+   "value": {
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2022-01-15",
+    "last": "2022-01-15",
+    "prescriber_specialty": "urgent care"
+   },
    "unit": null,
-   "as_of": "2023-06-17",
-   "relevant": true,
-   "truth_ref": "conditions[0]",
+   "as_of": "2022-01-15",
+   "relevant": false,
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0633-F019",
-   "doc_id": "C0633-D05",
-   "kind": "mvr_violation",
-   "key": "M03",
-   "value": "Improper lane change",
+   "doc_id": "C0633-D03",
+   "kind": "rx_fill",
+   "key": "amoxicillin",
+   "value": {
+    "strength": "875 mg",
+    "n_fills": 1,
+    "first": "2020-09-27",
+    "last": "2020-09-27",
+    "prescriber_specialty": "urgent care"
+   },
    "unit": null,
-   "as_of": "2023-11-23",
-   "relevant": true,
+   "as_of": "2020-09-27",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0633-F020",
-   "doc_id": "C0633-D05",
-   "kind": "mvr_violation",
-   "key": "M09",
-   "value": "Careless driving",
+   "doc_id": "C0633-D04",
+   "kind": "mib_code",
+   "key": "812227",
+   "value": "2020-11-22",
    "unit": null,
-   "as_of": "2025-03-25",
+   "as_of": "2020-11-22",
    "relevant": true,
-   "truth_ref": null,
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0633-F021",
-   "doc_id": "C0633-D05",
-   "kind": "mvr_violation",
-   "key": "S05",
-   "value": "Speeding 1-5 over limit",
+   "doc_id": "C0633-D04",
+   "kind": "mib_code",
+   "key": "010970",
+   "value": "2018-06-15",
    "unit": null,
-   "as_of": "2021-07-06",
+   "as_of": "2018-06-15",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0633-F022",
+   "doc_id": "C0633-D05",
+   "kind": "mvr_violation",
+   "key": "M07",
+   "value": "Use of handheld device while driving",
+   "unit": null,
+   "as_of": "2022-10-24",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0633-F023",
    "doc_id": "C0633-D06",
    "kind": "questionnaire",
    "key": "FINQ:income",
@@ -288,7 +308,7 @@
    "note": null
   },
   {
-   "fact_id": "C0633-F023",
+   "fact_id": "C0633-F024",
    "doc_id": "C0633-D06",
    "kind": "questionnaire",
    "key": "FINQ:net_worth",
@@ -300,11 +320,11 @@
    "note": null
   },
   {
-   "fact_id": "C0633-F024",
+   "fact_id": "C0633-F025",
    "doc_id": "C0633-D06",
    "kind": "questionnaire",
    "key": "FINQ:existing",
-   "value": 500000,
+   "value": 0,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -312,7 +332,7 @@
    "note": null
   },
   {
-   "fact_id": "C0633-F025",
+   "fact_id": "C0633-F026",
    "doc_id": "C0633-D06",
    "kind": "questionnaire",
    "key": "FINQ:purpose",
@@ -324,7 +344,7 @@
    "note": null
   },
   {
-   "fact_id": "C0633-F026",
+   "fact_id": "C0633-F027",
    "doc_id": "C0633-D07",
    "kind": "aps_finding",
    "key": "dx:cancer",
@@ -337,23 +357,35 @@
     "stage": null
    },
    "unit": null,
-   "as_of": "2025-02-28",
+   "as_of": "2025-01-22",
    "relevant": true,
    "truth_ref": "conditions[0]",
    "note": "not disclosed on app"
   },
   {
-   "fact_id": "C0633-F027",
+   "fact_id": "C0633-F028",
    "doc_id": "C0633-D07",
    "kind": "aps_finding",
    "key": "bp_readings",
    "value": [
-    "134/89",
-    "132/91",
-    "128/91"
+    "152/74",
+    "137/79",
+    "149/74"
    ],
    "unit": null,
-   "as_of": "2025-02-28",
+   "as_of": "2025-01-22",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0633-F029",
+   "doc_id": "C0633-D07",
+   "kind": "aps_finding",
+   "key": "exercise",
+   "value": "runs 3-4x/week",
+   "unit": null,
+   "as_of": "2025-01-22",
    "relevant": false,
    "truth_ref": null,
    "note": null
@@ -381,7 +413,8 @@
     "C0633-F008",
     "C0633-F009",
     "C0633-F010",
-    "C0633-F011"
+    "C0633-F011",
+    "C0633-F012"
    ]
   },
   {
@@ -395,10 +428,10 @@
    "pages": 1,
    "text_path": "data/source/C0633/C0633-D02.txt",
    "fact_ids": [
-    "C0633-F012",
     "C0633-F013",
     "C0633-F014",
-    "C0633-F015"
+    "C0633-F015",
+    "C0633-F016"
    ]
   },
   {
@@ -407,13 +440,14 @@
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-06-11T09:28:00",
-   "received_at": "2025-06-11T09:47:00",
+   "received_at": "2025-06-11T09:43:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0633/C0633-D03.txt",
    "fact_ids": [
-    "C0633-F016",
-    "C0633-F017"
+    "C0633-F017",
+    "C0633-F018",
+    "C0633-F019"
    ]
   },
   {
@@ -422,12 +456,13 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-06-11T09:28:00",
-   "received_at": "2025-06-11T09:57:00",
+   "received_at": "2025-06-11T09:48:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0633/C0633-D04.txt",
    "fact_ids": [
-    "C0633-F018"
+    "C0633-F020",
+    "C0633-F021"
    ]
   },
   {
@@ -436,14 +471,12 @@
    "doc_type": "mvr",
    "vendor_id": "STATE",
    "ordered_at": "2025-06-11T09:28:00",
-   "received_at": "2025-06-11T10:13:00",
+   "received_at": "2025-06-11T10:24:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0633/C0633-D05.txt",
    "fact_ids": [
-    "C0633-F019",
-    "C0633-F020",
-    "C0633-F021"
+    "C0633-F022"
    ]
   },
   {
@@ -452,15 +485,15 @@
    "doc_type": "other",
    "vendor_id": "FINQ",
    "ordered_at": "2025-06-11T11:27:00",
-   "received_at": "2025-06-16T09:27:00",
+   "received_at": "2025-06-21T09:27:00",
    "order_reason": "FIN-2 over limit / KPE",
    "pages": 1,
    "text_path": "data/source/C0633/C0633-D06.txt",
    "fact_ids": [
-    "C0633-F022",
     "C0633-F023",
     "C0633-F024",
-    "C0633-F025"
+    "C0633-F025",
+    "C0633-F026"
    ]
   },
   {
@@ -468,14 +501,15 @@
    "case_id": "C0633",
    "doc_type": "aps",
    "vendor_id": "epic_progress",
-   "ordered_at": "2025-06-12T13:27:00",
-   "received_at": "2025-07-07T13:27:00",
+   "ordered_at": "2025-06-11T15:27:00",
+   "received_at": "2025-06-29T15:27:00",
    "order_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "pages": 8,
+   "pages": 6,
    "text_path": "data/source/C0633/C0633-D07.txt",
    "fact_ids": [
-    "C0633-F026",
-    "C0633-F027"
+    "C0633-F027",
+    "C0633-F028",
+    "C0633-F029"
    ]
   }
  ]

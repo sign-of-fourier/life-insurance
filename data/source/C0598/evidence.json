@@ -268,51 +268,57 @@
    "value": {
     "strength": "10 mg",
     "n_fills": 1,
-    "first": "2020-07-13",
-    "last": "2020-07-13",
+    "first": "2022-09-11",
+    "last": "2022-09-11",
     "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2020-07-13",
+   "as_of": "2022-09-11",
    "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0598-F021",
-   "doc_id": "C0598-D04",
-   "kind": "mib_code",
-   "key": "500317",
-   "value": "2024-04-19",
+   "doc_id": "C0598-D03",
+   "kind": "rx_fill",
+   "key": "ondansetron",
+   "value": {
+    "strength": "8 mg",
+    "n_fills": 1,
+    "first": "2024-01-11",
+    "last": "2024-01-11",
+    "prescriber_specialty": "urgent care"
+   },
    "unit": null,
-   "as_of": "2024-04-19",
-   "relevant": true,
-   "truth_ref": "conditions[0]",
+   "as_of": "2024-01-11",
+   "relevant": false,
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0598-F022",
    "doc_id": "C0598-D04",
    "kind": "mib_code",
-   "key": "050006",
-   "value": "2022-06-08",
+   "key": "500317",
+   "value": "2023-07-31",
    "unit": null,
-   "as_of": "2022-06-08",
+   "as_of": "2023-07-31",
    "relevant": true,
-   "truth_ref": null,
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0598-F023",
    "doc_id": "C0598-D04",
    "kind": "mib_code",
-   "key": "114716",
-   "value": "2022-08-31",
+   "key": "990410",
+   "value": "2015-08-01",
    "unit": null,
-   "as_of": "2022-08-31",
-   "relevant": true,
+   "as_of": "2015-08-01",
+   "relevant": false,
    "truth_ref": null,
-   "note": "uncorroborated"
+   "note": null
   },
   {
    "fact_id": "C0598-F024",
@@ -709,18 +715,6 @@
    "relevant": false,
    "truth_ref": null,
    "note": null
-  },
-  {
-   "fact_id": "C0598-F054",
-   "doc_id": "C0598-D10",
-   "kind": "aps_finding",
-   "key": "exercise",
-   "value": "runs 3-4x/week",
-   "unit": null,
-   "as_of": "2024-09-02",
-   "relevant": false,
-   "truth_ref": null,
-   "note": null
   }
  ],
  "docs": [
@@ -768,35 +762,35 @@
    ]
   },
   {
-   "doc_id": "C0598-D04",
-   "case_id": "C0598",
-   "doc_type": "mib",
-   "vendor_id": "MIBS",
-   "ordered_at": "2025-06-28T09:45:00",
-   "received_at": "2025-06-28T10:14:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0598/C0598-D04.txt",
-   "fact_ids": [
-    "C0598-F021",
-    "C0598-F022",
-    "C0598-F023"
-   ]
-  },
-  {
    "doc_id": "C0598-D03",
    "case_id": "C0598",
    "doc_type": "rx",
    "vendor_id": "SCR",
    "ordered_at": "2025-06-28T09:45:00",
-   "received_at": "2025-06-28T10:22:00",
+   "received_at": "2025-06-28T09:52:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0598/C0598-D03.txt",
    "fact_ids": [
     "C0598-F018",
     "C0598-F019",
-    "C0598-F020"
+    "C0598-F020",
+    "C0598-F021"
+   ]
+  },
+  {
+   "doc_id": "C0598-D04",
+   "case_id": "C0598",
+   "doc_type": "mib",
+   "vendor_id": "MIBS",
+   "ordered_at": "2025-06-28T09:45:00",
+   "received_at": "2025-06-28T10:11:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0598/C0598-D04.txt",
+   "fact_ids": [
+    "C0598-F022",
+    "C0598-F023"
    ]
   },
   {
@@ -900,12 +894,11 @@
    "ordered_at": "2025-06-29T15:44:00",
    "received_at": "2025-07-14T15:44:00",
    "order_reason": "REQ-2.1 impairment may rate >= +50",
-   "pages": 12,
+   "pages": 3,
    "text_path": "data/source/C0598/C0598-D10.txt",
    "fact_ids": [
     "C0598-F052",
-    "C0598-F053",
-    "C0598-F054"
+    "C0598-F053"
    ]
   }
  ]

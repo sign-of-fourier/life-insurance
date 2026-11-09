@@ -1,9 +1,9 @@
 {
  "meta": {
   "requirements": {
-   "PM": "REQ-3 accel fails (high-impact Rx) -> next column",
-   "B": "REQ-3 accel fails (high-impact Rx) -> next column",
-   "U": "REQ-3 accel fails (high-impact Rx) -> next column",
+   "PM": "REQ-3 accel fails (high-impact Rx, MIB code) -> next column",
+   "B": "REQ-3 accel fails (high-impact Rx, MIB code) -> next column",
+   "U": "REQ-3 accel fails (high-impact Rx, MIB code) -> next column",
    "FINQ": "FIN-2 over limit / KPE"
   },
   "aps": [
@@ -105,7 +105,7 @@
      "answer": "Yes",
      "details": [
       {
-       "condition": "gerd",
+       "condition": "GERD",
        "diagnosed": "08/2025",
        "treatment": "famotidine, omeprazole",
        "physician": "Dr. James Williams"
@@ -256,7 +256,9 @@
      "strength": "20 mg",
      "fills": [
       "2025-10-05",
+      "2025-11-10",
       "2025-12-17",
+      "2026-01-22",
       "2026-02-28"
      ],
      "days_supply": 30,
@@ -270,10 +272,26 @@
      "strength": "40 mg",
      "fills": [
       "2025-08-31",
+      "2025-09-10",
+      "2025-09-20",
+      "2025-09-30",
+      "2025-10-10",
+      "2025-10-20",
+      "2025-10-30",
+      "2025-11-09",
+      "2025-11-19",
       "2025-11-29",
+      "2025-12-09",
+      "2025-12-19",
+      "2025-12-29",
+      "2026-01-08",
+      "2026-01-18",
+      "2026-01-28",
+      "2026-02-07",
+      "2026-02-17",
       "2026-02-28"
      ],
-     "days_supply": 30,
+     "days_supply": 10,
      "prescriber": "Dr. James Williams",
      "specialty": "family medicine",
      "cond_index": 1
@@ -284,22 +302,60 @@
      "strength": "0.6 mg",
      "fills": [
       "2019-03-05",
+      "2019-05-09",
+      "2019-07-13",
+      "2019-09-17",
+      "2019-11-21",
+      "2020-01-26",
+      "2020-03-31",
+      "2020-06-05",
+      "2020-08-09",
+      "2020-10-13",
+      "2020-12-18",
+      "2021-02-21",
+      "2021-04-28",
+      "2021-07-02",
+      "2021-09-06",
+      "2021-11-10",
+      "2022-01-14",
+      "2022-03-21",
+      "2022-05-25",
+      "2022-07-30",
+      "2022-10-03",
+      "2022-12-08",
+      "2023-02-11",
+      "2023-04-18",
+      "2023-06-22",
+      "2023-08-26",
+      "2023-10-31",
+      "2024-01-04",
+      "2024-03-10",
+      "2024-05-14",
+      "2024-07-19",
+      "2024-09-22",
+      "2024-11-26",
+      "2025-01-31",
+      "2025-04-06",
+      "2025-06-11",
+      "2025-08-15",
+      "2025-10-20",
+      "2025-12-24",
       "2026-02-28"
      ],
-     "days_supply": 10,
+     "days_supply": 30,
      "prescriber": "Dr. James Williams",
      "specialty": "family medicine",
      "cond_index": 2
     },
     {
-     "drug": "cyclobenzaprine",
-     "brand": "Flexeril",
-     "strength": "10 mg",
+     "drug": "amoxicillin",
+     "brand": "Amoxil",
+     "strength": "500 mg",
      "fills": [
-      "2021-08-16"
+      "2019-08-22"
      ],
-     "days_supply": 7,
-     "prescriber": "Dr. Patel (Urgent Care)",
+     "days_supply": 5,
+     "prescriber": "Dr. Garcia (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
     },
@@ -308,19 +364,19 @@
      "brand": "Deltasone",
      "strength": "20 mg",
      "fills": [
-      "2020-08-30"
+      "2021-08-16"
      ],
-     "days_supply": 5,
-     "prescriber": "Dr. Nguyen (Urgent Care)",
+     "days_supply": 10,
+     "prescriber": "Dr. Smith (Urgent Care)",
      "specialty": "urgent care",
      "cond_index": null
     },
     {
-     "drug": "amoxicillin",
-     "brand": "Amoxil",
-     "strength": "875 mg",
+     "drug": "ibuprofen",
+     "brand": "Motrin",
+     "strength": "600 mg",
      "fills": [
-      "2019-11-12"
+      "2023-03-20"
      ],
      "days_supply": 7,
      "prescriber": "Dr. Kim (Urgent Care)",
@@ -334,8 +390,8 @@
    "vendor": "MIBS",
    "codes": [
     {
-     "code": "141372",
-     "reported": "2017-04-11",
+     "code": "140317",
+     "reported": "2022-08-31",
      "cond_index": 0
     }
    ],
@@ -362,29 +418,31 @@
   },
   "C0078-D06": {
    "vendor": "PMX",
-   "exam_date": "2026-03-16",
+   "exam_date": "2026-03-17",
    "height_in": 69.5,
    "weight_lb": 194.0,
    "bp": [
     [
-     116,
-     77
+     109,
+     74
     ],
     [
-     110,
-     77
+     111,
+     72
     ],
     [
-     107,
+     114,
      75
     ]
    ],
-   "pulse": 79,
-   "examiner_notes": {}
+   "pulse": 78,
+   "examiner_notes": {
+    "Heart failure / cardiomyopathy": "applicant mentioned to examiner"
+   }
   },
   "C0078-D07": {
    "vendor": "APX",
-   "collected": "2026-03-16",
+   "collected": "2026-03-17",
    "fasting": false,
    "results": {
     "tc": 282.0,
@@ -405,18 +463,18 @@
     "hiv": 0.0,
     "cdt": 1.3,
     "nt_probnp": 538.0,
-    "glucose_random": 99.0
+    "glucose_random": 112.0
    }
   },
   "C0078-D08": {
    "vendor": "APX",
-   "collected": "2026-03-16",
+   "collected": "2026-03-17",
    "results": {
     "cotinine_urine": 31.0,
     "urine_protein": 20.0,
     "cocaine": 0.0,
     "urine_glucose": 0,
-    "urine_rbc": 0
+    "urine_rbc": 1
    }
   },
   "C0078-D09": {
@@ -437,7 +495,7 @@
    },
    "style": "athena_summary",
    "ordered_reason": "REQ-2.2 app vs 3rd-party discrepancy",
-   "last_visit": "2025-07-05",
+   "last_visit": "2025-12-31",
    "stale": false,
    "problems": [
     {
@@ -459,34 +517,52 @@
    ],
    "visits": [
     {
-     "date": "2025-07-05",
-     "reason": "Heart failure / cardiomyopathy",
-     "bp": "106/74",
-     "weight_lb": 196.0
-    },
-    {
-     "date": "2024-10-27",
-     "reason": "Heart failure / cardiomyopathy",
-     "bp": "116/77",
+     "date": "2025-12-31",
+     "reason": "ankle sprain",
+     "bp": "108/76",
      "weight_lb": 192.0
     },
     {
-     "date": "2024-02-19",
+     "date": "2025-06-09",
      "reason": "Heart failure / cardiomyopathy",
-     "bp": "114/81",
-     "weight_lb": 190.0
+     "bp": "117/77",
+     "weight_lb": 200.0
     },
     {
-     "date": "2023-06-12",
+     "date": "2024-11-15",
      "reason": "Heart failure / cardiomyopathy",
-     "bp": "109/79",
-     "weight_lb": 198.0
+     "bp": "103/71",
+     "weight_lb": 197.0
     },
     {
-     "date": "2022-10-04",
+     "date": "2024-04-23",
+     "reason": "medication refill",
+     "bp": "113/78",
+     "weight_lb": 195.0
+    },
+    {
+     "date": "2023-09-30",
      "reason": "Heart failure / cardiomyopathy",
-     "bp": "119/78",
-     "weight_lb": 196.0
+     "bp": "106/75",
+     "weight_lb": 199.0
+    },
+    {
+     "date": "2023-03-08",
+     "reason": "back strain",
+     "bp": "104/76",
+     "weight_lb": 204.0
+    },
+    {
+     "date": "2022-08-14",
+     "reason": "medication refill",
+     "bp": "112/77",
+     "weight_lb": 197.0
+    },
+    {
+     "date": "2022-01-20",
+     "reason": "Heart failure / cardiomyopathy",
+     "bp": "114/80",
+     "weight_lb": 200.0
     }
    ],
    "series": {},
@@ -494,7 +570,7 @@
    "rule_outs": [],
    "legacy_lab": null,
    "exercise_documented": false,
-   "pages": 4,
+   "pages": 5,
    "copy_forward": false,
    "patient": {
     "name": "Jennifer Daniel",

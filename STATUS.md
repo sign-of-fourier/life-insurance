@@ -8,7 +8,7 @@ _Read PLAN.md first. Update this file at the end of every session._
 | 1 Guidelines | **done** (pending user read-through) | md + rules yaml; both checks PASS |
 | 2 Reference dicts | **done** | gate PASS (src/check_reference.py) |
 | 3 Case design | **done** (pending user review of qa/phase3_coverage.md) | validation PASS, deterministic |
-| 4 Evidence gen | **in progress** | 4a truth PASS, 4b evidence PASS; 4c render + 4d extract next |
+| 4 Evidence gen | **done** | 4a/4b/4c/4d gates PASS; APS via Nova $1.74 |
 | 5 Golden | not started | |
 | 6 Noisy notes | not started | |
 | 7 QA/baseline | not started | |
@@ -68,12 +68,21 @@ _Read PLAN.md first. Update this file at the end of every session._
      conditions traced outside app; 39 untraceable have no record trace; 2 hidden smokers (quit<12mo, lied, cot neg).
   Shared: src/rules.py (match/first_profile/grid_lookup/table_from_net) - engine must reuse it.
 
+- 2026-11-09: Phase 4c/4d built.
+  4c src/render.py: template "PDF" text for every doc type x vendor (APX merged cells/no flags, NGL SI+arrows+day-first,
+     HRT legacy fructosamine inside APS, RXP brand+NDC, STATE MVR statutes, HSC kg...). Skips APS docs already LLM-rendered
+     (qa/phase4c_aps_llm.jsonl). src/render_aps_llm.py: Nova Lite/Pro rewrite of APS with MUST_INCLUDE verification +
+     no-extra-drug check, retry once, template fallback; parallel workers; pilot 10/10 pass ($0.015). Full run started
+     (1103 docs, est <= $2.7). truth fixes: HCV untreated no meds, biologic/controller med consistency, benign acute meds 1-2 fills.
+  4d src/extract.py: vendor JSON (shape per json_schema) + OCR noise + ExtractionLoss(fact_id); APS = noisy pages + partial
+     entities; deterministic (zlib.crc32 seeds, NOT hash()). src/check_extracted.py = Phase 4 final gate.
+  llm.py now thread-safe (LOCK; worst-case reserved while in flight).
+
+- 2026-11-09: Phase 4 done. APS LLM run: 769 Lite + 289 Pro verified, 45 template fallbacks (2 failed verifications), 41 retries.
+  Extraction: 2892 losses (2553 tied to facts); 2.1% of relevant facts dropped/truncated; labs ~1 loss/doc (units/flags/merged),
+  Rx ~1/doc (row drops, garbled dates). Phase 4 gate PASS. Bedrock total $1.78.
+
 ## Next step
-Phase 4c: renderers -> data/source/C*/<doc_id>.txt ("PDF" text) per doc type x vendor (vendors.yaml):
-  app (2 forms), rx (SCR chronological / RXP grouped brand+NDC), mib (full/summary), mvr (ACD / STATE statute),
-  paramed (PMX / HSC metric), labs (MIL flags / APX no-flags combined cells / NGL SI+arrows / saliva), ekg, questionnaires
-  -> all by code templates ($0). APS: content.json spec -> prose. Plan: template skeleton per aps_style + Nova Lite
-  (simple) / Pro (complex, handwritten, discharge) for narrative sections ONLY, with facts injected; verify every
-  injected value appears in output (else template fallback). Pilot 10 APS, measure tokens, estimate, then full run
-  under Budget caps. Then 4d src/extract.py: source txt -> vendor JSON (json_schema in vendors.yaml) + OCR noise
-  (ocr_noise rates x aps style multiplier) + ExtractionLoss log; check_extracted gate.
+Phase 5: src/engine.py (reuse src/rules.py) operating on EvidenceBundle facts in arrival order -> schemas.Golden trace +
+decision + grey-area alternatives; src/render_golden.py -> data/golden/<case>.md; checks: determinism, validate.check_golden,
+target-vs-engine outcome report (mismatches explained: hidden/untraceable, disclosure catches, modifiers), 10 manual reviews.

@@ -54,7 +54,7 @@
    "doc_id": "C0403-D01",
    "kind": "app_answer",
    "key": "existing",
-   "value": 500000,
+   "value": 0,
    "unit": null,
    "as_of": null,
    "relevant": true,
@@ -127,18 +127,32 @@
    "fact_id": "C0403-F011",
    "doc_id": "C0403-D01",
    "kind": "app_answer",
-   "key": "avocation",
+   "key": "foreign_travel",
    "value": {
-    "activity": "martial arts"
+    "country": "Ireland",
+    "weeks_per_year": 3.0,
+    "purpose": "vacation"
    },
    "unit": null,
    "as_of": null,
    "relevant": false,
-   "truth_ref": "avocations[0]",
+   "truth_ref": "travel[0]",
    "note": null
   },
   {
    "fact_id": "C0403-F012",
+   "doc_id": "C0403-D01",
+   "kind": "app_answer",
+   "key": "prior_application",
+   "value": "2020 Northstar Life: issued Preferred",
+   "unit": null,
+   "as_of": null,
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0403-F013",
    "doc_id": "C0403-D02",
    "kind": "app_answer",
    "key": "tobacco",
@@ -150,32 +164,15 @@
    "note": null
   },
   {
-   "fact_id": "C0403-F013",
+   "fact_id": "C0403-F014",
    "doc_id": "C0403-D02",
    "kind": "app_answer",
    "key": "alcohol_dpw",
-   "value": 10.0,
+   "value": 0.0,
    "unit": "drinks/wk",
    "as_of": null,
    "relevant": false,
    "truth_ref": null,
-   "note": null
-  },
-  {
-   "fact_id": "C0403-F014",
-   "doc_id": "C0403-D02",
-   "kind": "app_answer",
-   "key": "respiratory:benign_no_rating",
-   "value": {
-    "condition": "seasonal allergy",
-    "diagnosed": "02/2022",
-    "treatment": "loratadine",
-    "physician": "Dr. David Gibson"
-   },
-   "unit": null,
-   "as_of": null,
-   "relevant": false,
-   "truth_ref": "conditions[0]",
    "note": null
   },
   {
@@ -184,15 +181,15 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "cataracts",
-    "diagnosed": "02/2017",
-    "treatment": "none",
+    "condition": "gout",
+    "diagnosed": "05/2015",
+    "treatment": "allopurinol",
     "physician": "Dr. David Gibson"
    },
    "unit": null,
    "as_of": null,
    "relevant": false,
-   "truth_ref": "conditions[1]",
+   "truth_ref": "conditions[2]",
    "note": null
   },
   {
@@ -209,48 +206,31 @@
   },
   {
    "fact_id": "C0403-F017",
-   "doc_id": "C0403-D02",
-   "kind": "app_answer",
-   "key": "family_history",
+   "doc_id": "C0403-D03",
+   "kind": "rx_fill",
+   "key": "loratadine",
    "value": {
-    "relation": "father",
-    "condition": "hypertension",
-    "age_at_onset": 74,
-    "age_at_death": null
+    "strength": "10 mg",
+    "n_fills": 40,
+    "first": "2022-03-04",
+    "last": "2026-04-27",
+    "prescriber_specialty": "family medicine"
    },
    "unit": null,
-   "as_of": null,
+   "as_of": "2026-04-27",
    "relevant": false,
-   "truth_ref": null,
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0403-F018",
    "doc_id": "C0403-D03",
    "kind": "rx_fill",
-   "key": "loratadine",
-   "value": {
-    "strength": "10 mg",
-    "n_fills": 5,
-    "first": "2022-03-04",
-    "last": "2022-04-18",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2022-04-18",
-   "relevant": false,
-   "truth_ref": "conditions[0]",
-   "note": null
-  },
-  {
-   "fact_id": "C0403-F019",
-   "doc_id": "C0403-D03",
-   "kind": "rx_fill",
    "key": "allopurinol",
    "value": {
     "strength": "100 mg",
-    "n_fills": 2,
-    "first": "2023-06-11",
+    "n_fills": 40,
+    "first": "2021-05-01",
     "last": "2026-04-27",
     "prescriber_specialty": "family medicine"
    },
@@ -261,44 +241,68 @@
    "note": null
   },
   {
+   "fact_id": "C0403-F019",
+   "doc_id": "C0403-D03",
+   "kind": "rx_fill",
+   "key": "ondansetron",
+   "value": {
+    "strength": "8 mg",
+    "n_fills": 1,
+    "first": "2025-10-14",
+    "last": "2025-10-14",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2025-10-14",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
    "fact_id": "C0403-F020",
    "doc_id": "C0403-D03",
    "kind": "rx_fill",
-   "key": "colchicine",
+   "key": "azithromycin",
    "value": {
-    "strength": "0.6 mg",
-    "n_fills": 2,
-    "first": "2023-06-02",
-    "last": "2023-06-25",
-    "prescriber_specialty": "family medicine"
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2022-12-10",
+    "last": "2022-12-10",
+    "prescriber_specialty": "urgent care"
    },
    "unit": null,
-   "as_of": "2023-06-25",
+   "as_of": "2022-12-10",
    "relevant": false,
-   "truth_ref": "conditions[2]",
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0403-F021",
-   "doc_id": "C0403-D05",
-   "kind": "mvr_violation",
-   "key": "S25",
-   "value": "Speeding 21-25 over limit",
+   "doc_id": "C0403-D03",
+   "kind": "rx_fill",
+   "key": "amoxicillin",
+   "value": {
+    "strength": "875 mg",
+    "n_fills": 1,
+    "first": "2022-11-09",
+    "last": "2022-11-09",
+    "prescriber_specialty": "urgent care"
+   },
    "unit": null,
-   "as_of": "2025-07-06",
-   "relevant": true,
+   "as_of": "2022-11-09",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0403-F022",
-   "doc_id": "C0403-D05",
-   "kind": "mvr_violation",
-   "key": "S15",
-   "value": "Speeding 11-15 over limit",
+   "doc_id": "C0403-D04",
+   "kind": "mib_code",
+   "key": "010070",
+   "value": "2020-01-15",
    "unit": null,
-   "as_of": "2025-12-16",
-   "relevant": true,
+   "as_of": "2020-01-15",
+   "relevant": false,
    "truth_ref": null,
    "note": null
   },
@@ -306,10 +310,22 @@
    "fact_id": "C0403-F023",
    "doc_id": "C0403-D05",
    "kind": "mvr_violation",
-   "key": "S25",
-   "value": "Speeding 21-25 over limit",
+   "key": "M04",
+   "value": "Following too closely",
    "unit": null,
-   "as_of": "2025-10-21",
+   "as_of": "2023-11-22",
+   "relevant": true,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0403-F024",
+   "doc_id": "C0403-D05",
+   "kind": "mvr_violation",
+   "key": "S20",
+   "value": "Speeding 16-20 over limit",
+   "unit": null,
+   "as_of": "2025-12-08",
    "relevant": true,
    "truth_ref": null,
    "note": null
@@ -337,7 +353,8 @@
     "C0403-F008",
     "C0403-F009",
     "C0403-F010",
-    "C0403-F011"
+    "C0403-F011",
+    "C0403-F012"
    ]
   },
   {
@@ -351,12 +368,10 @@
    "pages": 1,
    "text_path": "data/source/C0403/C0403-D02.txt",
    "fact_ids": [
-    "C0403-F012",
     "C0403-F013",
     "C0403-F014",
     "C0403-F015",
-    "C0403-F016",
-    "C0403-F017"
+    "C0403-F016"
    ]
   },
   {
@@ -365,26 +380,12 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2026-04-30T09:12:00",
-   "received_at": "2026-04-30T09:30:00",
+   "received_at": "2026-04-30T09:38:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0403/C0403-D04.txt",
-   "fact_ids": []
-  },
-  {
-   "doc_id": "C0403-D03",
-   "case_id": "C0403",
-   "doc_type": "rx",
-   "vendor_id": "RXP",
-   "ordered_at": "2026-04-30T09:12:00",
-   "received_at": "2026-04-30T09:44:00",
-   "order_reason": "REQ-1 always",
-   "pages": 1,
-   "text_path": "data/source/C0403/C0403-D03.txt",
    "fact_ids": [
-    "C0403-F018",
-    "C0403-F019",
-    "C0403-F020"
+    "C0403-F022"
    ]
   },
   {
@@ -393,14 +394,31 @@
    "doc_type": "mvr",
    "vendor_id": "ACD",
    "ordered_at": "2026-04-30T09:12:00",
-   "received_at": "2026-04-30T10:36:00",
+   "received_at": "2026-04-30T09:45:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0403/C0403-D05.txt",
    "fact_ids": [
-    "C0403-F021",
-    "C0403-F022",
-    "C0403-F023"
+    "C0403-F023",
+    "C0403-F024"
+   ]
+  },
+  {
+   "doc_id": "C0403-D03",
+   "case_id": "C0403",
+   "doc_type": "rx",
+   "vendor_id": "RXP",
+   "ordered_at": "2026-04-30T09:12:00",
+   "received_at": "2026-04-30T09:49:00",
+   "order_reason": "REQ-1 always",
+   "pages": 1,
+   "text_path": "data/source/C0403/C0403-D03.txt",
+   "fact_ids": [
+    "C0403-F017",
+    "C0403-F018",
+    "C0403-F019",
+    "C0403-F020",
+    "C0403-F021"
    ]
   }
  ]

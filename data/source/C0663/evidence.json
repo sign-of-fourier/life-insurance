@@ -201,7 +201,7 @@
    "kind": "app_answer",
    "key": "other:benign_no_rating",
    "value": {
-    "condition": "sinusitis",
+    "condition": "acute sinusitis",
     "diagnosed": "08/2013",
     "treatment": "azithromycin",
     "physician": "Dr. Brandon Church"
@@ -266,7 +266,7 @@
    "key": "allopurinol",
    "value": {
     "strength": "100 mg",
-    "n_fills": 2,
+    "n_fills": 33,
     "first": "2022-07-14",
     "last": "2025-03-09",
     "prescriber_specialty": "family medicine"
@@ -279,24 +279,6 @@
   },
   {
    "fact_id": "C0663-F021",
-   "doc_id": "C0663-D03",
-   "kind": "rx_fill",
-   "key": "azithromycin",
-   "value": {
-    "strength": "250 mg",
-    "n_fills": 1,
-    "first": "2020-03-13",
-    "last": "2020-03-13",
-    "prescriber_specialty": "family medicine"
-   },
-   "unit": null,
-   "as_of": "2020-03-13",
-   "relevant": false,
-   "truth_ref": "conditions[2]",
-   "note": null
-  },
-  {
-   "fact_id": "C0663-F022",
    "doc_id": "C0663-D03",
    "kind": "rx_fill",
    "key": "varenicline",
@@ -314,40 +296,64 @@
    "note": null
   },
   {
-   "fact_id": "C0663-F023",
-   "doc_id": "C0663-D04",
-   "kind": "mib_code",
-   "key": "906212",
-   "value": "2021-12-21",
+   "fact_id": "C0663-F022",
+   "doc_id": "C0663-D03",
+   "kind": "rx_fill",
+   "key": "ondansetron",
+   "value": {
+    "strength": "8 mg",
+    "n_fills": 1,
+    "first": "2023-06-03",
+    "last": "2023-06-03",
+    "prescriber_specialty": "urgent care"
+   },
    "unit": null,
-   "as_of": "2021-12-21",
-   "relevant": true,
-   "truth_ref": "conditions[0]",
+   "as_of": "2023-06-03",
+   "relevant": false,
+   "truth_ref": null,
+   "note": null
+  },
+  {
+   "fact_id": "C0663-F023",
+   "doc_id": "C0663-D03",
+   "kind": "rx_fill",
+   "key": "azithromycin",
+   "value": {
+    "strength": "250 mg",
+    "n_fills": 1,
+    "first": "2024-07-11",
+    "last": "2024-07-11",
+    "prescriber_specialty": "urgent care"
+   },
+   "unit": null,
+   "as_of": "2024-07-11",
+   "relevant": false,
+   "truth_ref": null,
    "note": null
   },
   {
    "fact_id": "C0663-F024",
    "doc_id": "C0663-D04",
    "kind": "mib_code",
-   "key": "010009",
-   "value": "2018-12-15",
+   "key": "906217",
+   "value": "2018-09-19",
    "unit": null,
-   "as_of": "2018-12-15",
-   "relevant": false,
-   "truth_ref": null,
+   "as_of": "2018-09-19",
+   "relevant": true,
+   "truth_ref": "conditions[0]",
    "note": null
   },
   {
    "fact_id": "C0663-F025",
    "doc_id": "C0663-D04",
    "kind": "mib_code",
-   "key": "114776",
-   "value": "2020-09-06",
+   "key": "010970",
+   "value": "2018-09-15",
    "unit": null,
-   "as_of": "2020-09-06",
-   "relevant": true,
+   "as_of": "2018-09-15",
+   "relevant": false,
    "truth_ref": null,
-   "note": "uncorroborated"
+   "note": null
   },
   {
    "fact_id": "C0663-F026",
@@ -831,7 +837,7 @@
    "doc_type": "rx",
    "vendor_id": "RXP",
    "ordered_at": "2025-03-12T09:21:00",
-   "received_at": "2025-03-12T09:34:00",
+   "received_at": "2025-03-12T09:28:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0663/C0663-D03.txt",
@@ -839,7 +845,8 @@
     "C0663-F019",
     "C0663-F020",
     "C0663-F021",
-    "C0663-F022"
+    "C0663-F022",
+    "C0663-F023"
    ]
   },
   {
@@ -848,12 +855,11 @@
    "doc_type": "mib",
    "vendor_id": "MIBS",
    "ordered_at": "2025-03-12T09:21:00",
-   "received_at": "2025-03-12T09:43:00",
+   "received_at": "2025-03-12T09:45:00",
    "order_reason": "REQ-1 always",
    "pages": 1,
    "text_path": "data/source/C0663/C0663-D04.txt",
    "fact_ids": [
-    "C0663-F023",
     "C0663-F024",
     "C0663-F025"
    ]
