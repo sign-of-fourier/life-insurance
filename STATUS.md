@@ -7,7 +7,7 @@ _Read PLAN.md first. Update this file at the end of every session._
 | 0 Scaffolding | **done** | gate PASS 2026-11-09 |
 | 1 Guidelines | **done** (pending user read-through) | md + rules yaml; both checks PASS |
 | 2 Reference dicts | **done** | gate PASS (src/check_reference.py) |
-| 3 Case design | not started | |
+| 3 Case design | **done** (pending user review of qa/phase3_coverage.md) | validation PASS, deterministic |
 | 4 Evidence gen | not started | |
 | 5 Golden | not started | |
 | 6 Noisy notes | not started | |
@@ -49,8 +49,16 @@ _Read PLAN.md first. Update this file at the end of every session._
   Tier-3 probe: Nova Lite failed badly decoding a house-shorthand note (qa/phase2_tier3_probe.md) - good.
   Spend total ~$0.023.
 
+- 2026-11-09: Phase 3 done. src/design.py -> data/design/matrix.jsonl (+csv), qa/phase3_coverage.md.
+  385-option pool (catalog profiles, CV/DM grid cells, cancer type x window, engine rows, non-medical
+  pseudo-impairments). Rows built from target outcome quotas; 3-level inverse-usage pick (key ->
+  group -> variant); floors: every key >=6 cases, every option >=1 (100% options, 79/79 keys).
+  derive() recomputes requirements/APS count/evidence path/complexity after top-ups.
+  ~22% of Postpone/Decline are tobacco ladder. validate_rows() structural checks PASS; seed
+  20261109 reproducible (same md5). Pushed to github.com/sign-of-fourier/life-insurance (main).
+
 ## Next step
-Phase 3: case design. Write src/design.py -> data/design/matrix.csv (~1000 rows) + qa/coverage report.
-Dimensions in PLAN.md Phase 3. Key: choose target outcome class & complexity per row with quotas
-(every class/table band, every catalog condition >= M cases, every disclosure pattern, every evidence
-path, every persona/vendor). Pairwise covering on key dims. Seeded. User reviews coverage report.
+Phase 4: person + evidence generation in batches. Sub-plan to write first (src/gen_truth.py,
+src/gen_evidence.py, renderers per doc type/vendor, src/extract.py OCR noise, APS spec -> text via
+templates + Nova (pilot 10 first, cost estimate before full run)). Each design row's `items[].params`
+are the attribute targets; `disclosure` drives app answers; `omitted_untraceable` = no trace anywhere.
