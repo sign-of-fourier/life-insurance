@@ -8,7 +8,7 @@ _Read PLAN.md first. Update this file at the end of every session._
 | 1 Guidelines | **done** (pending user read-through) | md + rules yaml; both checks PASS |
 | 2 Reference dicts | **done** | gate PASS (src/check_reference.py) |
 | 3 Case design | **done** (pending user review of qa/phase3_coverage.md) | validation PASS, deterministic |
-| 4 Evidence gen | not started | |
+| 4 Evidence gen | **in progress** | 4a truth PASS, 4b evidence PASS; 4c render + 4d extract next |
 | 5 Golden | not started | |
 | 6 Noisy notes | not started | |
 | 7 QA/baseline | not started | |
@@ -57,8 +57,23 @@ _Read PLAN.md first. Update this file at the end of every session._
   ~22% of Postpone/Decline are tobacco ladder. validate_rows() structural checks PASS; seed
   20261109 reproducible (same md5). Pushed to github.com/sign-of-fourier/life-insurance (main).
 
+- 2026-11-09: Phase 4a+4b done.
+  4a src/gen_truth.py -> data/truth/C*.json (schemas.Truth; design row stored in truth.design incl. _extra).
+     src/check_truth.py PASS (1041 profile re-matches, grid lookups, matrix bands). design.py got per-profile
+     feasible ages (age-only earlier profiles) -> regenerated matrix (still 100% options).
+  4b src/gen_evidence.py -> data/source/C*/evidence.json (EvidenceBundle) + content.json ({meta, docs:{doc_id: content}}).
+     Ordering: REQ-1 grid -> REQ-3 accel breaks -> REQ-2 triggers; APS per treating provider (+REQ-4 extras to
+     design n_aps); paramed examiner may elicit omitted conditions; legacy HRT lab inside first APS when design.legacy_lab.
+     ~54 facts/case (46% relevant), 9.7 docs/case, 1103 APS. src/check_evidence.py PASS: all 267 omitted-traceable
+     conditions traced outside app; 39 untraceable have no record trace; 2 hidden smokers (quit<12mo, lied, cot neg).
+  Shared: src/rules.py (match/first_profile/grid_lookup/table_from_net) - engine must reuse it.
+
 ## Next step
-Phase 4: person + evidence generation in batches. Sub-plan to write first (src/gen_truth.py,
-src/gen_evidence.py, renderers per doc type/vendor, src/extract.py OCR noise, APS spec -> text via
-templates + Nova (pilot 10 first, cost estimate before full run)). Each design row's `items[].params`
-are the attribute targets; `disclosure` drives app answers; `omitted_untraceable` = no trace anywhere.
+Phase 4c: renderers -> data/source/C*/<doc_id>.txt ("PDF" text) per doc type x vendor (vendors.yaml):
+  app (2 forms), rx (SCR chronological / RXP grouped brand+NDC), mib (full/summary), mvr (ACD / STATE statute),
+  paramed (PMX / HSC metric), labs (MIL flags / APX no-flags combined cells / NGL SI+arrows / saliva), ekg, questionnaires
+  -> all by code templates ($0). APS: content.json spec -> prose. Plan: template skeleton per aps_style + Nova Lite
+  (simple) / Pro (complex, handwritten, discharge) for narrative sections ONLY, with facts injected; verify every
+  injected value appears in output (else template fallback). Pilot 10 APS, measure tokens, estimate, then full run
+  under Budget caps. Then 4d src/extract.py: source txt -> vendor JSON (json_schema in vendors.yaml) + OCR noise
+  (ocr_noise rates x aps style multiplier) + ExtractionLoss log; check_extracted gate.
