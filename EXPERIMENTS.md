@@ -90,7 +90,7 @@ Whole JSON is median ~3.5K / p90 ~8.5K tokens; for R1 embed per document and poo
 | ID | Guideline | |
 |---|---|---|
 | G1 | full (~15.5K tokens) | default |
-| G2 | gap | full minus the grey-area chapter (GRY) and the partial-evidence defaults it points to (candidates: RX-2.4, APS-3, APS-6, MIB-4, CA-1 unknown-stage clause, ALC-1 conflict clause; final list frozen before any G2 run) |
+| G2 | gap | full minus the grey-area chapter (GRY) and the partial-evidence defaults it points to. **DRAFT list** (built by `src/guideline_variants.py`, awaiting user sign-off): GRY chapter, APS-6, APS-3 (+GEN-5 pointer), APS-2, RX-2.4, MIB-4, CA-1, DM-2.4, RSP-2, ALC-1; cross-references stripped. Touches 285/285 grey, 147/268 partial, 0/447 clean cases (clean = built-in control). ~14.6K tokens vs 15.4K for G1 |
 | G3 | retrieved (vector DB over rules) | later, if time; risk: misses cross-cutting grey-area rules |
 
 **F6 — Second-stage reranker (optional)**: X0 none · X1 Cohere Rerank on the top ~20-50 candidates of the best
@@ -127,8 +127,14 @@ offline first (same neighbour metrics), price checked before use.
 ## Metrics
 
 - **Decision:** exact decision, outcome band, ladder correct, decline/postpone correct, |net debit error|.
-- **Worksheet (vs golden trace, no LLM judge):** rated findings recall/precision, rule-id recall, debit
-  arithmetic correct, class follows from stated debits, grey-area choice agrees with golden.
+- **Worksheet (vs golden trace, no LLM judge):** `src/score_worksheet.py` (output schema `OUTPUT_SCHEMA` there).
+  Golden rated items = trace steps with an effect, minus final-stage consequence lines (class-from-net, summaries).
+  Model items are matched one-to-one (same rule chapter + name overlap, greedy). Metrics: item recall / precision / F1,
+  rule-id agreement on matched items, debit exact / within 25, arithmetic (items sum to stated net), class follows the
+  model's own items (knockout / postpone / net via `table_from_net`), flat-extra recall / precision ($/1000 + years),
+  GRY flag recall (grey cases), overrate_partial (rated a condition golden left unrated pending records: RX-2.4 /
+  MIB-4). Composite `worksheet` = mean(item F1, debit within 25, arithmetic, class follows, FE F1 when any FE).
+  Self-test: golden rendered as output scores 1.0 on all 1000 cases; each perturbation lowers its metric.
 - **Retrieval:** offline scores above.
 - All reported overall and per slice (grey / partial evidence / clean), mean over splits with spread.
 
