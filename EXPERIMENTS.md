@@ -369,6 +369,11 @@ Paired results (95% bootstrap CI excludes 0 = *):
 7. **Gap guideline**: without notes it mainly loses grey-area flagging (GRY recall -0.10*). With notes it recovers to
    the full-guideline level (S1-G2 vs B0-G2 worksheet +0.12*, derived band +0.06*; S4R-G2 vs B0-G2 worksheet +0.10*,
    derived band +0.08*), i.e. the notes carry part of what was removed.
+7b. **Caveat on 7 (likely synthetic-world only):** the notes were voiced from golden trace steps, so they keep the
+   rule ids and default wording of the removed rules. In S1-G2 prompts, >=1 example cites a removed rule id in 47% of
+   grey / 33% partial / 24% clean cases, and uses removed-rule wording ("default profile", "not corroborated", "r/o")
+   in ~1/3. The notes partly restate the gap. Real notes are terser and rarely cite the rule. Planned ablation: strip
+   rule ids + removed-rule wording from the example notes and rerun S1-G2 / S4R-G2 (~$0.75).
 8. Absolute level is low (Lite: 14-20% exact, oracle 27%) but off the floor; differences are measurable at n=200.
 
 Not yet done: other two seeds (22, 33) for spread; noisy vs clean golden write-ups as examples (H6); neighbour-vote

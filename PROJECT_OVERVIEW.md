@@ -207,7 +207,9 @@ underwriter notes** go into the prompt as few-shot examples. Scored against gold
    (exact +0.09, band +0.13). No practical space closes that gap; it is widest on grey cases.
 6. **Condition chunks** find the most items and cite rules best, but give a weaker worksheet than whole-case notes.
 7. **Gap guideline:** with notes, performance recovers to the full-guideline level — the notes carry part of the
-   removed grey-area / partial-evidence knowledge.
+   removed grey-area / partial-evidence knowledge. **Probably a synthetic-world result:** about half of the grey-case
+   prompts contain an example that cites a removed rule id verbatim (the notes were generated from traces that cite
+   rules); real notes rarely do. To be tested by stripping rule ids / rule wording from the examples.
 
 ### 6b. Offline retrieval (no LLM)
 
@@ -260,7 +262,8 @@ Done: worksheet scorer, G2 frozen, pilots (10, 30 cases), main 200-case matrix (
 2. **Noisy notes vs clean golden write-ups** as the examples, on S1 and S4R (cost of the noise, H6, ~$0.8).
 3. **LLM vs neighbour vote** on the same cases (does the model add anything over the free vote? H5, free).
 4. Optional: Nova Pro on 2 setups × 50 cases (~$3) to see whether the ranking holds on a stronger model.
-5. Hybrid worth testing: cosine neighbours for the worksheet + PLS neighbours for the decision (e.g. 2 + 1).
+5. **Gap ablation:** strip rule ids and removed-rule wording from the example notes, rerun S1-G2 / S4R-G2 (~$0.75).
+6. Hybrid worth testing: cosine neighbours for the worksheet + PLS neighbours for the decision (e.g. 2 + 1).
 
 ## 9. Backlog / follow-ups
 
