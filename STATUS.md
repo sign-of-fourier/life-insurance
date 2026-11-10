@@ -108,7 +108,7 @@ _Read PLAN.md first. Update this file at the end of every session._
   partial), src/retrieval.py (random/cosine/PCA/VAE/PLS/oracle, offline neighbour scores, neighbour vote). llm.embed added.
   Embedding spend ~$0.30.
 
-## Next step
+## Next step (see also CHECKPOINT.md)
 Finish Cohere embeddings (python src/embed_cases.py --only cohere_whole; cached files skip), then
 python src/retrieval.py -> experiments/offline_retrieval.md; record in EXPERIMENTS.md. Then condition chunks (needs
 note-line -> step sidecar from gen_notes) and the query-side condition extraction (LLM, estimate first).
