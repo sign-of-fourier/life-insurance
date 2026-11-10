@@ -201,8 +201,10 @@ underwriter notes** go into the prompt as few-shot examples. Scored against gold
 2. **Similar beats random on partial-evidence and clean cases; on grey cases any worked file helps as much** —
    the grey-case gain is the worksheet format, not the similarity.
 3. **Every definition of similarity (cosine, VAE, PLS) helps the worksheet about equally; none beats plain cosine.**
-4. **PLS on our own tokens (supervised on past outcomes) is the only practical similarity that improves the decision
-   level** (band computed from the model's items 0.15 → 0.24, significant vs no notes and vs cosine).
+4. **PLS on our own tokens (supervised on past outcomes) improves the decision level with the full guideline**
+   (band computed from the model's items 0.15 → 0.24, significant vs no notes and vs cosine 0.17). With the gap
+   guideline cosine also improves it (0.13 → 0.19) and PLS's lead shrinks to noise (0.21, +0.03 ns). One seed —
+   needs seeds 22 / 33 before calling PLS better.
 5. **Better similarity is the lever:** oracle neighbours (chosen with golden) beat cosine on the decision itself
    (exact +0.09, band +0.13). No practical space closes that gap; it is widest on grey cases.
 6. **Condition chunks** find the most items and cite rules best, but give a weaker worksheet than whole-case notes.

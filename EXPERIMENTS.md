@@ -359,9 +359,11 @@ Paired results (95% bootstrap CI excludes 0 = *):
    On grey cases random worked files help as much as similar ones (B1 vs B0 grey +0.09*): the gain there is format.
 3. **All similarity definitions help the worksheet about equally** (+0.09 to +0.13* vs B0); none beats cosine on
    the worksheet (PLS-Cohere -0.035*; VAE worse on partial decisions -0.12*).
-4. **Supervised PLS on own tokens is the only practical space that moves the decision level**: derived band +0.09*
-   vs B0 and +0.07* vs cosine (matches offline: best outcome vote). The stated decision does not follow (+0.02 ns) -
-   Lite's own arithmetic loses it.
+4. **Full guideline: supervised PLS on own tokens is the only practical space that moves the decision level**:
+   derived band +0.09* vs B0 and +0.07* vs cosine (matches offline: best outcome vote); cosine vs B0 +0.03 ns. The
+   stated decision does not follow (+0.02 ns) - Lite's own arithmetic loses it. **Gap guideline: not replicated** -
+   cosine also moves the derived band (+0.06* vs B0-G2) and S4R-G2 vs S1-G2 is +0.03 [-0.04, +0.09] ns. One seed;
+   seeds 22 / 33 decide whether the PLS edge is real.
 5. **Retrieval quality is the lever**: oracle vs cosine exact +0.09*, band +0.13*, derived band +0.11*. No practical
    space closes this gap; the grey slice is where it is widest (derived band 0.30 vs ~0.17).
 6. **Chunks** (U2) find the most items and cite rules best (rule ids +0.15* vs B0) but the worksheet gains less
