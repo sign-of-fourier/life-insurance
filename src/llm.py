@@ -201,6 +201,36 @@ def embed(model: str, texts: list[str], *, budget: Budget | None = None, tag: st
     return out
 
 
+RERANK_PER_QUERY = {"cohere-rerank": ("cohere.rerank-v3-5:0", 0.002)}   # $2.00 / 1000 queries (<=100 docs each)
+
+
+def rerank(model: str, query: str, docs: list[str], top_n: int, *, budget: Budget | None = None, tag: str = "") -> list[tuple[int, float]]:
+    """Cross-encoder rerank. Returns [(doc_index, relevance)] best first. Billed per query of <= 100 documents."""
+    global _session_spent
+    model_id, per_q = RERANK_PER_QUERY[model]
+    usd = per_q * max(1, -(-len(docs) // 100))
+    with LOCK:
+        _check(usd, budget)
+    t0 = time.time()
+    body = json.dumps({"query": query, "documents": docs, "top_n": top_n, "api_version": 2})
+    for attempt in range(8):
+        try:
+            r = _bedrock().invoke_model(modelId=model_id, body=body)
+            break
+        except Exception as e:  # noqa: BLE001
+            if "Throttling" not in type(e).__name__ or attempt == 7:
+                raise
+            time.sleep(min(60, 5 * 2 ** attempt))
+    b = json.loads(r["body"].read())
+    with LOCK:
+        _session_spent += usd
+        if budget:
+            budget.spent += usd
+            budget.calls += 1
+        _append_usage(model, {"inputTokens": 0, "outputTokens": 0}, usd, budget, tag, t0, {"stopReason": "rerank"})
+    return [(x["index"], x["relevance_score"]) for x in b["results"]]
+
+
 def _append_usage(model, u, usd, budget, tag, t0, r):
     with USAGE_LOG.open("a") as f:
         f.write(json.dumps({

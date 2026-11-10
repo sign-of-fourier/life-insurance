@@ -153,7 +153,40 @@ def coarse(L) -> str:
 
 
 # --------------------------------------------------------------------------- offline score
-def score(chunks, G, IE, k=3):
+def cosine_select(c, pc, PM, IE, k, seed):
+    sims = PM @ IE[c["chunk_id"]]
+    return [pc[j] for j in np.argsort(-sims)[:k]]
+
+
+class RerankSelect:
+    """Cohere Rerank 3.5 over the top-`cand` cosine candidates (one billed query per item). Cached per (split, item)."""
+
+    def __init__(self, cand=30, cap=4.0):
+        self.cand, self.cap = cand, cap
+        self.path = CH / "rerank_cache.json"
+        self.cache = json.loads(self.path.read_text()) if self.path.exists() else {}
+        self.budget = llm.Budget("phase7-rerank", cap=cap)
+        self.n_new = 0
+
+    def __call__(self, c, pc, PM, IE, k, seed):
+        key = f"{seed}|{c['chunk_id']}"
+        byid = {x["chunk_id"]: x for x in pc}
+        if key not in self.cache:
+            sims = PM @ IE[c["chunk_id"]]
+            cands = [pc[j] for j in np.argsort(-sims)[:self.cand]]
+            res = llm.rerank("cohere-rerank", c["item"][:1500], [x["item"][:1500] for x in cands], top_n=max(k, 10),
+                             budget=self.budget, tag=f"rerank:{seed}")
+            self.cache[key] = [cands[i]["chunk_id"] for i, _ in res]
+            self.n_new += 1
+            if self.n_new % 200 == 0:
+                self.save()
+        return [byid[x] for x in self.cache[key][:k]]
+
+    def save(self):
+        self.path.write_text(json.dumps(self.cache))
+
+
+def score(chunks, G, IE, k=3, seeds=None, select=cosine_select, limit=None):
     lab = E.labels()
     by_case = defaultdict(list)
     for c in chunks:
@@ -165,10 +198,12 @@ def score(chunks, G, IE, k=3):
         WPID[seed] = sp["pool"]
         WP[seed] = W[[E.ids().index(c) for c in sp["pool"]]]
     for seed, sp in E.splits().items():
+        if seeds and seed not in seeds:
+            continue
         pool = set(sp["pool"])
         pc = [c for c in chunks if c["case_id"] in pool]
         PM = np.stack([IE[c["chunk_id"]] for c in pc])
-        for q in sp["test"]:
+        for q in sp["test"][:limit]:
             L = lab[q]
             sl = E.slice_of(L)
             qch = by_case[q]
@@ -183,9 +218,7 @@ def score(chunks, G, IE, k=3):
             pred_net, lab_hits, deb_hits = 0, [], []
             dec_votes = pp_votes = 0
             for c in qch:
-                sims = PM @ IE[c["chunk_id"]]
-                top = np.argsort(-sims)[:k]
-                nb = [pc[j] for j in top]
+                nb = select(c, pc, PM, IE, k, seed)
                 d = int(np.median([x["debits"] for x in nb]))
                 pred_net += d
                 dec_votes += sum(x["decline"] for x in nb) >= 2
@@ -229,8 +262,33 @@ def score(chunks, G, IE, k=3):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--k", type=int, default=3)
+    ap.add_argument("--rerank", action="store_true", help="paired comparison cosine vs cosine+Cohere Rerank on --seeds")
+    ap.add_argument("--seeds", default="11")
+    ap.add_argument("--limit", type=int, default=None, help="first N test cases (pilot)")
+    ap.add_argument("--cap", type=float, default=4.0)
     a = ap.parse_args()
     chunks, G, IE = build()
+    if a.rerank:
+        seeds = set(a.seeds.split(","))
+        rs = RerankSelect(cap=a.cap)
+        try:
+            sr = score(chunks, G, IE, a.k, seeds, rs, a.limit)
+        finally:
+            rs.save()
+            rs.budget.__exit__(None, None, None)
+        sc = score(chunks, G, IE, a.k, seeds, cosine_select, a.limit)
+        L = [f"# Condition chunks: cosine vs cosine + Cohere Rerank 3.5 (top-30 candidates), k={a.k}, split(s) {a.seeds}"
+             + (f", first {a.limit} test cases" if a.limit else ""), "", f"rerank queries billed this run: {rs.n_new} (${rs.budget.spent:.3f})", "",
+             "| metric | slice | cosine | + rerank |", "|---|---|---|---|"]
+        for m in ["label@k", "debit@k", "vote_coarse", "net_abs_err"]:
+            for sl in ["all", "grey", "partial", "clean"]:
+                kk = f"{sl}:{m}"
+                if kk in sc:
+                    L.append(f"| {m} | {sl} | {sc[kk][0]:.3f} | {sr[kk][0]:.3f} |")
+        out = E.EXP / ("offline_chunks_rerank_pilot.md" if a.limit else "offline_chunks_rerank.md")
+        out.write_text("\n".join(L) + "\n")
+        print("\n".join(L))
+        return
     al = [c for c in chunks if c["label"] != "none"]
     print(f"chunks {len(chunks)}; aligned to a golden group {len(al)}; rated {sum(c['rated'] for c in chunks)}")
     sc = score(chunks, G, IE, a.k)

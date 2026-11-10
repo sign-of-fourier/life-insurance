@@ -266,6 +266,24 @@ Findings:
 5. Caveat: alignment of items to golden groups is by similarity (no ground truth), on both sides; label@3 includes
    alignment noise.
 
+### Reranker on condition chunks (F6)
+
+Run 2026-11-10: Cohere Rerank 3.5 on the top-30 cosine candidates per extracted item, paired with cosine alone on
+the same queries (split 11, first 50 test cases; `python src/chunks.py --rerank --limit 50`; table
+`experiments/offline_chunks_rerank_pilot.md`). Price $2.00 / 1000 queries (Bedrock pricing page).
+
+| Metric | Slice | Cosine | + Rerank |
+|---|---|---|---|
+| label@3 (same condition) | all / grey / partial | 0.87 / 0.82 / 0.87 | 0.84 / 0.75 / 0.90 |
+| debit@3 (same severity) | all / grey / partial | 0.66 / 0.66 / 0.57 | 0.62 / 0.57 / 0.59 |
+| vote (coarse) | all / grey / partial | 0.50 / 0.41 / 0.44 | 0.40 / 0.35 / 0.31 |
+
+Finding: the reranker does not help and hurts most on grey cases. Likely reason (hypothesis): the top-30 cosine
+candidates are already about the right condition, so the reranker re-orders them by topical/lexical overlap, which
+says nothing about severity; it was trained for query -> passage relevance, not case-to-case similarity. Not run on
+the full split (would cost ~$3.50) since the 50-case result was consistent with the 10-case pilot. Not carried into
+LLM runs. Possible revisit: rerank with richer text (item + outcome-relevant values) or a reranker tuned on golden.
+
 ### Decisions and worksheets
 
 | Run | Space | Unit | Guideline | Examples | Exact | Band | Grey: exact | Partial: exact | Rule recall | vs vote | Cost |
