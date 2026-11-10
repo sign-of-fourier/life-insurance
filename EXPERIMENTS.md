@@ -90,7 +90,7 @@ Whole JSON is median ~3.5K / p90 ~8.5K tokens; for R1 embed per document and poo
 | ID | Guideline | |
 |---|---|---|
 | G1 | full (~15.5K tokens) | default |
-| G2 | gap | full minus the grey-area chapter (GRY) and the partial-evidence defaults it points to. **DRAFT list** (built by `src/guideline_variants.py`, awaiting user sign-off): GRY chapter, APS-6, APS-3 (+GEN-5 pointer), APS-2, RX-2.4, MIB-4, CA-1, DM-2.4, RSP-2, ALC-1; cross-references stripped. Touches 285/285 grey, 147/268 partial, 0/447 clean cases (clean = built-in control). ~14.6K tokens vs 15.4K for G1 |
+| G2 | gap | full minus the grey-area chapter (GRY) and the partial-evidence defaults it points to. **Frozen 2026-11-10 (user sign-off; MIB-1 kept)** (built by `src/guideline_variants.py`): GRY chapter, APS-6, APS-3 (+GEN-5 pointer), APS-2, RX-2.4, MIB-4, CA-1, DM-2.4, RSP-2, ALC-1; cross-references stripped. Touches 285/285 grey, 147/268 partial, 0/447 clean cases (clean = built-in control). ~14.6K tokens vs 15.4K for G1 |
 | G3 | retrieved (vector DB over rules) | later, if time; risk: misses cross-cutting grey-area rules |
 
 **F6 — Second-stage reranker (optional)**: X0 none · X1 Cohere Rerank on the top ~20-50 candidates of the best
@@ -168,7 +168,7 @@ Bedrock spent to date: $3.06 of the $25 cap. Each block runs only after a cost d
 
 1. Embedding model for R1 (Bedrock Titan v2 vs Cohere; input limits) and per-document pooling vs truncation.
 2. k (fixed at 3 for the main matrix; diversity/k test on the best setup only if time).
-3. Final G2 removal list.
+3. ~~Final G2 removal list~~ frozen 2026-11-10.
 4. Embedding pre-test (cheap, no LLM calls): embed all 1000 cases with each candidate model, score offline
    retrieval quality, pick one before any LLM run.
 
@@ -295,6 +295,19 @@ the full split (would cost ~$3.50) since the 50-case result was consistent with 
 LLM runs. Possible revisit: rerank with richer text (item + outcome-relevant values) or a reranker tuned on golden.
 
 ### Decisions and worksheets
+
+**Pilot 2026-11-10** (`src/run_llm.py`, Nova Lite, temp 0, 10 stratified cases of seed 11 = 4 grey / 3 partial / 3 clean,
+5 setups; table `experiments/runs_n10_s11.md`). Measured: prompts ~19-22K tokens (max 28K), **$0.0019 per call**
+($0.107 for 54 calls incl. 4 retries). 4/50 first outputs failed to parse (repetition loop, runaway list hitting 4K
+output) -> one retry at temp 0.3, same policy for every setup.
+- Floor effect: **exact decision 0/10 in every setup**. Lite finds the conditions (item recall ~0.8-0.9) but
+  misrates them and cannot do the class mechanics ("Standard" with table 1; net not equal to its items; class not
+  following net). So the stated decision cannot separate setups.
+- Added `derived_coarse`: band computed in code from the model's own items (separates rating judgement from
+  arithmetic). Pilot range 0.30-0.60 (n=10, too small to rank setups); neighbour vote baseline offline ~0.39-0.48.
+- Scorer changes from the pilot: zero-effect model lines ignored; tobacco-ladder-only steps scored at decision
+  level, not as items. Self-test still 1000/1000.
+
 
 | Run | Space | Unit | Guideline | Examples | Exact | Band | Grey: exact | Partial: exact | Rule recall | vs vote | Cost |
 |---|---|---|---|---|---|---|---|---|---|---|---|

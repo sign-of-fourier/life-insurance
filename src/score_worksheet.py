@@ -17,6 +17,9 @@ Per-case metrics (all in [0, 1] except net_abs_err):
   fe_recall / fe_precision   flat extras ($/1000 + years) in the model decision vs golden
   grey_recall   golden GRY rule ids the model flagged in grey_areas (grey cases only)
   overrate_partial  model rated a condition the golden left unrated pending records (RX-2.4 / MIB-4); lower is better
+  derived_coarse / derived_net_err   decision computed in code from the model's own items (separates rating
+                judgement from class arithmetic)
+  Model items with no effect at all are ignored (allowed, not penalised).
   worksheet     composite = mean(item_f1, debit_close, arith_ok, class_follows, fe_f1 if any FE else omitted)
 
   python src/score_worksheet.py --selftest     # golden-as-output must score 1.0; perturbations must lower it
@@ -100,6 +103,11 @@ def age(cid: str) -> int:
     return json.loads((ROOT / f"data/truth/{cid}.json").read_text())["person"]["age"]
 
 
+def has_effect(e) -> bool:
+    """Item-level effect. A ladder move alone is not an item: the ladder is scored at decision level."""
+    return bool(e.debits or e.credits or e.class_cap or e.flat_extra or e.postpone_months or e.decline)
+
+
 def consequence(s) -> bool:
     """Final-stage lines that follow from the items (class from net, summaries); knockouts found at final are kept."""
     e = s.effect
@@ -112,7 +120,7 @@ def golden_items(g: Golden) -> list[dict]:
     out = []
     for s in g.trace:
         e = s.effect
-        if not (rated(e) or e.credits):
+        if not has_effect(e):
             continue
         if consequence(s):
             continue
@@ -128,7 +136,7 @@ def golden_output(cid: str) -> dict:
     items = [{"item": s.finding.split(":")[0], "rule_id": s.rule_id, "debits": s.effect.debits, "credits": s.effect.credits,
               "class_cap": s.effect.class_cap, "postpone_months": s.effect.postpone_months, "decline": s.effect.decline,
               "flat_extra": {"per_thousand": s.effect.flat_extra.per_thousand, "years": s.effect.flat_extra.years} if s.effect.flat_extra else None}
-             for s in g.trace if (rated(s.effect) or s.effect.credits) and not consequence(s)]
+             for s in g.trace if has_effect(s.effect) and not consequence(s)]
     d = g.decision
     return {"items": items, "grey_areas": [{"issue": ga.issue, "rule_ids": ga.rule_ids, "chosen": ga.chosen} for ga in g.grey_areas],
             "decision": {"ladder": str(getattr(d.ladder, "value", d.ladder)), "risk_class": d.risk_class, "table": d.table,
@@ -144,10 +152,12 @@ def model_items(out: dict) -> list[dict]:
             continue
         fe = it.get("flat_extra")
         fe = (float(fe.get("per_thousand") or 0), fe.get("years")) if isinstance(fe, dict) and fe.get("per_thousand") else None
-        res.append({"rule_id": str(it.get("rule_id") or ""), "ch": chapter(str(it.get("rule_id") or "")),
+        m_ = {"rule_id": str(it.get("rule_id") or ""), "ch": chapter(str(it.get("rule_id") or "")),
                     "toks": toks(str(it.get("item") or "")), "debits": num(it.get("debits")), "credits": num(it.get("credits")),
                     "decline": bool(it.get("decline")), "postpone": it.get("postpone_months") or None, "fe": fe,
-                    "cap": it.get("class_cap")})
+                    "cap": it.get("class_cap")}
+        if m_["debits"] or m_["credits"] or m_["decline"] or m_["postpone"] or m_["fe"] or m_["cap"]:
+            res.append(m_)                          # zero-effect lines are allowed but not scored as items
     return res
 
 
@@ -208,6 +218,22 @@ def implied_class(M: list[dict], d: dict, a: int) -> set[str]:
     return ({"Preferred Tobacco", "Standard Tobacco"} if tob else PREFERRED_SET - {"Preferred Tobacco"} | {"Standard"})
 
 
+def derived(M: list[dict], d: dict, a: int) -> tuple[str, int, int]:
+    """Decision computed in code from the model's OWN items (CLS-3/7/8): (risk class, table, net)."""
+    net = sum(m["debits"] - m["credits"] for m in M)
+    if any(m["decline"] for m in M):
+        return "Decline", 0, net
+    if any(m["postpone"] for m in M):
+        return "Postpone", 0, net
+    tob = str(d.get("ladder")) == "tobacco"
+    if net > 25:
+        kind, t = table_from_net(net, a)
+        return ("Decline", 0, net) if kind == "Decline" else ("Table Tobacco" if tob else "Table", t, net)
+    if net > 0:
+        return ("Standard Tobacco" if tob else "Standard"), 0, net
+    return "<=Std", 0, net
+
+
 def fe_set(fes) -> list[tuple]:
     out = []
     for f in fes or []:
@@ -236,6 +262,9 @@ def score(cid: str, output) -> dict:
     r["band"] = float(mlab in (gd.label(),) or (band(mlab) == band(gd.label()) if mlab else False))
     r["ladder"] = float(str(d.get("ladder")) == str(getattr(gd.ladder, "value", gd.ladder)))
     r["net_abs_err"] = float(abs(mnet - gnet))
+    dc, dt, dn = derived(M, d, age(cid))
+    r["derived_coarse"] = float(coarse_of(dc, dt, dn) == coarse_of(gd.risk_class, gd.table or 0, gnet))
+    r["derived_net_err"] = float(abs(dn - gnet))
     nG, nM, nP = len(G), len(M), len(pairs)
     r["item_recall"] = nP / nG if nG else float(nM == 0)
     r["item_precision"] = nP / nM if nM else float(nG == 0)
@@ -272,7 +301,7 @@ def score(cid: str, output) -> dict:
 
 
 def aggregate(rows: list[dict], keys=None) -> dict:
-    keys = keys or ["parsed", "decision", "coarse", "band", "ladder", "net_abs_err", "item_recall", "item_precision", "item_f1",
+    keys = keys or ["parsed", "decision", "coarse", "derived_coarse", "band", "ladder", "net_abs_err", "derived_net_err", "item_recall", "item_precision", "item_f1",
                     "rule_acc", "debit_exact", "debit_close", "arith_ok", "class_follows", "fe_recall", "fe_precision",
                     "grey_recall", "overrate_partial", "worksheet"]
     agg = {}
@@ -293,8 +322,8 @@ def selftest() -> int:
     for cid in ids():
         r = score(cid, json.dumps(golden_output(cid)))
         rows.append(r)
-        fails = {k: v for k, v in r.items() if k not in ("case_id", "net_abs_err", "overrate_partial") and v != 1.0}
-        if fails or r.get("net_abs_err") or r.get("overrate_partial"):
+        fails = {k: v for k, v in r.items() if k not in ("case_id", "net_abs_err", "derived_net_err", "overrate_partial") and v != 1.0}
+        if fails or r.get("net_abs_err") or r.get("derived_net_err") or r.get("overrate_partial"):
             bad.append((cid, fails))
     print(f"golden-as-output: {len(ids()) - len(bad)}/{len(ids())} score 1.0 on every metric")
     for cid, f in bad[:10]:
