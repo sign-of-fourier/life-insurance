@@ -1,0 +1,361 @@
+{
+ "case_id": "C0875",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-09-20T12:06:00",
+   "text": "9/20 1206 Total coverage $1,000,000 (applied $750,000 + in force $250,000) vs justified $1,440,000 (30x income $48,000): 0.69x. Within limits. [FIN-1] zz\nOccupation: architect (class 1A): no rating.\nPart 1: 2 flagged items, reviewed in context. NI. [GEN-2] nbd\nDenies all tobacco/nicotine use (APP-2019 form: 5 years). [TOB-1] nfz\nPart 2: TIA disclosed (dx 03/2024, tx none). Evidence needed. [GEN-2] nbd\nPart 2: Epilepsy/seizure disorder (dx 09/2026, tx levetiracetam). Evidence needed. [GEN-2] zz\nPart 2: Pancreatitis disclosed (dx 02/2025, tx none). Evidence needed. [GEN-2]\nPancreatitis: profile 'gallstone' (default); no debits. Elite unavailable. [APS-6] => cap Preferred Plus | ord/obtain APS\nFamily history: no CVD/cancer before 65. pref matrix FH meets E-class. [FH-1]\nPart 2: no impact. Reviewed."
+  },
+  {
+   "at": "2025-09-20T12:42:00",
+   "text": "9/20 1242 MIB 305312: Seizure disorder - consistent. [MIB-2] nbd\nMIB 510335, sleep apnea not disclosed. APS needed.\nRx levetiracetam x4: consistent with Epilepsy/seizure disorder. [RX-2.2] zz\nRx meloxicam x7 (family medicine) consistent with disclosed Back pain / spine. nfz\nBack pain / spine: profile 'simple' (default - attributes not documented) // app/Rx only (no APS in file); 0 dbts (super pref unavailable: history of ratable impairment, CLS-5). => cap PP | going w/: order/obtain APS and hold\nAcne: low-impact; NI. [MISC-1]\nEczema: low-impact; NI.\nRx divalproex x7: not disclosed; indicates Bipolar disorder. zz\n1 MVR: non-moving, not-at-fault, or outside lookback; ignored.\n2 minor moving violations in 3 yrs: +0. [MVR-3] zz"
+  },
+  {
+   "at": "2025-09-20T12:58:00",
+   "text": "9/20 1258 ord PM, B, U: REQ-3 fails (Part 2, high-impact Rx, MIB code) -> next column. [REQ-3]\nord APS from Dr. Bennett (neurology): REQ-2.1 may rate +50. [REQ-2.1]"
+  },
+  {
+   "at": "2025-09-29T00:45:00",
+   "text": "9/29 0045 Examiner: Obstructive sleep apnea reported (not on app).\nOSA: profile 'untreated' (default); no APS. [APS-6] => +25 | ord/obtain APS"
+  },
+  {
+   "at": "2025-10-02T18:06:00",
+   "text": "10/2 1806 Lipids: TC 284, HDL 42, ratio 6.8. pref matrix row. [LIP-1]\nRemaining blood values: no impact. [LAB-2] nbd\nnic+ neg (urine 3). [TOB-4.1]"
+  },
+  {
+   "at": "2025-10-11T16:57:00",
+   "text": "10/11 1657 TIA: profile 'young' (age 18) per APS. [NEU] => +50\nEpilepsy/seizure disorder: profile 'controlled_recent' (default) per APS. [NEU] => +50\nConcussion/TBI: profile'residual' (residual True) // APS (50-100). [NEU] => +50"
+  },
+  {
+   "at": "2025-10-13T15:46:00",
+   "text": "10/13 1546 Bipolar disorder: profile 'unstable' (compliant False) per APS (125-decline). => +125\nBP: average 113/84 (PM + APS in last 12 months); untreated. Preferred matrix. [BP-1]"
+  },
+  {
+   "at": "2025-10-13T17:30:00",
+   "text": "10/13 1730 rdr ADB: declined - Table 11 exceeds rdr max +200. [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nObstructive sleep apnea | APS-6 | +25\nTIA | - | +50\nEpilepsy / seizure disorder | - | +50\nConcussion / TBI | - | +50\nBipolar disorder | MH | +125\nPancreatitis | - | cap PP\nBack pain / spine | - | cap PP\nTOTAL | | +290\nRIDERS | | DBA dcl\nCLASS | | PEND-R",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "Back pain / spine rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'simple'' -> stated Incomplete - holding for APS (golden Table 11 (+275%); stricter)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 2,
+   "fact_id": "C0875-F001",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 3,
+   "fact_id": "C0875-F001",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Back pain / spine (dx 02/2022, tx meloxicam); evidence to follow."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: MIB 330355 (Head injury / concussion; moderate) - condition not disclosed; APS needed to c"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Order APS from Dr. Carrie Diaz (psychiatry): REQ-2.2 app vs 3rd-party discrepancy."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 29,
+   "fact_id": null,
+   "detail": "not written: Build 5'11\" 176 lb (measured), BMI 24.5: Elite column (preferred matrix build row: Elite)."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 30,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 34,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +290, true +300"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "No impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 10,
+   "fact_id": null,
+   "detail": "values not written: 0, 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "No impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "debits -> dbts"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 18,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 23,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 28,
+   "fact_id": null,
+   "detail": "Obstructive sleep apnea -> OSA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 32,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 33,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 37,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "fragment",
+   "step": 39,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 39,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 39,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 43,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 43,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 43,
+   "fact_id": null,
+   "detail": "Table 4 -> +200"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "ADB written as legacy/house code 'DBA'"
+  }
+ ]
+}

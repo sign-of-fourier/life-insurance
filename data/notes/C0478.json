@@ -1,0 +1,259 @@
+{
+ "case_id": "C0478",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2025-10-14T12:47:00",
+   "text": "10/14 1247 US citizen, US resident - eligible. [FN-1]\nTotal coverage $375,000 (applied $250,000 + in force $125,000) vs justified $540,000 (30x income $18,000): 0.69x. Within limits. [FIN-1]\nOccupation graphic designer (class 1A): no rating. [OCC]\nTravel to Netherlands (Tier A) 2 wks/yr (vacation): no rating. [TRV] zz\nFormer cigarette smoker, quit 09/2019 (6.1 yrs): NT ladder, best PP. => cap PP\nPart 2 discloses Back pain / spine (dx 12/2023, tx naproxen); evidence to follow. [GEN-2]\nPart 2 discloses Rheumatoid arthritis (dx 04/2025, tx etanercept, methotrexate); evidence to follow. [GEN-2]\nPart 2 discloses Liver transplant recipient (dx 10/2019, tx sirolimus); evidence to follow. [GEN-2]\nFamily history: no parent/sibling CVD or cancer before 65 - pref matrix FH row meets SPNT. [FH-1] zz"
+  },
+  {
+   "at": "2025-10-14T14:07:00",
+   "text": "10/14 1407 Rx naproxen x7 (family medicine) consistent with disclosed Back pain / spine. [RX-2.2] nfz\nRx sirolimus x21 (family medicine) consistent w/ disclosed Liver transplant recipient. [RX-2.2]\nAcute/low-impact fills: no impact. [RX-2.1] nfz\nMIB 920477 (Organ transplant (non-kidney); severe / marked) - cnsistent w/ Liver transplant recipient. [MIB-2]\nMIB 310876 (TIA; treated, reported controlled) - condition not disclosed; APS needed. [MIB-4]\n1 minor moving violation(s) in 3 yrs: +0. [MVR-3] nfz"
+  },
+  {
+   "at": "2025-10-14T14:11:00",
+   "text": "10/14 1411 Order PM, B, U: REQ-3 accel fails (Part 2 yes, high-impact Rx, MIB code, build) -> next column. [REQ-3]\nOrder APS from Dr. Robert Allen (neurology): REQ-2.2 app vs 3rd-party discrepancy. [REQ-2.2]\nord APS from Dr. Richard Bowman (family medicine): REQ-2.1 impairment may rate >= +50. [REQ-2.1]"
+  },
+  {
+   "at": "2025-10-25T00:12:00",
+   "text": "10/25 0012 bld 5'4\" 247 lb (measured), BMI 42.4: +150 column: +150. [BLD-1.2]\nPulse/other exam items unremarkable: NI. [GEN-5]"
+  },
+  {
+   "at": "2025-10-29T18:16:00",
+   "text": "10/29 1816 Lipids TC 248, HDL 37, ratio 6.7 - pref matrix row. [LIP-1]\nnic+ neg (urine 2). [TOB-4.1]"
+  },
+  {
+   "at": "2025-11-02T14:55:00",
+   "text": "11/2 1455 Back pain / spine: profile 'opioid_benzo' (chronic opioid True, benzo True) per APS. [MSK] => +75\nRheumatoid arthritis: profile 'biologic' (biologic True) per APS. [MSK] => +50\nLiver transplant recipient: profile 'liver_5yr' (organ liver, years since 6) // APS - MD referral; rate as shown. [MISC-4] => +150\nGlaucoma: vv-impact condition on no-rating list - no impact. [MISC-1] zz\nPhysician documents non-compliance (patient non-compliant with medications / missed follow-ups) for Non-kidney organ transplant: +25 on that condition. [APS-4]"
+  },
+  {
+   "at": "2025-11-03T18:10:00",
+   "text": "11/3 1810 TIA: profile 'young' (age 19) // APS. => +50\nBP average 132/75 (para + APS readings in last 12 mos); untreated - used for pref matrix (CLS-5). [BP-1]"
+  },
+  {
+   "at": "2025-11-03T18:41:00",
+   "text": "11/3 1841 Net db +500 > +425 - decl. [CLS-8.1] => decline"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nBuild 5'4\" 247 lb | BLD-1.2 | +150\nBack pain / spine | MSK | +75\nRheumatoid arthritis | MSK | +50\nLiver transplant recipient | MISC-4 | +150\nPhysician documents non-compliance | APS-4 | +25\nTIA | NEU | +50\nFormer cigarette, quit 09/2019 | TOB-2.3 | cap PP\nTOTAL | | +500\nCLASS | | DEC",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 5,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 13,
+   "fact_id": null,
+   "detail": "not written: Rx etanercept x4 (family medicine), methotrexate x3 (family medicine) consistent with disc"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 14,
+   "fact_id": "C0478-F023",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 27,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "non-tobacco -> NT"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 14,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 16,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "typo",
+   "step": 16,
+   "fact_id": null,
+   "detail": "consistent -> cnsistent"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Transient ischemic attack -> TIA"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 33,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "paramed -> para"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 34,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 37,
+   "fact_id": null,
+   "detail": "debits -> db"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 37,
+   "fact_id": null,
+   "detail": "Decline -> decl"
+  }
+ ]
+}

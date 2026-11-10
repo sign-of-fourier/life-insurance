@@ -1,0 +1,281 @@
+{
+ "case_id": "C0828",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-12-23T10:15:00",
+   "text": "12/23 1015 US citizen, US resident. Eligible. [FN-1] nfz\nOccupation accountant (class 1A): no rating. [OCC] nbd\nPrevious app 2020 Northstar Life: postponed. Current evidence governs. [GEN-1]\nRemaining Part 1 answers reviewed: NI (flagged relevant). [GEN-2]\nTobacco/nicotine use denied (APP-2019). [TOB-1] zz\nHIV disclosed in Part 2 (05/2022). Evidence pending. [GEN-2] nbd\nCKD disclosed in Part 2 (05/2020). Evidence pending. [GEN-2]\nRemaining Part 2 answers reviewed: NI. [GEN-2] nbd"
+  },
+  {
+   "at": "2025-12-23T11:04:00",
+   "text": "12/23 1104 MIB 010079 (Prior app - life; unspecified): insurance-activity code - informational. [MIB-6]\nRx bictegravir x40 matches HIV\nAcute/vv-impact fills: no impact. [RX-2.1] nbd"
+  },
+  {
+   "at": "2025-12-23T11:25:00",
+   "text": "12/23 1125 Order PM, B, U, EKG: REQ-1 grid. [REQ-1]\nOrder APS from Dr. Rachel Murphy (rheumatology): REQ-2.1 impairment >= +50. [REQ-2.1]\nord APS from Dr. Megan Phillips (family medicine): REQ-4 provider. [REQ-4]"
+  },
+  {
+   "at": "2025-12-31T21:54:00",
+   "text": "12/31 2154 bld 5'5/190 lb (measured): std column. [BLD-1.1]"
+  },
+  {
+   "at": "2026-01-05T17:08:00",
+   "text": "1/5 1708 Lipids TC 278, HDL 40, ratio 7.0: pref matrix row. [LIP-1]\neGFR 47: consistent w/ kidney disease - rated. [CMB-3]\nHIV pos: known, rated under IMM above. [IMM-1] => DEC\nRemaining blood values within UW normal limits: no impact. [LAB-2]\nnic+ neg (urine 3). [TOB-4.1] nfz"
+  },
+  {
+   "at": "2026-01-26T16:29:00",
+   "text": "1/26 1629 HIV profile 'default': decl. [IMM-1] => DNI\nChronic kidney disease (eGFR): eGFR 47 (APS): +25.\nMusculoskeletal injury: no rating, no impact. [MISC-1]\nGERD: no rating, NI. [MISC-1] nfz\nOsteopenia: no rating, NI. [MISC-1]\nBenign condition: no rating, no impact. [MISC-1] zz\nBP 119/78: untreated [APS] nbd"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nChronic kidney disease | REN-1 | +25\nTOTAL | | +25\nCLASS | | DEC",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 2,
+   "fact_id": null,
+   "detail": "not written: Total coverage $2,000,000 (applied $2,000,000 + in force $0) vs justified $2,370,000 (15x "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: EKG normal: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 29,
+   "fact_id": "C0828-F022",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 32,
+   "fact_id": null,
+   "detail": "not written: APS serial egfr values: 50, 45, 43."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "fragment",
+   "step": 6,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 8,
+   "fact_id": null,
+   "detail": "Chronic kidney disease -> CKD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 16,
+   "fact_id": null,
+   "detail": "values not written: 31.6"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 20,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 21,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "decline -> DEC"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 23,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Decline -> decl"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "decline -> DNI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 31,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "tag nbd"
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "case_id": "C0422",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-02-01T09:54:00",
+   "text": "2/1 0954 Police officer 3A; no rating; E-class unavailable [OCC] => cap PP cap@PP\nPart 1 flagged items reviewed: no impact [GEN-2]\nTobacco/nicotine use denied [TOB-1] nfz\nUTI: low-impact, no rating [MISC-1] nbd\nPart 2 answers reviewed: no impact [GEN-2] nbd"
+  },
+  {
+   "at": "2026-02-01T11:35:00",
+   "text": "2/1 1135 MIB 050076 (tobacco/nicotine alert): not corroborated by cotin or Rx - alert only. [MIB-6] ghost\nRx mesalamine x40: undisclosed Crohn's [RX-3] nfz\nGlaucoma: low-impact, no rating [MISC-1] nfz\n2 minor violations in 3 yrs: +0 [MVR-3] nbd"
+  },
+  {
+   "at": "2026-02-01T12:33:00",
+   "text": "2/1 1233 ord PM, B, U: Rx, bld accel fails → next column\nord FINQ: FIN-2 over limit/KPE [FIN-2]\nOrder APS from Dr. Joseph Sanders: app vs 3rd-party discrepancy [REQ-2.2]"
+  },
+  {
+   "at": "2026-02-06T12:25:00",
+   "text": "2/6 1225 Total coverage $400,000 (applied $300,000 + in force $100,000) vs justified $540,000 (30x income $18,000): 0.74x. Within limits. [FIN-1] nfz"
+  },
+  {
+   "at": "2026-02-15T02:04:00",
+   "text": "2/15 0204 bld 5'1\", 204 lb, BMI 38.5: +75 column [BLD-1.2]\nPulse/other exam items unremarkable [GEN-5] nbd"
+  },
+  {
+   "at": "2026-02-19T19:59:00",
+   "text": "2/19 1959 Lipids TC 262, HDL 39, ratio 6.7 - preferred matrix [LIP-1] nbd\nCotinine neg (urine 8)\nUrine RBC 8/hpf: repeat u/a advised\nOther urine values within limits [LAB-2]"
+  },
+  {
+   "at": "2026-03-04T16:28:00",
+   "text": "3/4 1628 Crohn's disease: profile 'mild' [GI] => +25\nBP 125/75 avg; untreated; used for matrix"
+  },
+  {
+   "at": "2026-03-04T16:38:00",
+   "text": "3/4 1638 -15 cr -10: BP 125/75 <= 125/80 untreated\nrdr KPE: declined - face exceeds 10x or FIN-Q missing [RID-2]\nRider OIR: approved\nrdr XCR: declined - exceeds rdr max"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nBuild 5'1\" 204 lb | BLD-1.2 | +75\nCrohn's disease | - | +25\nCredit -10 | CLS-6.2 |  -10\nOccupation police officer | - | cap PP\nTOTAL | | +90\nRIDERS | | KP dcl, OIR ok, XCR dcl\nCLASS | | T3",
+ "stated_decision": "Table 3 (+75%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 8,
+   "fact_id": "C0422-F015",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 9,
+   "fact_id": "C0422-F016",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 15,
+   "fact_id": "C0422-F050",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 15,
+   "fact_id": "C0422-F051",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 19,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 2,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 2,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "cotinine -> cotin"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag ghost"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 11,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 12,
+   "fact_id": null,
+   "detail": "values not written: 3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "-> -> →"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 20,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "urinalysis -> u/a"
+  },
+  {
+   "kind": "fragment",
+   "step": 24,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Credit -> -15 cr"
+  },
+  {
+   "kind": "fragment",
+   "step": 28,
+   "fact_id": null,
+   "detail": "values not written: 2.3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "fragment",
+   "step": 30,
+   "fact_id": null,
+   "detail": "values not written: 0, 3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "KPE written as legacy/house code 'KP'"
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "case_id": "C0963",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-12-17T10:21:00",
+   "text": "12/17 1021 US citizen, resident - eligible. [FN-1]\nOccupation chef: no rating.\nNorway trip (vacation) 2 wks/yr: no rating. [TRV]\nPrevious app: 2023 Northstar Life issued - info; current governs.\nTobacco/nicotine denied (APP-2019 form). [TOB-1] zz\n5'0\" 120 lb (stated), BMI 23.4: super pref column. [BLD-1.1]"
+  },
+  {
+   "at": "2025-12-17T11:46:00",
+   "text": "12/17 1146 Acne: no-rating condition - NI.\nBenign condition: no-rating - NI. [MISC-1]\nMIB 010070 (Prior app - life; unspecified): insurance-activity code - informational.\n1 minor violation in 3 yrs: +0. [MVR-3]"
+  },
+  {
+   "at": "2025-12-17T13:45:00",
+   "text": "12/17 1345 ACCEL order: REQ-1 grid. [REQ-1]\nFINQ ord: FIN-2 limit exceeded / KPE."
+  },
+  {
+   "at": "2025-12-29T09:59:00",
+   "text": "12/29 0959 Total coverage $750,000 (applied $750,000 + in force $0) vs justified $540,000 (30x income $18,000): 1.39x. 10-100% over: CO $540,000. [FIN-2.2] nfz"
+  },
+  {
+   "at": "2025-12-29T10:26:00",
+   "text": "12/29 1026 XCR rdr: approved."
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nTOTAL | | +0\nRIDERS | | XC ok\nCLASS | | PP\nCTO $540K",
+ "stated_decision": "Preferred Plus",
+ "corruptions": [
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 1,
+   "fact_id": "C0963-F006",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 5,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: glaucoma: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "fragment",
+   "step": 2,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "fragment",
+   "step": 6,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "counter-offer -> CO"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "XCR written as legacy/house code 'XC'"
+  }
+ ]
+}

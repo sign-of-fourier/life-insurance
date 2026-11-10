@@ -1,0 +1,283 @@
+{
+ "case_id": "C0119",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2026-03-16T10:31:00",
+   "text": "3/16 1031 US citizen, US resident - eligible. [FN-1]\nTotal coverage $150,000 ($150,000 applied, $0 in force) vs justified $540,000 (30x income $18,000): 0.28x. Within limits. [FIN-1]\nOccupation insurance underwriter (class 1A): no rating. [OCC]\nAvocation recreational boating: not a listed hazardous activity - no rating. [AVO-1.1]\nRemaining Part 1 answers reviewed: no impact (2 items flagged relevant reviewed in context). [GEN-2]\nDenies all tobacco/nicotine use (APP-2019 form: 5-year question window). nfz\nPart 2 discloses T1DM (dx 03/2024, tx insulin glargine, insulin aspart); evidence to follow. [GEN-2] nbd\nPart 2 discloses fainting episode (dx 03/2025, tx phenytoin); evidence to follow. [GEN-2]\nPart 2 discloses Crohn's disease (dx 11/2024, tx none); evidence to follow.\nCrohn's disease: profile'mild' (default - attributes not documented) // app/Rx only (no APS in file). [APS-6] => +25"
+  },
+  {
+   "at": "2026-03-16T12:30:00",
+   "text": "3/16 1230 Rx phenytoin x13 (neurology), carbamazepine x9 (neurology) consistent w/ disclosed epilepsy / seizure disorder. [RX-2.2]\nMIB 050006 (tobacco/nicotine alert): not corroborated by nic+ or Rx - alert only.\nMIB 601416 (DM type 1; severe / marked) - consistent with Type 1 diabetes."
+  },
+  {
+   "at": "2026-03-16T13:03:00",
+   "text": "3/16 1303 ord PM, B, U: REQ-3 accel fails (Part 2 yes, high-impact Rx, MIB code) → next column. [REQ-3]\nord APS from Dr. Hannah Lopez (endocrinology): REQ-2.1 impairment may rate >= +50. [REQ-2.1] KTA\nord APS from Dr. Timothy Thomas (neurology): REQ-2.2 app vs 3rd-party discrepancy. [REQ-2.2]"
+  },
+  {
+   "at": "2026-03-24T00:44:00",
+   "text": "3/24 0044 bld 5'2\" 156 lb (measured), BMI 28.5: Preferred column (pref matrix build row: Preferred). [BLD-1.1]\nPulse/other exam items unremarkable: NI. [GEN-5]"
+  },
+  {
+   "at": "2026-03-28T16:34:00",
+   "text": "3/28 1634 Lipids TC 434, HDL 64, ratio 6.8: +75 (worse of TC and ratio rows). [LIP-3] dbl-ck\nA1c 8: part of the diabetes rating above. [CMB-3]\nglucose fasting 180: evaluated w/ A1c (A1c 8) - no searate rating. [LAB-2]\nRemaining blood values within UW normal limits: no impact. [LAB-2]\nCotinine neg (urine 2). [TOB-4.1]\nUrine glucose positive: explained by diabetes.\nRemaining urine values within limits: no impact. [LAB-2]"
+  },
+  {
+   "at": "2026-04-13T14:02:00",
+   "text": "4/13 1402 Type 1 diabetes: Type 1, age 24, A1c 8.3 (APS-documented average): T2 grid +150 plus +50 (DM-3); best Standard. [DM-3] => +200, cap STD cap@Std\nAPS serial A1c values: 8.2, 8.0, 8.0, 8.0. [GEN-6]"
+  },
+  {
+   "at": "2026-04-27T11:51:00",
+   "text": "4/27 1151 Epilepsy / seizure disorder: profile 'uncontrolled' (seizures per year 7) per APS (chapter range 100-decline). [NEU] => +100\nBlood pressure average 137/81 (para + APS readings in last 12 mos); untreated - used for preferred matrix. nbd"
+  },
+  {
+   "at": "2026-04-27T14:39:00",
+   "text": "4/27 1439 rdr ADB: declined - Table 15 exceeds rdr max +200. [RID-2]\nrdr GIO: declined - Table 15 exceeds rdr max Table 0. [RID-2]\nrdr OIR: approved. [RID-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nCrohn's disease | APS-6 | +25\nLipids TC 434, HDL 64, ratio 6.8 | LIP-3 | +75\nType 1 diabetes | DM-3 | +200\nEpilepsy / seizure disorder | NEU | +100\nType 1 diabetes | DM-3 | cap Std\nTOTAL | | +410\nRIDERS | | ADB dcl, GIO dcl, OIR ok\nCLASS | | T15",
+ "stated_decision": "Table 15 (+375%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 12,
+   "fact_id": null,
+   "detail": "not written: Rx insulin glargine x22 (endocrinology), insulin aspart x23 (endocrinology) consistent wit"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: eczema: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: glaucoma: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 16,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 35,
+   "fact_id": null,
+   "detail": "not written: Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impac"
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +410, true +400"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Type 1 diabetes -> T1DM"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 13,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Diabetes mellitus -> DM"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "-> -> →"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "tag dbl-ck"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "typo",
+   "step": 26,
+   "fact_id": null,
+   "detail": "separate -> searate"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 28,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "paramed -> para"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 34,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 34,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Table 4 -> +200"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 39,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 39,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 40,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

@@ -1,0 +1,361 @@
+{
+ "case_id": "C0415",
+ "persona_id": "uw_10",
+ "observations": [
+  {
+   "at": "2025-03-13T21:25:00",
+   "text": "3/13 2125 US CITIZEN, RESIDENT - ELIGIBLE. [FN-1] NFZ / LINEWORKER (UTILITY), CLASS 3A: NO RATING. NFZ / Part 1 flags: reviewed, no impact (2 relevant). zz / former smoker, quit 11/2017: cap PP. / MS disclosure (dx 01/2016, tx natalizumab, glatiramer). nfz / PE/DVT disclosure (dx 06/2005, tx apixaban). [GEN-2] nbd / MIB 316477 (optic neuritis) aligns w/ MS. nbd / MIB 708376 (KIDNEY TRANSPLANT) NOT DISCLOSED; APS NEEDED. [MIB-4] / Rx natalizumab, glatiramer match MS. nbd / Rx apixaban aligns w/ PE/DVT. [RX-2.2] zz / PE/DVT PROFILE 'PROVOKED': 0 DB, CAP PP. CAP@PP / GLAUCOMA: NO IMPACT. NBD / ACNE: NI. / gout: no impact. nbd / minor moving violation: +0. / Order PM, B, U, EKG: REQ-1. / ORD APS FROM DR. KAYLA HAMPTON (NEUROLOGY): REQ-2.1. IMPAIRMENT MAY RATE >= 50 [REQ-2.1] KTA / ORDER APS FROM DR. BRIAN WALKER: REQ-2.2 (APP VS 3RD-PARTY). / EXAM UNREMARKABLE: NO IMPACT."
+  },
+  {
+   "at": "2025-03-29T14:00:00",
+   "text": "3/29 1400 Lipids: TC 252, HDL 38, ratio 6.6. [LIP-1] nbd / eGFR 34: aligns w/ kidney disease. nfz / BLOOD VALUES WITHIN LIMITS: NI. NBD / cot neg. nfz / urine values within limits: NI. nfz / MS: profile 'moderate', +100. / CHRONIC KIDNEY DISEASE: +75. / non-compliance w/ meds/follow-ups: +25. / APS serial eGFR values: 32, 32, 35. zz / rdr OIR: approved."
+  }
+ ],
+ "worksheet_format": "C",
+ "worksheet": "multiple +100, chronic +75, physician +25 = +190 so T7\ncapped PP, PP from former, pulmonary\nriders SPR ok",
+ "stated_decision": "Table 7 (+175%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 2,
+   "fact_id": null,
+   "detail": "not written: Total coverage $3,500,000 (applied $3,000,000 + in force $500,000) vs justified $4,305,000"
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 5,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Former cigarette, quit 11/2017 cap Preferred Plus'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Family history: no parent/sibling CVD or cancer before 65 - preferred matrix FH row meets "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 12,
+   "fact_id": "C0415-F019",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 13,
+   "fact_id": "C0415-F020",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 14,
+   "fact_id": "C0415-F020",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 16,
+   "fact_id": "C0415-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 16,
+   "fact_id": "C0415-F022",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: Build 5'10.5\" 194 lb (measured), BMI 27.4: Pref Plus column (preferred matrix build row: P"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: EKG normal: no impact."
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 31,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Chronic kidney disease +75'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 33,
+   "fact_id": null,
+   "detail": "not written: Blood pressure average 127/71 (paramed + APS readings in last 12 months); untreated - used"
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +190, true +200"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "fragment",
+   "step": 6,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 12,
+   "fact_id": null,
+   "detail": "values not written: 40"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 13,
+   "fact_id": null,
+   "detail": "values not written: 40"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 13,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 14,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "debits -> db"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 18,
+   "fact_id": null,
+   "detail": "values not written: 1, 3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 27,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 28,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "cotinine -> cot"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 28,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 29,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 30,
+   "fact_id": null,
+   "detail": "values not written: 150, 3.5"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 32,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 34,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "OIR written as legacy/house code 'SPR'"
+  }
+ ]
+}

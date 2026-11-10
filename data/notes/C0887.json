@@ -1,0 +1,361 @@
+{
+ "case_id": "C0887",
+ "persona_id": "uw_06",
+ "observations": [
+  {
+   "at": "2026-10-21T10:32:00",
+   "text": "10/21/26 10:32 ] / PHARMACIST OCCUPATION: NO RATING NFZ / FRANCE TRAVEL 2 WKS/YR: NO RATING / PART 1 ANSWERS REVIEWED: FLAGGED ITEMS CONTEXTUAL NFZ / DENIES TOBACCO/NICOTINE USE [TOB-1] / MALIGNANT MELANOMA STAGE I (03/2022): EVIDENCE FOLLOWS NFZ / FATHER MI @51: FH PREF MATRIX ROW MEETS PREF NBD / MARIJUANA 6X/WEEK: +0 BEST STD+ [DRG-3] => CAP STANDARD PLUS CAP@SP / TOPIRAMATE FILLS CONSISTENT W/ MIGRAINE / MIGRAINE PROFILE 'ANY': NO DBTS (SUPER PREF UNAVAILABLE) [CLS-5] => CAP PP CAP@PP / OSTEOPENIA: NO IMPACT (NO-RATING LIST) ZZ / MIB 300216 CONSISTENT W/ MIGRAINE [MIB-2] NBD / MVR ITEMS IGNORED: NON-MOVING, NOT-AT-FAULT, OR OUTSIDE LOOKBACK / ORD PM, B, U: REQ-1 GRID / ORD AVOQ: REQ-2.5 [REQ-2.5] / ORD APS FROM DR. GERALD SMITH: CONFIRM CONTROL/CLASS CAP KTA / STUDENT/NEW PILOT, 32 HRS: FE 2.5/2"
+  },
+  {
+   "at": "2026-11-07T15:35:00",
+   "text": "11/07/26 15:35 PULSE/EXAM ITEMS UNREMARKABLE: NO IMPACT NFZ / LIPIDS TC 278, HDL 68, RATIO 4.1: PREF MATRIX ROW NBD / BLOOD VALUES WITHIN LIMITS: NO IMPACT [LAB-2] NFZ / URINE VALUES WITHIN LIMITS: NI ZZ / MALIGNANT MELANOMA STAGE I: 5.7 YRS SICE TX: BEST SP => CAP SP CAP@SP / BP 137/78: UNTREATED - PREF MATRIX (CLS-5) [BP-1] ZZ / RDR ROP-T: APPROVED / RDR WP: APPPROVED"
+  }
+ ],
+ "worksheet_format": "B",
+ "worksheet": "MARIJUANA 6X/WEEK → CAP SP\nMIGRAINE → CAP PP\nMALIGNANT MELANOMA, STAGE I → CAP SP\n= +0 → SP + FE 2.5/2\nRDRS: ROP-T OK, WP OK",
+ "stated_decision": "Standard Plus",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Migraine (dx 03/2023, tx topiramate); evidence to follow."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: MIB 802227 (Melanoma; mild / slight) - consistent with Malignant melanoma, stage I."
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 21,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Student/new pilot, 32 total hrs FE 2.5/2'"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 21,
+   "fact_id": "C0887-F052",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: Build 5'0\" 147 lb (measured), BMI 28.7: Preferred column (preferred matrix build row: Pref"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 26,
+   "fact_id": null,
+   "detail": "not written: Cotinine negative (urine 5)."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 29,
+   "fact_id": "C0887-F027",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fragment",
+   "step": 2,
+   "fact_id": null,
+   "detail": "values not written: .60, 0, 1, 166000, 30, 3000000, 4980000"
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 5,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 7,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "PREFERRED -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "PREFERRED -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "STANDARD PLUS -> std+"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag cap@SP"
+  },
+  {
+   "kind": "fragment",
+   "step": 12,
+   "fact_id": null,
+   "detail": "values not written: 14"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 12,
+   "fact_id": null,
+   "detail": "WITH -> w/"
+  },
+  {
+   "kind": "fragment",
+   "step": 13,
+   "fact_id": null,
+   "detail": "values not written: 0"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "DEBITS -> dbts"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "ELITE -> super pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "PREFERRED PLUS -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "NO IMPACT -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 16,
+   "fact_id": null,
+   "detail": "WITH -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 17,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "ORDER -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "ORDER -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "ORDER -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "PREFERRED -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "NO IMPACT -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "NO IMPACT -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 27,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 28,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 28,
+   "fact_id": null,
+   "detail": "TREATMENT -> Tx"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "STANDARD PLUS -> SP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "STANDARD PLUS -> SP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag cap@SP"
+  },
+  {
+   "kind": "typo",
+   "step": 28,
+   "fact_id": null,
+   "detail": "SINCE -> SICE"
+  },
+  {
+   "kind": "fragment",
+   "step": 29,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 29,
+   "fact_id": null,
+   "detail": "BLOOD PRESSURE -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "PREFERRED -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 29,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "RIDER -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "RIDER -> rdr"
+  },
+  {
+   "kind": "typo",
+   "step": 33,
+   "fact_id": null,
+   "detail": "APPROVED -> APPPROVED"
+  }
+ ]
+}

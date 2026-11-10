@@ -1,0 +1,83 @@
+{
+ "case_id": "C0136",
+ "persona_id": "uw_09",
+ "observations": [
+  {
+   "at": "2025-10-21T11:20:00",
+   "text": "2025-10-21 Total coverage $225,000: 0.42x. Applied $150,000, in force $75,000. Justified $540,000 (30x income $18,000). Within limits. [FIN-1]\nOccupation airline pilot (class 1A): no rating.\nPart 1 reviewed: no impact (2 items flagged relevant reviewed in context). zz\nDenies all tobacco/nicotine use (APP-2019: 5-year window). zz\nbld 5'2/152, BMI 27.8: Pref Plus column. [BLD-1.1]\nBrother CAD dx 54: meets PP. [FH-1]\nPart 2 reviewed: no impact. [GEN-2]"
+  },
+  {
+   "at": "2025-10-21T13:35:00",
+   "text": "2025-10-21 1 MVR item non-moving, not-at-fault, outside lookback - ignored. [MVR-1]\n1 minor moving violation in 3 yrs: +0. nfz"
+  },
+  {
+   "at": "2025-10-21T14:01:00",
+   "text": "2025-10-21 ord ACCEL: REQ-1 grid. [REQ-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nTOTAL | | +0\nCLASS | | PP",
+ "stated_decision": "Preferred Plus",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 5,
+   "fact_id": "C0136-F011",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  }
+ ]
+}

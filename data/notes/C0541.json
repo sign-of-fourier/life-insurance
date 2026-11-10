@@ -1,0 +1,359 @@
+{
+ "case_id": "C0541",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-03-28T11:02:00",
+   "text": "3/28 1102 US citizen, US resident: eligible. nbd\nJapan travel: 1 wk/yr (vacation): no rating. nfz\nPrior app 2024 Harborview Life postponed - informational; current evidence governs. [GEN-1] nfz\nRemaining Part 1 reviewed: NI (5 flagged relevant). [GEN-2]\nDenies tobacco/nicotine use (APP-2019, 5 yrs). [TOB-1] nbd\nPart 2: DM2 disclosed (07/2021); evidence pending. [GEN-2] nbd\nFH waived at 70+. [FH-4]"
+  },
+  {
+   "at": "2026-03-28T14:02:00",
+   "text": "3/28 1402 Metformin x40, tirzepatide x19: matches DM2. [RX-2.2] nfz\nMIB 010079 (Prior app - life; unspecified): insurance-activity code - informational. zz\n1 MVR item ignored: non-moving, not-at-fault, or outside lookback.\n2 minor moving violations in 3 yrs: +0."
+  },
+  {
+   "at": "2026-03-28T14:24:00",
+   "text": "3/28 1424 Order APS from Dr. Foster (endocrinology): impairment may rate >= +50. [REQ-2.1]\nOrder APS from Dr. Perry (family medicine): REQ-1 grid. KTA"
+  },
+  {
+   "at": "2026-04-03T10:55:00",
+   "text": "4/3 1055 Toal coverage $2,500,000 (applied $2,000,000 + in force $500,000) vs justified $2,631,000 (age 71+: 50% of net worth $5,262,000): 0.95x. Within limits."
+  },
+  {
+   "at": "2026-04-10T23:02:00",
+   "text": "4/10 2302 bld 5'6.5\", 251 lb: +100 column: +100. [BLD-1.2]\nPulse/other exam unremarkable: no impact.\nEKG normal: no impact. [CV]"
+  },
+  {
+   "at": "2026-04-12T16:29:00",
+   "text": "4/12 1629 Lipids TC 278, HDL 42, ratio 6.6: pref matrix row. [LIP-1] nfz\nA1c 10.9: part of diabetes rating. [CMB-3]\nFasting glucose 273: evaluated w/ A1c (A1c 10.9): no separate rating. [LAB-2] nbd\nRemaining blood values within limits: NI. [LAB-2]\nCotinine neg.\nUrine glucose pos: explained by diabetes. [LAB-2]\nUrine RBC 8/hpf: repeat u/a advised; not ratable alone. [LAB-2] nfz\nRemaining urine values within limits: no impact. [LAB-2]"
+  },
+  {
+   "at": "2026-04-22T16:05:00",
+   "text": "4/22 1605 Acne: vv-impact on no-rating list - no impact. [MISC-1] nfz\nBPH: low-impact on no-rating list - no impact. [MISC-1] nbd\nBenign no-rating: low-impact on no-rating list - no impact.\nAPS A1c values: 11.3, 11.0, 11.3, 11.1. [GEN-6] zz"
+  },
+  {
+   "at": "2026-05-02T17:55:00",
+   "text": "5/2 1755 DMII: age 71, A1c 11.1: grid +150; best STD. => +150, cap STD\nNon-compliance documented for NIDDM: +25. [APS-4]\nBP average 118/67: untreated - used for preferred matrix.\nAPS A1c values: 11.2, 11.2, 11.1, 10.8. [GEN-6] zz"
+  },
+  {
+   "at": "2026-05-02T18:05:00",
+   "text": "5/2 1805 bld +100 w/ T2 diabetes: +25 interaction. [BLD-1.6]\nNet db +300 exceed Table 8 at age 71+: DCL. => decline k/o-d"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nBuild 5'6.5\" 251 lb | - | +100\nType 2 diabetes | DM-2 | +150\nPhysician documents non-compliance | APS-4 | +25\nBuild +100 with diabetes_t2 | - | +25\nType 2 diabetes | DM-2 | cap Std\nTOTAL | | +300\nCLASS | | DEC",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 2,
+   "fact_id": null,
+   "detail": "not written: Occupation retired (class 1A): no rating."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 10,
+   "fact_id": "C0541-F020",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 10,
+   "fact_id": "C0541-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: Order PM, B, U, EKG, COG, FINQ: REQ-1 grid."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 30,
+   "fact_id": "C0541-F022",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> DM2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 8,
+   "fact_id": null,
+   "detail": "Family history -> FH"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> DM2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "typo",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Total -> Toal"
+  },
+  {
+   "kind": "fragment",
+   "step": 19,
+   "fact_id": null,
+   "detail": "values not written: 39.9"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 24,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "fragment",
+   "step": 26,
+   "fact_id": null,
+   "detail": "values not written: 0"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 27,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "urinalysis -> u/a"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 33,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> DMII"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 35,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> NIDDM"
+  },
+  {
+   "kind": "fragment",
+   "step": 36,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 37,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 38,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 40,
+   "fact_id": null,
+   "detail": "debits -> db"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 40,
+   "fact_id": null,
+   "detail": "Decline -> DCL"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 40,
+   "fact_id": null,
+   "detail": "tag k/o-d"
+  }
+ ]
+}

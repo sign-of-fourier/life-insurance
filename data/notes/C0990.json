@@ -1,0 +1,303 @@
+{
+ "case_id": "C0990",
+ "persona_id": "uw_08",
+ "observations": [
+  {
+   "at": "2025-12-23T11:54:00",
+   "text": "12/23 US citizen, US resident - eligible. [FN-1]\nTotal coverage $3,250,000 (applied $3,000,000 + in force $250,000) vs justified $3,420,000 (30x income $114,000): 0.95x. Within limits.\nPolice officer: cap PP cap@PP\nQuit smoking 09/2013 (12.2 yrs): NS ladder, best Elite. [TOB-2.3]\nAbdominal aortic aneurysm disclosed (dx 11/2013); evidence pending. [GEN-2]\nT2DM disclosed (dx 06/2016); evidence pending. [GEN-2]\nHepatitis C disclosed (dx 03/2006); evidence pending. [GEN-2]\nBRCA/Lynch pos (no cancer) disclosed (dx 05/2017); evidence pending. [GEN-2]\nBRCA/Lynch pos (no cancer): profile 'no_surgery'; +50. ord APS. [APS-6]\nDepression/anxiety disclosed (dx 02/2009); evidence pending. [GEN-2]\nGestational diabetes (resolved) disclosed (dx 02/2018); evidence pending. [GEN-2]\nRemaining Part 2 answers reviewed: no impact. [GEN-2]\nMIB 151327 (Aortic aneurysm; moderate) - consistent w/ Abdominnal aortic aneurysm. zz\nMIB 600417 (DM type 2; severe / marked) - consistent with DM2. nfz\nMIB 223467 (Hepatitis C; severe) - reported 17.9 yrs ago - informational only. [MIB-3]\nOrder PM, B, U: REQ-1 grid.\nord APS from Dr. Felicia Marshall (cardiology): REQ-2.1 impairment may rate >= +50. [REQ-2.1]\nord APS from Dr. Regina Hill (endocrinology): REQ-2.1 impairment may rate >= +50. [REQ-2.1] KTA\nord APS from Dr. Tamara Hernandez (gastroenterology): REQ-2.1 impairment may rate >= +50. [REQ-2.1] KTA\nbld 5'5.5\" 154 lb: super pref column. [BLD-1.1] nbd\nDM2: age 40, A1c 9.1 - grid +175; best std. [DM-2] => +175, cap STD cap@Std\nGestational diabetes (resolved): profile 'resolved' (resolved True) per APS. => cap pref\nAPS serial a1c values: 8.9, 8.9, 8.9, 9.3. nfz\nA1c 9 part of the diabetes rating above. [CMB-3]\nglucose fasting 201: evaluated with A1c (A1c 9) - no separate rating.\nRemaining blood values within UW normal limits: no impact. [LAB-2]\nnic+ neg (urine 2).\nUrine glucose pos: explained by diabetes.\nAbdominal aortic aneurysm: profile 'aaa_small' (kind aaa, size cm 3.5) per APS. => +50\nHepatitis C +100.\nBP average 136/79 (para + APS readings); untreated - used for pref matrix. [BP-1] nbd"
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[ ] 4. impairment debits:\n[ ] 5. credits:\n[x] 6. net to class\n[ ] 7. preferred matrix and caps:\n[x] 8. flat extras\n[ ] 9. riders:\n[x] 10. amount: PEND-R\ndebits: +50 +175 +50 +100 -> net +375",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "BRCA/Lynch positive (no cancer) rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'no_surgery'' -> stated Incomplete - holding for APS (golden Table 14 (+350%); stricter)"
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 3,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Occupation police officer cap Preferred Plus'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 4,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 12,
+   "fact_id": null,
+   "detail": "not written: Depression / anxiety: profile 'mild' (default - attributes not documented) per application"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Rx metformin x29 (endocrinology), sitagliptin x40 (endocrinology) consistent with disclose"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 28,
+   "fact_id": null,
+   "detail": "not written: Lipids TC 264, HDL 40, ratio 6.6 - preferred matrix row."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 29,
+   "fact_id": null,
+   "detail": "not written: AST 81 (2.0x ULN), ALT 101 (2.2x ULN): attributed to hepatitis_c - rated there, not added "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 35,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 37,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Hepatitis C +100'"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 3,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "non-tobacco -> NS"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> T2DM"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 9,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 15,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "typo",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Abdominal -> Abdominnal"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Diabetes mellitus -> DM"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> DM2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "fragment",
+   "step": 23,
+   "fact_id": null,
+   "detail": "values not written: 25.2"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> DM2"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 27,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 33,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 34,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "fragment",
+   "step": 38,
+   "fact_id": null,
+   "detail": "values not written: 12, 5"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "paramed -> para"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 38,
+   "fact_id": null,
+   "detail": "tag nbd"
+  }
+ ]
+}

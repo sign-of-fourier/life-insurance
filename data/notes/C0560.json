@@ -1,0 +1,253 @@
+{
+ "case_id": "C0560",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-07-06T12:01:00",
+   "text": "7/6 1201 US citizen, US resident - eligible. [FN-1]\nCoverage $225,000 (applied $150,000 + in force $75,000) vs justified $281,500 (50% net worth $563,000). 0.80x. Within limits.\nOccupation retired (class 1A): no rating. [OCC]\nPart 1 answers reviewed: NI (flagged 2 items). zz\nPart 2 discloses Pancreatitis (dx 10/2005, tx none); evidence to follow. [GEN-2] nbd\nPart 2 discloses Bipolar disorder (dx 02/2014, tx lamotrigine); evidence to follow."
+  },
+  {
+   "at": "2025-07-06T12:16:00",
+   "text": "7/6 1216 MIB 230417 (Pancreatitis; severe / marked) - reported 13.5 yrs ago. [MIB-3]\nRx lamotrigine x29 (psychiatry) consistent w/ Bipolar disorder. [RX-2.2]\nEczema: vv-impact condition on no-rating list - no impact. [MISC-1] nfz\nAcne: vv-impact condition on no-rating list - no impact."
+  },
+  {
+   "at": "2025-07-06T12:36:00",
+   "text": "7/6 1236 ord PM, B, U: REQ-1 grid.\nord AVOQ: REQ-2.5 avocation/aviation disclosed.\nOrder APS from Dr. John Rocha (psychiatry): REQ-2.1 impairment may rate >= +50. [REQ-2.1]"
+  },
+  {
+   "at": "2025-07-17T22:47:00",
+   "text": "7/17 2247 bld 5'6\" 127 lb, BMI 20.5: E-class column. [BLD-1.1] nbd\nPulse/other exam items unremarkable: no impact. [GEN-5]"
+  },
+  {
+   "at": "2025-07-21T12:39:00",
+   "text": "7/21 1239 Hang gliding 6 flights/yr: FE $2.5/1000 permanent [AVO] => FE 2.5/perm"
+  },
+  {
+   "at": "2025-07-21T17:54:00",
+   "text": "7/21 1754 Lipids TC 262, HDL 39, ratio 6.7: pref matrix row. [LIP-1]\nGlucose random 146: evaluated w/ A1c (A1c 5.5) - no separate rating. [LAB-2]\nCigars 6/yr, admitted, cot neg: NS ladder, best pref. [TOB-3.1] => cap pref cap@Pref\nRemaining urine values within limits: no impact."
+  },
+  {
+   "at": "2025-07-30T16:09:00",
+   "text": "7/30 1609 Pancreatitis: profile 'chronic' per APS. [GI] => +100\nBP average 131/76 (PM + APS readings in last 12 mos); untreated - used for pref matrix (CLS-5). [BP-1]\nRoutine visit content reviewed: NI. [APS-1]"
+  },
+  {
+   "at": "2025-07-30T17:04:00",
+   "text": "7/30 1704 rdr XCR: declined - issue age 68 outside 18-60. [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nBipolar disorder | MH | +75\nPancreatitis | GI | +100\nCigars 6/yr, admitted, cotinine negative | TOB-3.1 | cap Pref\nTOTAL | | +150\nFE | | FE 2.5/perm\nRIDERS | | XCR dcl\nCLASS | | T6",
+ "stated_decision": "Table 6 (+150%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 5,
+   "fact_id": null,
+   "detail": "not written: Admits cigars (6/yr); ladder depends on frequency and cotinine."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Family history: no parent/sibling CVD or cancer before 65 - preferred matrix FH row meets "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 13,
+   "fact_id": "C0560-F020",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Order APS from Dr. Timothy Williams (gastroenterology): REQ-2.1 impairment may rate >= +50"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: Bipolar disorder: profile 'bp1_stable' (type I, stable years 7.2) per APS."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +150, true +175"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 11,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 24,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "cotinine -> cot"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "non-tobacco -> NS"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag cap@Pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 29,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 29,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

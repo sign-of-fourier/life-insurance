@@ -1,0 +1,267 @@
+{
+ "case_id": "C0033",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2026-07-17T10:08:00",
+   "text": "7/17 1008 US citizen, US resident - eligible [FN-1]\nTotal coverage $850,000 (applied $750,000 + in force $100,000) vs justified $1,360,000 (10x income $136,000): 0.62x. Within limits. [FIN-1]\nOccupation plumber (class 2A): no rating [OCC]\nAvocation hiking: not listed as hazardous - no rating\nTravel to Canada 3 wks/yr (vacation): no rating\nPrior app: Northstar Life issued std; current evidence governs [GEN-1] nbd\nReviewed Part 1 answers: 2 items flagged relevant in context [GEN-2]\nDenies all tobacco/nicotine use per APP-2019\nPart 2 discloses Prediabetes/impaired fasting glucose (dx 03/2013) [GEN-2]\nNo parent/sibling CVD or cancer before 65 - preferred matrix meets SPNT [FH-1]"
+  },
+  {
+   "at": "2026-07-17T13:16:00",
+   "text": "7/17 1316 MIB 010970 (Prior app - life; degrree not reported): insurance-activity code - informational. [MIB-6] zz\nMIB 190071 (old cardiovascular code; unspecified) reported 10.0 yrs ago - retired\nvitamin D deficiency: low-impact condition on the no-rating list - no impact. [MISC-1]"
+  },
+  {
+   "at": "2026-07-17T13:54:00",
+   "text": "7/17 1354 ord physical, bloodwork, urine, EKG: REQ-1 grid [REQ-1]\nord APS from Dr. Donna Johnson (endocrinology): confirm control/class cap [REQ-2.1] KTA"
+  },
+  {
+   "at": "2026-08-01T00:17:00",
+   "text": "8/1 0017 bld 5'0\" 153 lb (measured), BMI 29.9: pref column (preferred matrix bld row: pref).\nPulse/other exam items unremarkable: NI"
+  },
+  {
+   "at": "2026-08-04T19:01:00",
+   "text": "8/4 1901 Lipids TC 256, HDL 62, ratio 4.1 - pref matrix row [LIP-1]\nA1c 5.7: part of diabetes rating [CMB-3] nbd\nRemaining blood values within UW normal limits: no impact [LAB-2]\nCotinine neg [TOB-4.1]"
+  },
+  {
+   "at": "2026-08-21T18:07:00",
+   "text": "8/21 1807 Prediabetes/impaired fasting glucose: profile 'low' (avg a1c 5.6) per APS => cap pref [DM-1]\nNon-compliance documented for Prediabetes/impaired fasting glucose: +25 on that condition [APS-4]\nBP 144/90 (untreated); used for preferred matrix [BP-1]\nAPS serial a1c values: 5.7, 5.5, 5.4, 5.4 [GEN-6] nfz"
+  },
+  {
+   "at": "2026-08-21T18:19:00",
+   "text": "8/21 1819 -15 cr -10: NT-proBNP 15 < 50 at age 64 => -10 -15 cr [CLS-6.5]\nrdr CIA: approved [RID-1]\nrdr ROP-T: declined - issue age outside 18-55 range [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nPhysician documents non-compliance | APS-4 | +25\nCredit -10 | CLS-6.5 |  -10\nPrediabetes / impaired fasting glucose | DM-1 | cap Pref\nTOTAL | | +15\nRIDERS | | CIA ok, ROP dcl\nCLASS | | Std",
+ "stated_decision": "Standard",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: 1 MVR item(s) non-moving, not-at-fault, or outside lookback - ignored."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: osteopenia: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 16,
+   "fact_id": "C0033-F022",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: EKG normal: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 26,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "fragment",
+   "step": 6,
+   "fact_id": null,
+   "detail": "values not written: 2025"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 8,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "typo",
+   "step": 12,
+   "fact_id": null,
+   "detail": "degree -> degrree"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "fragment",
+   "step": 25,
+   "fact_id": null,
+   "detail": "values not written: 4"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 25,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "fragment",
+   "step": 29,
+   "fact_id": null,
+   "detail": "values not written: 12, 5"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 29,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Credit -> -15 cr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "credit -> -15 cr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "fragment",
+   "step": 34,
+   "fact_id": null,
+   "detail": "values not written: 64"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "ROP-T written as legacy/house code 'ROP'"
+  }
+ ]
+}

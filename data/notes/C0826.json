@@ -1,0 +1,91 @@
+{
+ "case_id": "C0826",
+ "persona_id": "uw_02",
+ "observations": [
+  {
+   "at": "2025-02-05T12:18:00",
+   "text": "2025-02-05 US citizen, US resident - eligibility confirmed.\nOccupation: real estate agent (class 2A). No rating needed.\nPrior application 2020 Pinecrest Mutual declined (info); current evidence applies.\nReviewed remaining Part 1 answers flagged for relevance (5 items): NI. [GEN-2] zz\nFormer smoker, quit March 2004 (20.9 years): non-tobacco ladder, best Elite. [TOB-2.3]\nBuild: 5'3\" 151 lb (stated, no paramedic), BMI 26.7: SPNT column (preferred build: Elite). [BLD-1.1]\nfam hx: no CVD or cancer before 65 in parents/siblings - meets pref FH row."
+  },
+  {
+   "at": "2025-02-05T13:11:00",
+   "text": "2025-02-05 MIB 010009 (Prior application - life; unspecified): insurance-activity code - informational.\n1 minor moving violation in 3 yrs: no impact."
+  },
+  {
+   "at": "2025-02-05T14:16:00",
+   "text": "2025-02-05 Order ACCEL: REQ-1 grid.\nOrder FINQ: FIN-2 over limit / KPE. [FIN-2]"
+  },
+  {
+   "at": "2025-02-13T10:00:00",
+   "text": "2025-02-13 Total coverage $375,000 (applied $250,000 + in force $125,000) vs justified $360,000 (20x income $18,000): 1.04x. Within limits. [FIN-1]"
+  },
+  {
+   "at": "2025-02-13T13:32:00",
+   "text": "2025-02-13 Rider ADB approved. [RID-1]\nRider KPE declined - face exceeds 10x key-person compensation or FIN-Q missing."
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[x] 9. riders\n[x] 10. amount: PP\ndebits: none -> net +0\nriders: ADB ok, KPE dcl",
+ "stated_decision": "Preferred Plus",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 13,
+   "fact_id": "C0826-F004",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 5,
+   "fact_id": null,
+   "detail": "values not written: 3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Family history -> fam hx"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "fragment",
+   "step": 10,
+   "fact_id": null,
+   "detail": "values not written: 0"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  }
+ ]
+}

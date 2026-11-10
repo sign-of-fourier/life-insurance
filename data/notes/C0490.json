@@ -1,0 +1,273 @@
+{
+ "case_id": "C0490",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-10-22T11:44:00",
+   "text": "10/22 1144 Total coverage $100,000 (applied $100,000 + in force $0) vs justified $235,000 (5x income $47,000): 0.43x. Within limits.\nOccupation administrative assistant: no rating. [OCC]\nPart 1 answers: NI (2 relevant reviewed). [GEN-2] nfz\nQuit smoking 02/2025 (1.7 yrs): best STD. [TOB-2.2] => cap STD\na-fib / flutter dx 08/2004, tx warfarin. [GEN-2] nbd\nPart 2 answers reviewed: no impact."
+  },
+  {
+   "at": "2026-10-22T14:18:00",
+   "text": "10/22 1418 Rx warfarin x40 consistent w/ a-fib / flutter.\n2 minor moving violations in 3 yrs: +0 [MVR-3] zz"
+  },
+  {
+   "at": "2026-10-22T14:53:00",
+   "text": "10/22 1453 ord PM, B, U: REQ-1. [REQ-1]\nord FORQ: foreign national / travel. [REQ-2.6]\nOrder APS from Dr. Jessica Atkins: treating provider. [REQ-4] KTA"
+  },
+  {
+   "at": "2026-10-29T18:38:00",
+   "text": "10/29 1838 bld 6'1\" 241 lb, BMI 31.8: std column. [BLD-1.1] nfz\nPulse/other exams unremarkable: no impact."
+  },
+  {
+   "at": "2026-11-02T15:12:00",
+   "text": "11/2 1512 Lipids TC 270, HDL 41, ratio 6.6: preferred matrix row. [LIP-1] nbd\nCotinine neg.\nUrine RBC 8/hpf: repeat u/a advised.\nRemaining urine values: NI."
+  },
+  {
+   "at": "2026-11-05T10:16:00",
+   "text": "11/5 1016 US citizen in El Salvador: max $1M, best std. [FN-1.1] => cap STD\napp signed outside the US: DEC. [CLS-8.6] k/o-d\nTravel to Italy: no rating.\nForeign Q visa: n/a. [FN-1]\nForeign questionnaire yrs in US: n/a. [FN-1] nbd"
+  },
+  {
+   "at": "2026-11-21T12:24:00",
+   "text": "11/21 1224 Profile 'paroxysmal' per APS: +25. [CV-2]\nSeasonal allergy: no impact."
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nAtrial fibrillation / flutter | CV-2 | +25\nFormer cigarette, quit 02/2025 | TOB-2.2 | cap Std\nUS citizen residing in El Salvador | FN-1.1 | cap Std\nTOTAL | | +25\nCLASS | | DEC",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 8,
+   "fact_id": "C0490-F018",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Foreign questionnaire citizenship: US."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 28,
+   "fact_id": "C0490-F019",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 29,
+   "fact_id": null,
+   "detail": "not written: Blood pressure average 148/80 (paramed + APS readings in last 12 months); untreated - used"
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Atrial fibrillation -> a-fib"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 8,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 8,
+   "fact_id": null,
+   "detail": "Atrial fibrillation -> a-fib"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 18,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 18,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "urinalysis -> u/a"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Application -> app"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "decline -> DEC"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag k/o-d"
+  },
+  {
+   "kind": "fragment",
+   "step": 23,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "questionnaire -> Q"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 27,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  }
+ ]
+}

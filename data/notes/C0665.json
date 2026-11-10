@@ -1,0 +1,275 @@
+{
+ "case_id": "C0665",
+ "persona_id": "uw_02",
+ "observations": [
+  {
+   "at": "2026-02-20T12:30:00",
+   "text": "2026-02-20 Total coverage $1,600,000 (applied $1,500,000 + in force $100,000) vs justified $2,910,000 (30x income $97,000): 0.55x. Within limits. [FIN-1]\nOccupation construction laborer (class 3A): no rating. [OCC]\nAvocation skiing: not listed hazardous activity - no rating.\nPart 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in context). [GEN-2]\nFormer cigarette smoker, quit 02/2024 (2 years): NT ladder, best Standard Plus. => cap Standard Plus\nConcussion / TBI disclosed (dx 12/2018, tx none); evidence pending.\nProteinuria disclosed (dx 08/2020, tx none); evidence pending.\nPulmonary sarcoidosis disclosed (dx 12/2018, tx none); evideence pending.\nBRCA/Lynch positive (no cancer): profile 'no_surgery' (default - attributes not documented) per app/Rx only (no APS in file). => +50 | going with: order/obtain APS and hold\nPancreatitis disclosed (dx 11/2018, tx none); evidence pending.\nPancreatitis cap Preferred Plus | going with: order/obtain APS and hold\nNon-obstructive coronary artery disease disclosed (dx 05/2024, tx none); evidence pending.\nNon-obstructive coronary artery disease: severity not documented (application/Rx only (no APS in file)); APS-6 mildest ratable row 'nonobstructive' +25. => +25, cap STD | going w/: order/obtain APS and hold\nMusculoskeletal injury: low-impact condition on no-rating list - no impact.\nPart 2 answers reviewed: no impact. [GEN-2]"
+  },
+  {
+   "at": "2026-02-20T13:00:00",
+   "text": "2026-02-20 2 minor moving violations in 3 yrs: +0. [MVR-3]\nMeloxicam x3 (family medicine) consistent w/ Back pain / spine.\nBack pain / spine: profile'simple' (default - attributes not documented) per application/Rx only (no APS in file); 0 dbts (Elite unavailable: history of ratable impairment, CLS-5). [APS-6] => cap Preferred Plus | going with: ord/obtain APS and hold\nAcne: low-impact conndition on no-rating list - no impact. [MISC-1]"
+  },
+  {
+   "at": "2026-02-20T13:33:00",
+   "text": "2026-02-20 Order PM, B, U: REQ-1 grid.\nOrder APS from Dr. Jacob Ball (neurology): REQ-2.1 impairment may rate >= +50. [REQ-2.1]\nOrder APS from Dr. Gloria Stephens (nephrology): REQ-2.1 impairment may rate >= +50.\nord APS from Dr. Janice Williams (pulmonoloy): REQ-2.1 impairment may rate >= +50. [REQ-2.1]"
+  },
+  {
+   "at": "2026-03-05T19:57:00",
+   "text": "2026-03-05 Build 5'10.5\" 178 lb (measured), BMI 25.2: SPNT column (preferred matrix bld row: SPNT). [BLD-1.1]\nPulse/other exam items unremarkable: no impact. [GEN-5]"
+  },
+  {
+   "at": "2026-03-08T13:52:00",
+   "text": "2026-03-08 Lipids TC 246, HDL 37, ratio 6.6 - pref matrix row.\nCotinine negative (urine 7). [TOB-4.1]\nUrine protein 538: rated under renal/diabetes chapter (use the higher, not the sum).\nUrine RBC 8/hpf: repeat urinalysis advised; not ratable alone. [LAB-2]\nRemaining urine values within limits: NI. [LAB-2]"
+  },
+  {
+   "at": "2026-03-15T17:16:00",
+   "text": "2026-03-15 Pulmonary sarcoidosis: profile 'active' (default - attributes not documented) per APS. => +75"
+  },
+  {
+   "at": "2026-03-16T13:30:00",
+   "text": "2026-03-16 Proteinuria: urine protein 538 mg/dL (APS): +100. [REN-2]"
+  },
+  {
+   "at": "2026-03-19T15:30:00",
+   "text": "2026-03-19 Concussion / TBI: profile'residual' (residual True) per APS (chapter range 50-100). [NEU] => +50\nBlood pressure average 139/68 (paramed + APS readings last 12 months); untreated - used for preferred matrix (CLS-5). [BP-1]\nRoutine visit content (normal BP readings, exercise notes, legacy labs) reviewed: NI. [APS-1]"
+  },
+  {
+   "at": "2026-03-19T16:53:00",
+   "text": "2026-03-19 Rider ADB: declined - Table 11 exceeds rider max +200."
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[x] 9. riders\n[x] 10. amount: PEND-R\ndebits: +50 +25 +75 +100 +50 -> net +300\nriders: AD dcl",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "BRCA/Lynch positive (no cancer) rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'no_surgery'' -> stated Incomplete - holding for APS (golden Table 11 (+275%); stricter)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses BRCA/Lynch positive (no cancer) (dx 11/2019, tx none); evidence to follow"
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 13,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Pancreatitis cap Preferred Plus'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 16,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Back pain / spine (dx 06/2025, tx meloxicam); evidence to follow."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Family history: no parent/sibling CVD or cancer before 65 - preferred matrix FH row meets "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 23,
+   "fact_id": null,
+   "detail": "not written: hypothyroidism: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 24,
+   "fact_id": "C0665-F029",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 33,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "fragment",
+   "step": 6,
+   "fact_id": null,
+   "detail": "values not written: 2.0"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "non-tobacco -> NT"
+  },
+  {
+   "kind": "fragment",
+   "step": 7,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "fragment",
+   "step": 8,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "fragment",
+   "step": 9,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "typo",
+   "step": 9,
+   "fact_id": null,
+   "detail": "evidence -> evideence"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "fragment",
+   "step": 12,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "fragment",
+   "step": 14,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 15,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 20,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 21,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "debits -> dbts"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "typo",
+   "step": 24,
+   "fact_id": null,
+   "detail": "condition -> conndition"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "typo",
+   "step": 29,
+   "fact_id": null,
+   "detail": "pulmonology -> pulmonoloy"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 37,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 42,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 45,
+   "fact_id": null,
+   "detail": "Table 4 -> +200"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "ADB written as legacy/house code 'AD'"
+  }
+ ]
+}

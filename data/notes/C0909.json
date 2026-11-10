@@ -1,0 +1,365 @@
+{
+ "case_id": "C0909",
+ "persona_id": "uw_09",
+ "observations": [
+  {
+   "at": "2026-08-24T11:00:00",
+   "text": "2026-08-24 Total coverage $1,600,000 (applied $1,500,000 + in force $100,000) vs justified $2,980,000 (20x inccome $149,000): 0.54x. Within limits.\narchitect: class 1A. no rating. [OCC] zz\nreviewed part 1: flagged items relevant in context. NI. [GEN-2] nfz\npart 2: T1DM disclosed. dx 06/2019, tx insulin glargine, insulin lispro. [GEN-2] nbd\npart 2: HIV disclosed. dx 06/2024, tx darunavir-cobicistat."
+  },
+  {
+   "at": "2026-08-24T11:03:00",
+   "text": "2026-08-24 601427 (diabetes type 1; severe) matches DM1. [MIB-2]\nMIB 090246 (Old-format code (pre-2012) - general; mild / slight) reported 10.4 yrs ago / retired code - informational only. zz\nRx darunavir-cobicistat x9 (rheumatology) matches disclosed HIV. nbd\nosteopenia: vv-impact condition. no rating. [MISC-1] nfz\nacne: vv-impact condition. no rating. nbd\ncontraception: low-impact condition. no rating."
+  },
+  {
+   "at": "2026-08-24T12:18:00",
+   "text": "2026-08-24 ord pm, b, u. req-1 grid. [REQ-1]\nord avq. req-2.5 aviation/avocation disclosed. [REQ-2.5]\nord APS from Dr. Laura Marshall (rheumatology): REQ-2.1 impairment may rate >= +50. [REQ-2.1] KTA"
+  },
+  {
+   "at": "2026-09-05T21:37:00",
+   "text": "2026-09-05 build 5'2\", 179 lb, BMI 32.7. STD column (preferred: std). nfz\npulse/other exam items unremarkable. NI."
+  },
+  {
+   "at": "2026-09-07T11:14:00",
+   "text": "2026-09-07 Climbing to 21,457 ft: FE $7.5/1000 permanent; FE > $2.50 -> best S+ (AVO-1.4) [AVO] => cap std+, FE 7.5/perm"
+  },
+  {
+   "at": "2026-09-09T16:45:00",
+   "text": "2026-09-09 lipids: tc 260, hdl 39, ratio 6.7. preferred matrix row. [LIP-1] nbd\na1c 7.7. part of diabetes rating. [CMB-3]\nhiv pos - known. rated under imm above. [IMM-1] zz\ncigars 5/yr, nic neg. non-tobacco ladder. best pref. [TOB-3.1] => cap pref cap@Pref"
+  },
+  {
+   "at": "2026-10-04T13:05:00",
+   "text": "2026-10-04 IDDM: age 50, a1c 7.8 (avg): t2 grid +50 plus +50 (dm-3). [DM-3] => +100, cap STD cap@Std\naps serial a1c values: 7.8, 7.6, 7.4, 7.5. [GEN-6]"
+  },
+  {
+   "at": "2026-10-05T13:03:00",
+   "text": "2026-10-05 hiv profile 'insurable'. age 50, cd4 796, aids defining false, hep coinfection false. md referral. rate as shown. [IMM-1] => +100\nphysician documents non-compliance for hiv: +25 on that condition. [APS-4]\nBP average 127/76 (last 12 months). untreated. used for preferred matrix. nbd"
+  },
+  {
+   "at": "2026-10-05T13:57:00",
+   "text": "2026-10-05 rdr cia: declined. table 8 exceeds rider max +150.\nrdr xcr: declined. table 8 exceeds rdr max table 0. [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nType 1 diabetes | DM-3 | +100\nHIV | - | +100\nPhysician documents non-compliance | - | +25\nClimbing to 21,457 ft | AVO | cap SP\nCigars 5/yr, admitted, cotinine negative | TOB-3.1 | cap Pref\nType 1 diabetes | - | cap Std\nTOTAL | | +225\nFE | | FE 7.5/perm\nRIDERS | | CIA dcl, XCR dcl\nCLASS | | T8",
+ "stated_decision": "Table 8 (+200%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 4,
+   "fact_id": null,
+   "detail": "not written: Travel to Switzerland (Tier A) 2 wks/yr (vacation): no rating."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 6,
+   "fact_id": null,
+   "detail": "not written: Admits cigars (5/yr); ladder depends on frequency and cotinine."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Application denies hazardous activities; MIB/questionnaire shows otherwise - misrepresenta"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 13,
+   "fact_id": null,
+   "detail": "not written: Rx insulin glargine x40 (endocrinology), insulin lispro x40 (endocrinology) consistent wit"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 17,
+   "fact_id": "C0909-F023",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 20,
+   "fact_id": null,
+   "detail": "not written: Order APS from Dr. Nicholas Oconnor (endocrinology): REQ-2.1 impairment may rate >= +50."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 27,
+   "fact_id": null,
+   "detail": "not written: glucose fasting 164: evaluated with A1c (A1c 7.7) - no separate rating."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 29,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 31,
+   "fact_id": null,
+   "detail": "not written: Urine glucose positive: explained by diabetes."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 32,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "typo",
+   "step": 2,
+   "fact_id": null,
+   "detail": "income -> inccome"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "type 1 diabetes -> T1DM"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "type 1 diabetes -> DM1"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "standard -> STD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "standard -> std"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Standard Plus -> S+"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Standard Plus -> std+"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 28,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 30,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "tag cap@Pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 33,
+   "fact_id": null,
+   "detail": "type 1 diabetes -> IDDM"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 33,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "fragment",
+   "step": 35,
+   "fact_id": null,
+   "detail": "values not written: 2.1, 57"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 37,
+   "fact_id": null,
+   "detail": "blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 37,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 42,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 42,
+   "fact_id": null,
+   "detail": "table 2 -> +150"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 43,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 43,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  }
+ ]
+}

@@ -1,0 +1,321 @@
+{
+ "case_id": "C0254",
+ "persona_id": "uw_09",
+ "observations": [
+  {
+   "at": "2025-02-09T11:57:00",
+   "text": "2025-02-09 US citizen, US resident. [FN-1] zz\nOccupation attorney class 1A, no rating. [OCC] nbd\nQuit smoking 12/2004, 20.2 yrs, NS ladder best super pref.\nCAD, PCI/stent 03/2023. Evidence pending. [GEN-2] nbd\nCOPD diagnosed 01/2018. Evidence pending. [GEN-2]\nFH clear: no CVD or cancer before 65. Preferred FH row meets E-class. [FH-1]"
+  },
+  {
+   "at": "2025-02-09T12:52:00",
+   "text": "2025-02-09 MIB 506472 consistent w/ COPD. [MIB-2] nfz\nMIB 915337 not disclosed. APS needed to confirm. [MIB-4] zz ghost\nRx fills match CAD, PCI/stent. [RX-2.2] nfz\nRx umeclidinium-vilanterol x21 (pulmonology) consistent w/ disclosed COPD. nbd\nRx lamotrigine not disclosed; indicates Bipolar disorder. zz"
+  },
+  {
+   "at": "2025-02-09T13:20:00",
+   "text": "2025-02-09 ord PM, B, U. Next column. [REQ-3]\nord FINQ. [FIN-2]\nOrder APS Dr. Jones (cardiology). May rate >= +50. [REQ-2.1] KTA\nord APS Dr. Little (family medicine). App vs 3rd-party. [REQ-2.2] KTA\nOrdre APS Dr. Bradley (pulmonology). May rate >= +50. [REQ-2.1]"
+  },
+  {
+   "at": "2025-02-15T03:41:00",
+   "text": "2025-02-15 bld 5'2.5\" 158 lb, BMI 28.4. Pref Plus column. [BLD-1.1]\nPulse/exam unremarkable. No impact. [GEN-5] zz"
+  },
+  {
+   "at": "2025-02-17T14:20:00",
+   "text": "2025-02-17 Back pain, opioid/benzo profile. +75. [MSK]\nBipolar disorder, stable for 6.5 yrs. +75. [MH]"
+  },
+  {
+   "at": "2025-02-17T20:34:00",
+   "text": "2025-02-17 Lipids: TC 391, HDL 42, ratio 9.3. => +75\nOther blood values normal. NI.\nUrine values within limits. No impact. [LAB-2]"
+  },
+  {
+   "at": "2025-02-22T12:53:00",
+   "text": "2025-02-22 Coverage: $150,000 ($100,000 + $50,000) vs $360,000 (20x $18,000). 0.42x. Within limits. [FIN-1] zz"
+  },
+  {
+   "at": "2025-02-27T12:04:00",
+   "text": "2025-02-27 CAD, s/p PCI/stent: event at age 42, 1.9 yrs ago: grid +150 (CV-1); ldl 55, normal stress 12mo True -25; best std (APS). [CV-1] => +125, cap Standard"
+  },
+  {
+   "at": "2025-03-18T17:04:00",
+   "text": "2025-03-18 COPD, moderate smoker profile. +150.\nBlood pressure 123/89, untreated. Used for pref matrix. [BP-1]"
+  },
+  {
+   "at": "2025-03-18T17:09:00",
+   "text": "2025-03-18 Net db +500 > +425 - Decline. [CLS-8.1] => DCL k/o-d"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nBack pain / spine | - | +75\nBipolar disorder | MH | +75\nLipids TC 391, HDL 42, ratio 9.3 | LIP-3 | +75\nCoronary artery disease, s/p PCI/stent | CV-1 | +125\nCOPD | - | +150\nCoronary artery disease, s/p PCI/stent | CV-1 | cap Std\nTOTAL | | +475\nCLASS | | DEC",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: MIB 114466 (Angina / chest pain; severe / marked) - consistent with Coronary artery diseas"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: gout: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 27,
+   "fact_id": null,
+   "detail": "not written: Cotinine negative (urine 4)."
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +475, true +500"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 4,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "non-tobacco -> NS"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Coronary artery disease -> CAD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag ghost"
+  },
+  {
+   "kind": "fragment",
+   "step": 12,
+   "fact_id": null,
+   "detail": "values not written: 22, 23"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 13,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 14,
+   "fact_id": null,
+   "detail": "values not written: 40"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 15,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "typo",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Order -> Ordre"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 24,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 24,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "No impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 29,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Coronary artery disease -> CAD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "fragment",
+   "step": 31,
+   "fact_id": null,
+   "detail": "values not written: 1, 66"
+  },
+  {
+   "kind": "fragment",
+   "step": 32,
+   "fact_id": null,
+   "detail": "values not written: 12, 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 35,
+   "fact_id": null,
+   "detail": "debits -> db"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 35,
+   "fact_id": null,
+   "detail": "decline -> DCL"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 35,
+   "fact_id": null,
+   "detail": "tag k/o-d"
+  }
+ ]
+}

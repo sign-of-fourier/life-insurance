@@ -1,0 +1,241 @@
+{
+ "case_id": "C0270",
+ "persona_id": "uw_02",
+ "observations": [
+  {
+   "at": "2026-01-20T10:16:00",
+   "text": "2026-01-20 Total coverage $100,000 (applied $100,000 + in force $0) vs justified $540,000 (30x income $18,000): 0.19x. Within limits. [FIN-1]\nWarehouse supervisor (class 2A): no rating.\nFrance travel 1 week/yr (vacation): no rating. zz\nPrior Atlas Assurance app: issued Preferred - informational; current evidence governs [GEN-1].\nPart 1 answers reviewed: no impact (2 items flagged relevant reviewed in context) [GEN-2].\nDenies all tobacco/nicotine use.\nHypertension (dx 09/2023, tx lisinopril) disclosed in Part 2; evidence to follow.\nFHx: mother MI dx 79 - preferred matrix FH row meets E-class.\nRemaining Part 2 answers reviewed: NI."
+  },
+  {
+   "at": "2026-01-20T10:50:00",
+   "text": "2026-01-20 Rx lisinopril x10 consistent with Hypertension [RX-2.2].\nRx phenytoin x4 consistent with Epilepsy / seizure disorder [RX-2.2].\nAcute/low-impact fills: NI.\nMIB 050076 (tobacco/nicotine alert): not corrobborated by nic or Rx - alert only.\nMIB 306465 (Single seizure; severe / marked) consistent with Epilepsy / seizure disorder [MIB-2].\nMIB 815317 (Benign tumor; moderate) - condition not disclosed; APS needed to corroborate. nfz\nMIB 180757 (Lipid disorder) reported 10.8 yrs ago / retired code - informational [MIB-3].\n2 minor moving violations in 3 yrs: +0 [MVR-3]."
+  },
+  {
+   "at": "2026-01-20T13:35:00",
+   "text": "2026-01-20 Order PM, B, U: REQ-3 accel fails (Part 2 yes, high-impact Rx, MIB code) -> next column [REQ-3].\nOrder APS from Dr. Kyle Fox (family medicine): REQ-2.1 impairment may rate >= +50.\nOrder APS from Dr. Rachel Colon (neurology): REQ-2.1 impairment may rate >= +50."
+  },
+  {
+   "at": "2026-02-03T23:38:00",
+   "text": "2026-02-03 bld 5'5\" 183 lb, BMI 30.4: Std Plus column (preferred matrix build row: SP).\nPulse/other exam items unremarkable: no impact (1 item flagged relevant reviewed in context) [GEN-5]."
+  },
+  {
+   "at": "2026-02-06T18:15:00",
+   "text": "2026-02-06 Lipids TC 375, HDL 44, ratio 8.5: +50 (worse of TC and ratio rows).\nnic negative (urine 7). zz\nUrine RBC 8/hpf: repeat urinalysis advised; not ratable alone."
+  },
+  {
+   "at": "2026-02-13T14:15:00",
+   "text": "2026-02-13 Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: NI."
+  },
+  {
+   "at": "2026-02-19T14:18:00",
+   "text": "2026-02-19 Hypertension: treated with 1 agent(s) (lisinopril), avg BP 163/98: +75 (HTN-1); best PP (HTN-5) [HTN-1] => +75, cap PP\nConcussion / TBI: profile'residual' (residual True) per APS (chapter range 50-100) [NEU] => +50\nEpilepsy / seizure disorder: profile 'uncontrolled' (seizures per year 5) per APS (chapter range 100-decl) => +100\nColon polyp (adenoma), high-grade dysplasia: profile 'hgd_polyp' (high grade dysplasia True) per APS => +25\nRoutine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impact."
+  },
+  {
+   "at": "2026-02-19T15:53:00",
+   "text": "2026-02-19 rdr ADB declined - Table 11 exceeds rdr max +200 [RID-2].\nRider CIA declined - Table 11 exceeds rider max +150 [RID-2]."
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[ ] 9. riders:\n[x] 10. amount: T12\ndebits: +50 +75 +50 +100 +25 -> net +325\nriders: ADB dcl, CIA dcl",
+ "stated_decision": "Table 12 (+300%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 2,
+   "fact_id": "C0270-F002",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Concussion / TBI (dx 05/2020, tx none); evidence to follow."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Epilepsy / seizure disorder (dx 07/2025, tx phenytoin); evidence to follo"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 19,
+   "fact_id": null,
+   "detail": "not written: MIB 010900 (Prior application - life; degree not reported): insurance-activity code - info"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: 1 MVR item(s) non-moving, not-at-fault, or outside lookback - ignored."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 29,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 32,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 36,
+   "fact_id": "C0270-F062",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +325, true +300"
+  },
+  {
+   "kind": "wrong_final",
+   "step": null,
+   "fact_id": null,
+   "detail": "class carried from wrong total -> Table 12 (+300%) (golden Table 11 (+275%))"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 5,
+   "fact_id": null,
+   "detail": "values not written: 2020"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Family history -> FHx"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "cotinine -> nic"
+  },
+  {
+   "kind": "typo",
+   "step": 16,
+   "fact_id": null,
+   "detail": "corroborated -> corrobborated"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Standard Plus -> SP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 36,
+   "fact_id": null,
+   "detail": "decline -> decl"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 42,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 42,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 42,
+   "fact_id": null,
+   "detail": "Table 4 -> +200"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 43,
+   "fact_id": null,
+   "detail": "Table 2 -> +150"
+  }
+ ]
+}

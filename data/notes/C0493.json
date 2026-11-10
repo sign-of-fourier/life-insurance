@@ -1,0 +1,253 @@
+{
+ "case_id": "C0493",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-04-19T10:35:00",
+   "text": "4/19 1035 Total coverage $250,000 (applied $250,000 + in force $0) vs justified $280,000 (age 71+: 50% of net worth $560,000): 0.89x. Within limits. [FIN-1]\nReviewed Part 1: no impact, 2 items flagged\nTobacco use denied; 5-year window [TOB-1] zz\nMethamphetamine use disorder disclosed; dx 06/2016 [GEN-2]\nPart 2 reviewed: NI [GEN-2]"
+  },
+  {
+   "at": "2026-04-19T11:14:00",
+   "text": "4/19 1114 Methadone fills match methamphetamine disorder [RX-2.2] nbd\nAcute fills: NI nbd\nMIB 427332 reported 8.2 yrs ago [MIB-3] nbd\n1 MVR item ignored: non-moving/outside lookback [MVR-1] zz\nMinor moving violation: +0 nfz"
+  },
+  {
+   "at": "2026-04-19T11:35:00",
+   "text": "4/19 1135 ord PM, B, U, COG [REQ-1]\nord FORQ for foreign travel [REQ-2.6]\nOrder APS from Dr. Melissa Dixon; REQ-2.1 impairment >= +50. [REQ-2.1] KTA\nOrder APS from Dr. Samantha Sanders [REQ-1]"
+  },
+  {
+   "at": "2026-04-25T09:16:00",
+   "text": "4/25 0916 Travel to Bangladesh; 14 wks/yr (family); FE $5/1000, max face $1,000,000. [TRV] => FE 5/perm\nCitizenship: US [FN-1]\nVisa: n/a [FN-1]\nyrs in US: n/a\nResidence: US"
+  },
+  {
+   "at": "2026-04-29T03:44:00",
+   "text": "4/29 0344 bld 5'4/160 lb: Elite column [BLD-1.1] nbd"
+  },
+  {
+   "at": "2026-05-01T19:45:00",
+   "text": "5/1 1945 Blood values within limits [LAB-2] nbd\nnic+ neg\nUrine values within limits [LAB-2]"
+  },
+  {
+   "at": "2026-05-26T15:42:00",
+   "text": "5/26 1542 Methamphetamine: 6.6 yrs abstinent: +50 [DRG-2]"
+  },
+  {
+   "at": "2026-05-26T15:56:00",
+   "text": "5/26 1556 rdr GIO declined: age 71 [RID-2]\nRider WP declined: age 71 [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nMethamphetamine use disorder | DRG-2 | +50\nTOTAL | | +50\nFE | | FE 5/perm\nRIDERS | | G-opt dcl, WP dcl\nCLASS | | T1",
+ "stated_decision": "Table 1 (+25%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Occupation retired (class 1A): no rating."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 8,
+   "fact_id": "C0493-F016",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: MIB 816715 (Breast mass / biopsy; under investigation / unconfirmed): not disclosed, no co"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Lipids TC 270, HDL 39, ratio 6.9 - preferred matrix row."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 28,
+   "fact_id": "C0493-F047",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 30,
+   "fact_id": null,
+   "detail": "not written: Blood pressure average 122/74 (paramed + APS readings in last 12 months); untreated - used"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 31,
+   "fact_id": null,
+   "detail": "not written: Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impac"
+  },
+  {
+   "kind": "fragment",
+   "step": 5,
+   "fact_id": null,
+   "detail": "values not written: 2019"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "fragment",
+   "step": 8,
+   "fact_id": null,
+   "detail": "values not written: 40"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 13,
+   "fact_id": null,
+   "detail": "values not written: 1, 3"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Years -> yrs"
+  },
+  {
+   "kind": "fragment",
+   "step": 23,
+   "fact_id": null,
+   "detail": "values not written: 1.8, 27.5, 70"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 27,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 27,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "fragment",
+   "step": 35,
+   "fact_id": null,
+   "detail": "values not written: 18, 40"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 35,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "fragment",
+   "step": 36,
+   "fact_id": null,
+   "detail": "values not written: 18, 55"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "GIO written as legacy/house code 'G-opt'"
+  }
+ ]
+}

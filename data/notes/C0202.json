@@ -1,0 +1,163 @@
+{
+ "case_id": "C0202",
+ "persona_id": "uw_02",
+ "observations": [
+  {
+   "at": "2025-01-29T09:36:00",
+   "text": "2025-01-29 US citizen, US resident - eligible. [FN-1]\nOccupation insurance underwriter (class 1A): no rating.\nTravel to Belgium (Tier A) 2 wks/yr (vacation): no rating. [TRV]\nPart 1 answers reviewed: no impact. [GEN-2]\nQuit smoking 06/2024 (0.6 yrs) - within 12 months: tobacco laddder. => cap std, tobacco ladder\nPart 2 discloses Asthma (dx 04/2023, tx albuterol); evidence to follow. [GEN-2]\nPart 2 answers reviewed: NI."
+  },
+  {
+   "at": "2025-01-29T10:11:00",
+   "text": "2025-01-29 Rx albuterol x20 (pulmonology) consistent with disclosed Asthma.\nRosacea: low-impact condition on the no-rating list - NI. [MISC-1]\n2 minor moving violation(s) in 3 yrs: +0."
+  },
+  {
+   "at": "2025-01-29T11:21:00",
+   "text": "2025-01-29 Order physical exam, u/a: REQ-1 grid. [REQ-1]\nord financial inquiry: FIN-2 over limit / KPE. [FIN-2]\nOrder physician statement from Dr. Drew Fleming (pulmonology): REQ-2.1 impairment may rate >= +50. [REQ-2.1]"
+  },
+  {
+   "at": "2025-02-04T02:10:00",
+   "text": "2025-02-04 Build 5'2/176 lands Standard column (preferred matrix bld row: Standard). [BLD-1.1]"
+  },
+  {
+   "at": "2025-02-07T20:48:00",
+   "text": "2025-02-07 Cotinine pos (saliva 101) - consistent with admitted use.\nSaliva panel otherwise neg: no impact. [LAB-2]"
+  },
+  {
+   "at": "2025-02-11T12:17:00",
+   "text": "2025-02-11 Asthma: profile'severe' (er years ago 0.3) per APS (chapter range 50-100). [RSP] => +50\nBlood pressure average 117/67 (PM + APS readings in last 12 months); untreated - used for preferred matrix (CLS-5). [BP-1]"
+  },
+  {
+   "at": "2025-02-12T10:13:00",
+   "text": "2025-02-12 Total coverage $225,000 (applied $150,000 + in force $75,000) vs justified $375,000 (15x income $25,000): 0.60x. Within limits."
+  },
+  {
+   "at": "2025-02-12T12:53:00",
+   "text": "2025-02-12 Credit -10: BP 117/67 <= 125/80 untreated. [CLS-6.2] => -10 -15 cr\nRider KPE: approved."
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[x] 9. riders\n[x] 10. amount: ST\ndebits: +50  -10 -> net +40\nriders: KPE ok",
+ "stated_decision": "Standard Tobacco",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 7,
+   "fact_id": null,
+   "detail": "not written: Family history: no parent/sibling CVD or cancer before 65 - preferred matrix FH row meets "
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 9,
+   "fact_id": "C0202-F017",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 10,
+   "fact_id": "C0202-F018",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "wrong_final",
+   "step": null,
+   "fact_id": null,
+   "detail": "persona slip: picked the adjacent class/table: stated Standard Tobacco (golden Table Tobacco 1 (+25%))"
+  },
+  {
+   "kind": "fragment",
+   "step": 4,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "typo",
+   "step": 5,
+   "fact_id": null,
+   "detail": "ladder -> laddder"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 8,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "urinalysis -> u/a"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 16,
+   "fact_id": null,
+   "detail": "values not written: 32.2"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 18,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 19,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "credit -> -15 cr"
+  }
+ ]
+}

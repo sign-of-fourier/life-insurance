@@ -1,0 +1,293 @@
+{
+ "case_id": "C0354",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-10-19T11:58:00",
+   "text": "10/19 1158 US citizen, US resident. Eligible. [FN-1] nfz\nRetail store manager (class 1A): no rating. zz\nRecreational boating: not hazardous. No rating. zz\nPrior 2020 Northstar Life: issued Standard. Info. nfz\nPart 1 reviewed. No impact (flagged).\nEx-smoker, quit 02/2016 (9.7 yrs). N/T ladder, PP. [TOB-2.3] cap@PP\nAdrenal insufficiency, dx 07/2011, tx hydrocortisone. Evidence pending. [GEN-2] nbd\nFamily history waived at 70+. [FH-4]\nPart 2 reviewed. No impact. nbd"
+  },
+  {
+   "at": "2025-10-19T12:19:00",
+   "text": "10/19 1219 MIB 621362 (Pituitry disorder) matches Adrenal insufficiency.\nMIB 010000 (Prior app - life; unspecified): insurance-activity code - informational. [MIB-6]\n1 MVR item non-moving, ignored.\n2 minor moving violations: +0. [MVR-3] nbd\nHydrocortisone fills match Adrenal insufficiency. [RX-2.2]"
+  },
+  {
+   "at": "2025-10-19T12:29:00",
+   "text": "10/19 1229 ord PM, B, U, EKG, COG, FINQ: REQ-1 grid.\nord APS from Dr. Ashley Young (endo). REQ-2.1 may rate +50. [REQ-2.1]\nord APS from Dr. Laura Taylor (FM): REQ-1 grid. [REQ-1]"
+  },
+  {
+   "at": "2025-11-02T12:31:00",
+   "text": "11/2 1231 Total coverage $2,000,000 (applied $2,000,000 + in force $0) vs justified $3,024,000 (age 71+: 50% of net worth $6,048,000): 0.66x. Within limits. [FIN-1]"
+  },
+  {
+   "at": "2025-11-03T05:02:00",
+   "text": "11/3 0502 bld 6'1.5\" 161 lb: SPNT column. [BLD-1.1] zz"
+  },
+  {
+   "at": "2025-11-05T10:25:00",
+   "text": "11/5 1025 Non-compliance with Adrenal insufficiency / pituitary adenoma: +25. [APS-4]"
+  },
+  {
+   "at": "2025-11-06T21:22:00",
+   "text": "11/6 2122 nic+ neg. [TOB-4.1] nfz\nUrine values within limits. NI. [LAB-2]"
+  },
+  {
+   "at": "2025-11-10T15:07:00",
+   "text": "11/10 1507 Adrenal insufficiency +50\nBP 126/82. Used for pref matrix. [BP-1] zz"
+  },
+  {
+   "at": "2025-11-10T15:32:00",
+   "text": "11/10 1532 rdr CIA: approved. [RID-1]\nrdr CTR: declined. Age 72 outside 18-55. [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nPhysician documents non-compliance | APS-4 | +25\nAdrenal insufficiency | END | +50\nFormer cigarette, quit 02/2016 | - | cap PP\nTOTAL | | +75\nRIDERS | | CHR ok, KR dcl\nCLASS | | T2",
+ "stated_decision": "Table 2 (+50%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: EKG normal: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Lipids TC 280, HDL 42, ratio 6.7 - preferred matrix row."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 28,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Adrenal insufficiency +50'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 29,
+   "fact_id": null,
+   "detail": "not written: hypothyroidism: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 5,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Non-tobacco -> N/T"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "typo",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Pituitary -> Pituitry"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 14,
+   "fact_id": null,
+   "detail": "values not written: 40"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 20,
+   "fact_id": null,
+   "detail": "values not written: 21.0"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 26,
+   "fact_id": null,
+   "detail": "values not written: 7"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "No impact -> NI"
+  },
+  {
+   "kind": "fragment",
+   "step": 30,
+   "fact_id": null,
+   "detail": "values not written: 12, 5"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "CIA written as legacy/house code 'CHR'"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "CTR written as legacy/house code 'KR'"
+  }
+ ]
+}

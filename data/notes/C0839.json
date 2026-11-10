@@ -1,0 +1,203 @@
+{
+ "case_id": "C0839",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2025-11-12T11:57:00",
+   "text": "11/12 1157 US citizen, US resident - eligible. [FN-1]\nTotal coverage $350,000 (applied $250,000 + in force $100,000) vs justified $780,000 (20x income $39,000): 0.45x. Within limits. [FIN-1] zz\nNo tobacco/nicotine use on APP-2019 form: 5-year question window. [TOB-1] nfz\nPancreatitis disclosed in Part 2 (diagnosed 03/2023, no Tx); evidence pending. [GEN-2] zz\nNo impact from reviewed Part 2 answers. [GEN-2]"
+  },
+  {
+   "at": "2025-11-12T12:26:00",
+   "text": "11/12 1226 MIB 050076 (tobacco/nicotine alert): not corroborated by nic+ or Rx - alert only. [MIB-6]\n1 minor moving violation(s) in 3 yrs: +0. [MVR-3] nbd\nSeasonal allergy - low-impact, no rating - no impact. [MISC-1] zz"
+  },
+  {
+   "at": "2025-11-12T12:35:00",
+   "text": "11/12 1235 ord physical exam, blood work, u/a: REQ-3 acceleration failures (Part 2 yes) - next column.\nord additional physician statement from Dr. Shannon Gutierrez (gastroenterology): REQ-2.1 impairment may rate >= +50. [REQ-2.1] KTA"
+  },
+  {
+   "at": "2025-11-29T22:48:00",
+   "text": "11/29 2248 Lipids TC 250, HDL 37, ratio 6.8 - fits preferred matrix row. zz\nOther blood values within normal limits: NI. [LAB-2]"
+  },
+  {
+   "at": "2025-12-20T15:58:00",
+   "text": "12/20 1558 Pancreatitis attributed to alcohol // APS. [GI] => +50\nBlood pressure average 125/76 (para + APS readings last 12 mos); untreated - used in pref matrix."
+  },
+  {
+   "at": "2025-12-20T16:37:00",
+   "text": "12/20 1637 Credit -10: BP 125/76 <= 125/80 untreated. [CLS-6.2] => -10 credit\nRider CTR: approved. [RID-1]\nrdr XCR: declined - Table 1 exceeds rdr maximum in Table 0. [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nPancreatitis | GI | +50\nCredit -10 | CLS-6.2 |  -10\nTOTAL | | +65\nRIDERS | | CTR ok, XCR dcl\nCLASS | | T2",
+ "stated_decision": "Table 2 (+50%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Occupation hair stylist (class 2A): no rating."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 4,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 10,
+   "fact_id": "C0839-F015",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 13,
+   "fact_id": null,
+   "detail": "not written: Build 5'10\" 224 lb (measured), BMI 32.1: Standard column (preferred matrix build row: Stan"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Cotinine negative (urine 45)."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +65, true +40"
+  },
+  {
+   "kind": "wrong_final",
+   "step": null,
+   "fact_id": null,
+   "detail": "class carried from wrong total -> Table 2 (+50%) (golden Table 1 (+25%))"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 6,
+   "fact_id": null,
+   "detail": "treatment -> Tx"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 8,
+   "fact_id": null,
+   "detail": "cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "urinalysis -> u/a"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "paramed -> para"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 20,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  }
+ ]
+}

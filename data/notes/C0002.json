@@ -1,0 +1,273 @@
+{
+ "case_id": "C0002",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-07-21T10:45:00",
+   "text": "7/21 1045 US citizen, US resident - eligible.\nTotal coverage $100,000 (applied $100,000 + in force $0) vs justified $112,000 (age 71+: 50% of net worth $224,000): 0.89x. Within limits. [FIN-1]\nRetired occupation: no rating [OCC]. nbd\nPart 1 reviewed, flagged items in context: no impact.\nNo tobacco/nicotine use denied: 5-year window [TOB-1]. nfz\nProstate adenocarcinoma, high grade disclosed [GEN-2].\nFH waived at 70+. zz"
+  },
+  {
+   "at": "2026-07-21T11:09:00",
+   "text": "7/21 1109 MIB 805216 consistent w/ Prostate adenocarcinoma [MIB-2]. nbd\nMIB 190970 (cardiovascular) reported 16.6 yrs ago. [MIB-3] nfz\nRx leuprolide x18 (oncology) consistent w/ disclosed Prostate adenocarcinoma, high grade.\nAcute/vv-impact fills: no impact [RX-2.1].\nMVR items ignored: non-moving/not-at-fault [MVR-1]. zz"
+  },
+  {
+   "at": "2026-07-21T14:05:00",
+   "text": "7/21 1405 ord PM, B, U, COG from REQ-1 [REQ-1].\nord APS from Dr. Sue Acevedo: confirm cap [REQ-2.1].\nord APS from Dr. Sabrina Marshall [REQ-1]. KTA"
+  },
+  {
+   "at": "2026-07-30T22:11:00",
+   "text": "7/30 2211 bld 5'1\"/94 lb, BMI 17.8: underweight +25 [BLD-1].\nExam unremarkable: NI [GEN-5]. nfz"
+  },
+  {
+   "at": "2026-08-03T17:17:00",
+   "text": "8/3 1717 Lipids: HDL < 30, ratio 6.1 +15.\nNT-proBNP 310 within normal [LAB-2]. nbd\nnic+ neg [TOB-4.1].\nOther urnie values within limits: NI [LAB-2]."
+  },
+  {
+   "at": "2026-08-27T11:18:00",
+   "text": "8/27 1118 Prostate adenocarcinoma: prostate ge8, 3.6 yrs since tx. FE $15/1000 x 5 yrs; best Standard. => cap Standard, FE 15/5 cap@Std\nBP average 117/86; untreated - pref matrix [BP-1]. nbd"
+  },
+  {
+   "at": "2026-08-27T14:22:00",
+   "text": "8/27 1422 Rider CIA declined: issue age 76 [RID-2].\nRider OIR approved [RID-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nBuild 5'1\" 94 lb | BLD-1 | +25\nLipids TC 177, HDL 29, ratio 6.1 | LIP-4 | +15\nProstate adenocarcinoma, high grade | - | cap Std\nTOTAL | | +40\nFE | | FE 15/5\nRIDERS | | CHR dcl, OIR ok\nCLASS | | T1",
+ "stated_decision": "Table 1 (+25%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 13,
+   "fact_id": "C0002-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 20,
+   "fact_id": null,
+   "detail": "not written: PSA 5.2: known prostate cancer - rated there."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 4,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "fragment",
+   "step": 5,
+   "fact_id": null,
+   "detail": "values not written: 2019"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 6,
+   "fact_id": null,
+   "detail": "values not written: 1, 2022"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Family history -> FH"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 9,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 11,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 19,
+   "fact_id": null,
+   "detail": "values not written: 177, 29"
+  },
+  {
+   "kind": "fragment",
+   "step": 21,
+   "fact_id": null,
+   "detail": "values not written: 450, 76"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 23,
+   "fact_id": null,
+   "detail": "values not written: 6"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 23,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "typo",
+   "step": 24,
+   "fact_id": null,
+   "detail": "urine -> urnie"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "fragment",
+   "step": 26,
+   "fact_id": null,
+   "detail": "values not written: 12, 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 30,
+   "fact_id": null,
+   "detail": "values not written: 18, 75"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "CIA written as legacy/house code 'CHR'"
+  }
+ ]
+}

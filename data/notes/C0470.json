@@ -1,0 +1,231 @@
+{
+ "case_id": "C0470",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-06-12T10:02:00",
+   "text": "6/12 1002 US citizen, US resident. [FN-1] nbd\nTotal coverage $600,000 (applied $500,000 + in force $100,000) vs justified $3,000,000 (non-working spouse: up to $3M (spouse in-force)): 0.20x. Within limits. [FIN-1.1]\nOccupation homemaker: no rating. [OCC] nbd\nPrior Northstar Life declined. [GEN-1]\nNo tobacco/nicotine use. [TOB-1] zz\nSLE disclosed, evidence pending. [GEN-2]\nPart 2 reviewed: no impact. [GEN-2]"
+  },
+  {
+   "at": "2025-06-12T11:02:00",
+   "text": "6/12 1102 Acute/low-impact fills: no impact. [RX-2.1] nfz\nMIB 010979 (Prior app - life; degree not reported): insurance-activity code - informational.\n1 MVR item ignored. [MVR-1]\n1 minor moving violation: +0. [MVR-3] nbd"
+  },
+  {
+   "at": "2025-06-12T12:53:00",
+   "text": "6/12 1253 Order PM, B, U. [REQ-1]\nord AVOQ. [REQ-2.5]\nord APS from Dr. Douglas (rheumatology): REQ-2.1 impairment >= +50. [REQ-2.1]"
+  },
+  {
+   "at": "2025-06-17T09:31:00",
+   "text": "6/17 0931 Private pilot, aerobatics, 1851 hrs: FE $7.5/1000 permanent; best Standard Plus (AVI-1.2/AVO-1.4) [AVI-1] => cap Standard Plus, FE 7.5/perm cap@SP"
+  },
+  {
+   "at": "2025-06-26T20:56:00",
+   "text": "6/26 2056 bld 5'1/151 lb: Preferred column. [BLD-1.1]\nPulse unremarkable: no impact. nfz"
+  },
+  {
+   "at": "2025-06-28T15:41:00",
+   "text": "6/28 1541 Lipids: TC 132, HDL 23, ratio 5.7 +15\nnic+ neg."
+  },
+  {
+   "at": "2025-07-14T18:11:00",
+   "text": "7/14 1811 SLE profile 'systemic': +50. [IMM-2]\nBP 126/89: used for pref matrix. nbd"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nLipids TC 132, HDL 23, ratio 5.7 | LIP-4 | +15\nSystemic lupus erythematosus | IMM-2 | +50\nPrivate pilot, aerobatics, 1851 hrs | AVI-1 | cap SP\nTOTAL | | +65\nFE | | FE 7.5/perm\nCLASS | | T2",
+ "stated_decision": "Table 2 (+50%)",
+ "corruptions": [
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 1,
+   "fact_id": "C0470-F008",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 5,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Rx hydroxychloroquine x21 (rheumatology) consistent with disclosed Systemic lupus erythema"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: vitamin D deficiency: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 19,
+   "fact_id": "C0470-F025",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 21,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Lipids TC 132, HDL 23, ratio 5.7 +15'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 4,
+   "fact_id": null,
+   "detail": "values not written: 2023"
+  },
+  {
+   "kind": "fragment",
+   "step": 6,
+   "fact_id": null,
+   "detail": "values not written: 2019, 5"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 7,
+   "fact_id": null,
+   "detail": "values not written: 2020, 3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag cap@SP"
+  },
+  {
+   "kind": "fragment",
+   "step": 19,
+   "fact_id": null,
+   "detail": "values not written: 28.5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 23,
+   "fact_id": null,
+   "detail": "values not written: 4"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 23,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "fragment",
+   "step": 26,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag nbd"
+  }
+ ]
+}

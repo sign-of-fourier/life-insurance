@@ -1,0 +1,135 @@
+{
+ "case_id": "C0025",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2025-10-04T12:43:00",
+   "text": "10/4 1243 US citizen, US resident - eligible. [FN-1]\nOccupation electrician (class 3A): no rating. [OCC]\nAvocation hunting: not listed as hazardous - no rating. [AVO-1.1]\nReviewed Part 1 answers: 5 items flagged relevant but NI. [GEN-2]\nDenies all tobacco/nicotine use. [TOB-1]\nMarijuana use 17x/week: +25, best Standard. [DRG-3] => +25, cap Standard"
+  },
+  {
+   "at": "2025-10-04T13:02:00",
+   "text": "10/4 1302 MIB code 890023 (old-format neoplasm; unspecified) reported 12.2 yrs ago / retired code - informational. [MIB-3]\nOsteopenia: low-impact condition on no-rating list - no impact. [MISC-1]\nAcute/low-impact fills: no impact. [RX-2.1]\n2 minor moving violations in 3 yrs: +0 [MVR-3]"
+  },
+  {
+   "at": "2025-10-04T13:07:00",
+   "text": "10/4 1307 ord PM, B, U: REQ-1 grid. [REQ-1]\nOrder FINQ: FIN-2 over limit / KPE. [FIN-2]"
+  },
+  {
+   "at": "2025-10-15T01:50:00",
+   "text": "10/15 0150 Build 6'1\" 244 lb (measured), BMI 32.2: STD column. [BLD-1.1] zz\nBlood pressure average 141/83 (PM); untreated - used for preferred matrix.\nPulse/other exam items unremarkable: NI."
+  },
+  {
+   "at": "2025-10-19T12:43:00",
+   "text": "10/19 1243 Total coverage $750,000 (applied $500,000 + in force $250,000) vs justified $855,000 (15x income $57,000): 0.88x. Within limits. [FIN-1]"
+  },
+  {
+   "at": "2025-10-19T19:02:00",
+   "text": "10/19 1902 Lipids TC 242, HDL 35, ratio 6.9 - pref matrix row. [LIP-1]\nRemaining blood values within UW normal limits: NI. [LAB-2]\nnic+ neg (urine 1). [TOB-4.1]\nRemaining urine values within limits: no impact. [LAB-2]"
+  },
+  {
+   "at": "2025-10-19T20:32:00",
+   "text": "10/19 2032 Rider KPE: approved. [RID-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nMarijuana 17x/week | DRG-3 | +25\nMarijuana 17x/week | DRG-3 | cap Std\nTOTAL | | +25\nRIDERS | | KPE ok\nCLASS | | Std",
+ "stated_decision": "Standard",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 6,
+   "fact_id": null,
+   "detail": "not written: Family history: no parent/sibling CVD or cancer before 65 - preferred matrix FH row meets "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 18,
+   "fact_id": "C0025-F052",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: Urine RBC 8/hpf: repeat urinalysis advised; not ratable alone."
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 12,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 21,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  }
+ ]
+}

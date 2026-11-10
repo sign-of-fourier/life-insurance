@@ -1,0 +1,219 @@
+{
+ "case_id": "C0497",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-03-08T10:45:00",
+   "text": "3/8 1045 US citizen, US resident - eligible. [FN-1]\nTotal coverage $450,000 ($300,000 + $150,000) vs justified $500,000 (20x income $25,000): 0.90x. Within limits. [FIN-1] zz\nOccupation architect (class 1A): no rating. [OCC]\nIreland travel 2 wks/yr (vacation): no rating. [TRV]\nPart 1 review: 2 items flagged relevant. [GEN-2] nbd\nPrediabetes / impaired fasting glucose dx 11/2007, tx metformin. [GEN-2] nfz\nMother breast cancer d.50; fahter stroke d.51 - meets Standard Plus. [FH-1] zz\nMarijuana 5x/week: +0; best S+. => cap Standard Plus"
+  },
+  {
+   "at": "2026-03-08T13:49:00",
+   "text": "3/8 1349 MIB 605212: elevated glucose/prediabetes; consistent. [MIB-2] nbd\nMetformin x29 fillls: consistent w/ Prediabetes. nbd\nErectile dysfunction: low-impact - NI."
+  },
+  {
+   "at": "2026-03-08T14:02:00",
+   "text": "3/8 1402 ord PM, B, U: grid REQ-1. [REQ-1]\nOrder AVOQ: aviation disclosed. [REQ-2.5]\nord APS from Dr. Leonard: confirm control/class. [REQ-2.1]"
+  },
+  {
+   "at": "2026-03-16T12:23:00",
+   "text": "3/16 1223 Scuba 102 ft, 25 dives/yr: FE $2.5/1000 permanent [AVO] => FE 2.5/perm"
+  },
+  {
+   "at": "2026-03-19T18:57:00",
+   "text": "3/19 1857 A1c 5.9: part of diabetes rating. nbd\nRemaining blood values within UW limits. [LAB-2]\ncot neg (urine 2).\nRemaining urine values within limits."
+  },
+  {
+   "at": "2026-04-13T15:31:00",
+   "text": "4/13 1531 Prediabetes profile 'high' (a1c avg 6.3): cap Standard Plus. cap@SP\nNon-compliance w/ Prediabetes meds/follow-ups: +25 on that.\nBP 138/87 avg; untreated - used for pref matrix. nbd\nAPS serial a1c values: 6.2, 6.1, 6.6, 6.6. [GEN-6]"
+  },
+  {
+   "at": "2026-04-13T15:49:00",
+   "text": "4/13 1549 rdr CTR: approved. [RID-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nPhysician documents non-compliance | - | +25\nMarijuana 5x/week | DRG-3 | cap SP\nPrediabetes / impaired fasting glucose | DM-1 | cap SP\nTOTAL | | +25\nFE | | FE 2.5/perm\nRIDERS | | CTR ok\nCLASS | | Std",
+ "stated_decision": "Standard",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 6,
+   "fact_id": null,
+   "detail": "not written: Denies all tobacco/nicotine use."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 12,
+   "fact_id": "C0497-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Build 5'6\" 184 lb (measured), BMI 29.7: Preferred column (preferred matrix build row: Pref"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 20,
+   "fact_id": null,
+   "detail": "not written: Lipids TC 291, HDL 46, ratio 6.3 - preferred matrix row."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: glucose fasting 124: evaluated with A1c (A1c 5.9) - no separate rating."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 23,
+   "fact_id": "C0497-F045",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "typo",
+   "step": 8,
+   "fact_id": null,
+   "detail": "father -> fahter"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "Standard Plus -> S+"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 12,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "typo",
+   "step": 12,
+   "fact_id": null,
+   "detail": "fills -> fillls"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Cotinine -> cot"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 24,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag cap@SP"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 27,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "fragment",
+   "step": 28,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

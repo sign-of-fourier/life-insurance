@@ -1,0 +1,225 @@
+{
+ "case_id": "C0179",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-07-14T10:26:00",
+   "text": "7/14 1026 US citizen, US resident - eligible. [FN-1]\nOccupation unemployed (class 1A): no rating. [OCC] nfz\nRemaining Part 1 answers reviewed: no impact. [GEN-2]\nDenies tobacco/nicotine use. [TOB-1] zz\nFHx waived at age 70+. [FH-4]\nRemaining Part 2 answers reviewed: no impact. [GEN-2]"
+  },
+  {
+   "at": "2026-07-14T12:35:00",
+   "text": "7/14 1235 MIB 050076 (tobacco/nicotine alert): corroborated by the evidence above. [MIB-6]\nAcute/vv-impact fills: no impact. zz\nMinor moving violation in 3 years: +0. [MVR-3]"
+  },
+  {
+   "at": "2026-07-14T13:03:00",
+   "text": "7/14 1303 ord PM, B, U, EKG, COG: REQ-1.\nord FINQ: FIN-2 over limit / KPE. [FIN-2]\nord APS from Dr. Jonathan Schmidt: REQ-1. [REQ-1] KTA"
+  },
+  {
+   "at": "2026-07-22T04:04:00",
+   "text": "7/22 0404 bld 5'0\" 150 lb (measured), BMI 29.3: Preferred column; age 70+ one column more lenient -> Pref Plus (BLD-1.8) (pref matrix bld row: Preferred Plus). [BLD-1.1] zz"
+  },
+  {
+   "at": "2026-07-23T22:13:00",
+   "text": "7/23 2213 Lipids TC 276, HDL 63, ratio 4.4. [LIP-1]\nRemaining blood values normal: NI. nfz\ncotin POSITIVE, tobacco ladder. Tlad\nRemaining urine values normal: NI. [LAB-2]"
+  },
+  {
+   "at": "2026-07-25T12:31:00",
+   "text": "7/25 1231 Total coverage $750,000 (applied $750,000 + in force $0) vs justified $2,246,500 (age 71+: 50% of net worth $4,493,000): 0.33x. Within limits. [FIN-1]"
+  },
+  {
+   "at": "2026-08-14T15:36:00",
+   "text": "8/14 1536 rdr GIO declined - age 77 outside 18-40.\nrdr KPE declined - face excceeds 10x compensation or FIN-Q missing. [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nCotinine POSITIVE | TOB-4.2 | cap Std\nTOTAL | | +0\nRIDERS | | GIO dcl, KPE dcl\nCLASS | | ST",
+ "stated_decision": "Standard Tobacco",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: EKG normal: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 17,
+   "fact_id": "C0179-F028",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 18,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Cotinine POSITIVE cap Standard, tobacco ladder'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: Blood pressure average 144/89 (paramed + APS readings in last 12 months); untreated - used"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 3,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Family history -> FHx"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 8,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 9,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Cotinine -> cotin"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag Tlad"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "fragment",
+   "step": 25,
+   "fact_id": null,
+   "detail": "values not written: 2.3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "typo",
+   "step": 25,
+   "fact_id": null,
+   "detail": "exceeds -> excceeds"
+  }
+ ]
+}

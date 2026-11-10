@@ -1,0 +1,431 @@
+{
+ "case_id": "C0658",
+ "persona_id": "uw_09",
+ "observations": [
+  {
+   "at": "2026-04-13T11:33:00",
+   "text": "2026-04-13 DUI 'yes', last 02/2025. nbd\nOccupation financial analyst (1A): no rating. [OCC] zz\nAvocation marathon running: not hazardous - no rating. [AVO-1.1]\nPrior Atlas Assurance app (2019): +150 - info. [GEN-1] nfz\nPart 1 reviewed: 5 flags, NI. [GEN-2] zz\nEx-smoker, quit 03/2024 (2.1 yrs): NS ladder, S+. [TOB-2.3] => cap S+ cap@SP\nAAA disclosed (dx 04/2013, no tx): follow up needed. [GEN-2]\nBarrett's esophagus disclosed (dx 09/2010, no tx): follow up needed.\nBack pain mild disclosed (dx 03/2010, tx hydrocodone-acetaminophen): follow up needed. [GEN-2] nfz\nSuicide attempt disclosed (dx 03/2008, no tx): follow up needed. zz\nSuicide attempt 'old' (18.1 yrs since): +50.\nSystemic SLE erythematosus disclosed (dx 11/2022, tx prednisone): follow up needed. [GEN-2] zz\nHeart failure / cardiomyopathy disclosed (dx 10/2011, no tx): follow up needed. [GEN-2] zz\nPart 2 reviewed: NI. zz"
+  },
+  {
+   "at": "2026-04-13T12:01:00",
+   "text": "2026-04-13 MIB 620712 (Adrenal disorder): Adrenal insufficiency. nfz\nMIB 211312 (Ulcerative colitis - moderate): consistent with UC. nfz\nMIB 010970 (Prior app - life; degree not reported): insurance-activity code - informational. nfz\nDUI 1.1 yrs ago: +75, std. [MVR-3] => +75, cap STD cap@Std\nHydrocodone-acetaminophen x29, oxycodone x40: mild back pain. [RX-2.2] nbd\nBack pain mild 'opioid' (chronic opioid): +25.\nCabergoline x40: Adrenal insufficiency. [RX-2.2] nfz\nAdrenal insufficiency 'adrenal' (kind adrenal): +50.\nPrednisone x38: Systemic SLE erythematosus. [RX-2.2]\nSystemic SLE erythematosus 'systemic' (kind systemic): +50. [IMM-2]\nVedolizumab, azathioprine x40: UC not disclosed; indicates UC. zz"
+  },
+  {
+   "at": "2026-04-13T12:09:00",
+   "text": "2026-04-13 ord PM, B, U: REQ-1 grid.\nord ALCQ: DUI in 5 yrs. [REQ-2.4]\nord FINQ: Over limit / KPE. [FIN-2]\nord APS from Dr. Hunt (cardiology): impairment >= +50. [REQ-2.1]\nord APS from Dr. White (gastroenterology): impairment >= +50."
+  },
+  {
+   "at": "2026-04-22T12:44:00",
+   "text": "2026-04-22 Alcohol 12 drinks/week: within limits. [ALC]\nAlcohol Tx: False."
+  },
+  {
+   "at": "2026-04-22T23:17:00",
+   "text": "2026-04-22 Applicant reported UC (not on app).\nbld 4'9.5\", 120 lb: SPNT column. [BLD-1.1] nbd\nExam items unremarkable: no impact. [GEN-5] nbd"
+  },
+  {
+   "at": "2026-04-25T12:40:00",
+   "text": "2026-04-25 AAA repaired (40 months): +50. [CV-6]\nHeatr failure recovered (ef 53, 9.3 yrs): +50. [CV-4]"
+  },
+  {
+   "at": "2026-04-27T15:32:00",
+   "text": "2026-04-27 Lipids: TC 256, HDL 38, ratio 6.7. nfz\nOther blood values: no impact. nfz\nCotinine negative."
+  },
+  {
+   "at": "2026-05-04T17:34:00",
+   "text": "2026-05-04 Barrett's esophagus 'lgd' (low dysplasia): +50. [GI]\nUlcerative colitis 'no_surveillance' (duration 20 yrs, last colonoscopy 8.9 yrs ago): +50. [GI]\nBP 115/75: untreated, used for matrix. nbd"
+  },
+  {
+   "at": "2026-05-04T17:58:00",
+   "text": "2026-05-04 Net debits +450 > +425 - Decline. => decl"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nSuicide attempt | - | +50\nDUI 1.1 yrs ago | - | +75\nback pain | - | +25\nAdrenal insufficiency | END | +50\nSystemic lupus erythematosus | IMM-2 | +50\nAbdominal aortic aneurysm | - | +50\nHeart failure / cardiomyopathy | - | +50\nBarrett's esophagus | GI | +50\nUlcerative colitis | - | +50\nFormer cigarette, quit 03/2024 | - | cap SP\nDUI 1.1 yrs ago | MVR-3 | cap Std\nTOTAL | | +450\nCLASS | | DEC",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Adrenal insufficiency (dx 04/2019, tx cabergoline); evidence to follow."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 23,
+   "fact_id": "C0658-F029",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 24,
+   "fact_id": "C0658-F029",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 27,
+   "fact_id": null,
+   "detail": "not written: osteopenia: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 28,
+   "fact_id": "C0658-F026",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 29,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 42,
+   "fact_id": null,
+   "detail": "not written: Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impac"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 43,
+   "fact_id": null,
+   "detail": "not written: Total coverage $2,250,000 (applied $2,000,000 + in force $250,000) vs justified $4,720,000"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 47,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "fragment",
+   "step": 2,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Table 2 -> +150"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "non-tobacco -> NS"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Standard Plus -> S+"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Standard Plus -> S+"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag cap@SP"
+  },
+  {
+   "kind": "fragment",
+   "step": 9,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 12,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 14,
+   "fact_id": null,
+   "detail": "lupus -> SLE"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 22,
+   "fact_id": null,
+   "detail": "values not written: 50"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 25,
+   "fact_id": null,
+   "detail": "lupus -> SLE"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "lupus -> SLE"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 34,
+   "fact_id": null,
+   "detail": "values not written: 2.1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 36,
+   "fact_id": null,
+   "detail": "treatment -> Tx"
+  },
+  {
+   "kind": "fragment",
+   "step": 38,
+   "fact_id": null,
+   "detail": "values not written: 25.5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 38,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 39,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 41,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "typo",
+   "step": 41,
+   "fact_id": null,
+   "detail": "Heart -> Heatr"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 44,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 45,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 46,
+   "fact_id": null,
+   "detail": "values not written: 7"
+  },
+  {
+   "kind": "fragment",
+   "step": 50,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 50,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 50,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 53,
+   "fact_id": null,
+   "detail": "decline -> decl"
+  }
+ ]
+}

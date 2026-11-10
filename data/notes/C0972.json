@@ -1,0 +1,401 @@
+{
+ "case_id": "C0972",
+ "persona_id": "uw_11",
+ "observations": [
+  {
+   "at": "2026-08-29T10:07:00",
+   "text": "2026-08-29 Pharmacist occupation: no rating. nfz\nHunting hobby: not hazardous, no rating. [AVO-1.1]\nEx-smoker since 09/2023: cap Preferred\nCVA (CVA) disclosed in Part 2 (08/2011, on atorvastatin, aspirin); more evidence coming. [NEU]\nNon-obstructive CAD disclosed in Part 2 (05/2022); no treatment. [GEN-2]\nPancreatitis disclosed in Part 2 (07/2007); no treatment. [GEN-2]\nPancreatitis: 'gallstone' profile (no APS file); 0 debits (super pref unavailable: history of impairment, CLS-5). [APS-6] => cap PP | ord/obtain APS and hold\nFHx: no early CVD or cancer; preferred matrix FH row meets Eite. [FH-1]\nRemaining Part 2 answers: reviewed, NI. nfz"
+  },
+  {
+   "at": "2026-08-29T14:42:00",
+   "text": "2026-08-29 Rx atorvastatin and aspirin consistent w/ disclosed CVA (CVA).\nSeasonal allergy: listed as no rating - no impact.\nRx olanzapine (psychiatry) - not disclosed; suggests Bipolar disorder. [RX-3]\nBipolar disorder: severity not documented (Rx only); APS-6 mildest row 'bp2_stable' +50. [APS-6] | ord/obtain APS and hold\nRx hydrocodone-acetaminophen (family medicine) - not disclosed; suggesst Back pain / spine.\nMIB 311372 (Stroke; moderate) - 7.3 yrs ago, informational.\nMIB 115376 (Coronary calcium / non-obstructive disease; moderate) - consistent w/ Non-obstructive coronary artery disease. nbd\nMIB 406417 (Schizophrenia / psychotic disorder; severe / marked) - consistent w/ Bipolar disorder.\nMIB 900317 (Back / spine disorder; moderate) - consistent w/ Back pain / spine.\nHydrocodone-acetaminophen: least severe indication (acute_injury) is not ratable; no APS - not rated. [RX-2.4]\n1 minor moving violation in 3 yrs: +0."
+  },
+  {
+   "at": "2026-08-29T15:01:00",
+   "text": "2026-08-29 ord PM, B, U, EKG, FINQ per REQ-1 grid. [REQ-1]\nord APS from Dr. Sandra Maritnez (neurology) for REQ-2.1: may rate >= +50. [REQ-2.1] KTA\nord APS from Dr. Marcus Cervantes (cardiology) for REQ-2.1: may rate >= +50."
+  },
+  {
+   "at": "2026-09-05T13:14:00",
+   "text": "2026-09-05 Coverage $5,000,000 (applied $5,000,000 + in force $0) vs justified $5,340,000 (15x income $356,000): 0.94x. Within limits. [FIN-1] nbd"
+  },
+  {
+   "at": "2026-09-10T03:39:00",
+   "text": "2026-09-10 bld 5'6\" 199 lb (measured), BMI 32.1: Standard column (pref matrix row: STD). nfz\nPulse/other exam items unremarkable: NI. zz\nEKG normal: no impact."
+  },
+  {
+   "at": "2026-09-11T21:53:00",
+   "text": "2026-09-11 Lipids TC 280, HDL 42, ratio 6.7 on statin (treated values) - preferred matrix row. [LIP-1]\nnic neg (urine 8). [TOB-4.1]\nRemaining urine values within limits: NI. [LAB-2]"
+  },
+  {
+   "at": "2026-09-24T12:53:00",
+   "text": "2026-09-24 Non-obstructive coronary artery disease: 'cac_400' profile (CAC score 779) // APS. [CV-1.4] => +50\nRoutine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impact. [APS-1]"
+  },
+  {
+   "at": "2026-10-08T14:08:00",
+   "text": "2026-10-08 Stroke (CVA): 'mid' profile (age 53) per APS. [NEU] => +75\nBlood pressure average 114/75 (para + APS readings in last 12 mos); untreated - used for preferred matrix."
+  },
+  {
+   "at": "2026-10-08T14:28:00",
+   "text": "2026-10-08 rdr WMD declined d/t back/spine or psychiatric rating. [RID-2]\nRider XCR declined - Table 6 exceeds rdr max Table 0."
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[ ] 9. riders:\n[x] 10. amount: PEND-R\ndebits: +50 +50 +75 -> net +175\nriders: WMD dcl, XCR dcl",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "Pancreatitis rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'gallstone'' -> stated Incomplete - holding for APS (golden Table 6 (+150%); stricter)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 4,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 5,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Former cigarette, quit 09/2023 cap Preferred'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 13,
+   "fact_id": null,
+   "detail": "not written: glaucoma: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 14,
+   "fact_id": "C0972-F026",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 15,
+   "fact_id": "C0972-F023",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 16,
+   "fact_id": "C0972-F023",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: MIB 230427 (Pancreatitis; severe / marked) reported 14.5 yrs ago - informational only."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: 1 MVR item(s) non-moving, not-at-fault, or outside lookback - ignored."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 26,
+   "fact_id": "C0972-F033",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 35,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 40,
+   "fact_id": "C0972-F068",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fragment",
+   "step": 2,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Stroke -> CVA"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "coronary artery disease -> CAD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 10,
+   "fact_id": null,
+   "detail": "values not written: 65"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Family history -> FHx"
+  },
+  {
+   "kind": "typo",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Elite -> Eite"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 12,
+   "fact_id": null,
+   "detail": "values not written: 40"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 12,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Stroke -> CVA"
+  },
+  {
+   "kind": "fragment",
+   "step": 15,
+   "fact_id": null,
+   "detail": "values not written: 25"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 17,
+   "fact_id": null,
+   "detail": "values not written: 29"
+  },
+  {
+   "kind": "typo",
+   "step": 17,
+   "fact_id": null,
+   "detail": "suggests -> suggesst"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 20,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 23,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "typo",
+   "step": 28,
+   "fact_id": null,
+   "detail": "Martinez -> Maritnez"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 32,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 34,
+   "fact_id": null,
+   "detail": "values not written: 7"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 36,
+   "fact_id": null,
+   "detail": "Cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 36,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 37,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 38,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 41,
+   "fact_id": null,
+   "detail": "paramed -> para"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 41,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 45,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 45,
+   "fact_id": null,
+   "detail": "due to -> d/t"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 46,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  }
+ ]
+}

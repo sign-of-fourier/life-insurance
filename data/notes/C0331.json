@@ -1,0 +1,235 @@
+{
+ "case_id": "C0331",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-05-07T13:09:00",
+   "text": "5/7 1309 Retired occupation (class 1A): no rating. nbd\nEx-smoker, quit 09/2020 (4.6 yrs): NS ladder, best pref. [TOB-2.3] => cap pref\nReview of Part 2 answers: NI. nbd"
+  },
+  {
+   "at": "2025-05-07T13:43:00",
+   "text": "5/7 1343 MIB 190551: old cardiovascular code, abnormal value, borderline, reported 10.7 yrs ago. Retired code, info only.\nOcrelizumab, 40 fills (neurology); natalizumab, 40 fills (neurology). Not disclosed; MS indicated."
+  },
+  {
+   "at": "2025-05-07T14:06:00",
+   "text": "5/7 1406 ord physical, bloods, urine, EKG, COG, financial inquiry: REQ-1 grid. [REQ-1]\nord APS from Dr. Lori Parker (neurology): discrepancy in REQ-2.2 app vs 3rd-party. [REQ-2.2] KTA\nord APS from Dr. Daniel Jimenez (family medicine): REQ-1 grid. [REQ-1]"
+  },
+  {
+   "at": "2025-05-13T00:50:00",
+   "text": "5/13 0050 Height 5'4\", weight 167 lb, BMI 28.7: pref column. Age 70+, one column lenient -> Pref Plus. [BLD-1.8] [BLD-1.1]\nPulse/exam unremarkable: no impact.\nEKG normal: no impact. [CV]"
+  },
+  {
+   "at": "2025-05-16T19:23:00",
+   "text": "5/16 1923 Blood values within UW limits: NI. [LAB-2]\nCotinine negative (urine 6). [TOB-4.1]"
+  },
+  {
+   "at": "2025-05-18T10:54:00",
+   "text": "5/18 1054 Total coverage $1,500,000 (applied $1,500,000 + in force $0) vs justified $2,210,000 (age 71+: 50% net worth $4,420,000): 0.68x. Within limits [FIN-1] nbd"
+  },
+  {
+   "at": "2025-06-12T18:06:00",
+   "text": "6/12 1806 Acute sinusitis: vv-impact condition, no rating. [MISC-1] nfz\nKidney stones: vv-impact condition, no rating. [MISC-1] nfz\nMS: profile'mild', per APS. [NEU] => +50\nBP 130/79 avg (PM + APS): untreated. Used for pref matrix. [CLS-5] [BP-1] nbd"
+  },
+  {
+   "at": "2025-06-12T18:57:00",
+   "text": "6/12 1857 rdr WP: declined d/t issue, age 77 outside 18-55. [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nMultiple sclerosis | - | +50\nFormer cigarette, quit 09/2020 | - | cap Pref\nTOTAL | | +50\nRIDERS | | WP dcl\nCLASS | | T1",
+ "stated_decision": "Table 1 (+25%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: Lipids TC 262, HDL 40, ratio 6.5 - preferred matrix row."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 22,
+   "fact_id": "C0331-F055",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 22,
+   "fact_id": "C0331-F053",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "non-tobacco -> NS"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Multiple sclerosis -> MS"
+  },
+  {
+   "kind": "fragment",
+   "step": 23,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "due to -> d/t"
+  }
+ ]
+}

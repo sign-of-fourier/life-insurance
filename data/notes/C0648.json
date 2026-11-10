@@ -1,0 +1,315 @@
+{
+ "case_id": "C0648",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-05-07T10:43:00",
+   "text": "5/7 1043 Total coverage $250,000 (applied $250,000 + in force $0) vs justified $330,000 (10x income $33,000): 0.76x. Within limits. [FIN-1] zz\nRetail store manager (class 1A): no rating. [OCC]\nPart 1 reviewed: 2 flagged items, no impact. [GEN-2]\nFormer smoker, quit 07/2019: NT ladder, cap PP. [TOB-2.3] cap@PP\nNAFLD / fatty liver: dx 08/2024, no treatment. [GEN-2] nbd\nAdrenal insufficiency: dx 08/2025, no treatment. [GEN-2]\nAdrenal profile 'adrenal': +50. [END]\nUlcerative colitis: dx 02/2025, no Tx. [GEN-2]\nFH: no CVD or cancer before 65. [FH-1]\nPart 2 reviewed: NI. [GEN-2] nbd"
+  },
+  {
+   "at": "2026-05-07T12:19:00",
+   "text": "5/7 1219 MIB 221376: consistent w/ NAFLD. None added.\nGout: low-impact, no rating. [MISC-1]\nTenofovir x40, entecavir x29: indicaets Chronic hepatitis B. [RX-3]\nBudesonide x40, mesalamine x40: indicates Crohn's. [RX-3]"
+  },
+  {
+   "at": "2026-05-07T13:59:00",
+   "text": "5/7 1359 ord PM, B, U: REQ-1 grid.\nord APS from Dr. Denise Jones: REQ-2.2 discrepancy. [REQ-2.2] KTA\nOrder APS from Dr. Steven Cross: REQ-2.2 discrepancy. KTA"
+  },
+  {
+   "at": "2026-05-22T16:09:00",
+   "text": "5/22 1609 Lipids: TC 410, HDL 58, ratio 7.1: +75. [LIP-3]\nAST 64, ALT 72: attributed to fatty liver, hepatitis B. [CMB-3] zz\nA1c 6.8 - undisclosed/undiagnosed diabetes: grid +0, best STD. => cap std cap@Std\nGlucose fasting 140: evaluated with A1c. [LAB-2]\nRemaining blood values: no impact. [LAB-2] nbd\nCotinine neg. [TOB-4.1] nbd"
+  },
+  {
+   "at": "2026-05-28T11:33:00",
+   "text": "5/28 1133 NAFLD/fatty liver: fibrosis F2 per APS. [GI] => +75\nUlcerative colitis: no surveillance (duration 26 yrs, last colonoscopy 8.8 yrs ago) per APS. [GI] => +50\nChronic hepatitis B: profile 'carrier'. => +50\nCrohn's disease: profile'moderate'. => +75\nPhysician: NAFLD non-compliance. +25"
+  },
+  {
+   "at": "2026-06-04T12:46:00",
+   "text": "6/4 1246 Pulmonary sarcoidosis: active profile (attributes not documented) per APS. [RSP] => +75\nPhysician: Pulmonary sarcoidosis non-compliance. +25\nBP 119/87: untreated, used for matrix. [BP-1]"
+  },
+  {
+   "at": "2026-06-04T14:23:00",
+   "text": "6/4 1423 Net debits +500 > +425: DEC. [CLS-8.1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nAdrenal insufficiency | END | +50\nLipids TC 410, HDL 58, ratio 7.1 | - | +75\nNAFLD / fatty liver | GI | +75\nUlcerative colitis | GI | +50\nChronic hepatitis B | GI | +50\nCrohn's disease | GI | +75\nPhysician documents non-compliance | APS-4 | +25\nPulmonary sarcoidosis | RSP | +75\nPhysician documents non-compliance | APS-4 | +25\nFormer cigarette, quit 07/2019 | TOB-2.3 | cap PP\nA1c 6.8 - undisclosed/undiagnosed diabetes | DM-2 | cap Std\nTOTAL | | +500\nCLASS | | DEC",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: acute sinusitis: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: MIB 515316 (Sarcoidosis; moderate) - condition not disclosed; APS needed to corroborate."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: MIB 890714 (Old-format neoplasm code; under investigation / unconfirmed) reported 10.7 yrs"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 16,
+   "fact_id": "C0648-F024",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 17,
+   "fact_id": "C0648-F020",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 17,
+   "fact_id": "C0648-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 18,
+   "fact_id": "C0648-F022",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 18,
+   "fact_id": "C0648-F023",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 19,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 23,
+   "fact_id": null,
+   "detail": "not written: Build 4'10\" 139 lb (measured), BMI 29.0: Preferred column (preferred matrix build row: Pre"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 31,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 37,
+   "fact_id": null,
+   "detail": "not written: Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impac"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 40,
+   "fact_id": "C0648-F032",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "fragment",
+   "step": 5,
+   "fact_id": null,
+   "detail": "values not written: 6.8"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "non-tobacco -> NT"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 9,
+   "fact_id": null,
+   "detail": "treatment -> Tx"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 13,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "typo",
+   "step": 17,
+   "fact_id": null,
+   "detail": "indicates -> indicaets"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 21,
+   "fact_id": null,
+   "detail": "values not written: 3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 21,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "fragment",
+   "step": 22,
+   "fact_id": null,
+   "detail": "values not written: 3"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "fragment",
+   "step": 26,
+   "fact_id": null,
+   "detail": "values not written: 1.6"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 27,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "fragment",
+   "step": 28,
+   "fact_id": null,
+   "detail": "values not written: 6.8"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 29,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 30,
+   "fact_id": null,
+   "detail": "values not written: 7"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 30,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 35,
+   "fact_id": null,
+   "detail": "values not written: .9"
+  },
+  {
+   "kind": "fragment",
+   "step": 40,
+   "fact_id": null,
+   "detail": "values not written: 12, 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 43,
+   "fact_id": null,
+   "detail": "decline -> DEC"
+  }
+ ]
+}

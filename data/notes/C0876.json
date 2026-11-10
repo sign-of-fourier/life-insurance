@@ -1,0 +1,213 @@
+{
+ "case_id": "C0876",
+ "persona_id": "uw_11",
+ "observations": [
+  {
+   "at": "2025-03-19T13:15:00",
+   "text": "2025-03-19 Occupation marketing manager: no rating [OCC].\nSkiing hobby, not hazardous - no rating.\nChecked Part 1: flagged 5 items, reviewed, no impact.\nTobacco use denied [TOB-1].\nSleep apnea not treated since 09/2009 - evidence coming [GEN-2].\nInguinal hernia repair: low impact, no rating.\nNo CVD or cancer in family before 65 - pref matrix meets super pref [FH-1]. nfz\nChecked Part 2: no impact [GEN-2]."
+  },
+  {
+   "at": "2025-03-19T13:50:00",
+   "text": "2025-03-19 MIB 115317 not disclosed - coronary calcium, moderate; APS needed [MIB-4]. nfz\nMIB 010970 (Prior application - life; degree not reported): insurance-activity code - informational. nbd\nGERD: low impact, no rating.\nEczema: low impact, no rating [MISC-1]."
+  },
+  {
+   "at": "2025-03-19T14:40:00",
+   "text": "2025-03-19 Order PM, B, U: REQ-1 grid [REQ-1].\nOrder FORQ: REQ-2.6 foreign national / travel.\nord FINQ: FIN-2 over limit / KPE.\nord APS from Dr. Yolanda Thomas: REQ-2.2 app vs 3rd-party discrepancy [REQ-2.2].\nord APS from Dr. Maria Lewis: REQ-2.1 impairment may rate >= +50."
+  },
+  {
+   "at": "2025-03-28T12:45:00",
+   "text": "2025-03-28 total coverage $1,600,000 (applied $1,500,000 + in force $100,000) vs justified $1,590,000 (30x income $53,000): 1.01x. Within limits. [FIN-1]"
+  },
+  {
+   "at": "2025-03-29T10:55:00",
+   "text": "2025-03-29 H-1B visa, 1.9 yrs in US: eligible, Preferred class, face <= $3M => cap Preferred\nRecent arrival (1.9 yrs): no MIB/Rx/MVR Hx; full fluids needed [FN-2].\nTravel to Finland (vacation): no rating.\nForeign Q residence: US [FN-1]."
+  },
+  {
+   "at": "2025-03-31T05:43:00",
+   "text": "2025-03-31 bld 4'11\" 118 lb, BMI 23.8: Elite column (preferred matrix: Elite).\nPulse/other exams unremarkable: no impact [GEN-5]."
+  },
+  {
+   "at": "2025-04-03T23:50:00",
+   "text": "2025-04-03 Lipids TC 284, HDL 42, ratio 6.8: preferred matrix row [LIP-1].\nCotinine neg (urine 2).\nRemaining urine values within limits: NI."
+  },
+  {
+   "at": "2025-04-15T16:37:00",
+   "text": "2025-04-15 Sleep apnea profile 'untreated_severe' (ahi 49) // APS [RSP] => +75"
+  },
+  {
+   "at": "2025-04-24T18:20:00",
+   "text": "2025-04-24 Non-obstructive CAD profile 'cac_100_399' (cac score 316) per APS => +25\nNon-compliance w/ meds/follow-ups for CAD (<50%) / coronary calcium: +25 [APS-4].\nBP avg 111/67 (paramed + APS readings last 12 mos); untreated - for pref matrix [BP-1]."
+  },
+  {
+   "at": "2025-04-24T18:45:00",
+   "text": "2025-04-24 Rider CTR: approved.\nrdr KPE: declined - face exceeds 10x key-person compensation or FIN-Q missing.\nrdr OIR: approved."
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[x] 9. riders\n[x] 10. amount: T4\ndebits: +75 +25 +25 -> net +125\nriders: CTR ok, KPE dcl, OIR ok",
+ "stated_decision": "Table 4 (+100%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Prior application: 2024 Northstar Life: issued Preferred - informational; current evidence"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 11,
+   "fact_id": "C0876-F028",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 12,
+   "fact_id": "C0876-F022",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 13,
+   "fact_id": "C0876-F023",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 28,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "fragment",
+   "step": 1,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 8,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 8,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "history -> Hx"
+  },
+  {
+   "kind": "fragment",
+   "step": 23,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "questionnaire -> Q"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 29,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 33,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "fragment",
+   "step": 34,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 39,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 40,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

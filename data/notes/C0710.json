@@ -1,0 +1,187 @@
+{
+ "case_id": "C0710",
+ "persona_id": "uw_02",
+ "observations": [
+  {
+   "at": "2026-10-01T12:08:00",
+   "text": "2026-10-01 Occupation roofer (class 3A): no rating.\nPrior application: 2025 Northstar Life postponed for info; current evidence used. [GEN-1]\nDenies all tobacco/nicotine use. [TOB-1]\nPart 2 shows Hepatitis C (dx 02/2025, tx none); more evidence needed. [GEN-2]\nPart 2 shows a-fib (dx 02/2015, tx amiodarone, diltiazem); more evidence needed. [GEN-2]\nPart 2 shows Asthma (dx 06/2020, tx mometasone, albuterol); more evidence needed. [GEN-2]\nPart 2 shows Proteinuria (dx 07/2022, tx none); more evidence needed.\nProteinuria at 404.0 mg/dL (app/Rx only): +100.\nFamily history: no CVD/cancer before 65 in parents/siblings - pref matrix FH row Elite. [FH-1]"
+  },
+  {
+   "at": "2026-10-01T13:35:00",
+   "text": "2026-10-01 MIB 500322 (Asthma moderate) aligns w/ Asthma. [MIB-2]\nMIB 010079 (Prior application - life; unspecified): insurance-activity code - informational. [MIB-6]\nMIB 490258 (old psych code mild) from 15.4 yrs ago / retirde - informational only. [MIB-3]\nRx amiodarone x40 (cardiology), diltiazem x40 (cardiology) match Atrial fibrillation. [RX-2.2]\nRx mometasone x21 (pulmonology), albuterol x21 (pulmonology) match Asthma. [RX-2.2]\nAsthma profile 'moderate' (controller True) - cap pref.\nGlacoma: low-impact condition, no rating impact.\nEczema: low-impact condition, no rating imact. [MISC-1]\n1 minor moving violation in 3 yrs: +0."
+  },
+  {
+   "at": "2026-10-01T14:04:00",
+   "text": "2026-10-01 ord PM, B, U: REQ-1 grid.\nord APS from Dr. Alicia Mccarthy (gastroenterology): REQ-2.1 may rate >= +50. [REQ-2.1]\nOrder APS from Dr. Joshua Hendricks (cardiology): REQ-2.1 may rate >= +50. [REQ-2.1]"
+  },
+  {
+   "at": "2026-10-11T22:41:00",
+   "text": "2026-10-11 Build 5'5.5\" 160 lb (measured), BMI 26.2: Elite column.\nPulse/other exams unremarkable: no impact."
+  },
+  {
+   "at": "2026-10-13T14:53:00",
+   "text": "2026-10-13 afib: profile 'persistent' (type permanent, echo normal True) => +50."
+  },
+  {
+   "at": "2026-10-14T15:35:00",
+   "text": "2026-10-14 Lipids TC 264, HDL 38, ratio 6.9 - preferred matrix row.\nRemaining blood values within UW normal limits: no impact.\nCotinine negative (urine 0). [TOB-4.1]\nUrine protein 404: rated under renal/diabetes chapter (use higher). [CMB-3]\nRemaining urine values within limits: no impact. [LAB-2]"
+  },
+  {
+   "at": "2026-10-31T11:53:00",
+   "text": "2026-10-31 Hepatitis C: profile 'untreated' (defualt) => +100.\nPhysician notes non-compliance: +25.\nBP avg 125/70 (paramed + APS last 12 mos); untreated - used for pref matrix."
+  },
+  {
+   "at": "2026-10-31T14:14:00",
+   "text": "2026-10-31 rdr LTA declined - Table 10 exceeds rider max +200.\nRider WMD approved. [RID-1]\nHepatitis C rated without severity detail - obtain APS and hold."
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[x] 9. riders\n[x] 10. amount: PEND-R\ndebits: +100 +50 +100 +25 -> net +275\nriders: LTA dcl, WMD ok",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "Hepatitis C rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'untreated'' -> stated Incomplete - holding for APS (golden Table 10 (+250%); stricter)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 2,
+   "fact_id": null,
+   "detail": "not written: Total coverage $1,250,000 (applied $1,000,000 + in force $250,000) vs justified $3,540,000"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 5,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 13,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: hypothyroidism: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 23,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 37,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Physician documents non-compliance +25'"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 8,
+   "fact_id": null,
+   "detail": "Atrial fibrillation -> a-fib"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 14,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "typo",
+   "step": 16,
+   "fact_id": null,
+   "detail": "retired -> retirde"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "typo",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Glaucoma -> Glacoma"
+  },
+  {
+   "kind": "typo",
+   "step": 22,
+   "fact_id": null,
+   "detail": "impact -> imact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Atrial fibrillation -> afib"
+  },
+  {
+   "kind": "typo",
+   "step": 36,
+   "fact_id": null,
+   "detail": "default -> defualt"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 38,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 41,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 41,
+   "fact_id": null,
+   "detail": "Table 4 -> +200"
+  }
+ ]
+}

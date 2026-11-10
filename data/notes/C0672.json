@@ -1,0 +1,295 @@
+{
+ "case_id": "C0672",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-07-30T12:32:00",
+   "text": "7/30 1232 Total coverage $2,000,000 (applied $2,000,000 + in force $0) vs justified $2,655,000 (15x income $177,000): 0.75x. Wihin limits. nfz\nOccupation data scientist (class 1A): no rating. nbd\nTravel to Iceland 1 week/yr: no rating. [TRV]\nFormer cigarette, quit 12/2022: NS ladder, best S+. [TOB-2.3] => cap S+\nGraves' disease disclosed (dx 09/2012): evidence to follow. [GEN-2]\nCOPD disclosed (dx 05/2017): evidence to follow. [GEN-2] zz\ndental abscess: low-impact condition on the no-rating list - no impact.\nFamily history: no parent/sibling CVD or cancer before 65 - pref matrix FH row meets super pref. [FH-1]"
+  },
+  {
+   "at": "2025-07-30T12:38:00",
+   "text": "7/30 1238 varenicline filled 01/2025, no APS quit date >= 12 mos: evidence of tobacco use - tobacco ladder contradicting the application (MISREP); best ST. => cap std, tobacco ladder cap@Std Q-flip\nRx roflumilast x21 (pulmonology), fluticasone-umeclidinium-vilanterol x40 (pulmonology) consistent w/ disclosed COPD. [RX-2.2]\nosteopenia: vv-impact condition on the no-rating list - no impact. [MISC-1]\n2 minor moving violation(s) in 3 yrs: +0. [MVR-3]"
+  },
+  {
+   "at": "2025-07-30T13:12:00",
+   "text": "7/30 1312 ord PM, B, U, EKG: REQ-1 grid. [REQ-1]\nOrder APS from Dr. Tiffany Brown (endocrinology): REQ-2.1 impairment may rate >= +50. [REQ-2.1]\nord APS from Dr. Ryan Mcdonald (pulmonology): REQ-2.1 impairment may rate >= +50. KTA"
+  },
+  {
+   "at": "2025-08-07T14:27:00",
+   "text": "8/7 1427 COPD: profile'mild' per APS. => +50"
+  },
+  {
+   "at": "2025-08-11T22:32:00",
+   "text": "8/11 2232 bld 5'2.5\" 147 lb, BMI 26.5: Elite column. [BLD-1.1]"
+  },
+  {
+   "at": "2025-08-14T16:16:00",
+   "text": "8/14 1616 Lipids TC 280, HDL 42, ratio 6.7 - pref matrix row.\ncot neg (urine 129). [TOB-4.1]"
+  },
+  {
+   "at": "2025-08-21T16:36:00",
+   "text": "8/21 1636 Graves' disease: profile 'graves_active' per APS - postponed 6 mo. [END] => PPD-ed 6 mos\nBlood pressure average 121/86; untreated - used for pref matrix (CLS-5). [BP-1]"
+  },
+  {
+   "at": "2025-08-21T17:10:00",
+   "text": "8/21 1710 COPD rated without severity detail. ord/obtain APS and hold. nbd"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nCOPD | RSP | +50\nFormer cigarette, quit 12/2022 | TOB-2.3 | cap SP\nvarenicline filled 01/2025 | TOB-5 | cap Std\nTOTAL | | +50\nCLASS | | PEND-R",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "COPD rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'mild'' -> stated Incomplete - holding for APS (golden Postpone; stricter)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 5,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 23,
+   "fact_id": null,
+   "detail": "not written: EKG normal: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 27,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "typo",
+   "step": 2,
+   "fact_id": null,
+   "detail": "Within -> Wihin"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 6,
+   "fact_id": null,
+   "detail": "values not written: 2.6"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "non-tobacco -> NS"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Standard Plus -> S+"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Standard Plus -> S+"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 12,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Standard Tobacco -> ST"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag Q-flip"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 13,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Cotinine -> cot"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 26,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "Postpone -> postponed"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "postpone -> PPD-ed"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 28,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "fragment",
+   "step": 29,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "tag nbd"
+  }
+ ]
+}

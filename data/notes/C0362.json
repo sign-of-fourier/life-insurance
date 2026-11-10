@@ -1,0 +1,391 @@
+{
+ "case_id": "C0362",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2026-01-09T10:54:00",
+   "text": "1/9 1054 homemaker (class 1A): no rating [OCC]\nformer smoker, quit 09/2021 (4.3 yrs): non-tobacco ladder, cap Preferred\nPart 2 shows HTN (dx 04/2010, valsartan): evidence pending [GEN-2] nfz\nPart 2 shows RA (dx 02/2021, adalimumab, methotrexate): evidence pending [GEN-2] nfz\nPart 2 shows Suicide attempt (dx 03/2008): evidence pending [GEN-2]\nPart 2 shows Type 2 diabetes (dx 12/2018, metformin, insulin glargine, sitagliptin): evidence pending [GEN-2]\nPart 2 shows NAFLD/fatty liver (dx 09/2020): evidence pending [GEN-2]\nPart 2 shows Asthma (dx 02/2017, mometasone, albuterol): evidence pending\nno parent/sibling CVD or cancer before 65: Elite FH row [FH-1]\nPart 2 answers reviewed: no impact [GEN-2] nfz"
+  },
+  {
+   "at": "2026-01-09T11:39:00",
+   "text": "1/9 1139 Rx valsartan x40 (family med) matches disclosed HTN [RX-2.2]\nRx adalimumab x40, methotrexate x20 (family med) match Rheumatoid arthritis [RX-2.2]\nRx metformin x40, insulin glargine x17, sitagliptin x40 (endo) match NIDDM [RX-2.2]\nMIB 906326 (RA; moderate) aligns with RA [MIB-2] nbd\nMIB 221317 (fatty liver; moderate) aligns with NAFLD/fatty liver\nMIB 500377 (Asthma; moderate) aligns w/ Asthma [MIB-2]\nMIB 311477 (Stroke; severe) aligns with Stroke (CVA) [MIB-2]\n1 minor moving violation in 3 yrs: +0. [MVR-3] nfz"
+  },
+  {
+   "at": "2026-01-09T12:16:00",
+   "text": "1/9 1216 Order PM, B, U, EKG, FINQ: REQ-1 [REQ-1]\nord APS from Dr. James Walker (neurology): discrepancy REQ-2.2 [REQ-2.2]\nord APS from Dr. Joe Cuevas (family med): potential +50 REQ-2.1 [REQ-2.1] KTA"
+  },
+  {
+   "at": "2026-01-16T09:47:00",
+   "text": "1/16 0947 Total coverage $7,750,000 ($7,500,000 applied + $250,000 in force) vs justified $3,000,000 (non-working spouse: up to $3M (spouse in-force)): 2.58x. More than 100% over w/ no business purpose: decl. [FIN-2.4] => decline FTJ"
+  },
+  {
+   "at": "2026-01-19T06:50:00",
+   "text": "1/19 0650 5'2\", 160 lb, BMI 29.3: pref column [BLD-1.1]\nunremarkable pulse/exam items: NI [GEN-5]\nnormal EKG: NI [CV]"
+  },
+  {
+   "at": "2026-01-21T23:53:00",
+   "text": "1/21 2353 Lipids TC 266, HDL 40, ratio 6.7 on statin: pref matrix row [LIP-1]\nAST 65, ALT 98 (fatty liver): rated there, no additional impact [CMB-3]\nA1c 7.7: part of diabetes rating [CMB-3] nbd\nfasting glucose 175: evaluated with A1c 7.7, no separate rating [LAB-2] nfz\nremaining blood values normal: NI [LAB-2]\nnic+ neg (urine 6)\nUrine glucose pos: explained by diabetes nbd\nremaining urine values normal: NI"
+  },
+  {
+   "at": "2026-02-07T17:29:00",
+   "text": "2/7 1729 Hypertension: 1 agent, BP 160/99: +50 (HTN-1); cap PP [HTN-1] => +50, cap PP\nRheumatoid arthritis: biologic profile per APS => +50\nSuicide attempt: old profile per APS [MH] => +50\nDM2: age 37, A1c 7.5: +100 (DM-2); insulin +25; cap STD [DM-2] => +125, cap STD\nNAFLD/fatty liver: fibrosis F2 per APS [GI] => +75\nAsthma: severe profile per APS [RSP] => +50\nbenign_no_rating: low-impact, NI [MISC-1]\nAPS A1c values: 7.6, 7.7, 7.4, 7.4\nroutine visit content reviewed: NI [APS-1]"
+  },
+  {
+   "at": "2026-02-08T12:50:00",
+   "text": "2/8 1250 CVA (CVA): young profile per APS => +100"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nHypertension | HTN-1 | +50\nRheumatoid arthritis | MSK | +50\nSuicide attempt | MH | +50\nType 2 diabetes | DM-2 | +125\nNAFLD / fatty liver | GI | +75\nAsthma | RSP | +50\nStroke | NEU | +100\nFormer cigarette, quit 09/2021 | TOB-2.3 | cap Pref\nHypertension | HTN-1 | cap PP\nType 2 diabetes | DM-2 | cap Std\nTOTAL | | +500\nCLASS | | DEC",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 8,
+   "fact_id": "C0362-F016",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 15,
+   "fact_id": "C0362-F026",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 16,
+   "fact_id": null,
+   "detail": "not written: Rx mometasone x40 (pulmonology), albuterol x40 (pulmonology) consistent with disclosed Ast"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Rx shows atorvastatin x40 (neurology) - not disclosed on the application; indicates Stroke"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 41,
+   "fact_id": "C0362-F076",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 42,
+   "fact_id": "C0362-F077",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 44,
+   "fact_id": "C0362-F079",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 45,
+   "fact_id": null,
+   "detail": "not written: acne: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 46,
+   "fact_id": "C0362-F032",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 50,
+   "fact_id": null,
+   "detail": "not written: Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impac"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Hypertension -> HTN"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Rheumatoid arthritis -> RA"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 13,
+   "fact_id": null,
+   "detail": "Hypertension -> HTN"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> NIDDM"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Rheumatoid arthritis -> RA"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 21,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 25,
+   "fact_id": null,
+   "detail": "values not written: 3"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 27,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Decline -> decl"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 27,
+   "fact_id": null,
+   "detail": "tag FTJ"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "fragment",
+   "step": 29,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "fragment",
+   "step": 31,
+   "fact_id": null,
+   "detail": "values not written: 7"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "fragment",
+   "step": 32,
+   "fact_id": null,
+   "detail": "values not written: 1.6, 2.2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 33,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 34,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 35,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 36,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 36,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 37,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 37,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "fragment",
+   "step": 39,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 39,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 39,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "fragment",
+   "step": 41,
+   "fact_id": null,
+   "detail": "values not written: 17.8"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 42,
+   "fact_id": null,
+   "detail": "Type 2 diabetes -> DM2"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 42,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 42,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "fragment",
+   "step": 44,
+   "fact_id": null,
+   "detail": "values not written: .1, 100"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 46,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 48,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "fragment",
+   "step": 49,
+   "fact_id": null,
+   "detail": "values not written: 37"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 49,
+   "fact_id": null,
+   "detail": "Stroke -> CVA"
+  }
+ ]
+}

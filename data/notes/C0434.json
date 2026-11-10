@@ -1,0 +1,327 @@
+{
+ "case_id": "C0434",
+ "persona_id": "uw_04",
+ "observations": [
+  {
+   "at": "2025-02-24T12:13:00",
+   "text": "02/24/25 12:13 US CITIZEN, US RESIDENT - ELIGIBLE. ZZ; TOTAL COVERAGE $375,000 (APPLIED $250,000 + IN FORCE $125,000) VS JUSTIFIED $448,000 (AGE 71+: 50% OF NET WORTH $896,000): 0.84X. WITHIN LIMITS. [FIN-1] ZZ; RETIRED: NO RATING.; NI ON REVIEWED ITEMS FLAGGED. [GEN-2] ZZ; Ex-smoker, quit 09/2023: cap Standard. cap@Std; Disclosed Parkinson's: evidence pending. [GEN-2]; Family hx waived at 70+.; NI on reviewed items. [GEN-2] nfz"
+  },
+  {
+   "at": "2025-02-24T12:16:00",
+   "text": "02/24/25 12:16 Rx pramipexole x37 (neurology) consistent with disclosed Parkinson's disease.; Minor moving violations: +0. nfz; MIB 951917 (Mobility aid / falls; degree not reported) - consistent w/ Frailty findings (71+).; MIB 320316 (PARKINSON'S DISEASE; MODERATE) - CONSISTENT W/ PARKINSON'S DISEASE.; Old drug use info: MIB 428477 - 7.6 yrs ago. [MIB-3]"
+  },
+  {
+   "at": "2025-02-24T13:15:00",
+   "text": "02/24/25 13:15 Order PM, B, U, COG: REQ-1 grid.; ord APS: potential +50 rating. [REQ-2.1]; ord APS: potential +50 rating. [REQ-2.1]; Order APS: REQ-2.2 app vs 3rd-party. [REQ-2.2] KTA"
+  },
+  {
+   "at": "2025-03-06T23:17:00",
+   "text": "03/06/25 23:17 5'8/208 lb: S+; age 70+ lenient."
+  },
+  {
+   "at": "2025-03-08T15:36:00",
+   "text": "03/08/25 15:36 Lipids: preferred matrix row.; Blood values within UW limits: NI. [LAB-2] nfz; nic neg."
+  },
+  {
+   "at": "2025-04-05T14:14:00",
+   "text": "04/05/25 14:14 Frailty findings: +50. [GER-2]; Parkinson's disease: profile 'late_onset' (default - attributes not documented) // APS (chapter range 50-100). => +50; Cataracts: no impact.; Acne: NI.; Opioid use disorder, on maintenance therapy: opioid use disorder, stable maintenance 6.9 yrs: +100 (MD).; BP 120/73: pref matrix. [BP-1] zz"
+  },
+  {
+   "at": "2025-04-05T14:45:00",
+   "text": "04/05/25 14:45 CIA DECLINED: TABLE 7 > RIDER MAX +150.; GIO declined: issue age 71. [RID-2]; OIR approved.; Frailty findings: ord APS and hold."
+  }
+ ],
+ "worksheet_format": "C",
+ "worksheet": "frailty +50, parkinson's +50, opioid +100 = +200 so PEND-R\ncapped Std from former\nriders CIA dcl, GIO dcl, OIR ok",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "Frailty findings (71+) rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'findings'' -> stated Incomplete - holding for APS (golden Table 7 (+175%); stricter)"
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 5,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Former cigarette, quit 09/2023 cap Standard'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 6,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Frailty findings (71+) (dx 10/2019, tx none); evidence to follow."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 10,
+   "fact_id": "C0434-F020",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Rx shows methadone x40 (addiction medicine) - not disclosed on the application; indicates "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 12,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 26,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 30,
+   "fact_id": "C0434-F022",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 30,
+   "fact_id": "C0434-F023",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 31,
+   "fact_id": null,
+   "detail": "not written: GERD: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 33,
+   "fact_id": null,
+   "detail": "not written: benign_no_rating: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "fragment",
+   "step": 4,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "No impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "fragment",
+   "step": 7,
+   "fact_id": null,
+   "detail": "values not written: 1, 2022"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "No impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 13,
+   "fact_id": null,
+   "detail": "values not written: 2, 3"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 14,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 15,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "fragment",
+   "step": 21,
+   "fact_id": null,
+   "detail": "values not written: 31.6"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Standard Plus -> S+"
+  },
+  {
+   "kind": "fragment",
+   "step": 23,
+   "fact_id": null,
+   "detail": "values not written: 280, 42, 6.7"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 25,
+   "fact_id": null,
+   "detail": "values not written: 7"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 25,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "fragment",
+   "step": 27,
+   "fact_id": null,
+   "detail": "values not written: 71"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "fragment",
+   "step": 34,
+   "fact_id": null,
+   "detail": "values not written: 12, 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 34,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 38,
+   "fact_id": null,
+   "detail": "Table 2 -> +150"
+  },
+  {
+   "kind": "fragment",
+   "step": 39,
+   "fact_id": null,
+   "detail": "values not written: 18, 40"
+  },
+  {
+   "kind": "fragment",
+   "step": 40,
+   "fact_id": null,
+   "detail": "values not written: 71"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 40,
+   "fact_id": null,
+   "detail": "order -> ord"
+  }
+ ]
+}

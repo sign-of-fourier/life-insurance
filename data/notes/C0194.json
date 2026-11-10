@@ -1,0 +1,183 @@
+{
+ "case_id": "C0194",
+ "persona_id": "uw_11",
+ "observations": [
+  {
+   "at": "2026-04-07T12:01:00",
+   "text": "2026-04-07 Occupation data scientist (class 1A): no rating needed. [OCC] nfz\nReviewed Part 1 answers: flagged items reviewed, no impact. [GEN-2]\nTobacco/nicotine use denied.\nFamily history: brother CAD dx 60; mother MI dx 75 - preferred matrix FH row meets Preferred Plus.\nRemaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "at": "2026-04-07T12:06:00",
+   "text": "2026-04-07 Gout: low-impact condition, no rating needded. [MISC-1]"
+  },
+  {
+   "at": "2026-04-07T12:54:00",
+   "text": "2026-04-07 ord physical exam, blood work, u/a. [REQ-1]\nord FINQ: financials over limit/KPE. [FIN-2]"
+  },
+  {
+   "at": "2026-04-20T09:49:00",
+   "text": "2026-04-20 Total coverage $1,000,000 (applied $750,000 + in force $250,000) vs justified $1,230,000 (15x income $82,000): 0.81x coverage ratio. Within limits."
+  },
+  {
+   "at": "2026-04-21T20:13:00",
+   "text": "2026-04-21 Build 4'10\" 133 lb (measured), BMI 27.8: Pref Plus column (pref matrix bld row: PP). [BLD-1.1]\nBP average 135/81 (paramed), untreated - used for pref matrix."
+  },
+  {
+   "at": "2026-04-24T16:28:00",
+   "text": "2026-04-24 Lipids: TC 237, HDL 51, ratio 4.6 - preferred matrix row. [LIP-1]"
+  },
+  {
+   "at": "2026-04-24T16:38:00",
+   "text": "2026-04-24 rdr KPE: approved. [RID-1]\nrdr LTA: approved."
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[x] 9. riders\n[x] 10. amount: PP\ndebits: none -> net +0\nriders: KPE ok, LTA ok",
+ "stated_decision": "Preferred Plus",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 5,
+   "fact_id": null,
+   "detail": "not written: cataracts: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 8,
+   "fact_id": "C0194-F018",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: 1 minor moving violation(s) in 3 yrs: +0."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Cotinine negative (urine 1)."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 19,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "typo",
+   "step": 8,
+   "fact_id": null,
+   "detail": "needed -> needded"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "urinalysis -> u/a"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "financial questionnaire -> FINQ"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 16,
+   "fact_id": null,
+   "detail": "total cholesterol -> TC"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

@@ -1,0 +1,267 @@
+{
+ "case_id": "C0293",
+ "persona_id": "uw_04",
+ "observations": [
+  {
+   "at": "2026-03-20T09:33:00",
+   "text": "03/20/26 09:33 TOTAL COVERAGE $500,000 (APPLIED $500,000 + IN FORCE $0) VS JUSTIFIED $780,000 (30X INCOME $26,000): 0.64X. WITHIN LIMITS. [FIN-1]; OCCUPATION: PHARMACEUTICAL SALES REP. NO RATING. NBD; NI (2 flagged relevant reviewed). [GEN-2]; cigars 8/yr; ladder on frequency/nic. nfz; epilepsy/seizure (dx 02/2021, tx topiramate). [GEN-2]; liver transplant (mild) (dx 07/2020, tx cyclosporine). [GEN-2]; CKD (dx 03/2016, tx none).; APS-6 MILDEST ROW 'TRANSPLANT' +150 [APS-6]; adrenal insufficiency (dx 02/2020, tx hydrocortisone).; acute sinusitis - no impact [MISC-1]; no impact [GEN-2]"
+  },
+  {
+   "at": "2026-03-20T10:07:00",
+   "text": "03/20/26 10:07 MIB 306316 (SINGLE SEIZURE) - CONSISTENT [MIB-2]; MIB 920417 (Organ transplant) - consistent [MIB-2] nfz; MIB 706457 (Kidney function) reported 8.8 yrs ago - info.; RX ENTECAVIR X40 (GASTROENTERLOOGY) - CONSISTENT.; Rx topiramate x24 (neurology) - consistent [RX-2.2] nbd; Rx cyclosporine x40 (family medicine) - consistent [RX-2.2]; LIVER TRANSPLANT (MILD): DECL.; Rx hydrocortisone x12 (endocrinology) - consistent [RX-2.2]; adrenal insufficiency: +50 [END]"
+  },
+  {
+   "at": "2026-03-20T12:56:00",
+   "text": "03/20/26 12:56 REQ-3 accel fails → next column [REQ-3]; APS ord from gastroenterology: impairment >= +50 [REQ-2.1]; APS ORD FROM NEUROLOGY: IMAPIRMENT >= +50 [REQ-2.1]"
+  },
+  {
+   "at": "2026-03-30T02:49:00",
+   "text": "03/30/26 02:49 exam unremarkable: no impact [GEN-5]"
+  },
+  {
+   "at": "2026-03-31T20:25:00",
+   "text": "03/31/26 20:25 lipids: TC 240, HDL 35, ratio 6.9 [LIP-1]; AST 74 (1.9x ULN): attributed to hepatitis_b.; remaining blood values: no impact. nbd; CIGARS 8/YR, NIC NEG: CAP PREF CAP@PREF; remaining urine values: NI. nbd"
+  },
+  {
+   "at": "2026-04-06T15:41:00",
+   "text": "04/06/26 15:41 epilepsy/seizure: profile 'some' (seizures 3/yr) +50 [NEU]"
+  },
+  {
+   "at": "2026-04-22T11:07:00",
+   "text": "04/22/26 11:07 chronic hepatitis B: profile 'carrier' +50; BP 137/78 (PM + APS); untreated. zz"
+  }
+ ],
+ "worksheet_format": "C",
+ "worksheet": "chronic +150, adrenal +50, epilepsy +50, chronic +50 = +310 so DEC\ncapped Pref from cigars",
+ "stated_decision": "Decline",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 6,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Chronic hepatitis B (dx 06/2022, tx entecavir); evidence to follow."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 13,
+   "fact_id": null,
+   "detail": "not written: Family history: mother MI dx 65 - preferred matrix FH row meets Elite."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 18,
+   "fact_id": "C0293-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 28,
+   "fact_id": null,
+   "detail": "not written: Build 6'1\" 242 lb (measured), BMI 31.9: Standard column (preferred matrix build row: Stand"
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +310, true +300"
+  },
+  {
+   "kind": "fragment",
+   "step": 3,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 4,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "fragment",
+   "step": 9,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 9,
+   "fact_id": null,
+   "detail": "chronic kidney disease -> CKD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "typo",
+   "step": 18,
+   "fact_id": null,
+   "detail": "gastroenterology -> gastroenterloogy"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "decline -> decl"
+  },
+  {
+   "kind": "fragment",
+   "step": 25,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "-> -> →"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "typo",
+   "step": 27,
+   "fact_id": null,
+   "detail": "impairment -> imapirment"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 32,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 33,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 33,
+   "fact_id": null,
+   "detail": "tag cap@Pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 34,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 34,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 37,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 37,
+   "fact_id": null,
+   "detail": "blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 37,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 37,
+   "fact_id": null,
+   "detail": "tag zz"
+  }
+ ]
+}

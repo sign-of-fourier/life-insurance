@@ -1,0 +1,267 @@
+{
+ "case_id": "C0455",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2026-08-10T12:34:00",
+   "text": "8/10 1234 US citizen, US resident - meets eligibility. [FN-1] zz\nOccupation financial analyst (class 1A): STD rating. [OCC]\nPrevious Pinecrest Mutual app in 2021 declined for informational reasons; current evidence applies. [GEN-1] zz\nReviewed Part 1 answers: flagged items 5, context-checked, no impact. [GEN-2]\nSmoker, quit in 02/2024 after 2.5 yrs; fits N/T ladder - cap SP. [TOB-2.3]\nFHx includes mother's breast cancer at 56, father's stroke at 50, father's MI at 66 - meets preferred matrix FH row for std+. [FH-1]"
+  },
+  {
+   "at": "2026-08-10T12:55:00",
+   "text": "8/10 1255 Rx infliximab x30 and vedolizumab x30 from gastroenterology consistent with UC disclosure. [RX-2.2]\nUC profile 'mild' (no APS), APS range 0-25, no debits (Elite not available d/t ratable impairment history, CLS-5). Cap PP. [APS-6] cap@PP\nMIB 211216 (UC; mild/slight) matches Ulcerative colitis. [MIB-2]\nMIB 010970 (Prior application - life; degree not reported): insurance-activity code - informational.\nOne MVR item ignored: non-moving, not-at-fault, or outside lookback. [MVR-1]\n0 minor moving violation(s) in 3 yrs: +0. [MVR-3]"
+  },
+  {
+   "at": "2026-08-10T13:02:00",
+   "text": "8/10 1302 ord PM, B, U as per REQ-1 grid. [REQ-1]\nord FINQ: FIN-2 exceeds limit/KPE. [FIN-2]"
+  },
+  {
+   "at": "2026-08-13T11:24:00",
+   "text": "8/13 1124 Total coverage $375,000 (applied $250,000 + in force $125,000) vs justified $370,000 (10x income $37,000): 1.01x. Within limits. [FIN-1] zz"
+  },
+  {
+   "at": "2026-08-14T00:23:00",
+   "text": "8/14 0023 bld 5'9\" 196 lb (measured), BMI 28.9: pref column. [BLD-1.1] nfz\nUntreated bloood pressure average 147/84 (PM) used for pref matrix (CLS-5). [BP-1]"
+  },
+  {
+   "at": "2026-08-15T16:09:00",
+   "text": "8/15 1609 Lipids: TC 267, HDL 53, ratio 5.0 - pref matrix row. [LIP-1] nfz\nRemaining blood values within UW limits: no impact. [LAB-2] nfz\nnic negative (urine test 2). [TOB-4.1]\nRemaining urine values within limits: NI. [LAB-2]"
+  },
+  {
+   "at": "2026-08-15T16:51:00",
+   "text": "8/15 1651 rdr KPE approved. [RID-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nFormer cigarette, quit 02/2024 | TOB-2.3 | cap SP\nUlcerative colitis | APS-6 | cap PP\nTOTAL | | +0\nRIDERS | | KPE ok\nCLASS | | Std",
+ "stated_decision": "Standard",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 6,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Ulcerative colitis (dx 01/2024, tx infliximab, vedolizumab); evidence to "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 9,
+   "fact_id": "C0455-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 10,
+   "fact_id": "C0455-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: eczema: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Urine RBC 8/hpf: repeat urinalysis advised; not ratable alone."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 2,
+   "fact_id": null,
+   "detail": "standard -> STD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 3,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 3,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 5,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "non-tobacco -> N/T"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Standard Plus -> SP"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Family history -> FHx"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "Standard Plus -> std+"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 9,
+   "fact_id": null,
+   "detail": "Ulcerative colitis -> UC"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Ulcerative colitis -> UC"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "due to -> d/t"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Ulcerative colitis -> UC"
+  },
+  {
+   "kind": "fragment",
+   "step": 15,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 16,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "typo",
+   "step": 20,
+   "fact_id": null,
+   "detail": "blood -> bloood"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+{
+ "case_id": "C0815",
+ "persona_id": "uw_02",
+ "observations": [
+  {
+   "at": "2025-09-24T12:14:00",
+   "text": "2025-09-24 US citizen, US resident - meets eligibility.\nOccupation pharmacist (class 1A): no rating. [OCC]\nAvocation hiking: not listed as hazardous - no rating.\nReviewed remaining Part 1 answers: no impact (flagged items reviewed in context). [GEN-2]\nDenies tobacco/nicotine use. [TOB-1]\nPsoriasis/psoriatic arthritis disclosed (diagnosed 05/2024, treated with ustekinumab); evidence pending. [GEN-2]\nNAFLD/fatty liver disclosed (diagnosed 01/2023, no treatment); evidence pending. [GEN-2]\nCOPD disclosed (diagnosed 10/2022, treated w/ tiotropium); evidence pending. [GEN-2]\nCrohn's disease disclosed (diagnosed 12/2024, no treatment); evidence pending. [GEN-2]\nReviewed remaining Part 2 answers: no impact."
+  },
+  {
+   "at": "2025-09-24T12:17:00",
+   "text": "2025-09-24 Rx ustekinumab x17 (rheumatology) matches disclosed Psoriasis/psoriatic arthritis. [RX-2.2]\nPsoriasis/psoriatic arthritis: 'skin' profile (default) per app/Rx (no APS in file); 0 debits (Elite not available: history of ratable impairment, CLS-5). => cap Preferred Plus\nRx entecavir x4 (gastroenterology) matches disclosed Chronic hepatitis B. [RX-2.2]\nRx tiotropium x11 (pulmonology) matches disclosed COPD. [RX-2.2]\nMIB 222365 (Hepatitis B; moderate) matches Chronic hepatitis B. [MIB-2]\nMIB 505316 (COPD; moderate) matches COPD. [MIB-2]\nMIB 210315 (Crohn's disease; moderate) matches Crohn's disease. [MIB-2]\n2 minor moving violations in 3 years: +0. [MVR-3]"
+  },
+  {
+   "at": "2025-09-24T13:44:00",
+   "text": "2025-09-24 Order PM, B, U: REQ-3 accel fails (Part 2 yes, high-impact Rx, MIB code) -> next column.\nOrder APS from Dr. Gregory Lucas (gastroenterology): REQ-2.1 impairment may rate >= +50.\nOrder APS from Dr. Jeff Thomas (pulmonology): REQ-2.1 impairment may rate >= +50."
+  },
+  {
+   "at": "2025-10-03T13:39:00",
+   "text": "2025-10-03 COPD: 'mild_smoker' profile (smoker True) per APS. [RSP] => +75"
+  },
+  {
+   "at": "2025-10-04T03:08:00",
+   "text": "2025-10-04 Build 5'8\" 145 lb (measured), BMI 22.0: Elite column (preferred matrix build row: SPNT). [BLD-1.1]\nPulse/other exam items unremarkable: no impact."
+  },
+  {
+   "at": "2025-10-06T22:09:00",
+   "text": "2025-10-06 Lipids TC 286, HDL 42, ratio 6.8 - preferred matrix row.\nAST 96 (2.4x ULN), ALT 92 (2.0x ULN): attributed to fatty liver, hepatitis B - rated there, not added (same finding).\nRemaining blood values within UW normal limits: no impact. [LAB-2]\nnic negative (urine 4).\nRemaining urine values within limits: no impact. [LAB-2]"
+  },
+  {
+   "at": "2025-10-14T12:24:00",
+   "text": "2025-10-14 NAFLD/fatty liver: 'fibrosis' profile (fibrosis F2) per APS. => +75\nChronic hepatitis B: 'carrier' profile (diagnosis documented) per APS. => +50\nCrohn's disease: 'moderate' profile (biologic True) per APS. [GI] => +75\nBlood pressure average 112/85 (PM + APS readings last 12 months); untreated - used for pref matrix (CLS-5). [BP-1]"
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[x] 6. net to class\n[x] 7. preferred matrix and caps\n[x] 8. flat extras\n[x] 9. riders\n[x] 10. amount: T10\ndebits: +75 +75 +50 +75 -> net +275",
+ "stated_decision": "Table 10 (+250%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 2,
+   "fact_id": null,
+   "detail": "not written: Total coverage $225,000 (applied $150,000 + in force $75,000) vs justified $540,000 (30x i"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 7,
+   "fact_id": "C0815-F014",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Part 2 discloses Chronic hepatitis B (dx 09/2028, tx entecavir); evidence to follow."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 13,
+   "fact_id": "C0815-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 14,
+   "fact_id": "C0815-F014",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 14,
+   "fact_id": "C0815-F021",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: hypothyroidism: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Chronic obstructive pulmonary disease -> COPD"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "Cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 37,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 37,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  }
+ ]
+}

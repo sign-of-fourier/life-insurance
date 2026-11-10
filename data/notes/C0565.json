@@ -1,0 +1,259 @@
+{
+ "case_id": "C0565",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2026-07-21T11:21:00",
+   "text": "7/21 1121 US citizen, US resident - eligible. nbd\nOccupation retired (class 1A): no rating. [OCC] nbd\nDenies tobacco/nicotine use. [TOB-1]\nfam hx waived at 70+. nfz\nPart 2 answers reviewed: no impact. [GEN-2]"
+  },
+  {
+   "at": "2026-07-21T11:41:00",
+   "text": "7/21 1141 MIB 805727 (Prostate cancer) reported 11.5 yrs ago - informational. [MIB-3]\nMIB 114715 (Angina/chest pain) not disclosed, no Rx/APS/labs - not rated. [MIB-4] ghost\n1 MVR item non-moving, not-at-fault, or outside lookback - ignored. nfz"
+  },
+  {
+   "at": "2026-07-21T13:57:00",
+   "text": "7/21 1357 ord PM, B, U, EKG, COG, FINQ: REQ-1 grid. [REQ-1]\nOrder APS from Dr. Elizabeth Brown (oncology): REQ-2.2 app vs 3rd-party. [REQ-2.2]\nOrder APS from Dr. Amy Gray (family medicine): REQ-1 grid."
+  },
+  {
+   "at": "2026-07-27T13:00:00",
+   "text": "7/27 1300 Total coverage $2,000,000 applied, $0 in force vs justified $3,160,500: 0.63x. Within limits."
+  },
+  {
+   "at": "2026-07-28T00:23:00",
+   "text": "7/28 0023 bld 5'1/151 lb: Preferred column; age 70+ → Pref Plus. [BLD-1.1] nfz"
+  },
+  {
+   "at": "2026-07-31T17:21:00",
+   "text": "7/31 1721 NT-proBNP 197: within normal (< 450 at age 79). nbd\nRemaining blood values within limits: no impact. [LAB-2] zz\ncot neg (urine). [TOB-4.1] nfz\nRemaining urine values within limits: NI. [LAB-2]"
+  },
+  {
+   "at": "2026-08-11T17:00:00",
+   "text": "8/11 1700 Eczema: low-impact - no impact. [MISC-1]\nAcne: low-impact - no impact. [MISC-1]\nErectile dysfunction: vv-impact - NI. nbd\nBenign_no_rating: low-impact - no impact. [MISC-1]\nProstate adenocarcinoma: best std+. [CA-1] => cap SP cap@SP"
+  },
+  {
+   "at": "2026-08-11T17:51:00",
+   "text": "8/11 1751 rdr CIA declined: age 79 outside 18-75. [RID-2]\nrdr OIR approved. [RID-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nProstate adenocarcinoma, s/p radical prostatecto | - | cap SP\nTOTAL | | +0\nRIDERS | | CIA dcl, OIR ok\nCLASS | | PP",
+ "stated_decision": "Preferred Plus",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "BMI 28.5 just over the Pref Plus column: chose 'Preferred Plus' instead of 'Preferred Plus' -> stated Preferred Plus (golden Standard Plus; more lenient)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 15,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 16,
+   "fact_id": null,
+   "detail": "not written: EKG normal: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Lipids TC 238, HDL 40, ratio 6.0 - preferred matrix row."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 27,
+   "fact_id": null,
+   "detail": "not written: Blood pressure average 139/90 (paramed + APS readings in last 12 months); untreated - used"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Family history -> fam hx"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag ghost"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 13,
+   "fact_id": null,
+   "detail": "values not written: 50, 6321000, 71"
+  },
+  {
+   "kind": "fragment",
+   "step": 14,
+   "fact_id": null,
+   "detail": "values not written: 1.8, 28.5"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "-> -> →"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 18,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 20,
+   "fact_id": null,
+   "detail": "values not written: 6"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Cotinine -> cot"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 20,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 26,
+   "fact_id": null,
+   "detail": "values not written: 15.3, 7"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Standard Plus -> std+"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Standard Plus -> SP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag cap@SP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 30,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

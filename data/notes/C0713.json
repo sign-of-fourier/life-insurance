@@ -1,0 +1,253 @@
+{
+ "case_id": "C0713",
+ "persona_id": "uw_05",
+ "observations": [
+  {
+   "at": "2025-12-16T11:44:00",
+   "text": "12/16 1144 Police officer (3A): no rating. super pref not available (police/fire). [OCC] => cap PP cap@PP\nCurrent cigarettes (2 ppd): tobacco ladder, best std tob. => cap STD, tobacco ladder\nEating disorder disclosed (05/2019); tx none. Evidence pending. [GEN-2]\nPart 2 answers reviewed; no impact. [GEN-2]"
+  },
+  {
+   "at": "2025-12-16T12:26:00",
+   "text": "12/16 1226 MIB 711316 (Polycystic kidney disease): not disclosed; APS needed. [MIB-4] ghost\nMIB 010000 (Prior app - life; unspecified): insurance-activity code - informational. [MIB-6] zz\n1 MVR item non-moving, not-at-fault, outside lookback. Ignored. [MVR-1]"
+  },
+  {
+   "at": "2025-12-16T13:30:00",
+   "text": "12/16 1330 ord PM, B, U, EKG, FINQ. [REQ-1]\nord APS from Dr. Cindy Rosales (psychiatry): REQ-2.1 may rate >= +50. [REQ-2.1]\nord APS from Dr. Tracy Copeland (nephrology): REQ-2.2 app vs 3rd-party. [REQ-2.2]"
+  },
+  {
+   "at": "2025-12-22T10:37:00",
+   "text": "12/22 1037 Coverage $5,000,000 (applied $5,000,000 + in force $0) vs justified $5,280,000 (30x income $176,000): 0.95x. Within limits. [FIN-1] zz"
+  },
+  {
+   "at": "2025-12-27T01:15:00",
+   "text": "12/27 0115 bld 5'9\" 210 lb (measured), BMI 31.0: Std Plus column (preferred matrix).\nPulse/other exam items unremarkable. [GEN-5]\nEKG normal. [CV]"
+  },
+  {
+   "at": "2025-12-28T17:20:00",
+   "text": "12/28 1720 Lipids TC 244, HDL 37, ratio 6.6: pref matrix row.\nRemaining blood values within UW normal limits. [LAB-2]\ncot pos (urine 2265): consistent w/ admitted use. nfz\nRemaining urine values within limits. [LAB-2] nbd"
+  },
+  {
+   "at": "2026-01-18T17:08:00",
+   "text": "1/18 1708 Eating disorder: profile'recent' // APS. postponed 12 mos."
+  },
+  {
+   "at": "2026-01-19T13:56:00",
+   "text": "1/19 1356 Polycystic kidney disease: profile 'normal_egfr' (egfr 110) per APS. [REN-3] => +25\nBP average 127/73 (PM + APS); untreated. [CLS-5] [BP-1] nbd\nMIB 170716 (Abnormal EKG): corroborated by 'r/o' note in APS. Not rated (default). [GRY-8] ghost"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nPolycystic kidney disease | REN-3 | +25\nOccupation police officer | - | cap PP\nAdmits current cigarettes | TOB-2.1 | cap Std\nTOTAL | | +25\nCLASS | | PPN\nPPN 12 mos",
+ "stated_decision": "Postpone",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Prior application: 2021 Northstar Life: postponed - informational; current evidence govern"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 4,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: acne: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 12,
+   "fact_id": null,
+   "detail": "not written: 2 minor moving violation(s) in 3 yrs: +0."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 21,
+   "fact_id": "C0713-F037",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 24,
+   "fact_id": "C0713-F054",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 25,
+   "fact_id": null,
+   "detail": "not written: Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impac"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 2,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 2,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 2,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Standard Tobacco -> std tob"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag ghost"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Cotinine -> cot"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Postpone -> postponed"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 24,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "fragment",
+   "step": 27,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 27,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag ghost"
+  }
+ ]
+}

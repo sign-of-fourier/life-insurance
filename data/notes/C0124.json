@@ -1,0 +1,257 @@
+{
+ "case_id": "C0124",
+ "persona_id": "uw_09",
+ "observations": [
+  {
+   "at": "2026-05-22T09:49:00",
+   "text": "2026-05-22 US citizen, US resident. Eligible. nfz\nStudent occupation (class 1A): no rating. [OCC]\nPrior app 2021, Harborview Life: std - info. [GEN-1]\nEx-smoker, quit 10/2014 (11.6 yrs). NS ladder, best SPNT.\nPart 2: Bipolar disorder (dx 03/2024, no tx). Evidence pending.\nPart 2: Heart failure (mild) (dx 08/2025, tx spironolactone). Evidence pending. nfz\nAcute sinusitis: vv-impact, no-rating list - NI."
+  },
+  {
+   "at": "2026-05-22T12:46:00",
+   "text": "2026-05-22 MIB 010000 (Prior application - life; unspecified): insurance-activity code - informational. [MIB-6] zz\nRx spironolactone x7 (cardiology): matches heart failure/cardiomyopathy. zz\nAcne: low-impact, no-rating list - no impact.\nAcute/vv-impact fills: no impact. [RX-2.1]\n1 MVR item non-moving, not-at-fault, outside lookback - ignored.\n2 minor moving violations in 3 yrs: +0."
+  },
+  {
+   "at": "2026-05-22T13:10:00",
+   "text": "2026-05-22 Order PM, B, U: REQ-3 fails (Part 2 yes). Next column. [REQ-3]\nord AVOQ: REQ-2.5 avocation/aviation disclosed or indicated.\nOrder APS from Dr. Richard Rice (psychiatry): REQ-2.1 may rate >= +50.\nord APS from Dr. Wendy Smith (cardiology): REQ-2.2 app vs 3rd-party discrepancy. [REQ-2.2]"
+  },
+  {
+   "at": "2026-05-25T13:23:00",
+   "text": "2026-05-25 Skydiving 46 jumps/yr: FE $2.5/1000 permanent [AVO] => FE 2.5/perm"
+  },
+  {
+   "at": "2026-06-04T03:07:00",
+   "text": "2026-06-04 Build 5'0\" 136 lb, BMI 26.6: E-class column (Elite preferred). nfz\nPulse/other exam items unremarkable: no impact. nbd"
+  },
+  {
+   "at": "2026-06-07T19:32:00",
+   "text": "2026-06-07 Lipids TC 459, HDL 58, ratio 7.9: +75 (worse of TC and ratio).\nRemaining blood values within UW normal limits: no impact. [LAB-2]\nnic+ negative (urine 2). nbd"
+  },
+  {
+   "at": "2026-06-13T16:05:00",
+   "text": "2026-06-13 Heart failure/cardiomyopathy: profile'mid_ef' (ef 40) per APS. [CV-4]. => +100"
+  },
+  {
+   "at": "2026-06-28T14:57:00",
+   "text": "2026-06-28 Bipolar disorder: profile 'unstable' (hospitalization 1.8 yrs ago) // APS. => +125\nBlood pressure 120/72 avg (para + APS last 12 mos); untreated - pref matrix (CLS-5). [BP-1] nfz"
+  },
+  {
+   "at": "2026-06-28T15:15:00",
+   "text": "2026-06-28 rdr XCR: declined - Table 11 excceeds rider max Table 0. [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nLipids TC 459, HDL 58, ratio 7.9 | LIP-3 | +75\nHeart failure / cardiomyopathy | CV-4 | +100\nBipolar disorder | - | +125\nTOTAL | | +300\nFE | | FE 2.5/perm\nRIDERS | | XC dcl\nCLASS | | T11",
+ "stated_decision": "Table 11 (+275%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 2,
+   "fact_id": null,
+   "detail": "not written: Total coverage $450,000 (applied $300,000 + in force $150,000) vs justified $810,000 (30x "
+  },
+  {
+   "kind": "omitted_step",
+   "step": 5,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 16,
+   "fact_id": "C0124-F026",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 27,
+   "fact_id": null,
+   "detail": "not written: Urine RBC 8/hpf: repeat urinalysis advised; not ratable alone."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 28,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Non-tobacco -> NS"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 6,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 14,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 23,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 30,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 30,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "paramed -> para"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 31,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 31,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 35,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "typo",
+   "step": 35,
+   "fact_id": null,
+   "detail": "exceeds -> excceeds"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "XCR written as legacy/house code 'XC'"
+  }
+ ]
+}

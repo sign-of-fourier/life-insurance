@@ -1,0 +1,167 @@
+{
+ "case_id": "C0384",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2025-08-09T10:24:00",
+   "text": "8/9 1024 Profession professor (Class 1A): no rating [OCC]\nPart 1 responses reviewed: no impact (5 flagged items reviewed).\nFamily history: no parent/sibling CVD or cancer before 65 - SPNT row met [FH-1]\nPart 2 responses reviewed: no impact [GEN-2]"
+  },
+  {
+   "at": "2025-08-09T11:29:00",
+   "text": "8/9 1129 MIB 180623 (Lipid disorder (legacy cardiovascular placement); abnormal test value, significant) reported 14.0 yrs ago / retired code - informational only. [MIB-3]\nRx shows flecainide x21 (cardiology), metoprolol x40 (cardiology) - undisclosed; suggests atrial fibrillation / flutter [RX-3] nbd"
+  },
+  {
+   "at": "2025-08-09T12:39:00",
+   "text": "8/9 1239 ord PM, B, U, EKG: REQ-1 grid [REQ-1]\nord FINQ: FIN-2 exceeds limit / KPE [FIN-2]\nord APS from Dr. Caleb Stanton (cardiology): REQ-2.2 app vs 3rd-party discrepancy [REQ-2.2]"
+  },
+  {
+   "at": "2025-08-12T13:30:00",
+   "text": "8/12 1330 Coverage ttal $3,250,000 (applied $3,000,000 + in force $250,000) vs justified $3,645,000 (15x income $243,000): 0.89x. Within limits [FIN-1]"
+  },
+  {
+   "at": "2025-08-16T01:24:00",
+   "text": "8/16 0124 Pulse/exam items unremarkable: NI [GEN-5]"
+  },
+  {
+   "at": "2025-08-16T03:50:00",
+   "text": "8/16 0350 EKG normal: no impact [CV]"
+  },
+  {
+   "at": "2025-08-17T20:15:00",
+   "text": "8/17 2015 Lipids TC 266, HDL 57, ratio 4.7 - preferred matrix row [LIP-1]\nRemaining blood values within UW normal limits: no impact [LAB-2]\nCotinine negative (urine 31) [TOB-4.1]"
+  },
+  {
+   "at": "2025-09-07T11:12:00",
+   "text": "9/7 1112 AFL / flutter: profile'single_episode' (type single, years since 13.5, echo normal True) per APS [CV-2] => cap pref\nPhysician documents non-compliance (patient non-compliant w/ medications / missed follow-ups) for afib / flutter: +25 on that condition [APS-4]\nBlood pressure average 137/79 (para + APS readings last 12 months); untreated - used for pref matrix (CLS-5) [BP-1]\nRoutine visit content (normal BP readings, exercise notes, legacy labs) reviewed: NI [APS-1]"
+  },
+  {
+   "at": "2025-09-07T12:19:00",
+   "text": "9/7 1219 Rider GIO declined - issue age 57 outside 18-40 [RID-2]\nrdr KPE declined - face exceeds 10x key-person compensation or FIN-Q missing (FIN-2.3) [RID-2]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nPhysician documents non-compliance | APS-4 | +25\nAtrial fibrillation / flutter | CV-2 | cap Pref\nTOTAL | | +25\nRIDERS | | GIO dcl, KPE dcl\nCLASS | | Std",
+ "stated_decision": "Standard",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 4,
+   "fact_id": null,
+   "detail": "not written: Denies all tobacco/nicotine use (APP-2019 form: 5-year question window)."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: Build 5'6\" 184 lb (measured), BMI 29.7: Preferred column (preferred matrix build row: Pref"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 20,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 8,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "typo",
+   "step": 13,
+   "fact_id": null,
+   "detail": "total -> ttal"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Atrial fibrillation -> AFL"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "Preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Atrial fibrillation -> afib"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "paramed -> para"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 23,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

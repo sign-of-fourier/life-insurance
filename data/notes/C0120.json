@@ -1,0 +1,245 @@
+{
+ "case_id": "C0120",
+ "persona_id": "uw_09",
+ "observations": [
+  {
+   "at": "2025-10-08T11:31:00",
+   "text": "2025-10-08 prev app: 2020 Harborview Life postponed, curr evidence governs\nreview: 2 flagged items in context, no impact [GEN-2]\ndenies all tobacco/nicotine use\nmusculoskeletal injury: no-rating, no impact [MISC-1]\nfather CAD dx 54: FH meets PP"
+  },
+  {
+   "at": "2025-10-08T11:39:00",
+   "text": "2025-10-08 MIB 050006 (tobacco/nicotine alert): not corroborated by nic+ or Rx - alert only. [MIB-6] nfz ghost\nMIB 010079 (Prior app - life; unspecified): insurance-activity code - informational. [MIB-6] nbd\nMIB 990368; retired code 11.0 yrs ago; info [MIB-3]\nrosaeca: no-rating, NI [MISC-1] nfz\neczema: no-rating, no impact\n1 MVR ignored: non-moving, not-at-fault, outside lookback"
+  },
+  {
+   "at": "2025-10-08T13:58:00",
+   "text": "2025-10-08 REQ-3 fails (MIB code), next column [REQ-3]\nord APS: REQ-2.2 vs 3rd party discrepancy KTA"
+  },
+  {
+   "at": "2025-10-25T15:33:00",
+   "text": "2025-10-25 Lipids: TC 215, HDL 47, ratio 4.6, preferred row [LIP-1]\nBlood values: no imapct [LAB-2] nbd\nnic: negative (urine 7)\nUrine values: no impact [LAB-2]"
+  },
+  {
+   "at": "2025-11-10T14:41:00",
+   "text": "2025-11-10 Thyroid nodule: profile 'any', 0 dbts, Preferred Plus cap [CLS-5] cap@PP\nBP 133/76: untreated, used for pref matrix [BP-1] [CLS-5]\nRoutine visit: no impact [APS-1]"
+  },
+  {
+   "at": "2025-11-10T14:46:00",
+   "text": "2025-11-10 Rider CTR: approved\nrdr WMD: approved [RID-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nThyroid nodule | - | cap PP\nTOTAL | | +0\nRIDERS | | CTR ok, WMD ok\nCLASS | | PP",
+ "stated_decision": "Preferred Plus",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 2,
+   "fact_id": null,
+   "detail": "not written: Total coverage $100,000 (applied $100,000 + in force $0) vs justified $540,000 (30x income"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Occupation graphic designer (class 1A): no rating."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: MIB 611267 (Hyperthyroidism / Graves; mild / slight) - condition not disclosed; APS needed"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 14,
+   "fact_id": null,
+   "detail": "not written: MIB 525716 (Pulmonary nodule; under investigation / unconfirmed): not disclosed, no corrob"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 15,
+   "fact_id": "C0120-F014",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 15,
+   "fact_id": "C0120-F020",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 17,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: Build 5'4\" 163 lb (measured), BMI 28.0: Pref Plus column (preferred matrix build row: Pref"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 22,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "fragment",
+   "step": 5,
+   "fact_id": null,
+   "detail": "values not written: 1"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 8,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 10,
+   "fact_id": null,
+   "detail": "cotinine -> nic+"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag ghost"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "typo",
+   "step": 15,
+   "fact_id": null,
+   "detail": "rosacea -> rosaeca"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 20,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "typo",
+   "step": 24,
+   "fact_id": null,
+   "detail": "impact -> imapct"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "Cotinine -> nic"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "debits -> dbts"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 27,
+   "fact_id": null,
+   "detail": "tag cap@PP"
+  },
+  {
+   "kind": "fragment",
+   "step": 28,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 32,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  }
+ ]
+}

@@ -10,7 +10,7 @@ _Read PLAN.md first. Update this file at the end of every session._
 | 3 Case design | **done** (pending user review of qa/phase3_coverage.md) | validation PASS, deterministic |
 | 4 Evidence gen | **done** | 4a/4b/4c/4d gates PASS; APS via Nova $1.74 |
 | 5 Golden | **done** | gate PASS; 84% target-band agreement, mismatches categorized (qa/phase5_golden.md); 11 manual reviews |
-| 6 Noisy notes | not started | |
+| 6 Noisy notes | **done** | gate PASS; 12 personas; 94% lines voiced by Nova Lite; stated != golden 87 (54 grey divergence, 33 wrong call) |
 | 7 QA/baseline | not started | |
 | 8 Packaging | not started | |
 
@@ -93,5 +93,13 @@ _Read PLAN.md first. Update this file at the end of every session._
   Guideline: BP-4, APS-6 added; FIN-1.3, FIN-2.3 clarified. 493 APS re-written by Nova; Bedrock total $2.63.
   Known gaps: no-APS conditions use chapter default rows (APS-6) - ~6% of conditions; benign med stop<start in truth (not visible).
 
+- 2026-11-10: Phase 6 done. src/gen_notes.py -> data/notes/<case>.{json,txt} (schemas.Notes); src/check_notes.py -> qa/phase6_notes.md.
+  Code makes all structural corruptions (omitted steps, dropped reasoning, grey divergence by persona leniency x direction,
+  wrong final, worksheet arithmetic, legacy rider codes); Nova Lite voices surviving lines per persona (must keep debits,
+  $, MIB codes, rule ids; no new numbers; retry once else skeleton); code then applies tier 1/2/3 abbreviations, tier-3 tags,
+  typos, case style, timestamps. LLM cache qa/phase6_notes_llm.jsonl (PROMPT_V) -> re-runs are byte-identical and free.
+  Per case avg: 8.2 omitted steps, 2.3 fragments, 2.8 t1 / 10.8 t2 / 7.9 t3 abbreviations, 0.9 typos, 0.8 facts the
+  extraction dropped. Persona fidelity rho >= 0.77 on all params. Phase 6 Nova ~$0.43; Bedrock total $3.06.
+
 ## Next step
-Phase 6: noisy UW notes (personas, staggered observations + worksheet, corruptions logged vs golden steps).
+Phase 7: QA sweep + adversarial baseline (Nova Pro decodes notes +/- extracted JSON -> decision; score vs golden).

@@ -1,0 +1,335 @@
+{
+ "case_id": "C0647",
+ "persona_id": "uw_04",
+ "observations": [
+  {
+   "at": "2025-10-23T11:58:00",
+   "text": "10/23/25 11:58 US citizen. US resident. Eligible. zz; Denies tobacco/nicotine use. APP-2019 form. nbd; Depression/anxiety disclosed in Part 2 (dx 07/2021). No tx. nbd; Frailty findings (71+) in Part 2 (dx 08/2019). No tx. nfz; PART 2 ANSWERS REVIEWED: NO IMPACT."
+  },
+  {
+   "at": "2025-10-23T12:36:00",
+   "text": "10/23/25 12:36 MIB 951967 (Mobility aid / falls) - consistent w/ Frailty (71+) [MIB-2]. nfz"
+  },
+  {
+   "at": "2025-10-23T12:47:00",
+   "text": "10/23/25 12:47 ORDER PM, B, U, COG: REQ-1 GRID.; ord FINQ: FIN-2 over limit/KPE.; ord APS from Dr. Adam Cordova (psychiatry): REQ-2.1 impairment may rate >= +50.; ORD APS FROM DR. TERRY FAULKNER (FAMILY MEDICINE): REQ-2.1 IMPAIRMENT MAY RATE >= +50."
+  },
+  {
+   "at": "2025-10-31T11:27:00",
+   "text": "10/31/25 11:27 Coverage $150,000 ($100,000 + $50,000) vs $172,500 (age 71+): 0.87x."
+  },
+  {
+   "at": "2025-11-01T02:55:00",
+   "text": "11/01/25 02:55 bld 5'5.5\" 194 lb: STD column; age 70+ → Std Plus (BLD-1.8) [BLD-1.1]."
+  },
+  {
+   "at": "2025-11-02T20:52:00",
+   "text": "11/02/25 20:52 Lipids TC 270, HDL 41, ratio 6.6 - pref matrix row. zz; Other blood values within UW normal limits [LAB-2].; cotin neg (urine 3) [TOB-4.1]. nbd"
+  },
+  {
+   "at": "2025-11-19T14:31:00",
+   "text": "11/19/25 14:31 NON-COMPLIANCE DOC'D FOR DEPRESSION/ANXIETY: +25."
+  },
+  {
+   "at": "2025-12-02T11:16:00",
+   "text": "12/02/25 11:16 Depression/anxiety: profile'severe'. +75, cap STD. cap@Std; Frailty findings +50.; Cataracts: low-impact condition - no impact. zz; Musculoskeletal injury: vv-impact condition - no impact. zz; Benign_no_rating: vv-impact condition - no impact.; BP average 130/88; untreated - used for pref matrix. nfz"
+  },
+  {
+   "at": "2025-12-02T13:32:00",
+   "text": "12/02/25 13:32 rdr KPE: approved [RID-1].; Frailty findigs (71+) rated w/o severity detail - ord/obtain APS and hold."
+  }
+ ],
+ "worksheet_format": "C",
+ "worksheet": "physician +25, depression +75, frailty +50 = +125 so PEND-R\ncapped Std from depression\nriders KPE ok",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "Frailty findings (71+) rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'findings'' -> stated Incomplete - holding for APS (golden Table 5 (+125%); stricter)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 2,
+   "fact_id": null,
+   "detail": "not written: Occupation retired (class 1A): no rating."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in conte"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 8,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 16,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 20,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 23,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Frailty findings +50'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 26,
+   "fact_id": null,
+   "detail": "not written: acute sinusitis: low-impact condition on the no-rating list - no impact."
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +125, true +150"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "fragment",
+   "step": 4,
+   "fact_id": null,
+   "detail": "values not written: 5"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 7,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 9,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 9,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 11,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "fragment",
+   "step": 14,
+   "fact_id": null,
+   "detail": "values not written: 345000, 50"
+  },
+  {
+   "kind": "fragment",
+   "step": 15,
+   "fact_id": null,
+   "detail": "values not written: 31.8"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 15,
+   "fact_id": null,
+   "detail": "-> -> →"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Cotinine -> cotin"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 19,
+   "fact_id": null,
+   "detail": "negative -> neg"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "fragment",
+   "step": 22,
+   "fact_id": null,
+   "detail": "values not written: 100"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "Standard -> STD"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 22,
+   "fact_id": null,
+   "detail": "tag cap@Std"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 25,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 27,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "fragment",
+   "step": 28,
+   "fact_id": null,
+   "detail": "values not written: 12"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 28,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 28,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 31,
+   "fact_id": null,
+   "detail": "without -> w/o"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 31,
+   "fact_id": null,
+   "detail": "order -> ord"
+  },
+  {
+   "kind": "typo",
+   "step": 31,
+   "fact_id": null,
+   "detail": "findings -> findigs"
+  }
+ ]
+}

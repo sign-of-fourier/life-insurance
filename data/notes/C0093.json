@@ -1,0 +1,387 @@
+{
+ "case_id": "C0093",
+ "persona_id": "uw_09",
+ "observations": [
+  {
+   "at": "2025-08-01T10:50:00",
+   "text": "2025-08-01 US citizen, US resident - eligible.\nCoverage $1,500,000 (applied + in force $0) vs justified $4,660,000 (20x income $233,000): 0.32x. Within limits.\nPrior app: 2022 Harborview Life: issued +150 - informational; current evidence governs. [GEN-1] zz\nRemaining Part 1 answers reviewed: no impact (2 items flagged relevant reviewed in context). [GEN-2] zz\nPart 2 discloses Cutaneous SLE (dx 12/2016, tx belimumab, mycophenolate); evidence to follow. [GEN-2] nbd\nPart 2 discloses BRCA/Lynch positive (no cancer) (dx 02/2016, tx none); evidence to follow.\nBRCA/Lynch pos (no cancer): profile 'no_surgery' (default - attributes not documented) per app/Rx only (no APS in file). => +50"
+  },
+  {
+   "at": "2025-08-01T13:56:00",
+   "text": "2025-08-01 Rx belimumab x21 (rheumatology), mycophenolate x40 (rheumatology) consistent with disclosed Cutaneous lupus. [RX-2.2] nbd\nCutaneous SLE: profile 'cutaneous' (default - attributes not documented) // app/Rx only (no APS in file); 0 debits (SPNT unavailable: history of ratable impairment, CLS-5). => cap PP\ngout: vv-impact condition on the no-rating list - no impact. nfz\nvitamin D deficiency: low-impact condition on the no-rating list - NI. [MISC-1]\nRx shows umeclidinium-vilanterol x40 (pulmonology) - not disclosed on the app; indicates COPD. [RX-3]\nCOPD: profile'mild' (default - attributes not documented) // application/Rx only (no APS in file). => +50\nMIB 910427 (Lupus; severe / marked) - consistent w/ Cutaneous SLE. [MIB-2] zz\nMIB 820337 (Genetic predisposition (BRCA/Lynch); moderate) - consistent with BRCA/Lynch pos (no cancer).\nMIB 401367 (Anxiety disorder; moderate) reported 17.4 yrs ago - informational only. nfz\nMIB 222357 (Hepatitis B; moderate) repoted 9.9 yrs ago - informational only. [MIB-3] nbd\n2 major violations in 5 yrs: +75."
+  },
+  {
+   "at": "2025-08-01T14:28:00",
+   "text": "2025-08-01 Order PM, B, U: REQ-1 grid. [REQ-1]\nord APS from Dr. Adam Campbell (psychiatry): REQ-2.2 app vs 3rd-party discrepancy. KTA\nOrder APS from Dr. Jessica Woods (gastroenterology): REQ-2.2 app vs 3rd-party discrepancy. [REQ-2.2] KTA"
+  },
+  {
+   "at": "2025-08-14T05:29:00",
+   "text": "2025-08-14 Build 5'2.5\" 157 lb (measured), BMI 28.3: Pref Plus column (pref matrix bld row: PP). [BLD-1.1] nfz"
+  },
+  {
+   "at": "2025-08-17T21:17:00",
+   "text": "2025-08-17 Lipids TC 242, HDL 36, ratio 6.7 - pref matrix row. [LIP-1]\nAST 93 (2.3x ULN), ALT 98 (2.2x ULN): attributed to hepatitis_b - rated there, not added (same finding).\nCotinine negative (urine 6). [TOB-4.1]"
+  },
+  {
+   "at": "2025-09-05T16:54:00",
+   "text": "2025-09-05 Depression / anxiety: profile'severe' (hospitalization yrs ago 14.2, ect True) // APS (chapter range 75-100). => +75, cap std\nChronic hepatitis B: profile 'carrier' (Dx documented) // APS. [GI] => +50\nBP average 116/77 (para + APS readings in last 12 mos); untreated - used for preferred matrix. nfz"
+  },
+  {
+   "at": "2025-09-05T17:21:00",
+   "text": "2025-09-05 rdr CIA: declined - Table 11 exceeds rdr max Table 2. [RID-2]\nrdr CTR: approved."
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nBRCA/Lynch positive | - | +50\nCOPD | APS-6 | +50\n2 major violation | - | +75\nDepression / anxiety | MH | +75\nChronic hepatitis B | GI | +50\nCutaneous lupus | APS-6 | cap PP\nDepression / anxiety | - | cap Std\nTOTAL | | +300\nRIDERS | | CHR dcl, KR ok\nCLASS | | T11",
+ "stated_decision": "Table 11 (+275%)",
+ "corruptions": [
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 1,
+   "fact_id": "C0093-F006",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 3,
+   "fact_id": null,
+   "detail": "not written: Occupation correctional officer (class 3A): no rating."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 6,
+   "fact_id": null,
+   "detail": "not written: Former cigarette, quit 09/2012 (12.9 yrs): non-tobacco ladder, best Elite."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: MIB 010970 (Prior application - life; degree not reported): insurance-activity code - info"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 27,
+   "fact_id": null,
+   "detail": "not written: Pulse/other exam items unremarkable: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 30,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 32,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 34,
+   "fact_id": null,
+   "detail": "not written: Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impac"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "Table 2 -> +150"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 4,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 5,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 7,
+   "fact_id": null,
+   "detail": "lupus -> SLE"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 9,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 9,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 11,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 12,
+   "fact_id": null,
+   "detail": "lupus -> SLE"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Elite -> SPNT"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 12,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "low -> vv"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 13,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "application -> app"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 17,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 17,
+   "fact_id": null,
+   "detail": "lupus -> SLE"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 17,
+   "fact_id": null,
+   "detail": "tag zz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 18,
+   "fact_id": null,
+   "detail": "positive -> pos"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 20,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "typo",
+   "step": 20,
+   "fact_id": null,
+   "detail": "reported -> repoted"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 24,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 24,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "tag KTA"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "Preferred Plus -> PP"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 26,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 28,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 33,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 33,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 33,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 35,
+   "fact_id": null,
+   "detail": "diagnosis -> Dx"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 35,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 36,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 36,
+   "fact_id": null,
+   "detail": "paramed -> para"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 36,
+   "fact_id": null,
+   "detail": "months -> mos"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 36,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 40,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 40,
+   "fact_id": null,
+   "detail": "rider -> rdr"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 41,
+   "fact_id": null,
+   "detail": "Rider -> rdr"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "CIA written as legacy/house code 'CHR'"
+  },
+  {
+   "kind": "rider_code",
+   "step": null,
+   "fact_id": null,
+   "detail": "CTR written as legacy/house code 'KR'"
+  }
+ ]
+}

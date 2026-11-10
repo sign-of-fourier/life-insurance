@@ -1,0 +1,225 @@
+{
+ "case_id": "C0994",
+ "persona_id": "uw_11",
+ "observations": [
+  {
+   "at": "2025-03-30T10:26:00",
+   "text": "2025-03-30 Total coverage $1,500,000 (applied $1,500,000 + in force $0) vs justified $2,805,000 (15x income $187,000): 0.53x. Within limits.\nOccupation warehouse supervisor (class 2A): no rating applied.\nPart 1: remaining answers reviewed, flagged items reviewed in context: no impact.\nFormer cigarette user, quit 12/2003 (21.3 yrs): nonsmoker ladder, best super pref. [TOB-2.3]\nPart 2: discloses Proteinuria (dx 09/2023, no tx); evidence to follow. nbd\nPart 2: discloses TIA (dx 03/2001, no tx); evidence to follow.\nTIA: profile 'older' (default) from app/Rx only (no APS in file). => +25 | order APS and hold.\nPart 2: discloses Diffuse large B-cell lymphoma (dx 08/2014, no tx); evidence to follow."
+  },
+  {
+   "at": "2025-03-30T11:45:00",
+   "text": "2025-03-30 MIB 808767 (Lymphoma; under investigation / unconfirmed) matches Diffuse large B-cell lymphoma.\nVitamin D deficiency: low-impact, no rating. [MISC-1]\n1 minor moving violation in 3 yrs: +0. [MVR-3]\nMIB 316715 (Demyelinating event / optic neuritis; under investigation / unconfirmed) not disclosed, no corrboration: not rated."
+  },
+  {
+   "at": "2025-03-30T12:01:00",
+   "text": "2025-03-30 Order PM, B, U, EKG: REQ-1 grid.\nord APS from Dr. Anna Obrien (nephrology): REQ-2.1, impairment may rate >= +50.\nord APS from Dr. Tracy Haley (oncology): REQ-2.1, impairment may rate >= +50."
+  },
+  {
+   "at": "2025-04-07T00:30:00",
+   "text": "2025-04-07 bld 5'4\", 124 lb, BMI 21.3: E-class column (preferred matrix bld row: E-class). nfz\nPulse/other exam items unremarkable: no impact. [GEN-5]\nEKG normal: no impact. [CV]"
+  },
+  {
+   "at": "2025-04-11T16:42:00",
+   "text": "2025-04-11 Lipids: TC 258, HDL 39, ratio 6.6 - pref matrix row.\nRemaining blood values within UW normal limits: no impact.\nUrine protein 161: ratd under the renal/diabetes chapter (use the higher). nfz\nRemaining urine values within limits: NI."
+  },
+  {
+   "at": "2025-05-03T15:41:00",
+   "text": "2025-05-03 Diffuse large B-cell lymphoma +50, cap std.\nPhysician documents non-compliance (patient non-compliant w/ medications / missed follow-ups) for Cancer: +25 on that condition.\nBP average 138/73 (PM + APS readings in last 12 mos); untreated - used for preferred matrix."
+  },
+  {
+   "at": "2025-05-05T13:51:00",
+   "text": "2025-05-05 Proteinuria: urine protein 161 mg/dL (APS): +50; APS stale (last visit 2022-05-27): rated one step worse. => +75"
+  }
+ ],
+ "worksheet_format": "D",
+ "worksheet": "[x] 1. eligibility\n[x] 2. ladder\n[x] 3. knockouts\n[x] 4. impairment debits\n[x] 5. credits\n[ ] 6. net to class:\n[ ] 7. preferred matrix and caps:\n[x] 8. flat extras\n[x] 9. riders\n[x] 10. amount: PEND-R\ndebits: +25 +50 +25 +75 -> net +200",
+ "stated_decision": "Incomplete - holding for APS",
+ "corruptions": [
+  {
+   "kind": "grey_divergence",
+   "step": null,
+   "fact_id": null,
+   "detail": "TIA rated without severity detail: chose 'order/obtain APS and hold' instead of 'default profile 'older'' -> stated Incomplete - holding for APS (golden Table 6 (+150%); stricter)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 1,
+   "fact_id": null,
+   "detail": "not written: US citizen, US resident - eligible."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 10,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 11,
+   "fact_id": null,
+   "detail": "not written: Acute/low-impact fills: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 23,
+   "fact_id": "C0994-F033",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 24,
+   "fact_id": null,
+   "detail": "not written: Cotinine negative (urine 7)."
+  },
+  {
+   "kind": "unstated_assumption",
+   "step": 27,
+   "fact_id": null,
+   "detail": "reasoning dropped, only result written: 'Diffuse large B-cell lymphoma +50, cap Standard'"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 31,
+   "fact_id": null,
+   "detail": "not written: Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impac"
+  },
+  {
+   "kind": "arithmetic_error",
+   "step": null,
+   "fact_id": null,
+   "detail": "worksheet total written +200, true +175"
+  },
+  {
+   "kind": "fragment",
+   "step": 4,
+   "fact_id": null,
+   "detail": "values not written: 2"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "non-tobacco -> nonsmoker"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Elite -> super pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 6,
+   "fact_id": null,
+   "detail": "tag nbd"
+  },
+  {
+   "kind": "typo",
+   "step": 15,
+   "fact_id": null,
+   "detail": "corroboration -> corrboration"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 17,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 18,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 19,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 21,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 22,
+   "fact_id": null,
+   "detail": "preferred -> pref"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 25,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "typo",
+   "step": 25,
+   "fact_id": null,
+   "detail": "rated -> ratd"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 26,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 27,
+   "fact_id": null,
+   "detail": "Standard -> std"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 28,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 29,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 29,
+   "fact_id": null,
+   "detail": "paramed -> PM"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 29,
+   "fact_id": null,
+   "detail": "months -> mos"
+  }
+ ]
+}

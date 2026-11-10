@@ -1,0 +1,203 @@
+{
+ "case_id": "C0043",
+ "persona_id": "uw_01",
+ "observations": [
+  {
+   "at": "2025-06-10T10:31:00",
+   "text": "6/10 1031 US citizen, US resident - eligible [FN-1] nfz\nTotal coverage $150,000: $100,000 applied, $50,000 in force; justified $335,000 (5x income $67,000): 0.45x. Within limits [FIN-1]\nOccupation dental hygienist (class 2A): no rating\nReviewed Part 1: no impact (2 items flagged relevant reviewed in context) [GEN-2]\nAdmits current chew: tobacco ladder; pref tob eligible [TOB-3.2]\nPart 2 discloses Left bundle branch block (dx 03/2021, tx none); awaiting evidence [GEN-2]\nLeft bundle branch block: profile 'lbbb' // app/Rx; no APS in file [CV-5] => +25\nUTI: low-impact condition on no-rating list - NI [MISC-1]"
+  },
+  {
+   "at": "2025-06-10T10:53:00",
+   "text": "6/10 1053 MIB 211312 (Ulcerative colitis; moderate) matches UC [MIB-2] nfz\nRx shows budesonide, mesalamine x29; not disclosed; indicates Ulcerative colitis [RX-3]\nAcute/low-impact fills: NI [RX-2.1]"
+  },
+  {
+   "at": "2025-06-10T14:13:00",
+   "text": "6/10 1413 ord PM, B, U: REQ-1 grid [REQ-1]\nord APS from Dr. Kelly Walker (gastroenterology) d/t REQ-2.2 app vs 3rd-party discrepancy [REQ-2.2]"
+  },
+  {
+   "at": "2025-06-17T00:31:00",
+   "text": "6/17 0031 Build 6'0/195 lb lands E-class column (preferred matrix bld row: E-class) [BLD-1.1]\nPulse/other exam items unremarkable: no impact [GEN-5] nfz"
+  },
+  {
+   "at": "2025-06-18T18:00:00",
+   "text": "6/18 1800 Lipids TC 252, HDL 39, ratio 6.5: preferred matrix row [LIP-1]\nCotinine positive (urine 1074) - consistent w/ admitted use [TOB-4.1] nfz"
+  },
+  {
+   "at": "2025-06-24T16:13:00",
+   "text": "6/24 1613 Ulcerative colitis: profile 'no_surveillance' (duration yrs 16, colonoscopy yrs ago 6.6) per APS [GI] => +50\nBP average 133/71 (paramed + APS readings last 12 mos); untreated - used for preferred matrix (CLS-5) [BP-1]"
+  }
+ ],
+ "worksheet_format": "A",
+ "worksheet": "ITEM | RULE | DB\nLeft bundle branch block | CV-5 | +25\nUlcerative colitis | - | +50\nTOTAL | | +75\nCLASS | | TT2",
+ "stated_decision": "Table Tobacco 2 (+50%)",
+ "corruptions": [
+  {
+   "kind": "omitted_step",
+   "step": 9,
+   "fact_id": null,
+   "detail": "not written: Remaining Part 2 answers reviewed: no impact."
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 11,
+   "fact_id": "C0043-F016",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "fact_not_in_extraction",
+   "step": 11,
+   "fact_id": "C0043-F017",
+   "detail": "note relies on a fact the extracted JSON dropped (UW read the source doc)"
+  },
+  {
+   "kind": "omitted_step",
+   "step": 18,
+   "fact_id": null,
+   "detail": "not written: Remaining blood values within UW normal limits: no impact."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 20,
+   "fact_id": null,
+   "detail": "not written: Urine RBC 8/hpf: repeat urinalysis advised; not ratable alone."
+  },
+  {
+   "kind": "omitted_step",
+   "step": 21,
+   "fact_id": null,
+   "detail": "not written: Remaining urine values within limits: no impact."
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 1,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 4,
+   "fact_id": null,
+   "detail": "no impact -> no impact"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 5,
+   "fact_id": null,
+   "detail": "Preferred Tobacco -> pref tob"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 7,
+   "fact_id": null,
+   "detail": "per -> //"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 8,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 10,
+   "fact_id": null,
+   "detail": "Ulcerative colitis -> UC"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 10,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 12,
+   "fact_id": null,
+   "detail": "no impact -> NI"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 13,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 14,
+   "fact_id": null,
+   "detail": "Order -> ord"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 14,
+   "fact_id": null,
+   "detail": "due to -> d/t"
+  },
+  {
+   "kind": "fragment",
+   "step": 15,
+   "fact_id": null,
+   "detail": "values not written: 26.4"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "build -> bld"
+  },
+  {
+   "kind": "abbrev_t2",
+   "step": 15,
+   "fact_id": null,
+   "detail": "Elite -> E-class"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 16,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 19,
+   "fact_id": null,
+   "detail": "with -> w/"
+  },
+  {
+   "kind": "abbrev_t3",
+   "step": 19,
+   "fact_id": null,
+   "detail": "tag nfz"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 22,
+   "fact_id": null,
+   "detail": "years -> yrs"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 23,
+   "fact_id": null,
+   "detail": "Blood pressure -> BP"
+  },
+  {
+   "kind": "abbrev_t1",
+   "step": 23,
+   "fact_id": null,
+   "detail": "months -> mos"
+  }
+ ]
+}
