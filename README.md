@@ -2,7 +2,7 @@
 
 Generates ~1000 synthetic life-insurance cases: application + evidence (source docs and noisy
 OCR-style extracted JSON) → noisy human underwriter notes, paired with a golden, fully-traced
-decision. See `PLAN.md` (design) and `STATUS.md` (progress).
+decision. Start with `PROJECT_OVERVIEW.md`; see also `PLAN.md` (design), `STATUS.md` (progress), `EXPERIMENTS.md`, `CHECKPOINT.md`.
 
 ## Layout
 - `src/schemas.py`  data contracts for every layer (Truth → Evidence → Extracted → Golden → Notes)
