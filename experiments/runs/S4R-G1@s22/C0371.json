@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0371",
+ "setup": "S4R-G1",
+ "seed": "22",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 20280,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Breast cancer, stage III\",\n      \"rule_id\": \"CA-1\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": \"SP\",\n      \"flat_extra\": {\n        \"per_thousand\": 7.5,\n        \"years\": 3\n      },\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Former cigarette smoker\",\n      \"rule_id\": \"TOB-2.3\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": \"SP\",\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"High cholesterol\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Breast cancer stage not explicitly stated in APS, assumed stage III\",\n      \"rule_ids\": [\n        \"GRY-6\"\n      ],\n      \"chosen\": \"Stage III assumed based on history and controlled status\"\n    },\n    {\n      \"issue\": \"Potential obstructive sleep apnea pending further evaluation\",\n      \"rule_ids\": [\n        \"GRY-7\"\n      ],\n      \"chosen\": \"Pending further evaluation, no debits applied\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Standard Plus\",\n    \"table\": 0,\n    \"net_debits\": 25,\n    \"flat_extras\": [\n      {\n        \"per_thousand\": 7.5,\n        \"years\": 3\n      }\n    ],\n    \"postpone_months\": null\n  }\n}\n```"
+}

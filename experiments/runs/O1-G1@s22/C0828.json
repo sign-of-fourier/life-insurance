@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0828",
+ "setup": "O1-G1",
+ "seed": "22",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 24573,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"HIV\",\n      \"rule_id\": \"IMM-1\",\n      \"debits\": 100,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Chronic kidney disease (eGFR)\",\n      \"rule_id\": \"REN-1\",\n      \"debits\": 150,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Osteoporosis\",\n      \"rule_id\": \"MISC-1\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Build\",\n      \"rule_id\": \"BLD-1\",\n      \"debits\": 250,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Build within +250 column, but no clear indication of obesity-related conditions.\",\n      \"rule_ids\": [\"BLD-1.6\", \"GRY-0\"],\n      \"chosen\": \"No additional debits for obesity-related conditions.\"\n    },\n    {\n      \"issue\": \"No recent APS for HIV, but stable condition with undetectable viral load and normal CD4 count.\",\n      \"rule_ids\": [\"APS-3\", \"IMM-1\", \"GRY-5\"],\n      \"chosen\": \"Rate based on current evidence.\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Table 8\",\n    \"table\": 8,\n    \"net_debits\": 400,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

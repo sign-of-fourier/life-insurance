@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0785",
+ "setup": "S4R-G1",
+ "seed": "33",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 20325,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Prostate adenocarcinoma, high grade\",\n      \"rule_id\": \"CA-1\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": \"Standard\",\n      \"flat_extra\": {\n        \"per_thousand\": 15,\n        \"years\": 5\n      },\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Build 5'0\\\" 103 lbs\",\n      \"rule_id\": \"BLD-1\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Lipids TC 268, HDL 41, ratio 6.5\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 50,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Triglycerides 202\",\n      \"rule_id\": \"LIP-5\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Build within the Standard column but close to the +25 column\",\n      \"rule_ids\": [\n        \"GRY-1\"\n      ],\n      \"chosen\": \"Standard column\"\n    },\n    {\n      \"issue\": \"No rule applies for the combination of build and prostate cancer\",\n      \"rule_ids\": [\n        \"GRY-0\"\n      ],\n      \"chosen\": \"Standard column for build and Standard for prostate cancer\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Standard\",\n    \"table\": 2,\n    \"net_debits\": 100,\n    \"flat_extras\": [\n      {\n        \"per_thousand\": 15,\n        \"years\": 5\n      }\n    ],\n    \"postpone_months\": null\n  }\n}\n```"
+}

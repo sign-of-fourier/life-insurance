@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0050",
+ "setup": "S4R-G1",
+ "seed": "33",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 20202,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"TIA\",\n      \"rule_id\": \"NEU\",\n      \"debits\": 50,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Pulmonary embolism / DVT\",\n      \"rule_id\": \"CV\",\n      \"debits\": 75,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Obstructive sleep apnea\",\n      \"rule_id\": \"RSP\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Alcohol use\",\n      \"rule_id\": \"ALC\",\n      \"debits\": 100,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": true\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Alcohol use quantity discrepancy between application, APS, and labs\",\n      \"rule_ids\": [\"GRY-11\"],\n      \"chosen\": \"Use the higher stated quantity\"\n    },\n    {\n      \"issue\": \"TIA severity not fully documented\",\n      \"rule_ids\": [\"GRY-5\"],\n      \"chosen\": \"Rate as mild form\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Decline\",\n    \"table\": 0,\n    \"net_debits\": 250,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

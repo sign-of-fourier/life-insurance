@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0255",
+ "setup": "B1-G1",
+ "seed": "22",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 18627,
+ "output": "```json\n{\n  \"items\": [\n    {\"item\": \"Build\", \"rule_id\": \"BLD-1\", \"debits\": 0, \"credits\": 0, \"class_cap\": \"Preferred\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Blood pressure\", \"rule_id\": \"BP-1\", \"debits\": 0, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Cholesterol\", \"rule_id\": \"LIP-1\", \"debits\": 25, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Family history\", \"rule_id\": \"FH-1\", \"debits\": 0, \"credits\": 0, \"class_cap\": \"Preferred\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Type 2 diabetes\", \"rule_id\": \"DM-2\", \"debits\": 125, \"credits\": 0, \"class_cap\": \"Standard\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false}\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Build is just over the Preferred Plus column, but within the Standard column.\",\n      \"rule_ids\": [\"BLD-1.1\", \"BLD-1.4\"],\n      \"chosen\": \"Build is within the Standard column, no additional debits.\"\n    },\n    {\n      \"issue\": \"Cholesterol ratio is at the threshold for Preferred, but TC is above the threshold.\",\n      \"rule_ids\": [\"LIP-2\", \"LIP-3\"],\n      \"chosen\": \"Rated based on TC value, which is above the threshold.\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Standard\",\n    \"table\": 0,\n    \"net_debits\": 125,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

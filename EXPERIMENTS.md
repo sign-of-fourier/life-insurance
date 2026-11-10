@@ -359,7 +359,8 @@ Paired results (95% bootstrap CI excludes 0 = *):
    On grey cases random worked files help as much as similar ones (B1 vs B0 grey +0.09*): the gain there is format.
 3. **All similarity definitions help the worksheet about equally** (+0.09 to +0.13* vs B0); none beats cosine on
    the worksheet (PLS-Cohere -0.035*; VAE worse on partial decisions -0.12*).
-4. **Full guideline: supervised PLS on own tokens is the only practical space that moves the decision level**:
+4. ~~**Full guideline: supervised PLS on own tokens is the only practical space that moves the decision level**~~
+   **(withdrawn - not replicated on seeds 22 / 33, see follow-up runs)**:
    derived band +0.09* vs B0 and +0.07* vs cosine (matches offline: best outcome vote); cosine vs B0 +0.03 ns. The
    stated decision does not follow (+0.02 ns) - Lite's own arithmetic loses it. **Gap guideline: not replicated** -
    cosine also moves the derived band (+0.06* vs B0-G2) and S4R-G2 vs S1-G2 is +0.03 [-0.04, +0.09] ns. One seed;
@@ -378,8 +379,53 @@ Paired results (95% bootstrap CI excludes 0 = *):
    rule ids + removed-rule wording from the example notes and rerun S1-G2 / S4R-G2 (~$0.75).
 8. Absolute level is low (Lite: 14-20% exact, oracle 27%) but off the floor; differences are measurable at n=200.
 
-Not yet done: other two seeds (22, 33) for spread; noisy vs clean golden write-ups as examples (H6); neighbour-vote
-comparison per setup on the same 200 cases (H5).
+Update to 4 and 7 after the follow-up runs below: the PLS decision edge does **not** replicate on seeds 22 / 33, and
+the gap recovery on the decision band does **not** survive stripping rule names from the notes.
+
+### Follow-up runs (2026-11-10, ~$5.5, ~2,800 calls)
+
+Tables: `experiments/runs_n200_s11_forms.md`, `runs_n200_s22.md`, `runs_n200_s33.md`; paired
+`runs_paired_forms_n200_s11.md`, `runs_paired_n200_s22.md`, `runs_paired_n200_s33.md`.
+Forms: N1 = noisy notes (default), N2 = clean golden write-up of the same past case (an upper bound on note
+quality; not available at run time), N3 = noisy notes with rule ids and removed-rule wording stripped (gap arm).
+
+**Seeds 22 / 33 (G1, all 200 test cases each).** Mean over 3 splits:
+
+| Setup | Exact | Band | Derived band | Worksheet | Debits ±25 |
+|---|---|---|---|---|---|
+| B0 no notes | 0.13 | 0.28 | 0.16 | 0.21 | 0.32 |
+| B1 random | 0.12 | 0.27 | 0.15 | 0.27 | 0.35 |
+| S1 cosine | 0.18 | 0.32 | 0.16 | 0.31 | 0.43 |
+| S4R PLS own tokens | 0.12 | 0.28 | 0.19 | 0.31 | 0.40 |
+| O1 oracle | 0.27 | 0.41 | 0.26 | 0.38 | 0.55 |
+
+Paired, per seed (11 / 22 / 33):
+- S1 vs B0 worksheet +0.125* / +0.094* / +0.080*: **replicates**. Exact decision +0.05 / +0.085* / +0.03: small,
+  significant on one seed only.
+- B1 (random) vs B0 worksheet +0.05* / +0.085* / +0.044*: any worked file helps the worksheet.
+- S1 vs B1: debits ±25 better on all seeds (+0.07* / +0.085*on 22/33); worksheet +0.07* / +0.01 / +0.045*.
+- **S4R vs S1 derived band +0.07* / +0.04 ns / -0.03 ns: the PLS edge does not replicate.** S4R exact decision is
+  worse than S1 on seed 22 (-0.085*). Finding 4 is withdrawn: no practical space beats cosine.
+- O1 vs S1: exact +0.07* / +0.11* on 22 / 33, derived band +0.10* / +0.09*: retrieval quality remains the lever.
+
+**H6 - clean write-ups instead of noisy notes (seed 11, G1).**
+- S1-G1-N2 vs S1-G1: derived band +0.12* (0.17 -> 0.29), worksheet +0.08*, class follows items +0.24*, rule ids
+  +0.15*, grey-area flagging +0.19*; but debits ±25 -0.065* (golden write-ups spread debits over more lines); exact
+  decision +0.02 ns.
+- S4R-G1-N2 vs S4R-G1: smaller - rule ids +0.10*, grey flagging +0.27*, class follows +0.10*, debits -0.07*;
+  worksheet +0.03 ns, derived band -0.01 ns.
+- Reading: the noise costs mostly consistency (class from items, rule names, flagging grey areas), less the decision.
+  The cleanest gain is with cosine neighbours. Supports the backlog idea of generating clean notes.
+
+**Gap ablation - strip rule names from the notes (seed 11, G2).**
+- Stripped vs unstripped: S1 derived band -0.06*, worksheet -0.04*, rule ids -0.13*; S4R derived band -0.06*,
+  worksheet -0.03*, debits -0.07*. So part of the earlier recovery came from rule names leaking through the notes.
+- Stripped vs no notes: worksheet still +0.075* (S1) / +0.07* (S4R), class follows +0.10* / +0.05*, partial slice
+  strongest (+0.13* / +0.18*). Derived band +0.005 / +0.025 ns; exact +0.05 / +0.02 ns.
+- Reading: without rule names, notes still teach the worksheet but no longer restore the decision level on the
+  gap guideline. Grey-area flagging stays at 0 in all G2 runs (the GRY chapter is gone and nothing replaces it).
+
+Not yet done: neighbour-vote comparison per setup on the same 200 cases (H5, free); hybrid cosine + PLS neighbours.
 
 ### PLS target: ordinal decision (offline, 2026-11-10)
 

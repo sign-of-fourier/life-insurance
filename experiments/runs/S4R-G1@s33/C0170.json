@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0170",
+ "setup": "S4R-G1",
+ "seed": "33",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 18142,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Stroke\",\n      \"rule_id\": \"CV-1\",\n      \"debits\": 100,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": 12,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Alcohol consumption\",\n      \"rule_id\": \"ALC\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Lipid profile\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 50,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Julie's most recent stroke was 0.4 years ago, which is within the 1-2 years range for stroke debits.\",\n      \"rule_ids\": [\"CV-1\", \"GRY-1\"],\n      \"chosen\": \"The stroke is within the 1-2 years range, so a debit of +100 is applied.\"\n    },\n    {\n      \"issue\": \"Julie's lipid profile shows a TC/HDL ratio of 6.7, which is within the +50 debit range.\",\n      \"rule_ids\": [\"LIP-3\", \"GRY-1\"],\n      \"chosen\": \"The TC/HDL ratio of 6.7 falls within the +50 debit range, so a debit of +50 is applied.\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Table 2\",\n    \"table\": 2,\n    \"net_debits\": 175,\n    \"flat_extras\": [],\n    \"postpone_months\": 12\n  }\n}\n```"
+}

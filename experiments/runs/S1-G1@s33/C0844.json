@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0844",
+ "setup": "S1-G1",
+ "seed": "33",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 19399,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Former cigarette use\",\n      \"rule_id\": \"TOB-2.3\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": \"Standard Plus\",\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Polycystic kidney disease\",\n      \"rule_id\": \"REN-3\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Pulmonary embolism / DVT\",\n      \"rule_id\": \"CV-1\",\n      \"debits\": 100,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": 6,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Elevated cholesterol\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Elevated triglycerides\",\n      \"rule_id\": \"LIP-5\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Pulmonary embolism / DVT is controlled but recent, leading to a postponement.\",\n      \"rule_ids\": [\"CLS-7.4\", \"CV-1\"],\n      \"chosen\": \"Postpone for 6 months.\"\n    },\n    {\n      \"issue\": \"Polycystic kidney disease has a stable eGFR but is not well-documented in the APS.\",\n      \"rule_ids\": [\"REN-3\", \"APS-3\"],\n      \"chosen\": \"Rate based on current stable condition.\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Standard\",\n    \"table\": 1,\n    \"net_debits\": 125,\n    \"flat_extras\": [],\n    \"postpone_months\": 6\n  }\n}\n```"
+}

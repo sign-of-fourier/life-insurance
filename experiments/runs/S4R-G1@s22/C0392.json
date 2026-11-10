@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0392",
+ "setup": "S4R-G1",
+ "seed": "22",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 24726,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Current smoker\",\n      \"rule_id\": \"TOB-2.1\",\n      \"debits\": 125,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Barrett's esophagus\",\n      \"rule_id\": \"GI-1\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": 6,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Polycystic kidney disease\",\n      \"rule_id\": \"REN-3\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"High cholesterol/HDL ratio\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 50,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Non-compliance with treatment\",\n      \"rule_id\": \"APS-4\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Non-compliance with treatment for Barrett's esophagus\",\n      \"rule_ids\": [\"APS-4\", \"GRY-5\"],\n      \"chosen\": \"Rate as controlled condition, no additional debits\"\n    },\n    {\n      \"issue\": \"Cotinine positive indicating current smoking\",\n      \"rule_ids\": [\"TOB-4.2\", \"GRY-4\"],\n      \"chosen\": \"Treat as current smoking, tobacco ladder\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"tobacco\",\n    \"risk_class\": \"Standard Tobacco\",\n    \"table\": 1,\n    \"net_debits\": 175,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

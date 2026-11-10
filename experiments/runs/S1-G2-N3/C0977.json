@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0977",
+ "setup": "S1-G2-N3",
+ "seed": "11",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 18571,
+ "output": "```json\n{\n  \"items\": [\n    {\"item\": \"Parkinson's disease\", \"rule_id\": \"NEU\", \"debits\": 50, \"credits\": 0, \"class_cap\": \"Standard\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Frailty findings\", \"rule_id\": \"GER-3\", \"debits\": 50, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Hypertension\", \"rule_id\": \"HTN\", \"debits\": 50, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Chronic pancreatitis\", \"rule_id\": \"GI\", \"debits\": 50, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Alcohol use\", \"rule_id\": \"ALC\", \"debits\": 25, \"credits\": 0, \"class_cap\": \"Standard Plus\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Lipid profile\", \"rule_id\": \"LIP\", \"debits\": 25, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false}\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Moderate alcohol use and its impact on the overall risk classification.\",\n      \"rule_ids\": [\"ALC\", \"CMB-2\"],\n      \"chosen\": \"Alcohol use rated as +25, contributing to Standard Plus class cap.\"\n    },\n    {\n      \"issue\": \"Combining debits from multiple impairments and their impact on the final risk class.\",\n      \"rule_ids\": [\"CMB-1\", \"CMB-2\"],\n      \"chosen\": \"Total debits of +175, resulting in a Table 7 risk class.\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Table 7\",\n    \"table\": 7,\n    \"net_debits\": 175,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

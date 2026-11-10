@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0691",
+ "setup": "S4R-G1",
+ "seed": "22",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 17194,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Build\",\n      \"rule_id\": \"BLD-1.1\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Blood pressure\",\n      \"rule_id\": \"BP-1\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Cholesterol\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Triglycerides\",\n      \"rule_id\": \"LIP-5\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Alcohol consumption\",\n      \"rule_id\": \"ALC\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Triglycerides value is slightly elevated, but not enough to warrant a debit.\",\n      \"rule_ids\": [\"LIP-5\", \"GRY-1\"],\n      \"chosen\": \"Apply a +25 debit for elevated triglycerides.\"\n    },\n    {\n      \"issue\": \"Alcohol consumption is within acceptable limits but at the higher end.\",\n      \"rule_id\": [\"ALC\", \"GRY-1\"],\n      \"chosen\": \"Apply a +25 debit for alcohol consumption.\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Standard Plus\",\n    \"table\": 0,\n    \"net_debits\": 50,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}
