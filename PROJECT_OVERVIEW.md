@@ -234,7 +234,7 @@ reranker $0.9).
 1. **Worksheet scorer** (no LLM judge): rated findings, rule ids, debits and arithmetic, class follows from debits,
    flat extras, grey-area choice — scored against the golden trace.
 2. **Gap guideline (G2):** draft removal list → user review → freeze before any run.
-3. **First LLM runs (Nova Lite, ~$16):** baseline (no examples), random, cosine-Cohere, PLS-own-tokens, VAE, oracle;
+3. **First LLM runs (Nova Lite, ~$10–12 after dropping PCA, reranker and fine-tuned retriever; re-measured on a 10-case pilot before the full run):** baseline (no examples), random, cosine-Cohere, PLS-own-tokens, VAE, oracle;
    whole-case and chunked; each with full and gap guideline. Compare to the neighbour vote (H5).
 4. **Noisy notes vs clean golden write-ups** as the examples, on the best two setups (cost of the noise, H6).
 5. Optional: small Nova Pro check (2 setups × 50 cases, ~$3) to see whether the ranking holds on a stronger model.

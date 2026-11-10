@@ -20,7 +20,7 @@ recorded in `EXPERIMENTS.md`):
 
 **Next step (not started):** build the worksheet scorer (model output vs golden trace: rated findings, rule ids,
 debits, class, flat extras, grey-area choice); draft the guideline-gap (G2) removal list and **show it to the user
-before freezing it**; then the first LLM runs (Nova Lite; ~$16 for the full matrix — estimate and get approval first).
+before freezing it**; then the first LLM runs (Nova Lite; ~$10–12 for the reduced matrix — measure on a 10-case pilot and get approval first).
 
 ## Decisions made with the user (don't re-litigate)
 

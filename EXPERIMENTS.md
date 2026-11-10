@@ -145,6 +145,10 @@ offline first (same neighbour metrics), price checked before use.
 | Optional Pro check | 2 setups × 50 | 100 | ~$3 |
 | **Total (ex fine-tuning)** | | | **~$16 (+ ~$3 optional)** |
 
+**Re-estimate 2026-11-10** after dropping PCA (dominated), the reranker (no gain) and S5 (deferred): whole case 6
+setups × 2 guideline arms ≈ $5; chunked 4 × 2 ≈ $3.5; H6 ≈ $1; pilots/retries +20% ≈ $2 → **~$10–12**. To be
+re-measured on a 10-case pilot (real prompt sizes) before the full run.
+
 Bedrock spent to date: $3.06 of the $25 cap. Each block runs only after a cost dry-run.
 
 ## Leakage controls
