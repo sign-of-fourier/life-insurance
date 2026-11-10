@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0143",
+ "setup": "S4C-G1",
+ "seed": "11",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 19409,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Alcohol use disorder (treated)\",\n      \"rule_id\": \"ALC\",\n      \"debits\": 75,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Former cigarette use\",\n      \"rule_id\": \"TOB-2.2\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": \"Standard\",\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Elevated cholesterol\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Naltrexone prescription history indicates a long-term treatment for alcohol use disorder, but the applicant has been non-compliant with the medication and missed several appointments.\",\n      \"rule_ids\": [\"RX-2.2\", \"ALC\"],\n      \"chosen\": \"Rated based on the history of treatment and current controlled state as per APS\"\n    },\n    {\n      \"issue\": \"The applicant's weight is slightly above the Standard column for his height, but within the Standard Plus column.\",\n      \"rule_ids\": [\"BLD-1.1\", \"BLD-1.6\"],\n      \"chosen\": \"Rated based on the current weight and height, placing the applicant in the Standard Plus column\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Standard Plus\",\n    \"table\": 2,\n    \"net_debits\": 100,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

@@ -18,9 +18,9 @@ recorded in `EXPERIMENTS.md`):
 - condition extraction (Nova Lite, all 1000) → condition chunks → offline chunk retrieval (beats whole-case)
 - Cohere Rerank 3.5 on chunks: tested on 50 cases, no gain → not used
 
-**Next step (not started):** build the worksheet scorer (model output vs golden trace: rated findings, rule ids,
-debits, class, flat extras, grey-area choice); draft the guideline-gap (G2) removal list and **show it to the user
-before freezing it**; then the first LLM runs (Nova Lite; ~$10–12 for the reduced matrix — measure on a 10-case pilot and get approval first).
+**Done since:** worksheet scorer (`src/score_worksheet.py`), G2 frozen (`src/guideline_variants.py`), LLM runner
+(`src/run_llm.py`), paired comparisons (`src/compare_runs.py`), 200-case Nova Lite matrix (11 setups) — results in
+`EXPERIMENTS.md` and PROJECT_OVERVIEW §6a. **Next:** see PROJECT_OVERVIEW §8 (other seeds, H6, H5). Spent $9.48.
 
 ## Decisions made with the user (don't re-litigate)
 
@@ -50,7 +50,7 @@ before freezing it**; then the first LLM runs (Nova Lite; ~$10–12 for the redu
   (optional), `cohere.embed-v4:0`, `amazon.titan-embed-text-v2:0` (only to re-embed), `cohere.rerank-v3-5:0`
   (only to revisit the reranker). Ping: `python src/llm.py --ping lite`.
 - Spend tracking: `qa/usage.jsonl` (in git) feeds the **global cap** ($25 via `UW_CAP_GLOBAL`), so the running
-  total carries across accounts. Spent so far: **$5.21** (`python src/llm.py --spent`). Caps per batch $2,
+  total carries across accounts. Spent so far: **$9.48** (`python src/llm.py --spent`). Caps per batch $2,
   per session $5 (`UW_CAP_BATCH`, `UW_CAP_SESSION`).
 
 ## What is in git (and what is not)

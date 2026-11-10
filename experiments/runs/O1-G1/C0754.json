@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0754",
+ "setup": "O1-G1",
+ "seed": "11",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 20085,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Alcohol consumption\",\n      \"rule_id\": \"ALC\",\n      \"debits\": 100,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Type 2 diabetes\",\n      \"rule_id\": \"DM-2\",\n      \"debits\": 125,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Schizophrenia/schizoaffective disorder\",\n      \"rule_id\": \"MH\",\n      \"debits\": 150,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Proteinuria\",\n      \"rule_id\": \"REN-2\",\n      \"debits\": 50,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Parkinson's disease\",\n      \"rule_id\": \"NEU\",\n      \"debits\": 75,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Alcohol consumption and diabetes rating interaction\",\n      \"rule_ids\": [\"CMB-2\"],\n      \"chosen\": \"Add +25 for interaction between alcohol and diabetes\"\n    },\n    {\n      \"issue\": \"Parkinson's disease and tobacco ladder\",\n      \"rule_ids\": [\"TOB-2.1\", \"GRY-4\"],\n      \"chosen\": \"Treat as non-smoker since quit over 10 years ago\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Table 16\",\n    \"table\": 16,\n    \"net_debits\": 425,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

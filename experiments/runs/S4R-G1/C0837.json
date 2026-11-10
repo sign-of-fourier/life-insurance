@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0837",
+ "setup": "S4R-G1",
+ "seed": "11",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 24630,
+ "output": "```json\n{\n  \"items\": [\n    {\"item\": \"Type 1 diabetes\", \"rule_id\": \"DM-2\", \"debits\": 150, \"credits\": 0, \"class_cap\": \"Standard\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Depression / anxiety\", \"rule_id\": \"MH-1\", \"debits\": 25, \"credits\": 0, \"class_cap\": \"Standard Plus\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Hypertension\", \"rule_id\": \"HTN\", \"debits\": 25, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Hyperlipidemia\", \"rule_id\": \"LIP-3\", \"debits\": 25, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Build\", \"rule_id\": \"BLD-1\", \"debits\": 0, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Alcohol consumption\", \"rule_id\": \"ALC\", \"debits\": 25, \"credits\": 0, \"class_cap\": \"Standard Plus\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Family history\", \"rule_id\": \"FH-1\", \"debits\": 0, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false}\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Alcohol consumption within the application and APS differs; using higher value from APS.\",\n      \"rule_ids\": [\"ALC-1\", \"GEN-2.1\"],\n      \"chosen\": \"Use APS value of 12 drinks/week.\"\n    },\n    {\n      \"issue\": \"Combination of diabetes and hypertension.\",\n      \"rule_ids\": [\"CMB-2\", \"GEN-6\"],\n      \"chosen\": \"Add +50 interaction debit.\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Standard\",\n    \"table\": 1,\n    \"net_debits\": 200,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

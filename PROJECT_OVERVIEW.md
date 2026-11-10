@@ -188,7 +188,28 @@ flowchart TB
   A5 --> B3[Context grouped by condition<br/>+ one whole-case neighbour for interactions]
 ```
 
-## 6. Conclusions so far (offline — no LLM decisions yet)
+## 6. Conclusions so far
+
+### 6a. LLM runs (Nova Lite, 200 test cases, 11 setups, $3.84)
+
+Model input = the new application only; similar past cases are found from the application alone and their **noisy
+underwriter notes** go into the prompt as few-shot examples. Scored against golden without an LLM judge.
+
+1. **Few-shot from similar cases makes the worksheet clearly better on every slice** (worksheet score 0.21 → 0.33;
+   finds more of the rated items, rates them closer to golden, cites the right rules, does the arithmetic).
+   The stated decision improves only slightly (exact 0.15 → 0.20, not significant at n=200).
+2. **Similar beats random on partial-evidence and clean cases; on grey cases any worked file helps as much** —
+   the grey-case gain is the worksheet format, not the similarity.
+3. **Every definition of similarity (cosine, VAE, PLS) helps the worksheet about equally; none beats plain cosine.**
+4. **PLS on our own tokens (supervised on past outcomes) is the only practical similarity that improves the decision
+   level** (band computed from the model's items 0.15 → 0.24, significant vs no notes and vs cosine).
+5. **Better similarity is the lever:** oracle neighbours (chosen with golden) beat cosine on the decision itself
+   (exact +0.09, band +0.13). No practical space closes that gap; it is widest on grey cases.
+6. **Condition chunks** find the most items and cite rules best, but give a weaker worksheet than whole-case notes.
+7. **Gap guideline:** with notes, performance recovers to the full-guideline level — the notes carry part of the
+   removed grey-area / partial-evidence knowledge.
+
+### 6b. Offline retrieval (no LLM)
 
 Full tables in `EXPERIMENTS.md`. k = 3 neighbours, mean of 3 splits.
 
@@ -211,14 +232,14 @@ Full tables in `EXPERIMENTS.md`. k = 3 neighbours, mean of 3 splits.
 8. **A cross-encoder reranker (Cohere Rerank 3.5) does not help** on condition chunks (50-case paired test): it
    re-orders by topical overlap, not severity, and is worst on grey cases. Dropped.
 
-Spend to date: **$5.21** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
-reranker $0.9).
+Spend to date: **$9.48** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
+reranker $0.9, LLM runs incl. pilots $4.2).
 
 ## 7. Known gaps and caveats
 
 - **Circularity:** golden comes from an engine that reads the guideline, so with the full guideline in context the
   notes can only help as worked examples, not as new knowledge. The **gap arm** exists to test the knowledge
-  question; its removal list is not frozen yet.
+  question (frozen 2026-11-10: GRY chapter, APS-6/3/2, RX-2.4, MIB-4, CA-1, DM-2.4, RSP-2, ALC-1; MIB-1 kept).
 - **No-APS conditions** (~6% of conditions) are rated on the chapter's default row (rule APS-6) and flagged as grey.
 - **Accelerated (no-fluids) path cannot reach Elite**, though the design gave some Elite targets that path.
 - **Item ↔ condition alignment** for chunks is by embedding similarity, with no ground truth; chunk scores include
@@ -226,18 +247,20 @@ reranker $0.9).
   need an LLM to segment them.
 - 2 cases (very large files) produced no extracted items.
 - Flat extras are rare (74 cases), so "match" rates are uninformative; LLM runs will use flat-extra recall.
-- Offline scores judge neighbours, not decisions: **no model has yet produced a decision or worksheet.**
+- LLM results are one seed (200 cases), one run per setup at temperature 0; Lite is sensitive to prompt changes,
+  so differences under ~0.05 are noise. Nova Lite cannot do the class arithmetic reliably, hence the derived band.
+- Matching model worksheet items to golden is by rule chapter + name overlap (no LLM judge); unverified on edge cases.
 - `experiments/chunks/emb_groups.npz` is 58 MB (GitHub warns at 50 MB).
 
 ## 8. Left to test (agreed plan)
 
-1. **Worksheet scorer** (no LLM judge): rated findings, rule ids, debits and arithmetic, class follows from debits,
-   flat extras, grey-area choice — scored against the golden trace.
-2. **Gap guideline (G2):** draft removal list → user review → freeze before any run.
-3. **First LLM runs (Nova Lite, ~$10–12 after dropping PCA, reranker and fine-tuned retriever; re-measured on a 10-case pilot before the full run):** baseline (no examples), random, cosine-Cohere, PLS-own-tokens, VAE, oracle;
-   whole-case and chunked; each with full and gap guideline. Compare to the neighbour vote (H5).
-4. **Noisy notes vs clean golden write-ups** as the examples, on the best two setups (cost of the noise, H6).
-5. Optional: small Nova Pro check (2 setups × 50 cases, ~$3) to see whether the ranking holds on a stronger model.
+Done: worksheet scorer, G2 frozen, pilots (10, 30 cases), main 200-case matrix (11 setups).
+
+1. **Seeds 22 and 33** for the key setups (B0, B1, S1, S4R, O1 × G1) → spread across splits (~$2).
+2. **Noisy notes vs clean golden write-ups** as the examples, on S1 and S4R (cost of the noise, H6, ~$0.8).
+3. **LLM vs neighbour vote** on the same cases (does the model add anything over the free vote? H5, free).
+4. Optional: Nova Pro on 2 setups × 50 cases (~$3) to see whether the ranking holds on a stronger model.
+5. Hybrid worth testing: cosine neighbours for the worksheet + PLS neighbours for the decision (e.g. 2 + 1).
 
 ## 9. Backlog / follow-ups
 

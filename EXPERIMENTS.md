@@ -332,8 +332,47 @@ Paired (95% CI excludes 0 = *):
   level, not as items. Self-test still 1000/1000.
 
 
-| Run | Space | Unit | Guideline | Examples | Exact | Band | Grey: exact | Partial: exact | Rule recall | vs vote | Cost |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+**Main run - 200 cases (seed 11 test split: 57 grey / 54 partial / 89 clean), Nova Lite, temp 0, k=3, 11 setups,
+$3.84 (~2,300 calls incl. retries).** Tables: `experiments/runs_n200_s11.md` (by slice, all metrics); paired tests
+`experiments/runs_paired_n200_s11.md`, `runs_paired_spaces_n200_s11.md`, `runs_paired_gap_n200_s11.md`.
+"Derived band" = class band computed in code from the model's own items (rating judgement without Lite's arithmetic).
+
+| Setup | Similar = | Guideline | Exact | Band | Derived band | Worksheet | Item recall | Debits ±25 | Rule ids |
+|---|---|---|---|---|---|---|---|---|---|
+| B0-G1 | (no notes) | full | 0.15 | 0.29 | 0.15 | 0.21 | 0.45 | 0.31 | 0.61 |
+| B1-G1 | random | full | 0.14 | 0.30 | 0.15 | 0.26 | 0.50 | 0.35 | 0.64 |
+| S1-G1 | cosine, Cohere v4 | full | **0.20** | 0.31 | 0.17 | **0.33** | 0.60 | 0.44 | 0.68 |
+| S3-G1 | VAE, Cohere v4 | full | 0.14 | 0.29 | 0.16 | 0.32 | 0.60 | 0.44 | - |
+| S4C-G1 | PLS, Cohere v4 | full | 0.17 | 0.33 | 0.18 | 0.30 | 0.60 | 0.44 | - |
+| S4R-G1 | PLS, own tokens | full | 0.17 | 0.31 | **0.24** | 0.32 | 0.57 | 0.41 | - |
+| U2-G1 | condition chunks, cosine | full | 0.17 | 0.29 | 0.17 | 0.26 | 0.63 | 0.41 | **0.78** |
+| O1-G1 | oracle (golden) | full | 0.27 | 0.43 | 0.28 | 0.39 | 0.68 | 0.55 | 0.72 |
+| B0-G2 | (no notes) | gap | 0.14 | 0.28 | 0.13 | 0.21 | 0.54 | 0.36 | 0.59 |
+| S1-G2 | cosine, Cohere v4 | gap | 0.18 | 0.32 | 0.19 | 0.33 | 0.61 | 0.44 | 0.68 |
+| S4R-G2 | PLS, own tokens | gap | 0.14 | 0.32 | 0.21 | 0.31 | 0.58 | 0.47 | - |
+
+Paired results (95% bootstrap CI excludes 0 = *):
+1. **Few-shot from similar cases improves the worksheet on every slice**: S1 vs B0 worksheet +0.125* (grey +0.10*,
+   partial +0.17*, clean +0.12*), item recall +0.14*, precision +0.11*, debits +0.13*, rule ids +0.09*.
+   Exact decision +0.05 [-0.01, +0.11] (ns); partial +0.10 (ns).
+2. **Similarity beats random except on grey**: S1 vs B1 worksheet +0.07* (partial +0.09*, clean +0.10*, grey +0.00).
+   On grey cases random worked files help as much as similar ones (B1 vs B0 grey +0.09*): the gain there is format.
+3. **All similarity definitions help the worksheet about equally** (+0.09 to +0.13* vs B0); none beats cosine on
+   the worksheet (PLS-Cohere -0.035*; VAE worse on partial decisions -0.12*).
+4. **Supervised PLS on own tokens is the only practical space that moves the decision level**: derived band +0.09*
+   vs B0 and +0.07* vs cosine (matches offline: best outcome vote). The stated decision does not follow (+0.02 ns) -
+   Lite's own arithmetic loses it.
+5. **Retrieval quality is the lever**: oracle vs cosine exact +0.09*, band +0.13*, derived band +0.11*. No practical
+   space closes this gap; the grey slice is where it is widest (derived band 0.30 vs ~0.17).
+6. **Chunks** (U2) find the most items and cite rules best (rule ids +0.15* vs B0) but the worksheet gains less
+   (+0.045*) - no worked worksheet to copy, so the arithmetic suffers.
+7. **Gap guideline**: without notes it mainly loses grey-area flagging (GRY recall -0.10*). With notes it recovers to
+   the full-guideline level (S1-G2 vs B0-G2 worksheet +0.12*, derived band +0.06*; S4R-G2 vs B0-G2 worksheet +0.10*,
+   derived band +0.08*), i.e. the notes carry part of what was removed.
+8. Absolute level is low (Lite: 14-20% exact, oracle 27%) but off the floor; differences are measurable at n=200.
+
+Not yet done: other two seeds (22, 33) for spread; noisy vs clean golden write-ups as examples (H6); neighbour-vote
+comparison per setup on the same 200 cases (H5).
 
 ### PLS target: ordinal decision (offline, 2026-11-10)
 

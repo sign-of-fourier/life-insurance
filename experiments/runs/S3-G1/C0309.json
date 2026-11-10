@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0309",
+ "setup": "S3-G1",
+ "seed": "11",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 19538,
+ "output": "```json\n{\n  \"items\": [\n    {\"item\": \"Type 1 diabetes\", \"rule_id\": \"DM-3\", \"debits\": 175, \"credits\": 0, \"class_cap\": \"Standard\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"CAD, s/p PCI/stent\", \"rule_id\": \"CV-1\", \"debits\": 100, \"credits\": 0, \"class_cap\": \"Standard\", \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Build\", \"rule_id\": \"BLD-1.2\", \"debits\": 200, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Interaction surcharge: Build + CAD\", \"rule_id\": \"CMB-2\", \"debits\": 25, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Stroke\", \"rule_id\": \"CLS-7.4\", \"debits\": 0, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": 6, \"decline\": false},\n    {\"item\": \"GERD\", \"rule_id\": \"GERD\", \"debits\": 0, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false},\n    {\"item\": \"Alcohol use\", \"rule_id\": \"ALC\", \"debits\": 25, \"credits\": 0, \"class_cap\": null, \"flat_extra\": null, \"postpone_months\": null, \"decline\": false}\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Alcohol use quantity discrepancy between application and APS\",\n      \"rule_ids\": [\"ALC-1\", \"GRY-11\"],\n      \"chosen\": \"Use higher quantity (application)\"\n    },\n    {\n      \"issue\": \"Stale APS for CAD and stroke\",\n      \"rule_ids\": [\"APS-3\", \"GRY-5\"],\n      \"chosen\": \"Rate as worst documented\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Table 6\",\n    \"table\": 6,\n    \"net_debits\": 415,\n    \"flat_extras\": [],\n    \"postpone_months\": 6\n  }\n}\n```"
+}

@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0908",
+ "setup": "B1-G1",
+ "seed": "11",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 19945,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Atrial fibrillation/flutter\",\n      \"rule_id\": \"CV-2\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": \"Standard Plus\",\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Alcohol consumption\",\n      \"rule_id\": \"ALC\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": \"Standard Plus\",\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Hyperlipidemia\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 50,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"TIA\",\n      \"rule_id\": \"NEU\",\n      \"debits\": 50,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Alcohol consumption level\",\n      \"rule_ids\": [\"ALC-1\", \"GEN-2.1\"],\n      \"chosen\": \"Use higher value from application and APS\"\n    },\n    {\n      \"issue\": \"Hyperlipidemia ratio\",\n      \"rule_ids\": [\"LIP-3\", \"LIP-4\"],\n      \"chosen\": \"Use worse of TC row and ratio row\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Standard Plus\",\n    \"table\": 1,\n    \"net_debits\": 100,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}
