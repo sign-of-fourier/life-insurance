@@ -647,7 +647,7 @@ def build_notes(cid: str, budget=None, use_llm=True, cache=None):
     entries = group_entries(plan)
     voiced, rec = voice(plan, entries, budget, use_llm, cache)
     r, P = plan.r, plan.P
-    obs = []
+    obs, line_map = [], []
     for ei, (at, items) in enumerate(entries):
         out = []
         for li, (s, _) in enumerate(items):
@@ -663,12 +663,15 @@ def build_notes(cid: str, budget=None, use_llm=True, cache=None):
                 t += " " + " ".join(tags)
             t = typos(t, P, r, plan.log, s.step)
             out.append(casefix(t, P, r))
+            line_map.append({"entry": ei, "step": s.step, "stage": stage(s), "rule_id": s.rule_id, "fact_ids": s.fact_ids,
+                             "text": out[-1]})
         sep = "\n" if P["sentences"] >= 0.5 else (" / " if P["entries"] != "per_doc" else "; ")
         obs.append(NoteEntry(at=at, text=f"{stamp(at, P, r)} " + sep.join(out)))
     ws = worksheet(plan)
     ws = casefix(ws, P, r) if P["case"] != "mixed" else ws
     n = Notes(case_id=cid, persona_id=plan.pid, observations=obs, worksheet_format=P["worksheet"], worksheet=ws,
               stated_decision=plan.stated, corruptions=plan.log)
+    n._lines = line_map
     return n, rec
 
 
@@ -678,6 +681,8 @@ def write(n: Notes):
     P = PERS[n.persona_id]
     txt = [f"UW: {P['name']}"] + [e.text for e in n.observations] + ["", "--- worksheet ---", n.worksheet]
     (OUT / f"{n.case_id}.txt").write_text("\n".join(txt) + "\n")
+    if getattr(n, "_lines", None) is not None:   # sidecar: which golden step each written line came from (chunking)
+        (OUT / f"{n.case_id}.lines.json").write_text(json.dumps(n._lines, indent=0, ensure_ascii=False))
 
 
 def all_ids():

@@ -178,8 +178,43 @@ _Recorded per run in `experiments/<run_id>.jsonl` (config + per-case outputs + s
 
 ### Offline retrieval quality
 
-| Space | Unit | Repr | P@3 conditions | Grey-area overlap | Same-vendor rate | Notes |
-|---|---|---|---|---|---|---|
+Run 2026-11-10, whole-case unit (U1), k=3, mean ± sd over 3 splits. Full table: `experiments/offline_retrieval.md`
+(`src/retrieval.py`). Embedding cost $0.62 (Titan v2 whole: 107/1000 inputs truncated to 8K tokens; Cohere v4: none).
+
+Columns: **coverage** = share of the query's rated conditions found in any of the 3 neighbours; **grey** = grey
+queries, share of neighbours sharing a GRY rule; **vote** = neighbour-vote band accuracy (majority-band prior 0.157);
+**vendor** = vendor-schema overlap with the query (format matching; random 0.274).
+
+| Space | Repr | Coverage | Grey share | Vote (all) | Vote (grey) | Vote (partial) | Vendor |
+|---|---|---|---|---|---|---|---|
+| oracle | golden | 0.80 | 0.85 | 0.95 | 0.99 | 0.93 | 0.30 |
+| cosine | Cohere v4 | **0.60** | 0.24 | 0.21 | 0.25 | 0.20 | 0.37 |
+| PCA | Cohere v4 | 0.58 | 0.22 | 0.18 | 0.19 | 0.18 | 0.37 |
+| PLS | Cohere v4 | 0.56 | 0.29 | 0.17 | 0.18 | 0.19 | 0.37 |
+| VAE | Cohere v4 | 0.53 | 0.25 | 0.18 | 0.16 | 0.18 | 0.36 |
+| cosine | own tokens (R2) | 0.55 | 0.17 | 0.17 | 0.14 | 0.19 | 0.48 |
+| PLS | own tokens (R2) | 0.51 | **0.39** | **0.23** | 0.17 | **0.32** | 0.30 |
+| VAE | own tokens (R2) | 0.50 | 0.19 | 0.16 | 0.13 | 0.15 | 0.34 |
+| PCA (LSA) | own tokens (R2) | 0.46 | 0.21 | 0.15 | 0.09 | 0.19 | 0.53 |
+| cosine | Titan whole | 0.48 | 0.26 | 0.16 | 0.14 | 0.16 | 0.39 |
+| cosine | Titan per-doc mean | 0.49 | 0.17 | 0.14 | 0.11 | 0.14 | **0.60** |
+| random | - | 0.29 | 0.18 | 0.09 | 0.09 | 0.09 | 0.27 |
+
+Findings:
+1. Every space beats random on finding cases with the same conditions (0.45-0.60 vs 0.29), but all are far below
+   the oracle (0.80). Best: plain cosine on Cohere v4.
+2. As predicted, PCA and the VAE do not beat raw cosine (slightly worse on every representation).
+3. Whole-case similarity barely predicts the outcome: neighbour vote 0.14-0.23 vs a 0.16 majority prior. Cases
+   share conditions but not severity/combination, which is what sets the decision. Argues for chunking by condition.
+4. Supervision helps the outcome-relevant parts: PLS on own tokens is best on grey-area sharing (0.39 vs 0.18
+   random) and on the partial-evidence vote (0.32), at some cost in condition coverage.
+5. Format matching is real: Titan per-doc mean and own-token cosine/LSA retrieve by vendor schema (0.48-0.63 vs
+   0.27 random). Cohere v4 and PLS are least affected.
+6. No unsupervised space finds cases with the same partial-evidence pattern (≈ random), as expected: it is an
+   absence (missing APS, undisclosed condition), not something present in the text.
+
+Decision: Cohere v4 is the embedding for R1. Candidates for LLM runs: random, cosine-Cohere, PLS-own-tokens,
+VAE-Cohere (the VAE hypothesis), oracle. PCA dropped from LLM runs (dominated by cosine).
 
 ### Decisions and worksheets
 

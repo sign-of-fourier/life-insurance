@@ -1,0 +1,352 @@
+[
+{
+"entry": 0,
+"step": 1,
+"stage": "application",
+"rule_id": "FN-1",
+"fact_ids": [
+"C0815-F006",
+"C0815-F007",
+"C0815-F008"
+],
+"text": "US citizen, US resident - meets eligibility."
+},
+{
+"entry": 0,
+"step": 3,
+"stage": "application",
+"rule_id": "OCC",
+"fact_ids": [
+"C0815-F001"
+],
+"text": "Occupation pharmacist (class 1A): no rating. [OCC]"
+},
+{
+"entry": 0,
+"step": 4,
+"stage": "application",
+"rule_id": "AVO-1.1",
+"fact_ids": [
+"C0815-F011"
+],
+"text": "Avocation hiking: not listed as hazardous - no rating."
+},
+{
+"entry": 0,
+"step": 5,
+"stage": "application",
+"rule_id": "GEN-2",
+"fact_ids": [
+"C0815-F009",
+"C0815-F010"
+],
+"text": "Reviewed remaining Part 1 answers: no impact (flagged items reviewed in context). [GEN-2]"
+},
+{
+"entry": 0,
+"step": 6,
+"stage": "application",
+"rule_id": "TOB-1",
+"fact_ids": [
+"C0815-F012"
+],
+"text": "Denies tobacco/nicotine use. [TOB-1]"
+},
+{
+"entry": 0,
+"step": 7,
+"stage": "application",
+"rule_id": "GEN-2",
+"fact_ids": [
+"C0815-F014"
+],
+"text": "Psoriasis/psoriatic arthritis disclosed (diagnosed 05/2024, treated with ustekinumab); evidence pending. [GEN-2]"
+},
+{
+"entry": 0,
+"step": 8,
+"stage": "application",
+"rule_id": "GEN-2",
+"fact_ids": [
+"C0815-F015"
+],
+"text": "NAFLD/fatty liver disclosed (diagnosed 01/2023, no treatment); evidence pending. [GEN-2]"
+},
+{
+"entry": 0,
+"step": 10,
+"stage": "application",
+"rule_id": "GEN-2",
+"fact_ids": [
+"C0815-F017"
+],
+"text": "COPD disclosed (diagnosed 10/2022, treated w/ tiotropium); evidence pending. [GEN-2]"
+},
+{
+"entry": 0,
+"step": 11,
+"stage": "application",
+"rule_id": "GEN-2",
+"fact_ids": [
+"C0815-F018"
+],
+"text": "Crohn's disease disclosed (diagnosed 12/2024, no treatment); evidence pending. [GEN-2]"
+},
+{
+"entry": 0,
+"step": 12,
+"stage": "application",
+"rule_id": "GEN-2",
+"fact_ids": [
+"C0815-F013",
+"C0815-F020"
+],
+"text": "Reviewed remaining Part 2 answers: no impact."
+},
+{
+"entry": 1,
+"step": 13,
+"stage": "third_party",
+"rule_id": "RX-2.2",
+"fact_ids": [
+"C0815-F021"
+],
+"text": "Rx ustekinumab x17 (rheumatology) matches disclosed Psoriasis/psoriatic arthritis. [RX-2.2]"
+},
+{
+"entry": 1,
+"step": 14,
+"stage": "third_party",
+"rule_id": "APS-6",
+"fact_ids": [
+"C0815-F014",
+"C0815-F021"
+],
+"text": "Psoriasis/psoriatic arthritis: 'skin' profile (default) per app/Rx (no APS in file); 0 debits (Elite not available: history of ratable impairment, CLS-5). => cap Preferred Plus"
+},
+{
+"entry": 1,
+"step": 15,
+"stage": "third_party",
+"rule_id": "RX-2.2",
+"fact_ids": [
+"C0815-F022"
+],
+"text": "Rx entecavir x4 (gastroenterology) matches disclosed Chronic hepatitis B. [RX-2.2]"
+},
+{
+"entry": 1,
+"step": 16,
+"stage": "third_party",
+"rule_id": "RX-2.2",
+"fact_ids": [
+"C0815-F023"
+],
+"text": "Rx tiotropium x11 (pulmonology) matches disclosed COPD. [RX-2.2]"
+},
+{
+"entry": 1,
+"step": 18,
+"stage": "third_party",
+"rule_id": "MIB-2",
+"fact_ids": [
+"C0815-F027"
+],
+"text": "MIB 222365 (Hepatitis B; moderate) matches Chronic hepatitis B. [MIB-2]"
+},
+{
+"entry": 1,
+"step": 19,
+"stage": "third_party",
+"rule_id": "MIB-2",
+"fact_ids": [
+"C0815-F028"
+],
+"text": "MIB 505316 (COPD; moderate) matches COPD. [MIB-2]"
+},
+{
+"entry": 1,
+"step": 20,
+"stage": "third_party",
+"rule_id": "MIB-2",
+"fact_ids": [
+"C0815-F029"
+],
+"text": "MIB 210315 (Crohn's disease; moderate) matches Crohn's disease. [MIB-2]"
+},
+{
+"entry": 1,
+"step": 22,
+"stage": "third_party",
+"rule_id": "MVR-3",
+"fact_ids": [
+"C0815-F031",
+"C0815-F032"
+],
+"text": "2 minor moving violations in 3 years: +0. [MVR-3]"
+},
+{
+"entry": 2,
+"step": 23,
+"stage": "requirements",
+"rule_id": "REQ-3",
+"fact_ids": [],
+"text": "Order PM, B, U: REQ-3 accel fails (Part 2 yes, high-impact Rx, MIB code) -> next column."
+},
+{
+"entry": 2,
+"step": 24,
+"stage": "requirements",
+"rule_id": "REQ-2.1",
+"fact_ids": [],
+"text": "Order APS from Dr. Gregory Lucas (gastroenterology): REQ-2.1 impairment may rate >= +50."
+},
+{
+"entry": 2,
+"step": 25,
+"stage": "requirements",
+"rule_id": "REQ-2.1",
+"fact_ids": [],
+"text": "Order APS from Dr. Jeff Thomas (pulmonology): REQ-2.1 impairment may rate >= +50."
+},
+{
+"entry": 3,
+"step": 26,
+"stage": "aps",
+"rule_id": "RSP",
+"fact_ids": [
+"C0815-F063"
+],
+"text": "COPD: 'mild_smoker' profile (smoker True) per APS. [RSP] => +75"
+},
+{
+"entry": 4,
+"step": 27,
+"stage": "labs",
+"rule_id": "BLD-1.1",
+"fact_ids": [
+"C0815-F033"
+],
+"text": "Build 5'8\" 145 lb (measured), BMI 22.0: Elite column (preferred matrix build row: SPNT). [BLD-1.1]"
+},
+{
+"entry": 4,
+"step": 28,
+"stage": "labs",
+"rule_id": "GEN-5",
+"fact_ids": [
+"C0815-F035"
+],
+"text": "Pulse/other exam items unremarkable: no impact."
+},
+{
+"entry": 5,
+"step": 29,
+"stage": "labs",
+"rule_id": "LIP-1",
+"fact_ids": [
+"C0815-F036",
+"C0815-F037",
+"C0815-F040"
+],
+"text": "Lipids TC 286, HDL 42, ratio 6.8 - preferred matrix row."
+},
+{
+"entry": 5,
+"step": 30,
+"stage": "labs",
+"rule_id": "CMB-3",
+"fact_ids": [
+"C0815-F042",
+"C0815-F043"
+],
+"text": "AST 96 (2.4x ULN), ALT 92 (2.0x ULN): attributed to fatty liver, hepatitis B - rated there, not added (same finding)."
+},
+{
+"entry": 5,
+"step": 31,
+"stage": "labs",
+"rule_id": "LAB-2",
+"fact_ids": [
+"C0815-F038",
+"C0815-F039",
+"C0815-F041",
+"C0815-F044",
+"C0815-F045",
+"C0815-F046",
+"C0815-F047",
+"C0815-F048",
+"C0815-F049",
+"C0815-F050",
+"C0815-F051",
+"C0815-F052",
+"C0815-F053"
+],
+"text": "Remaining blood values within UW normal limits: no impact. [LAB-2]"
+},
+{
+"entry": 5,
+"step": 32,
+"stage": "labs",
+"rule_id": "TOB-4.1",
+"fact_ids": [
+"C0815-F054"
+],
+"text": "nic negative (urine 4)."
+},
+{
+"entry": 5,
+"step": 33,
+"stage": "labs",
+"rule_id": "LAB-2",
+"fact_ids": [
+"C0815-F055",
+"C0815-F056",
+"C0815-F057",
+"C0815-F058"
+],
+"text": "Remaining urine values within limits: no impact. [LAB-2]"
+},
+{
+"entry": 6,
+"step": 34,
+"stage": "aps",
+"rule_id": "GI",
+"fact_ids": [
+"C0815-F059"
+],
+"text": "NAFLD/fatty liver: 'fibrosis' profile (fibrosis F2) per APS. => +75"
+},
+{
+"entry": 6,
+"step": 35,
+"stage": "aps",
+"rule_id": "GI",
+"fact_ids": [
+"C0815-F060"
+],
+"text": "Chronic hepatitis B: 'carrier' profile (diagnosis documented) per APS. => +50"
+},
+{
+"entry": 6,
+"step": 36,
+"stage": "aps",
+"rule_id": "GI",
+"fact_ids": [
+"C0815-F061"
+],
+"text": "Crohn's disease: 'moderate' profile (biologic True) per APS. [GI] => +75"
+},
+{
+"entry": 6,
+"step": 37,
+"stage": "aps",
+"rule_id": "BP-1",
+"fact_ids": [
+"C0815-F034",
+"C0815-F062",
+"C0815-F064"
+],
+"text": "Blood pressure average 112/85 (PM + APS readings last 12 months); untreated - used for pref matrix (CLS-5). [BP-1]"
+}
+]
