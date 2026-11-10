@@ -305,6 +305,29 @@ output) -> one retry at temp 0.3, same policy for every setup.
   following net). So the stated decision cannot separate setups.
 - Added `derived_coarse`: band computed in code from the model's own items (separates rating judgement from
   arithmetic). Pilot range 0.30-0.60 (n=10, too small to rank setups); neighbour vote baseline offline ~0.39-0.48.
+- Scorer fix after the 30-case pilot: `coarse` now bands by class (Pref / Standard / tables / Postpone / Decline);
+  `derived_coarse` compares against the same derivation applied to golden's own items (like for like).
+
+**Pilot 2 - 30 cases** (12 grey / 9 partial / 9 clean, same 5 setups, $0.26 for 142 calls; tables
+`experiments/runs_n30_s11.md`, paired bootstrap `experiments/runs_n30_s11_paired.txt`; one run per setup, temp 0).
+
+| setup | exact | band | derived band | worksheet | debit within 25 | item P / R | rule ids | arithmetic | class follows |
+|---|---|---|---|---|---|---|---|---|---|
+| B0-G1 | 0.23 | 0.40 | 0.23 | 0.22 | 0.26 | 0.21 / - | 0.66 | see md | see md |
+| S1-G1 | 0.21 | 0.38 | 0.21 | **0.41** | **0.51** | 0.38 | 0.69 | | |
+| U2-G1 | 0.14 | 0.31 | 0.17 | 0.29 | 0.44 | 0.33 | 0.59 | | |
+| B0-G2 | 0.17 | 0.37 | 0.20 | 0.26 | 0.34 | 0.31 | 0.49 | | |
+| S1-G2 | 0.17 | 0.40 | 0.27 | 0.32 | 0.38 | 0.32 | 0.72 | | |
+
+Paired (95% CI excludes 0 = *):
+- S1-G1 vs B0-G1: worksheet +0.20*, debits +0.25*, item precision +0.19*, recall +0.25*, arithmetic +0.24*,
+  class follows +0.14*; **decision, band, derived band: +0.00** (CIs about ±0.1-0.2).
+- U2-G1 vs B0-G1: item recall +0.27*, precision +0.12*, debits +0.19*; worksheet +0.06 (ns); decision -0.10 (ns).
+- S1-G1 vs U2-G1: worksheet +0.12*, arithmetic +0.29* (whole notes include a worked worksheet to copy).
+- B0-G2 vs B0-G1: rule-id agreement -0.09*; others ns. S1-G2 vs B0-G2: rule ids +0.24* (notes restore citations).
+- Reading: notes as few-shot make the Lite worksheet better (finds and rates items more like golden, does the
+  arithmetic) but do not move the decision at n=30. Missing control: B1 (random notes) - the arithmetic / format
+  gains may come from seeing any worked file, not a similar one.
 - Scorer changes from the pilot: zero-effect model lines ignored; tobacco-ladder-only steps scored at decision
   level, not as items. Self-test still 1000/1000.
 

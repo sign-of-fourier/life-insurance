@@ -169,12 +169,14 @@ def label_of(d: dict) -> str:
     return rc
 
 
-def coarse_of(rc: str, table: int, net: int) -> str:
-    if rc in ("Decline", "Postpone"):
+def coarse_of(rc: str, table: int, net: int = 0) -> str:
+    """Class band: Pref (better than Standard) / Standard / T1-2 / T3-4 / T5-8 / T9-16 / Postpone / Decline.
+    For derived decisions rc may be '<=Std' (net <= 0: Standard or better, the matrix decides)."""
+    if rc in ("Decline", "Postpone", "<=Std"):
         return rc
     if rc in ("Table", "Table Tobacco"):
         return "T1-2" if table <= 2 else "T3-4" if table <= 4 else "T5-8" if table <= 8 else "T9-16"
-    return "Standard" if net > 0 else "<=Std"
+    return "Standard" if rc in ("Standard", "Standard Tobacco") else "Pref"
 
 
 def jacc(a: set, b: set) -> float:
@@ -257,14 +259,14 @@ def score(cid: str, output) -> dict:
     mlab = label_of(d)
     r["decision"] = float(mlab == gd.label())
     gnet, mnet = gd.net_debits, num(d.get("net_debits"))
-    r["coarse"] = float(coarse_of(str(d.get("risk_class")), num(d.get("table")), mnet) ==
-                        coarse_of(gd.risk_class, gd.table or 0, gnet))
+    r["coarse"] = float(coarse_of(str(d.get("risk_class")), num(d.get("table"))) == coarse_of(gd.risk_class, gd.table or 0))
     r["band"] = float(mlab in (gd.label(),) or (band(mlab) == band(gd.label()) if mlab else False))
     r["ladder"] = float(str(d.get("ladder")) == str(getattr(gd.ladder, "value", gd.ladder)))
     r["net_abs_err"] = float(abs(mnet - gnet))
     dc, dt, dn = derived(M, d, age(cid))
-    r["derived_coarse"] = float(coarse_of(dc, dt, dn) == coarse_of(gd.risk_class, gd.table or 0, gnet))
-    r["derived_net_err"] = float(abs(dn - gnet))
+    gc, gt, gn = derived(G, {"ladder": str(getattr(gd.ladder, "value", gd.ladder))}, age(cid))   # same derivation on golden items
+    r["derived_coarse"] = float(coarse_of(dc, dt) == coarse_of(gc, gt))
+    r["derived_net_err"] = float(abs(dn - gn))
     nG, nM, nP = len(G), len(M), len(pairs)
     r["item_recall"] = nP / nG if nG else float(nM == 0)
     r["item_precision"] = nP / nM if nM else float(nG == 0)
