@@ -216,6 +216,10 @@ underwriter notes** go into the prompt as few-shot examples. Scored against gold
    neighbours the decision level computed from the model's items rises 0.17 → 0.29 and the class follows the
    items far more often; rule names and grey-area flags improve. The noise costs consistency more than the decision.
    Cleaning or regenerating notes (backlog: fine-tuned notes generator) is worth pursuing.
+9. **For the decision, the LLM adds nothing over a free vote of the same neighbours** (band ≈ vote on all three
+   splits; with PLS neighbours the vote is even better on partial-evidence cases). The LLM's value is the worksheet.
+10. **A stronger model (Nova Pro, 50 cases) keeps the same pattern:** notes improve its worksheet by the same
+   amount (+0.13) and leave the decision unchanged. Pro's worksheets and arithmetic are much better than Lite's.
 
 ### 6b. Offline retrieval (no LLM)
 
@@ -240,8 +244,8 @@ Full tables in `EXPERIMENTS.md`. k = 3 neighbours, mean of 3 splits.
 8. **A cross-encoder reranker (Cohere Rerank 3.5) does not help** on condition chunks (50-case paired test): it
    re-orders by topical overlap, not severity, and is worst on grey cases. Dropped.
 
-Spend to date: **$14.98** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
-reranker $0.9, LLM runs incl. pilots $9.7).
+Spend to date: **$17.64** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
+reranker $0.9, LLM runs incl. pilots $12.4 (Pro check $2.66)).
 
 ## 7. Known gaps and caveats
 
@@ -264,10 +268,11 @@ reranker $0.9, LLM runs incl. pilots $9.7).
 
 Done: worksheet scorer, G2 frozen, pilots (10, 30 cases), main 200-case matrix (11 setups), seeds 22/33, H6, gap ablation.
 
-1. **LLM vs neighbour vote** on the same cases (does the model add anything over the free vote? H5, free).
-2. Optional: Nova Pro on 2 setups × 50 cases (~$3) to see whether the ranking holds on a stronger model.
+Also done: H5 (LLM vs vote), Nova Pro check.
+
+1. **Clean-notes generator, option A** (prompt-only rewrite, ~$3-4 Lite): see `SCOPING_NOTES_GENERATOR.md`.
+2. Use the neighbour vote as a decision hint / fallback next to the LLM worksheet (free to test offline).
 3. Hybrid cosine + PLS neighbours (e.g. 2 + 1): weaker case now that the PLS edge did not replicate; low priority.
-4. Scoping for the clean-notes generator (fine-tuning backlog), now that clean notes are shown to help.
 
 ## 9. Backlog / follow-ups
 

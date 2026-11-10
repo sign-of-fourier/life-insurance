@@ -425,7 +425,35 @@ Paired, per seed (11 / 22 / 33):
 - Reading: without rule names, notes still teach the worksheet but no longer restore the decision level on the
   gap guideline. Grey-area flagging stays at 0 in all G2 runs (the GRY chapter is gone and nothing replaces it).
 
-Not yet done: neighbour-vote comparison per setup on the same 200 cases (H5, free); hybrid cosine + PLS neighbours.
+**H5 - LLM vs free neighbour vote** (`src/h5_vote.py` -> `experiments/h5_vote.md`; no LLM calls). Vote =
+majority golden outcome of the same 3 neighbours whose notes the LLM saw; same class-band scale.
+- Practical spaces: LLM band ≈ vote band on every split (S1: 0.30 vs 0.33, 0.34 vs 0.36, 0.28 vs 0.28; all ns).
+  The LLM agrees with the vote on only ~1/3 of cases, and when it disagrees it is right ~20% of the time.
+- S4R: the vote beats the LLM on partial cases on all three splits (-0.20* to -0.26*): PLS neighbours carry the
+  outcome, Lite does not use it.
+- Random neighbours: LLM beats the vote (+0.08 to +0.12) - just the LLM vs a meaningless vote.
+- Oracle: vote 0.93 is circular (oracle similarity includes the golden band), so not a fair comparison.
+- Reading: for the decision, Lite with notes adds nothing over voting the neighbours' outcomes. Its value is the
+  worksheet (which a vote cannot produce).
+
+**Nova Pro check** (seed 11, 50 stratified cases, B0-G1 and S1-G1, $2.66; `experiments/runs_n50_s11_pro.md`,
+`runs_paired_pro_n50_s11.md`).
+
+| Setup | Exact | Band | Derived band | Worksheet | Debits ±25 | Arithmetic |
+|---|---|---|---|---|---|---|
+| B0 Lite | 0.25 | 0.40 | 0.25 | 0.26 | 0.37 | 0.21 |
+| S1 Lite | 0.18 | 0.33 | 0.20 | 0.39 | 0.49 | 0.39 |
+| B0 Pro | 0.19 | 0.38 | 0.34 | 0.41 | 0.44 | 0.49 |
+| S1 Pro | 0.20 | 0.33 | 0.35 | **0.53** | **0.58** | **0.63** |
+
+- Few-shot helps Pro's worksheet as much as Lite's (+0.13* both); decision unchanged (+0.02 ns), same as Lite.
+- Pro beats Lite on the worksheet (+0.15*) and arithmetic (+0.25*), and on the derived band with notes (+0.14*);
+  its stated decision is not better at n=50. The ranking (notes help worksheet, not decision) holds on Pro.
+- Cost lesson: billed input tokens are 1.4x our estimate on these prompts (Lite and Pro); `run_llm` now applies
+  `TOK_FACTOR = 1.4` to estimates.
+
+Not yet done: hybrid cosine + PLS neighbours (low priority); clean-notes generator - see
+`SCOPING_NOTES_GENERATOR.md`.
 
 ### PLS target: ordinal decision (offline, 2026-11-10)
 

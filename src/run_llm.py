@@ -10,6 +10,8 @@ Examples sources:
   S4C PLS on Cohere v4 (supervised on pool golden outcomes)
   S4R PLS on R2 own field:value TF-IDF tokens (best offline on grey / partial)
   O1  oracle neighbours (golden-trace similarity; upper bound)
+  Example form (optional third part of the setup name): N1 noisy notes (default) · N2 clean golden write-up ·
+  N3 noisy notes with rule ids and removed-rule wording stripped (gap ablation).
   U2  condition chunks: per extracted item of the test case, top-k pool chunks (cosine on Cohere item embeddings);
       each shows the past item's evidence and the note lines the underwriter wrote for it
 Whole-case examples (B1/S1/S4/O1) = the neighbour's full noisy notes (data/notes/<case>.txt), which include the
@@ -25,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
@@ -40,6 +43,7 @@ import score_worksheet as W  # noqa: E402
 
 RUNS = E.EXP / "runs"
 MODEL = "lite"
+TOK_FACTOR = 1.4   # Bedrock-billed input tokens / llm.est_tokens on these prompts (measured on Pro + Lite runs)
 K = 3
 MAX_OUT = 4000
 PROMPT_V = 1
@@ -64,6 +68,31 @@ def guideline(arm: str) -> str:
 
 def notes_text(cid: str) -> str:
     return (E.ROOT / f"data/notes/{cid}.txt").read_text().strip()
+
+
+RULE_RX = re.compile(r"\[[A-Za-z]{2,4}(?:-\d+(?:\.\d+)*)?\]|\b[A-Za-z]{2,4}-\d+(?:\.\d+)*\b")
+GAP_WORDING = [(r"\(?\s*default\s*-\s*attributes not documented\s*\)?", ""), (r"\bdefault\s+profile\b", "profile"),
+               (r"\bdefault\b", ""), (r"\bMIB not corroborated\b", "MIB"), (r"\bnot corroborated\b", ""),
+               (r"\bleast severe\b", ""), (r"\bnext worse\b", ""), (r"\bworst documented\b", "")]
+
+
+def strip_rules(text: str) -> str:
+    """N3: example notes with every rule id and the removed rules' wording taken out (gap ablation)."""
+    t = RULE_RX.sub("", text)
+    for pat, rep in GAP_WORDING:
+        t = re.sub(pat, rep, t, flags=re.I)
+    return re.sub(r"[ \t]{2,}", " ", t)
+
+
+def golden_text(cid: str) -> str:
+    """N2: the clean golden write-up (exists only in the synthetic world; measures the cost of noisy notes)."""
+    t = (E.ROOT / f"data/golden/{cid}.md").read_text()
+    t = re.sub(r"\s*\[F\d{3}(?:, F\d{3})*\]", "", t)          # fact-id tags
+    return re.sub(r"^# .*\n", "", t).strip()
+
+
+def example_text(cid: str, form: str) -> str:
+    return {"N1": notes_text, "N2": golden_text, "N3": lambda c: strip_rules(notes_text(c))}[form](cid)
 
 
 LATENT = {"S3": ("vae", "cohere_whole"), "S4C": ("pls", "cohere_whole"), "S4R": ("pls", "r2")}
@@ -120,7 +149,7 @@ def chunk_examples(cid: str, seed: str) -> str:
     return "\n\n".join(out)
 
 
-def examples(space: str, cid: str, seed: str) -> str:
+def examples(space: str, cid: str, seed: str, form: str = "N1") -> str:
     if space == "B0":
         return ""
     if space == "U2":
@@ -128,14 +157,20 @@ def examples(space: str, cid: str, seed: str) -> str:
         return ("## Notes from past cases with similar items\nFor each risk item found in this application, the notes "
                 "this office's underwriters wrote on similar items in past files.\n\n" + body) if body else ""
     nb = neighbours(space, seed)[cid]
-    body = "\n\n".join(f"### Past case {i}\n{notes_text(p)}" for i, p in enumerate(nb, 1))
+    body = "\n\n".join(f"### Past case {i}\n{example_text(p, form)}" for i, p in enumerate(nb, 1))
     return "## Notes from similar past cases\nUnderwriter notes and worksheets from past files worked by this office.\n\n" + body
 
 
+def model_of(setup: str) -> str:
+    """'S1-G1' -> lite (default); 'S1-G1@pro' -> pro (outputs cached under runs/S1-G1@pro/)."""
+    return setup.split("@", 1)[1] if "@" in setup else MODEL
+
+
 def prompt(setup: str, cid: str, seed: str) -> str:
-    space, arm = setup.split("-")
+    space, arm, *rest = setup.split("@")[0].split("-")              # e.g. S1-G1 (noisy notes) / S1-G1-N2 (golden) / S1-G2-N3 (stripped)
+    form = rest[0] if rest else "N1"
     parts = ["# Company underwriting guideline\n\n" + guideline(arm)]
-    ex = examples(space, cid, seed)
+    ex = examples(space, cid, seed, form)
     if ex:
         parts.append(ex)
     parts.append("# Application file (extracted documents)\n\n" + E.case_text(cid))
@@ -144,8 +179,8 @@ def prompt(setup: str, cid: str, seed: str) -> str:
 
 
 # --------------------------------------------------------------------------- run / score
-def out_path(setup: str, cid: str) -> Path:
-    return RUNS / setup / f"{cid}.json"
+def out_path(setup: str, cid: str, seed: str = "11") -> Path:
+    return RUNS / (setup if seed == "11" else f"{setup}@s{seed}") / f"{cid}.json"
 
 
 def pilot_cases(seed: str, n: int) -> list[str]:
@@ -171,25 +206,25 @@ def ok(text: str) -> bool:
 
 
 def run_one(setup, cid, seed, budget):
-    p = out_path(setup, cid)
+    p = out_path(setup, cid, seed)
     if p.exists():
         rec = json.loads(p.read_text())
         if rec.get("prompt_v") == PROMPT_V and rec.get("seed") == seed and (ok(rec["output"]) or "retried" in rec):
             return rec
     pr = prompt(setup, cid, seed)
-    text = llm.call(MODEL, SYSTEM, pr, max_tokens=MAX_OUT, temperature=0.0, budget=budget, tag=f"run:{setup}:{cid}")
+    text = llm.call(model_of(setup), SYSTEM, pr, max_tokens=MAX_OUT, temperature=0.0, budget=budget, tag=f"run:{setup}:{cid}")
     retried = False
     if not ok(text):                                  # one retry (same policy for every setup): loops / runaway lists
-        text = llm.call(MODEL, SYSTEM, pr, max_tokens=MAX_OUT, temperature=0.3, budget=budget, tag=f"run:{setup}:{cid}:retry")
+        text = llm.call(model_of(setup), SYSTEM, pr, max_tokens=MAX_OUT, temperature=0.3, budget=budget, tag=f"run:{setup}:{cid}:retry")
         retried = True
-    rec = {"retried": retried, "case_id": cid, "setup": setup, "seed": seed, "prompt_v": PROMPT_V, "model": MODEL,
+    rec = {"retried": retried, "case_id": cid, "setup": setup, "seed": seed, "prompt_v": PROMPT_V, "model": model_of(setup),
            "prompt_tokens_est": llm.est_tokens(SYSTEM + pr), "output": text}
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(rec, ensure_ascii=False, indent=1))
     return rec
 
 
-def summarize(setups, cases, out_md: Path):
+def summarize(setups, cases, out_md: Path, seed: str = "11"):
     lab = E.labels()
     keys = ["parsed", "decision", "coarse", "derived_coarse", "ladder", "net_abs_err", "derived_net_err", "item_recall", "item_precision", "rule_acc",
             "debit_close", "arith_ok", "class_follows", "fe_recall", "grey_recall", "overrate_partial", "worksheet"]
@@ -199,7 +234,7 @@ def summarize(setups, cases, out_md: Path):
     for s in setups:
         rows = []
         for c in cases:
-            p = out_path(s, c)
+            p = out_path(s, c, seed)
             if p.exists():
                 r = W.score(c, json.loads(p.read_text())["output"])
                 r["slice"] = E.slice_of(lab[c])
@@ -233,7 +268,7 @@ def main():
     out_md = Path(a.out) if a.out else E.EXP / f"runs_n{len(cases)}_s{a.seed}.md"
     if not a.score_only:
         def cached(s, c):
-            p = out_path(s, c)
+            p = out_path(s, c, a.seed)
             if not p.exists():
                 return False
             rec = json.loads(p.read_text())
@@ -242,7 +277,7 @@ def main():
         toks = {s: [llm.est_tokens(SYSTEM + prompt(s, c, a.seed)) for c in cases] for s in setups}
         for s in setups:
             print(f"{s}: prompt ~{int(np.mean(toks[s])):,} tok mean, max {max(toks[s]):,}")
-        est = sum(llm.cost(MODEL, llm.est_tokens(SYSTEM + prompt(s, c, a.seed)), 1500) for s, c in todo)
+        est = sum(llm.cost(model_of(s), int(TOK_FACTOR * llm.est_tokens(SYSTEM + prompt(s, c, a.seed))), 1500) for s, c in todo)
         print(f"{len(todo)} calls to make (of {len(setups) * len(cases)}), est ${est:.3f} (1.5K out each); "
               f"spent so far ${llm.global_spent():.2f}")
         if a.dry_run:
@@ -251,7 +286,7 @@ def main():
             with ThreadPoolExecutor(a.workers) as ex:
                 list(ex.map(lambda sc: run_one(sc[0], sc[1], a.seed, b), todo))
             print(f"spent this batch ${b.spent:.3f} over {b.calls} calls")
-    summarize(setups, cases, out_md)
+    summarize(setups, cases, out_md, a.seed)
 
 
 if __name__ == "__main__":
