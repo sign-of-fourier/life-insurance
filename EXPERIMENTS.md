@@ -334,3 +334,15 @@ Paired (95% CI excludes 0 = *):
 
 | Run | Space | Unit | Guideline | Examples | Exact | Band | Grey: exact | Partial: exact | Rule recall | vs vote | Cost |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+
+### PLS target: ordinal decision (offline, 2026-11-10)
+
+`src/pls_ordinal.py` -> `experiments/offline_pls_ordinal.md`. V0 = current targets (class rank + separate table /
+decline / postpone columns); V1 = one ordinal rung Elite..Std, T1..T16, Postpone, Decline (equal steps); V2 = same
+order, spacing calibrated on the pool by optimal scoring (alternate PLS <-> isotonic refit of rung values).
+- Ordinal targets: slightly better condition / grey matching on R2 (grey 0.357 -> 0.380, within ~1 sd), clearly
+  worse outcome vote (R2 partial vote 0.358 -> 0.22-0.24). The explicit decline / postpone / table columns are
+  what make neighbours share an outcome. **V0 kept** for the LLM runs.
+- Calibrated spacing (R2): E = PP = P = SP < Std < T1 < T2 < T3..T16 = Postpone = Decline - the application
+  features support ~4 distinguishable levels; severity beyond Table 2 is not predictable from 800 cases.
+- Not tried: price-anchored scale (Std = 100%, +25% per table; calibrate only preferred / Postpone / Decline).

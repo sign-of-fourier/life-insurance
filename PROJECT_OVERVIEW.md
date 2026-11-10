@@ -244,6 +244,7 @@ reranker $0.9).
 | Item | Notes |
 |---|---|
 | **Fine-tuning (H7) — scope first** | Which model (generator vs retriever), where hosted (Bedrock customization vs local GPU), training data (golden write-ups vs noisy notes), cost, eval. GPU needed only for the local route. |
+| Fine-tuned golden-notes generator | Fine-tune a model to write clean golden-style notes for past cases (from their noisy notes / application), then use those as the few-shot examples instead of the noisy notes. Part of fine-tuning scoping. |
 | Fine-tuned retriever (S5) | Train embeddings so cases with similar golden traces sit close; deferred with fine-tuning. |
 | More data for VAE / PLS | Learning curves still rising at 800. Unsupervised VAE needs only applications (~$15–20 for 5000 with LLM-written APS, under $2 with template APS). GPU advisable at that size. |
 | Extract-then-match (S6) | Embed the LLM's structured risk summary instead of raw JSON (partly done via condition extraction). |

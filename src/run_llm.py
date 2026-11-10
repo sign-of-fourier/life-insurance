@@ -6,7 +6,9 @@ neighbours, gap guideline), "U2-G1" (condition chunks, full guideline).
 Examples sources:
   B0  none                       B1  random k pool cases (control: any worked file vs a similar one)
   S1  cosine on Cohere v4 whole-case embedding (best offline whole-case space)
-  S4  PLS on R2 tokens (best supervised space for grey / partial offline)
+  S3  VAE (z=16) on Cohere v4 whole-case embedding
+  S4C PLS on Cohere v4 (supervised on pool golden outcomes)
+  S4R PLS on R2 own field:value TF-IDF tokens (best offline on grey / partial)
   O1  oracle neighbours (golden-trace similarity; upper bound)
   U2  condition chunks: per extracted item of the test case, top-k pool chunks (cosine on Cohere item embeddings);
       each shows the past item's evidence and the note lines the underwriter wrote for it
@@ -64,6 +66,9 @@ def notes_text(cid: str) -> str:
     return (E.ROOT / f"data/notes/{cid}.txt").read_text().strip()
 
 
+LATENT = {"S3": ("vae", "cohere_whole"), "S4C": ("pls", "cohere_whole"), "S4R": ("pls", "r2")}
+
+
 @lru_cache(maxsize=None)
 def neighbours(space: str, seed: str) -> dict:
     """test case -> [pool case ids] for whole-case spaces (k=K)."""
@@ -74,9 +79,10 @@ def neighbours(space: str, seed: str) -> dict:
         nb = R.random_nb(test, pool, K, int(seed))
     elif space == "S1":
         nb = R.neighbours(R.sp_cosine(R.rep_r1("cohere_whole"), pool), test, pool, K)
-    elif space == "S4":
-        X = R.dense_base(R.rep_r2(pool), pool)
-        nb = R.neighbours(R.sp_pls(X, pool), test, pool, K)
+    elif space in LATENT:
+        name, rep = LATENT[space]                       # identical calls to the offline run (retrieval.main)
+        X = R.rep_r2(pool) if rep == "r2" else R.rep_r1(rep)
+        nb = R.neighbours(R.SPACES[name](X, list(pool), seed=int(seed)), test, pool, K)
     elif space == "O1":
         nb = R.oracle(test, pool, K)
     else:
