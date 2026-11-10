@@ -1,0 +1,187 @@
+# EXPERIMENTS — context engineering for underwriting
+
+_Living record: what we test, how, and the results. Update the results tables as runs finish; never edit a
+recorded result without noting why._
+
+## Goal
+
+A new application arrives **without notes**. Find past cases that are similar, put their underwriter notes (and
+decisions) into context as few-shot examples, and have a model reach the decision and write the worksheet. Compare
+different definitions of "similar" (latent-space transformations), different units of retrieval, and different
+guideline contexts. The real test is the **grey-area** and **partial-evidence** cases: do notes from similar cases
+help there?
+
+Known confound: the notes were generated from golden traces produced by an engine that reads the guideline. With
+the full guideline in context, notes can only help as *worked examples*, never as new knowledge. The
+**guideline-gap** arm removes that knowledge from the guideline so that only the notes carry it (H2).
+
+## Task (fixed across all runs)
+
+- **Input:** the case's noisy extracted JSON (`data/extracted/<case>.json`) — what is known at application time.
+  Never the notes, golden, truth, or source docs of the test case.
+- **Context:** guideline text (per arm) + k retrieved examples (per run) + output instructions.
+- **Output (JSON):** decision (ladder, class, table, flat extras, postpone/decline, riders) + worksheet
+  (list of {finding, rule id, effect}) + grey-area choices with reason.
+- **Model:** Nova Lite for the full matrix (we compare architectures, not models; a weaker model also avoids a
+  ceiling where the guideline alone solves the case). Optional Pro check later on 2 setups × 50 cases (~$3).
+- **Not given in any arm:** `reference/abbreviations.yaml` or the guideline appendix on note conventions. Decoding
+  house terminology is part of what is being tested.
+
+## Data and splits
+
+- 1000 cases. Retrieval pool 800 / test 200, stratified so grey-area and partial-evidence cases are represented;
+  repeat over 3 random splits (seeds recorded). The test case is never in the pool. Supervised spaces (PLS, VAE,
+  fine-tuned) train on the pool split only.
+- Slices reported separately:
+  - **grey**: case has ≥1 golden grey area (285 cases overall)
+  - **partial evidence**: no APS in file (APS-6), Rx-only condition (RX-2.4), MIB-only / uncorroborated, stale
+    APS (APS-3), undisclosed condition found by third-party data, facts dropped by extraction
+  - **clean**: neither
+
+## Hypotheses
+
+| ID | Hypothesis | Answered by |
+|---|---|---|
+| H1 | Similar-case notes improve decisions over no examples and over random examples | B0 vs B1 vs S* (full guideline) |
+| H2 | When the guideline has a gap, similar-case notes recover the missing knowledge | each setup, full vs gap guideline |
+| H3 | Supervised latent spaces (PLS, fine-tuned retriever) retrieve better neighbours than unsupervised (cosine, PCA, VAE) | offline retrieval scores + S* runs |
+| H4 | Chunking by condition beats whole-case retrieval, especially on multi-condition and partial-evidence cases | C* vs S* |
+| H5 | Gains come from reasoning over the notes, not from copying the neighbours' decision | LLM runs vs neighbour vote (V*) |
+| H6 | Noisy notes help less than clean golden write-ups (cost of the noise) | best 2 setups × {noisy, golden} |
+| H7 | A fine-tuned model writes better worksheets/explanations than few-shot retrieval | **deferred — not scoped** (see below) |
+
+## Factors
+
+**F1 — Similarity space (how neighbours are chosen)**
+
+| ID | Space | Notes |
+|---|---|---|
+| B0 | none (no examples) | baseline |
+| B1 | random k | control: separates "any worked example" from "similar example" |
+| S1 | cosine on embedding | pretrained text embedding of the application |
+| S2 | PCA on embedding | run only if its neighbours overlap S1's < 80% (expected ≈ S1) |
+| S3 | VAE on representation | unsupervised; expected ≈ PCA on 800 cases, recorded as a measured result |
+| S4 | PLS on representation | supervised; targets = debits by chapter, class rank, grey areas fired |
+| S5 | fine-tuned retriever | embedding trained so cases with similar golden traces are close — **deferred with fine-tuning** |
+| S6 | extract-then-match | LLM turns the application into a structured risk summary; embed/match that |
+| O1 | oracle | neighbours by golden-trace similarity — upper bound on retrieval |
+
+Dropped: keyword/BM25 (needs a complete dictionary; terminology problem). Hand-built structured features are a
+separate workstream.
+
+**F2 — Representation fed to S3/S4 (tokenization question)**
+
+| ID | Representation | Trade-off |
+|---|---|---|
+| R1 | pretrained embedding vector | general semantics; its subword tokenizer splits invented codes (MIB codes, rider codes, vendor field names) into meaningless pieces |
+| R2 | bag of `field:value` tokens (own simple tokenizer, TF-IDF) | every code/drug/field value is an atomic token, so co-occurrence is learned from our data; sparse on 800 cases. Generic, not hand-engineered (unlike structured features) |
+
+Whole JSON is median ~3.5K / p90 ~8.5K tokens; for R1 embed per document and pool, or truncate (decision below).
+
+**F3 — Retrieval unit**
+
+| ID | Unit | How |
+|---|---|---|
+| U1 | whole case | neighbour = a whole past case: summary + full notes + decision |
+| U2 | condition chunk | see "Chunking by condition" below; retrieved per condition, grouped by condition in the prompt |
+
+**F4 — Guideline context**
+
+| ID | Guideline | |
+|---|---|---|
+| G1 | full (~15.5K tokens) | default |
+| G2 | gap | full minus the grey-area chapter (GRY) and the partial-evidence defaults it points to (candidates: RX-2.4, APS-3, APS-6, MIB-4, CA-1 unknown-stage clause, ALC-1 conflict clause; final list frozen before any G2 run) |
+| G3 | retrieved (vector DB over rules) | later, if time; risk: misses cross-cutting grey-area rules |
+
+**F6 — Second-stage reranker (optional)**: X0 none · X1 Cohere Rerank on the top ~20-50 candidates of the best
+first-stage space. Mainly for U2 (short condition snippet as query, condition chunks as candidates — fits the
+reranker's input limits and its query→passage training); whole-case reranking only if input limits allow. Scored
+offline first (same neighbour metrics), price checked before use.
+
+**F5 — Example form**: N1 noisy UW notes (default) · N2 clean golden write-up (H6 only).
+
+## Chunking by condition (U2)
+
+- **Pool side (index):** each golden trace groups facts into conditions, and every note line comes from a trace
+  step with fact ids. So each pool case's notes split into chunks: one per condition (disclosure, Rx/MIB, labs,
+  APS, rating, with its debits/cap) plus case-level chunks (tobacco, build, finance, MVR/avocation, final
+  worksheet). Each chunk is stored with its condition label, evidence snippet, and outcome.
+  - Caveat: our line→condition alignment is free ground truth from generation. Real notes would need segmenting
+    (LLM or rules). Record U2 with oracle segmentation first; add LLM segmentation as a realism check.
+- **Query side:** the new application has no notes, so its conditions must be found from the evidence: an LLM
+  step lists the impairments implied by the extracted JSON with the evidence for each (cannot reuse the engine's
+  clustering — it links facts using truth). Each condition's evidence snippet is embedded and matched against
+  chunks of the same kind across the whole pool, in any of the F1 spaces.
+- **Risks to measure:** query-side detection misses (Rx-only and undisclosed conditions are exactly the
+  partial-evidence slice); interactions between conditions (CMB rules) are lost when chunked — mitigate by adding
+  one whole-case neighbour.
+
+## Free scores (no LLM)
+
+- **Offline retrieval quality** for every space × unit: do the top-k neighbours share the test case's rated
+  conditions and grey areas (vs golden traces)? Precision@k, condition coverage, and diagnostics (same vendor
+  template, same persona) to catch matching on format instead of medicine.
+- **V\* neighbour vote (semi-supervised):** predicted decision = majority/weighted vote of the k neighbours'
+  golden decisions. One per similarity space. If LLM + neighbours ≈ vote, the notes added nothing (H5).
+
+## Metrics
+
+- **Decision:** exact decision, outcome band, ladder correct, decline/postpone correct, |net debit error|.
+- **Worksheet (vs golden trace, no LLM judge):** rated findings recall/precision, rule-id recall, debit
+  arithmetic correct, class follows from stated debits, grey-area choice agrees with golden.
+- **Retrieval:** offline scores above.
+- All reported overall and per slice (grey / partial evidence / clean), mean over splits with spread.
+
+## Run list and cost (Nova Lite, 200 test cases, k=3, ~31K in / 1.5K out per call ≈ $0.0022)
+
+| Block | Setups | Calls | ~Cost |
+|---|---|---|---|
+| Whole case, full guideline | B0, B1, S1, S2?, S3×R1/R2, S4×R1/R2, S5, S6, O1 | ~11 × 200 | $5 |
+| Whole case, gap guideline | same | ~11 × 200 | $5 |
+| Chunked (U2), full + gap | best 3 spaces + O1 | 8 × 200 | $3.5 |
+| Example form (H6) | best 2 setups × golden write-up | 2 × 200 | $1 |
+| Query-side condition extraction (U2), S6 summaries | 1000 cases | 2 × 1000 small | <$1 |
+| Embeddings | 1000 cases + chunks | — | <$0.10 |
+| Optional Pro check | 2 setups × 50 | 100 | ~$3 |
+| **Total (ex fine-tuning)** | | | **~$16 (+ ~$3 optional)** |
+
+Bedrock spent to date: $3.06 of the $25 cap. Each block runs only after a cost dry-run.
+
+## Leakage controls
+
+- The test case is excluded from the pool, the supervised training data, and the oracle.
+- The model sees only the test case's extracted JSON; never its notes, golden, truth, or design.
+- Supervised targets come from pool golden only. G2 is frozen before any G2 run.
+- Neighbours' notes include persona divergence and deliberate errors (they are realistic, not cleaned).
+
+## Open decisions
+
+1. Embedding model for R1 (Bedrock Titan v2 vs Cohere; input limits) and per-document pooling vs truncation.
+2. k (fixed at 3 for the main matrix; diversity/k test on the best setup only if time).
+3. Final G2 removal list.
+4. Embedding pre-test (cheap, no LLM calls): embed all 1000 cases with each candidate model, score offline
+   retrieval quality, pick one before any LLM run.
+
+## Deferred: fine-tuning (H7, and S5 if it needs a trained model)
+
+Not started until scoped. Questions to answer first:
+- Which model is fine-tuned (generator vs retriever/embedding), and which base model?
+- Where it is hosted for training and for inference (Bedrock customization vs local GPU vs other), and what
+  inference costs (on-demand vs provisioned).
+- Training data: application JSON -> golden write-up, or -> noisy notes; size of the pool split; held-out eval.
+- What it is compared against (best few-shot setup) and on which metrics (worksheet metrics above).
+- Budget, estimated before anything runs.
+
+## Results
+
+_Recorded per run in `experiments/<run_id>.jsonl` (config + per-case outputs + scores); summary below._
+
+### Offline retrieval quality
+
+| Space | Unit | Repr | P@3 conditions | Grey-area overlap | Same-vendor rate | Notes |
+|---|---|---|---|---|---|---|
+
+### Decisions and worksheets
+
+| Run | Space | Unit | Guideline | Examples | Exact | Band | Grey: exact | Partial: exact | Rule recall | vs vote | Cost |
+|---|---|---|---|---|---|---|---|---|---|---|---|

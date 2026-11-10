@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 import time
 import uuid
@@ -34,6 +35,9 @@ PRICES = {
     "lite": ("us.amazon.nova-lite-v1:0", 0.06, 0.24),
     "lite2": ("us.amazon.nova-2-lite-v1:0", 0.30, 2.50),
     "pro": ("us.amazon.nova-pro-v1:0", 0.80, 3.20),
+    # embeddings (input only; third-party-quoted prices, verify on AWS pricing page)
+    "titan-embed": ("amazon.titan-embed-text-v2:0", 0.02, 0.0),
+    "cohere-embed": ("cohere.embed-v4:0", 0.12, 0.0),
 }
 
 CAP_BATCH = float(os.environ.get("UW_CAP_BATCH", 2))
@@ -42,6 +46,7 @@ CAP_GLOBAL = float(os.environ.get("UW_CAP_GLOBAL", 25))
 
 SESSION_ID = os.environ.get("UW_SESSION_ID") or uuid.uuid4().hex[:8]
 _session_spent = 0.0
+EMBED_TRUNCATED: list[str] = []   # tags of embed inputs shrunk to fit the model limit
 import threading
 LOCK = threading.RLock()
 
@@ -143,6 +148,57 @@ def call(model: str, system: str, prompt: str, *, max_tokens: int = 2000, temper
         USAGE_LOG.parent.mkdir(parents=True, exist_ok=True)
         _append_usage(model, u, usd, budget, tag, t0, r)
     return "".join(c.get("text", "") for c in r["output"]["message"]["content"])
+
+
+def embed(model: str, texts: list[str], *, budget: Budget | None = None, tag: str = "", dims: int = 1024) -> list[list[float]]:
+    """Embed texts. titan-embed: one text per request (<= ~50K chars, truncated). cohere-embed: batch <= 96."""
+    global _session_spent
+    model_id = PRICES[model][0]
+    worst = cost(model, sum(est_tokens(t) for t in texts), 0) * 1.5
+    with LOCK:
+        _check(worst, budget)
+        if budget:
+            budget.spent += worst
+    t0 = time.time()
+    out, ntok = [], 0
+    if model == "titan-embed":
+        for t in texts:
+            t = t[:45000]
+            for _ in range(4):
+                try:
+                    r = _bedrock().invoke_model(modelId=model_id, body=json.dumps({"inputText": t, "dimensions": dims, "normalize": True}))
+                    break
+                except Exception as e:  # noqa: BLE001
+                    m = re.search(r"Max input tokens: (\d+), request input token count: (\d+)", str(e))
+                    if not m:
+                        raise
+                    t = t[:int(len(t) * int(m.group(1)) / int(m.group(2)) * 0.93)]
+                    with LOCK:
+                        EMBED_TRUNCATED.append(tag)
+            b = json.loads(r["body"].read())
+            out.append(b["embedding"])
+            ntok += b.get("inputTextTokenCount", est_tokens(t))
+    else:
+        body = json.dumps({"texts": texts, "input_type": "clustering", "embedding_types": ["float"], "output_dimension": dims, "truncate": "RIGHT"})
+        for attempt in range(8):
+            try:
+                r = _bedrock().invoke_model(modelId=model_id, body=body)
+                break
+            except Exception as e:  # noqa: BLE001
+                if "Throttling" not in type(e).__name__ or attempt == 7:
+                    raise
+                time.sleep(min(60, 5 * 2 ** attempt))
+        b = json.loads(r["body"].read())
+        out = b["embeddings"]["float"]
+        ntok = sum(est_tokens(t) for t in texts)
+    usd = cost(model, ntok, 0)
+    with LOCK:
+        _session_spent += usd
+        if budget:
+            budget.spent += usd - worst
+            budget.calls += 1
+        _append_usage(model, {"inputTokens": ntok, "outputTokens": 0}, usd, budget, tag, t0, {"stopReason": "embed"})
+    return out
 
 
 def _append_usage(model, u, usd, budget, tag, t0, r):

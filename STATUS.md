@@ -11,7 +11,7 @@ _Read PLAN.md first. Update this file at the end of every session._
 | 4 Evidence gen | **done** | 4a/4b/4c/4d gates PASS; APS via Nova $1.74 |
 | 5 Golden | **done** | gate PASS; 84% target-band agreement, mismatches categorized (qa/phase5_golden.md); 11 manual reviews |
 | 6 Noisy notes | **done** | gate PASS; 12 personas; 94% lines voiced by Nova Lite; stated != golden 87 (54 grey divergence, 33 wrong call) |
-| 7 QA/baseline | not started | |
+| 7 Experiments | **in progress** | plan in EXPERIMENTS.md; free part: splits, labels, embeddings, offline retrieval scoring |
 | 8 Packaging | not started | |
 
 ## Log
@@ -101,5 +101,14 @@ _Read PLAN.md first. Update this file at the end of every session._
   Per case avg: 8.2 omitted steps, 2.3 fragments, 2.8 t1 / 10.8 t2 / 7.9 t3 abbreviations, 0.9 typos, 0.8 facts the
   extraction dropped. Persona fidelity rho >= 0.77 on all params. Phase 6 Nova ~$0.43; Bedrock total $3.06.
 
+- 2026-11-10: Phase 7 re-scoped with user: retrieval-augmented underwriting (similar cases' notes as few-shot context),
+  similarity spaces x retrieval unit (whole case / condition chunk) x guideline (full / gap). Plan + results in EXPERIMENTS.md.
+  Fine-tuning deferred until scoped. Built: src/exp_data.py (splits 3x 800/200 stratified grey/partial/clean, golden-side
+  scoring labels), src/embed_cases.py (Titan v2 whole [107 truncated to 8K tokens] + per-doc mean done; Cohere v4 whole
+  partial), src/retrieval.py (random/cosine/PCA/VAE/PLS/oracle, offline neighbour scores, neighbour vote). llm.embed added.
+  Embedding spend ~$0.30.
+
 ## Next step
-Phase 7: QA sweep + adversarial baseline (Nova Pro decodes notes +/- extracted JSON -> decision; score vs golden).
+Finish Cohere embeddings (python src/embed_cases.py --only cohere_whole; cached files skip), then
+python src/retrieval.py -> experiments/offline_retrieval.md; record in EXPERIMENTS.md. Then condition chunks (needs
+note-line -> step sidecar from gen_notes) and the query-side condition extraction (LLM, estimate first).
