@@ -1,0 +1,116 @@
+{
+ "case_id": "C0439",
+ "items": [
+  {
+   "name": "Osteopenia",
+   "category": "musculoskeletal",
+   "evidence": [
+    "app_part2 app24: {'condition': 'osteopenia', 'diagnosed': '03/2016', 'treatment': 'alendronate', 'physician': 'Dr. John Hayden'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Family history of coronary artery disease",
+   "category": "cardiovascular",
+   "evidence": [
+    "app_part2 app24: {'brother': 'CAD, dx 59'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Family history of Alzheimer's disease",
+   "category": "neurological",
+   "evidence": [
+    "app_part2 app24: {'father': 'Alzheimer's, dx 69'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Idiopathic peripheral neuropathy",
+   "category": "neurological",
+   "evidence": [
+    "aps aps.athena_summary: {'diagnosis': 'Peripheral neuropathy (idiopathic)'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Hyperlipidemia",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood mil.v3: {'CHOLESTEROL': '210', 'HDL CHOL': '45', 'LDL (calc)': '140', 'CHOL/HDL RATIO': '4.7'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Prediabetes",
+   "category": "diabetes_glucose",
+   "evidence": [
+    "lab_blood mil.v3: {'Glucose': '141'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Moderate alcohol consumption",
+   "category": "alcohol",
+   "evidence": [
+    "app_part2 app24: {'q': '7b', 'a': '1.0 drinks/week'}",
+    "aps aps.athena_summary: {'alcohol': '~1 drinks/week'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Use of alendronate",
+   "category": "other",
+   "evidence": [
+    "rx rxp.grouped: {'product': 'FOSAMAX 70MG', 'prescriber': 'Dr. John Hayden'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Use of allopurinol",
+   "category": "other",
+   "evidence": [
+    "rx rxp.grouped: {'product': 'ZYLOPRIM 100MG', 'prescriber': 'Dr. John Hayden'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Use of colchicine",
+   "category": "other",
+   "evidence": [
+    "rx rxp.grouped: {'product': 'COLCRYS 0.6MG', 'prescriber': 'Dr. John Hayden'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  }
+ ],
+ "issues": [
+  "item 8: drug 'allopurinol' not in the file",
+  "item 9: drug 'colchicine' not in the file"
+ ],
+ "attempts": 2,
+ "category_remaps": [
+  "medications->other",
+  "medications->other",
+  "medications->other"
+ ]
+}

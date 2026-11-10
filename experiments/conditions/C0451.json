@@ -1,0 +1,97 @@
+{
+ "case_id": "C0451",
+ "items": [
+  {
+   "name": "Coronary artery disease, s/p CABG",
+   "category": "cardiovascular",
+   "evidence": [
+    "app_part2 app24: Former cigarette, quit 01/2022",
+    "app_part2 app24: Coronary artery disease, s/p CABG, diagnosed 03/2024, treatment: atorvastatin, aspirin, clopidogrel, physician: Dr. Jeremy Dillon",
+    "rx scr.fills: Multiple fills for atorvastatin, aspirin, clopidogrel prescribed by Dr. Jeremy Dillon",
+    "aps aps.epic_progress: Coronary artery disease, s/p CABG, EF 65%, 2-vessel disease, LDL 94, onset 03/2024"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Details on the extent of the disease and surgical outcomes"
+  },
+  {
+   "name": "Hypertension",
+   "category": "blood_pressure",
+   "evidence": [
+    "paramed pmx.v2: BP readings: 136/80, 127/80, 129/80",
+    "aps aps.epic_progress: BP readings during visits: 140/87, 134/87, 126/86, 126/81, 139/82, 125/88, 137/78"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No specific diagnosis of hypertension on the application"
+  },
+  {
+   "name": "Dyslipidemia",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood mil.v3: Cholesterol 256 mg/dL, HDL Chol 39 mg/dL (L), LDL (calc) 204 mg/dL (H), Triglycerides 62 mg/dL, CHOL/HDL RATIO 6.6 (H)",
+    "rx scr.fills: Multiple fills for atorvastatin prescribed by Dr. Jeremy Dillon"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No specific diagnosis of dyslipidemia on the application"
+  },
+  {
+   "name": "Musculoskeletal injury",
+   "category": "musculoskeletal",
+   "evidence": [
+    "app_part2 app24: Musculoskeletal injury, diagnosed 05/2021, treatment: ibuprofen, physician: Dr. David Ramirez",
+    "rx scr.fills: Fill for ibuprofen prescribed by Dr. Smith (Urgent Care)"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Details on the extent and current status of the injury"
+  },
+  {
+   "name": "Family history of myocardial infarction",
+   "category": "family_history",
+   "evidence": [
+    "app_part2 app24: mother: MI, died 79"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No additional details on family medical history"
+  },
+  {
+   "name": "Former smoker",
+   "category": "tobacco_nicotine",
+   "evidence": [
+    "app_part2 app24: Former cigarette, quit 01/2022",
+    "lab_urine mil.v3: COTININE (U) 6 ng/mL"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No details on the duration and intensity of smoking"
+  },
+  {
+   "name": "Elevated red blood cells in urine",
+   "category": "other",
+   "evidence": [
+    "lab_urine mil.v3: RBC, urine 8 /hpf (H)"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No details on the cause or significance of elevated RBCs in urine"
+  },
+  {
+   "name": "Improper lane change",
+   "category": "driving",
+   "evidence": [
+    "mvr mvr.acd: Violations - Improper lane change on 2021-04-26"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No additional details on driving record"
+  }
+ ],
+ "issues": [],
+ "attempts": 1,
+ "category_remaps": [
+  "urine->other"
+ ]
+}

@@ -1,0 +1,159 @@
+{
+ "case_id": "C0218",
+ "items": [
+  {
+   "name": "Type 2 diabetes",
+   "category": "diabetes_glucose",
+   "evidence": [
+    "app_part2: Q7:a=\"Yes\", details={\"condition\": \"Type 2 diabetes\", \"diagnosed\": \"04/2008\", \"treatment\": \"metformin, insulin glargine, semaglutide\", \"physician\": \"Dr. Michael Baker\"}",
+    "rx: fills=[\"METFORMIN\", \"INSULIN GLARGINE\", \"SEMAGLUTIDE\"]",
+    "aps: Dr. Michael Baker: \"Mr. Alan Johnson, a 76-year-old male, presented today for follow-up concerning his Type 2 diabetes.\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Details on the duration of diabetes and specific A1c values over time"
+  },
+  {
+   "name": "Non-obstructive coronary artery disease",
+   "category": "cardiovascular",
+   "evidence": [
+    "app_part2: Q5:a=\"Yes\", details={\"condition\": \"non-obstructive coronary artery disease (mild)\", \"diagnosed\": \"07/2022\", \"treatment\": \"none\", \"physician\": \"Dr. Eric Schultz\"}",
+    "aps: Dr. Eric Schultz: \"Mr. Alan Johnson, a 76-year-old male, presented today for a follow-up regarding his non-obstructive coronary artery disease.\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Details on the severity and specific treatment plan for the coronary artery disease"
+  },
+  {
+   "name": "Hypertension",
+   "category": "blood_pressure",
+   "evidence": [
+    "lab_blood: bp=[\"137/86\", \"130/89\", \"128/92\"]",
+    "aps: Dr. Michael Baker: \"Upon review, his blood pressure was 140/93 mmHg\"",
+    "aps: Dr. Eric Schultz: \"During this visit, he was found to have a blood pressure of 130/89\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Specific treatment plan for hypertension"
+  },
+  {
+   "name": "Hyperlipidemia",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood: CHOLESTEROL=279, FLAG=\"H\", LDL (calc)=197, FLAG=\"H\", CHOL/HDL RATIO=4.5, FLAG=\"\"",
+    "aps: Dr. Eric Schultz: \"His lipid profile and other routine lab work were and all findings were within acceptable ranges.\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "Specific treatment plan for hyperlipidemia"
+  },
+  {
+   "name": "Obesity",
+   "category": "build",
+   "evidence": [
+    "app_part2: Q25:a=\"5'10\" 227.0 lbs\"",
+    "paramed: height=\"5'10.5\", weight_lbs=230",
+    "aps: Dr. Michael Baker: \"Mr. Johnson has been managing his Type 2 diabetes... His weight was recorded at 221 pounds.\"",
+    "aps: Dr. Eric Schultz: \"His weight was 225 pounds.\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Specific treatment plan for obesity"
+  },
+  {
+   "name": "Former smoker",
+   "category": "tobacco_nicotine",
+   "evidence": [
+    "app_part2: Q3:a=\"No\", Q23:a=\"mother: type 2 diabetes, dx 74\"",
+    "aps: Dr. Michael Baker: \"Mr. Johnson is a former cigarette smoker who used to smoke 10 cigarettes per day starting in June 1987. He quit smoking in 2022.\"",
+    "lab_urine: COTININE (U)=7, FLAG=\"\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Specific details on the duration and intensity of smoking"
+  },
+  {
+   "name": "Urinary tract infection",
+   "category": "immune_infectious",
+   "evidence": [
+    "app_part2: Q18:a=\"Yes\", details={\"condition\": \"urinary tract infection\", \"diagnosed\": \"05/2023\", \"treatment\": \"sulfamethoxazole-trimethoprim\", \"physician\": \"Dr. Carlos Brady\"}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Recurrence or chronic nature of the infection"
+  },
+  {
+   "name": "Family history of type 2 diabetes",
+   "category": "family_history",
+   "evidence": [
+    "app_part2: Q23:a=\"mother: type 2 diabetes, dx 74\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "Details on other family members with diabetes"
+  },
+  {
+   "name": "Elevated NT-proBNP",
+   "category": "cardiovascular",
+   "evidence": [
+    "lab_blood: NT-proBNP=365, FLAG=\"H\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "Specific treatment plan or further investigation for elevated NT-proBNP"
+  },
+  {
+   "name": "Elevated fasting glucose",
+   "category": "diabetes_glucose",
+   "evidence": [
+    "lab_blood: Glucose, fasting=155, FLAG=\"H\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "Specific treatment plan or further investigation for elevated fasting glucose"
+  },
+  {
+   "name": "Elevated HbA1c",
+   "category": "diabetes_glucose",
+   "evidence": [
+    "lab_blood: HEMOGLOBIN A1C=7, FLAG=\"H\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "Specific treatment plan or further investigation for elevated HbA1c"
+  },
+  {
+   "name": "Elevated total cholesterol",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood: CHOLESTEROL=279, FLAG=\"H\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "Specific treatment plan or further investigation for elevated total cholesterol"
+  },
+  {
+   "name": "Elevated LDL cholesterol",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood: LDL (calc)=197, FLAG=\"H\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "Specific treatment plan or further investigation for elevated LDL cholesterol"
+  },
+  {
+   "name": "Elevated protein in urine",
+   "category": "kidney",
+   "evidence": [
+    "lab_urine: Protein, urine=20, FLAG=\"\""
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "Specific treatment plan or further investigation for elevated protein in urine"
+  }
+ ],
+ "issues": [],
+ "attempts": 1,
+ "category_remaps": []
+}

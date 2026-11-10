@@ -1,0 +1,96 @@
+{
+ "case_id": "C0263",
+ "items": [
+  {
+   "name": "Eczema",
+   "category": "immune_infectious",
+   "evidence": [
+    "app_part2 app24: No",
+    "rx rxp.grouped: {'product': 'KENALOG 0.1%', 'first': '2021-10-20', 'last': '2026-07-01', 'count': 40, 'prescriber': 'Dr. Nicole Fowler'}",
+    "aps aps.hospital_discharge: {'provider': 'Dr. Nicole Fowler','specialty': 'family medicine', 'page_count': 2, 'pages': [{'page': 1, 'text': 'Principal diagnosis: eczema'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Rosacea",
+   "category": "other",
+   "evidence": [
+    "rx rxp.grouped: {'product': 'METROGEL 1%', 'first': '2024-10-20', 'last': '2026-07-01', 'count': 40, 'prescriber': 'Dr. Nicole Fowler'}",
+    "aps aps.hospital_discharge: {'provider': 'Dr. Nicole Fowler', 'specialty': 'family medicine', 'page_count': 2, 'pages': [{'page': 1, 'text': 'Secondary: rosacea'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Hypertension",
+   "category": "blood_pressure",
+   "evidence": [
+    "paramed hsc.flat: {'HT_IN': 60, 'WT_KG': 71.7, 'HR': 74, 'BP_1': '141/87', 'BP_2': '140/85'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "High cholesterol",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood mil.v3: {'test': 'CHOLESTEROL', 'value': 286, 'flag': 'H', 'units':'mg/dL','ref': '0-199'}",
+    "lab_blood mil.v3: {'test': 'LDL (calc)', 'value': 199, 'flag': 'H', 'units':'mg/dL','ref': '0-99'}",
+    "lab_blood mil.v3: {'test': 'Triglycerides', 'value': 213, 'flag': 'H', 'units':'mg/dL','ref': '0-149'}",
+    "lab_blood mil.v3: {'test': 'CHOL/HDL RATIO', 'value': 6.5, 'flag': 'H', 'units': 'ratio','ref': '0-5.0'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Family history of myocardial infarction",
+   "category": "family_history",
+   "evidence": [
+    "app_part2 app24: {'q': '7w', 'a':'mother: MI, dx 76'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Alcohol consumption",
+   "category": "alcohol",
+   "evidence": [
+    "app_part2 app24: {'q': '7b', 'a': '10.0 drinks/week'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Prescription of Norco",
+   "category": "drugs",
+   "evidence": [
+    "rx rxp.grouped: {'product': 'NORCO 10/325MG', 'first': '2023-01-20', 'last': '2023-01-20', 'count': 1, 'prescriber': 'Dr. Garcia (Urgent Care)'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Prescription of Motrin",
+   "category": "drugs",
+   "evidence": [
+    "rx rxp.grouped: {'product': 'MOTRIN 600MG', 'first': '2022-03-10', 'last': '2022-03-10', 'count': 1, 'prescriber': 'Dr. Garcia (Urgent Care)'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  }
+ ],
+ "issues": [],
+ "attempts": 1,
+ "category_remaps": [
+  "skin->other"
+ ]
+}

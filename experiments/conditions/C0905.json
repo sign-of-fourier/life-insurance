@@ -1,0 +1,129 @@
+{
+ "case_id": "C0905",
+ "items": [
+  {
+   "name": "Supraventricular tachycardia (SVT)",
+   "category": "cardiovascular",
+   "evidence": [
+    "app_part2 app24: 7e:a: \"Yes\", 7e:details:[{\"condition\": \"Supraventricular tachycardia (SVT)\", \"diagnosed\": \"05/2010\", \"treatment\": \"none\", \"physician\": \"Dr. Joshua Wagner\"}]"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Chronic hepatitis B",
+   "category": "immune_infectious",
+   "evidence": [
+    "app_part2 app24: 7k:a: \"Yes\", 7k:details:[{\"condition\": \"chronic hepatitis b (mild)\", \"diagnosed\": \"08/2025\", \"treatment\": \"tenofovir\", \"physician\": \"Dr. Brianna Simpson\"}]",
+    "rx rxp.grouped: medications:[{\"product\":\"VEMLIDY 25MG\",\"first\":\"2025-11-04\",\"last\":\"2026-10-10\",\"count\":12,\"prescriber\":\"Dr. Brianna Simpson\"}]",
+    "aps aps.epic_progress: provider:Dr. Brianna Simpson: \"PROBLEM LIST - Chronic hepatitis B [controlled] onset 08/2025\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Back pain / spine",
+   "category": "musculoskeletal",
+   "evidence": [
+    "app_part2 app24: 7o:a: \"Yes\", 7o:details:[{\"condition\": \"Back pain / spine\", \"diagnosed\": \"04/2025\", \"treatment\": \"oxycodone\", \"physician\": \"Dr. Emily Schwartz\"}]",
+    "rx rxp.grouped: medications:[{\"product\":\"ROXICODONE 10MG\",\"first\":\"2025-07-13\",\"last\":\"2026-10-10\",\"count\":6,\"prescriber\":\"Dr. Emily Schwartz\"}]",
+    "aps aps.epic_progress: provider:Dr. Emily Schwartz: \"PROBLEM LIST - Back pain / spine (chronic opioid; benzo) [controlled] onset 04/2025\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Eczema",
+   "category": "other",
+   "evidence": [
+    "app_part2 app24: 7r:a: \"Yes\", 7r:details:[{\"condition\": \"eczema\", \"diagnosed\": \"07/2023\", \"treatment\": \"tacrolimus topical\", \"physician\": \"Dr. Emily Schwartz\"}]",
+    "rx rxp.grouped: medications:[{\"product\":\"PROTOPIC 0.1%\",\"first\":\"2023-08-04\",\"last\":\"2026-10-10\",\"count\":40,\"prescriber\":\"Dr. Emily Schwartz\"}]",
+    "aps aps.epic_progress: provider:Dr. Emily Schwartz: \"PROBLEM LIST - eczema [controlled] onset 07/2023\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "High cholesterol",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood mil.v3: results:[{\"test\":\"CHOLESTEROL\",\"value\":278,\"flag\":\"H\",\"units\":\"mg/dL\",\"ref\":\"0-199\"},{\"test\":\"LDL (calc)\",\"value\":208,\"flag\":\"H\",\"units\":\"mg/dL\",\"ref\":\"0-99\"}]"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "High AST",
+   "category": "digestive_liver",
+   "evidence": [
+    "lab_blood mil.v3: results:[{\"test\":\"AST (SGOT)\",\"value\":73,\"flag\":\"H\",\"units\":\"U/L\",\"ref\":\"10-40\"}]"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "High ALT",
+   "category": "digestive_liver",
+   "evidence": [
+    "lab_blood mil.v3: results:[{\"test\":\"ALT (SGPT)\",\"value\":59,\"flag\":\"H\",\"units\":\"U/L\",\"ref\":\"7-45\"}]"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Family history of hypertension",
+   "category": "family_history",
+   "evidence": [
+    "app_part2 app24: 7w:a: \"father: hypertension, died 88\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Overweight",
+   "category": "build",
+   "evidence": [
+    "app_part2 app24: 7y:a: \"5'10\" 194.0 lbs\"",
+    "paramed pmx.v2: weight_lbs:192"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Speeding violation",
+   "category": "driving",
+   "evidence": [
+    "mvr mvr.acd: violations:[{\"viol_date\":\"2024-02-09\",\"code\":\"S05\",\"desc\":\"Speeding 1-5 over limit\"}]"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Expired registration violation",
+   "category": "driving",
+   "evidence": [
+    "mvr mvr.acd: violations:[{\"viol_date\":\"2021-09-15\",\"code\":\"N01\",\"desc\":\"Expired registration\"}]"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  }
+ ],
+ "issues": [],
+ "attempts": 1,
+ "category_remaps": [
+  "skin->other",
+  "liver->digestive_liver",
+  "liver->digestive_liver"
+ ]
+}

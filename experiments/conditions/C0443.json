@@ -1,0 +1,95 @@
+{
+ "case_id": "C0443",
+ "items": [
+  {
+   "name": "Multiple sclerosis",
+   "category": "neurological",
+   "evidence": [
+    "app_part2 app19: Q13:a: \"Yes\", Q13:details: \"{\\\"condition\\\": \\\"Multiple sclerosis\\\", \\\"diagnosed\\\": \\\"04/2009\\\", \\\"treatment\\\": \\\"dimethyl fumarate\\\", \\\"physician\\\": \\\"Dr. Zachary Elliott\\\"}\"",
+    "mib mib.codes: code: \"315417\", date: \"2019-07-10\"",
+    "rx scr.fills: drug: \"DIMETHYL FUMARATE\", prescriber: \"Dr. Zachary Elliott\", spec: \"neurology\"",
+    "aps aps.epic_progress: text: \"PROBLEM LIST - Multiple sclerosis (EDSS 4.5) [controlled] onset 04/2009\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No recent exacerbations or significant changes in neurological status"
+  },
+  {
+   "name": "Osteopenia",
+   "category": "musculoskeletal",
+   "evidence": [
+    "app_part2 app19: Q18:a: \"Yes\", Q18:details: \"{\\\"condition\\\": \\\"osteopenia\\\", \\\"diagnosed\\\": \\\"10/2019\\\", \\\"treatment\\\": \\\"alendronate\\\", \\\"physician\\\": \\\"Dr. Mackenzie Jacobs\\\"}\"",
+    "mib mib.codes: code: \"010900\", date: \"2021-08-15\"",
+    "rx scr.fills: drug: \"ALENDRONATE\", prescriber: \"Dr. Mackenzie Jacobs\", spec: \"family medicine\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No recent changes in treatment or condition"
+  },
+  {
+   "name": "Hyperlipidemia",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood mil.v3: CHOLESTEROL: 282 mg/dL, HDL CHOL: 42 mg/dL, LDL (calc): 207 mg/dL, Triglycerides: 165 mg/dL, CHOL/HDL RATIO: 6.7"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No treatment or management details provided"
+  },
+  {
+   "name": "Prediabetes",
+   "category": "diabetes_glucose",
+   "evidence": [
+    "lab_blood mil.v3: Glucose, fasting: 103 mg/dL, HEMOGLOBIN A1C: 4.9%"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No treatment or management details provided"
+  },
+  {
+   "name": "Tobacco use (vaping)",
+   "category": "tobacco_nicotine",
+   "evidence": [
+    "app_part2 app19: Q1:a: \"Current vape, weekends\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No details on frequency or intensity"
+  },
+  {
+   "name": "Moderate alcohol consumption",
+   "category": "alcohol",
+   "evidence": [
+    "app_part2 app19: Q2:a: \"1.0 drinks/week\""
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No details on pattern or context"
+  },
+  {
+   "name": "Hematuria",
+   "category": "other",
+   "evidence": [
+    "lab_urine mil.v3: RBC, urine: 8 /hpf"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No details on cause or treatment"
+  },
+  {
+   "name": "Private aviation",
+   "category": "aviation_avocation",
+   "evidence": [
+    "other q.avoq: activities: [{\"activity\": \"private_aviation\", \"total_hours\": 11, \"hours_per_year\": 61, \"ifr\": false}]"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No details on experience or qualifications"
+  }
+ ],
+ "issues": [],
+ "attempts": 1,
+ "category_remaps": [
+  "urinary->other"
+ ]
+}

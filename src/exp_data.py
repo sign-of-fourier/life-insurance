@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 EXP = ROOT / "experiments"
 SEEDS = [11, 22, 33]
 N_TEST = 200
+MECHANICS = {"CLS", "GEN", "APS", "CMB", "REQ", "RID"}   # worksheet mechanics, not risk items (excluded from labels)
 PARTIAL_RULES = {"APS-6", "RX-2.4", "MIB-4", "APS-3", "GRY-2", "GRY-5", "GRY-6", "GRY-8", "TOB-4.2", "GEN-2.2", "GEN-2.3"}
 
 
@@ -71,14 +72,18 @@ def case_labels(cid: str) -> dict:
             if f in dropped:
                 partial.add("extraction_dropped")
         ch = re.match(r"[A-Z]+", s.rule_id).group(0)
-        labels |= {f"cond:{k}" for k in keys} or {f"ch:{ch}"}
+        if keys:
+            labels |= {f"cond:{k}" for k in keys}
+        elif ch not in MECHANICS:
+            labels.add(f"ch:{ch}")
         chapters[ch] += s.effect.debits
     grey = sorted({r for ga in g.grey_areas for r in ga.rule_ids if r.startswith("GRY")})
     if any("MISREP" in s.finding for s in g.trace):
         partial.add("misrep")
     d = g.decision
     return {"labels": sorted(labels), "grey": grey, "partial": sorted(partial), "decision": d.label(), "band": band(d.label()),
-            "net": d.net_debits, "chapter_debits": dict(chapters), "ladder": str(getattr(d.ladder, "value", d.ladder)),
+            "net": d.net_debits, "table": d.table or 0, "fe": round(sum(f.per_thousand for f in d.flat_extras), 2),
+            "fe_perm": any(not f.years for f in d.flat_extras), "chapter_debits": dict(chapters), "ladder": str(getattr(d.ladder, "value", d.ladder)),
             "risk_class": d.risk_class}
 
 

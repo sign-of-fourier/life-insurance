@@ -124,7 +124,8 @@ def pls_targets(cids):
     for c in cids:
         L = LAB[c]
         row = [L["chapter_debits"].get(ch, 0) for ch in chs]
-        row += [CLASS_RANK.get(L["risk_class"], 5), L["risk_class"] == "Decline", L["risk_class"] == "Postpone", L["ladder"] == "tobacco"]
+        row += [CLASS_RANK.get(L["risk_class"], 5), L["risk_class"] == "Decline", L["risk_class"] == "Postpone", L["ladder"] == "tobacco",
+                L["table"], max(-50, min(L["net"], 450)), L["fe"], L["fe_perm"]]
         row += [g in L["grey"] for g in grys]
         Y.append(row)
     return np.asarray(Y, dtype=float)
@@ -196,6 +197,11 @@ def score(nb):
         for (p, s), x in zip(ns, lab_n):
             w[x["band"]] += max(s, 1e-3)
         r["vote"] = float(w.most_common(1)[0][0] == Lq["band"])
+        wx = Counter()
+        for (p, s), x in zip(ns, lab_n):
+            wx[x["decision"]] += max(s, 1e-3)
+        r["vote_exact"] = float(wx.most_common(1)[0][0] == Lq["decision"])
+        r["fe_match"] = float(np.mean([(x["fe"] > 0) == (Lq["fe"] > 0) for x in lab_n]))
         vq = E.vendors(q)
         r["vendor"] = float(np.mean([len(vq & E.vendors(p)) / len(vq | E.vendors(p)) for p, _ in ns]))
         for k_, v in r.items():
@@ -209,6 +215,8 @@ def main():
     ap.add_argument("--k", type=int, default=3)
     ap.add_argument("--reps", default="titan_whole,titan_docmean,cohere_whole,r2")
     ap.add_argument("--spaces", default="cosine,pca,vae,pls")
+    ap.add_argument("--pool-frac", type=float, default=1.0, help="fit spaces on this fraction of the pool (learning curve)")
+    ap.add_argument("--out", default="offline_retrieval")
     a = ap.parse_args()
     sp = E.splits()
     res = defaultdict(list)
@@ -224,8 +232,9 @@ def main():
                 print("skip", rep, "(no embeddings yet)")
                 continue
             X = rep_r2(pool) if rep == "r2" else rep_r1(rep)
+            fit_pool = sorted(np.random.default_rng(int(seed)).choice(pool, int(len(pool) * a.pool_frac), replace=False)) if a.pool_frac < 1 else pool
             for name in a.spaces.split(","):
-                S = SPACES[name](X, pool, seed=int(seed))
+                S = SPACES[name](X, list(fit_pool), seed=int(seed))
                 res[(name, rep)].append(score(neighbours(S, test, pool, a.k)))
                 print(seed, rep, name, "done", flush=True)
     agg = {}
@@ -233,16 +242,16 @@ def main():
         ks = sorted(set().union(*lst))
         agg["|".join(key)] = {m: (float(np.mean([d[m] for d in lst if m in d])), float(np.std([d[m] for d in lst if m in d]))) for m in ks}
     out = {"k": a.k, "prior_majority_band_acc": float(np.mean(prior)), "results": agg}
-    (E.EXP / "offline_retrieval.json").write_text(json.dumps(out, indent=1))
-    cols = ["all:coverage", "all:jaccard", "grey:grey", "partial:partial", "all:band", "all:vote", "grey:vote", "partial:vote",
-            "clean:vote", "all:vendor"]
+    (E.EXP / f"{a.out}.json").write_text(json.dumps(out, indent=1))
+    cols = ["all:coverage", "all:jaccard", "grey:grey", "partial:partial", "all:band", "all:vote", "all:vote_exact", "grey:vote",
+            "partial:vote", "clean:vote", "all:fe_match", "all:vendor"]
     L = [f"# Offline retrieval quality (k={a.k}, mean ± sd over {len(sp)} splits, 200 test / 800 pool)", "",
          f"Majority-band prior (always predict the pool's most common band): {out['prior_majority_band_acc']:.3f}", "",
          "| space | repr | " + " | ".join(cols) + " |", "|---|---|" + "---|" * len(cols)]
     for key, v in sorted(agg.items(), key=lambda x: -x[1].get("all:coverage", (0, 0))[0]):
         sp_, rep = key.split("|")
         L.append(f"| {sp_} | {rep} | " + " | ".join(f"{v[c][0]:.3f}±{v[c][1]:.3f}" if c in v else "-" for c in cols) + " |")
-    (E.EXP / "offline_retrieval.md").write_text("\n".join(L) + "\n")
+    (E.EXP / f"{a.out}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))
 
 

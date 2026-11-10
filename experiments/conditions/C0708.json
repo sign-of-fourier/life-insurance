@@ -1,0 +1,105 @@
+{
+ "case_id": "C0708",
+ "items": [
+  {
+   "name": "Type 1 diabetes",
+   "category": "diabetes_glucose",
+   "evidence": [
+    "app_part2 app24: No",
+    "rx rxp.grouped: {'product': 'LANTUS 100U/ML', 'first': '2024-09-22', 'last': '2026-09-28', 'count': 25, 'prescriber': 'Dr. Curtis Moore'}",
+    "rx rxp.grouped: {'product': 'NOVOLOG 100U/ML', 'first': '2024-10-14', 'last': '2026-09-28', 'count': 8, 'prescriber': 'Dr. Curtis Moore'}",
+    "aps aps.epic_progress: 'Type 1 diabetes (A1c 6.1; insulin; duration 2.2 yrs; dx at age 55) [controlled] onset 07/2024'"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Hypertension",
+   "category": "blood_pressure",
+   "evidence": [
+    "paramed hsc.flat: {'BP_1': '139/86', 'BP_2': '134/86'}",
+    "lab_blood mil.v3: {'test': 'CHOLESTEROL', 'value': 264, 'flag': 'H', 'units':'mg/dL','ref': '0-199'}",
+    "lab_blood mil.v3: {'test': 'LDL (calc)', 'value': 191, 'flag': 'H', 'units':'mg/dL','ref': '0-99'}",
+    "lab_blood mil.v3: {'test': 'CHOL/HDL RATIO', 'value': 6.8, 'flag': 'H', 'units': 'ratio','ref': '0-5.0'}",
+    "lab_blood mil.v3: {'test': 'HEMOGLOBIN A1C', 'value': 6.2, 'flag': 'H', 'units': '%','ref': '4.0-5.6'}",
+    "lab_blood mil.v3: {'test': 'Glucose', 'value': 147, 'flag': 'H', 'units':'mg/dL','ref': '65-139'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Dyslipidemia",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood mil.v3: {'test': 'CHOLESTEROL', 'value': 264, 'flag': 'H', 'units':'mg/dL','ref': '0-199'}",
+    "lab_blood mil.v3: {'test': 'HDL CHOL', 'value': 39, 'flag': 'L', 'units':'mg/dL','ref': '40-999'}",
+    "lab_blood mil.v3: {'test': 'LDL (calc)', 'value': 191, 'flag': 'H', 'units':'mg/dL','ref': '0-99'}",
+    "lab_blood mil.v3: {'test': 'Triglycerides', 'value': 169, 'flag': '', 'units':'mg/dL','ref': '0-149'}",
+    "lab_blood mil.v3: {'test': 'CHOL/HDL RATIO', 'value': 6.8, 'flag': 'H', 'units': 'ratio','ref': '0-5.0'}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Cataracts",
+   "category": "other",
+   "evidence": [
+    "app_part2 app24: {'condition': 'cataracts', 'diagnosed': '11/2019', 'treatment': 'none', 'physician': 'Dr. Terri Vargas'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Dental abscess",
+   "category": "other",
+   "evidence": [
+    "app_part2 app24: {'condition': 'dental abscess', 'diagnosed': '06/2014', 'treatment': 'hydrocodone-acetaminophen', 'physician': 'Dr. Terri Vargas'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Hypothyroidism",
+   "category": "endocrine",
+   "evidence": [
+    "app_part2 app24: {'condition': 'hypothyroidism', 'diagnosed': '02/2017', 'treatment': 'levothyroxine', 'physician': 'Dr. Terri Vargas'}",
+    "rx rxp.grouped: {'product': 'SYNTHROID 25MCG', 'first': '2021-10-02', 'last': '2026-09-28', 'count': 40, 'prescriber': 'Dr. Terri Vargas'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Expired registration",
+   "category": "driving",
+   "evidence": [
+    "mvr mvr.acd: {'license_status': 'VALID', 'violations': [{'viol_date': '2021-08-14', 'code': 'N01', 'desc': 'Expired registration'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Alcohol consumption",
+   "category": "alcohol",
+   "evidence": [
+    "app_part2 app24: {'q': '7b', 'a': '4.0 drinks/week'}",
+    "aps aps.epic_progress: 'Social: alcohol ~4 drinks/week'"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  }
+ ],
+ "issues": [],
+ "attempts": 1,
+ "category_remaps": [
+  "eye->other",
+  "dental->other"
+ ]
+}

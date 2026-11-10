@@ -216,6 +216,56 @@ Findings:
 Decision: Cohere v4 is the embedding for R1. Candidates for LLM runs: random, cosine-Cohere, PLS-own-tokens,
 VAE-Cohere (the VAE hypothesis), oracle. PCA dropped from LLM runs (dominated by cosine).
 
+#### Rerun 2026-11-10 (labels without worksheet-mechanics chapters; table/net/FE added to PLS targets)
+
+Same ranking as above (full table `experiments/offline_retrieval.md`). Coverage: cosine-Cohere 0.64, PCA-Cohere 0.60,
+PLS-Cohere 0.57, VAE-Cohere 0.55, PLS-own-tokens 0.51, random 0.29, oracle 0.81. PLS-own-tokens: grey share 0.36,
+partial-evidence vote 0.36. Exact-decision vote ≈ band vote minus 0.01-0.03. Flat-extra match is uninformative as a
+rate (only 74 cases have a flat extra, so "no FE" dominates; random 0.86) — to be replaced by FE recall in LLM runs.
+
+**Learning curve (VAE / PLS fit on 200 / 400 / 800 pool cases; neighbours always from the full pool):**
+
+| Space | Repr | Coverage 200 / 400 / 800 | Grey share | Partial vote |
+|---|---|---|---|---|
+| VAE | Cohere | 0.50 / 0.53 / 0.55 | 0.24 / 0.21 / 0.25 | 0.17 / 0.17 / 0.18 |
+| VAE | own tokens | 0.43 / 0.45 / 0.52 | 0.19 / 0.17 / 0.19 | 0.12 / 0.14 / 0.15 |
+| PLS | Cohere | 0.52 / 0.57 / 0.57 | 0.25 / 0.26 / 0.28 | 0.17 / 0.22 / 0.22 |
+| PLS | own tokens | 0.49 / 0.50 / 0.51 | 0.27 / 0.30 / 0.36 | 0.14 / 0.20 / 0.36 |
+
+Both are still improving at 800. The VAE gains on coverage but stays below plain cosine (0.64); PLS-own-tokens gains
+most on exactly the grey / partial-evidence targets. More (cheap, generated) cases would likely help both, PLS most.
+
+### Offline condition-chunk retrieval (U2)
+
+Run 2026-11-10. Query side: Nova Lite lists risk items from the extracted JSON (`src/extract_conditions.py`, all
+1000 cases, $0.55, 8.8 items/case; 2 very large files returned nothing — known gap). Index side: each item aligned
+to a golden condition group of its case by Cohere similarity (≥ 0.35); payload = that group's note lines + outcome
+(`src/chunks.py`, 8886 chunks, 2332 rated). Retrieval: Cohere cosine item → pool chunks, k=3. Full table:
+`experiments/offline_chunks.md`.
+
+| Metric | All | Grey | Partial | Clean |
+|---|---|---|---|---|
+| detect: rated conditions found by the extraction | 0.93 | 0.94 | 0.96 | 0.90 |
+| label@3: retrieved chunks are the same condition | 0.84 | 0.81 | 0.82 | 0.86 |
+| debit@3: ... and the same debit bucket | 0.68 | 0.61 | 0.68 | 0.73 |
+| vote: decision built from condition votes | **0.48** | **0.43** | **0.43** | **0.55** |
+| reference: whole-case vote, same coarse scale | 0.42 | 0.40 | 0.40 | 0.45 |
+| reference: majority prior, same coarse scale | 0.39 | | | |
+| net debit error (non-decline/postpone) | 28 | 40 | 34 | 17 |
+
+(Coarse scale: <=Std / Standard / T1-2 / T3-4 / T5-8 / T9-16 / Postpone / Decline; ladder-agnostic.)
+
+Findings:
+1. Chunking finds the right kind of evidence: 84% of retrieved chunks are about the same condition (whole-case
+   neighbours share a condition far less often).
+2. A decision assembled from per-condition votes beats the whole-case vote (0.48 vs 0.42) and the prior (0.39),
+   on every slice. Whole-case vote barely beats the prior.
+3. Severity is the hard part: same condition but a different debit level in a third of retrieved chunks, worst on
+   grey cases (0.61) — exactly where the notes' reasoning should matter.
+4. Query-side detection misses 7% of rated conditions (10% on clean cases, mostly non-medical items).
+5. Caveat: alignment of items to golden groups is by similarity (no ground truth), on both sides; label@3 includes
+   alignment noise.
+
 ### Decisions and worksheets
 
 | Run | Space | Unit | Guideline | Examples | Exact | Band | Grey: exact | Partial: exact | Rule recall | vs vote | Cost |

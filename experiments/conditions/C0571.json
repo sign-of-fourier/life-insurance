@@ -1,0 +1,131 @@
+{
+ "case_id": "C0571",
+ "items": [
+  {
+   "name": "Heart failure / cardiomyopathy",
+   "category": "cardiovascular",
+   "evidence": [
+    "app_part2 app19: {'section': 'Q5', 'a': 'Yes', 'details': [{'condition': 'Heart failure / cardiomyopathy', 'diagnosed': '04/2022', 'treatment': 'none', 'physician': 'Dr. Justin Brown'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Concussion / traumatic brain injury (TBI)",
+   "category": "neurological",
+   "evidence": [
+    "app_part2 app19: {'section': 'Q13', 'a': 'Yes', 'details': [{'condition': 'Concussion / TBI', 'diagnosed': '01/2023', 'treatment': 'none', 'physician': 'Dr. Angela Dominguez'}]}",
+    "aps aps.epic_progress: {'entities': [{'type': 'diagnosis', 'text': 'Concussion / TBI','status': 'controlled'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Back pain / spine condition",
+   "category": "musculoskeletal",
+   "evidence": [
+    "app_part2 app19: {'section': 'Q15', 'a': 'Yes', 'details': [{'condition': 'Back pain / spine', 'diagnosed': '01/2007', 'treatment': 'naproxen', 'physician': 'Dr. Cameron Meyer'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Kidney stones",
+   "category": "kidney",
+   "evidence": [
+    "app_part2 app19: {'section': 'Q18', 'a': 'Yes', 'details': [{'condition': 'kidney stones', 'diagnosed': '10/2015', 'treatment': 'tamsulosin', 'physician': 'Dr. Cameron Meyer'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Epilepsy / seizure disorder",
+   "category": "neurological",
+   "evidence": [
+    "app_part2 app19: {'section': 'Q5', 'a': 'No'}",
+    "aps aps.epic_progress: {'entities': [{'type': 'diagnosis', 'text': 'Epilepsy / seizure disorder','status': 'controlled'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Type 2 diabetes mellitus",
+   "category": "diabetes_glucose",
+   "evidence": [
+    "app_part2 app19: {'section': 'Q23', 'a':'mother: type 2 diabetes, died 86'}",
+    "aps aps.athena_summary: {'entities': [{'type': 'diagnosis', 'text': 'Type 2 diabetes','status': 'controlled'}]}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": true,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Hypertension",
+   "category": "blood_pressure",
+   "evidence": [
+    "lab_blood mil.v3: {'results': [{'test': 'CHOLESTEROL', 'value': 260, 'flag': 'H', 'units':'mg/dL','ref': '0-199'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Dyslipidemia",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood mil.v3: {'results': [{'test': 'CHOLESTEROL', 'value': 260, 'flag': 'H', 'units':'mg/dL','ref': '0-199'}, {'test': 'HDL CHOL', 'value': 39, 'flag': 'L', 'units':'mg/dL','ref': '40-999'}, {'test': 'LDL (calc)', 'value': 178, 'flag': 'H', 'units':'mg/dL','ref': '0-99'}, {'test': 'Triglycerides', 'value': 215, 'flag': 'H', 'units':'mg/dL','ref': '0-149'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Prediabetes",
+   "category": "diabetes_glucose",
+   "evidence": [
+    "lab_blood mil.v3: {'results': [{'test': 'Glucose, fasting', 'value': 191, 'flag': 'H', 'units':'mg/dL','ref': '65-99'}, {'test': 'HEMOGLOBIN A1C', 'value': 8.5, 'flag': '', 'units': '%','ref': '4.0-5.6'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Family history of type 2 diabetes",
+   "category": "family_history",
+   "evidence": [
+    "app_part2 app19: {'section': 'Q23', 'a':'mother: type 2 diabetes, died 86'}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Speeding violation",
+   "category": "driving",
+   "evidence": [
+    "mvr mvr.state: {'record': [{'dt': '240807', 'text': 'SPEEDING 11-15 OVER LIMIT'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No treatment details provided"
+  },
+  {
+   "name": "Hematuria",
+   "category": "kidney",
+   "evidence": [
+    "lab_urine mil.v3: {'results': [{'test': 'RBC, urine', 'value': 8, 'flag': 'H', 'units': null,'ref': '0-5'}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": "No treatment details provided"
+  }
+ ],
+ "issues": [],
+ "attempts": 1,
+ "category_remaps": []
+}

@@ -1,0 +1,113 @@
+{
+ "case_id": "C0059",
+ "items": [
+  {
+   "name": "Acute sinusitis",
+   "category": "immune_infectious",
+   "evidence": [
+    "app_part2 app24: {\"condition\": \"acute sinusitis\", \"diagnosed\": \"05/2025\", \"treatment\": \"amoxicillin-clavulanate\", \"physician\": \"Dr. Jason Wu\"}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Eczema",
+   "category": "other",
+   "evidence": [
+    "app_part2 app24: {\"condition\": \"eczema\", \"diagnosed\": \"05/2025\", \"treatment\": \"triamcinolone topical\", \"physician\": \"Dr. Jason Wu\"}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Vitamin D deficiency",
+   "category": "other",
+   "evidence": [
+    "app_part2 app24: {\"condition\": \"vitamin D deficiency\", \"diagnosed\": \"08/2022\", \"treatment\": \"ergocalciferol\", \"physician\": \"Dr. Jason Wu\"}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": true,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "High cholesterol",
+   "category": "lipids",
+   "evidence": [
+    "lab_blood mil.v3: {\"test\": \"CHOLESTEROL\", \"value\": 213, \"flag\": \"H\", \"units\": \"mg/dL\", \"ref\": \"0-199\"}",
+    "lab_blood mil.v3: {\"test\": \"LDL (calc)\", \"value\": 149, \"flag\": \"H\", \"units\": \"mg/dL\", \"ref\": \"0-99\"}",
+    "lab_blood mil.v3: {\"test\": \"CHOL/HDL RATIO\", \"value\": 5.3, \"flag\": \"H\", \"units\": \"ratio\", \"ref\": \"0-5.0\"}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Parking violation",
+   "category": "driving",
+   "evidence": [
+    "mvr mvr.state: {\"license_status\": \"VALID\", \"record\": [{\"dt\": \"200516\", \"text\": \"PARKING VIOLATION\"}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Motor racing",
+   "category": "aviation_avocation",
+   "evidence": [
+    "other q.avoq: {\"activities\": [{\"activity\": \"motor_racing\", \"events_per_year\": 9, \"intends_to_stop\": false}]}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Family history of myocardial infarction",
+   "category": "family_history",
+   "evidence": [
+    "app_part2 app24: {\"q\": \"7w\", \"a\": \"mother: MI, died 52\"}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Family history of Alzheimer's disease",
+   "category": "family_history",
+   "evidence": [
+    "app_part2 app24: {\"q\": \"7w\", \"a\": \"mother: Alzheimer's, dx 80\"}"
+   ],
+   "disclosed_on_application": true,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Overweight",
+   "category": "build",
+   "evidence": [
+    "paramed hsc.flat: {\"WT_KG\": 88.9, \"HT_IN\": 69}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  },
+  {
+   "name": "Elevated blood pressure",
+   "category": "blood_pressure",
+   "evidence": [
+    "paramed hsc.flat: {\"BP_1\": \"138/81\", \"BP_2\": \"140/81\"}"
+   ],
+   "disclosed_on_application": false,
+   "physician_records_in_file": false,
+   "evidence_gaps": ""
+  }
+ ],
+ "issues": [],
+ "attempts": 1,
+ "category_remaps": [
+  "skin->other",
+  "vitamin_deficiency->other"
+ ]
+}
