@@ -224,9 +224,9 @@
    "height": "5'1.5\"",
    "weight_lbs": 132,
    "bp": [
-    "139/80",
-    "141/83",
-    "139/78"
+    "137/80",
+    "137/83",
+    "138/80"
    ],
    "pulse": 51,
    "remarks": []
@@ -243,35 +243,28 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 287,
+     "value": 266,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 54,
-     "flag": "",
+     "value": 39,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 210,
+     "value": "204 115",
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
-     "test": "Triglycerides",
-     "value": 115,
-     "flag": "",
-     "units": "mg/dL",
-     "ref": "0-149"
-    },
-    {
      "test": "CHOL/HDL RATIO",
-     "value": 5.3,
+     "value": 6.8,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -285,10 +278,17 @@
     },
     {
      "test": "HEMOGLOBIN A1C",
-     "value": "5 22",
+     "value": 5,
      "flag": "",
      "units": "%",
      "ref": "4.0-5.6"
+    },
+    {
+     "test": "AST (SGOT)",
+     "value": 22,
+     "flag": "",
+     "units": "U/L",
+     "ref": "10-40"
     },
     {
      "test": "ALT (SGPT)",
@@ -315,7 +315,7 @@
      "test": "Bilirubin, total",
      "value": 0.6,
      "flag": "",
-     "units": "mg/dL",
+     "units": null,
      "ref": "0.2-1.2"
     },
     {
@@ -371,10 +371,16 @@
   },
   "losses": [
    {
-    "fact_id": "C0982-F033",
+    "fact_id": "C0982-F029",
     "kind": "merged_cells",
-    "original": "ast=22",
+    "original": "triglycerides=115",
     "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0982-F037",
+    "kind": "unit_lost",
+    "original": "mg/dL",
+    "extracted": null
    },
    {
     "fact_id": "C0982-F041",

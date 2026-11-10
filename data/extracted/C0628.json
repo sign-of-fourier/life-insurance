@@ -55,7 +55,7 @@
      "q": "Q5",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"pvcs  (mild)\", \"diagnosed\": \"06/2023\", \"treatment\": \"none\", \"physician\": \"Dr. Laura Watkins\"}"
+      "{\"condition\": \"supraventricular tachycardia (svt) (mild)\", \"diagnosed\": \"06/2023\", \"treatment\": \"none\", \"physician\": \"Dr. Laura Watkins\"}"
      ]
     },
     "Q6": {
@@ -97,7 +97,7 @@
      "q": "Q14",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Thyroid disorder\", \"diagnosed\": \"06/2021\", \"treatment\": \"liothyronine, levothyroxine\", \"physician\": \"Dr. Jonathan Hall\"}"
+      "{\"condition\": \"Thyroid nodule\", \"diagnosed\": \"06/2021\", \"treatment\": \"liothyronine, levothyroxine\", \"physician\": \"Dr. Jonathan Hall\"}"
      ]
     },
     "Q15": {
@@ -1809,8 +1809,8 @@
    "HT_IN": 62,
    "WT_KG": 78.9,
    "HR": 90,
-   "BP_1": "144/84",
-   "BP_2": "147/86"
+   "BP_1": "144/89",
+   "BP_2": "147/89"
   },
   "losses": []
  },
@@ -1835,10 +1835,17 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": "291 72",
+     "value": 258,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
+    },
+    {
+     "test": "HDL CHOL",
+     "value": 39,
+     "flag": "",
+     "units": "mg/dL",
+     "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
@@ -1856,7 +1863,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4,
+     "value": 6.6,
      "flag": "",
      "units": "ratio",
      "ref": "0-5.0"
@@ -1911,13 +1918,6 @@
      "ref": "3.5-5.0"
     },
     {
-     "test": "Creatinine",
-     "value": 1.1,
-     "flag": "",
-     "units": null,
-     "ref": "0.6-1.3"
-    },
-    {
      "test": "eGFR (CKD-EPI 2021)",
      "value": 83,
      "flag": "",
@@ -1946,31 +1946,38 @@
     },
     {
      "test": "NT-proBNP",
-     "value": "36 206",
+     "value": 36,
      "flag": "",
      "units": "pg/mL",
      "ref": "0-124"
+    },
+    {
+     "test": "Glucose",
+     "value": 206,
+     "flag": "H",
+     "units": "mg/dL",
+     "ref": "65-139"
     }
    ]
   },
   "losses": [
    {
     "fact_id": "C0628-F034",
-    "kind": "merged_cells",
-    "original": "hdl=72",
-    "extracted": "merged into previous row"
-   },
-   {
-    "fact_id": "C0628-F045",
-    "kind": "unit_lost",
-    "original": "mg/dL",
+    "kind": "flag_lost",
+    "original": "L",
     "extracted": null
    },
    {
-    "fact_id": "C0628-F051",
-    "kind": "merged_cells",
-    "original": "glucose_random=206",
-    "extracted": "merged into previous row"
+    "fact_id": "C0628-F037",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0628-F045",
+    "kind": "dropped",
+    "original": "1.1",
+    "extracted": null
    }
   ]
  },
@@ -2038,17 +2045,17 @@
    "pages": [
     {
      "page": 1,
-     "text": "Printed by: ROI_75 11/09/2026\nCONFIDENTIAL - Contains PHI\nCollins-Norton Medical Group | Dr. Laura Watkins, cardiology\nPatient: Barbara Wallace DOB: 09/26/1952 Sex: F MRN: 841353\n\nPROBLEM LIST\n - PVCs / SVT / WPW / BBB / pacemaker / syncope (kind svt) [controlled] onset 06/2023\n\nMEDICATIONS\n\nENCOUNTERS\n--- 02/27/2025 Office Visit ---\nS: The patient returns for follow-up on her PVCs, SVT, WPW, BBB, pacemaker, and syncope. She reports no recent syncope episodes and states that her pacemaker is functioning well. She has had sporadic palpitations, but they have been less frequent and less severe compared to previous visits. She denies chest pain, shortness of breath, or dizziness. \n\nO: BP 144/79, Wt 173 lb. Cardiac exam: No murmurs, gallops, or rubs. Pacemaker function normal. Extremities: No edema, pulses 2+ bilaterally. Neurological: Alert and oriented, no focal deficits. Respiratory: Clear to auscultation bilaterally. Abdomen: Soft, non-tender. Skin: No rashes or lesions.\n\nA: PVCs, SVT, WPW, BBB, pacemaker, and syncope - fair control. The patient's condition remains stable with no significant changes.\n\nP: Continue current treatment regimen. Advised to maintain regular follow-up appointments every 3-6 months. Encouraged to report any new symptoms immediately. RTC 3-6 mo.\n\n--- 06/25/2024 Office Visit ---\nS: The patient is back for a follow-up on her PVCs, SVT, WPW, BBB, pacemaker, and syncope. She reports no new episodes of syncope is feeling well overall. She mentions occasional palpitations but states they have not impacted her daily activities. No chest pain, shortness of breath, or dizziness noted.\n\nO: BP 142/83, Wt 179 lb. Cardiac exam: Normal S1 and S2, no murmurs, gallops, or rubs. Pacemaker function normal. Extremities: No edema, pulses 2+ bilaterally. Neurological: Alert and oriented, no focal deficits. Respiratory: Clear to auscultation bilaterally. Abdomen: Soft, non-tender. Skin: No rashes or lesions.\n\nA: PVCs, SVT, WPW, BBB, pacemaker, and syncope - unchanged. The patient's condition remains stable.\n\nP: Continue current treatment regimen. Advised to maintain regular follow-up appointments every 3-6 months. Encouraged to report any new symptoms immediately. RTC 3-6 mo.\n\n--- 10/21/2023 Office Visit ---\nS: Follow-up visit for PVCs, SVT, WPW, BBB, pacemaker, and syncope. The patient reports no recent syncope episodes and states that her pacemaker is functioning well. She has experienced occasional palpitations but they are less severe and less frequent. No chest pain, shortness of breath, or dizziness reported.\n\nO: BP 147/84, W"
+     "text": "RECEIVED 29  ##\nPrinted by: ROI_45 11/10/2026\nCONFIDENTIAL - Contains PHI\nCollins-Norton Medical Group | Dr. Laura Watkins, cardiology\nPatient: Barbara Wallace DOB: 09/26/1952 Sex: F MRN: 935828\n\nPROBLEM LIST\n- Supraventricular tachycardia (SVT) (kind svt) [controlled] onset 06/2023\n\nMEDICATIONS\n[No medications listed at this time]\n\nENCOUNTERS\n\n--- 02/27/2025 Office Visit ---\nS: The patient presents for follow-up on her Supraventricular tachycardia (SVT). She reports a decrease in the frequency and intensity of her SVT episodes over the past few months. \nO: BP 144/79, Wt 173 lb\nA: The patient’s Supraventricular tachycardia (SVT) remains well controlled. \nP: We will continue the current management plan. The patient is advised to return for a follow-up visit in 3 to 6 months.\n\n---\n\n--- 06/25/2024 Office Visit ---\nS: The patient presents for follow-up on her Supraventricular tachycardia (SVT). She continues to report improvement in her SVT episodes.\nO: BP 142/83, Wt 179 lb\nA: The patient’s Supraventricular tachycardia (SVT) remains stable. \nP: We will continue the current management plan. The patient is advised to return for a follow-up visit in 3 to 6 months.\n\n---\n\n--- 10/21/2023 Office Visit ---\nS: The patient presents for follow-up on her Supraventricular tachycardia (SVT). She reports occasional episodes of palpitations but overall feels better than before.\nO: BP 147/84, Wt 181 lb\nA: The patient’s Supraventricular tachycardia (SVT) remains stable.\nP: We will continue the current management plan. patient is advised to return for a follow-up visit in 3 to 6 months.\n\n---\n\n--- 02/16/2023 Office Visit ---\nS: The patient presents for follow-up on her ankle sprain. She reports that the ankle has healed well, and she is back to normal activities without pain.\nO: BP 139/87, Wt 170 lb\nA: Ankle sprain - improving\nP: Continue with the current treatment plan. The patient is advised to return for a follow-up visit in 3 to 6 months.\n\n---\n\n--- 06/13/2022 Office Visit ---\nS: The patient presents for follow-up on her Supraventricular tachycardia (SVT). She reports episodes of palpitations but with reduced frequency.\nO: BP 149/79, Wt 170 lb\nA: The patient’s Supraventricular tachycardia (SVT) is showing fair control.\nP: We will continue the current management plan. The patient is advised to return for a follow-up visit in 3 to 6 months.\n\n---\n\n--- 10/08/2021 Office Visit ---\nS: The patient presents for follow-up on her Supraventricular tachycardia (SVT). She reports frequent episodes of palpitations.\nO: BP 148/81, Wt 179 lb\nA: The patient’s Supraventricular tachycardia (S"
     },
     {
      "page": 2,
-     "text": "t 181 lb. Cardiac exam: Normal S1 and S2, no murmurs, gallops, or rubs. Pacemaker function normal. Extremities: No edema, pulses 2+ bilaterally. Neurological: Alert and oriented, no focal deficits. Respiratory: Clear to auscultation bilaterally. Abdomen: Soft, non-tender. Skin: No rashes or lesions.\n\nA: PVCs, SVT, WPW, BBB, pacemaker, and syncope - fair control. The patient's condition remains stable.\n\nP: Continue current treatment regimen. Advised to maintain regular follow-up appointments every 3-6 months. Encouraged to report any new symptoms immediately. RTC 3-6 mo.\n\n--- 02/16/2023 Office Visit ---\nS: Follow-up visit for an ankle sprain. The patient reports that her ankle has healed well and she has no pain or swelling. She is fully weight-bearing and has resumed normal activities.\n\nO: BP 139/87, Wt 170 lb. Musculoskeletal exam: Full range of motion in the ankle, no tenderness, swelling, or instability. Neurological: Sensation and motor function intact. Vascular: Pulses 2+ bilaterally.\n\nA: Ankle sprain - control. The patient's condition is improving.\n\nP: Continue with current treatment regimen. Advised to maintain regular follow-up appointments every 3-6 months. Encouraged to report any new symptoms immediately. RTC 3-6 mo.\n\n--- 06/13/2022 Office Visit ---\nS: Follow-up visit for PVCs, SVT, WPW, BBB, pacemaker, and syncope.\n"
+     "text": "VT) is showing fair control.\nP: We will continue the current management plan. The patient is advised to return for a follow-up visit in 3 to 6 months.\n\n---\n\n--- 02/03/2021 Office Visit ---\nS: The patient presents for follow-up on her Supraventricular tachycardia (SVT). She reports episodes of palpitations occurring several times a week.\nO: BP 147/91, Wt 178 lb\nA: The patient’s Supraventricular tachycardia (SVT) is showing fair control.\nP: We will continue the current management plan. The patient is advised to return for a follow-up visit in 3 to 6 months.\n\n---\n\nSocial History\nAlcohol consumption: Approximately 2 drinks per week.\n\nAdditional Notes\nThe patient’s overall health status remains stable. She has no other significant medical conditions. She reports normal activities of daily living without limitations.\n\nPage 3 of 3\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "PVCs / SVT / WPW / BBB / pacemaker / syncope",
+     "text": "Supraventricular tachycardia (SVT)",
      "status": "controlled"
     }
    ]
@@ -2063,15 +2070,11 @@
   "payload": {
    "provider": "Dr. Jonathan Hall",
    "specialty": "endocrinology",
-   "page_count": 2,
+   "page_count": 1,
    "pages": [
     {
      "page": 1,
-     "text": "FAX 9  ##\nCLINICAL SUMMARY - Sparks PLC Medical Group\nPatient: Barbara Wallace DOB: 09/26/1952 Sex: F MRN: 288325\n\nEncounters:\n 2024-08-03 back strain BP 146/87 Wt 178\n 2023-08-14 Type 2 diabetes BP 154/86 Wt 175\n 2022-08-23 flu shot BP 143/80 Wt 175\n 2021-09-01 URI BP 145/81 Wt 176\n 2020-09-10 rash BP 148/82 Wt 169\n\nAssessment/Plan:\n • Type 2 Diabetes Mellitus (A1c 7.3; duration 12 years; diagnosed at age 61) - The patient's diabetes has remained controlled over the past year. She is currently taking metformin 850 mg and tirzepatide 10 mg. Recent A1c readings indicate levels of 7.4 on August 3, 2024, 7.1 on August 23, 2022, and 6.9 on August 23, 2022. She continues to monitor blood glucose levels regularly and adheres to her dietary recommendations.\n • Thyroid Disorder (other kind) - The patient's thyroid condition is under control. She is taking liothyronine 25 mcg and levothyroxine 125 mcg. Her thyroid function tests remain within normal limits, and she reports no symptoms related to her thyroid disorder.\n • Blood Pressure and Weight Monitoring - Throughout her recent visits, the patient's blood pressure has ranged from 143/80 to 154/86, with a weight ranging between 169 and 178 pounds. She is advised to continue monitoring her blood pressure and weight at home and to maintain a healthy lifestyle.\n • Back Strain - The patient presented with back strain on August 3, 2024. She was advised to rest, apply ice, and take over-the-counter pain relievers as needed. She is scheduled for follow-up to assess her recovery.\n • Alcohol Consumption - The patient reports consuming approximately two alcoholic drinks per week, which is within moderate limits.\n\nAdditional Notes:\nDuring the patient's most recent visit on August 3, 2024, she reported experiencing back strain, likely due to a recent incident. She was given instructions for home care, including rest, ice application, and over-the-counter analgesics as needed. Her blood pressure was 146/87, and her weight was 178 pounds.\n\nThe patient's Type 2 diabetes continues to be well-managed with her current medications, metformin 850 mg and tirzepatide 10 mg. Her A1c readings have remained stable, with the latest reading at 7.4 on August 3, 2024. She has no reported symptoms of neuropathy, retinopathy, or cardiovascular complications related to her diabetes. Her thyroid disorder, classified as \"other,\" is also well-controlled with her current medications, 25 mcg and levothyroxine 125 mcg.\n\nOn August 14, 2023, the patient's blood pressure was 154/86, and her weight was 175 pounds. S"
-    },
-    {
-     "page": 2,
-     "text": "he continues to monitor her blood pressure regularly and maintains a weight within a healthy range for her height and age. \n\nThroughout her encounters, the patient has exhibited a consistent pattern of blood pressure readings and weight maintenance. For instance, on September 1, 2021, her blood pressure was 145/81, and her weight was 176 pounds. More recently, on August 23, 2022, her blood pressure was 143/80, and her weight was 175 pounds.\n\nThe patient reports consuming approximately two alcoholic drinks per week, which is considered moderate and does not pose significant risk for her current health conditions. She has no documented history of use.\n\nOverall, Barbara Wallace's medical conditions are well-controlled, and she is adherent to her treatment plans. She continues to follow up regularly to monitor her health status and make any necessary adjustments to her care plan.\n"
+     "text": "CLINICAL SUMMARY - Sparks PLC Medical Group\nPatient: Barbara Wallace DOB: 09/26/1952 Sex: F MRN: 299984\n\nEncounters:\n 2024-08-03 Back strain BP 146/87 Wt 178\n 2023-08-14 Type 2 diabetes BP 154/86 Wt 175\n 2022-08-23 Flu shot BP 143/80 Wt 175\n 2021-09-01 URI BP 145/81 Wt 176\n 2020-09-10 Rash BP 148/82 Wt 169\n\nAssessment/Plan:\n • Type 2 diabetes mellitus (A1c 7.3; duration 12 years; diagnosed at age 61) - controlled; medications: metformin 850 mg daily, tirzepatide 10 mg weekly\n - Recent A1c on 2024-08-03 was 7.4. Previous values: 7.1 on 2023-08-14, 6.9 on 2022-08-23, and 7.1 on 2021-09-01.\n - The patient is currently not on insulin therapy.\n - complications such as microalbuminuria, neuropathy, or retinopathy have been documented.\n - Patient has no history of coronary artery disease.\n • Thyroid nodule (kind other) - controlled; medications: liothyronine 25 mcg daily, levothyroxine 125 mcg daily\n - The thyroid nodule is being effectively managed with the current medication regimen.\n\nVitals and Exam:\n - Blood pressure and weight measurements were recorded at each visit.\n - 2024-08-03: BP 146/87, weight 178 lbs\n - 2023-08-14: BP 154/86, weight 175 lbs\n - 2022-08-23: BP 143/80, weight 175 lbs\n - 2021-09-01: BP 145/81, weight 176 lbs\n - 2020-09-10: BP 148/82, weight 169 lbs\n - Physical examinations have been generally within normal limits. No acute distress noted. Cardiovascular, respiratory, and abdominal exams were unremarkable.\n - Patient reported occasional mild joint discomfort during the last visit.\n\nSocial History:\n - Patient reports an alcohol consumption of approximately two drinks per week. No history of tobacco use has been documented.\n\nFamily History:\n - Patient's mother has a history of COPD, diagnosed at age 66 and is currently alive at age 90.\n\nFollow-up and Management:\n - Continued monitoring of A1c levels and thyroid function tests are recommended.\n - The patient is advised to maintain a balanced diet and regular exercise regimen to help manage her Type 2 diabetes.\n - Follow-up appointment scheduled for ongoing management and review of her medical conditions.\n\nDr. Jonathan Hall\nEndocrinologist\nSparks PLC Medical Group\n"
     }
    ],
    "entities": [
@@ -2079,14 +2082,6 @@
      "type": "diagnosis",
      "text": "Type 2 diabetes",
      "status": "controlled"
-    },
-    {
-     "type": "medication",
-     "text": "metformin 850 mg"
-    },
-    {
-     "type": "medication",
-     "text": "tirzepatide 10 mg"
     },
     {
      "type": "medication",

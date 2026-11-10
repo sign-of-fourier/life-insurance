@@ -1,0 +1,996 @@
+{
+ "case_id": "C0784",
+ "trace": [
+  {
+   "step": 1,
+   "stage": "application",
+   "at": "2025-04-29T09:22:00",
+   "fact_ids": [
+    "C0784-F006",
+    "C0784-F007",
+    "C0784-F008"
+   ],
+   "rule_id": "FN-1",
+   "finding": "US citizen, US resident - eligible.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 2,
+   "stage": "application",
+   "at": "2025-04-29T09:22:00",
+   "fact_ids": [
+    "C0784-F001"
+   ],
+   "rule_id": "OCC",
+   "finding": "Occupation retired (class 1A): no rating.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 3,
+   "stage": "application",
+   "at": "2025-04-29T09:22:00",
+   "fact_ids": [
+    "C0784-F002",
+    "C0784-F003",
+    "C0784-F005",
+    "C0784-F009",
+    "C0784-F010"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in context).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 4,
+   "stage": "application",
+   "at": "2025-04-29T09:24:00",
+   "fact_ids": [
+    "C0784-F012"
+   ],
+   "rule_id": "TOB-1",
+   "finding": "Denies all tobacco/nicotine use (APP-2019 form: 5-year question window).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 5,
+   "stage": "application",
+   "at": "2025-04-29T09:24:00",
+   "fact_ids": [
+    "C0784-F014"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Part 2 discloses asthma (mild) (dx 10/2014, tx albuterol); evidence to follow.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 6,
+   "stage": "application",
+   "at": "2025-04-29T09:24:00",
+   "fact_ids": [
+    "C0784-F015"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Part 2 discloses Chronic kidney disease (eGFR) (dx 08/2017, tx none); evidence to follow.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 7,
+   "stage": "application",
+   "at": "2025-04-29T09:24:00",
+   "fact_ids": [
+    "C0784-F015"
+   ],
+   "rule_id": "APS-6",
+   "finding": "Chronic kidney disease (eGFR): severity not documented (application/Rx only (no APS in file)); APS-6 mildest ratable row 'transplant' +150.",
+   "effect": {
+    "debits": 150,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 8,
+   "stage": "application",
+   "at": "2025-04-29T09:24:00",
+   "fact_ids": [
+    "C0784-F013",
+    "C0784-F016"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Remaining Part 2 answers reviewed: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 9,
+   "stage": "third_party",
+   "at": "2025-04-29T09:35:00",
+   "fact_ids": [
+    "C0784-F017"
+   ],
+   "rule_id": "RX-2.2",
+   "finding": "Rx albuterol x40 (pulmonology) consistent with disclosed Asthma.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 10,
+   "stage": "third_party",
+   "at": "2025-04-29T09:35:00",
+   "fact_ids": [
+    "C0784-F018",
+    "C0784-F019"
+   ],
+   "rule_id": "MISC-1",
+   "finding": "eczema: low-impact condition on the no-rating list - no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 11,
+   "stage": "third_party",
+   "at": "2025-04-29T09:41:00",
+   "fact_ids": [
+    "C0784-F020"
+   ],
+   "rule_id": "MIB-2",
+   "finding": "MIB 500327 (Asthma; moderate) - consistent with Asthma.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 12,
+   "stage": "third_party",
+   "at": "2025-04-29T09:41:00",
+   "fact_ids": [
+    "C0784-F021"
+   ],
+   "rule_id": "MIB-3",
+   "finding": "MIB 621317 (Pituitary disorder; moderate) reported 9.6 yrs ago - informational only.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 13,
+   "stage": "third_party",
+   "at": "2025-04-29T09:45:00",
+   "fact_ids": [
+    "C0784-F023",
+    "C0784-F024"
+   ],
+   "rule_id": "MVR-3",
+   "finding": "2 minor moving violation(s) in 3 yrs: +0.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 14,
+   "stage": "requirements",
+   "at": "2025-04-29T09:47:00",
+   "fact_ids": [],
+   "rule_id": "REQ-1",
+   "finding": "Order PM, B, U, EKG, COG, FINQ: REQ-1 grid.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "paramed",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 15,
+   "stage": "requirements",
+   "at": "2025-04-29T09:47:00",
+   "fact_ids": [],
+   "rule_id": "REQ-2.6",
+   "finding": "Order FORQ: REQ-2.6 foreign national / travel.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "other",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 16,
+   "stage": "requirements",
+   "at": "2025-04-29T09:47:00",
+   "fact_ids": [],
+   "rule_id": "REQ-2.2",
+   "finding": "Order APS from Dr. Sean Gomez (pulmonology): REQ-2.2 app vs 3rd-party discrepancy.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "aps",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 17,
+   "stage": "requirements",
+   "at": "2025-04-29T09:47:00",
+   "fact_ids": [],
+   "rule_id": "REQ-2.2",
+   "finding": "Order APS from Dr. Tammie Fowler (endocrinology): REQ-2.2 app vs 3rd-party discrepancy.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "aps",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 18,
+   "stage": "aps",
+   "at": "2025-05-10T09:22:00",
+   "fact_ids": [
+    "C0784-F011",
+    "C0784-F053"
+   ],
+   "rule_id": "TRV",
+   "finding": "Travel to Jamaica (Tier C) 11 wks/yr (business): FE $2.5/1000.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": {
+     "per_thousand": 2.5,
+     "years": null,
+     "reason": "foreign travel (Jamaica)"
+    },
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 19,
+   "stage": "aps",
+   "at": "2025-05-10T09:22:00",
+   "fact_ids": [
+    "C0784-F054"
+   ],
+   "rule_id": "FN-1",
+   "finding": "Foreign questionnaire citizenship: US.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 20,
+   "stage": "aps",
+   "at": "2025-05-10T09:22:00",
+   "fact_ids": [
+    "C0784-F055"
+   ],
+   "rule_id": "FN-1",
+   "finding": "Foreign questionnaire visa: n/a.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 21,
+   "stage": "aps",
+   "at": "2025-05-10T09:22:00",
+   "fact_ids": [
+    "C0784-F056"
+   ],
+   "rule_id": "FN-1",
+   "finding": "Foreign questionnaire years in us: n/a.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 22,
+   "stage": "aps",
+   "at": "2025-05-10T09:22:00",
+   "fact_ids": [
+    "C0784-F057"
+   ],
+   "rule_id": "FN-1",
+   "finding": "Foreign questionnaire residence: US.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 23,
+   "stage": "labs",
+   "at": "2025-05-10T20:22:00",
+   "fact_ids": [
+    "C0784-F025"
+   ],
+   "rule_id": "BLD-1.2",
+   "finding": "Build 5'3.5\" 196 lb (measured), BMI 34.2: +25 column: +25.",
+   "effect": {
+    "debits": 25,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 24,
+   "stage": "labs",
+   "at": "2025-05-10T20:22:00",
+   "fact_ids": [
+    "C0784-F027"
+   ],
+   "rule_id": "GEN-5",
+   "finding": "Pulse/other exam items unremarkable: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 25,
+   "stage": "labs",
+   "at": "2025-05-10T22:22:00",
+   "fact_ids": [
+    "C0784-F052"
+   ],
+   "rule_id": "CV",
+   "finding": "EKG normal: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 26,
+   "stage": "aps",
+   "at": "2025-05-13T09:22:00",
+   "fact_ids": [
+    "C0784-F004",
+    "C0784-F058",
+    "C0784-F059",
+    "C0784-F060",
+    "C0784-F001",
+    "C0784-F061"
+   ],
+   "rule_id": "FIN-1",
+   "finding": "Total coverage $1,500,000 (applied $1,500,000 + in force $0) vs justified $3,808,500 (age 71+: 50% of net worth $7,617,000): 0.39x. Within limits.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 27,
+   "stage": "labs",
+   "at": "2025-05-15T14:22:00",
+   "fact_ids": [
+    "C0784-F028",
+    "C0784-F029",
+    "C0784-F032"
+   ],
+   "rule_id": "LIP-1",
+   "finding": "Lipids TC 246, HDL 37, ratio 6.6 - preferred matrix row.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 28,
+   "stage": "labs",
+   "at": "2025-05-15T14:22:00",
+   "fact_ids": [
+    "C0784-F042"
+   ],
+   "rule_id": "CMB-3",
+   "finding": "eGFR 33: consistent with documented kidney disease - rated there.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 29,
+   "stage": "labs",
+   "at": "2025-05-15T14:22:00",
+   "fact_ids": [
+    "C0784-F046"
+   ],
+   "rule_id": "LAB-2",
+   "finding": "NT-proBNP 390: within the age-adjusted normal (< 450 at age 80).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 30,
+   "stage": "labs",
+   "at": "2025-05-15T14:22:00",
+   "fact_ids": [
+    "C0784-F030",
+    "C0784-F031",
+    "C0784-F033",
+    "C0784-F034",
+    "C0784-F035",
+    "C0784-F036",
+    "C0784-F037",
+    "C0784-F038",
+    "C0784-F039",
+    "C0784-F040",
+    "C0784-F041",
+    "C0784-F043",
+    "C0784-F044",
+    "C0784-F045"
+   ],
+   "rule_id": "LAB-2",
+   "finding": "Remaining blood values within UW normal limits: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 31,
+   "stage": "labs",
+   "at": "2025-05-15T14:27:00",
+   "fact_ids": [
+    "C0784-F047"
+   ],
+   "rule_id": "TOB-4.1",
+   "finding": "Cotinine negative (urine 8).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 32,
+   "stage": "labs",
+   "at": "2025-05-15T14:27:00",
+   "fact_ids": [
+    "C0784-F048",
+    "C0784-F049",
+    "C0784-F050",
+    "C0784-F051"
+   ],
+   "rule_id": "LAB-2",
+   "finding": "Remaining urine values within limits: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 33,
+   "stage": "aps",
+   "at": "2025-05-17T13:22:00",
+   "fact_ids": [
+    "C0784-F066"
+   ],
+   "rule_id": "END",
+   "finding": "Adrenal insufficiency: profile 'adrenal' (kind adrenal) per APS.",
+   "effect": {
+    "debits": 50,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 34,
+   "stage": "aps",
+   "at": "2025-05-17T13:22:00",
+   "fact_ids": [
+    "C0784-F068"
+   ],
+   "rule_id": "APS-1",
+   "finding": "Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 35,
+   "stage": "aps",
+   "at": "2025-05-23T10:22:00",
+   "fact_ids": [
+    "C0784-F062"
+   ],
+   "rule_id": "RSP",
+   "finding": "Asthma: profile 'severe' (steroid bursts per year 3, er years ago 1.9) per APS (chapter range 50-100).",
+   "effect": {
+    "debits": 50,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 36,
+   "stage": "aps",
+   "at": "2025-05-23T10:22:00",
+   "fact_ids": [
+    "C0784-F026",
+    "C0784-F063",
+    "C0784-F067"
+   ],
+   "rule_id": "BP-1",
+   "finding": "Blood pressure average 131/73 (paramed + APS readings in last 12 months); untreated - used for preferred matrix (CLS-5).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 37,
+   "stage": "aps",
+   "at": "2025-05-23T10:22:00",
+   "fact_ids": [
+    "C0784-F022",
+    "C0784-F064"
+   ],
+   "rule_id": "GRY-8",
+   "finding": "MIB 525715 (Pulmonary nodule; under investigation / unconfirmed) corroborated only by an 'r/o' note in APS - not rated (default).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 38,
+   "stage": "aps",
+   "at": "2025-05-23T10:22:00",
+   "fact_ids": [
+    "C0784-F065"
+   ],
+   "rule_id": "APS-1",
+   "finding": "Routine visit content (normal BP readings, exercise notes, legacy labs) reviewed: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 39,
+   "stage": "final",
+   "at": "2025-05-23T10:23:00",
+   "fact_ids": [],
+   "rule_id": "GEN-2.2",
+   "finding": "Material misrepresentation (medical): rated on the true facts; MISREP note for compliance.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 40,
+   "stage": "final",
+   "at": "2025-05-23T10:27:00",
+   "fact_ids": [],
+   "rule_id": "CLS-6",
+   "finding": "Gross debits +275 >= +150: credits not available.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 41,
+   "stage": "final",
+   "at": "2025-05-23T10:27:00",
+   "fact_ids": [],
+   "rule_id": "CLS-8.1",
+   "finding": "Net debits +275 exceed Table 8 at age 71+ (CLS-3.4) - Decline.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": true,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  }
+ ],
+ "decision": {
+  "ladder": "non_tobacco",
+  "risk_class": "Decline",
+  "table": 0,
+  "flat_extras": [],
+  "riders": [],
+  "postpone_months": null,
+  "decline_reason": "Net debits +275 exceed Table 8 at age 71+ (CLS-3.4)",
+  "net_debits": 275,
+  "preliminary_class": "Standard",
+  "approved_face_amount": null,
+  "exclusions": []
+ },
+ "grey_areas": [
+  {
+   "issue": "Chronic kidney disease (eGFR): severity attributes not documented",
+   "rule_ids": [
+    "GRY-5",
+    "APS-6"
+   ],
+   "chosen": "mildest ratable row 'transplant' (+150)",
+   "alternatives": [
+    "obtain APS and hold"
+   ],
+   "rationale": "APS-6: chapter has no unqualified row."
+  },
+  {
+   "issue": "Tier C travel 11 wks/yr",
+   "rule_ids": [
+    "GRY-0",
+    "TRV"
+   ],
+   "chosen": "FE $2.5/1000",
+   "alternatives": [
+    "best Standard instead of FE"
+   ],
+   "rationale": "TRV table permits FE or class limit."
+  },
+  {
+   "issue": "MIB code supported only by an r/o note",
+   "rule_ids": [
+    "GRY-8",
+    "APS-2",
+    "MIB-1"
+   ],
+   "chosen": "ignore (not rated)",
+   "alternatives": [
+    "rate as mild form (+25)"
+   ],
+   "rationale": "APS-2: rule-outs are suspicions, not diagnoses."
+  }
+ ],
+ "requirements_ordered": [
+  "C0784-D10",
+  "C0784-D06",
+  "C0784-D09",
+  "C0784-D11",
+  "C0784-D07",
+  "C0784-D08",
+  "C0784-D13",
+  "C0784-D12"
+ ],
+ "narrative_path": "data/golden/C0784.md"
+}

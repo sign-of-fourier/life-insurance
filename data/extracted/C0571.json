@@ -289,8 +289,8 @@
    "weight_lbs": 171,
    "bp": [
     "140/74",
-    "137/73",
-    "137/76"
+    "139/73",
+    "139/76"
    ],
    "pulse": 91,
    "remarks": [
@@ -320,38 +320,31 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 283,
+     "value": 260,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 43,
-     "flag": "",
+     "value": 39,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 197,
+     "value": 178,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
      "test": "Triglycerides",
-     "value": 215,
+     "value": "215 6.7",
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-149"
-    },
-    {
-     "test": "CHOL/HDL RATIO",
-     "value": 6.6,
-     "flag": "H",
-     "units": "ratio",
-     "ref": "0-5.0"
     },
     {
      "test": "Glucose, fasting",
@@ -363,23 +356,16 @@
     {
      "test": "HEMOGLOBIN A1C",
      "value": 8.5,
-     "flag": "H",
+     "flag": "",
      "units": "%",
      "ref": "4.0-5.6"
     },
     {
      "test": "AST (SGOT)",
-     "value": 14,
+     "value": "14 42",
      "flag": "",
      "units": "U/L",
      "ref": "10-40"
-    },
-    {
-     "test": "ALT (SGPT)",
-     "value": 42,
-     "flag": "",
-     "units": "U/L",
-     "ref": "7-45"
     },
     {
      "test": "GGT",
@@ -452,7 +438,26 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0571-F038",
+    "kind": "merged_cells",
+    "original": "tc_hdl_ratio=6.7",
+    "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0571-F040",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0571-F042",
+    "kind": "merged_cells",
+    "original": "alt=42",
+    "extracted": "merged into previous row"
+   }
+  ]
  },
  {
   "doc_id": "C0571-D08",

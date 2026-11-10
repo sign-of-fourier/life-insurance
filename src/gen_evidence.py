@@ -25,6 +25,7 @@ from schemas import EvidenceBundle, EvidenceFact, SourceDoc, Truth  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 IMP = load("impairments")
+BUILD = load("build")
 REQ = load("requirements")
 RX = load("rx_map")["drugs"]
 MIB = load("mib_codebook")
@@ -137,7 +138,7 @@ class EvidenceGen:
             if u.disclosure == "omitted":
                 tob_ans, tob_note = "No", "omitted"
             elif u.disclosure == "minimized":
-                fake_quit = t.app_date - timedelta(days=r.randint(400, 1500))
+                fake_quit = last - timedelta(days=r.randint(400, 1500))   # minimized = claims an OLDER quit date
                 tob_ans, tob_note = f"Former {u.product}; quit {fake_quit.strftime('%m/%Y')}", "minimized: quit date understated"
             else:
                 tob_ans = (f"Current {u.product}, {u.frequency}" if u.status == "current" else
@@ -244,7 +245,7 @@ class EvidenceGen:
         q = self.x.get("cessation_rx_quit")
         if q:
             qd = date.fromisoformat(q)
-            fills.append({"drug": "varenicline", "brand": "Chantix", "strength": "1 mg", "fills": [(qd - timedelta(days=30 * k)).isoformat() for k in range(3)],
+            fills.append({"drug": "varenicline", "brand": "Chantix", "strength": "1 mg", "fills": sorted((qd - timedelta(days=30 * k)).isoformat() for k in range(3)),
                           "days_supply": 30, "prescriber": t.providers[0].name, "specialty": t.providers[0].specialty, "cond_index": None})
         # acute noise
         for _ in range(r.choice([0, 1, 2, 3])):
@@ -492,6 +493,44 @@ class EvidenceGen:
             out.append(dS)
         return out
 
+    def clamp_paramed(self):
+        """Measurement noise must not move a case across the band the design intended (no random draws: the
+        random stream, and therefore every other document, is unchanged).
+        BP: shift paramed readings so the BP-1 average (paramed + APS readings dated within 12 months, as the
+        engine computes it) rounds to the true BP.  Build: if measured BMI lands in a different build column than
+        the true BMI, record the true height/weight."""
+        pm = next((f for f in self.facts if f.kind == "paramed" and f.key == "bp"), None)
+        if pm:
+            t, did = self.t, pm.doc_id
+            aps = [r for f in self.facts if f.kind == "aps_finding" and f.key == "bp_readings" and f.as_of
+                   and (t.app_date - f.as_of).days / 365.25 <= 1 for r in f.value]
+            aps = [tuple(int(x) for x in s.split("/")) for s in aps]
+            reads = [list(b) for b in pm.value["readings"]]
+            n, m = len(reads) + len(aps), len(reads)
+            for i, tv in ((0, t.bp_systolic), (1, t.bp_diastolic)):
+                for _ in range(40):
+                    avg = (sum(r[i] for r in reads) + sum(a[i] for a in aps)) / n
+                    if round(avg) == tv:
+                        break
+                    step = 1 if avg < tv else -1
+                    j = max(range(m), key=lambda k: -reads[k][i] * step)   # nudge the reading furthest in the wrong direction
+                    reads[j][i] += step
+            avg = [round(sum(r[0] for r in reads) / m), round(sum(r[1] for r in reads) / m)]
+            pm.value = {"readings": [list(r) for r in reads], "avg": avg}
+            self.content[did]["bp"] = [tuple(r) for r in reads]
+        bf = next((f for f in self.facts if f.kind == "paramed" and f.key == "build"), None)
+        if bf:
+            def col(h, w):
+                bmi = w * 703 / (h * h)
+                if bmi < BUILD["lower_bands"][0]["min_bmi"]:
+                    return -1 - next((i for i, b in enumerate(BUILD["lower_bands"]) if bmi >= b["min_bmi"]), 9)
+                return next((i for i, b in enumerate(BUILD["upper_bands"]) if bmi <= b["max_bmi"] + 1e-9), 99)
+            h, w = bf.value["height_in"], bf.value["weight_lb"]
+            if col(h, w) != col(self.t.height_in, self.t.weight_lb):
+                bf.value = {"height_in": self.t.height_in, "weight_lb": self.t.weight_lb}
+                self.content[bf.doc_id]["height_in"] = self.t.height_in
+                self.content[bf.doc_id]["weight_lb"] = self.t.weight_lb
+
     def lab_relevant(self, k, v):
         if k in ("tc", "hdl", "tc_hdl_ratio", "cotinine_urine", "cotinine_saliva"):
             return True
@@ -645,6 +684,7 @@ class EvidenceGen:
         self.questionnaires(reasons)
         for k, (pid, why) in enumerate(aps):
             self.aps(pid, why, k)
+        self.clamp_paramed()
         # traceability audit
         untraced = [i for i, c in self.cond_refs() if not c.irrelevant and not c.details.get("untraceable") and self.trace[i] == 0]
         self.docs.sort(key=lambda d: d.received_at)

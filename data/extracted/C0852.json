@@ -232,8 +232,8 @@
    "HT_IN": 59.5,
    "WT_KG": 59.0,
    "HR": 88,
-   "BP_1": "134/75",
-   "BP_2": "132/75"
+   "BP_1": "134/84",
+   "BP_2": "132/84"
   },
   "losses": []
  },
@@ -274,21 +274,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 279,
+     "value": 282,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 68,
+     "value": 41,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 195,
+     "value": 225,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -302,8 +302,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.1,
-     "flag": "",
+     "value": 6.9,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -365,17 +365,10 @@
     },
     {
      "test": "Creatinine",
-     "value": 0.9,
+     "value": "0.9 106",
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
-    },
-    {
-     "test": "eGFR (CKD-EPI 2021)",
-     "value": 106,
-     "flag": "",
-     "units": "mL/min/1.73m2",
-     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -399,7 +392,14 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0852-F042",
+    "kind": "merged_cells",
+    "original": "egfr=106",
+    "extracted": "merged into previous row"
+   }
+  ]
  },
  {
   "doc_id": "C0852-D08",

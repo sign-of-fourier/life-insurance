@@ -16,7 +16,7 @@
     "visa": "None",
     "occupation": "unemployed",
     "income": 0,
-    "net_worth": 134000,
+    "net_worth": 3457000,
     "face": 5000000,
     "product": "Term 30",
     "riders": "['WP', 'XCR']",
@@ -204,7 +204,7 @@
    "form": "FINQ",
    "fields": {
     "income": 0,
-    "net_worth": 134000,
+    "net_worth": 3457000,
     "existing": 250000,
     "purpose": "estate"
    }
@@ -220,8 +220,8 @@
    "HT_IN": 62,
    "WT_KG": 53.5,
    "HR": 58,
-   "BP_1": "118/75",
-   "BP_2": "113/74"
+   "BP_1": "113/77",
+   "BP_2": "113/77"
   },
   "losses": []
  },
@@ -246,22 +246,22 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 270,
+     "value": 258,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 40,
-     "flag": "",
+     "value": 38,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 198,
-     "flag": "H",
+     "value": 188,
+     "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
     },
@@ -309,17 +309,10 @@
     },
     {
      "test": "GGT",
-     "value": 44,
+     "value": "44 91",
      "flag": "",
      "units": "U/L",
      "ref": "8-60"
-    },
-    {
-     "test": "Alkaline phosphatase",
-     "value": 91,
-     "flag": "",
-     "units": "U/L",
-     "ref": "40-130"
     },
     {
      "test": "Bilirubin, total",
@@ -353,7 +346,7 @@
      "test": "Hemoglobin",
      "value": 14.3,
      "flag": "",
-     "units": "g/dL",
+     "units": null,
      "ref": "12.0-17.5"
     },
     {
@@ -371,7 +364,26 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0046-F022",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0046-F030",
+    "kind": "merged_cells",
+    "original": "alk_phos=91",
+    "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0046-F035",
+    "kind": "unit_lost",
+    "original": "g/dL",
+    "extracted": null
+   }
+  ]
  },
  {
   "doc_id": "C0046-D08",

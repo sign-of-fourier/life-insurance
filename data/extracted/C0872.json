@@ -19,9 +19,9 @@
     "face": 750000,
     "product": "Term 20",
     "riders": "['CTR']",
-    "existing": 250000,
+    "existing": 0,
     "replacement": "False",
-    "beneficiary": "children",
+    "beneficiary": "estate",
     "signed": "2025-06-27"
    }
   },
@@ -47,7 +47,7 @@
     },
     "Q2": {
      "q": "Q2",
-     "a": "4.0 drinks/week"
+     "a": "2.0 drinks/week"
     },
     "Q4": {
      "q": "Q4",
@@ -127,7 +127,7 @@
     },
     "Q23": {
      "q": "Q23",
-     "a": "mother: COPD, died 81"
+     "a": "mother: Alzheimer's, dx 66"
     },
     "Q24": {
      "q": "Q24",
@@ -156,11 +156,32 @@
   "payload": {
    "medications": [
     {
-     "product": "DELTASONE 10MG",
-     "first": "2025-03-23",
-     "last": "2025-03-23",
+     "product": "XANAX 1MG",
+     "first": "2020-06-28",
+     "last": "2025-06-24",
+     "count": 40,
+     "prescriber": "Dr. Jacob Beard"
+    },
+    {
+     "product": "AMOXIL 875MG",
+     "first": "2022-12-11",
+     "last": "2022-12-11",
+     "count": 1,
+     "prescriber": "Dr. Smith (Urgent Care)"
+    },
+    {
+     "product": "DELTASONE 5MG",
+     "first": "2023-06-30",
+     "last": "2023-06-30",
      "count": 1,
      "prescriber": "Dr. Garcia (Urgent Care)"
+    },
+    {
+     "product": "FLEXERIL 5MG",
+     "first": "2021-09-22",
+     "last": "2021-09-22",
+     "count": 1,
+     "prescriber": "Dr. Nguyen (Urgent Care)"
     }
    ]
   },
@@ -172,7 +193,24 @@
   "doc_type": "mib",
   "vendor_schema": "mib.codes",
   "payload": {
-   "codes": []
+   "codes": [
+    {
+     "code": "400312",
+     "date": "2015-09-03"
+    },
+    {
+     "code": "010000",
+     "date": "2018-01-15"
+    },
+    {
+     "code": "031040",
+     "date": "2024-08-04"
+    },
+    {
+     "code": "170716",
+     "date": "2023-01-25"
+    }
+   ]
   },
   "losses": []
  },
@@ -185,8 +223,8 @@
    "license_status": "VALID",
    "record": [
     {
-     "dt": "231029",
-     "text": "SPEEDING 11-15 OVER LIMIT"
+     "dt": "200921",
+     "text": "DWI / OWI"
     }
    ]
   },
@@ -198,15 +236,17 @@
   "doc_type": "paramed",
   "vendor_schema": "pmx.v2",
   "payload": {
-   "height": "5'8\"",
-   "weight_lbs": 163,
+   "height": "5'8.5\"",
+   "weight_lbs": 162,
    "bp": [
-    "136/86",
-    "128/89",
-    "129/89"
+    "122/71",
+    "122/72",
+    "123/72"
    ],
-   "pulse": 68,
-   "remarks": []
+   "pulse": 57,
+   "remarks": [
+    "Opioid use disorder: applicant mentioned to examiner"
+   ]
   },
   "losses": []
  },
@@ -216,23 +256,23 @@
   "doc_type": "lab_blood",
   "vendor_schema": "apx.flat",
   "payload": {
-   "collected": "2025-07-10",
-   "CHOL/HDL/RATIO": "277/42/6.6",
-   "AST/ALT": "25/18",
-   "LDL (CALC)": "222 mg/dL",
-   "TRIGLYCERIDES": "65 mg/dL",
-   "GLUCOSE, FASTING": "84 mg/dL",
-   "A1C": "5.6 %",
-   "GGTP": "22 U/L",
-   "ALKALINE PHOSPHATASE": "104 U/L",
-   "BILIRUBIN, TOTAL": "0.9 mg/dL",
-   "ALBUMIN": "4.2 g/dL",
-   "CREATININE": "0.9 mg/dL",
-   "EGFR": "97 mL/min/1.73m2",
-   "HEMOGLOBIN": "13 g/dL",
+   "collected": "2025-06-30",
+   "CHOL/HDL/RATIO": "272/40/6.8",
+   "AST/ALT": "22/24",
+   "LDL (CALC)": "209 mg/dL",
+   "TRIGLYCERIDES": "115 mg/dL",
+   "GLUCOSE, FASTING": "89 mg/dL",
+   "A1C": "5.5 %",
+   "GGTP": "10 U/L",
+   "ALKALINE PHOSPHATASE": "112 U/L",
+   "BILIRUBIN, TOTAL": "1.2 mg/dL",
+   "ALBUMIN": "3.9 g/dL",
+   "CREATININE": "0.7 mg/dL",
+   "EGFR": "85 mL/min/1.73m2",
+   "HEMOGLOBIN": "13.4 g/dL",
    "HIV-1/2 AB": "0 qual",
-   "%CDT": "1.1 %dCDT",
-   "NT-PROBNP": "77 pg/mL"
+   "%CDT": "0.9 %dCDT",
+   "NT-PROBNP": "102 pg/mL"
   },
   "losses": []
  },
@@ -242,20 +282,63 @@
   "doc_type": "lab_urine",
   "vendor_schema": "apx.flat",
   "payload": {
-   "collected": "2025-07-10",
+   "collected": "2025-06-30",
    "NIC/COT": "8 ng/mL",
-   "PROTEIN, URINE": "10 mg/dL",
+   "PROTEIN, URINE": "20 mg/dL",
    "COCAINE METABOLITE": "D qual",
    "GLUCOSE, URINE": "0 qual",
    "RBC, URINE": "0 /hpf"
   },
   "losses": [
    {
-    "fact_id": "C0872-F041",
+    "fact_id": "C0872-F052",
     "kind": "misread_digit",
     "original": "0",
     "extracted": "D"
    }
   ]
+ },
+ {
+  "doc_id": "C0872-D09",
+  "case_id": "C0872",
+  "doc_type": "other",
+  "vendor_schema": "q.alcq",
+  "payload": {
+   "form": "ALCQ",
+   "fields": {
+    "drinks_per_week": 2,
+    "treatment": "False"
+   }
+  },
+  "losses": []
+ },
+ {
+  "doc_id": "C0872-D10",
+  "case_id": "C0872",
+  "doc_type": "aps",
+  "vendor_schema": "aps.small_practice_typed",
+  "payload": {
+   "provider": "Dr. Jacob Beard",
+   "specialty": "psychiatry",
+   "page_count": 2,
+   "pages": [
+    {
+     "page": 1,
+     "text": "Page 3  CONFIDENTIAL\nDaniel-Webb \nRe: Caroline Shaw (DOB 03/02/1970)\n\nOctober 22, 2024 \nI am writing to provide a comprehensive update on Ms. Caroline Shaw, who was seen today at our clinic regarding her ongoing management of Depression and anxiety. During this visit, her blood pressure was recorded at 124/68, and she weighed 157 pounds. Her current regimen includes alprazolam 1 mg, which she has been taking for her Depression and anxiety, a condition she has been managing for 14.9 years. This diagnosis has been closely followed by our psychiatric team. Notably, Ms. Shaw has been on a single medication for her condition, and there have been periods where she had to take about two months off work. Today, she reported that her Depression and anxiety are being well managed, and she remains under our psychiatric care.\n\nMarch 08, 2024 \nToday, Ms. Shaw visited for a follow-up regarding her Depression and anxiety. She presented with a blood pressure of 125/76 and a weight of 165 pounds. Ms. Shaw is doing well and continues to manage her condition effectively.\n\nJuly 23, 2023 \nMs. Shaw was seen today for her Depression and anxiety, with a blood pressure of 131/76 and a weight of 167 pounds. She has been managing her Depression and anxiety under our psychiatric care for 14.9 years. Currently, she is on a single medication, alprazolam 1 mg, and has previously experienced periods of about two months off work due to her condition. She continues to be under close psychiatric follow-up.\n\nDecember 06, 2022 \nToday, Ms. Shaw visited for a flu shot. Her blood pressure was 128/77, and she weighed 162 pounds. She is doing well overall and continues to manage her Depression and anxiety, which has been under psychiatric care for 14.9 years.\n\nApril 21, 2022 \nMs. Shaw was seen today regarding an ankle sprain. Her blood pressure was 121/67, and she weighed 172 pounds. During this visit, we also noted that she has been managing Depression and anxiety under our psychiatric care for 14.9 years. She is currently on a single medication, alprazolam 1 mg, and has previously experienced periods of about two months off work due to her condition.\n\nSeptember 04, 2021 \nMs. Shaw was seen today for a lab review. Her blood pressure was 127/67, and she weighed 173 pounds. She has been managing her Depression and anxiety under psychiatric care for 14.9 years, on a single medication, alprazolam 1 mg, and has previously experienced periods of about two months off work due to her condition.\n\nSocial History \nMs. Shaw reports consuming approximately two alcoholic drinks per week.\n\nThis comprehensi"
+    },
+    {
+     "page": 2,
+     "text": "ve record provides a thorough overview of Ms. Shaw's health status and treatment plan for her Depression and anxiety. She continues to be under close psychiatric care, and her condition is being effectively managed with her current medication regimen.\n"
+    }
+   ],
+   "entities": [
+    {
+     "type": "diagnosis",
+     "text": "Depression / anxiety",
+     "status": "controlled"
+    }
+   ]
+  },
+  "losses": []
  }
 ]

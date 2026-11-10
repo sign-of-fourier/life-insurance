@@ -20,9 +20,9 @@
     "face": 750000,
     "product": "Term 20",
     "riders": "['ADB']",
-    "existing": 0,
-    "replacement": "False",
-    "beneficiary": "spouse",
+    "existing": 100000,
+    "replacement": "True",
+    "beneficiary": "estate",
     "signed": "2025-04-16"
    }
   },
@@ -41,7 +41,7 @@
     },
     "Q2": {
      "q": "Q2",
-     "a": "3.0 drinks/week"
+     "a": "0.0 drinks/week"
     },
     "Q3": {
      "q": "Q3",
@@ -107,7 +107,7 @@
      "q": "Q18",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"osteopenia\", \"diagnosed\": \"09/2019\", \"treatment\": \"alendronate\", \"physician\": \"Dr. Ashley Forbes\"}"
+      "{\"condition\": \"osteopenia\", \"diagnosed\": \"06/2024\", \"treatment\": \"alendronate\", \"physician\": \"Dr. Ashley Forbes\"}"
      ]
     },
     "Q19": {
@@ -128,7 +128,7 @@
     },
     "Q23": {
      "q": "Q23",
-     "a": "none known"
+     "a": "mother: COPD, died 91"
     },
     "Q24": {
      "q": "Q24",
@@ -150,16 +150,20 @@
   "payload": {
    "codes": [
     {
-     "code": "010000",
-     "date": "2024-02-15"
+     "code": "400357",
+     "date": "2008-06-11"
     },
     {
-     "code": "690902",
-     "date": "2013-08-01"
+     "code": "010009",
+     "date": "2018-10-15"
     },
     {
-     "code": "170716",
-     "date": "2020-06-19"
+     "code": "031040",
+     "date": "2022-12-27"
+    },
+    {
+     "code": "690711",
+     "date": "2016-08-01"
     }
    ]
   },
@@ -174,15 +178,15 @@
    "medications": [
     {
      "product": "FOSAMAX 70MG",
-     "first": "2020-04-17",
+     "first": "2024-06-10",
      "last": "2025-04-13",
-     "count": 40,
+     "count": 31,
      "prescriber": "Dr. Ashley Forbes"
     },
     {
      "product": "CHANTIX 1MG",
-     "first": "2025-01-29",
-     "last": "2024-11-30",
+     "first": "2024-11-22",
+     "last": "2025-01-21",
      "count": 3,
      "prescriber": "Dr. Ashley Forbes"
     }
@@ -197,36 +201,70 @@
   "vendor_schema": "mvr.state",
   "payload": {
    "license_status": "VALID",
-   "record": [
-    {
-     "dt": "240628",
-     "text": "SPEEDING 21-25 OVER LIMIT"
-    },
-    {
-     "dt": "190904",
-     "text": "PARKING VIOLATION"
-    }
-   ]
+   "record": []
   },
   "losses": [
    {
-    "fact_id": "C0769-F022",
+    "fact_id": "C0769-F025",
     "kind": "dropped",
-    "original": "M06",
+    "original": "D04",
     "extracted": null
    }
   ]
  },
  {
-  "doc_id": "C0769-D09",
+  "doc_id": "C0769-D10",
   "case_id": "C0769",
   "doc_type": "other",
   "vendor_schema": "q.avoq",
   "payload": {
    "form": "AVOQ",
    "fields": {
-    "activities": "[{\"activity\": \"mountain_climbing\", \"max_altitude_ft\": 14510, \"intends_to_stop\": false}]"
+    "activities": "[{\"activity\": \"mountain_climbing\", \"max_altitude_ft\": 19140, \"intends_to_stop\": false}]"
    }
+  },
+  "losses": []
+ },
+ {
+  "doc_id": "C0769-D09",
+  "case_id": "C0769",
+  "doc_type": "other",
+  "vendor_schema": "q.alcq",
+  "payload": {
+   "form": "ALCQ",
+   "fields": {
+    "drinks_per_week": 0,
+    "treatment": "False"
+   }
+  },
+  "losses": []
+ },
+ {
+  "doc_id": "C0769-D11",
+  "case_id": "C0769",
+  "doc_type": "aps",
+  "vendor_schema": "aps.epic_progress",
+  "payload": {
+   "provider": "Dr. Sharon Lewis",
+   "specialty": "psychiatry",
+   "page_count": 2,
+   "pages": [
+    {
+     "page": 1,
+     "text": "Page 23  -- ROI --\nPrinted by: ROI_52 11/10/2026\nCONFIDENTIAL - Contains PHI\nAguilar-Cox Medical Group | Dr. Sharon Lewis, psychiatry\nPatient: Tran DOB: 01/04/1971 Sex: F MRN: 669599\n\nPROBLEM LIST\n - Depression / anxiety (2 meds; dx 19.3 yrs ago) [controlled] onset 12/2005\n\nMEDICATIONS\n\nENCOUNTERS\n--- 01/18/2025 Office Visit ---\nS: Follow-up for Depression / anxiety.\nPatient reports continued symptoms of depression and anxiety, with no significant changes since the last visit. She mentions feeling slightly more anxious due to recent stressors at work. \nO: BP 137/90 Wt 161 lb\nPatient appears slightly anxious during the visit but is cooperative and engaged in the conversation. \nA: Depression / anxiety - unchanged\nP: Continue current treatment regimen. Advised patient to maintain regular follow-ups and to reach out if symptoms worsen. RTC 3-6 mo\n\n--- 08/27/2024 Office Visit ---\nS: Follow-up for flu shot.\nPatient received the annual flu vaccine without any adverse reactions. \nO: BP 132/95 Wt 161 lb\nPatient appears well and reports no new symptoms or concerns.\nA: Flu shot - fair control\nP: Continue current treatment regimen. Advised patient to maintain regular follow-ups and to reach out if any symptoms develop. RTC 3-6 mo\n\n--- 04/04/2024 Office Visit ---\nS: Follow-up for Depression / anxiety.\nPatient reports stable mood with occasional spikes in anxiety, particularly during stressful periods. \nO: BP 129/96 Wt 147 lb\nPatient appears well-groomed and engaged.\nA: Depression / anxiety - fair control\nP: Continue current treatment regimen. Encouraged patient to practice stress-reduction techniques. RTC 3-6 mo\n\n--- 11/11/2023 Office Visit ---\nS: Follow-up for Depression / anxiety.\nPatient reports no significant changes in mood or anxiety levels. \nO: BP 126/92 Wt 156 lb\nPatient appears calm and cooperative.\nA: Depression / anxiety - unchanged\nP: Continue current treatment regimen. Advised patient to maintain regular follow-ups. RTC 3-6 mo\n\n--- 06/19/2023 Office Visit ---\nS: Follow-up for Depression / anxiety.\nPatient reports stable mood with occasional mild anxiety. \nO: BP 132/92 Wt 151 lb\nPatient appears well and is engaged in conversation.\nA: Depression / anxiety - stable\nP: Continue current treatment regimen. Encouraged patient to continue with current management strategies. RTC 3-6 mo\n\n--- 01/25/2023 Office Visit ---\nS: Follow-up for Depression / anxiety.\nPatient reports mild improvement in mood but continues to experience occasional anxiety. \nO: BP 138/86 Wt 154 lb\nPatient appears and is cooperative.\nA: Depression / anxiety - fair control\nP"
+    },
+    {
+     "page": 2,
+     "text": ": Continue current treatment regimen. Advised patient to maintain regular follow-ups. RTC 3-6 mo\n\n--- 09/02/2022 Office Visit ---\nS: Follow-up for Depression / anxiety.\nPatient reports stable mood with occasional mild anxiety. \nO: BP 140/95 Wt 147 lb\nPatient appears well is engaged in conversation.\nA: Depression / anxiety - unchanged\nP: Continue current treatment regimen. Encouraged patient to continue with current management strategies. RTC 3-6 mo\n\n--- 04/10/2022 Office Visit ---\nS: Follow-up for rash.\nPatient reports the rash is improving with current treatment. \nO: BP 130/90 Wt 149 lb\nPatient appears well and is cooperative.\nA: Rash - improving\nP: Continue current treatment regimen. Advised patient to maintain regular follow-ups. RTC 3-6 mo\n\n--- 11/16/2021 Office Visit ---\nS: Follow-up for Depression / anxiety.\nPatient reports stable mood with occasional mild anxiety. \nO: BP 133/94 Wt 158 lb\nPatient appears well and is engaged in conversation.\nA: Depression / anxiety - stable\nP: Continue current treatment regimen. Encouraged patient to continue with current management strategies. RTC 3-6 mo\n\nExercise: Runs 3-4 times per week.\nSocial: Former cigarette smoker, 1 pack per day, quit on 2025-01-21. \nPage 10 of 10\n"
+    }
+   ],
+   "entities": [
+    {
+     "type": "diagnosis",
+     "text": "Depression / anxiety",
+     "status": "controlled"
+    }
+   ]
   },
   "losses": []
  },
@@ -239,12 +277,14 @@
    "height": "5'3\"",
    "weight_lbs": 156,
    "bp": [
-    "113/92",
-    "108/93",
-    "114/88"
+    "132/87",
+    "127/87",
+    "133/88"
    ],
-   "pulse": 83,
-   "remarks": []
+   "pulse": 51,
+   "remarks": [
+    "Depression / anxiety: applicant mentioned to examiner"
+   ]
   },
   "losses": []
  },
@@ -255,22 +295,22 @@
   "vendor_schema": "apx.flat",
   "payload": {
    "collected": "2025-04-29",
-   "CHOL/HDL/RATIO": "278/42/6.6",
-   "AST/ALT": "16/37",
-   "LDL (CALC)": "218 mg/dL",
-   "TRIGLYCERIDES": "88 mg/dL",
-   "A1C": "5.5 %",
-   "GGTP": "47 U/L",
-   "ALKALINE PHOSPHATASE": "41 U/L",
-   "BILIRUBIN, TOTAL": "0.5 mg/dL",
-   "ALBUMIN": "4.4 g/dL",
+   "CHOL/HDL/RATIO": "242/36/6.7",
+   "AST/ALT": "29/42",
+   "LDL (CALC)": "176 mg/dL",
+   "TRIGLYCERIDES": "150 mg/dL",
+   "GLUCOSE, FASTING": "92 mg/dL",
+   "A1C": "5.1 %",
+   "GGTP": "44 U/L",
+   "ALKALINE PHOSPHATASE": "105 U/L",
+   "BILIRUBIN, TOTAL": "0.8 mg/dL",
+   "ALBUMIN": "4.6 g/dL",
    "CREATININE": "0.9 mg/dL",
-   "EGFR": "106 mL/min/1.73m2",
-   "HEMOGLOBIN": "12.4 g/dL",
+   "EGFR": "109 mL/min/1.73m2",
+   "HEMOGLOBIN": "12.6 g/dL",
    "HIV-1/2 AB": "0 qual",
-   "%CDT": "1.1 %dCDT",
-   "NT-PROBNP": "72 pg/mL",
-   "GLUCOSE": "123 mg/dL"
+   "%CDT": "1.2 %dCDT",
+   "NT-PROBNP": "43 pg/mL"
   },
   "losses": []
  },
@@ -281,11 +321,11 @@
   "vendor_schema": "apx.flat",
   "payload": {
    "collected": "2025-04-29",
-   "NIC/COT": "390 ng/mL",
-   "PROTEIN, URINE": "20 mg/dL",
+   "NIC/COT": "143 ng/mL",
+   "PROTEIN, URINE": "10 mg/dL",
    "COCAINE METABOLITE": "0 qual",
    "GLUCOSE, URINE": "0 qual",
-   "RBC, URINE": "0 /hpf"
+   "RBC, URINE": "2 /hpf"
   },
   "losses": []
  }

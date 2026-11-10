@@ -20,7 +20,7 @@
     "face": 300000,
     "product": "GUL",
     "riders": "[]",
-    "existing": 500000,
+    "existing": 150000,
     "replacement": "False",
     "beneficiary": "estate",
     "signed": "2025-06-04"
@@ -217,8 +217,8 @@
    "height": "5'7\"",
    "weight_lbs": 177,
    "bp": [
-    "115/80",
-    "115/85",
+    "121/80",
+    "120/85",
     "124/81"
    ],
    "pulse": 81,
@@ -236,22 +236,22 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 286,
+     "value": 268,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 51,
-     "flag": "",
+     "value": 39,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 204,
-     "flag": "H",
+     "value": 198,
+     "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
     },
@@ -264,8 +264,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.6,
-     "flag": "",
+     "value": 6.9,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -299,10 +299,17 @@
     },
     {
      "test": "GGT",
-     "value": "39 80",
+     "value": 39,
      "flag": "",
      "units": "U/L",
      "ref": "8-60"
+    },
+    {
+     "test": "Alkaline phosphatase",
+     "value": 80,
+     "flag": "",
+     "units": "U/L",
+     "ref": "40-130"
     },
     {
      "test": "Bilirubin, total",
@@ -320,17 +327,10 @@
     },
     {
      "test": "Creatinine",
-     "value": 0.8,
+     "value": "0.8 85",
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
-    },
-    {
-     "test": "eGFR (CKD-EPI 2021)",
-     "value": 85,
-     "flag": "",
-     "units": "mL/min/1.73m2",
-     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -356,15 +356,15 @@
   },
   "losses": [
    {
-    "fact_id": "C0821-F031",
+    "fact_id": "C0821-F029",
     "kind": "flag_lost",
     "original": "H",
     "extracted": null
    },
    {
-    "fact_id": "C0821-F037",
+    "fact_id": "C0821-F041",
     "kind": "merged_cells",
-    "original": "alk_phos=80",
+    "original": "egfr=85",
     "extracted": "merged into previous row"
    }
   ]
@@ -426,11 +426,11 @@
    "pages": [
     {
      "page": 1,
-     "text": "Pope-Hartman Medical Group\nRe: Melissa Franklin (DOB 01/24/1993)\n\nDecember 10, 2024: Ms. Melissa Franklin presented today for a medication refill. During this visit, I noted her blood pressure was 117/82, and her weight was 179 pounds. Ms. Franklin reports feeling well overall. She continues to manage her NAFLD/fatty liver disease, which has been stable with fibrosis at stage F2, as well as her pancreatitis, which was caused by alcohol consumption. She continues to abstain from alcohol. No new complaints were reported, and she is adhering to her treatment plan.\n\nJune 02, 2024: Franklin visited today with a concern about a rash. Her blood pressure at this visit was 110/87, and her weight was 173 pounds. Ms. Franklin is being treated for NAFLD/fatty liver disease, which has fibrosis at stage F2. She also has a history of pancreatitis caused by alcohol. The rash was examined, and appropriate steps were taken to address it. She remains stable and adherent to her treatment plan.\n\nNovember 24, 2023: Ms. Franklin was seen today for her annual physical examination. Her blood pressure was 116/88, and her weight was pounds. She continues to manage her NAFLD/fatty liver disease with fibrosis at stage F2. She also has a history of pancreatitis caused by alcohol. Ms. Franklin has no new complaints and is doing well. She is exercising regularly, running 3-4 times a week.\n\nMay 16, 2023: Ms. Franklin was seen today for her NAFLD/fatty liver disease, which has fibrosis at stage F2. Her blood pressure was 116/78, and her weight was 182 pounds. She has a history of pancreatitis caused by alcohol. Ms. Franklin has new complaints and remains stable. Her treatment plan is being followed diligently.\n\nNovember 06, 2022: Ms. Franklin visited today for a follow-up on her pancreatitis, which was caused by alcohol. Her blood pressure was 126/83, and her weight was 185 pounds. She also has NAFLD/fatty liver disease with fibrosis at stage F2. Ms. Franklin has no new complaints and remains stable. Her treatment plan is being followed, and she continues to abstain from alcohol.\n\nApril 28, 2022: Ms. Franklin was seen today regarding her pancreatitis, which was caused by alcohol. Her blood pressure was 110/87, and her weight was 186 pounds. She also has NAFLD/fatty liver disease with fibrosis at stage F2. Franklin has no new complaints and remains stable. Her treatment plan is being followed, and she continues to abstain from alcohol.\n\nOctober 19, 2021: Ms. Franklin presented today with a back strain. Her blood pressure was 126/87, and her weight was 187 pounds. She also h"
+     "text": "Pope-Hartman Medical Group \nRe: Melissa Franklin (DOB 01/24/1993) \n\nDecember 10, 2024: \nMs. Franklin presented today for a medication refill. Her blood pressure was noted at 117/82 and her weight was 179 pounds. Melissa has a known history of NAFLD, or fatty liver, with a fibrosis stage of F2. She also has a history of pancreatitis, which was caused by alcohol. Currently, she is not taking any medications for these conditions. Her vital signs and weight were within normal limits. \n\nJune 02, 2024: \nMs. Franklin seen today for evaluation of a rash. Her blood pressure was 110/87 and her weight was 173 pounds. Melissa continues to manage her known NAFLD with fibrosis stage F2 and pancreatitis, which was caused by alcohol. Her vitals were stable and her weight was slightly reduced compared to the previous visit. \n\nNovember 24, 2023: \nMelissa came in for her annual physical examination. Her blood pressure was 116/88 and her weight was 182 pounds. She has a history of NAFLD with fibrosis stage F2 and pancreatitis due to During this visit, she was advised to maintain a healthy lifestyle and continue monitoring her liver function. Her vital signs and weight were within normal limits. \n\nMay 16, 2023: \nMelissa visited for follow-up regarding her NAFLD. Her blood pressure was 116/78 and her weight was 182 pounds. She is doing well overall, and her liver enzymes were stable. Melissa continues to manage her condition with lifestyle modifications. \n\nNovember 06, 2022: \nMelissa presented today with symptoms related to her pancreatitis, which was by alcohol. Her blood pressure was 126/83 and her weight was 185 pounds. She has a known history of NAFLD with fibrosis stage F2. Her condition is currently controlled with appropriate lifestyle changes. \n\nApril 28, 2022: \nMelissa was seen today for her pancreatitis, which was caused by alcohol. Her blood pressure was 110/87 and her weight was 186 pounds. She also has a known history of NAFLD with fibrosis stage F2. Melissa is managing her conditions well with the guidance provided. \n\nOctober 19, 2021: \nMelissa visited regarding a back strain. Her blood pressure was 126/87 and her weight was 187 pounds. She has a history of NAFLD with fibrosis stage F2 and pancreatitis caused by alcohol. Her vital signs were stable, and she was advised on physical therapy for her back strain. \n\nApril 10, 2021: \nMelissa was seen today for follow-up regarding her NAFLD. Her blood pressure was 116/81 and her weight was 182 pounds. She has a known history of NAFLD with fibrosis stage F2 and pancreatitis due"
     },
     {
      "page": 2,
-     "text": "as NAFLD/fatty liver disease with fibrosis at stage F2, as well as a history of pancreatitis by alcohol. Ms. Franklin has no new complaints and remains stable. She is adhering to her treatment plan and continues to abstain from alcohol.\n\nApril 10, 2021: Ms. Franklin was seen today for her NAFLD/fatty liver disease, which has fibrosis at stage F2. Her blood pressure was 116/81, and her weight 182 pounds. Ms. Franklin reports feeling well overall. She is adhering to her treatment plan and continues to abstain from alcohol.\n\nOutside lab results from Heritage Diagnostic Services dated October 6, 2013, are attached for The results are as follows: total cholesterol/HDL was 287/55, fructosamine was 226, nicotine metabolite was negative, and gamma GT was 48. \n\nMelissa Franklin is under consistent care and is compliant with her treatment plan. She exercises regularly and abstains from alcohol. \n\nDr. Juan Davidson\nPope-Hartman Medical Group\nGastroenterology\n"
+     "text": "to alcohol. Melissa is currently managing her conditions with lifestyle modifications and regular follow-ups. \n\nMelissa has been noted to engage in regular exercise, running 3-4 times a week. \n\n[Attached outside lab - Heritage Diagnostic Services 10-06-13] \n CHOL / HDL 2G9 / 43 \n FRUCTOSAMINE 226 \n NICOTINE METAB NEG \n GAMMA GT 48 \n\nDr. Juan Davidson \nGastroenterology \nPope-Hartman Medical Group\n"
     }
    ],
    "entities": [

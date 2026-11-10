@@ -37,6 +37,38 @@
     "fe": null,
     "params": {},
     "disclosure": "honest"
+   },
+   {
+    "id": "nm_mvr:dui_2_5y",
+    "key": "nm_mvr",
+    "variant": "dui_2_5y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "depression_anxiety:moderate",
+    "key": "depression_anxiety",
+    "variant": "moderate",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "meds_count": {
+       "ge": 2
+      }
+     }
+    },
+    "disclosure": "omitted"
    }
   ],
   "tobacco": "never",
@@ -113,15 +145,15 @@
   ],
   "existing_coverage": 0,
   "replacement": false,
-  "beneficiary_relation": "children"
+  "beneficiary_relation": "spouse"
  },
  "height_in": 59.0,
  "weight_lb": 148.0,
  "bp_systolic": 119,
- "bp_diastolic": 89,
- "pulse": 60,
+ "bp_diastolic": 77,
+ "pulse": 65,
  "tobacco": [],
- "alcohol_drinks_per_week": 10.0,
+ "alcohol_drinks_per_week": 1.0,
  "alcohol_treatment": false,
  "drug_use": [],
  "conditions": [
@@ -151,9 +183,50 @@
    "irrelevant": false
   },
   {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2020-01-21",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 3,
+    "work_loss_months": null,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 5.9
+   },
+   "meds": [
+    {
+     "drug": "venlafaxine",
+     "dose": "150 mg",
+     "start": "2020-02-28",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    },
+    {
+     "drug": "escitalopram",
+     "dose": "10 mg",
+     "start": "2020-02-26",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0775-P3"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
    "condition_key": "benign_no_rating",
    "label": "acne",
-   "onset": "2018-03-18",
+   "onset": "2020-06-15",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -163,7 +236,7 @@
     {
      "drug": "doxycycline",
      "dose": "100 mg",
-     "start": "2018-04-07",
+     "start": "2020-07-18",
      "stop": null,
      "prescriber_id": null,
      "indication": "acne"
@@ -180,7 +253,7 @@
   {
    "condition_key": "benign_no_rating",
    "label": "cataracts",
-   "onset": "2018-01-07",
+   "onset": "2024-03-06",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -199,34 +272,21 @@
  "family_history": [
   {
    "relation": "mother",
-   "condition": "Alzheimer's",
-   "age_at_onset": 80,
-   "age_at_death": null,
+   "condition": "type 2 diabetes",
+   "age_at_onset": 74,
+   "age_at_death": 80,
    "living": true
   }
  ],
  "mvr": [
   {
-   "date": "2020-07-31",
-   "code": "M01",
-   "disclosure": "honest"
+   "date": "2023-01-23",
+   "code": "D03",
+   "disclosure": "omitted"
   }
  ],
- "avocations": [
-  {
-   "activity": "martial arts",
-   "details": {},
-   "disclosure": "honest"
-  }
- ],
- "travel": [
-  {
-   "country": "Japan",
-   "weeks_per_year": 2.0,
-   "purpose": "vacation",
-   "disclosure": "honest"
-  }
- ],
+ "avocations": [],
+ "travel": [],
  "prior_apps": [],
  "providers": [
   {
@@ -244,29 +304,37 @@
    "practice": "Schmidt and Sons Medical Group",
    "aps_style": "athena_summary",
    "country": "US"
+  },
+  {
+   "provider_id": "C0775-P3",
+   "name": "Dr. Paul Burke",
+   "specialty": "psychiatry",
+   "practice": "Butler Morgan and Marsh Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
   }
  ],
  "true_labs": {
-  "tc": 289.0,
-  "hdl": 51.0,
-  "ldl": 212.0,
-  "triglycerides": 130.0,
-  "tc_hdl_ratio": 5.7,
-  "glucose_fasting": 88.0,
-  "a1c": 5.4,
-  "ast": 34.0,
-  "alt": 23.0,
-  "ggt": 36.0,
-  "alk_phos": 57.0,
-  "bilirubin": 0.5,
-  "albumin": 4.2,
-  "creatinine": 0.7,
-  "egfr": 113.0,
-  "urine_protein": 0.0,
-  "hemoglobin": 14.2,
-  "cdt": 1.5,
-  "nt_probnp": 51.0,
-  "cotinine_urine": 4.0,
+  "tc": 244.0,
+  "hdl": 37.0,
+  "ldl": 186.0,
+  "triglycerides": 105.0,
+  "tc_hdl_ratio": 6.6,
+  "glucose_fasting": 89.0,
+  "a1c": 4.9,
+  "ast": 16.0,
+  "alt": 15.0,
+  "ggt": 45.0,
+  "alk_phos": 92.0,
+  "bilirubin": 0.8,
+  "albumin": 4.0,
+  "creatinine": 0.9,
+  "egfr": 77.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 13.3,
+  "cdt": 1.1,
+  "nt_probnp": 19.0,
+  "cotinine_urine": 8.0,
   "hiv": 0.0,
   "cocaine": 0.0
  }

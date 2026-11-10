@@ -20,7 +20,7 @@
     "face": 250000,
     "product": "GUL",
     "riders": "['ADB', 'CIA']",
-    "existing": 500000,
+    "existing": 125000,
     "replacement": "False",
     "beneficiary": "spouse",
     "signed": "2026-04-21"
@@ -247,8 +247,8 @@
    "HT_IN": 59.5,
    "WT_KG": 49.0,
    "HR": 66,
-   "BP_1": "124/67",
-   "BP_2": "126/72"
+   "BP_1": "123/67",
+   "BP_2": "124/69"
   },
   "losses": []
  },
@@ -269,14 +269,14 @@
     },
     {
      "test": "HDL CHOL",
-     "value": 58,
+     "value": 43,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 189,
+     "value": 204,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -290,8 +290,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.8,
-     "flag": "",
+     "value": 6.5,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -346,17 +346,10 @@
     },
     {
      "test": "Albumin",
-     "value": 4.4,
+     "value": "4.4 0.8",
      "flag": "",
      "units": "g/dL",
      "ref": "3.5-5.0"
-    },
-    {
-     "test": "Creatinine",
-     "value": 0.8,
-     "flag": "",
-     "units": "mg/dL",
-     "ref": "0.6-1.3"
     },
     {
      "test": "eGFR (CKD-EPI 2021)",
@@ -394,7 +387,14 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0587-F043",
+    "kind": "merged_cells",
+    "original": "creatinine=0.8",
+    "extracted": "merged into previous row"
+   }
+  ]
  },
  {
   "doc_id": "C0587-D08",
@@ -449,15 +449,11 @@
   "payload": {
    "provider": "Dr. Scott Sullivan",
    "specialty": "cardiology",
-   "page_count": 2,
+   "page_count": 1,
    "pages": [
     {
      "page": 1,
-     "text": "Richard-Martin Clinic\nRe: Marilyn Pope (DOB 02/21/1951)\n\nApril 01, 2026: Ms. Marilyn Pope was seen today for a follow-up regarding her heart failure and cardiomyopathy. Upon examination, her blood pressure was recorded at 135/71 mmHg, and her weight was 115 pounds. This visit is part of her ongoing management of heart failure, which was diagnosed with an ejection fraction (EF) of 21%. Ms. Pope has been managing her condition for about 3.4 years and is currently on furosemide 40 mg to help control her symptoms. She remains stable with no significant changes in her condition.\n\nAugust 12, 2025: Ms. Marilyn Pope returned for another visit focused on her heart failure and cardiomyopathy. During this visit, her blood pressure was 119/74 mmHg, she weighed 115 pounds. We to monitor her heart failure closely. The EF remains at 21%, and she has been stable for approximately 3.4 years since the onset of her condition. Her current medication regimen includes furosemide 40 mg, which appears to be effective in managing her symptoms. She continues to do well without any major complications.\n\nDecember 23, 2024: On this visit, Ms. Marilyn Pope came in to discuss her heart failure and cardiomyopathy. Her blood pressure was measured at 134/65 mmHg, and she weighed 115 pounds. She has been managing her heart failure, characterized by an EF of 21%, for about 3.4 years now. Ms. is currently on furosemide 40 mg, which helps in her heart condition. She reports feeling stable and does not exhibit any new symptoms or complications.\n\nMay 05, 2024: Ms. Marilyn Pope visited for her annual flu shot. Her blood pressure at that time was 130/63 mmHg, and she weighed 110 pounds. She was in good health otherwise. During her visit, we confirmed her history of heart failure and cardiomyopathy, with an EF of 21%, which she has been managing for approximately 3.4 years. She continues to take furosemide 40 mg, and her condition remains stable. Ms. Pope also mentioned that she drinks alcohol on occasion, averaging about two drinks per week.\n\nAdditionally, an outside laboratory report from Heritage Diagnostic Services dated September 6, 2013, is attached to her records. The results included:\n- Total cholesterol: 301 mg/dL\n- HDL cholesterol: 64 mg/dL\n- Fructosamine: 257 micromol/L\n- Nicotine metabolite: Negative\n- Gamma-glutamyl transferase (GGT): 58 U/L\n\nThis comprehensive evaluation and history provide insight into Ms. Pope's ongoing medical management and stable Her adherence to medication and weight and blood pressure measurements are encouragin"
-    },
-    {
-     "page": 2,
-     "text": "g signs of effective management of her heart failure and cardiomyopathy. \n\nDr. Scott Sullivan\nRichard-Martin Clinic\nCardiology\n"
+     "text": "Richard-Martin Clinic\nRe: Marilyn Pope (DOB 02/21/1951)\n\nApril 01, 2026\nToday, I saw Marilyn Pope for her ongoing condition of heart failure and cardiomyopathy. She reported feeling well overall but did mention some mild fatigue. Her blood pressure was 135/71 and her weight was 115 pounds. It's been approximately 3.4 years since she initially presented with this condition, and her ejection fraction (EF) was documented at 21% at that time. Currently, her heart failure and cardiomyopathy are under control, and she continues on furosemide 40 mg. She also had a flu shot administered today.\n\nAugust 12, 2025\nMarilyn was seen for her regular follow-up regarding heart failure and cardiomyopathy. She presented with a blood pressure of 119/74 and a weight of 115 Marilyn continues to do well, with major issues since her last visit. Her medication regimen remains unchanged.\n\nDecember 23, 2024\nMarilyn visited today for her scheduled follow-up on heart failure and cardiomyopathy. Her blood pressure was 134/65 and her weight remained stable at 115 pounds. She continues to feel well and her condition is stable. I reviewed her medication, and she is still on furosemide 40 mg.\n\nMay 05, 2024\nMarilyn came in today for her annual flu shot. Her blood pressure was 130/63 and her weight was 110 pounds. She was in good spirits and reported feeling well overall. Her heart failure and cardiomyopathy were stable, with no new symptoms.\n\nSocial reports consuming approximately two alcoholic drinks per week. She has history of smoking, as indicated by her negative cotinine level from a previous lab test.\n\nAdditional Lab Results\nAttached are the lab results from Heritage Diagnostic Services dated September 6, 2013. The cholesterol and HDL levels were 301 and 49, respectively. The fructosamine level was 257, indicating her blood sugar control over the past few weeks. The nicotine metabolite was negative, confirming no recent tobacco use. The gamma-glutamyl transferase (GGT) level was 58.\n\nDr. Scott Sullivan\nCardiologist\nRichard-Martin Clinic\n"
     }
    ],
    "entities": [

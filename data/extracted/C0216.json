@@ -222,8 +222,8 @@
    "HT_IN": 60.5,
    "WT_KG": 58.5,
    "HR": 60,
-   "BP_1": "134/94",
-   "BP_2": "136/94"
+   "BP_1": "134/90",
+   "BP_2": "135/91"
   },
   "losses": []
  },
@@ -237,38 +237,38 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 288,
+     "value": 264,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 58,
+     "value": 39,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 208,
-     "flag": "H",
+     "value": 203,
+     "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
      "test": "Triglycerides",
-     "value": 106,
+     "value": "106 6.8",
      "flag": "",
      "units": "mg/dL",
      "ref": "0-149"
     },
     {
-     "test": "CHOL/HDL RATIO",
-     "value": "5 79",
+     "test": "Glucose, fasting",
+     "value": 79,
      "flag": "",
-     "units": "ratio",
-     "ref": "0-5.0"
+     "units": "mg/dL",
+     "ref": "65-99"
     },
     {
      "test": "HEMOGLOBIN A1C",
@@ -348,25 +348,44 @@
     },
     {
      "test": "%CDT",
-     "value": "1.4 2.2",
+     "value": 1.4,
      "flag": "",
      "units": "%dCDT",
      "ref": "0-1.6"
+    },
+    {
+     "test": "PSA",
+     "value": 2.2,
+     "flag": "",
+     "units": null,
+     "ref": "0-4.0"
     }
    ]
   },
   "losses": [
    {
-    "fact_id": "C0216-F031",
+    "fact_id": "C0216-F027",
+    "kind": "flag_lost",
+    "original": "L",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0216-F028",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0216-F030",
     "kind": "merged_cells",
-    "original": "glucose_fasting=79",
+    "original": "tc_hdl_ratio=6.8",
     "extracted": "merged into previous row"
    },
    {
     "fact_id": "C0216-F044",
-    "kind": "merged_cells",
-    "original": "psa=2.2",
-    "extracted": "merged into previous row"
+    "kind": "unit_lost",
+    "original": "ng/mL",
+    "extracted": null
    }
   ]
  },

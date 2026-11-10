@@ -37,7 +37,7 @@
    "part2": {
     "Q1": {
      "q": "Q1",
-     "a": "Former cigarette; quit 05/2023"
+     "a": "Former cigarette; quit 01/2023"
     },
     "Q2": {
      "q": "Q2",
@@ -157,7 +157,7 @@
   "payload": {
    "fills": [
     {
-     "date": "2024-09-18",
+     "date": "2024-07-20",
      "drug": "VARENICLINE",
      "strength": "1 mg",
      "days": 30,
@@ -173,7 +173,7 @@
      "spec": "family medicine"
     },
     {
-     "date": "2024-07-20",
+     "date": "2024-09-18",
      "drug": "VARENICLINE",
      "strength": "1 mg",
      "days": 30,
@@ -228,9 +228,9 @@
    "height": "5'6\"",
    "weight_lbs": 150,
    "bp": [
-    "129/86",
-    "128/93",
-    "127/93"
+    "131/86",
+    "131/92",
+    "130/93"
    ],
    "pulse": 66,
    "remarks": []
@@ -247,65 +247,51 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 279,
+     "value": 246,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 41,
-     "flag": "",
+     "value": 36,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 212,
-     "flag": "",
-     "units": "mg/dL",
+     "value": "184 126",
+     "flag": "H",
+     "units": "g/L",
      "ref": "0-99"
     },
     {
-     "test": "Triglycerides",
-     "value": "126 6.8",
-     "flag": "",
-     "units": "mg/dL",
-     "ref": "0-149"
+     "test": "CHOL/HDL RATIO",
+     "value": 6.8,
+     "flag": "H",
+     "units": "ratio",
+     "ref": "0-5.0"
     },
     {
      "test": "Glucose, fasting",
      "value": 101,
-     "flag": "H",
+     "flag": "",
      "units": "mg/dL",
      "ref": "65-99"
     },
     {
      "test": "HEMOGLOBIN A1C",
-     "value": 5.2,
+     "value": "5.2 13 41",
      "flag": "",
      "units": "%",
      "ref": "4.0-5.6"
     },
     {
-     "test": "AST (SGOT)",
-     "value": 18,
-     "flag": "",
-     "units": "U/L",
-     "ref": "10-40"
-    },
-    {
-     "test": "ALT (SGPT)",
-     "value": 41,
-     "flag": "",
-     "units": "U/L",
-     "ref": "7-45"
-    },
-    {
      "test": "GGT",
      "value": 34,
      "flag": "",
-     "units": null,
+     "units": "U/L",
      "ref": "8-60"
     },
     {
@@ -368,21 +354,39 @@
   "losses": [
    {
     "fact_id": "C0847-F023",
+    "kind": "unit_wrong",
+    "original": "mg/dL",
+    "extracted": "g/L"
+   },
+   {
+    "fact_id": "C0847-F024",
+    "kind": "merged_cells",
+    "original": "triglycerides=126",
+    "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0847-F026",
     "kind": "flag_lost",
     "original": "H",
     "extracted": null
    },
    {
-    "fact_id": "C0847-F025",
+    "fact_id": "C0847-F028",
+    "kind": "misread_digit",
+    "original": "18",
+    "extracted": "13"
+   },
+   {
+    "fact_id": "C0847-F028",
     "kind": "merged_cells",
-    "original": "tc_hdl_ratio=6.8",
+    "original": "ast=18",
     "extracted": "merged into previous row"
    },
    {
-    "fact_id": "C0847-F030",
-    "kind": "unit_lost",
-    "original": "U/L",
-    "extracted": null
+    "fact_id": "C0847-F029",
+    "kind": "merged_cells",
+    "original": "alt=41",
+    "extracted": "merged into previous row"
    }
   ]
  },

@@ -15,8 +15,8 @@
     "years_in_us": "None",
     "visa": "None",
     "occupation": "retired",
-    "income": 24240,
-    "net_worth": 606000,
+    "income": 42080,
+    "net_worth": 1052000,
     "face": 500000,
     "product": "GUL",
     "riders": "['LTA']",
@@ -1174,8 +1174,8 @@
    "weight_lbs": 232,
    "bp": [
     "132/72",
-    "140/75",
-    "140/69"
+    "132/73",
+    "133/69"
    ],
    "pulse": 93,
    "remarks": []
@@ -1203,21 +1203,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 298,
+     "value": 244,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 70,
-     "flag": "",
+     "value": 36,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 188,
+     "value": 168,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -1231,8 +1231,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.3,
-     "flag": "",
+     "value": 6.8,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -1268,8 +1268,15 @@
      "test": "GGT",
      "value": 48,
      "flag": "",
-     "units": "U/L",
+     "units": "mmol/L",
      "ref": "8-60"
+    },
+    {
+     "test": "Alkaline phosphatase",
+     "value": 113,
+     "flag": "",
+     "units": "U/L",
+     "ref": "40-130"
     },
     {
      "test": "Bilirubin, total",
@@ -1294,7 +1301,7 @@
     },
     {
      "test": "eGFR (CKD-EPI 2021)",
-     "value": 65,
+     "value": "G5",
      "flag": "",
      "units": "mL/min/1.73m2",
      "ref": "60-200"
@@ -1337,10 +1344,16 @@
   },
   "losses": [
    {
-    "fact_id": "C0580-F037",
-    "kind": "dropped",
-    "original": "113",
-    "extracted": null
+    "fact_id": "C0580-F036",
+    "kind": "unit_wrong",
+    "original": "U/L",
+    "extracted": "mmol/L"
+   },
+   {
+    "fact_id": "C0580-F041",
+    "kind": "misread_digit",
+    "original": "65",
+    "extracted": "G5"
    }
   ]
  },

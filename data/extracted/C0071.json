@@ -266,11 +266,11 @@
   "doc_type": "paramed",
   "vendor_schema": "hsc.flat",
   "payload": {
-   "HT_IN": 60.5,
-   "WT_KG": 72.6,
+   "HT_IN": 60,
+   "WT_KG": 73.9,
    "HR": 62,
-   "BP_1": "130/83",
-   "BP_2": "125/81"
+   "BP_1": "132/77",
+   "BP_2": "132/78"
   },
   "losses": []
  },
@@ -284,21 +284,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 299,
+     "value": 242,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 52,
-     "flag": "",
+     "value": 36,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 214,
+     "value": 173,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -306,16 +306,23 @@
     {
      "test": "Triglycerides",
      "value": 165,
-     "flag": "",
+     "flag": "H",
      "units": "mg/dL",
      "ref": "0-149"
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": "5.8 5.5",
+     "value": 6.7,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
+    },
+    {
+     "test": "HEMOGLOBIN A1C",
+     "value": 5.5,
+     "flag": "",
+     "units": "%",
+     "ref": "4.0-5.6"
     },
     {
      "test": "AST (SGOT)",
@@ -408,18 +415,6 @@
     "kind": "flag_lost",
     "original": "H",
     "extracted": null
-   },
-   {
-    "fact_id": "C0071-F036",
-    "kind": "flag_lost",
-    "original": "H",
-    "extracted": null
-   },
-   {
-    "fact_id": "C0071-F038",
-    "kind": "merged_cells",
-    "original": "a1c=5.5",
-    "extracted": "merged into previous row"
    }
   ]
  },

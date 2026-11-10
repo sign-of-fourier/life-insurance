@@ -465,7 +465,7 @@
      "spec": "family medicine"
     },
     {
-     "date": "2025-07-14",
+     "date": "2025-05-15",
      "drug": "VARENICLINE",
      "strength": "1 mg",
      "days": 30,
@@ -481,7 +481,7 @@
      "spec": "family medicine"
     },
     {
-     "date": "2025-05-15",
+     "date": "2025-07-14",
      "drug": "VARENICLINE",
      "strength": "1 mg",
      "days": 30,
@@ -548,7 +548,7 @@
    "HT_IN": 71,
    "WT_KG": 71.2,
    "HR": 83,
-   "BP_1": "143/73",
+   "BP_1": "142/73",
    "BP_2": "142/78"
   },
   "losses": []
@@ -574,38 +574,38 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 299,
+     "value": 242,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 71,
-     "flag": "",
+     "value": 36,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": "194 166",
-     "flag": "H",
+     "value": 172,
+     "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
-     "test": "CHOL/HDL RATIO",
-     "value": 4.2,
-     "flag": "",
-     "units": "ratio",
-     "ref": "0-5.0"
-    },
-    {
-     "test": "Glucose, fasting",
-     "value": 96,
+     "test": "Triglycerides",
+     "value": 166,
      "flag": "",
      "units": "mg/dL",
-     "ref": "65-99"
+     "ref": "0-149"
+    },
+    {
+     "test": "CHOL/HDL RATIO",
+     "value": "6.7 96",
+     "flag": "H",
+     "units": "ratio",
+     "ref": "0-5.0"
     },
     {
      "test": "HEMOGLOBIN A1C",
@@ -616,10 +616,17 @@
     },
     {
      "test": "AST (SGOT)",
-     "value": "34 14",
+     "value": 34,
      "flag": "",
      "units": "U/L",
      "ref": "10-40"
+    },
+    {
+     "test": "ALT (SGPT)",
+     "value": 14,
+     "flag": "",
+     "units": null,
+     "ref": "7-45"
     },
     {
      "test": "GGT",
@@ -639,7 +646,7 @@
      "test": "Bilirubin, total",
      "value": 0.3,
      "flag": "",
-     "units": null,
+     "units": "mg/dL",
      "ref": "0.2-1.2"
     },
     {
@@ -685,38 +692,43 @@
     },
     {
      "test": "PSA",
-     "value": 1.5,
+     "value": "1.5 319",
      "flag": "",
      "units": "ng/mL",
      "ref": "0-4.0"
-    },
-    {
-     "test": "NT-proBNP",
-     "value": 319,
-     "flag": "H",
-     "units": "pg/mL",
-     "ref": "0-124"
     }
    ]
   },
   "losses": [
    {
+    "fact_id": "C0440-F026",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
     "fact_id": "C0440-F027",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0440-F029",
     "kind": "merged_cells",
-    "original": "triglycerides=166",
+    "original": "glucose_fasting=96",
     "extracted": "merged into previous row"
    },
    {
     "fact_id": "C0440-F032",
-    "kind": "merged_cells",
-    "original": "alt=14",
-    "extracted": "merged into previous row"
+    "kind": "unit_lost",
+    "original": "U/L",
+    "extracted": null
    },
    {
-    "fact_id": "C0440-F035",
-    "kind": "unit_lost",
-    "original": "mg/dL",
-    "extracted": null
+    "fact_id": "C0440-F043",
+    "kind": "merged_cells",
+    "original": "nt_probnp=319",
+    "extracted": "merged into previous row"
    }
   ]
  },

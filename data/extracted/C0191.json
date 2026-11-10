@@ -20,7 +20,7 @@
     "face": 250000,
     "product": "UL",
     "riders": "['WMD']",
-    "existing": 250000,
+    "existing": 125000,
     "replacement": "False",
     "beneficiary": "spouse",
     "signed": "2025-12-05"
@@ -547,8 +547,8 @@
    "height": "5'2\"",
    "weight_lbs": 150,
    "bp": [
-    "116/89",
-    "117/90",
+    "115/87",
+    "116/87",
     "109/86"
    ],
    "pulse": 76,
@@ -566,31 +566,38 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 279,
+     "value": 282,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 65,
+     "value": 43,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 184,
+     "value": 209,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
      "test": "Triglycerides",
-     "value": "150 4.3",
+     "value": 150,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-149"
+    },
+    {
+     "test": "CHOL/HDL RATIO",
+     "value": 6.6,
+     "flag": "",
+     "units": "ratio",
+     "ref": "0-5.0"
     },
     {
      "test": "Glucose, fasting",
@@ -701,9 +708,9 @@
   "losses": [
    {
     "fact_id": "C0191-F031",
-    "kind": "merged_cells",
-    "original": "tc_hdl_ratio=4.3",
-    "extracted": "merged into previous row"
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
    }
   ]
  },

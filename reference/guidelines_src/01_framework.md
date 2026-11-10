@@ -230,6 +230,11 @@ BP-2 Preferred thresholds are in `CLS-5`. Debits for hypertension are in `HTN`.
 BP-3 A single paramed reading > 160/100 with no history → order a repeat BP (paramed recheck) or
 APS before rating; if recheck unavailable, rate on the average of what you have.
 
+BP-4 Untreated BP with no hypertension diagnosis is a preferred-matrix criterion only. An average
+above the Standard Plus row but ≤ 150/95 fails that row (Standard when net ≤ 0) and carries no
+debits. An untreated average > 150/95 is rated on the `HTN` table as untreated hypertension and an
+APS is ordered (`BP-3`).
+
 ---
 
 ## LIP — Cholesterol / lipids

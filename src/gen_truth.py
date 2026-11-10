@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from faker import Faker  # noqa: E402
 
+from dx_labels import specific_label  # noqa: E402
 from rules import first_profile, load, match, pred_ok  # noqa: E402
 from schemas import (Avocation, Condition, Coverage, FamilyHistoryItem, MedUse, MvrEvent, Person,  # noqa: E402
                      PriorApplication, Provider, TobaccoUse, Travel, Truth)
@@ -57,6 +58,7 @@ BENIGN_LABEL = {"dental": "dental abscess", "uti": "urinary tract infection", "a
 
 def r1(x):
     return round(x, 1)
+
 
 
 class TruthGen:
@@ -204,6 +206,8 @@ class TruthGen:
         else:
             occ = r.choice([o for o, v in OCC.items() if v["class"] in ("1A", "2A", "3A") and o not in ("retired", "student")
                             and "deploying" not in o])
+        if row["target"] == "Elite" and any(w in occ for w in ("police", "firefighter")):
+            occ = "accountant"          # OCC: Elite not available to police/fire; keep the design's Elite intent
         self.occupation = occ
         # finance: justify face unless FIN item says otherwise (FIN-1)
         mult = next(m for lo, hi, m in load("nonmedical")["financial"]["multiples"] if lo <= min(self.age, 70) <= hi) \
@@ -225,6 +229,8 @@ class TruthGen:
         networth = int(income * r.uniform(1, 12) / 1000) * 1000
         if not mult:   # 71+: net worth basis (50%)
             networth = int(face / (0.5 * ratio) / 1000) * 1000
+        if non_earning and occ in ("retired", "unemployed") and mult:
+            networth = max(networth, int(face / (0.5 * ratio) / 1000) * 1000)   # FIN-1.3: 50% of net worth justifies the intended ratio
         if non_earning and occ in ("retired", "homemaker", "unemployed"):
             income = 0 if occ != "retired" else int(networth * 0.04)
         self.fin_ratio = ratio
@@ -244,6 +250,8 @@ class TruthGen:
             yrs_us = r1(r.uniform(1.1, 4.9))
             visa = {"green_card_recent": "Permanent Resident", "visa_eligible": r.choice(["H-1B", "L-1"]),
                     "naturalized_recent": None}[kind]
+            if kind == "visa_eligible" and row["target"] in ("Elite", "Preferred Plus"):
+                visa = "Permanent Resident"     # FN-1.3 caps visa holders at Preferred
             if kind == "naturalized_recent":
                 cit = "US"
         if cit != "US" or country != "US":
@@ -311,7 +319,8 @@ class TruthGen:
             if band == "<=140/90" and self.row["target"] in ("Elite", "Preferred Plus", "Preferred", "Standard Plus"):
                 lvl = self.row["target"]
                 th = CLS["preferred_matrix"]["classes"][lvl]["bp_under60" if self.age < 60 else "bp_60plus"]
-                rng = ((max(112, th["sys"] - 12), th["sys"]), (max(68, th["dia"] - 10), th["dia"]))
+                ts, td = min(th["sys"], 140), min(th["dia"], 90)          # HTN band "<=140/90" binds (HTN-1)
+                rng = ((max(112, ts - 12), ts), (max(68, td - 10), td))
             return r.randint(*rng[0]), r.randint(*rng[1])
         lvl = self.level_for("bp")
         if lvl not in CLS["preferred_matrix"]["classes"]:
@@ -355,7 +364,13 @@ class TruthGen:
                 rlo = 6.55
             ratio = r.uniform(rlo, ratiomax - 0.03)
             hdl = r.randint(40, 72)
-            tc = min(int(ratio * hdl), tcmax - r.randint(0, 25))
+            if lvl in CLS["preferred_matrix"]["classes"]:
+                tc = min(int(ratio * hdl), tcmax - r.randint(0, 25))
+            else:   # "Standard" row: ratio 6.55-7.0 with TC <= 300 (fails Std Plus ratio, no LIP-3 debits)
+                tc = 240 + 2 * r.randint(0, 25)
+                hdl = int(tc / ratio)
+                if tc / hdl > 7.0:
+                    hdl += 1
             if tc / hdl > ratiomax:
                 hdl = math.ceil(tc / (ratiomax - 0.01))
         trig = r.randint(60, 220)
@@ -457,7 +472,7 @@ class TruthGen:
         # irrelevant family noise (not counted conditions or old ages)
         if r.random() < 0.6:
             out.append(FamilyHistoryItem(relation=r.choice(["mother", "father"]), condition=r.choice(["type 2 diabetes", "Alzheimer's", "COPD", "hypertension", "MI"]),
-                                         age_at_onset=r.randint(62, 80), age_at_death=r.choice([None, r.randint(75, 92)]), living=r.random() < 0.5))
+                                         age_at_onset=max(65, r.randint(62, 80)), age_at_death=r.choice([None, r.randint(75, 92)]), living=r.random() < 0.5))
         return out
 
     def condition(self, it):
@@ -500,7 +515,7 @@ class TruthGen:
             onset = self.ago(ys)
         elif key in ("diabetes_t2", "diabetes_t1"):
             a1 = params["a1c_avg"]
-            a1c = r1(r.uniform(a1[0] + 0.05, min(a1[1], 12.5) - 0.05)) if a1[1] < 90 else r1(r.uniform(10.1, 12.5))
+            a1c = r1(r.uniform(max(a1[0], 5.9) + 0.05, min(a1[1], 12.5) - 0.05)) if a1[1] < 90 else r1(r.uniform(10.1, 12.5))
             dur = r1(r.uniform(0.5, min(15, self.age - 15)))
             details = {"a1c_avg": a1c, "a1c_available": True, "insulin": key == "diabetes_t1" or r.random() < 0.2,
                        "duration_years": dur, "age_at_dx": int(self.age - dur), "microalbuminuria": False, "neuropathy": False,
@@ -564,7 +579,7 @@ class TruthGen:
         prov = []
         if not untrace:
             prov.append(self.provider(spec).provider_id if spec else self.provider("family medicine").provider_id)
-        return Condition(condition_key=key, label=e["label"], onset=onset, status=status, severity=sev, details=details,
+        return Condition(condition_key=key, label=specific_label(key, details, e["label"]), onset=onset, status=status, severity=sev, details=details,
                          meds=meds if not untrace else [], treating_provider_ids=prov, disclosure=disc,
                          in_mib=(not untrace) and r.random() < 0.45)
 
@@ -690,6 +705,14 @@ class TruthGen:
         nm = {i["key"]: i for i in row["items"] if i["kind"] == "nm"}
         self.provider("family medicine", style=row["aps_styles"][0] if row["aps_styles"] else None)
         h, w = self.build(nm)
+        if "nm_misrep" in nm:   # GEN-2.3 pattern: two material misrepresentations in different categories, both provable
+            row = self.row = {**row, "items": row["items"] + [
+                {"id": "nm_mvr:dui_2_5y", "key": "nm_mvr", "variant": "dui_2_5y", "chapter": "MVR", "kind": "nm", "debits": 25, "outcome": "rate",
+                 "best": "Standard Plus", "fe": None, "params": {}, "disclosure": "omitted"},
+                {"id": "depression_anxiety:moderate", "key": "depression_anxiety", "variant": "moderate", "chapter": "MH", "kind": "med",
+                 "debits": 25, "outcome": "rate", "best": "Standard Plus", "fe": None, "params": {"any_of": {"meds_count": {"ge": 2}}},
+                 "disclosure": "omitted"}]}
+            nm["nm_mvr"] = row["items"][-2]
         conds = [self.condition(i) for i in row["items"] if i["kind"] == "med"]
         conds += [self.benign(b) for b in row["benign"]]
         statin = any(m.drug.endswith("statin") for c in conds for m in c.meds)
@@ -747,7 +770,7 @@ class TruthGen:
             prior.append(PriorApplication(year=self.app_date.year - r.randint(1, 8), company=r.choice(["Northstar Life", "Pinecrest Mutual", "Atlas Assurance", "Harborview Life"]),
                                           outcome=r.choice(["issued Standard", "issued Preferred", "postponed", "declined", "issued Table 2", "not taken"])))
         riders = list(row["riders_requested"])
-        existing = r.choice([0, 0, 0, 100000, 250000, 500000])
+        existing = min(r.choice([0, 0, 0, 100000, 250000, 500000]), int(row["face"] * 0.5 / 1000) * 1000)   # keep FIN intent (FIN-1 counts in-force)
         truth = Truth(
             case_id=row["case_id"], seed=row["seed"], app_date=self.app_date, design=row, person=person,
             coverage=Coverage(face_amount=row["face"], product=row["product"], riders_requested=riders, existing_coverage=existing,

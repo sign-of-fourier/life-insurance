@@ -1,0 +1,538 @@
+{
+ "case_id": "C0983",
+ "trace": [
+  {
+   "step": 1,
+   "stage": "application",
+   "at": "2025-01-31T09:43:00",
+   "fact_ids": [
+    "C0983-F006",
+    "C0983-F007",
+    "C0983-F008"
+   ],
+   "rule_id": "FN-1",
+   "finding": "US citizen, US resident - eligible.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 2,
+   "stage": "application",
+   "at": "2025-01-31T09:43:00",
+   "fact_ids": [
+    "C0983-F001"
+   ],
+   "rule_id": "OCC",
+   "finding": "Occupation physician (class 1A): no rating.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 3,
+   "stage": "application",
+   "at": "2025-01-31T09:43:00",
+   "fact_ids": [
+    "C0983-F002",
+    "C0983-F003",
+    "C0983-F005",
+    "C0983-F009",
+    "C0983-F010"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in context).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 4,
+   "stage": "application",
+   "at": "2025-01-31T09:45:00",
+   "fact_ids": [
+    "C0983-F011"
+   ],
+   "rule_id": "TOB-2.3",
+   "finding": "Former cigarette, quit 09/2022 (2.4 yrs): non-tobacco ladder, best Standard Plus.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": "Standard Plus",
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 5,
+   "stage": "application",
+   "at": "2025-01-31T09:45:00",
+   "fact_ids": [
+    "C0983-F012",
+    "C0983-F013"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Remaining Part 2 answers reviewed: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 6,
+   "stage": "third_party",
+   "at": "2025-01-31T09:55:00",
+   "fact_ids": [
+    "C0983-F016"
+   ],
+   "rule_id": "MIB-4",
+   "finding": "MIB 170775 (Abnormal EKG; under investigation / unconfirmed): not disclosed, no corroboration in Rx/APS/labs - not rated.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 7,
+   "stage": "third_party",
+   "at": "2025-01-31T09:59:00",
+   "fact_ids": [
+    "C0983-F014",
+    "C0983-F015"
+   ],
+   "rule_id": "RX-2.1",
+   "finding": "Acute/low-impact fills: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 8,
+   "stage": "requirements",
+   "at": "2025-01-31T10:40:00",
+   "fact_ids": [],
+   "rule_id": "REQ-1",
+   "finding": "Order PM, B, U, EKG, FINQ: REQ-1 grid.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "paramed",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 9,
+   "stage": "requirements",
+   "at": "2025-01-31T10:40:00",
+   "fact_ids": [],
+   "rule_id": "REQ-1",
+   "finding": "Order APS from Dr. Judith Robinson (family medicine): REQ-1 grid.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "aps",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 10,
+   "stage": "labs",
+   "at": "2025-02-08T19:43:00",
+   "fact_ids": [
+    "C0983-F017"
+   ],
+   "rule_id": "BLD-1.1",
+   "finding": "Build 5'3.5\" 173 lb (measured), BMI 30.2: Std Plus column (preferred matrix build row: Standard Plus).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 11,
+   "stage": "labs",
+   "at": "2025-02-08T19:43:00",
+   "fact_ids": [
+    "C0983-F019"
+   ],
+   "rule_id": "GEN-5",
+   "finding": "Pulse/other exam items unremarkable: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 12,
+   "stage": "labs",
+   "at": "2025-02-08T21:43:00",
+   "fact_ids": [
+    "C0983-F045"
+   ],
+   "rule_id": "CV",
+   "finding": "EKG normal: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 13,
+   "stage": "labs",
+   "at": "2025-02-10T13:43:00",
+   "fact_ids": [
+    "C0983-F020",
+    "C0983-F021",
+    "C0983-F024"
+   ],
+   "rule_id": "LIP-1",
+   "finding": "Lipids TC 255, HDL 58, ratio 4.4 - preferred matrix row.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 14,
+   "stage": "labs",
+   "at": "2025-02-10T13:43:00",
+   "fact_ids": [
+    "C0983-F022",
+    "C0983-F023",
+    "C0983-F025",
+    "C0983-F026",
+    "C0983-F027",
+    "C0983-F028",
+    "C0983-F029",
+    "C0983-F030",
+    "C0983-F031",
+    "C0983-F032",
+    "C0983-F033",
+    "C0983-F034",
+    "C0983-F035",
+    "C0983-F036",
+    "C0983-F037",
+    "C0983-F038",
+    "C0983-F039"
+   ],
+   "rule_id": "LAB-2",
+   "finding": "Remaining blood values within UW normal limits: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 15,
+   "stage": "labs",
+   "at": "2025-02-10T13:48:00",
+   "fact_ids": [
+    "C0983-F040"
+   ],
+   "rule_id": "TOB-4.1",
+   "finding": "Cotinine negative (urine 5).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 16,
+   "stage": "labs",
+   "at": "2025-02-10T13:48:00",
+   "fact_ids": [
+    "C0983-F041",
+    "C0983-F042",
+    "C0983-F043",
+    "C0983-F044"
+   ],
+   "rule_id": "LAB-2",
+   "finding": "Remaining urine values within limits: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 17,
+   "stage": "aps",
+   "at": "2025-02-15T09:43:00",
+   "fact_ids": [
+    "C0983-F004",
+    "C0983-F046",
+    "C0983-F047",
+    "C0983-F048",
+    "C0983-F001",
+    "C0983-F049"
+   ],
+   "rule_id": "FIN-1",
+   "finding": "Total coverage $7,500,000 (applied $7,500,000 + in force $0) vs justified $9,750,000 (10x income $975,000): 0.77x. Within limits.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 18,
+   "stage": "aps",
+   "at": "2025-03-01T11:43:00",
+   "fact_ids": [
+    "C0983-F018",
+    "C0983-F050"
+   ],
+   "rule_id": "BP-1",
+   "finding": "Blood pressure average 142/87 (paramed + APS readings in last 12 months); untreated - used for preferred matrix (CLS-5).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 19,
+   "stage": "final",
+   "at": "2025-03-01T11:48:00",
+   "fact_ids": [],
+   "rule_id": "CLS-5",
+   "finding": "Net 0: preferred matrix rows build Standard Plus, bp Preferred, lipids Preferred, nicotine Standard Plus, family_history Elite, mvr Elite, age Elite, face Elite (fails Preferred on build, nicotine: Standard Plus rule CLS-5.2) -> Standard Plus => Standard Plus.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 20,
+   "stage": "final",
+   "at": "2025-03-01T11:50:00",
+   "fact_ids": [
+    "C0983-F009"
+   ],
+   "rule_id": "RID-1",
+   "finding": "Rider ADB: approved.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": {
+     "code": "ADB",
+     "status": "approved",
+     "reason": "eligible"
+    },
+    "no_impact": false
+   }
+  },
+  {
+   "step": 21,
+   "stage": "final",
+   "at": "2025-03-01T11:50:00",
+   "fact_ids": [
+    "C0983-F009"
+   ],
+   "rule_id": "RID-1",
+   "finding": "Rider CIA: approved.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": {
+     "code": "CIA",
+     "status": "approved",
+     "reason": "eligible"
+    },
+    "no_impact": false
+   }
+  }
+ ],
+ "decision": {
+  "ladder": "non_tobacco",
+  "risk_class": "Standard Plus",
+  "table": 0,
+  "flat_extras": [],
+  "riders": [
+   {
+    "code": "ADB",
+    "status": "approved",
+    "reason": "eligible"
+   },
+   {
+    "code": "CIA",
+    "status": "approved",
+    "reason": "eligible"
+   }
+  ],
+  "postpone_months": null,
+  "decline_reason": null,
+  "net_debits": 0,
+  "preliminary_class": "Standard Plus",
+  "approved_face_amount": null,
+  "exclusions": []
+ },
+ "grey_areas": [],
+ "requirements_ordered": [
+  "C0983-D06",
+  "C0983-D09",
+  "C0983-D07",
+  "C0983-D08",
+  "C0983-D10",
+  "C0983-D11"
+ ],
+ "narrative_path": "data/golden/C0983.md"
+}

@@ -830,8 +830,8 @@
    "HT_IN": 70,
    "WT_KG": 101.6,
    "HR": 65,
-   "BP_1": "125/75",
-   "BP_2": "128/80"
+   "BP_1": "121/75",
+   "BP_2": "121/75"
   },
   "losses": []
  },
@@ -845,21 +845,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 295,
+     "value": 250,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 48,
-     "flag": "",
+     "value": 37,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 210,
+     "value": 176,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -867,13 +867,13 @@
     {
      "test": "Triglycerides",
      "value": 183,
-     "flag": "H",
+     "flag": "",
      "units": "mg/dL",
      "ref": "0-149"
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 6.1,
+     "value": 6.8,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -943,16 +943,10 @@
     },
     {
      "test": "Hemoglobin",
-     "value": 14.5,
+     "value": "14.5 0",
      "flag": "",
      "units": "g/dL",
      "ref": "12.0-17.5"
-    },
-    {
-     "test": "HIV-1/2 Ab",
-     "value": 0,
-     "flag": "",
-     "units": "qual"
     },
     {
      "test": "%CDT",
@@ -977,7 +971,20 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0839-F025",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0839-F037",
+    "kind": "merged_cells",
+    "original": "hiv=0",
+    "extracted": "merged into previous row"
+   }
+  ]
  },
  {
   "doc_id": "C0839-D08",

@@ -226,9 +226,9 @@
    "height": "5'5\"",
    "weight_lbs": 120,
    "bp": [
-    "11D/74",
+    "11D/77",
     "114/79",
-    "112/75"
+    "112/77"
    ],
    "pulse": 58,
    "remarks": []
@@ -237,8 +237,8 @@
    {
     "fact_id": "C0604-F025",
     "kind": "misread_digit",
-    "original": "110/74",
-    "extracted": "11D/74"
+    "original": "110/77",
+    "extracted": "11D/77"
    }
   ]
  },
@@ -252,21 +252,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 283,
+     "value": 274,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 58,
+     "value": 40,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 183,
+     "value": 192,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -280,7 +280,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.9,
+     "value": 6.8,
      "flag": "",
      "units": "ratio",
      "ref": "0-5.0"
@@ -315,17 +315,10 @@
     },
     {
      "test": "GGT",
-     "value": 53,
+     "value": "53 82",
      "flag": "",
      "units": "U/L",
      "ref": "8-60"
-    },
-    {
-     "test": "Alkaline phosphatase",
-     "value": 82,
-     "flag": "",
-     "units": "U/L",
-     "ref": "40-130"
     },
     {
      "test": "Bilirubin, total",
@@ -384,7 +377,20 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0604-F031",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0604-F037",
+    "kind": "merged_cells",
+    "original": "alk_phos=82",
+    "extracted": "merged into previous row"
+   }
+  ]
  },
  {
   "doc_id": "C0604-D08",

@@ -1,0 +1,653 @@
+{
+ "case_id": "C0331",
+ "trace": [
+  {
+   "step": 1,
+   "stage": "application",
+   "at": "2025-05-07T09:22:00",
+   "fact_ids": [
+    "C0331-F006",
+    "C0331-F007",
+    "C0331-F008"
+   ],
+   "rule_id": "FN-1",
+   "finding": "US citizen, US resident - eligible.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 2,
+   "stage": "application",
+   "at": "2025-05-07T09:22:00",
+   "fact_ids": [
+    "C0331-F001"
+   ],
+   "rule_id": "OCC",
+   "finding": "Occupation retired (class 1A): no rating.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 3,
+   "stage": "application",
+   "at": "2025-05-07T09:22:00",
+   "fact_ids": [
+    "C0331-F002",
+    "C0331-F003",
+    "C0331-F005",
+    "C0331-F009",
+    "C0331-F010"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Remaining Part 1 answers reviewed: no impact (5 item(s) flagged relevant reviewed in context).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 4,
+   "stage": "application",
+   "at": "2025-05-07T09:24:00",
+   "fact_ids": [
+    "C0331-F011"
+   ],
+   "rule_id": "TOB-2.3",
+   "finding": "Former cigarette, quit 09/2020 (4.6 yrs): non-tobacco ladder, best Preferred.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": "Preferred",
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 5,
+   "stage": "application",
+   "at": "2025-05-07T09:24:00",
+   "fact_ids": [
+    "C0331-F012",
+    "C0331-F015"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Remaining Part 2 answers reviewed: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 6,
+   "stage": "third_party",
+   "at": "2025-05-07T09:25:00",
+   "fact_ids": [
+    "C0331-F019"
+   ],
+   "rule_id": "MIB-3",
+   "finding": "MIB 190551 (Old-format cardiovascular code; abnormal test value, borderline) reported 10.7 yrs ago / retired code - informational only.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 7,
+   "stage": "third_party",
+   "at": "2025-05-07T09:55:00",
+   "fact_ids": [
+    "C0331-F016",
+    "C0331-F017"
+   ],
+   "rule_id": "RX-3",
+   "finding": "Rx shows ocrelizumab x40 (neurology), natalizumab x40 (neurology) - not disclosed on the application; indicates Multiple sclerosis.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 8,
+   "stage": "third_party",
+   "at": "2025-05-07T09:55:00",
+   "fact_ids": [
+    "C0331-F018"
+   ],
+   "rule_id": "RX-2.1",
+   "finding": "Acute/low-impact fills: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 9,
+   "stage": "requirements",
+   "at": "2025-05-07T09:57:00",
+   "fact_ids": [],
+   "rule_id": "REQ-1",
+   "finding": "Order PM, B, U, EKG, COG, FINQ: REQ-1 grid.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "paramed",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 10,
+   "stage": "requirements",
+   "at": "2025-05-07T09:57:00",
+   "fact_ids": [],
+   "rule_id": "REQ-2.2",
+   "finding": "Order APS from Dr. Lori Parker (neurology): REQ-2.2 app vs 3rd-party discrepancy.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "aps",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 11,
+   "stage": "requirements",
+   "at": "2025-05-07T09:57:00",
+   "fact_ids": [],
+   "rule_id": "REQ-1",
+   "finding": "Order APS from Dr. Daniel Jimenez (family medicine): REQ-1 grid.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "aps",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 12,
+   "stage": "labs",
+   "at": "2025-05-12T21:22:00",
+   "fact_ids": [
+    "C0331-F020"
+   ],
+   "rule_id": "BLD-1.1",
+   "finding": "Build 5'4\" 167 lb (measured), BMI 28.7: Preferred column; age 70+ one column more lenient -> Pref Plus (BLD-1.8) (preferred matrix build row: Preferred Plus).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 13,
+   "stage": "labs",
+   "at": "2025-05-12T21:22:00",
+   "fact_ids": [
+    "C0331-F022"
+   ],
+   "rule_id": "GEN-5",
+   "finding": "Pulse/other exam items unremarkable: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 14,
+   "stage": "labs",
+   "at": "2025-05-12T23:22:00",
+   "fact_ids": [
+    "C0331-F048"
+   ],
+   "rule_id": "CV",
+   "finding": "EKG normal: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 15,
+   "stage": "labs",
+   "at": "2025-05-16T15:22:00",
+   "fact_ids": [
+    "C0331-F023",
+    "C0331-F024",
+    "C0331-F027"
+   ],
+   "rule_id": "LIP-1",
+   "finding": "Lipids TC 262, HDL 40, ratio 6.5 - preferred matrix row.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 16,
+   "stage": "labs",
+   "at": "2025-05-16T15:22:00",
+   "fact_ids": [
+    "C0331-F025",
+    "C0331-F026",
+    "C0331-F028",
+    "C0331-F029",
+    "C0331-F030",
+    "C0331-F031",
+    "C0331-F032",
+    "C0331-F033",
+    "C0331-F034",
+    "C0331-F035",
+    "C0331-F036",
+    "C0331-F037",
+    "C0331-F038",
+    "C0331-F039",
+    "C0331-F040",
+    "C0331-F041",
+    "C0331-F042"
+   ],
+   "rule_id": "LAB-2",
+   "finding": "Remaining blood values within UW normal limits: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 17,
+   "stage": "labs",
+   "at": "2025-05-16T15:27:00",
+   "fact_ids": [
+    "C0331-F043"
+   ],
+   "rule_id": "TOB-4.1",
+   "finding": "Cotinine negative (urine 6).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 18,
+   "stage": "labs",
+   "at": "2025-05-16T15:27:00",
+   "fact_ids": [
+    "C0331-F044",
+    "C0331-F045",
+    "C0331-F046",
+    "C0331-F047"
+   ],
+   "rule_id": "LAB-2",
+   "finding": "Remaining urine values within limits: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 19,
+   "stage": "aps",
+   "at": "2025-05-18T09:22:00",
+   "fact_ids": [
+    "C0331-F004",
+    "C0331-F049",
+    "C0331-F050",
+    "C0331-F051",
+    "C0331-F001",
+    "C0331-F052"
+   ],
+   "rule_id": "FIN-1",
+   "finding": "Total coverage $1,500,000 (applied $1,500,000 + in force $0) vs justified $2,210,000 (age 71+: 50% of net worth $4,420,000): 0.68x. Within limits.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 20,
+   "stage": "aps",
+   "at": "2025-06-12T15:22:00",
+   "fact_ids": [
+    "C0331-F013",
+    "C0331-F056"
+   ],
+   "rule_id": "MISC-1",
+   "finding": "acute sinusitis: low-impact condition on the no-rating list - no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 21,
+   "stage": "aps",
+   "at": "2025-06-12T15:22:00",
+   "fact_ids": [
+    "C0331-F014",
+    "C0331-F057"
+   ],
+   "rule_id": "MISC-1",
+   "finding": "kidney stones: low-impact condition on the no-rating list - no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 22,
+   "stage": "aps",
+   "at": "2025-06-12T15:22:00",
+   "fact_ids": [
+    "C0331-F055",
+    "C0331-F053"
+   ],
+   "rule_id": "NEU",
+   "finding": "Multiple sclerosis: profile 'mild' (default - attributes not documented) per APS.",
+   "effect": {
+    "debits": 50,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 23,
+   "stage": "aps",
+   "at": "2025-06-12T15:22:00",
+   "fact_ids": [
+    "C0331-F021",
+    "C0331-F054",
+    "C0331-F058"
+   ],
+   "rule_id": "BP-1",
+   "finding": "Blood pressure average 130/79 (paramed + APS readings in last 12 months); untreated - used for preferred matrix (CLS-5).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 24,
+   "stage": "final",
+   "at": "2025-06-12T15:23:00",
+   "fact_ids": [],
+   "rule_id": "GEN-2.2",
+   "finding": "Material misrepresentation (medical): rated on the true facts; MISREP note for compliance.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 25,
+   "stage": "final",
+   "at": "2025-06-12T15:27:00",
+   "fact_ids": [],
+   "rule_id": "CLS-3.3",
+   "finding": "Net debits +50 -> Table 1 (+25%).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 26,
+   "stage": "final",
+   "at": "2025-06-12T15:29:00",
+   "fact_ids": [
+    "C0331-F009"
+   ],
+   "rule_id": "RID-2",
+   "finding": "Rider WP: declined - issue age 77 outside 18-55.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": {
+     "code": "WP",
+     "status": "declined",
+     "reason": "issue age 77 outside 18-55"
+    },
+    "no_impact": false
+   }
+  }
+ ],
+ "decision": {
+  "ladder": "non_tobacco",
+  "risk_class": "Table",
+  "table": 1,
+  "flat_extras": [],
+  "riders": [
+   {
+    "code": "WP",
+    "status": "declined",
+    "reason": "issue age 77 outside 18-55"
+   }
+  ],
+  "postpone_months": null,
+  "decline_reason": null,
+  "net_debits": 50,
+  "preliminary_class": "Preferred",
+  "approved_face_amount": null,
+  "exclusions": []
+ },
+ "grey_areas": [
+  {
+   "issue": "Multiple sclerosis rated without severity detail",
+   "rule_ids": [
+    "GRY-5",
+    "APS-6"
+   ],
+   "chosen": "default profile 'mild'",
+   "alternatives": [
+    "order/obtain APS and hold"
+   ],
+   "rationale": "Severity attributes not documented; APS-6 default row applies."
+  }
+ ],
+ "requirements_ordered": [
+  "C0331-D05",
+  "C0331-D08",
+  "C0331-D06",
+  "C0331-D07",
+  "C0331-D09",
+  "C0331-D10",
+  "C0331-D11"
+ ],
+ "narrative_path": "data/golden/C0331.md"
+}

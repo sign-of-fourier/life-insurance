@@ -200,9 +200,9 @@
    "height": "5'3\"",
    "weight_lbs": 132,
    "bp": [
-    "130/88",
+    "131/89",
     "133/91",
-    "127/86"
+    "131/89"
    ],
    "pulse": 66,
    "remarks": []
@@ -219,21 +219,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 288,
+     "value": 264,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 49,
+     "value": 39,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 212,
+     "value": 198,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -247,7 +247,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.9,
+     "value": 6.8,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -275,10 +275,17 @@
     },
     {
      "test": "ALT (SGPT)",
-     "value": "29 54",
+     "value": 29,
      "flag": "",
      "units": "U/L",
      "ref": "7-45"
+    },
+    {
+     "test": "GGT",
+     "value": 54,
+     "flag": "",
+     "units": "U/L",
+     "ref": "8-60"
     },
     {
      "test": "Alkaline phosphatase",
@@ -289,17 +296,10 @@
     },
     {
      "test": "Bilirubin, total",
-     "value": 0.6,
+     "value": "0.6 3.9",
      "flag": "",
      "units": "mg/dL",
      "ref": "0.2-1.2"
-    },
-    {
-     "test": "Albumin",
-     "value": 3.9,
-     "flag": "",
-     "units": "g/dL",
-     "ref": "3.5-5.0"
     },
     {
      "test": "Creatinine",
@@ -346,9 +346,15 @@
   },
   "losses": [
    {
-    "fact_id": "C0051-F028",
+    "fact_id": "C0051-F020",
+    "kind": "flag_lost",
+    "original": "L",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0051-F031",
     "kind": "merged_cells",
-    "original": "ggt=54",
+    "original": "albumin=3.9",
     "extracted": "merged into previous row"
    }
   ]

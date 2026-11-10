@@ -187,8 +187,8 @@
    "HT_IN": 71,
    "WT_KG": 68.9,
    "HR": 82,
-   "BP_1": "127/86",
-   "BP_2": "134/87"
+   "BP_1": "127/81",
+   "BP_2": "127/82"
   },
   "losses": []
  },
@@ -202,21 +202,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 284,
+     "value": 272,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 57,
+     "value": 41,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 196,
+     "value": 200,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -230,8 +230,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5,
-     "flag": "",
+     "value": 6.6,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -293,10 +293,17 @@
     },
     {
      "test": "eGFR (CKD-EPI 2021)",
-     "value": "79 13.9",
+     "value": 79,
      "flag": "",
      "units": "mL/min/1.73m2",
      "ref": "60-200"
+    },
+    {
+     "test": "Hemoglobin",
+     "value": 13.9,
+     "flag": "",
+     "units": "g/dL",
+     "ref": "12.0-17.5"
     },
     {
      "test": "HIV-1/2 Ab",
@@ -315,7 +322,7 @@
      "test": "PSA",
      "value": 1.9,
      "flag": "",
-     "units": "ng/mL",
+     "units": null,
      "ref": "0-4.0"
     },
     {
@@ -336,10 +343,10 @@
   },
   "losses": [
    {
-    "fact_id": "C0698-F034",
-    "kind": "merged_cells",
-    "original": "hemoglobin=13.9",
-    "extracted": "merged into previous row"
+    "fact_id": "C0698-F037",
+    "kind": "unit_lost",
+    "original": "ng/mL",
+    "extracted": null
    },
    {
     "fact_id": "C0698-F038",

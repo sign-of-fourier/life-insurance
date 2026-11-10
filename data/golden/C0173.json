@@ -1,0 +1,388 @@
+{
+ "case_id": "C0173",
+ "trace": [
+  {
+   "step": 1,
+   "stage": "application",
+   "at": "2026-04-07T09:38:00",
+   "fact_ids": [
+    "C0173-F006",
+    "C0173-F007",
+    "C0173-F008"
+   ],
+   "rule_id": "FN-1",
+   "finding": "US citizen, US resident - eligible.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 2,
+   "stage": "application",
+   "at": "2026-04-07T09:38:00",
+   "fact_ids": [
+    "C0173-F004",
+    "C0173-F002",
+    "C0173-F003",
+    "C0173-F005",
+    "C0173-F001"
+   ],
+   "rule_id": "FIN-1",
+   "finding": "Total coverage $1,500,000 (applied $1,000,000 + in force $500,000) vs justified $1,410,000 (30x income $47,000): 1.06x. Within limits.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 3,
+   "stage": "application",
+   "at": "2026-04-07T09:38:00",
+   "fact_ids": [
+    "C0173-F001"
+   ],
+   "rule_id": "OCC",
+   "finding": "Occupation logger (class 4A): FE $5/1000 permanent.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": {
+     "per_thousand": 5.0,
+     "years": null,
+     "reason": "occupation (logger)"
+    },
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 4,
+   "stage": "application",
+   "at": "2026-04-07T09:38:00",
+   "fact_ids": [
+    "C0173-F009",
+    "C0173-F010"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Remaining Part 1 answers reviewed: no impact (2 item(s) flagged relevant reviewed in context).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 5,
+   "stage": "application",
+   "at": "2026-04-07T09:40:00",
+   "fact_ids": [
+    "C0173-F011"
+   ],
+   "rule_id": "TOB-2.3",
+   "finding": "Former cigarette, quit 12/2023 (2.3 yrs): non-tobacco ladder, best Standard Plus.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": "Standard Plus",
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 6,
+   "stage": "application",
+   "at": "2026-04-07T09:40:00",
+   "fact_ids": [
+    "C0173-F014"
+   ],
+   "rule_id": "BLD-1.1",
+   "finding": "Build 5'6\" 174 lb (stated (no paramed)), BMI 28.1: Pref Plus column (preferred matrix build row: Preferred Plus).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 7,
+   "stage": "application",
+   "at": "2026-04-07T09:40:00",
+   "fact_ids": [
+    "C0173-F012"
+   ],
+   "rule_id": "GEN-2",
+   "finding": "Remaining Part 2 answers reviewed: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 8,
+   "stage": "third_party",
+   "at": "2026-04-07T09:44:00",
+   "fact_ids": [
+    "C0173-F013",
+    "C0173-F015",
+    "C0173-F016"
+   ],
+   "rule_id": "MISC-1",
+   "finding": "acne: low-impact condition on the no-rating list - no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 9,
+   "stage": "third_party",
+   "at": "2026-04-07T09:44:00",
+   "fact_ids": [
+    "C0173-F017",
+    "C0173-F018"
+   ],
+   "rule_id": "RX-2.1",
+   "finding": "Acute/low-impact fills: no impact.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 10,
+   "stage": "third_party",
+   "at": "2026-04-07T10:22:00",
+   "fact_ids": [
+    "C0173-F019",
+    "C0173-F020",
+    "C0173-F021",
+    "C0173-F022",
+    "C0173-F023"
+   ],
+   "rule_id": "MVR-3",
+   "finding": "5 minor moving violation(s) in 3 yrs: +50.",
+   "effect": {
+    "debits": 50,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 11,
+   "stage": "requirements",
+   "at": "2026-04-07T10:24:00",
+   "fact_ids": [],
+   "rule_id": "REQ-1",
+   "finding": "Order ACCEL: REQ-1 grid.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": "other",
+    "rider_action": null,
+    "no_impact": false
+   }
+  },
+  {
+   "step": 12,
+   "stage": "final",
+   "at": "2026-04-07T10:27:00",
+   "fact_ids": [],
+   "rule_id": "CLS-3.3",
+   "finding": "Net debits +50 -> Table 1 (+25%).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 13,
+   "stage": "final",
+   "at": "2026-04-07T10:28:00",
+   "fact_ids": [],
+   "rule_id": "CMB-5",
+   "finding": "Flat extras: FE $5/1000 perm (occupation (logger)).",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": null,
+    "no_impact": true
+   }
+  },
+  {
+   "step": 14,
+   "stage": "final",
+   "at": "2026-04-07T10:29:00",
+   "fact_ids": [
+    "C0173-F009"
+   ],
+   "rule_id": "RID-1",
+   "finding": "Rider CTR: approved.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": {
+     "code": "CTR",
+     "status": "approved",
+     "reason": "eligible"
+    },
+    "no_impact": false
+   }
+  },
+  {
+   "step": 15,
+   "stage": "final",
+   "at": "2026-04-07T10:29:00",
+   "fact_ids": [
+    "C0173-F009"
+   ],
+   "rule_id": "RID-1",
+   "finding": "Rider OIR: approved.",
+   "effect": {
+    "debits": 0,
+    "credits": 0,
+    "class_cap": null,
+    "ladder": null,
+    "flat_extra": null,
+    "postpone_months": null,
+    "decline": false,
+    "order_requirement": null,
+    "rider_action": {
+     "code": "OIR",
+     "status": "approved",
+     "reason": "eligible"
+    },
+    "no_impact": false
+   }
+  }
+ ],
+ "decision": {
+  "ladder": "non_tobacco",
+  "risk_class": "Table",
+  "table": 1,
+  "flat_extras": [
+   {
+    "per_thousand": 5.0,
+    "years": null,
+    "reason": "occupation (logger)"
+   }
+  ],
+  "riders": [
+   {
+    "code": "CTR",
+    "status": "approved",
+    "reason": "eligible"
+   },
+   {
+    "code": "OIR",
+    "status": "approved",
+    "reason": "eligible"
+   }
+  ],
+  "postpone_months": null,
+  "decline_reason": null,
+  "net_debits": 50,
+  "preliminary_class": "Standard Plus",
+  "approved_face_amount": null,
+  "exclusions": []
+ },
+ "grey_areas": [],
+ "requirements_ordered": [],
+ "narrative_path": "data/golden/C0173.md"
+}

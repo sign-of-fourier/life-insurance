@@ -221,8 +221,8 @@
    "weight_lbs": 160,
    "bp": [
     "109/88",
-    "108/89",
-    "112/92"
+    "108/88",
+    "112/89"
    ],
    "pulse": 83,
    "remarks": []
@@ -239,21 +239,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 287,
+     "value": 266,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 61,
+     "value": 41,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 210,
+     "value": 209,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -267,24 +267,17 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.7,
-     "flag": "",
+     "value": 6.5,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
     {
      "test": "Glucose, fasting",
-     "value": 103,
+     "value": "103 5.4",
      "flag": "H",
      "units": "mg/dL",
      "ref": "65-99"
-    },
-    {
-     "test": "HEMOGLOBIN A1C",
-     "value": 5.4,
-     "flag": "",
-     "units": "%",
-     "ref": "4.0-5.6"
     },
     {
      "test": "AST (SGOT)",
@@ -295,10 +288,17 @@
     },
     {
      "test": "ALT (SGPT)",
-     "value": "26 35",
+     "value": 26,
      "flag": "",
      "units": "U/L",
      "ref": "7-45"
+    },
+    {
+     "test": "GGT",
+     "value": 35,
+     "flag": "",
+     "units": "U/mL",
+     "ref": "8-60"
     },
     {
      "test": "Alkaline phosphatase",
@@ -359,10 +359,16 @@
   },
   "losses": [
    {
-    "fact_id": "C0390-F037",
+    "fact_id": "C0390-F034",
     "kind": "merged_cells",
-    "original": "ggt=35",
+    "original": "a1c=5.4",
     "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0390-F037",
+    "kind": "unit_wrong",
+    "original": "U/L",
+    "extracted": "U/mL"
    }
   ]
  },

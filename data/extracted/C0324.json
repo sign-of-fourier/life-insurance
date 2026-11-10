@@ -20,7 +20,7 @@
     "face": 750000,
     "product": "Term 20",
     "riders": "['ADB', 'CIA', 'CTR']",
-    "existing": 500000,
+    "existing": 375000,
     "replacement": "False",
     "beneficiary": "trust",
     "signed": "2025-07-1Z"
@@ -408,8 +408,8 @@
    "height": "6'0\"",
    "weight_lbs": 164,
    "bp": [
+    "109/78",
     "108/78",
-    "105/81",
     "110/79"
    ],
    "pulse": 59,
@@ -427,31 +427,38 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 296,
+     "value": 248,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 59,
-     "flag": "",
+     "value": 37,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 196,
-     "flag": "H",
+     "value": 170,
+     "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
      "test": "Triglycerides",
-     "value": "204 5",
+     "value": 204,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-149"
+    },
+    {
+     "test": "CHOL/HDL RATIO",
+     "value": 6.7,
+     "flag": "H",
+     "units": "ratio",
+     "ref": "0-5.0"
     },
     {
      "test": "Glucose, fasting",
@@ -476,17 +483,10 @@
     },
     {
      "test": "ALT (SGPT)",
-     "value": 18,
+     "value": "18 26",
      "flag": "",
      "units": "U/L",
      "ref": "7-45"
-    },
-    {
-     "test": "GGT",
-     "value": 26,
-     "flag": "",
-     "units": "U/L",
-     "ref": "8-60"
     },
     {
      "test": "Alkaline phosphatase",
@@ -531,12 +531,6 @@
      "ref": "12.0-17.5"
     },
     {
-     "test": "HIV-1/2 Ab",
-     "value": 0,
-     "flag": "",
-     "units": null
-    },
-    {
      "test": "%CDT",
      "value": 0.8,
      "flag": "",
@@ -547,15 +541,21 @@
   },
   "losses": [
    {
-    "fact_id": "C0324-F030",
+    "fact_id": "C0324-F028",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0324-F035",
     "kind": "merged_cells",
-    "original": "tc_hdl_ratio=5",
+    "original": "ggt=26",
     "extracted": "merged into previous row"
    },
    {
     "fact_id": "C0324-F042",
-    "kind": "unit_lost",
-    "original": "qual",
+    "kind": "dropped",
+    "original": "0",
     "extracted": null
    }
   ]

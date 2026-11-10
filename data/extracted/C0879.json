@@ -55,7 +55,7 @@
      "q": "7e",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Peripheral arterial disease / aortic aneurysm\", \"diagnosed\": \"07/2011\", \"treatment\": \"none\", \"physician\": \"Dr. Juan Vargas\"}"
+      "{\"condition\": \"Abdominal aortic aneurysm\", \"diagnosed\": \"07/2011\", \"treatment\": \"none\", \"physician\": \"Dr. Juan Vargas\"}"
      ]
     },
     "7f": {
@@ -570,21 +570,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 275,
+     "value": 290,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 59,
+     "value": 44,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 186,
+     "value": 216,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -598,17 +598,10 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.7,
-     "flag": "",
+     "value": "6.6 100",
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
-    },
-    {
-     "test": "Glucose, fasting",
-     "value": 100,
-     "flag": "H",
-     "units": "mg/dL",
-     "ref": "65-99"
     },
     {
      "test": "HEMOGLOBIN A1C",
@@ -628,7 +621,7 @@
      "test": "ALT (SGPT)",
      "value": 15,
      "flag": "",
-     "units": "U/L",
+     "units": null,
      "ref": "7-45"
     },
     {
@@ -702,7 +695,26 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0879-F033",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0879-F033",
+    "kind": "merged_cells",
+    "original": "glucose_fasting=100",
+    "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0879-F036",
+    "kind": "unit_lost",
+    "original": "U/L",
+    "extracted": null
+   }
+  ]
  },
  {
   "doc_id": "C0879-D08",
@@ -757,21 +769,25 @@
   "payload": {
    "provider": "Dr. Juan Vargas",
    "specialty": "cardiology",
-   "page_count": 2,
+   "page_count": 3,
    "pages": [
     {
      "page": 1,
-     "text": "Printed by: ROI_66 11/09/2026 \nCONFIDENTIAL - Contains PHI \nMiller Wilson and Bradley Clinic | Dr. Juan Vargas, cardiology \nPatient: Steven Simmons DOB: 11/26/1982 Sex: M MRN: 778900 \n\nPROBLEM LIST \n - Peripheral disease / aortic aneurysm (kind aaa; smoker; 4.7 cm; repaired months 51) [controlled] onset 07/2011 \n\nMEDICATIONS\n\nENCOUNTERS \n--- 11/15/2025 Office Visit --- \nS: Mr. Simmons presents today for a follow-up on his flu shot. He reports receiving the shot a few weeks ago and has not experienced any adverse effects. He denies any chest pain, shortness of breath, or other respiratory symptoms. He also reports no recent changes in his peripheral arterial disease or aortic aneurysm condition. \n\nO: BP 119/91 Wt 173 lb \nA: Flu shot - Mr. Simmons received the flu vaccine without any complications. His vital signs are stable, and he remains within a healthy weight range. \nP: Continue with current management plan. He will follow up in 3-6 months or sooner if any issues arise. \n\n--- 07/23/2025 Office Visit --- \nS: Mr. Simmons here for follow-up regarding his peripheral arterial disease and aortic aneurysm. He has been feeling well and has not experienced any new symptoms related to these conditions. \n\nO: BP 123/79 Wt 177 lb \nA: Peripheral arterial disease / aortic aneurysm - The patient's condition is improving. He remains stable with no acute changes. \n\nP: Continue with current treatment plan. We will review his condition again in 3-6 months. \n\n--- 03/30/2025 Office Visit --- \nS: Mr. Simmons visits today for a routine lab review and to discuss his ongoing management of peripheral arterial disease and aortic aneurysm. He reports no new symptoms and has been adhering to his treatment plan. \n\nO: BP 115/83 Wt 168 lb \nA: Lab review - Stable condition with no acute changes. The patient's labs are within acceptable ranges. \n\nP: Continue with current treatment plan. Recommend follow-up in 3-6 months or sooner if needed. \n\n--- 12/05/2024 Office Visit --- \nS: Mr. Simmons presents for follow-up regarding a recent upper respiratory infection (URI). He reports that his symptoms have resolved, and he is feeling back to normal. He denies any related complications. \n\nO: BP 123/90 Wt 174 lb \nA: URI - The patient has recovered from the URI, and his symptoms have completely resolved. \n\nP: Continue with current treatment plan. Recommend follow-up in 3-6 months or sooner if any issues arise. \n\n--- 08/12/2024 Office Visit --- \nS: Mr. Simmons is here for follow-up regarding his peripheral arterial disease and aortic"
+     "text": "Printed by: ROI_12 11/10/2026\nCONFIDENTIAL - Contains PHI\nMiller Wilson and Bradley Clinic | Dr. Juan Vargas, cardiology\nPatient: Steven Simmons\nDOB: 11/26/1982\nSex: M\nMRN: 405760\n\nPROBLEM LIST\n- Abdominal aortic aneurysm (kind aaa; smoker; 4.7 cm; repaired months 51) [controlled] onset 07/2011\n\nMEDICATIONS\n\nENCOUNTERS\n--- 11/15/2025 Office Visit ---\nS: The patient for a follow-up visit regarding his flu shot. He reports feeling well overall and has not experienced any adverse effects from the flu shot administered earlier this season. The patient also mentioned that he has been diligent about maintaining his regular diet and exercise routine. \n\nO: On examination, the patient appeared to be in no acute distress. Blood pressure was recorded at 119/91 mmHg and weight at 173 pounds. Vital signs were within normal limits. Cardiac, respiratory, and abdominal exams were unremarkable. \n\nA: The patient's follow-up for the flu shot indicates a stable condition. The abdominal aortic aneurysm remains under controlled management since the surgical repair performed 51 months ago. The aneurysm size remains at 4.7 cm.\n\nP: The patient is continuing his current treatment plan. We recommend routine follow-up visits every 3 to 6 months to monitor the status of the abdominal aortic aneurysm. The patient is encouraged to maintain his current and adhere to any recommended dietary and exercise regimens.\n\n---\n\n--- 07/23/2025 Office Visit ---\nS: The patient presented for a follow-up visit concerning his abdominal aortic aneurysm. He reports feeling well overall and has not experienced any new symptoms since the last visit. The patient is compliant with his medication regimen and has not encountered any difficulties.\n\nO: On examination, the patient appeared to be in no acute distress. Blood pressure was recorded at 123/79 mmHg and weight at 177 pounds. Vital signs were within normal limits. Cardiac, respiratory, and abdominal exams were unremarkable. \n\nA: The patient's follow-up visit shows that the abdominal aortic aneurysm remains under fair control. The aneurysm size remains at 4.7 cm.\n\nP: The patient is continuing his current treatment plan. We recommend routine follow-up visits every 3 to 6 months to monitor the status of the abdominal aortic aneurysm. The patient is encouraged to maintain his current lifestyle and adhere to any recommended dietary and exercise regimens.\n\n---\n\n--- 03/30/2025 Office Visit ---\nS: The patient presented for a follow-up visit regarding lab review. He reports feeling well overall and has not experienced any new symptoms since t"
     },
     {
      "page": 2,
-     "text": "aneurysm. He reports no new symptoms or changes in his condition. \n\nO: BP 115/88 Wt 162 lb Peripheral arterial disease / aortic aneurysm - The patient's condition remains unchanged since the last visit. \n\nP: Continue with current treatment plan. Recommend follow-up in 3-6 months or sooner if needed. \n\n--- 04/19/2024 Office Visit --- \nS: Mr. Simmons visits for follow-up on his peripheral arterial disease and aortic aneurysm. He reports feeling well and has not experienced any new symptoms. \n\nO: BP 118/85 Wt 164 lb \nA: Peripheral arterial disease / aortic aneurysm - The patient’s condition is improving. \n\nP: Continue current treatment plan. Recommend follow-up in 3-6 months or sooner if any issues arise. \n\n--- 12/26/2023 Office Visit --- \nS: Mr. Simmons is here for a routine lab review and to discuss his ongoing management of peripheral arterial disease and aortic aneurysm. He reports no new symptoms and has been adhering to his treatment plan. \n\nO: BP 115/82 Wt 177 lb \nA: Lab review - Stable condition with no acute changes. The patient’s labs are within acceptable ranges. \n\nP: Continue with current treatment plan. Recommend follow-up in 3-6 months or sooner if needed. \n\nSocial: alcohol ~1 drink/week\n"
+     "text": "FAX 7  -- ROI --\nhe last visit. The patient is compliant with his medication regimen and has not encountered any difficulties.\n\nO: On examination, the patient appeared to be in no acute distress. Blood pressure was recorded at 115/83 mmHg and weight at 168 pounds. Vital signs were within normal limits. Cardiac, respiratory, and abdominal exams were unremarkable.\n\nA: The patient's follow-up lab review indicates that his lab results remain unchanged. The abdominal aortic aneurysm size remains stable at 4.7 cm.\n\nP: The patient is continuing his current treatment plan. We recommend routine follow-up visits every 3 to 6 months to monitor the status of the abdominal aortic aneurysm. The is encouraged to maintain his current lifestyle and adhere to any recommended dietary and exercise regimens.\n\n---\n\n--- 12/05/2024 Office Visit ---\nS: The patient presented for a follow-up visit regarding his upper respiratory infection (URI). He reports feeling well overall and has not experienced any new symptoms since the last visit. The patient is compliant with his medication regimen and has not encountered any difficulties.\n\nO: On examination, the patient appeared to be in no acute distress. Blood pressure was recorded at 123/90 mmHg and weight at 174 pounds. Vital signs were within normal limits. respiratory, and abdominal exams were unremarkable.\n\nA: The patient's follow-up visit indicates that the upper respiratory infection remains under fair control. The patient reports no new symptoms, and his overall condition is stable.\n\nP: The patient is continuing his current treatment plan. We recommend routine follow-up visits every 3 to 6 months to monitor the status of the abdominal aortic aneurysm. The patient is encouraged to maintain his current lifestyle and adhere to any recommended dietary and exercise regimens.\n\n---\n\n--- 08/12/2024 Office Visit ---\nS: The patient presented for a follow-up visit concerning his abdominal aortic aneurysm. He reports feeling well overall and has not experienced any new symptoms since the last visit. The patient is compliant with his medication regimen and has not encountered any difficulties.\n\nO: On examination, the patient appeared to be in no acute distress. Blood pressure was recorded at 115/88 mmHg and weight at 162 pounds. Vital signs were within normal limits. Cardiac, respiratory, and abdominal exams were unremarkable.\n\nA: The patient's follow-up visit shows that the abdominal aortic aneurysm remains stable. The aneurysm size remains at 4.7 cm.\n\nP: The patient is continuing his current treatment plan. We recommend routine follow-up"
+    },
+    {
+     "page": 3,
+     "text": "visits every 3 to 6 months to monitor the status of the abdominal aortic aneurysm. The patient is encouraged to maintain his current lifestyle and adhere to any recommended dietary and exercise regimens.\n\n---\n\n--- 04/19/2024 Office Visit ---\nS: The patient presented for a follow-up visit regarding his abdominal aortic aneurysm. He reports feeling well overall and has not experienced any new symptoms since the last visit. The patient is compliant with his medication regimen and has not encountered any difficulties.\n\nO: On examination, the patient appeared to be in no acute distress. Blood pressure was recorded at 118/85 mmHg and weight at 164 pounds. Vital signs were within normal limits. Cardiac, respiratory, and abdominal exams were unremarkable.\n\nA: The patient's follow-up visit indicates that the abdominal aortic aneurysm remains unchanged. The aneurysm size remains at 4.7 cm.\n\nP: The patient is continuing his current treatment plan. We recommend routine follow-up visits every 3 to 6 months to monitor the status of the abdominal aortic aneurysm. The patient is encouraged to maintain his current lifestyle and adhere to any recommended dietary and exercise regimens.\n\n---\n\n--- 12/26/2023 Office Visit ---\nS: The patient presented for a follow-up visit regarding lab review. He reports feeling well overall and has not experienced any new symptoms since the last visit. The patient is compliant with his medication regimen and has not encountered any difficulties.\n\nO: On examination, the patient appeared to be in no acute distress. Blood pressure was recorded at 115/82 mmHg and weight at 177 pounds. Vital signs were within normal limits. Cardiac, respiratory, and abdominal exams were unremarkable.\n\nA: The patient's follow-up lab review indicates that his lab results remain stable. The abdominal aortic aneurysm size remains at 4.7 cm.\n\nP: The patient is continuing his current treatment plan. We recommend routine follow-up visits every 3 to 6 months to monitor the status of the abdominal aortic aneurysm. The patient is encouraged to maintain his current lifestyle and adhere to any recommended dietary and exercise regimens.\n\nSocial: alcohol ~1 drink/week\n\nPage 6 of 6\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Peripheral arterial disease / aortic aneurysm",
+     "text": "Abdominal aortic aneurysm",
      "status": "controlled"
     }
    ]

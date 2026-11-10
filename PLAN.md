@@ -152,6 +152,12 @@ Sub-plan:
   polished under a "no new facts" constraint, verified by fact-matching against trace).
 - ✅ Gate: engine determinism; distribution of final classes vs. design targets; 10 manual
   reviews against `guidelines.md`.
+- **Built (2026-11-10):** `src/engine.py` reads only `data/source/<case>/{evidence,content}.json` (never truth/design);
+  `src/dx_labels.py` shared diagnosis labels; `src/render_golden.py` -> `data/golden/<case>.md`; `src/check_golden.py`
+  -> `qa/phase5_golden.md` (validation, rule ids, determinism, target-vs-engine with mismatch categories);
+  `qa/phase5_manual_review.md`. Target != engine is expected where evidence diverges from the plan (hidden facts,
+  misrepresentation caught, credits, add-on modifiers, accelerated path, no-APS default rows); the golden is
+  authoritative, the design target is only the coverage plan.
 
 ### Phase 6 — Noisy UW notes (Step 3)
 - Each case assigned a persona. Renderer takes golden trace →

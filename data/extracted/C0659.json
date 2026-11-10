@@ -221,8 +221,8 @@
    "HT_IN": 59,
    "WT_KG": 55.3,
    "HR": 74,
-   "BP_1": "144/71",
-   "BP_2": "133/67"
+   "BP_1": "145/71",
+   "BP_2": "144/67"
   },
   "losses": []
  },
@@ -252,21 +252,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 295,
+     "value": 250,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 62,
-     "flag": "",
+     "value": 37,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 212,
+     "value": 192,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -280,24 +280,17 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.8,
+     "value": 6.8,
      "flag": "",
      "units": "ratio",
      "ref": "0-5.0"
     },
     {
      "test": "HEMOGLOBIN A1C",
-     "value": 5.3,
+     "value": "5.3 34",
      "flag": "",
      "units": "%",
      "ref": "4.0-5.6"
-    },
-    {
-     "test": "AST (SGOT)",
-     "value": 34,
-     "flag": "",
-     "units": "U/L",
-     "ref": "10-40"
     },
     {
      "test": "ALT (SGPT)",
@@ -363,10 +356,17 @@
     },
     {
      "test": "%CDT",
-     "value": "1.3 64",
+     "value": 1.3,
      "flag": "",
      "units": "%dCDT",
      "ref": "0-1.6"
+    },
+    {
+     "test": "NT-proBNP",
+     "value": 64,
+     "flag": "",
+     "units": null,
+     "ref": "0-124"
     },
     {
      "test": "Glucose",
@@ -379,10 +379,22 @@
   },
   "losses": [
    {
-    "fact_id": "C0659-F043",
+    "fact_id": "C0659-F030",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0659-F032",
     "kind": "merged_cells",
-    "original": "nt_probnp=64",
+    "original": "ast=34",
     "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0659-F043",
+    "kind": "unit_lost",
+    "original": "pg/mL",
+    "extracted": null
    }
   ]
  },

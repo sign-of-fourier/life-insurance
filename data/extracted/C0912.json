@@ -16,7 +16,7 @@
     "visa": "None",
     "occupation": "unemployed",
     "income": 0,
-    "net_worth": 171000,
+    "net_worth": 2124000,
     "face": 1000000,
     "product": "Term 20",
     "riders": "[]",
@@ -593,7 +593,7 @@
    "WT_KG": 77.6,
    "HR": 81,
    "BP_1": "137/63",
-   "BP_2": "132/71"
+   "BP_2": "132/68"
   },
   "losses": []
  },
@@ -607,14 +607,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": "291 44",
+     "value": 258,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
+     "test": "HDL CHOL",
+     "value": 39,
+     "flag": "",
+     "units": "mg/dL",
+     "ref": "40-999"
+    },
+    {
      "test": "LDL (calc)",
-     "value": 205,
+     "value": 177,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -629,7 +636,7 @@
     {
      "test": "CHOL/HDL RATIO",
      "value": 6.6,
-     "flag": "",
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -665,7 +672,7 @@
      "test": "Alkaline phosphatase",
      "value": 110,
      "flag": "",
-     "units": "g/L",
+     "units": null,
      "ref": "40-130"
     },
     {
@@ -684,17 +691,10 @@
     },
     {
      "test": "Creatinine",
-     "value": 1,
+     "value": "1 90",
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
-    },
-    {
-     "test": "eGFR (CKD-EPI 2021)",
-     "value": 90,
-     "flag": "",
-     "units": "mL/min/1.73m2",
-     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -735,21 +735,21 @@
   "losses": [
    {
     "fact_id": "C0912-F031",
-    "kind": "merged_cells",
-    "original": "hdl=44",
-    "extracted": "merged into previous row"
-   },
-   {
-    "fact_id": "C0912-F034",
     "kind": "flag_lost",
-    "original": "H",
+    "original": "L",
     "extracted": null
    },
    {
     "fact_id": "C0912-F039",
-    "kind": "unit_wrong",
+    "kind": "unit_lost",
     "original": "U/L",
-    "extracted": "g/L"
+    "extracted": null
+   },
+   {
+    "fact_id": "C0912-F043",
+    "kind": "merged_cells",
+    "original": "egfr=90",
+    "extracted": "merged into previous row"
    }
   ]
  },

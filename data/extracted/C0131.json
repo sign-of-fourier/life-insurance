@@ -210,8 +210,8 @@
    "HT_IN": 59,
    "WT_KG": 48.5,
    "HR": 58,
-   "BP_1": "114/79",
-   "BP_2": "115/82"
+   "BP_1": "118/77",
+   "BP_2": "118/78"
   },
   "losses": []
  },
@@ -232,24 +232,31 @@
     },
     {
      "test": "HDL CHOL",
-     "value": 57,
+     "value": 42,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 201,
+     "value": 216,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
      "test": "Triglycerides",
-     "value": "110 4.9",
+     "value": 110,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-149"
+    },
+    {
+     "test": "CHOL/HDL RATIO",
+     "value": 6.7,
+     "flag": "",
+     "units": "ratio",
+     "ref": "0-5.0"
     },
     {
      "test": "HEMOGLOBIN A1C",
@@ -346,9 +353,9 @@
   "losses": [
    {
     "fact_id": "C0131-F028",
-    "kind": "merged_cells",
-    "original": "tc_hdl_ratio=4.9",
-    "extracted": "merged into previous row"
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
    }
   ]
  },

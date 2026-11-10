@@ -238,7 +238,7 @@
    "WT_KG": 63.5,
    "HR": 58,
    "BP_1": "125/77",
-   "BP_2": "127/84"
+   "BP_2": "127/77"
   },
   "losses": []
  },
@@ -252,21 +252,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 295,
+     "value": 250,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": "S5",
-     "flag": "",
+     "value": "3G",
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 214,
+     "value": 188,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -280,7 +280,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.4,
+     "value": 6.9,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -294,17 +294,10 @@
     },
     {
      "test": "HEMOGLOBIN A1C",
-     "value": 4.9,
+     "value": "4.9 38",
      "flag": "",
      "units": "%",
      "ref": "4.0-5.6"
-    },
-    {
-     "test": "AST (SGOT)",
-     "value": 38,
-     "flag": "",
-     "units": "U/L",
-     "ref": "10-40"
     },
     {
      "test": "ALT (SGPT)",
@@ -388,8 +381,14 @@
    {
     "fact_id": "C0192-F030",
     "kind": "misread_digit",
-    "original": "55",
-    "extracted": "S5"
+    "original": "36",
+    "extracted": "3G"
+   },
+   {
+    "fact_id": "C0192-F036",
+    "kind": "merged_cells",
+    "original": "ast=38",
+    "extracted": "merged into previous row"
    }
   ]
  },

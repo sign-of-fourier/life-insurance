@@ -37,6 +37,38 @@
     "fe": null,
     "params": {},
     "disclosure": "omitted_untraceable"
+   },
+   {
+    "id": "nm_mvr:dui_2_5y",
+    "key": "nm_mvr",
+    "variant": "dui_2_5y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "depression_anxiety:moderate",
+    "key": "depression_anxiety",
+    "variant": "moderate",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "meds_count": {
+       "ge": 2
+      }
+     }
+    },
+    "disclosure": "omitted"
    }
   ],
   "tobacco": "never",
@@ -104,23 +136,23 @@
   "riders_requested": [
    "CTR"
   ],
-  "existing_coverage": 250000,
+  "existing_coverage": 0,
   "replacement": false,
-  "beneficiary_relation": "children"
+  "beneficiary_relation": "estate"
  },
  "height_in": 68.0,
  "weight_lb": 165.0,
- "bp_systolic": 133,
- "bp_diastolic": 90,
- "pulse": 72,
+ "bp_systolic": 124,
+ "bp_diastolic": 72,
+ "pulse": 61,
  "tobacco": [],
- "alcohol_drinks_per_week": 4.0,
+ "alcohol_drinks_per_week": 2.0,
  "alcohol_treatment": false,
  "drug_use": [],
  "conditions": [
   {
    "condition_key": "substance_use_hard",
-   "label": "Cocaine / methamphetamine / opioid misuse",
+   "label": "Opioid use disorder",
    "onset": "2001-08-21",
    "status": "controlled",
    "severity": "mild",
@@ -136,27 +168,73 @@
    "disclosure": "omitted",
    "in_mib": false,
    "irrelevant": false
+  },
+  {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2010-08-03",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 1,
+    "work_loss_months": 2,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 14.9
+   },
+   "meds": [
+    {
+     "drug": "alprazolam",
+     "dose": "1 mg",
+     "start": "2010-09-13",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0872-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
   }
  ],
  "family_history": [
   {
    "relation": "mother",
-   "condition": "COPD",
-   "age_at_onset": 76,
-   "age_at_death": 81,
+   "condition": "Alzheimer's",
+   "age_at_onset": 66,
+   "age_at_death": null,
    "living": false
   }
  ],
  "mvr": [
   {
-   "date": "2023-10-29",
-   "code": "S15",
-   "disclosure": "honest"
+   "date": "2020-09-21",
+   "code": "D03",
+   "disclosure": "omitted"
   }
  ],
  "avocations": [],
- "travel": [],
- "prior_apps": [],
+ "travel": [
+  {
+   "country": "Australia",
+   "weeks_per_year": 2.0,
+   "purpose": "vacation",
+   "disclosure": "honest"
+  }
+ ],
+ "prior_apps": [
+  {
+   "year": 2018,
+   "company": "Pinecrest Mutual",
+   "outcome": "declined"
+  }
+ ],
  "providers": [
   {
    "provider_id": "C0872-P1",
@@ -165,28 +243,36 @@
    "practice": "Steele-Bennett Clinic",
    "aps_style": "epic_progress",
    "country": "US"
+  },
+  {
+   "provider_id": "C0872-P2",
+   "name": "Dr. Jacob Beard",
+   "specialty": "psychiatry",
+   "practice": "Daniel-Webb Clinic",
+   "aps_style": "small_practice_typed",
+   "country": "US"
   }
  ],
  "true_labs": {
-  "tc": 277.0,
-  "hdl": 42.0,
-  "ldl": 222.0,
-  "triglycerides": 65.0,
-  "tc_hdl_ratio": 6.6,
-  "glucose_fasting": 84.0,
-  "a1c": 5.6,
-  "ast": 25.0,
-  "alt": 18.0,
-  "ggt": 22.0,
-  "alk_phos": 104.0,
-  "bilirubin": 0.9,
-  "albumin": 4.2,
-  "creatinine": 0.9,
-  "egfr": 97.0,
-  "urine_protein": 10.0,
-  "hemoglobin": 13.0,
-  "cdt": 1.1,
-  "nt_probnp": 77.0,
+  "tc": 272.0,
+  "hdl": 40.0,
+  "ldl": 209.0,
+  "triglycerides": 115.0,
+  "tc_hdl_ratio": 6.8,
+  "glucose_fasting": 89.0,
+  "a1c": 5.5,
+  "ast": 22.0,
+  "alt": 24.0,
+  "ggt": 10.0,
+  "alk_phos": 112.0,
+  "bilirubin": 1.2,
+  "albumin": 3.9,
+  "creatinine": 0.7,
+  "egfr": 85.0,
+  "urine_protein": 20.0,
+  "hemoglobin": 13.4,
+  "cdt": 0.9,
+  "nt_probnp": 102.0,
   "cotinine_urine": 8.0,
   "hiv": 0.0,
   "cocaine": 0.0

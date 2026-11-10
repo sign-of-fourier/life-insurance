@@ -1,0 +1,234 @@
+# Phase 5 golden check
+
+cases 1000; validation errors 0; unknown rule ids {}; non-deterministic []
+
+target band == engine band: 840/1000 (84%)
+
+## Mismatch categories (a case can have several)
+
+- misrepresentation finding: 63  e.g. C0003, C0028, C0050, C0058, C0089, C0093
+- no APS detail -> default profile: 58  e.g. C0003, C0037, C0050, C0058, C0061, C0093
+- APS non-compliance +25: 41  e.g. C0017, C0028, C0033, C0036, C0089, C0138
+- untraceable condition (no evidence): 22  e.g. C0037, C0089, C0104, C0240, C0257, C0345
+- undisclosed nicotine caught by cotinine (TOB-4.2): 21  e.g. C0050, C0117, C0169, C0179, C0205, C0235
+- BLD-1.8 age 70+ build leniency: 17  e.g. C0061, C0090, C0115, C0145, C0179, C0222
+- FIN counter-offer: 14  e.g. C0115, C0201, C0248, C0513, C0566, C0568
+- CLS-6 credits: 12  e.g. C0017, C0033, C0145, C0185, C0446, C0532
+- accelerated path: Elite requires fluids (REQ-3): 12  e.g. C0042, C0068, C0118, C0153, C0212, C0251
+- GEN-2.3 multiple misrepresentation: 12  e.g. C0050, C0235, C0248, C0302, C0306, C0346
+- generator: MVR row realized better than intended: 8  e.g. C0323, C0394, C0403, C0476, C0685, C0686
+- nicotine row counts toward CLS-5.2: 5  e.g. C0222, C0394, C0421, C0455, C0848
+- accelerated path: matrix rows not measured: 4  e.g. C0403, C0552, C0581, C0657
+- signed outside US (CLS-8.6): 3  e.g. C0436, C0490, C0997
+- CV-1.2 LDL/stress modifier: 2  e.g. C0061, C0285
+- ALC relapse row by documented abstinence: 2  e.g. C0116, C0845
+- chapter add-on modifiers: 2  e.g. C0167, C0563
+- hidden tobacco not provable: 2  e.g. C0222, C0381
+- unexplained lab finding: 2  e.g. C0517, C0754
+- stale APS: 2  e.g. C0618, C0994
+- FIN over-insurance decline (incl. in-force coverage): 1  e.g. C0316
+- CAD modifier (EF/angina/vessels): 1  e.g. C0508
+- generator: FIN intent not realized (income floor): 1  e.g. C0748
+- Rx-only condition (RX-2.4): 1  e.g. C0972
+
+## Engine outcome distribution
+
+- Decline: 171
+- Postpone: 114
+- Standard: 100
+- T1-2: 82
+- Preferred Plus: 79
+- Standard Tobacco: 72
+- Preferred: 72
+- T5-8: 69
+- Standard Plus: 58
+- T3-4: 51
+- TT1-4: 33
+- T9-16: 33
+- Elite: 32
+- Preferred Tobacco: 20
+- TT5-16: 14
+
+## Confusion (target -> engine, off-diagonal only)
+
+- Decline (170): T9-16 13, T5-8 3, Preferred Plus 2, TT5-16 2, Standard Tobacco 1
+- Elite (45): Preferred Plus 13
+- Postpone (115): Standard 2, Decline 1, T1-2 1
+- Preferred (75): Standard 8, Decline 1, Standard Tobacco 1
+- Preferred Plus (65): Preferred 1, Standard 1
+- Preferred Tobacco (30): Standard Tobacco 10, Decline 2
+- Standard (95): Standard Plus 7, T1-2 7, Decline 3, Preferred 2, Preferred Plus 1, T3-4 1
+- Standard Plus (65): Standard 9, Preferred 4, T1-2 1
+- Standard Tobacco (65): Decline 2, Preferred Tobacco 2, Standard 2, TT1-4 1
+- T1-2 (77): Standard 4, T3-4 4, Postpone 1
+- T3-4 (58): T5-8 11, T1-2 5, Decline 1
+- T5-8 (60): T3-4 5, T9-16 2, Decline 1, Postpone 1, TT5-16 1
+- T9-16 (30): Decline 6, T5-8 5, Postpone 1
+- TT1-4 (35): Decline 2, Standard Tobacco 2
+- TT5-16 (15): Decline 3, TT1-4 1
+
+## Validation errors
+
+
+## Mismatches
+
+- C0003: T9-16 -> Decline  [misrepresentation finding; no APS detail -> default profile]
+- C0017: T1-2 -> T3-4  [APS non-compliance +25; CLS-6 credits]
+- C0028: T5-8 -> TT5-16  [APS non-compliance +25; misrepresentation finding]
+- C0033: Preferred -> Standard  [APS non-compliance +25; CLS-6 credits]
+- C0036: T3-4 -> T5-8  [APS non-compliance +25]
+- C0037: T3-4 -> T1-2  [untraceable condition (no evidence); no APS detail -> default profile]
+- C0042: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0050: Postpone -> Decline  [misrepresentation finding; no APS detail -> default profile; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0058: Decline -> T9-16  [misrepresentation finding; no APS detail -> default profile]
+- C0061: Standard -> T1-2  [no APS detail -> default profile; BLD-1.8 age 70+ build leniency; CV-1.2 LDL/stress modifier]
+- C0068: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0089: T9-16 -> T5-8  [untraceable condition (no evidence); APS non-compliance +25; misrepresentation finding]
+- C0090: Standard -> Standard Plus  [BLD-1.8 age 70+ build leniency]
+- C0093: Decline -> T9-16  [misrepresentation finding; no APS detail -> default profile]
+- C0104: Decline -> T9-16  [untraceable condition (no evidence); misrepresentation finding]
+- C0115: Preferred Plus -> Preferred  [FIN counter-offer; BLD-1.8 age 70+ build leniency]
+- C0116: T9-16 -> T5-8  [misrepresentation finding; ALC relapse row by documented abstinence]
+- C0117: Preferred Tobacco -> Standard Tobacco  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0118: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0119: Decline -> T9-16  [no APS detail -> default profile]
+- C0138: Preferred -> Standard  [APS non-compliance +25]
+- C0143: Preferred -> Standard  [APS non-compliance +25; misrepresentation finding]
+- C0145: Preferred -> Standard  [APS non-compliance +25; CLS-6 credits; BLD-1.8 age 70+ build leniency]
+- C0147: T5-8 -> Postpone  [no APS detail -> default profile]
+- C0153: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0167: Standard -> T1-2  [chapter add-on modifiers]
+- C0169: Preferred Tobacco -> Standard Tobacco  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0179: Preferred Tobacco -> Standard Tobacco  [misrepresentation finding; BLD-1.8 age 70+ build leniency; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0184: Decline -> T5-8  [misrepresentation finding; no APS detail -> default profile]
+- C0185: Standard -> T1-2  [APS non-compliance +25; CLS-6 credits; no APS detail -> default profile]
+- C0201: Standard -> Standard Plus  [FIN counter-offer]
+- C0205: Preferred Tobacco -> Standard Tobacco  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0210: T9-16 -> Postpone  [no APS detail -> default profile]
+- C0212: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0222: Standard Tobacco -> Standard  [hidden tobacco not provable; nicotine row counts toward CLS-5.2; BLD-1.8 age 70+ build leniency]
+- C0235: TT5-16 -> Decline  [misrepresentation finding; no APS detail -> default profile; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0240: Postpone -> Standard  [untraceable condition (no evidence); no APS detail -> default profile]
+- C0242: T3-4 -> T5-8  [APS non-compliance +25]
+- C0248: T9-16 -> Decline  [misrepresentation finding; FIN counter-offer; GEN-2.3 multiple misrepresentation]
+- C0251: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0256: TT1-4 -> Standard Tobacco  [no APS detail -> default profile]
+- C0257: Decline -> Standard Tobacco  [untraceable condition (no evidence)]
+- C0283: Standard Plus -> Preferred  [BLD-1.8 age 70+ build leniency]
+- C0285: T1-2 -> Standard  [CV-1.2 LDL/stress modifier]
+- C0286: Decline -> T9-16  [misrepresentation finding; no APS detail -> default profile]
+- C0297: Preferred Tobacco -> Standard Tobacco  [APS non-compliance +25; BLD-1.8 age 70+ build leniency]
+- C0299: Preferred Tobacco -> Standard Tobacco  [misrepresentation finding; no APS detail -> default profile; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0302: Preferred Tobacco -> Decline  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0306: Preferred Tobacco -> Decline  [APS non-compliance +25; misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0316: Preferred -> Decline  [FIN over-insurance decline (incl. in-force coverage)]
+- C0323: Standard -> Preferred  [misrepresentation finding; generator: MVR row realized better than intended]
+- C0325: Preferred -> Standard Tobacco  [misrepresentation finding]
+- C0337: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0341: T5-8 -> T9-16  [misrepresentation finding; no APS detail -> default profile]
+- C0345: Standard Tobacco -> Preferred Tobacco  [untraceable condition (no evidence)]
+- C0346: T3-4 -> Decline  [misrepresentation finding; GEN-2.3 multiple misrepresentation]
+- C0364: Preferred Tobacco -> Standard Tobacco  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0381: Standard Tobacco -> Standard  [hidden tobacco not provable; no APS detail -> default profile]
+- C0384: Preferred -> Standard  [APS non-compliance +25; misrepresentation finding]
+- C0390: T1-2 -> Postpone  [no APS detail -> default profile]
+- C0393: T1-2 -> T3-4  [APS non-compliance +25; misrepresentation finding]
+- C0394: Standard -> Standard Plus  [untraceable condition (no evidence); nicotine row counts toward CLS-5.2; generator: MVR row realized better than intended]
+- C0403: Standard -> Standard Plus  [accelerated path: matrix rows not measured; generator: MVR row realized better than intended]
+- C0421: Standard Plus -> Standard  [nicotine row counts toward CLS-5.2]
+- C0436: Standard -> Decline  [no APS detail -> default profile; signed outside US (CLS-8.6)]
+- C0446: T1-2 -> Standard  [CLS-6 credits]
+- C0447: TT5-16 -> TT1-4  [misrepresentation finding; no APS detail -> default profile]
+- C0455: Standard Plus -> Standard  [no APS detail -> default profile; nicotine row counts toward CLS-5.2]
+- C0461: TT1-4 -> Standard Tobacco  [misrepresentation finding; no APS detail -> default profile; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0462: T9-16 -> Decline  [misrepresentation finding; no APS detail -> default profile]
+- C0467: Standard Tobacco -> Decline  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0476: Standard -> Standard Plus  [untraceable condition (no evidence); generator: MVR row realized better than intended]
+- C0479: Preferred Tobacco -> Standard Tobacco  [APS non-compliance +25; misrepresentation finding; no APS detail -> default profile; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0484: T3-4 -> T5-8  [APS non-compliance +25; misrepresentation finding]
+- C0490: Standard -> Decline  [signed outside US (CLS-8.6)]
+- C0497: Standard Plus -> Standard  [APS non-compliance +25]
+- C0503: Standard -> T1-2  [APS non-compliance +25; no APS detail -> default profile]
+- C0508: T5-8 -> T9-16  [CAD modifier (EF/angina/vessels)]
+- C0510: Standard Plus -> Standard  [APS non-compliance +25; no APS detail -> default profile]
+- C0511: Postpone -> T1-2  [untraceable condition (no evidence); misrepresentation finding]
+- C0513: Decline -> T9-16  [no APS detail -> default profile; FIN counter-offer]
+- C0517: T3-4 -> T1-2  [untraceable condition (no evidence); unexplained lab finding]
+- C0523: T5-8 -> T3-4  [untraceable condition (no evidence); no APS detail -> default profile]
+- C0530: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0531: Preferred -> Standard  [APS non-compliance +25; misrepresentation finding]
+- C0532: Preferred -> Standard  [APS non-compliance +25; CLS-6 credits; BLD-1.8 age 70+ build leniency]
+- C0539: T3-4 -> T5-8  [APS non-compliance +25; misrepresentation finding]
+- C0548: T5-8 -> T3-4  [untraceable condition (no evidence); APS non-compliance +25]
+- C0552: Standard -> Preferred  [accelerated path: matrix rows not measured]
+- C0557: Preferred -> Standard  [APS non-compliance +25; CLS-6 credits]
+- C0561: Standard -> T3-4  [APS non-compliance +25; misrepresentation finding; no APS detail -> default profile]
+- C0563: T1-2 -> T3-4  [APS non-compliance +25; CLS-6 credits; chapter add-on modifiers; misrepresentation finding]
+- C0564: Decline -> TT5-16  [misrepresentation finding; no APS detail -> default profile]
+- C0566: T3-4 -> T5-8  [APS non-compliance +25; no APS detail -> default profile; FIN counter-offer]
+- C0568: Standard -> Standard Plus  [FIN counter-offer; BLD-1.8 age 70+ build leniency]
+- C0570: Standard -> T1-2  [no APS detail -> default profile]
+- C0571: T9-16 -> T5-8  [misrepresentation finding; no APS detail -> default profile]
+- C0579: T9-16 -> Decline  [untraceable condition (no evidence); misrepresentation finding]
+- C0581: Standard Plus -> Preferred  [untraceable condition (no evidence); accelerated path: matrix rows not measured]
+- C0585: T9-16 -> T5-8  [APS non-compliance +25; misrepresentation finding]
+- C0605: T3-4 -> T5-8  [no APS detail -> default profile]
+- C0608: T5-8 -> T3-4  [CLS-6 credits; no APS detail -> default profile]
+- C0618: Preferred Plus -> Standard  [CLS-6 credits; stale APS]
+- C0620: Decline -> T9-16  [no APS detail -> default profile; FIN counter-offer]
+- C0623: TT5-16 -> Decline  [misrepresentation finding; no APS detail -> default profile; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0629: T9-16 -> Decline  [no APS detail -> default profile]
+- C0635: Standard Tobacco -> TT1-4  [misrepresentation finding; no APS detail -> default profile; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0646: Standard Tobacco -> Preferred Tobacco  [FIN counter-offer]
+- C0647: T3-4 -> T5-8  [APS non-compliance +25; no APS detail -> default profile; BLD-1.8 age 70+ build leniency]
+- C0655: Preferred Tobacco -> Standard Tobacco  [misrepresentation finding; FIN counter-offer; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0657: Standard -> Preferred Plus  [accelerated path: matrix rows not measured]
+- C0665: Decline -> T9-16  [no APS detail -> default profile]
+- C0685: Standard Plus -> Preferred  [generator: MVR row realized better than intended]
+- C0686: Standard Plus -> Standard  [APS non-compliance +25; no APS detail -> default profile; BLD-1.8 age 70+ build leniency; generator: MVR row realized better than intended]
+- C0690: T1-2 -> Standard  [untraceable condition (no evidence); FIN counter-offer]
+- C0707: T3-4 -> T5-8  [APS non-compliance +25]
+- C0711: T3-4 -> T5-8  [misrepresentation finding; no APS detail -> default profile; FIN counter-offer; BLD-1.8 age 70+ build leniency]
+- C0722: Decline -> TT5-16  [untraceable condition (no evidence); misrepresentation finding]
+- C0723: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0731: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0736: Standard Tobacco -> Decline  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0737: Standard -> Standard Plus  [BLD-1.8 age 70+ build leniency]
+- C0744: T1-2 -> T3-4  [APS non-compliance +25]
+- C0748: Decline -> Preferred Plus  [generator: FIN intent not realized (income floor)]
+- C0754: Decline -> T9-16  [APS non-compliance +25; unexplained lab finding]
+- C0759: Decline -> T9-16  [untraceable condition (no evidence); misrepresentation finding; no APS detail -> default profile]
+- C0768: Preferred Tobacco -> Standard Tobacco  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2)]
+- C0773: Standard Plus -> Preferred  [generator: MVR row realized better than intended]
+- C0784: T5-8 -> Decline  [misrepresentation finding]
+- C0792: T3-4 -> T1-2  [no APS detail -> default profile]
+- C0798: Decline -> T9-16  [no APS detail -> default profile]
+- C0819: Postpone -> Standard  [untraceable condition (no evidence)]
+- C0824: T1-2 -> Standard  [untraceable condition (no evidence)]
+- C0825: T9-16 -> T5-8  [untraceable condition (no evidence); APS non-compliance +25; misrepresentation finding]
+- C0829: Elite -> Preferred Plus  [FIN counter-offer]
+- C0835: T5-8 -> T3-4  [CLS-6 credits; no APS detail -> default profile]
+- C0845: T3-4 -> T1-2  [ALC relapse row by documented abstinence]
+- C0848: Standard Plus -> Standard  [nicotine row counts toward CLS-5.2]
+- C0851: Standard -> T1-2  [APS non-compliance +25; misrepresentation finding]
+- C0856: TT1-4 -> Decline  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0857: TT5-16 -> Decline  [misrepresentation finding; no APS detail -> default profile; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0867: Standard Plus -> Standard  [APS non-compliance +25; generator: MVR row realized better than intended]
+- C0868: T5-8 -> T3-4  [untraceable condition (no evidence); misrepresentation finding; no APS detail -> default profile]
+- C0875: Decline -> T9-16  [misrepresentation finding; no APS detail -> default profile]
+- C0878: TT1-4 -> Decline  [misrepresentation finding; undisclosed nicotine caught by cotinine (TOB-4.2); GEN-2.3 multiple misrepresentation]
+- C0890: T3-4 -> T5-8  [no APS detail -> default profile]
+- C0897: Standard Plus -> T1-2  [APS non-compliance +25; misrepresentation finding]
+- C0901: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0907: Elite -> Preferred Plus  [accelerated path: Elite requires fluids (REQ-3)]
+- C0923: T9-16 -> Decline  [misrepresentation finding]
+- C0927: Standard Plus -> Standard  [APS non-compliance +25; no APS detail -> default profile; BLD-1.8 age 70+ build leniency]
+- C0963: Decline -> Preferred Plus  [FIN counter-offer]
+- C0969: T3-4 -> T1-2  [CLS-6 credits; no APS detail -> default profile; FIN counter-offer; BLD-1.8 age 70+ build leniency]
+- C0972: Decline -> T5-8  [untraceable condition (no evidence); misrepresentation finding; no APS detail -> default profile; Rx-only condition (RX-2.4)]
+- C0977: Decline -> T5-8  [misrepresentation finding; no APS detail -> default profile; BLD-1.8 age 70+ build leniency]
+- C0979: Standard -> T1-2  [APS non-compliance +25; misrepresentation finding]
+- C0985: Standard Plus -> Standard  [APS non-compliance +25]
+- C0990: Decline -> T9-16  [no APS detail -> default profile]
+- C0994: T3-4 -> T5-8  [APS non-compliance +25; stale APS; no APS detail -> default profile]
+- C0997: Standard -> Decline  [signed outside US (CLS-8.6)]

@@ -2693,7 +2693,7 @@
    "HT_IN": 58,
    "WT_KG": 66.2,
    "HR": 73,
-   "BP_1": "130/63",
+   "BP_1": "127/63",
    "BP_2": "128/63"
   },
   "losses": []
@@ -2719,21 +2719,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 291,
+     "value": 258,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 56,
+     "value": 39,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 194,
+     "value": 178,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
@@ -2747,8 +2747,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.2,
-     "flag": "",
+     "value": 6.6,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -2761,10 +2761,17 @@
     },
     {
      "test": "AST (SGOT)",
-     "value": "25 13",
+     "value": 25,
      "flag": "",
      "units": "U/L",
      "ref": "10-40"
+    },
+    {
+     "test": "ALT (SGPT)",
+     "value": 13,
+     "flag": "",
+     "units": "U/L",
+     "ref": "7-45"
     },
     {
      "test": "GGT",
@@ -2839,22 +2846,16 @@
   },
   "losses": [
    {
+    "fact_id": "C0669-F033",
+    "kind": "flag_lost",
+    "original": "L",
+    "extracted": null
+   },
+   {
     "fact_id": "C0669-F034",
     "kind": "flag_lost",
     "original": "H",
     "extracted": null
-   },
-   {
-    "fact_id": "C0669-F036",
-    "kind": "flag_lost",
-    "original": "H",
-    "extracted": null
-   },
-   {
-    "fact_id": "C0669-F039",
-    "kind": "merged_cells",
-    "original": "alt=13",
-    "extracted": "merged into previous row"
    }
   ]
  },

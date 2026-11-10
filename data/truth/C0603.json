@@ -24,6 +24,38 @@
     "fe": null,
     "params": {},
     "disclosure": "na"
+   },
+   {
+    "id": "nm_mvr:dui_2_5y",
+    "key": "nm_mvr",
+    "variant": "dui_2_5y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "depression_anxiety:moderate",
+    "key": "depression_anxiety",
+    "variant": "moderate",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "meds_count": {
+       "ge": 2
+      }
+     }
+    },
+    "disclosure": "omitted"
    }
   ],
   "tobacco": "never",
@@ -101,24 +133,65 @@
    "GIO",
    "LTA"
   ],
-  "existing_coverage": 500000,
-  "replacement": false,
+  "existing_coverage": 0,
+  "replacement": true,
   "beneficiary_relation": "spouse"
  },
  "height_in": 70.0,
  "weight_lb": 196.0,
- "bp_systolic": 113,
- "bp_diastolic": 71,
- "pulse": 58,
+ "bp_systolic": 120,
+ "bp_diastolic": 70,
+ "pulse": 71,
  "tobacco": [],
- "alcohol_drinks_per_week": 12.0,
+ "alcohol_drinks_per_week": 0.0,
  "alcohol_treatment": false,
  "drug_use": [],
  "conditions": [
   {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2010-09-16",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": null,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 14.4
+   },
+   "meds": [
+    {
+     "drug": "citalopram",
+     "dose": "20 mg",
+     "start": "2010-10-05",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    },
+    {
+     "drug": "venlafaxine",
+     "dose": "150 mg",
+     "start": "2010-09-18",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0603-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
    "condition_key": "benign_no_rating",
    "label": "GERD",
-   "onset": "2022-12-23",
+   "onset": "2018-12-22",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -126,17 +199,9 @@
    },
    "meds": [
     {
-     "drug": "omeprazole",
-     "dose": "40 mg",
-     "start": "2023-01-17",
-     "stop": null,
-     "prescriber_id": null,
-     "indication": "gerd"
-    },
-    {
      "drug": "famotidine",
-     "dose": "20 mg",
-     "start": "2023-02-10",
+     "dose": "40 mg",
+     "start": "2018-12-24",
      "stop": null,
      "prescriber_id": null,
      "indication": "gerd"
@@ -146,14 +211,14 @@
    "treating_provider_ids": [
     "C0603-P1"
    ],
-   "disclosure": "honest",
+   "disclosure": "omitted",
    "in_mib": false,
    "irrelevant": true
   },
   {
    "condition_key": "benign_no_rating",
    "label": "vitamin D deficiency",
-   "onset": "2017-11-07",
+   "onset": "2012-01-25",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -163,7 +228,7 @@
     {
      "drug": "ergocalciferol",
      "dose": "50000 IU",
-     "start": "2017-12-20",
+     "start": "2012-03-04",
      "stop": null,
      "prescriber_id": null,
      "indication": "vitamin_d_deficiency"
@@ -180,7 +245,7 @@
   {
    "condition_key": "benign_no_rating",
    "label": "hypothyroidism",
-   "onset": "2017-10-31",
+   "onset": "2024-02-21",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -189,8 +254,8 @@
    "meds": [
     {
      "drug": "levothyroxine",
-     "dose": "25 mcg",
-     "start": "2017-12-06",
+     "dose": "75 mcg",
+     "start": "2024-02-28",
      "stop": null,
      "prescriber_id": null,
      "indication": "hypothyroidism_simple"
@@ -207,7 +272,7 @@
   {
    "condition_key": "benign_no_rating",
    "label": "kidney stones",
-   "onset": "2013-02-18",
+   "onset": "2016-04-26",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -217,8 +282,8 @@
     {
      "drug": "tamsulosin",
      "dose": "0.4 mg",
-     "start": "2013-04-07",
-     "stop": "2013-03-03",
+     "start": "2016-04-30",
+     "stop": "2016-05-03",
      "prescriber_id": null,
      "indication": "kidney_stones"
     }
@@ -227,7 +292,7 @@
    "treating_provider_ids": [
     "C0603-P1"
    ],
-   "disclosure": "omitted",
+   "disclosure": "honest",
    "in_mib": false,
    "irrelevant": true
   }
@@ -235,17 +300,17 @@
  "family_history": [
   {
    "relation": "mother",
-   "condition": "MI",
-   "age_at_onset": 77,
+   "condition": "COPD",
+   "age_at_onset": 79,
    "age_at_death": 80,
    "living": true
   }
  ],
  "mvr": [
   {
-   "date": "2022-12-18",
-   "code": "S20",
-   "disclosure": "honest"
+   "date": "2020-07-14",
+   "code": "D03",
+   "disclosure": "omitted"
   }
  ],
  "avocations": [],
@@ -259,31 +324,39 @@
    "practice": "Walls-Rich Clinic",
    "aps_style": "athena_summary",
    "country": "US"
+  },
+  {
+   "provider_id": "C0603-P2",
+   "name": "Dr. Rodney Campbell",
+   "specialty": "psychiatry",
+   "practice": "Lambert-Alvarado Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
   }
  ],
  "true_labs": {
-  "tc": 278.0,
-  "hdl": 71.0,
-  "ldl": 180.0,
-  "triglycerides": 133.0,
-  "tc_hdl_ratio": 3.9,
-  "glucose_fasting": 99.0,
-  "a1c": 5.2,
-  "ast": 36.0,
-  "alt": 30.0,
-  "ggt": 25.0,
-  "alk_phos": 40.0,
-  "bilirubin": 1.0,
-  "albumin": 4.8,
-  "creatinine": 1.1,
-  "egfr": 66.0,
+  "tc": 288.0,
+  "hdl": 44.0,
+  "ldl": 203.0,
+  "triglycerides": 205.0,
+  "tc_hdl_ratio": 6.5,
+  "glucose_fasting": 87.0,
+  "a1c": 5.4,
+  "ast": 24.0,
+  "alt": 31.0,
+  "ggt": 50.0,
+  "alk_phos": 101.0,
+  "bilirubin": 0.6,
+  "albumin": 4.5,
+  "creatinine": 1.0,
+  "egfr": 83.0,
   "urine_protein": 0.0,
-  "hemoglobin": 14.5,
+  "hemoglobin": 15.3,
   "cdt": 1.2,
-  "nt_probnp": 76.0,
-  "cotinine_urine": 2.0,
+  "nt_probnp": 107.0,
+  "cotinine_urine": 7.0,
   "hiv": 0.0,
   "cocaine": 0.0,
-  "psa": 1.1
+  "psa": 0.6
  }
 }

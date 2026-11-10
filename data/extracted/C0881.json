@@ -43,7 +43,7 @@
    "part2": {
     "Q1": {
      "q": "Q1",
-     "a": "Former cigarette; quit 07/2024"
+     "a": "Former cigarette; quit 04/2022"
     },
     "Q2": {
      "q": "Q2",
@@ -228,7 +228,7 @@
    "bp": [
     "121/78",
     "122/73",
-    "116/80"
+    "117/80"
    ],
    "pulse": 86,
    "remarks": []
@@ -256,21 +256,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 287,
+     "value": 266,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 67,
+     "value": 40,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 206,
+     "value": 212,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -284,8 +284,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.3,
-     "flag": "",
+     "value": 6.7,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -347,10 +347,17 @@
     },
     {
      "test": "eGFR (CKD-EPI 2021)",
-     "value": "76 13.9",
+     "value": 76,
      "flag": "",
      "units": "mL/min/1.73m2",
      "ref": "60-200"
+    },
+    {
+     "test": "Hemoglobin",
+     "value": 13.9,
+     "flag": "",
+     "units": "mg/L",
+     "ref": "12.0-17.5"
     },
     {
      "test": "HIV-1/2 Ab",
@@ -369,7 +376,7 @@
      "test": "NT-proBNP",
      "value": 72,
      "flag": "",
-     "units": "pg/mL",
+     "units": null,
      "ref": "0-124"
     },
     {
@@ -384,9 +391,15 @@
   "losses": [
    {
     "fact_id": "C0881-F040",
-    "kind": "merged_cells",
-    "original": "hemoglobin=13.9",
-    "extracted": "merged into previous row"
+    "kind": "unit_wrong",
+    "original": "g/dL",
+    "extracted": "mg/L"
+   },
+   {
+    "fact_id": "C0881-F043",
+    "kind": "unit_lost",
+    "original": "pg/mL",
+    "extracted": null
    }
   ]
  },

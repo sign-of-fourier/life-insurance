@@ -22,7 +22,7 @@
     "riders": "[]",
     "existing": 0,
     "replacement": "False",
-    "beneficiary": "spouse",
+    "beneficiary": "children",
     "signed": "2026-01-18"
    }
   },
@@ -41,7 +41,7 @@
     },
     "Q2": {
      "q": "Q2",
-     "a": "3.0 drinks/week"
+     "a": "4.0 drinks/week"
     },
     "Q3": {
      "q": "Q3",
@@ -105,10 +105,7 @@
     },
     "Q18": {
      "q": "Q18",
-     "a": "Yes",
-     "details": [
-      "{\"condition\": \"dental abscess\", \"diagnosed\": \"07/2018\", \"treatment\": \"hydrocodone-acetaminophen, amoxicillin\", \"physician\": \"Dr. Michael Jones\"}"
-     ]
+     "a": "No"
     },
     "Q19": {
      "q": "Q19",
@@ -128,7 +125,7 @@
     },
     "Q23": {
      "q": "Q23",
-     "a": "father: MI, died 83"
+     "a": "none known"
     },
     "Q24": {
      "q": "Q24",
@@ -143,34 +140,67 @@
   "losses": []
  },
  {
-  "doc_id": "C0416-D03",
-  "case_id": "C0416",
-  "doc_type": "rx",
-  "vendor_schema": "rxp.grouped",
-  "payload": {
-   "result": "NO HISTORY"
-  },
-  "losses": []
- },
- {
   "doc_id": "C0416-D04",
   "case_id": "C0416",
   "doc_type": "mib",
   "vendor_schema": "mib.summary",
   "payload": {
-   "hits": 3,
+   "hits": 4,
    "codes": [
     {
-     "code": "010979",
+     "code": "010070",
      "yr": "2022"
     },
     {
-     "code": "050076",
-     "yr": "2023"
+     "code": "031040",
+     "yr": "2024"
     },
     {
-     "code": "690094",
+     "code": "050006",
+     "yr": "2022"
+    },
+    {
+     "code": "690575",
      "yr": "2012"
+    }
+   ]
+  },
+  "losses": []
+ },
+ {
+  "doc_id": "C0416-D03",
+  "case_id": "C0416",
+  "doc_type": "rx",
+  "vendor_schema": "rxp.grouped",
+  "payload": {
+   "medications": [
+    {
+     "product": "LEXAPRO 10MG",
+     "first": "2021-01-19",
+     "last": "2026-01-15",
+     "count": 40,
+     "prescriber": "Dr. Rebecca Cochran"
+    },
+    {
+     "product": "WELLBUTRIN XL 150MG",
+     "first": "2021-01-19",
+     "last": "2026-01-15",
+     "count": 40,
+     "prescriber": "Dr. Rebecca Cochran"
+    },
+    {
+     "product": "DELTASONE 10MG",
+     "first": "2022-12-23",
+     "last": "2022-12-23",
+     "count": 1,
+     "prescriber": "Dr. Patel (Urgent Care)"
+    },
+    {
+     "product": "FLEXERIL 10MG",
+     "first": "2024-05-16",
+     "last": "2024-05-16",
+     "count": 1,
+     "prescriber": "Dr. Kim (Urgent Care)"
     }
    ]
   },
@@ -185,11 +215,25 @@
    "license_status": "VALID",
    "violations": [
     {
-     "viol_date": "2020-06-17",
-     "code": "S20",
-     "desc": "Speeding 16-20 over limit"
+     "viol_date": "2023-02-08",
+     "code": "D06",
+     "desc": "Wet reckless (alcohol-related reckless, plea)"
     }
    ]
+  },
+  "losses": []
+ },
+ {
+  "doc_id": "C0416-D09",
+  "case_id": "C0416",
+  "doc_type": "other",
+  "vendor_schema": "q.alcq",
+  "payload": {
+   "form": "ALCQ",
+   "fields": {
+    "drinks_per_week": 4,
+    "treatment": "False"
+   }
   },
   "losses": []
  },
@@ -200,10 +244,10 @@
   "vendor_schema": "hsc.flat",
   "payload": {
    "HT_IN": 64,
-   "WT_KG": 79.8,
-   "HR": 94,
-   "BP_1": "110/93",
-   "BP_2": "116/91"
+   "WT_KG": 80.3,
+   "HR": 74,
+   "BP_1": "122/73",
+   "BP_2": "119/73"
   },
   "losses": []
  },
@@ -213,22 +257,22 @@
   "doc_type": "lab_blood",
   "vendor_schema": "apx.flat",
   "payload": {
-   "collected": "2026-01-27",
-   "CHOL/HDL/RATIO": "269/41/6.6",
-   "AST/ALT": "29/19",
-   "LDL (CALC)": "191 mg/dL",
-   "TRIGLYCERIDES": "184 mg/dL",
-   "GLUCOSE, FASTING": "100 mg/dL",
-   "A1C": "4.8 %",
-   "GGTP": "53 U/L",
-   "ALKALINE PHOSPHATASE": "40 U/L",
-   "BILIRUBIN, TOTAL": "0.9 mg/dL",
-   "ALBUMIN": "4.7 g/dL",
-   "CREATININE": "1.1 mg/dL",
-   "EGFR": "73 mL/min/1.73m2",
-   "HEMOGLOBIN": "13.7 g/dL",
+   "collected": "2026-01-30",
+   "CHOL/HDL/RATIO": "286/42/6.8",
+   "AST/ALT": "32/13",
+   "LDL (CALC)": "215 mg/dL",
+   "TRIGLYCERIDES": "141 mg/dL",
+   "GLUCOSE, FASTING": "102 mg/dL",
+   "A1C": "5.3 %",
+   "GGTP": "44 U/L",
+   "ALKALINE PHOSPHATASE": "87 U/L",
+   "BILIRUBIN, TOTAL": "0.4 mg/dL",
+   "ALBUMIN": "4.1 g/dL",
+   "CREATININE": "1 mg/dL",
+   "EGFR": "105 mL/min/1.73m2",
+   "HEMOGLOBIN": "13.3 g/dL",
    "HIV-1/2 AB": "0 qual",
-   "%CDT": "1.4 %dCDT"
+   "%CDT": "0.9 %dCDT"
   },
   "losses": []
  },
@@ -238,12 +282,45 @@
   "doc_type": "lab_urine",
   "vendor_schema": "apx.flat",
   "payload": {
-   "collected": "2026-01-27",
-   "NIC/COT": "5 ng/mL",
+   "collected": "2026-01-30",
+   "NIC/COT": "1 ng/mL",
    "PROTEIN, URINE": "0 mg/dL",
    "COCAINE METABOLITE": "0 qual",
    "GLUCOSE, URINE": "0 qual",
    "RBC, URINE": "2 /hpf"
+  },
+  "losses": []
+ },
+ {
+  "doc_id": "C0416-D10",
+  "case_id": "C0416",
+  "doc_type": "aps",
+  "vendor_schema": "aps.epic_progress",
+  "payload": {
+   "provider": "Dr. Rebecca Cochran",
+   "specialty": "psychiatry",
+   "page_count": 2,
+   "pages": [
+    {
+     "page": 1,
+     "text": "Printed by: ROI_78 11/10/2026\nCONFIDENTIAL - Contains PHI\nFloyd-Walton Medical Group | Dr. Rebecca Cochran, psychiatry\nPatient: Jackie Smith DOB: 08/26/1983 Sex: F MRN: 530073\n\nPROBLEM LIST\n - Depression / anxiety (3 meds; followed by psychiatry; dx 25.8 yrs ago) [controlled] onset 04/2000\n\nMEDICATIONS\n escitalopram 10 mg\n bupropion 150 mg\n\nENCOUNTERS\n\n--- 04/18/2025 Office Visit ---\nS: Jackie Smith presented today for follow-up of her Depression / anxiety. She reports stable mood and no significant changes in her symptoms. She denies any recent stressors or triggers. She continues to adhere to her medication regimen and has been compliant with her therapy sessions.\nO: Vitals: BP 121/80, HR 72, RR 16, Temp 98.6°F, Wt 170 lb. Physical exam: Normal. No acute distress noted. \nA: Depression / anxiety - unchanged. Patient continues to report good control of symptoms with current treatment plan.\nP: Continue current treatment with escitalopram 10 mg and bupropion 150 mg. Encourage continued adherence to therapy and regular exercise. Return to clinic in 3-6 months for follow-up.\n\n--- 12/14/2024 Office Visit ---\nS: Patient came in for her annual flu shot. She reports no current complaints and feels well. \nO: Vitals: BP 119/81, HR 70, RR 18, Temp 98.4°F, Wt 174 lb. Physical exam: Normal. No acute distress noted. \nA: Flu shot - improving. Patient tolerated the vaccination well with no adverse effects reported.\nP: Continue current treatment regimen. Return to clinic as needed or in 3-6 months for routine follow-up.\n\n--- 08/11/2024 Office Visit ---\nS: Follow-up visit for Depression / anxiety. Patient reports fair control of symptoms with occasional mild anxiety but overall stable mood. \nO: Vitals: BP 111/72, HR 74, RR 16, Temp 98.6°F, Wt 180 lb. Physical exam: Normal. No acute distress noted. \nA: Depression / anxiety - fair control. Patient continues to benefit from her current treatment plan.\nP: Continue current treatment with escitalopram 10 mg and bupropion 150 mg. Encourage stress management techniques and continued therapy. to clinic in 3-6 months for follow-up.\n\n--- 04/08/2024 Office Visit ---\nS: Patient presented for her annual flu shot. She reports no current complaints and feels well. \nO: Vitals: BP 123/82, HR 76, RR 18, Temp 98.5°F, Wt 177 lb. Physical exam: Normal. No acute distress noted. \nA: Flu shot - improving. Patient tolerated the vaccination well with no adverse effects reported.\nP: Continue current treatment regimen. Return to clinic as needed or in 3-6 months for routine follow-up.\n\n--- 12/04/2023 Office Visit ---\nS:"
+    },
+    {
+     "page": 2,
+     "text": "Follow-up visit for Depression / anxiety. Patient reports improving symptoms with stable mood and decreased anxiety. \nO: Vitals: BP 112/71, HR 70, RR 16, Temp 98.4°F, Wt 185 lb. Physical exam: Normal. No acute distress noted. \nA: Depression / anxiety - improving. Patient continues to show positive response to current treatment plan.\nP: Continue current treatment with escitalopram 10 mg and bupropion 150 mg. Encourage continued adherence to therapy and regular exercise. Return to clinic in 3-6 months for follow-up.\n\n--- 08/01/2023 Office Visit ---\nS: Follow-up visit for Depression / anxiety. Patient reports unchanged symptoms with stable mood and consistent anxiety levels. \nO: Vitals: BP 114/75, HR 72, RR 16, Temp 98.6°F, Wt 180 lb. Physical exam: Normal. No acute distress noted. \nA: Depression / anxiety - unchanged. Patient continues to benefit from her current treatment plan.\nP: Continue current treatment with escitalopram 10 mg and bupropion 150 mg. Encourage continued adherence to therapy and regular exercise. Return to clinic in 3-6 months for follow-up.\n\n--- 03/29/2023 Office Visit ---\nS: Follow-up visit for Depression / anxiety. Patient reports improving symptoms with stable mood and decreased anxiety. \nO: Vitals: BP 112/70, HR 74, RR 16, Temp 98.5°F, Wt 185 lb. Physical exam: Normal. No acute distress noted. \nA: Depression / anxiety - improving. Patient continues to show positive response to current treatment plan.\nP: Continue current treatment with escitalopram 10 mg and bupropion 150 mg. Encourage continued adherence to therapy and regular exercise. Return to clinic in 3-6 months for follow-up.\n\nExercise: Patient reports running 3-4 times per week.\nSocial: Patient is a former smoker, having quit cigarettes on 2024-12-02 after smoking 10 per day since 2012-04-10. consumes approximately 4 alcoholic drinks per week.\nPage 12 of 12\n"
+    }
+   ],
+   "entities": [
+    {
+     "type": "diagnosis",
+     "text": "Depression / anxiety",
+     "status": "controlled"
+    },
+    {
+     "type": "medication",
+     "text": "escitalopram 10 mg"
+    }
+   ]
   },
   "losses": []
  }

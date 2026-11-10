@@ -19,7 +19,7 @@
     "face": 750000,
     "product": "UL",
     "riders": "['CTR', 'GIO']",
-    "existing": 500000,
+    "existing": 375000,
     "replacement": "False",
     "beneficiary": "spouse",
     "signed": "2026-09-30"
@@ -248,7 +248,7 @@
    "weight_lbs": 169,
    "bp": [
     "137/88",
-    "131/88",
+    "134/88",
     "142/92"
    ],
    "pulse": 86,
@@ -277,21 +277,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 284,
+     "value": 272,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 70,
+     "value": 40,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 180,
+     "value": 198,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -305,8 +305,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.1,
-     "flag": "",
+     "value": 6.8,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -320,16 +320,23 @@
     {
      "test": "HEMOGLOBIN A1C",
      "value": 7.5,
-     "flag": "H",
+     "flag": "",
      "units": "%",
      "ref": "4.0-5.6"
     },
     {
      "test": "AST (SGOT)",
-     "value": "15 21",
+     "value": 15,
      "flag": "",
      "units": "U/L",
      "ref": "10-40"
+    },
+    {
+     "test": "ALT (SGPT)",
+     "value": 21,
+     "flag": "",
+     "units": "U/L",
+     "ref": "7-45"
     },
     {
      "test": "GGT",
@@ -368,16 +375,17 @@
     },
     {
      "test": "eGFR (CKD-EPI 2021)",
-     "value": "94 13.9",
+     "value": 94,
      "flag": "",
      "units": "mL/min/1.73m2",
      "ref": "60-200"
     },
     {
-     "test": "HIV-1/2 Ab",
-     "value": 0,
+     "test": "Hemoglobin",
+     "value": "13.9 0",
      "flag": "",
-     "units": "qual"
+     "units": "g/dL",
+     "ref": "12.0-17.5"
     },
     {
      "test": "%CDT",
@@ -397,15 +405,15 @@
   },
   "losses": [
    {
-    "fact_id": "C0921-F036",
-    "kind": "merged_cells",
-    "original": "alt=21",
-    "extracted": "merged into previous row"
+    "fact_id": "C0921-F034",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
    },
    {
-    "fact_id": "C0921-F043",
+    "fact_id": "C0921-F044",
     "kind": "merged_cells",
-    "original": "hemoglobin=13.9",
+    "original": "hiv=0",
     "extracted": "merged into previous row"
    }
   ]

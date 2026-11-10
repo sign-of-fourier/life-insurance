@@ -20,7 +20,7 @@
     "face": 100000,
     "product": "Term 20",
     "riders": "[]",
-    "existing": 500000,
+    "existing": 50000,
     "replacement": "True",
     "beneficiary": "children",
     "signed": "2025-09-29"
@@ -113,7 +113,7 @@
      "q": "Q18",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Non-kidney organ transplant\", \"diagnosed\": \"05/2005\", \"treatment\": \"tacrolimus, mycophenolate\", \"physician\": \"Dr. Cole Hunter\"}",
+      "{\"condition\": \"Liver transplant recipient\", \"diagnosed\": \"05/2005\", \"treatment\": \"tacrolimus, mycophenolate\", \"physician\": \"Dr. Cole Hunter\"}",
       "{\"condition\": \"cataracts\", \"diagnosed\": \"07/2014\", \"treatment\": \"none\", \"physician\": \"Dr. Cole Hunter\"}"
      ]
     },
@@ -243,8 +243,8 @@
    "HT_IN": 70.5,
    "WT_KG": 89.4,
    "HR": 85,
-   "BP_1": "111/73",
-   "BP_2": "123/72"
+   "BP_1": "123/71",
+   "BP_2": "123/71"
   },
   "losses": []
  },
@@ -258,21 +258,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 293,
+     "value": 254,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 60,
+     "value": 39,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 189,
+     "value": 171,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -286,8 +286,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.9,
-     "flag": "",
+     "value": 6.5,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -376,17 +376,10 @@
     },
     {
      "test": "%CDT",
-     "value": 0.9,
+     "value": "0.9 1.1",
      "flag": "",
      "units": "%dCDT",
      "ref": "0-1.6"
-    },
-    {
-     "test": "PSA",
-     "value": 1.1,
-     "flag": "",
-     "units": "ng/mL",
-     "ref": "0-4.0"
     },
     {
      "test": "NT-proBNP",
@@ -397,7 +390,20 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0425-F034",
+    "kind": "flag_lost",
+    "original": "L",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0425-F051",
+    "kind": "merged_cells",
+    "original": "psa=1.1",
+    "extracted": "merged into previous row"
+   }
+  ]
  },
  {
   "doc_id": "C0425-D08",
@@ -453,15 +459,19 @@
   "payload": {
    "provider": "Dr. Dylan Barron",
    "specialty": "cardiology",
-   "page_count": 2,
+   "page_count": 3,
    "pages": [
     {
      "page": 1,
-     "text": "Hull-Burke Medical Group | Dr. Dylan Barron, cardiology\n\nPatient: Ryan Green | DOB: 07/23/1947 | Sex: M | MRN: 302880\n\nPROBLEM LIST (active + resolved)\n1. Non-obstructive CAD (<50%) / coronary calcium (88% stenosis; CAC score 514)\n5. r/o OSA\n6. hx of syncope\n\n03/09/25 PN: Patient returned for follow-up on his Non-obstructive CAD (<50%) with coronary calcium. The patient's condition remains controlled. He has an 88% stenosis with a CAC score of 514. Blood pressure was 116/72, and weight was 195 pounds. Physical exam was unremarkable aside from the expected coronary findings. He reports no chest pain, shortness of breath, or other cardiac symptoms. Patient continues to smoke 2 packs per day, a habit he started in 1974. He also reports consuming approximately 10 alcoholic drinks per week. He denies any recent episodes of syncope.\n\n05/25/24 PN: Patient presented for his annual physical examination. Non-obstructive CAD (<50%) with coronary calcium is controlled. Blood pressure was 109/78, and weight was 194 pounds. The patient has no cardiac symptoms at this time. He continues to smoke 2 packs per day and consumes about 10 drinks per week. The remainder of the physical exam was within normal limits. He has a family history significant for type 2 diabetes in his father, who was diagnosed at age 62 and is currently 78 years old and living.\n\n08/11/23 PN: Patient returned for follow-up on his Non-obstructive CAD (<50%) with coronary calcium. The patient's condition remains controlled. Blood pressure was 124/75, and weight was 201 pounds. He continues to be asymptomatic with respect to his CAD. Patient smokes 2 packs per day and about 10 drinks per week. The rest of the physical exam was unremarkable. He denies any recent syncope episodes and has no new cardiac symptoms.\n\n10/27/22 PN: Patient here for follow-up on his Non-obstructive CAD (<50%) with coronary calcium. His condition is stable and controlled. Blood pressure was 109/74, and weight was 196 pounds. The patient reports no chest pain, shortness of breath, or other cardiac symptoms. He continues to smoke 2 packs per day and drinks about 10 alcoholic beverages per week. The remainder of the physical exam was unremarkable. He has no recent episodes of syncope.\n\n01/11/22 PN: Patient presented for on his Non-obstructive CAD (<50%) with coronary calcium. The patient's condition is stable and controlled. Blood pressure was 111/66, and weight was 201 pounds. He reports no cardiac symptoms and continues smoking 2 packs per day. He also drinks approximately 10 alcoholic beverages per week."
+     "text": "Hull-Burke Medical Group\nDr. Dylan Barron, cardiology\n\nPatient: Ryan Green\nDOB: 07/23/1947\nSex: M\nMRN: 595487\n\nPROBLEM LIST\n 1. Non-obstructive coronary artery disease (88% stenosis; CAC score 514)\n 2. Hypertension\n 3. Hyperlipidemia\n 4. Type 2 diabetes mellitus\n 5. History of syncope\n 6. Chest pain NOS\n\n---\n\n03/09/2025\nEncounter: Follow-up\nReason: Non-obstructive coronary artery disease\n\nSubjective:\nThe patient is here for a follow-up of his non-obstructive coronary artery disease, which remains controlled with an 88% stenosis and a CAC score of 514. The patient reports no chest pain, syncope, or other concerning symptoms. He denies any recent changes in his exercise tolerance or dyspnea. He continues to smoke cigarettes, two per day, and consumes approximately ten alcoholic drinks per week.\n\nObjective:\nVital signs: BP 116/72, Wt 195 lbs.\n\nExam:\n- Cardiovascular: Normal S1 and S2, no murmurs, gallops, or rubs. \n- Respiratory: Clear to auscultation bilaterally, no wheezes, rales, or rhonchi.\n- Abdomen: Soft, non-tender, no hepatosplenomegaly.\n- Extremities: No edema.\n\nAssessment:\nNon-obstructive coronary artery disease (88% stenosis; CAC score 514) - controlled. Hypertension, Hyperlipidemia, Type 2 diabetes mellitus, History of syncope, Chest pain NOS.\n\nPlan:\n- Continue current medications.\n- Reinforce the importance of smoking cessation.\n- Schedule follow-up in 6 months.\n- Advise on a heart-healthy diet and regular physical activity.\n\n---\n\n05/25/2024\nEncounter: Annual Physical\n\nSubjective:\nThe patient is here for his annual physical examination. He reports no chest pain, syncope, or other concerning symptoms. He continues to smoke cigarettes, two per day, and consumes approximately ten alcoholic drinks per week.\n\nObjective:\nVital signs: BP 109/78, Wt 194 lbs.\n\nExam:\n- Cardiovascular: Normal S1 and S2, no murmurs, gallops, or rubs.\n- Respiratory: Clear to auscultation bilaterally, no wheezes, rales, or rhonchi.\n- Abdomen: non-tender, no hepatosplenomegaly.\n- Extremities: No edema.\n\nAssessment:\nNon-obstructive coronary disease (88% stenosis; CAC score 514) - controlled. Hypertension, Hyperlipidemia, Type 2 diabetes mellitus, History of syncope, Chest pain NOS.\n\nPlan:\n- Continue current medications.\n- Reinforce the importance of smoking cessation.\n- Schedule follow-up in 6 months.\n- Advise on a heart-healthy diet and regular physical activity.\n\n---\n\n08/11/2023\nEncounter: Follow-up\n\nSubjective:\nThe patient is here for a follow-up of his non-obstructive coronary artery disease, which remains controlled with an 88% stenosis and a CAC score"
     },
     {
      "page": 2,
-     "text": "Page 4  CONFIDENTIAL\nThe remainder of the physical exam was normal. He denies any recent episodes of syncope.\n\n03/29/21 PN: Patient returned for follow-up on his Non-obstructive CAD (<50%) with coronary calcium. The patient's condition remains controlled. Blood pressure was 110/75, and weight was 202 pounds. He reports no cardiac symptoms and continues to smoke 2 packs per day. He also consumes about 10 drinks per week. The rest of the physical exam was unremarkable. He denies any recent syncope episodes.\n\n---\n\n**Assessment and Plan:**\n\nDr. Barron continues to monitor Mr. Green's Non-obstructive CAD (<50%) with coronary calcium, which is currently controlled. The patient's blood pressure and weight have remained relatively stable over the past few visits. Mr. Green continues to smoke and consume alcohol at levels above the recommended limits, which are risk factors for cardiovascular disease. Despite these risk factors, his coronary calcium score and overall cardiac health remain stable.\n\nPatient education regarding smoking cessation and reducing alcohol intake was provided. The patient acknowledges his ongoing tobacco use and has not expressed a desire to quit at this time. Mr. Green will continue to be followed closely for any changes in his condition.\n\n---\n\n**Follow-Up:**\n\nMr. Green should return in 6 months for another follow-up to reassess his CAD status and overall cardiovascular health. Further evaluation for obstructive sleep apnea (OSA) is recommended given his symptoms and risk factors. \n\n---\n\n**Administrative Notes:**\n\nPatient is compliant with follow-up appointments and medication adherence. No exercise regimen has been documented at this time. \n\n---\n\n**Signature:**\nDr. Dylan Barron, Cardiology\nHull-Burke Medical Group\n\n---\n\n**Attachments:**\n\n- Lab Results: Not available at this time.\n- Imaging: Not available at this time.\n"
+     "text": "of 514. The patient reports no chest pain, syncope, or other concerning symptoms. He denies any recent changes in his exercise tolerance or dyspnea. He continues to smoke cigarettes, two per day, consumes approximately ten alcoholic drinks per week.\n\nObjective:\nVital signs: BP 124/75, Wt 201 lbs.\n\nExam:\n- Cardiovascular: Normal S1 and S2, no murmurs, gallops, or rubs.\n- Respiratory: Clear to auscultation bilaterally, no wheezes, rales, or rhonchi.\n- Abdomen: Soft, non-tender, no hepatosplenomegaly.\n- Extremities: No edema.\n\nAssessment:\nNon-obstructive coronary artery disease (88% stenosis; CAC score 514) - controlled. Hypertension, Hyperlipidemia, Type 2 diabetes mellitus, History of syncope, Chest pain NOS.\n\nPlan:\n- Continue current medications.\n- Reinforce the importance of smoking cessation.\n- Schedule follow-up in 6 months.\n- Advise on a heart-healthy diet and regular physical activity.\n\n---\n\n10/27/2022\nEncounter: Follow-up\n\nSubjective:\nThe patient is here for a follow-up of his non-obstructive coronary artery disease, which remains controlled with an 88% stenosis and a CAC score of 514. The patient reports no chest pain, syncope, or other concerning symptoms. He denies any recent changes in his exercise tolerance or dyspnea. He continues to smoke cigarettes, two per day, and consumes approximately ten alcoholic drinks per week.\n\nObjective:\nVital signs: BP 109/74, Wt 196 lbs.\n\nExam:\n- Cardiovascular: Normal S1 and S2, no murmurs, gallops, or rubs.\n- Respiratory: Clear to auscultation bilaterally, no wheezes, rales, or rhonchi.\n- Abdomen: Soft, non-tender, no hepatosplenomegaly.\n- Extremities: No edema.\n\nAssessment:\nNon-obstructive coronary artery disease (88% stenosis; CAC score 514) - controlled. Hypertension, Hyperlipidemia, Type 2 diabetes mellitus, History of syncope, Chest pain NOS.\n\nPlan:\n- Continue current medications.\n- Reinforce the importance of smoking cessation.\n- Schedule follow-up in 6 months.\n- Advise on a heart-healthy diet and regular physical activity.\n\n---\n\n01/11/2022\nEncounter: Follow-up\n\nSubjective:\nThe patient is here for a follow-up of his non-obstructive coronary artery disease, which remains controlled with an 88% stenosis and a CAC score of 514. The patient reports no chest pain, syncope, or other concerning symptoms. He denies any recent changes in his exercise tolerance or dyspnea. He continues to smoke cigarettes, two per day, and consumes approximately ten alcoholic drinks per week.\n\nObjective:\nVital signs: BP 111/66, Wt 201 lbs.\n\nExam:\n- Cardiovascular: Normal S1 and S2, no murmurs, gallops, or rubs.\n- Respiratory:"
+    },
+    {
+     "page": 3,
+     "text": "Clear to auscultation bilaterally, no wheezes, rales, or rhonchi.\n- Abdomen: Soft, non-tender, no hepatosplenomegaly.\n- Extremities: No edema.\n\nAssessment:\nNon-obstructive coronary artery disease (88% stenosis; CAC score 514) - controlled. Hypertension, Hyperlipidemia, Type 2 diabetes mellitus, History of syncope, Chest pain NOS.\n\nPlan:\n- Continue current medications.\n- Reinforce the importance of smoking cessation.\n- Schedule follow-up in 6 months.\n- Advise on a heart-healthy diet and regular physical activity.\n\n---\n\n03/29/2021\nEncounter: Follow-up\n\nSubjective:\nThe patient is here for a follow-up of his non-obstructive coronary artery disease, which remains controlled with an 88% stenosis and a CAC score of 514. The patient reports no chest pain, syncope, or other concerning symptoms. He denies any recent changes in his exercise tolerance or dyspnea. He smoke cigarettes, two per day, and consumes approximately ten alcoholic drinks per week.\n\nObjective:\nVital signs: BP 110/75, Wt 202 lbs.\n\nExam:\n- Cardiovascular: Normal S1 and S2, no murmurs, gallops, or rubs.\n- Respiratory: Clear to auscultation bilaterally, no wheezes, rales, or rhonchi.\n- Abdomen: Soft, non-tender, no hepatosplenomegaly.\n- Extremities: No edema.\n\nAssessment:\nNon-obstructive coronary artery disease (88% stenosis; CAC score 514) - controlled. Hypertension, Hyperlipidemia, Type 2 diabetes mellitus, History of syncope, Chest pain NOS.\n\nPlan:\n- Continue current medications.\n- Reinforce the importance of smoking cessation.\n- Schedule follow-up in 6 months.\n- Advise on a heart-healthy diet and regular physical activity.\n\n---\n\nSocial History:\n- Tobacco: Cigarettes, current, 2 per day since 1974.\n- Alcohol: Approximately 10 drinks per week.\n\nFamily History:\n- Father: Type 2 diabetes, diagnosed at age 65, living at 78.\n"
     }
    ],
    "entities": []
@@ -476,15 +486,11 @@
   "payload": {
    "provider": "Dr. Cole Hunter",
    "specialty": "family medicine",
-   "page_count": 2,
+   "page_count": 1,
    "pages": [
     {
      "page": 1,
-     "text": "COLLIER GROUP MEDICAL GROUP - DISCHARGE SUMMARY\n\nPatient: Ryan Green \nDOB: 07/23/1947 \nSex: M \nMRN: 786646\n\nAdmit Date: 12/12/2005 \nDischarge Date: 12/14/2005\n\nPrincipal diagnosis: Frailty findings (71+)\nSecondary diagnoses: Back pain / spine (chronic opioid; benzo); Non-obstructive CAD (<50%) / coronary calcium (88% stenosis; CAC score 514); Non-kidney organ transplant (20.4 yrs ago; organ liver); cataracts\n\nReason for Admission: Evaluation and management of frailty findings and follow-up for liver transplant.\n\nHospital Course:\nMr. Green, a 78-year-old male, was admitted for evaluation and management of frailty findings. The patient has a history of a liver transplant 20.4 years ago, currently controlled, and is on immunosuppressive therapy. He also presents with back pain managed with chronic opioids and benzodiazepines, non-obstructive coronary artery disease with 88% stenosis and a coronary calcium score of 514, and cataracts.\n\nDuring his hospital stay, Mr. Green underwent a comprehensive evaluation, including a review of his current medications and assessment of his frailty status. His back pain was managed with his ongoing medication regimen, and no acute changes were noted in his coronary artery disease or liver transplant status. Ophthalmology consultation confirmed the presence of cataracts, with no acute changes or complications.\n\nThe hospital course was uneventful. Mr. Green remained stable throughout his stay, with no new symptoms or complications arising. He was and participated in physical therapy aimed maintaining his functional status. His vital signs remained within normal limits, with blood pressure recorded at 112/66 mmHg and weight at 191 pounds on admission.\n\nDischarge Plan:\nMr. Green was home in stable condition. He was advised to continue with his current medication regimen, including tacrolimus 1 mg and mycophenolate 500 mg for immunosuppression post-liver transplant. He was instructed to follow up with his primary care physician for routine monitoring and management of his chronic conditions. Additionally, he was referred to an ophthalmologist for further evaluation and potential surgical intervention for his cataracts.\n\nSocial History:\nMr. Green has a history of current tobacco use, smoking approximately 2 cigarettes per day, a habit he started on 01/23/1974. He consumes about 10 alcoholic drinks per week. His family history is significant for type 2 diabetes in his father, who was diagnosed at age 62.\n\nFollow-Up:\nMr. Green is scheduled for a follow-up appointment with Dr. Cole Hunter at"
-    },
-    {
-     "page": 2,
-     "text": "Collier Group Medical Group to monitor his frailty status, liver transplant function, and manage his back pain and coronary artery disease. He is also encouraged to maintain a healthy lifestyle, including smoking cessation and moderation of alcohol consumption.\n\nDischarge Medications:\n- Tacrolimus 1 mg daily\n- Mycophenolate 500 mg twice daily\n\nSigned,\nDr. Cole Hunter \nFamily Medicine \nCollier Group Group\n"
+     "text": "COLLIER GROUP MEDICAL GROUP - DISCHARGE SUMMARY\n\nPatient: Ryan Green DOB: 07/23/1947 Sex: M MRN: 690149\nAdmit: 12/12/2005 Discharge: 01/20/2025\n\nPrincipal diagnosis: Frailty findings (71+)\nSecondary diagnoses: Back pain / spine (chronic opioid; benzo), Non-obstructive coronary artery disease (88% stenosis; CAC score 514), Liver transplant recipient (20.4 years ago; organ liver), cataracts\n\nHospital course:\nMr. Green was admitted on 12/12/2005 primarily for medication refill and follow-up on his existing medical conditions. Throughout his hospital stay, he remained stable with no acute changes in his condition. His vital signs were consistently within normal limits, with blood pressure readings ranging from 109/70 mmHg to 124/69 mmHg and weight fluctuating between 191 lbs and 204 lbs. \n\nMr. Green’s chronic conditions were managed effectively with his current medication regimen. His liver function tests were within normal limits, indicating that his liver transplant (performed 20.4 years ago) continues to function well. He remains on immunosuppressive therapy with tacrolimus 1 mg and mycophenolate 500 mg to prevent organ rejection. \n\nHis back pain, managed with chronic opioids and benzodiazepines, was stable without any increase in pain levels or need for additional pain management interventions. His non-obstructive coronary artery disease, characterized by 88% stenosis and a CAC score of 514, was monitored, and no acute events were noted during his \n\nThe cataracts were noted, but no acute changes or complications were observed. \n\nDischarge medications:\n- Tacrolimus 1 mg daily\n- Mycophenolate 500 mg twice daily\n\nSocial history:\nMr. Green is a current smoker, approximately 2 cigarettes per day since 1974. He reports consuming about 10 alcoholic drinks per week. \n\nFamily history:\nHis father has type 2 diabetes, diagnosed at age 65, and is currently 91 years old.\n\nFollow-up:\nMr. Green is scheduled for a follow-up appointment in the outpatient clinic to monitor his chronic conditions and medication efficacy. He was advised to continue his current medication regimen and maintain regular follow-ups with his primary care provider.\n\nDischarged to: Home in stable condition.\n\nAttending Physician:\nDr. Cole Hunter, Family Medicine\nCollier Group Medical Group\n"
     }
    ],
    "entities": [
@@ -495,17 +501,12 @@
     },
     {
      "type": "diagnosis",
-     "text": "Back pain / spine",
+     "text": "Non-obstructive coronary artery disease",
      "status": "controlled"
     },
     {
      "type": "diagnosis",
-     "text": "Non-obstructive CAD (<50%) / coronary calcium",
-     "status": "controlled"
-    },
-    {
-     "type": "diagnosis",
-     "text": "Non-kidney organ transplant",
+     "text": "Liver transplant recipient",
      "status": "controlled"
     },
     {

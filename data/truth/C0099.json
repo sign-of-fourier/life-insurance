@@ -24,6 +24,38 @@
     "fe": null,
     "params": {},
     "disclosure": "na"
+   },
+   {
+    "id": "nm_mvr:dui_2_5y",
+    "key": "nm_mvr",
+    "variant": "dui_2_5y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "depression_anxiety:moderate",
+    "key": "depression_anxiety",
+    "variant": "moderate",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "meds_count": {
+       "ge": 2
+      }
+     }
+    },
+    "disclosure": "omitted"
    }
   ],
   "tobacco": "quit_2_3",
@@ -99,27 +131,60 @@
  },
  "height_in": 58.0,
  "weight_lb": 130.0,
- "bp_systolic": 138,
- "bp_diastolic": 90,
- "pulse": 55,
+ "bp_systolic": 136,
+ "bp_diastolic": 68,
+ "pulse": 84,
  "tobacco": [
   {
    "product": "cigarette",
    "status": "former",
-   "frequency": "1/2 ppd",
-   "start": "2002-06-25",
-   "quit": "2023-07-30",
+   "frequency": "1 ppd",
+   "start": "1991-12-14",
+   "quit": "2023-06-04",
    "disclosure": "minimized"
   }
  ],
- "alcohol_drinks_per_week": 3.0,
+ "alcohol_drinks_per_week": 2.0,
  "alcohol_treatment": false,
  "drug_use": [],
  "conditions": [
   {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2005-02-14",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 3,
+    "work_loss_months": 0,
+    "psychiatrist": true,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 21.0
+   },
+   "meds": [
+    {
+     "drug": "bupropion",
+     "dose": "150 mg",
+     "start": "2005-04-20",
+     "stop": null,
+     "prescriber_id": null,
+     "indication": "depression_anxiety"
+    }
+   ],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0099-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": true,
+   "irrelevant": false
+  },
+  {
    "condition_key": "benign_no_rating",
    "label": "vitamin D deficiency",
-   "onset": "2020-12-15",
+   "onset": "2013-11-04",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -129,7 +194,7 @@
     {
      "drug": "ergocalciferol",
      "dose": "50000 IU",
-     "start": "2021-01-08",
+     "start": "2013-12-12",
      "stop": null,
      "prescriber_id": null,
      "indication": "vitamin_d_deficiency"
@@ -139,14 +204,14 @@
    "treating_provider_ids": [
     "C0099-P1"
    ],
-   "disclosure": "honest",
-   "in_mib": true,
+   "disclosure": "omitted",
+   "in_mib": false,
    "irrelevant": true
   },
   {
    "condition_key": "benign_no_rating",
    "label": "hypothyroidism",
-   "onset": "2020-03-14",
+   "onset": "2020-07-29",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -155,8 +220,8 @@
    "meds": [
     {
      "drug": "levothyroxine",
-     "dose": "100 mcg",
-     "start": "2020-05-03",
+     "dose": "75 mcg",
+     "start": "2020-09-25",
      "stop": null,
      "prescriber_id": null,
      "indication": "hypothyroidism_simple"
@@ -174,34 +239,28 @@
  "family_history": [
   {
    "relation": "mother",
-   "condition": "COPD",
-   "age_at_onset": 65,
-   "age_at_death": 81,
+   "condition": "Alzheimer's",
+   "age_at_onset": 70,
+   "age_at_death": null,
    "living": false
   }
  ],
  "mvr": [
   {
-   "date": "2024-09-15",
-   "code": "S05",
-   "disclosure": "honest"
-  },
-  {
-   "date": "2024-08-25",
-   "code": "S05",
-   "disclosure": "honest"
+   "date": "2021-09-27",
+   "code": "D04",
+   "disclosure": "omitted"
   }
  ],
  "avocations": [],
- "travel": [
+ "travel": [],
+ "prior_apps": [
   {
-   "country": "Spain",
-   "weeks_per_year": 1.0,
-   "purpose": "vacation",
-   "disclosure": "honest"
+   "year": 2025,
+   "company": "Northstar Life",
+   "outcome": "not taken"
   }
  ],
- "prior_apps": [],
  "providers": [
   {
    "provider_id": "C0099-P1",
@@ -210,29 +269,37 @@
    "practice": "James Group Clinic",
    "aps_style": "athena_summary",
    "country": "US"
+  },
+  {
+   "provider_id": "C0099-P2",
+   "name": "Dr. Amanda Casey",
+   "specialty": "psychiatry",
+   "practice": "Brown Guzman and Moody Medical Group",
+   "aps_style": "small_practice_typed",
+   "country": "US"
   }
  ],
  "true_labs": {
-  "tc": 300.0,
-  "hdl": 50.0,
-  "ldl": 220.0,
-  "triglycerides": 148.0,
-  "tc_hdl_ratio": 6.0,
-  "glucose_fasting": 89.0,
-  "a1c": 4.9,
-  "ast": 22.0,
-  "alt": 23.0,
-  "ggt": 37.0,
-  "alk_phos": 66.0,
-  "bilirubin": 1.2,
-  "albumin": 4.5,
-  "creatinine": 0.8,
-  "egfr": 74.0,
-  "urine_protein": 10.0,
-  "hemoglobin": 13.5,
-  "cdt": 1.1,
-  "nt_probnp": 41.0,
-  "cotinine_urine": 1.0,
+  "tc": 284.0,
+  "hdl": 42.0,
+  "ldl": 201.0,
+  "triglycerides": 204.0,
+  "tc_hdl_ratio": 6.8,
+  "glucose_fasting": 98.0,
+  "a1c": 5.5,
+  "ast": 20.0,
+  "alt": 22.0,
+  "ggt": 54.0,
+  "alk_phos": 91.0,
+  "bilirubin": 0.8,
+  "albumin": 4.8,
+  "creatinine": 0.9,
+  "egfr": 108.0,
+  "urine_protein": 0.0,
+  "hemoglobin": 14.8,
+  "cdt": 1.2,
+  "nt_probnp": 87.0,
+  "cotinine_urine": 2.0,
   "hiv": 0.0,
   "cocaine": 0.0
  }

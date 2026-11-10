@@ -55,7 +55,7 @@
      "q": "Q5",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"PVCs / SVT / WPW / BBB / pacemaker / syncope\", \"diagnosed\": \"05/2023\", \"treatment\": \"none\", \"physician\": \"Dr. Susan Willis\"}"
+      "{\"condition\": \"Wolff-Parkinson-White syndrome\", \"diagnosed\": \"05/2023\", \"treatment\": \"none\", \"physician\": \"Dr. Susan Willis\"}"
      ]
     },
     "Q6": {
@@ -70,8 +70,8 @@
      "q": "Q8",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Cancer (see type table)\", \"diagnosed\": \"08/2011\", \"treatment\": \"none\", \"physician\": \"Dr. Ryan Kidd\"}",
-      "{\"condition\": \"Benign tumor / polyps\", \"diagnosed\": \"07/2019\", \"treatment\": \"none\", \"physician\": \"Dr. Ryan Kidd\"}"
+      "{\"condition\": \"Acute myeloid leukemia, in remission\", \"diagnosed\": \"08/2011\", \"treatment\": \"none\", \"physician\": \"Dr. Ryan Kidd\"}",
+      "{\"condition\": \"Colon polyp (adenoma)\", \"diagnosed\": \"07/2019\", \"treatment\": \"none\", \"physician\": \"Dr. Ryan Kidd\"}"
      ]
     },
     "Q9": {
@@ -258,11 +258,11 @@
   "doc_type": "paramed",
   "vendor_schema": "hsc.flat",
   "payload": {
-   "HT_IN": 68.5,
-   "WT_KG": 101.2,
+   "HT_IN": 69,
+   "WT_KG": 100.7,
    "HR": 63,
-   "BP_1": "147/84",
-   "BP_2": "156/85"
+   "BP_1": "145/86",
+   "BP_2": "146/85"
   },
   "losses": []
  },
@@ -276,21 +276,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 282,
+     "value": 276,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 65,
+     "value": 40,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 191,
+     "value": 210,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -304,8 +304,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.3,
-     "flag": "",
+     "value": 6.9,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -318,10 +318,17 @@
     },
     {
      "test": "AST (SGOT)",
-     "value": "33 39",
+     "value": 33,
      "flag": "",
      "units": "U/L",
      "ref": "10-40"
+    },
+    {
+     "test": "ALT (SGPT)",
+     "value": 39,
+     "flag": "",
+     "units": "U/L",
+     "ref": "7-45"
     },
     {
      "test": "GGT",
@@ -401,14 +408,7 @@
     }
    ]
   },
-  "losses": [
-   {
-    "fact_id": "C0064-F043",
-    "kind": "merged_cells",
-    "original": "alt=39",
-    "extracted": "merged into previous row"
-   }
-  ]
+  "losses": []
  },
  {
   "doc_id": "C0064-D08",
@@ -474,17 +474,22 @@
    "pages": [
     {
      "page": 1,
-     "text": "CLINICAL SUMMARY - Valencia Butler and Gardner Medical Group\n\nPatient: Elizabeth Santiago DOB: 05/30/1958 Sex: F MRN: 200961\n\nEncounters:\n\n 2025-09-15 annual physical BP 149/82 Wt 223\n On September 15, 2025, Ms. Santiago visited for her annual physical examination. Her blood pressure was 149/82 mmHg, and she weighed 223 pounds at that time. The physical exam was otherwise unremarkable. She reported no new complaints and appeared in good overall health.\n\n 2025-04-23 ankle sprain BP 155/92 Wt 214\n On April 23, 2025, Ms. Santiago presented with an ankle sprain. blood pressure was recorded at 155/92 mmHg, and she weighed 214 pounds. The exam revealed an injured right ankle with swelling and tenderness. She was advised on rest, ice, compression, and elevation, and referred to physical therapy as needed. She also reported mild ankle on ambulation, which was otherwise normal.\n\n 2024-11-28 Benign tumor / polyps BP 157/88 Wt 222\n On November 28, 2024, Ms. Santiago visited for a follow-up regarding her benign tumors and polyps. Her blood pressure was 157/88 mmHg, and she weighed 222 pounds. During the exam, she had no new gastrointestinal symptoms or abdominal pain. The previous polyps were stable, and no new lesions were found. She continues to be monitored regularly.\n\n 2024-07-06 Cancer (see type table) BP 153/86 Wt 225\n On July 6, 2024, Ms. Santiago had a routine follow-up for her acute leukemia, which has been controlled for approximately 13.3 years following treatment. Her blood pressure was 153/86 mmHg, and she weighed 225 pounds at the time. A complete blood count, bone marrow biopsy, and imaging studies showed no signs of recurrence. She reported no new symptoms related to her cancer.\n\n 2024-02-11 Benign tumor / polyps BP 146/85 Wt 216\n On February 11, 2024, Ms. Santiago returned for monitoring of her benign tumors and polyps. Her blood pressure was 146/85 mmHg, and she weighed 216 pounds. Physical examination showed no abnormalities. Colonoscopy findings were stable, with no new polyps or concerning lesions detected. She continues to be followed periodically.\n\n 2023-09-18 Benign tumor / polyps BP 144/93 Wt 229\n On September 18, 2023, Ms. Santiago underwent a follow-up visit for her benign tumors and polyps. Her blood pressure was 144/93 mmHg, and she weighed 229 pounds at that time. The physical exam was otherwise unremarkable. Colonoscopy revealed stable polyps without dysplasia. She remains under regular surveillance.\n\nAssessment/Plan:\n\n• Acute leukemia, stage not stated (status post-treatment approximately 1"
+     "text": "**CLINICAL SUMMARY - Valencia Butler and Gardner Medical Group**\n\n**Patient:** Elizabeth Santiago \n**DOB:** 05/30/1958 \n**Sex:** F \n**MRN:** 631729\n\n**Encounters:**\n\n**2025-09-15** \n**Reason for Visit:** Annual physical\n\n**Vitals:** \n- Blood Pressure: 149/82 \n- Weight: 223 lbs\n\n**Clinical Notes:** \nMrs. Santiago presents for her annual physical examination. She reports feeling well overall with no new concerning symptoms. She mentions occasional headaches, which she attributes to stress. She denies any recent fever, chills, or significant weight changes.\n\n**Physical Examination:** \n- General: Well-nourished, well-developed female in no acute distress.\n- HEENT: Normocephalic, atraumatic. Oropharynx clear.\n- Cardiovascular: Regular rate and rhythm. No murmurs, rubs, or gallops.\n- Respiratory: Clear to auscultation bilaterally.\n- Abdomen: Soft, non-tender, no hepatosplenomegaly.\n- No clubbing, cyanosis, or edema.\n- Neurological: Alert and oriented x3, cranial nerves II-XII intact.\n\n**2025-04-23** \n**Reason for Visit:** Ankle sprain\n\n**Vitals:** \n- Blood Pressure: 155/92 \n- Weight: 214 lbs\n\n**Clinical Notes:** \nMrs. Santiago reports an ankle sprain from a twisting injury gardening. She has been using RICE (rest, ice, compression, elevation) and over-the-counter analgesics with some relief. She denies any additional injuries or pain in other joints.\n\n**Physical Examination:** \n- General: Alert and oriented, in mild discomfort.\n- Musculoskeletal: Swelling and mild tenderness noted on the lateral aspect of the right ankle. Range of motion limited due to pain. No deformity noted.\n- Neurovascular: Sensation intact, pulses palpable, no cyanosis.\n\n**2024-11-28** \n**Reason for Visit:** Colon polyp (adenoma)\n\n**Vitals:** \n- Blood Pressure: 157/88 \n- Weight: 222 lbs\n\n**Clinical Notes:** \nMrs. Santiago seen for follow-up after a recent colonoscopy that revealed a colon polyp. The pathology report confirmed an adenoma without high-grade dysplasia. No further intervention is required at this time.\n\n**Physical Examination:** \n- General: Well-nourished, no acute distress.\n- Abdomen: Soft, non-tender, no palpable masses.\n- Rectal: Normal sphincter tone, no masses, occult blood negative.\n\n**2024-07-06** \n**Reason for Visit:** Acute myeloid leukemia, in remission\n\n**Vitals:** \n- Blood Pressure: 153/86 \n- Weight: 225 lbs\n\n**Clinical Notes:** \nMrs. Santiago's most recent follow-up for her acute myeloid leukemia, which has been in remission for approximately 13.3 years. She remains asymptomatic, with no signs of relapse. Complete bloo"
     },
     {
      "page": 2,
-     "text": "3.3 years ago) - controlled; meds: none\nMs. Santiago’s acute leukemia, diagnosed in 2011, has remained in remission for over 13 years following treatment. Currently, she is not on any medications for her cancer and shows no signs of recurrence.\n\n• Benign tumor / polyps - controlled; meds: none\nMs. Santiago has a history of benign tumors and polyps, which have been controlled. She has not required any medications for this condition, and her follow-up colonoscopies have shown no concerning findings.\n\nSocial: alcohol ~3 drinks/week\nMs. Santiago reports consuming approximately three alcoholic drinks per week. She has no history of smoking or other substance abuse. She is generally compliant with her medical follow-up and reports no significant lifestyle changes that could impact her health.\n"
+     "text": "d count and bone marrow biopsy remain within normal limits.\n\n**Physical Examination:** \n- General: Well-nourished, no acute distress.\n- Cardiovascular: Regular rate and rhythm. No murmurs.\n- Abdomen: Soft, non-tender, no hepatosplenomegaly.\n\n**2024-02-11** \n**Reason for Visit:** Colon polyp (adenoma)\n\n**Vitals:** \n- Blood Pressure: 146/85 \n- Weight: 216 lbs\n\n**Clinical Notes:** \nMrs. Santiago was evaluated for a newly identified colon polyp detected during a routine screening colonoscopy. Pathology confirmed an adenoma without high-grade dysplasia. Mrs. Santiago is scheduled for follow-up colonoscopy in one year.\n\n**Physical Examination:** \n- General: Alert, in good health.\n- Abdomen: Soft, non-tender, no palpable masses.\n- Rectal: Normal sphincter tone, no masses, occult blood negative.\n\n**2023-09-18** \n**Reason for Visit:** Colon polyp (adenoma)\n\n**Vitals:** \n- Blood Pressure: 144/93 \n- Weight: 229 lbs\n\n**Clinical Notes:** \nMrs. Santiago was seen for follow-up after a colonoscopy revealing an adenomatous polyp. The polyp was removed, and pathology confirmed it to be a benign adenoma without high-grade dysplasia. Mrs. Santiago is scheduled for follow-up colonoscopy in one year.\n\n**Physical Examination:** \n- General: Alert, in good health.\n- Abdomen: Soft, non-tender, no palpable masses.\n- Rectal: Normal sphincter tone, no masses, occult blood negative.\n\n**Assessment/Plan:**\n\n- **Acute Myeloid Leukemia, in remission:** Controlled for approximately 13.3 years. Mrs. Santiago remains asymptomatic with no signs of relapse. Complete blood count and bone marrow biopsy remain normal. No current medications.\n\n- **Colon Polyp (Adenoma):** Controlled. Mrs. Santiago has a history of adenomatous polyps without high-grade dysplasia. Follow-up colonoscopy scheduled in one year. No current medications.\n\n**Social History:**\n\n- **Alcohol:** Mrs. Santiago reports consuming approximately three alcoholic drinks per week.\n\n**Dr. Ryan Kidd** \n**Specialty:** Oncology \n**Practice:** Butler and Gardner Medical Group\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Cancer (see type table)",
+     "text": "Acute myeloid leukemia, in remission",
+     "status": "controlled"
+    },
+    {
+     "type": "diagnosis",
+     "text": "Colon polyp (adenoma)",
      "status": "controlled"
     }
    ]

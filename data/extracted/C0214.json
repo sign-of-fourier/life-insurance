@@ -218,9 +218,9 @@
    "height": "5'0\"",
    "weight_lbs": 109,
    "bp": [
-    "127/73",
-    "130/74",
-    "120/75"
+    "127/82",
+    "130/82",
+    "120/82"
    ],
    "pulse": 72,
    "remarks": []
@@ -271,43 +271,36 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 300,
+     "value": 240,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 50,
-     "flag": "",
+     "value": 36,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 210,
+     "value": 164,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
      "test": "Triglycerides",
-     "value": 200,
+     "value": "200 6.7",
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-149"
     },
     {
-     "test": "CHOL/HDL RATIO",
-     "value": 6,
-     "flag": "H",
-     "units": "ratio",
-     "ref": "0-5.0"
-    },
-    {
      "test": "Glucose, fasting",
      "value": 101,
-     "flag": "H",
+     "flag": "",
      "units": "mg/dL",
      "ref": "65-99"
     },
@@ -382,12 +375,6 @@
      "ref": "12.0-17.5"
     },
     {
-     "test": "HIV-1/2 Ab",
-     "value": 0,
-     "flag": "",
-     "units": "qual"
-    },
-    {
      "test": "%CDT",
      "value": 1.1,
      "flag": "",
@@ -410,7 +397,26 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0214-F030",
+    "kind": "merged_cells",
+    "original": "tc_hdl_ratio=6.7",
+    "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0214-F031",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0214-F042",
+    "kind": "dropped",
+    "original": "0",
+    "extracted": null
+   }
+  ]
  },
  {
   "doc_id": "C0214-D08",

@@ -55,7 +55,7 @@
      "q": "7e",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Coronary artery disease / MI / stent / CABG\", \"diagnosed\": \"08/2024\", \"treatment\": \"atorvastatin, aspirin, clopidogrel, metoprolol\", \"physician\": \"Dr. Rebecca Martinez\"}"
+      "{\"condition\": \"Coronary artery disease, s/p PCI/stent\", \"diagnosed\": \"08/2024\", \"treatment\": \"atorvastatin, aspirin, clopidogrel, metoprolol\", \"physician\": \"Dr. Rebecca Martinez\"}"
      ]
     },
     "7f": {
@@ -321,31 +321,38 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 282,
+     "value": 276,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 57,
+     "value": 42,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 211,
+     "value": 220,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
     },
     {
      "test": "Triglycerides",
-     "value": "67 4.9",
+     "value": 67,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-149"
+    },
+    {
+     "test": "CHOL/HDL RATIO",
+     "value": 6.6,
+     "flag": "",
+     "units": "ratio",
+     "ref": "0-5.0"
     },
     {
      "test": "Glucose, fasting",
@@ -405,17 +412,10 @@
     },
     {
      "test": "Creatinine",
-     "value": 1,
+     "value": "1 91",
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
-    },
-    {
-     "test": "eGFR (CKD-EPI 2021)",
-     "value": 91,
-     "flag": "",
-     "units": "mL/min/1.73m2",
-     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -456,8 +456,14 @@
   "losses": [
    {
     "fact_id": "C0634-F036",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0634-F046",
     "kind": "merged_cells",
-    "original": "tc_hdl_ratio=4.9",
+    "original": "egfr=91",
     "extracted": "merged into previous row"
    }
   ]
@@ -526,22 +532,18 @@
    "pages": [
     {
      "page": 1,
-     "text": "Printed by: ROI_24 11/09/2026 \nCONFIDENTIAL - Contains PHI \n\nAli Inc Clinic | Dr. Rebecca Martinez, cardiology \nPatient: Adrian Scott DOB: 07/12/1948 Sex: M MRN: 763090 \n\nPROBLEM LIST \n - Coronary artery disease / MI / stent / CABG (event at age 77; 0.4 yrs ago; event stent; EF 58%) [controlled] onset 08/2024 \n\nMEDICATIONS \n atorvastatin 80 mg \n aspirin 81 mg \n clopidogrel 75 mg \n metoprolol 25 mg \n\nENCOUNTERS \n--- 07/10/2024 Office Visit --- \nS: Mr. Scott presents today for follow-up on his coronary artery disease, myocardial infarction, stent placement, and coronary artery bypass graft surgery. He has been doing well since his last visit, with no significant chest pain or shortness of breath. \n\nO: Blood pressure today is 118/79 mmHg. Weight is 166 lbs. Heart rate is 68 bpm, regular. Lungs clear to auscultation bilaterally with no wheezes, rales, or rhonchi. Abdomen soft, non-tender, no organomegaly. Extremities without edema. Neurologic exam non-focal. \n\nA: Mr. Scott's coronary artery disease, myocardial infarction, stent placement, and coronary artery bypass graft surgery are stable with fair control. His ejection fraction remains at 58%. \n\nP: Mr. Scott should continue his current medications: atorvastatin 80 mg daily, aspirin 81 mg daily, clopidogrel 75 mg daily, and metoprolol 25 mg twice daily. Recommend return to clinic in 3-6 months for follow-up.\n\n--- 01/29/2024 Office Visit --- \nS: Mr. Scott returns for follow-up regarding his coronary artery disease, myocardial infarction, stent placement, and coronary artery bypass graft surgery. Since his last visit, he reports feeling well with no angina or dyspnea. \n\nO: BP 126/80 mmHg. Weight 167 lbs. Heart rate 70 bpm, regular. Chest clear to auscultation, no murmurs or gallops. Abdomen soft, non-tender. Extremities without edema. Neurologically intact. \n\nA: Coronary artery disease, myocardial infarction, stent placement, and coronary artery bypass graft surgery are stable with fair control. \n\nP: Continue current medications: atorvastatin 80 mg, aspirin 81 mg, clopidogrel 75 mg, and metoprolol 25 mg. Schedule follow-up in 3-6 months.\n\n--- 08/18/2023 Office Visit --- \nS: Mr. Scott presents for medication refills. He reports no chest pain, shortness of breath, or dizziness. \n\nO: BP 112/74 mmHg. Weight 159 lbs. Heart rate 66 bpm, regular. Chest clear, lungs clear. Abdomen soft, non-tender. Extremities without edema. \n\nA: Medications refilled. Coronary artery disease, myocardial infarction, stent placement, and coronary artery bypass graft surgery are stable with fa"
+     "text": "Printed by: ROI_45 11/10/2026\nCONFIDENTIAL - Contains PHI\nAli Inc Clinic | Dr. Rebecca Martinez, cardiology\nPatient: Adrian Scott DOB: 07/12/1948 Sex: M MRN: 655762\n\nPROBLEM LIST\n - Coronary artery disease, s/p PCI/stent (event at age 77; 0.4 yrs ago; event stent; EF 58%) [controlled] onset 08/2024\n\nMEDICATIONS\n atorvastatin 80 mg\n aspirin 81 mg\n clopidogrel 75 mg\n metoprolol 25 mg\n\nENCOUNTERS\n--- 07/10/2024 Office Visit ---\nS: The patient is here for a follow-up on his coronary artery disease, status post percutaneous coronary intervention and stenting. He reports feeling well overall and denies any chest pain or shortness of breath. His current medications are well-tolerated.\nO: BP 118/79, Wt 166 lb, Pulse 72 bpm, Respirations 16/min, Temp 98.4°F, SpO2 98% RA\nA: Coronary artery disease, s/p PCI/stent - unchanged. His ejection fraction remains at 58%.\nP: The patient will continue on his current medication regimen. He will return for follow-up in 3-6 months.\n\n--- 01/29/2024 Office Visit ---\nS: Follow-up visit for coronary artery disease, status post PCI/stent. The patient reports feeling stable and has no new symptoms. He also denies any chest pain or shortness of breath.\nO: BP 126/80, Wt 167 lb, Pulse 70 bpm, Respirations 18/min, Temp 98.2°F, SpO2 98% RA\nA: Coronary artery disease, s/p PCI/stent - fair control. Ejection fraction remains stable at 58%.\nP: Continue current medications. Patient to return in 3-6 months.\n\n--- 08/18/2023 Office Visit ---\nS: Patient presents for medication refill. He is doing well and reports no new symptoms. He has been compliant with his medication regimen.\nO: BP 112/74, Wt 159 lb, Pulse 68 bpm, Respirations 16/min, Temp 98.0°F, SpO2 98% RA\nA: Medication refill for coronary artery disease, s/p PCI/stent - fair control. Ejection fraction is stable at 58%.\nP: Continue current medications. Next visit scheduled in 3-6 months.\n\n--- 03/07/2023 Office Visit ---\nS: Follow-up visit for coronary artery disease, status post PCI/stent. The patient reports feeling stable and has no new symptoms. He denies any chest pain or shortness of breath.\nO: BP 119/75, Wt 158 lb, Pulse 72 bpm, Respirations 17/min, Temp 98.3°F, SpO2 98% RA\nA: Coronary artery disease, s/p PCI/stent - unchanged. Ejection fraction remains stable at 58%.\nP: Continue current medications. Patient to return in 3-6 months.\n\n--- 09/24/2022 Office Visit ---\nS: Follow-up visit for coronary artery disease, status post PCI/stent. The patient reports feeling stable and has no new symptoms. He denies any chest pain or shortness of breath.\nO: BP 126/69, Wt 1"
     },
     {
      "page": 2,
-     "text": "ir control. \n\nP: Continue current medications: atorvastatin 80 mg, aspirin 81 mg, clopidogrel 75 mg, and metoprolol 25 mg. Schedule follow-up in 3-6 months.\n\n--- 03/07/2023 Office Visit --- \nS: Mr. Scott returns for follow-up on his coronary artery disease, myocardial infarction, stent placement, and coronary bypass graft surgery. He reports no chest pain or shortness of breath. \n\nO: BP 119/75 mmHg. Weight 158 lbs. Heart rate 68 bpm, regular. Chest clear to auscultation, no murmurs. Abdomen soft, non-tender. Extremities without edema. \n\nA: Coronary artery disease, myocardial infarction, stent placement, and coronary artery bypass graft surgery are stable with fair control. \n\nP: Continue current medications: atorvastatin 80 mg, aspirin 81 mg, clopidogrel 75 mg, and metoprolol 25 mg. Schedule follow-up in 3-6 months.\n\n--- 09/24/2022 Office Visit --- \nS: Mr. Scott presents for follow-up on his coronary artery disease, myocardial infarction, stent placement, and coronary artery bypass graft surgery. He has been feeling well since his last visit, with no chest pain or shortness of breath. \n\nO: BP 126/69 mmHg. Weight 167 lbs. Heart rate 72 bpm, regular. Chest\n"
+     "text": "67 lb, Pulse 71 bpm, Respirations 18/min, Temp 98.4°F, SpO2 98% RA\nA: Coronary artery disease, s/p PCI/stent - unchanged. Ejection fraction remains stable at 58%.\nP: Continue current medications. Patient to return in 3-6 months.\n\n--- 04/13/2022 Office Visit ---\nS: Follow-up visit for lab review. The reports feeling stable and has no new symptoms. He denies any chest pain or shortness of breath.\nO: BP 128/76, Wt 163 lb, Pulse 70 bpm, Respirations 16/min, Temp 98.2°F, SpO2 98% RA\nA: Lab review - fair control. Ejection fraction is stable at 58%.\nP: Continue current medications. Patient to return in 3-6 months.\n\n--- 11/01/\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Coronary artery disease / MI / stent / CABG",
+     "text": "Coronary artery disease, s/p PCI/stent",
      "status": "controlled"
-    },
-    {
-     "type": "medication",
-     "text": "atorvastatin 80 mg"
     },
     {
      "type": "medication",
@@ -549,7 +551,7 @@
     },
     {
      "type": "medication",
-     "text": "metoprolol 25 mg"
+     "text": "clopidogrel 75 mg"
     }
    ]
   },

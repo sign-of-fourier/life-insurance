@@ -86,7 +86,7 @@
      "q": "Q14",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Thyroid disorder\", \"diagnosed\": \"09/2005\", \"treatment\": \"methimazole\", \"physician\": \"Dr. Kimberly Davis\"}"
+      "{\"condition\": \"Graves' disease\", \"diagnosed\": \"09/2005\", \"treatment\": \"methimazole\", \"physician\": \"Dr. Kimberly Davis\"}"
      ]
     },
     "Q15": {
@@ -1198,8 +1198,8 @@
    "HT_IN": 58,
    "WT_KG": 46.7,
    "HR": 64,
-   "BP_1": "117/78",
-   "BP_2": "121/77"
+   "BP_1": "114/76",
+   "BP_2": "115/77"
   },
   "losses": []
  },
@@ -1224,21 +1224,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 276,
+     "value": 288,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 66,
+     "value": 44,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 192,
+     "value": 226,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -1252,8 +1252,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.2,
-     "flag": "",
+     "value": 6.5,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -1308,10 +1308,17 @@
     },
     {
      "test": "Creatinine",
-     "value": "0.8 101",
+     "value": 0.8,
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
+    },
+    {
+     "test": "eGFR (CKD-EPI 2021)",
+     "value": 101,
+     "flag": "",
+     "units": "mL/min/1.73m2",
+     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -1342,14 +1349,7 @@
     }
    ]
   },
-  "losses": [
-   {
-    "fact_id": "C0675-F044",
-    "kind": "merged_cells",
-    "original": "egfr=101",
-    "extracted": "merged into previous row"
-   }
-  ]
+  "losses": []
  },
  {
   "doc_id": "C0675-D08",
@@ -1420,21 +1420,25 @@
   "payload": {
    "provider": "Dr. Kimberly Davis",
    "specialty": "endocrinology",
-   "page_count": 2,
+   "page_count": 3,
    "pages": [
     {
      "page": 1,
-     "text": "Printed by: ROI_54 11/09/2026\nCONFIDENTIAL - Contains PHI\nHester-Sullivan Medical Group | Dr. Kimberly Davis, endocrinology\nPatient: Angela Jackson DOB: 03/15/1985 Sex: F MRN: 150623\n\n---\n\n**PROBLEM LIST**\n\n- Thyroid disorder (kind graves_active) [controlled] onset 09/2005\n\n**MEDICATIONS**\n\n- methimazole 5 mg\n\n---\n\n**ENCOUNTERS**\n\n---\n\n**01/06/2025 Office Visit**\n\n**S:** Patient presents for follow-up of ankle sprain. Reports minimal discomfort and improvement in mobility since last visit. Denies any new symptoms or complaints. \n\n**O:** BP 117/77, HR 70, Wt 108 lb. Physical exam reveals stable ankle with slight residual tenderness but no signs of inflammation or instability. The remainder of the physical exam is unremarkable.\n\n**A:** Ankle sprain - stable. Thyroid disorder - controlled.\n\n**P:** Continue current treatment for ankle sprain. Advised to continue physical therapy as tolerated. Maintain methimazole 5 mg for thyroid disorder. Return to clinic in 3-6 months for routine follow-up.\n\n---\n\n**07/09/2024 Office Visit**\n\n**S:** Patient presents for follow-up medication refill for methimazole. Reports no new symptoms related to thyroid disorder. Denies any side effects from current medication.\n\n**O:** BP 123/73, HR 72, Wt 103 lb. Physical exam is unremarkable with stable vital signs and no new findings.\n\n**A:** Medication refill - fair control of thyroid disorder.\n\n**P:** Continue current treatment with methimazole 5 mg. Return to clinic in 3-6 months for routine follow-up and medication refill.\n\n---\n\n**01/09/2024 Office Visit**\n\n**S:** Patient presents for flu shot. Reports feeling well with no new symptoms or complaints. \n\n**O:** BP 115/74, HR 68, Wt 99 lb. Physical exam is unremarkable. Flu shot administered without incident.\n\n**A:** Flu shot - improving overall health maintenance.\n\n**P:** Continue current treatment for thyroid disorder. Maintain routine follow-up in 3-6 months.\n\n---\n\n**07/11/2023 Office Visit**\n\n**S:** Patient presents for follow-up of thyroid disorder. Reports feeling well with no new symptoms or complaints.\n\n**O:** BP 125/77, HR 70, Wt 109 lb. Physical exam is unremarkable with stable vital signs and no new findings.\n\n**A:** Thyroid disorder - improving.\n\n**P:** Continue current treatment with methimazole 5 mg. Return to clinic in 3-6 months for routine follow-up.\n\n---\n\n**01/10/2023 Office Visit**\n\n**S:** Patient presents for follow-up lab review. Reports no new symptoms or complaints.\n\n**O:** BP 114/79, HR 69, Wt 106 lb. Physical exam is unremarkable with stable vital signs no new findings.\n\n**A:** Lab review -"
+     "text": "Printed by: ROI_26 11/10/2026\nCONFIDENTIAL - Contains PHI\nHester-Sullivan Medical Group | Dr. Kimberly Davis, endocrinology\nPatient: Angela Jackson DOB: 03/15/1985 Sex: F MRN: 764024\n\nPROBLEM LIST\n- Graves' disease (kind graves_active) [controlled] onset 09/2005\n\nMEDICATIONS\n- methimazole 5 mg\n\nENCOUNTERS\n\n--- 01/06/2025 Office Visit ---\n\nS: Patient presents for follow-up of ankle sprain. Reports twisting ankle while walking on uneven ground approximately two weeks ago. Describes mild to moderate pain, improved with rest and elevation. Denies any fever, chills, or systemic symptoms. No recent changes in Graves' disease symptoms. Continues on methimazole 5 mg daily without issues. Social history reveals approximately three alcoholic drinks per week. No tobacco use. \n\nO: \n- Vitals: BP 117/77, HR 72, RR 16, Temp 98.6°F, Wt 108 lb\n- General: Alert, oriented, in no acute distress\n- HEENT: Normocephalic, atraumatic. Eyes: No proptosis. Thyroid: Slightly enlarged, non-tender. \n- Cardiovascular: Regular rate and rhythm, no murmurs\n- Respiratory: Clear to auscultation bilaterally\n- Musculoskeletal: Mild swelling and tenderness over lateral malleolus, no erythema or warmth. Full range of motion in all other joints. \n- Neurological: Sensation intact, motor strength 5/5 in all extremities. \n\nA: \n- Ankle sprain - fair control\n- Graves' disease - controlled\n\nP: \n- Continue current treatment for ankle sprain: rest, ice, compression, elevation. \n- Continue methimazole 5 mg daily for Graves' disease. \n- Return to clinic in 3-6 months for routine follow-up or sooner if symptoms worsen. \n\n--- 07/09/2024 Office Visit ---\n\nS: Patient presents for medication refill of methimazole. Reports stable symptoms of Graves' disease. No new complaints. Continues to manage condition well with current regimen. \n\nO: \n- Vitals: BP 123/73, HR 70, RR 18, Temp 98.4°F, Wt 103 lb\n- General: Alert, oriented, in no acute distress\n- HEENT: Normocephalic, atraumatic. Eyes: No proptosis. Thyroid: Slightly enlarged, non-tender. \n- Cardiovascular: Regular rate and rhythm, no murmurs\n- Respiratory: Clear to auscultation bilaterally\n\nA: \n- Medication refill - improving\n\nP: \n- Continue methimazole 5 mg daily. \n- Return to clinic in 3-6 months for routine follow-up or sooner if symptoms change. \n\n--- 01/09/2024 Office Visit ---\n\nS: Patient presents for annual flu shot. Reports no acute complaints. Stable symptoms of Graves' disease. Continues methimazole 5 mg daily without \n\nO: \n- Vitals: BP 115/74, HR 68, RR 16, Temp 98.6°F, Wt 99 lb\n- General: Alert, oriented, in no acute distress\n-"
     },
     {
      "page": 2,
-     "text": "fair control of thyroid disorder.\n\n**P:** Continue current treatment with methimazole 5 mg. Return to clinic in 3-6 months for routine follow-up and lab review.\n\n---\n\n**07/12/2022 Office Visit**\n\n**S:** Patient presents for follow-up of thyroid disorder. Reports feeling well with no new symptoms or complaints.\n\n**O:** BP 123/80, HR 71, Wt 103 lb. Physical exam is unremarkable with stable vital signs and no new findings.\n\n**A:** Thyroid disorder - improving.\n\n**P:** Continue current treatment with methimazole 5 mg. Return to clinic in 3-6 months for routine follow-up.\n\n---\n\n**01/12/2022 Office Visit**\n\n**S:** Patient presents for follow-up of URI. Reports resolution of symptoms and feeling well.\n\n**O:** BP 120/76, HR 70, Wt 108 lb. Physical exam is unremarkable with stable vital signs and no new findings.\n\n**A:** URI - fair control.\n\n**P:** Continue current treatment for thyroid disorder. Maintain routine follow-up in 3-6 months.\n\n---\n\n**07/14/2021 Office Visit**\n\n**S:** Patient presents for follow-up of thyroid disorder. Reports feeling well with no new symptoms or complaints.\n\n**O:** BP 110/76, HR 68, Wt 93 lb. Physical exam is unremarkable with stable vital signs and no new findings.\n\n**A:** Thyroid disorder - unchanged.\n\n**P:** Continue current treatment with methimazole 5 mg. Return to clinic in 3-6 months for routine follow-up.\n\n---\n\n**Social:** Patient reports consuming approximately 3 drinks per week. Denies tobacco use. \n\n**Page 7 of 7**\n"
+     "text": "HEENT: Normocephalic, atraumatic. Eyes: No proptosis. Thyroid: Slightly enlarged, non-tender. \n- Cardiovascular: Regular rate and rhythm, no murmurs\n- Respiratory: Clear to auscultation bilaterally\n\nA: \n- Flu shot - stable\n\nP: \n- Administered flu shot. \n- Continue methimazole 5 mg daily. \n- Return to clinic in 3-6 months for routine follow-up or sooner if symptoms change. \n\n--- 07/11/2023 Office Visit ---\n\nS: Patient presents for follow-up of Graves' disease. Reports stable symptoms. No new complaints. Continues methimazole 5 mg daily without issues. \n\nO: \n- Vitals: BP 125/77, HR 74, RR 18, Temp 98.6°F, Wt 109 lb\n- General: Alert, oriented, in no acute distress\n- HEENT: Normocephalic, atraumatic. Eyes: No proptosis. Thyroid: Slightly enlarged, non-tender. \n- Cardiovascular: Regular rate and rhythm, no murmurs\n- Respiratory: Clear to auscultation bilaterally\n\nA: \n- Graves' disease - improving\n\nP: \n- Continue methimazole 5 mg daily. \n- Return to clinic in 3-6 months for routine follow-up or sooner if symptoms change. \n\n--- 01/10/2023 Office Visit ---\n\nS: Patient presents for lab review. Reports stable symptoms of Graves' disease. No new complaints. Continues methimazole 5 mg daily without issues. \n\nO: \n- Vitals: BP 114/79, HR 66, RR 16, Temp 98.4°F, Wt 106 lb\n- General: Alert, oriented, in no acute distress\n- HEENT: Normocephalic, atraumatic. Eyes: No proptosis. Thyroid: Slightly enlarged, non-tender. \n- Cardiovascular: Regular rate and rhythm, no murmurs\n- Respiratory: Clear to auscultation bilaterally\n\nA: \n- Lab review - unchanged\n\nP: \n- Continue methimazole 5 mg daily. \n- Return to clinic in 3-6 months for routine follow-up or sooner if symptoms change. \n\n--- 07/12/2022 Office Visit ---\n\nS: Patient presents for follow-up of Graves' disease. Reports stable symptoms. new complaints. Continues methimazole 5 mg daily without issues. \n\nO: \n- Vitals: BP 123/80, HR 70, RR 18, Temp 98.6°F, Wt 103 lb\n- General: Alert, oriented, in no acute distress\n- HEENT: Normocephalic, atraumatic. Eyes: No proptosis. Thyroid: Slightly enlarged, non-tender. \n- Cardiovascular: Regular rate and rhythm, no murmurs\n- Respiratory: Clear to auscultation bilaterally\n\nA: \n- Graves' disease - unchanged\n\nP: \n- Continue methimazole 5 mg daily. \n- Return to clinic in 3-6 months for routine follow-up or sooner if symptoms change. \n\n--- 01/12/2022 Office Visit ---\n\nS: Patient presents with upper respiratory infection (URI). Reports sore throat, nasal congestion, and cough for past 3 days. Denies fever, chills, or shortness of breath. Stable symptoms of Graves' disease. Continues met"
+    },
+    {
+     "page": 3,
+     "text": "himazole 5 mg daily without issues. \n\nO: \n- Vitals: BP 120/76, HR 72, RR 18, Temp 99.1°F, Wt 108 lb\n- General: Alert, oriented, in no acute distress\n- HEENT: Normocephalic, atraumatic. Throat: Erythematous, no exudates. Nasal mucosa: Inflamed. Eyes: No proptosis. Thyroid: Slightly enlarged, non-tender. \n- Cardiovascular: Regular rate and rhythm, no murmurs\n- Respiratory: Clear to auscultation bilaterally\n\nA: \n- URI - improving\n\nP: \n- Symptomatic treatment for URI: rest, fluids, over-the-counter medications as needed. \n- Continue methimazole 5 mg daily. \n- Return to clinic if URI symptoms worsen or if new symptoms develop. \n\n--- 07/14/2021 Office Visit ---\n\nS: Patient presents for follow-up of Graves' disease. Reports stable symptoms. No new complaints. Continues methimazole 5 mg daily without issues. \n\nO: \n- Vitals: BP 110/76, HR 68, RR 16, Temp 98.6°F, Wt 93 lb\n- General: Alert, oriented, in no acute distress\n- HEENT: Normocephalic, atraumatic. Eyes: No proptosis. Thyroid: Slightly enlarged, non-tender. \n- Cardiovascular: Regular rate and rhythm, no murmurs\n- Respiratory: Clear to auscultation bilaterally\n\nA: \n- Graves' disease - control\n\nP: \n- Continue methimazole 5 mg daily. \n- Return to clinic in months for routine follow-up or sooner if symptoms change. \n\nSocial: alcohol ~3 drinks/week\nPage 7 of 7\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Thyroid disorder",
+     "text": "Graves' disease",
      "status": "controlled"
     },
     {

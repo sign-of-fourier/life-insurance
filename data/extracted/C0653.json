@@ -198,8 +198,8 @@
     },
     {
      "product": "CHANTIX 1MG",
-     "first": "2026-02-18",
-     "last": "2025-12-20",
+     "first": "2025-12-20",
+     "last": "2026-02-18",
      "count": 3,
      "prescriber": "Dr. Cynthia Griffith"
     },
@@ -223,8 +223,8 @@
    "HT_IN": 61,
    "WT_KG": 78.5,
    "HR": 67,
-   "BP_1": "137/70",
-   "BP_2": "130/72"
+   "BP_1": "144/74",
+   "BP_2": "143/74"
   },
   "losses": []
  },
@@ -238,21 +238,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 265,
+     "value": 242,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 40,
-     "flag": "",
+     "value": 36,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 192,
+     "value": 173,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -260,13 +260,13 @@
     {
      "test": "Triglycerides",
      "value": 162,
-     "flag": "",
+     "flag": "H",
      "units": "mg/dL",
      "ref": "0-149"
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 6.6,
+     "value": 6.7,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -287,17 +287,10 @@
     },
     {
      "test": "AST (SGOT)",
-     "value": 77,
+     "value": "77 122",
      "flag": "H",
      "units": "U/L",
      "ref": "10-40"
-    },
-    {
-     "test": "ALT (SGPT)",
-     "value": 122,
-     "flag": "H",
-     "units": null,
-     "ref": "7-45"
     },
     {
      "test": "GGT",
@@ -322,21 +315,14 @@
     },
     {
      "test": "Albumin",
-     "value": 3.8,
+     "value": "3.8 0.8",
      "flag": "",
      "units": "g/dL",
      "ref": "3.5-5.0"
     },
     {
-     "test": "Creatinine",
-     "value": 0.8,
-     "flag": "",
-     "units": "mg/dL",
-     "ref": "0.6-1.3"
-    },
-    {
      "test": "eGFR (CKD-EPI 2021)",
-     "value": "1l5",
+     "value": 115,
      "flag": "",
      "units": "mL/min/1.73m2",
      "ref": "60-200"
@@ -365,22 +351,22 @@
   },
   "losses": [
    {
-    "fact_id": "C0653-F031",
+    "fact_id": "C0653-F036",
     "kind": "flag_lost",
     "original": "H",
     "extracted": null
    },
    {
     "fact_id": "C0653-F036",
-    "kind": "unit_lost",
-    "original": "U/L",
-    "extracted": null
+    "kind": "merged_cells",
+    "original": "alt=122",
+    "extracted": "merged into previous row"
    },
    {
-    "fact_id": "C0653-F042",
-    "kind": "misread_digit",
-    "original": "115",
-    "extracted": "1l5"
+    "fact_id": "C0653-F041",
+    "kind": "merged_cells",
+    "original": "creatinine=0.8",
+    "extracted": "merged into previous row"
    }
   ]
  },

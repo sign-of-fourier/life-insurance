@@ -254,9 +254,9 @@
    "height": "4'11\"",
    "weight_lbs": 137,
    "bp": [
-    "133/67",
+    "135/67",
     "138/70",
-    "133/69"
+    "134/69"
    ],
    "pulse": 82,
    "remarks": []
@@ -284,21 +284,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 294,
+     "value": 252,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 68,
+     "value": 38,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 184,
+     "value": 172,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -312,8 +312,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.3,
-     "flag": "",
+     "value": 6.6,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -396,16 +396,9 @@
     },
     {
      "test": "HIV-1/2 Ab",
-     "value": 0,
+     "value": "0 1.3",
      "flag": "",
      "units": "qual"
-    },
-    {
-     "test": "%CDT",
-     "value": 1.3,
-     "flag": "",
-     "units": "%dCDT",
-     "ref": "0-1.6"
     },
     {
      "test": "NT-proBNP",
@@ -416,7 +409,20 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0558-F033",
+    "kind": "flag_lost",
+    "original": "L",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0558-F049",
+    "kind": "merged_cells",
+    "original": "cdt=1.3",
+    "extracted": "merged into previous row"
+   }
+  ]
  },
  {
   "doc_id": "C0558-D08",

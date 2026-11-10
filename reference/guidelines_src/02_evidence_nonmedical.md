@@ -179,6 +179,9 @@ on vendor flags** — apply these thresholds.
 - APS-4 Physician non-compliance notes ("pt non-compliant with meds", "no-showed ×3") → +25 on the
   condition being treated (on top of its chapter debits).
 - APS-5 Conflicting values between APS and paramed: average per `GEN-6`.
+- APS-6 Condition with no APS in file (not ordered under `REQ-2.7`, or not received): rate on the
+  application, Rx, and labs; when the severity attributes a chapter needs are not documented, use the
+  chapter's unqualified (default) row and document `GRY-5`.
 
 ---
 
@@ -197,11 +200,14 @@ on vendor flags** — apply these thresholds.
 
 - FIN-1.1 Non-working spouse: up to 100% of the working spouse's in-force coverage, max $3M.
 - FIN-1.2 Students / no income (age 18–24): up to $500K if parents insured for ≥ the amount.
-- FIN-1.3 Income for retirees = 50% of net worth basis.
+- FIN-1.3 Retirees and other applicants with no earned income (not covered by FIN-1.1/1.2): justified
+  amount = the greater of stated income × the age multiple and 50% of net worth.
 - FIN-2 Over the limit:
   - FIN-2.1 ≤ 10% over → issue as applied, note.
   - FIN-2.2 10%–100% over → counter-offer the justified amount (`approved_face_amount`).
-  - FIN-2.3 Business/key-person coverage: use 10× key person's compensation; requires FIN-Q.
+  - FIN-2.3 Business/key-person coverage (KPE rider): the endorsement requires face ≤ 10× the key
+    person's compensation and a FIN-Q; if not met, decline the endorsement (`RID-2`) and justify the
+    base policy under FIN-1.
   - FIN-2.4 > 100% over with no business purpose → Decline (`CLS-8.8`).
 - FIN-3 Replacement of existing coverage with a lapse of the old policy is allowed; count only net
   new coverage.

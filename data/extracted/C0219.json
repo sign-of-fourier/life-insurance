@@ -20,9 +20,9 @@
     "face": 250000,
     "product": "Term 20",
     "riders": "['GIO']",
-    "existing": 500000,
-    "replacement": "False",
-    "beneficiary": "spouse",
+    "existing": 100000,
+    "replacement": "True",
+    "beneficiary": "children",
     "signed": "2025-10-31"
    }
   },
@@ -41,7 +41,7 @@
     },
     "7b": {
      "q": "7b",
-     "a": "3.0 drinks/week"
+     "a": "0.0 drinks/week"
     },
     "7c": {
      "q": "7c",
@@ -75,7 +75,7 @@
      "q": "7j",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"seasonal allergy\", \"diagnosed\": \"12/2018\", \"treatment\": \"cetirizine, montelukast\", \"physician\": \"Dr. Daniel Melendez\"}"
+      "{\"condition\": \"seasonal allergy\", \"diagnosed\": \"10/2023\", \"treatment\": \"fluticasone nasal\", \"physician\": \"Dr. Daniel Melendez\"}"
      ]
     },
     "7k": {
@@ -108,10 +108,7 @@
     },
     "7r": {
      "q": "7r",
-     "a": "Yes",
-     "details": [
-      "{\"condition\": \"kidney stones\", \"diagnosed\": \"06/2024\", \"treatment\": \"tamsulosin\", \"physician\": \"Dr. Daniel Melendez\"}"
-     ]
+     "a": "No"
     },
     "7s": {
      "q": "7s",
@@ -121,13 +118,13 @@
      "q": "7t",
      "a": "No"
     },
-    "7v": {
-     "q": "7v",
-     "a": "Dr. Daniel Melendez, Newton Cantrell and Schultz Medical Group; last visit 08/2025"
+    "7u": {
+     "q": "7u",
+     "a": "fluticasone nasal"
     },
     "7w": {
      "q": "7w",
-     "a": "none known"
+     "a": "mother: type 2 diabetes, died 90"
     },
     "7x": {
      "q": "7x",
@@ -143,7 +140,7 @@
    {
     "fact_id": null,
     "kind": "dropped",
-    "original": "cetirizine, montelukast",
+    "original": "Dr. Daniel Melendez, Newton Cantrell and Schultz Medical Group; last visit 08/2025",
     "extracted": null
    }
   ]
@@ -156,37 +153,44 @@
   "payload": {
    "medications": [
     {
-     "product": "ZYRTEC 10MG",
+     "product": "PROZAC 10MG",
      "first": "2020-11-01",
      "last": "2025-10-28",
      "count": 40,
-     "prescriber": "Dr. Daniel Melendez"
+     "prescriber": "Dr. Charles Jones"
     },
     {
-     "product": "SINGULAIR 10MG",
+     "product": "EFFEXOR XR 150MG",
      "first": "2020-11-01",
      "last": "2025-10-28",
      "count": 40,
-     "prescriber": "Dr. Daniel Melendez"
+     "prescriber": "Dr. Charles Jones"
     },
     {
-     "product": "DELTASONE 5MG",
-     "first": "2022-05-25",
-     "last": "2022-05-25",
-     "count": 1,
-     "prescriber": "Dr. Nguyen (Urgent Care)"
+     "product": "FLONASE 50MCG",
+     "first": "2023-10-16",
+     "last": "2025-10-28",
+     "count": 25,
+     "prescriber": "Dr. Daniel Melendez"
     },
     {
      "product": "ZOFRAN 8MG",
-     "first": "2023-03-12",
-     "last": "2023-03-12",
+     "first": "2024-06-12",
+     "last": "2024-06-12",
      "count": 1,
-     "prescriber": "Dr. Nguyen (Urgent Care)"
+     "prescriber": "Dr. Smith (Urgent Care)"
     },
     {
-     "product": "MOTRIN 600MG",
-     "first": "2024-01-10",
-     "last": "2024-01-10",
+     "product": "DELTASONE 20MG",
+     "first": "2021-08-22",
+     "last": "2021-08-22",
+     "count": 1,
+     "prescriber": "Dr. Patel (Urgent Care)"
+    },
+    {
+     "product": "ZITHROMAX 250MG",
+     "first": "2024-03-13",
+     "last": "2024-03-13",
      "count": 1,
      "prescriber": "Dr. Patel (Urgent Care)"
     }
@@ -200,7 +204,20 @@
   "doc_type": "mib",
   "vendor_schema": "mib.codes",
   "payload": {
-   "codes": []
+   "codes": [
+    {
+     "code": "402377",
+     "date": "2025-04-06"
+    },
+    {
+     "code": "031040",
+     "date": "2023-11-18"
+    },
+    {
+     "code": "190765",
+     "date": "2013-04-01"
+    }
+   ]
   },
   "losses": []
  },
@@ -213,18 +230,24 @@
    "license_status": "VALID",
    "record": [
     {
-     "dt": "231227",
-     "text": "SPEEDING 11-15 OVER LIMIT"
-    },
-    {
-     "dt": "230816",
-     "text": "FOLLOWING TOO CLOSELY"
-    },
-    {
-     "dt": "210801",
-     "text": "CARELESS DRIVING"
+     "dt": "230604",
+     "text": "DWI / OWI"
     }
    ]
+  },
+  "losses": []
+ },
+ {
+  "doc_id": "C0219-D09",
+  "case_id": "C0219",
+  "doc_type": "other",
+  "vendor_schema": "q.alcq",
+  "payload": {
+   "form": "ALCQ",
+   "fields": {
+    "drinks_per_week": 0,
+    "treatment": "False"
+   }
   },
   "losses": []
  },
@@ -235,24 +258,95 @@
   "vendor_schema": "hsc.flat",
   "payload": {
    "HT_IN": 66,
-   "WT_KG": 76.7,
-   "HR": 65,
-   "BP_1": "114/92",
-   "BP_2": "119/90"
+   "WT_KG": 78.9,
+   "HR": 55,
+   "BP_1": "124/71",
+   "BP_2": "124/70"
+  },
+  "losses": []
+ },
+ {
+  "doc_id": "C0219-D10",
+  "case_id": "C0219",
+  "doc_type": "aps",
+  "vendor_schema": "aps.athena_summary",
+  "payload": {
+   "provider": "Dr. Charles Jones",
+   "specialty": "psychiatry",
+   "page_count": 2,
+   "pages": [
+    {
+     "page": 1,
+     "text": "**CLINICAL SUMMARY - Watkins-West Medical Group**\n\n**Patient:** Eddie Hicks \n**DOB:** 08/13/1986 \n**Sex:** M \n**MRN:** 487822\n\n---\n\n**Encounters:**\n\n- **2025-04-08** \n **Reason for Visit:** Depression / anxiety \n **BP:** 115/74 \n **Weight:** 163 lbs \n\n- **2024-07-09** \n **Reason for Visit:** Depression / anxiety \n **BP:** 126/68 \n **Weight:** 166 lbs \n\n- **2023-10-09** \n **Reason for Visit:** Rash \n **BP:** 128/71 \n **Weight:** 175 lbs \n\n---\n\n**Assessment/Plan:**\n\n- **Major Depressive Disorder (MDD) and Generalized Anxiety Disorder (GAD)** \n - **Current Status:** Controlled \n - **History:** Diagnosed 21.7 years ago \n - **Treatment:** Medications include fluoxetine 10 mg and venlafaxine 150 mg \n - **Follow-Up:** Under the care of a psychiatrist; no recent hospitalizations or ECT treatments \n - **Additional Details:** On a total of four medications; no current disability \n\n**Social History:**\n\n- **Tobacco:** Former smoker, cigarette use at a rate of 1/2 pack per day, started on July 14, 2002, and quit on November 20, 2006. \n\n**Family History:**\n\n- **Mother:** Type 2 diabetes diagnosed at age 66, passed away at age 90. \n\n**Vital Signs Summary:**\n\n- **2025-04-08:** BP 115/74 mmHg, Weight 163 lbs \n- **2024-07-09:** 126/68 mmHg, Weight lbs \n- **2023-10-09:** BP 128/71 mmHg, 175 lbs \n\n**Clinical Notes:**\n\n**2025-04-08 Encounter:**\n\nDuring today's visit, Mr. Hicks presented with concerns related to his ongoing depression and anxiety. He reports that he has been managing his symptoms well with the current medication regimen. The blood pressure was measured at 715/74 mmHg, and his weight was recorded at 163 lbs. Mr. Hicks is adhering to his prescribed medications, fluoxetine 10 mg and venlafaxine 150 mg. The psychiatric evaluation that his Major Depressive Disorder and Generalized Anxiety Disorder are currently under control. There have been no recent changes in his medication regimen. Mr. Hicks continues to benefit from regular psychiatric follow-up.\n\n**2024-07-09 Encounter:**\n\nDuring his July 9, 2024 visit, Mr. Hicks reported feeling stable with his current treatment plan for depression and anxiety. He noted no significant changes in his mental health since the last visit. The blood pressure was 126/68 mmHg, and his weight was 166 lbs. He remains on fluoxetine 10 mg and venlafaxine 150 mg. His overall condition is stable, and he continues to be under the care of a psychiatrist with no recent hospitalizations or electroconvulsive therapy treatments required. Mr. Hicks also reported that his de"
+    },
+    {
+     "page": 2,
+     "text": "pressive and anxiety symptoms are well-controlled.\n\n**2023-10-09 Encounter:**\n\nMr. Hicks visited on October 9, 2023, primarily to address a rash that he had been experiencing. The blood pressure at that visit was 128/71 mmHg, and his weight was recorded as 175 lbs. He was also evaluated for his ongoing depression and anxiety, which he reports managing effectively with his medication regimen of fluoxetine 10 mg and venlafaxine 150 mg. No significant changes in his psychiatric condition were noted during this encounter. The rash was evaluated, and appropriate treatment was initiated. Mr. Hicks continues to have regular follow-ups with his psychiatrist.\n\n---\n\n**Physical Examination:**\n\n- **General:** Patient appears well, in no acute distress \n- **HEENT:** Normal \n- **Cardiovascular:** Blood pressure 115/74 mmHg \n- **Respiratory:** Normal \n- **Abdomen:** Normal \n- **Musculoskeletal:** Normal \n- **Neurological:** Normal \n- **Skin:** Rash evaluated on 2023-10-09 visit; otherwise normal\n\n---\n\n**Conclusion:**\n\nMr. Eddie Hicks continues to be managed effectively for his Major Depressive Disorder and Generalized Anxiety Disorder with the current medication regimen of fluoxetine 10 mg and venlafaxine 150 mg. His symptoms are well-controlled, and there have been no recent changes in his treatment plan. Regular psychiatric follow-up ensures that his condition remains stable. Mr. Hicks's vital signs and weight are within normal ranges, and he reports no significant changes in his overall health status. The history of tobacco use has been addressed, and he has been abstinent since November 20, 2006. His family history includes type 2 diabetes in his mother, who was diagnosed at age 66 and passed away at age 90.\n\n---\n\n**Attending Physician:** \nDr. Charles Jones \n**Specialty:** Psychiatry \n**Practice:** Watkins-West Medical Group\n"
+    }
+   ],
+   "entities": [
+    {
+     "type": "diagnosis",
+     "text": "Depression / anxiety",
+     "status": "controlled"
+    },
+    {
+     "type": "medication",
+     "text": "fluoxetine 10 mg"
+    },
+    {
+     "type": "medication",
+     "text": "venlafaxine 150 mg"
+    }
+   ]
   },
   "losses": []
  },
  {
   "doc_id": "C0219-D07",
   "case_id": "C0219",
-  "doc_type": "lab_saliva",
-  "vendor_schema": "saliva.v1",
+  "doc_type": "lab_blood",
+  "vendor_schema": "apx.flat",
   "payload": {
-   "collected": "2025-11-11",
-   "COTININE (ORAL FLUID)": "0 ng/mL",
+   "collected": "2025-11-09",
+   "CHOL/HDL/RATIO": "262/39/6.7",
+   "AST/ALT": "31/20",
+   "LDL (CALC)": "193 mg/dL",
+   "TRIGLYCERIDES": "148 mg/dL",
+   "A1C": "5.4 %",
+   "GGTP": "12 U/L",
+   "ALKALINE PHOSPHATASE": "71 U/L",
+   "BILIRUBIN, TOTAL": "0.7 mg/dL",
+   "ALBUMIN": "4.5 g/dL",
+   "CREATININE": "1 mg/dL",
+   "EGFR": "112 mL/min/1.73m2",
+   "HEMOGLOBIN": "16.3 g/dL",
    "HIV-1/2 AB": "0 qual",
-   "COCAINE METABOLITE": "0 qual"
+   "%CDT": "0.9 %dCDT",
+   "GLUCOSE": "123 mg/dL"
   },
   "losses": []
+ },
+ {
+  "doc_id": "C0219-D08",
+  "case_id": "C0219",
+  "doc_type": "lab_urine",
+  "vendor_schema": "apx.flat",
+  "payload": {
+   "collected": "2025-11-09",
+   "NIC/COT": "2 ng/mL",
+   "PROTEIN, URINE": "0 mg/dL",
+   "COCAINE METABOLITE": "D qual",
+   "GLUCOSE, URINE": "0 qual",
+   "RBC, URINE": "1 /hpf"
+  },
+  "losses": [
+   {
+    "fact_id": "C0219-F051",
+    "kind": "misread_digit",
+    "original": "0",
+    "extracted": "D"
+   }
+  ]
  }
 ]

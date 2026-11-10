@@ -856,11 +856,11 @@
   "doc_type": "paramed",
   "vendor_schema": "hsc.flat",
   "payload": {
-   "HT_IN": 62.5,
-   "WT_KG": 77.6,
+   "HT_IN": 62,
+   "WT_KG": 78.9,
    "HR": 92,
    "BP_1": "136/84",
-   "BP_2": "141/87"
+   "BP_2": "141/86"
   },
   "losses": []
  },
@@ -874,15 +874,22 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": "293 70",
+     "value": 254,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
-     "test": "LDL (calc)",
-     "value": 187,
+     "test": "HDL CHOL",
+     "value": 38,
      "flag": "",
+     "units": "mg/dL",
+     "ref": "40-999"
+    },
+    {
+     "test": "LDL (calc)",
+     "value": 180,
+     "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
     },
@@ -895,8 +902,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.2,
-     "flag": "",
+     "value": 6.7,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -951,17 +958,10 @@
     },
     {
      "test": "Creatinine",
-     "value": 1,
+     "value": "1 108",
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
-    },
-    {
-     "test": "eGFR (CKD-EPI 2021)",
-     "value": 108,
-     "flag": "",
-     "units": "mL/min/1.73m2",
-     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -995,15 +995,15 @@
   "losses": [
    {
     "fact_id": "C0755-F029",
-    "kind": "merged_cells",
-    "original": "hdl=70",
-    "extracted": "merged into previous row"
+    "kind": "flag_lost",
+    "original": "L",
+    "extracted": null
    },
    {
-    "fact_id": "C0755-F030",
-    "kind": "flag_lost",
-    "original": "H",
-    "extracted": null
+    "fact_id": "C0755-F041",
+    "kind": "merged_cells",
+    "original": "egfr=108",
+    "extracted": "merged into previous row"
    }
   ]
  },
@@ -1060,21 +1060,17 @@
   "payload": {
    "provider": "Dr. Andrea Cordova",
    "specialty": "family medicine",
-   "page_count": 2,
+   "page_count": 1,
    "pages": [
     {
      "page": 1,
-     "text": "Bennett and Sons Clinic \nDr. Andrea Cordova \nRe: Jennifer Jimenez (DOB 02/01/1981) \n\nFebruary 02, 2026: \nJennifer Jimenez presented to the clinic today with concerns related to her Peripheral arterial disease and aortic aneurysm. The patient's blood pressure was recorded at 133/80, and her weight was 169 pounds. Upon examination, she appeared to be doing well. She continues to monitor her condition closely and adheres to the treatment plan. Her aortic aneurysm, which is of the AAA type and measures 4 cm, is currently being managed conservatively without surgical intervention. The patient has no complaints, and her overall condition remains stable.\n\nSeptember 06, 2025: \nJennifer returned for a follow-up regarding her Peripheral arterial disease and aortic aneurysm. Her blood pressure was 145/89, and she weighed 178 pounds. She continues to do well without significant issues. Her eGFR remains at 52, indicating stable kidney function within the context of her Polycystic kidney disease. No new symptoms were reported, and her aortic aneurysm continues to be monitored. She has been advised to maintain regular follow-ups to ensure her condition is managed effectively.\n\nApril 10, 2025: \nJennifer was seen today for a medication refill and follow-up of her medical conditions. Her blood pressure was 137/89, and she weighed 175 pounds. Jennifer has been diagnosed with Polycystic kidney disease, for which her eGFR is 52. She also has a Peripheral arterial disease with an aortic aneurysm (AAA) that measures 4 cm. The patient reports no new symptoms and continues to manage her conditions well. She is compliant with her medications, which include latanoprost 0.005% for her glaucoma and metronidazole topical 1% for her rosacea.\n\nNovember 12, 2024: \nJennifer visited for a follow-up on her Polycystic kidney disease. Her blood pressure was 142/81, and she weighed 169 pounds. Her condition remains stable with an eGFR of 52. Additionally, her Peripheral arterial disease and aneurysm (AAA; 4 cm) are being without complications. She reports no new issues and continues to do well. Her glaucoma is controlled with latanoprost 0.005%, and her rosacea is managed with metronidazole topical 1%. She remains compliant with her medication regimen.\n\nJune 16, 2024: \nJennifer was seen for follow-up of her Polycystic kidney disease. Her blood pressure was 135/83, and she weighed 181 pounds. She is doing well with no new complaints. Her eGFR remains at S2, indicating stable kidney function. Her aortic aneurysm, which measures 4 cm, is being monitored regularly. Jennifer"
-    },
-    {
-     "page": 2,
-     "text": "has been advised to continue her current treatment plan and maintain regular follow-ups.\n\nJanuary 19, 2024: \nJennifer visited for a flu shot and routine check-up. Her blood pressure was 134/87, and she weighed 173 pounds. She continues to manage her Polycystic kidney disease (eGFR 52) and her Peripheral arterial disease with an aortic aneurysm (AAA; 4 cm) well.\n"
+     "text": "Bennett and Sons Clinic\nRe: Jennifer Jimenez (DOB 02/01/1981)\n\nFebruary 02, 2026: Ms. Jimenez visited today concerning her Abdominal aortic aneurysm. Her blood pressure was 133/80 and she weighed 169 pounds. The aneurysm remains stable at 4 centimeters in size and she continues to do well overall.\n\nSeptember 06, 2025: Ms. Jimenez was seen regarding her Abdominal aortic aneurysm. She reported no new symptoms. Her blood pressure was 145/89 and she weighed 175 pounds. Her Polycystic kidney disease remains under control with an eGFR of 52. Her Abdominal aortic aneurysm is stable at 4 centimeters.\n\nApril 10, 2025: Ms. Jimenez visited for a medication refill. She has been managing her Polycystic kidney disease and Abdominal aortic aneurysm well. Her blood pressure was 137/89 and she weighed 178 pounds. Polycystic kidney disease is stable with an eGFR of 52. The Abdominal aortic aneurysm remains at 4 centimeters.\n\nNovember 12, 2024: Ms. Jimenez was seen today for follow-up on her Polycystic kidney disease. Her blood pressure was 142/81 and she weighed 169 pounds. Her eGFR is 52, indicating controlled kidney function. The Abdominal aortic aneurysm is stable at 4 centimeters.\n\nJune 16, 2024: Ms. Jimenez visited for a follow-up on her Polycystic kidney disease. Her blood pressure was 135/83 and she weighed 181 pounds. Her kidney function is stable with an eGFR of 52. The Abdominal aortic aneurysm remains at 4 centimeters.\n\nJanuary 19, 2024: Ms. Jimenez came in for a flu shot. Her blood pressure was 134/87 and she weighed 173 pounds. She continues to manage her Polycystic kidney disease and Abdominal aortic aneurysm. Her eGFR is 52 and the aneurysm is stable at 4 centimeters.\n\nAugust 23, 2023: Ms. Jimenez visited for a routine checkup related to her glaucoma. Her blood pressure was 131/79 and she weighed 170 pounds. She is doing well her glaucoma is stable with the use latanoprost 0.005%. She also reports using metronidazole topical 1% for her rosacea, which is also well-controlled.\n\nSocial history reveals that Ms. Jimenez consumes approximately one alcoholic drink per week. She has been compliant with her medical regimen and shows no signs of noncompliance.\n\nDr. Andrea Cordova\nBennett and Sons Clinic\nFamily Medicine\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Peripheral arterial disease / aortic aneurysm",
+     "text": "Abdominal aortic aneurysm",
      "status": "controlled"
     },
     {
@@ -1127,25 +1123,21 @@
   "payload": {
    "provider": "Dr. Shawn Williamson",
    "specialty": "cardiology",
-   "page_count": 3,
+   "page_count": 2,
    "pages": [
     {
      "page": 1,
-     "text": "Printed by: ROI_77 11/09/2026\nCONFIDENTIAL - Contains PHI\nDelgado-Sullivan Medical Group | Dr. Shawn Williamson, cardiology\n\nPatient: Jennifer Jimenez DOB: 02/01/1981 Sex: F MRN: 522356\n\n---\n\n**PROBLEM LIST**\n\n- Peripheral arterial disease / aortic aneurysm (kind aaa; 4 cm) [controlled] onset 01/2020\n- r/o Breast mass / biopsy\n\n**MEDICATIONS**\n\nNone currently prescribed.\n\n**ENCOUNTERS**\n\n---\n\n**12/20/2025 Office Visit**\n\n**S:** Patient presents for follow-up of peripheral arterial disease and aortic aneurysm. Denies chest pain, shortness of breath, or leg claudication. Reports regular exercise and minimal alcohol consumption.\n\n**O:** BP 143/86, HR 72, Wt 176 lb. Physical exam: no acute distress. Cardiovascular: regular rate and rhythm, no murmurs, rubs, or gallops. Extremities: no edema, pulses 2+ bilaterally. Abdomen: soft, non-tender, no palpable masses.\n\n**A:** Peripheral arterial disease / aortic aneurysm - unchanged.\n\n**P:** Continue current management. Return to clinic in 3-6 months for follow-up. Advised to maintain regular exercise and healthy lifestyle.\n\n---\n\n**07/24/2025 Office Visit**\n\n**S:** Follow-up visit for peripheral arterial disease and aortic aneurysm. No new symptoms. Continues regular exercise routine.\n\n**O:** BP 134/86, HR 70, Wt 174 lb. Physical exam: normal. Cardiovascular: regular rate and rhythm, no murmurs. Extremities: no edema, pulses 2+ bilaterally. Abdomen: soft, non-tender.\n\n**A:** Peripheral arterial disease / aortic aneurysm - unchanged.\n\n**P:** Continue current management. Return to clinic in 3-6 months. Encouraged to maintain exercise regimen.\n\n---\n\n**02/25/2025 Office Visit**\n\n**S:** Follow-up for peripheral arterial disease and aortic aneurysm. Reports no symptoms. Continues regular exercise.\n\n**O:** BP 134/83, HR 68, Wt 170 lb. Physical exam: normal. Cardiovascular: regular rate and rhythm, no murmurs. Extremities: no edema, pulses 2+ bilaterally. Abdomen: soft, non-tender.\n\n**A:** Peripheral arterial disease / aortic aneurysm - fair control.\n\n**P:** Continue current management. Return to clinic in 3-6 months. Reinforced importance of regular exercise.\n\n---\n\n**09/29/2024 Office Visit**\n\n**S:** Follow-up for peripheral arterial disease and aortic aneurysm. No symptoms. Continues regular exercise.\n\n**O:** BP 138/89, HR 70, Wt 169 lb. Physical exam: normal. Cardiovascular: regular rate and rhythm, no murmurs. Extremities: edema, pulses 2+ bilaterally. Abdomen: soft, non-tender.\n\n**A:** Peripheral arterial disease / aortic aneurysm - improving.\n\n**P:** Continue current management. Return to clinic in 3-"
+     "text": "Printed by: ROI_B8 11/10/2026\nCONFIDENTIAL - Contains PHI\nDelgado-Sullivan Medical Group | Dr. Shawn Williamson, cardiology\nPatient: Jennifer Jimenez DOB: 02/01/1981 Sex: F MRN: 983311\n\nPROBLEM LIST\n - Abdominal aortic aneurysm (kind aaa; 4 cm) [controlled] onset 01/2020\n - r/o Breast mass / biopsy\n\nMEDICATIONS\n\nENCOUNTERS\n\n--- 12/20/2025 Office Visit ---\nS: Ms. Jimenez presents for follow-up of her abdominal aortic aneurysm. She reports no new symptoms and feels well. \nO: BP 143/86, HR 78, RR 16, Temp 98.6°F, Wt 176 lb. Physical exam is unremarkable. Abdomen is soft, non-tender with no palpable masses. \nA: Abdominal aortic aneurysm - fair control. Size remains stable at 4 cm. \nP: Continue current management. Patient advised to return in 3-6 months for routine follow-up. \n\n--- 07/24/2025 Office Visit ---\nS: Follow-up visit for abdominal aortic aneurysm. Patient denies any new symptoms. \nO: BP 134/86, HR 76, RR 16, Temp 98.4°F, Wt 174 lb. Exam is unchanged. \nA: Abdominal aortic aneurysm - improving. Size stable at 4 cm. \nP: Continue current management. Follow-up in 3-6 months.\n\n--- 02/25/2025 Office Visit ---\nS: Routine follow-up for abdominal aortic aneurysm. Patient reports feeling well. \nO: BP 134/83, HR 74, RR 16, Temp 98.3°F, Wt 170 lb. Exam is unremarkable. \nA: Abdominal aortic aneurysm - improving. Size remains stable at 4 cm. \nP: Continue current management. Follow-up in 3-6 months.\n\n--- 09/29/2024 Office Visit ---\nS: Follow-up for abdominal aortic aneurysm. Patient denies any new symptoms. \nO: BP 138/89, HR 76, RR 16, Temp 98.6°F, Wt 169 lb. Exam is unchanged. \nA: Abdominal aortic aneurysm - unchanged. Size stable at 4 cm. \nP: Continue current management. Follow-up in 3-6 months.\n\n--- 05/02/2024 Office Visit ---\nS: Routine follow-up for abdominal aortic aneurysm. Patient feels well. \nO: BP 142/88, 78, RR 16, Temp 98.4°F, Wt 177 lb. Exam is unremarkable. \nA: Abdominal aortic aneurysm - improving. Size remains stable at 4 cm. \nP: Continue current management. Follow-up in 3-6 months.\n\n--- 12/05/2023 Office Visit ---\nS: Follow-up for abdominal aortic aneurysm. Patient reports no new symptoms. \nO: BP 132/86, HR 74, RR 16, Temp 98.3°F, Wt 166 lb. Exam is unchanged. \nA: Abdominal aortic aneurysm - stable. Size remains at 4 cm. \nP: Continue current management. Follow-up in 3-6 months.\n\n--- 07/09/2023 Office Visit ---\nS: Patient presents for flu shot. Denies any new symptoms related to abdominal aortic aneurysm. \nO: BP 131/85, HR 72, RR 16, Temp 98.6°F, Wt 182 lb. Exam is unremarkable. \nA: Flu shot - stable. Abdominal aortic a"
     },
     {
      "page": 2,
-     "text": "6 months. Encouraged to maintain exercise routine.\n\n---\n\n**05/02/2024 Office Visit**\n\n**S:** Follow-up for peripheral arterial disease and aortic aneurysm. No symptoms. Continues regular exercise.\n\n**O:** BP 142/88, HR 72, Wt 177 lb. Physical exam: normal. Cardiovascular: regular rate and rhythm, no murmurs. Extremities: no edema, pulses 2+ bilaterally. Abdomen: soft, non-tender.\n\n**A:** Peripheral arterial disease / aortic aneurysm - stable.\n\n**P:** Continue current management. Return to clinic in 3-6 months. Reinforced importance of regular exercise.\n\n---\n\n**12/05/2023 Office Visit**\n\n**S:** Follow-up for peripheral arterial disease and aortic aneurysm. No symptoms. Continues regular exercise.\n\n**O:** BP 132/86, HR 68, Wt 166 lb. Physical exam: normal. Cardiovascular: regular rate and rhythm, no murmurs. Extremities: no edema, pulses 2+ bilaterally. Abdomen: soft, non-tender.\n\n**A:** Peripheral arterial disease / aortic aneurysm - stable.\n\n**P:** Continue current management. Return to clinic in 3-6 months. Encouraged to maintain exercise regimen.\n\n---\n\n**07/09/2023 Office Visit**\n\n**S:** Follow-up flu shot. No symptoms related to peripheral arterial disease or aortic aneurysm. Continues regular exercise.\n\n**O:** BP 131/85, HR 70, Wt 182 lb. Physical exam: normal. regular rate and rhythm, no murmurs. Extremities: no edema, pulses 2+ bilaterally. Abdomen: soft, non-tender.\n\n**A:** Flu shot - stable.\n\n**P:** Continue current management for peripheral arterial disease and aortic aneurysm. Return to clinic in 3-6 months. Reinforced importance of regular exercise.\n\n---\n\n**02/10/2023 Office Visit**\n\n**S:** Follow-up for peripheral arterial disease and aortic aneurysm. No symptoms. Continues regular exercise.\n\n**O:** BP 138/85, HR 72, Wt 182 lb. Physical exam: normal. Cardiovascular: regular rate and rhythm, no murmurs. Extremities: no edema, pulses 2+ bilaterally. Abdomen: soft, non-tender.\n\n**A:** Peripheral arterial disease / aortic aneurysm - unchanged.\n\n**P:** Continue current management. Return to clinic in 3-6 months. Encouraged to maintain exercise routine.\n\n---\n\n**09/13/2022 Office Visit**\n\n**S:** Follow-up for peripheral arterial disease and aortic No symptoms. Continues regular exercise.\n\n**O:** BP 132/84, HR 68, Wt 176 lb. Physical exam: normal. Cardiovascular: regular rate and rhythm, no murmurs. Extremities: no edema, pulses 2+ bilaterally. Abdomen: soft, non-tender.\n\n**A:** Peripheral arterial disease / aortic aneurysm - fair control.\n\n**P:** Continue current management. Return to clinic in 3-6 months. Reinforc"
-    },
-    {
-     "page": 3,
-     "text": "ed importance of regular exercise.\n\n**Exercise:** Runs 3-4 times per week.\n**Social:** Consumes approximately 1 drink per 10 of 10\n"
+     "text": "neurysm size remains at 4 cm. \nP: Continue current management. Follow-up for aneurysm in 3-6 months.\n\n--- 02/10/2023 Office Visit ---\nS: Routine follow-up for abdominal aortic aneurysm. Patient feels well. BP 138/85, HR 76, RR 16, Temp 98.4°F, Wt 182 lb. Exam is unchanged. \nA: Abdominal aortic aneurysm - fair control. Size remains at 4 cm. \nP: Continue current management. Follow-up in 3-6 months.\n\n--- 09/13/2022 Office Visit ---\nS: Follow-up for abdominal aortic aneurysm. Patient denies any new symptoms. \nO: BP 132/84, HR 74, RR 16, Temp 98.3°F, Wt 176 lb. Exam is unchanged. \nA: Abdominal aortic aneurysm - improving. Size remains stable at 4 cm. \nP: Continue current management. Follow-up in 3-6 months.\n\nExercise: Patient reports running 3-4 times per week.\nSocial: Patient consumes approximately 1 alcoholic drink per week.\n\nPage 10 of 10\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Peripheral arterial disease / aortic aneurysm",
+     "text": "Abdominal aortic aneurysm",
      "status": "controlled"
     }
    ]

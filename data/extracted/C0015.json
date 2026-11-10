@@ -237,8 +237,8 @@
    "HT_IN": 74,
    "WT_KG": 103.4,
    "HR": 60,
-   "BP_1": "138/89",
-   "BP_2": "141/86"
+   "BP_1": "138/81",
+   "BP_2": "141/81"
   },
   "losses": []
  },
@@ -263,17 +263,24 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 291,
+     "value": 258,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": "49 221",
+     "value": 37,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
+    },
+    {
+     "test": "LDL (calc)",
+     "value": 200,
+     "flag": "",
+     "units": "mg/dL",
+     "ref": "0-99"
     },
     {
      "test": "Triglycerides",
@@ -284,7 +291,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.9,
+     "value": 7,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -319,10 +326,17 @@
     },
     {
      "test": "Alkaline phosphatase",
-     "value": "71 0.8",
+     "value": 71,
      "flag": "",
      "units": "U/L",
      "ref": "40-130"
+    },
+    {
+     "test": "Bilirubin, total",
+     "value": 0.8,
+     "flag": "",
+     "units": "mg/dL",
+     "ref": "0.2-1.2"
     },
     {
      "test": "Albumin",
@@ -390,16 +404,16 @@
   },
   "losses": [
    {
-    "fact_id": "C0015-F032",
-    "kind": "merged_cells",
-    "original": "ldl=221",
-    "extracted": "merged into previous row"
+    "fact_id": "C0015-F031",
+    "kind": "flag_lost",
+    "original": "L",
+    "extracted": null
    },
    {
-    "fact_id": "C0015-F040",
-    "kind": "merged_cells",
-    "original": "bilirubin=0.8",
-    "extracted": "merged into previous row"
+    "fact_id": "C0015-F032",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
    }
   ]
  },

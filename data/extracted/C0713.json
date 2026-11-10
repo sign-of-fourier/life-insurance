@@ -233,8 +233,8 @@
    "HT_IN": 69,
    "WT_KG": 95.3,
    "HR": 70,
-   "BP_1": "133/72",
-   "BP_2": "129/70"
+   "BP_1": "133/74",
+   "BP_2": "129/73"
   },
   "losses": []
  },
@@ -259,21 +259,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 298,
+     "value": 244,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 62,
-     "flag": "",
+     "value": 37,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 198,
+     "value": 169,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -287,17 +287,10 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.8,
-     "flag": "",
+     "value": "6.6 5.2",
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
-    },
-    {
-     "test": "HEMOGLOBIN A1C",
-     "value": 5.2,
-     "flag": "",
-     "units": "%",
-     "ref": "4.0-5.6"
     },
     {
      "test": "AST (SGOT)",
@@ -335,18 +328,18 @@
      "ref": "0.2-1.2"
     },
     {
-     "test": "Albumin",
-     "value": 4.4,
-     "flag": "",
-     "units": null,
-     "ref": "3.5-5.0"
-    },
-    {
      "test": "Creatinine",
-     "value": "1 88",
+     "value": 1,
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
+    },
+    {
+     "test": "eGFR (CKD-EPI 2021)",
+     "value": 88,
+     "flag": "",
+     "units": "mL/min/1.73m2",
+     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -379,16 +372,16 @@
   },
   "losses": [
    {
-    "fact_id": "C0713-F037",
-    "kind": "unit_lost",
-    "original": "g/dL",
-    "extracted": null
+    "fact_id": "C0713-F031",
+    "kind": "merged_cells",
+    "original": "a1c=5.2",
+    "extracted": "merged into previous row"
    },
    {
-    "fact_id": "C0713-F039",
-    "kind": "merged_cells",
-    "original": "egfr=88",
-    "extracted": "merged into previous row"
+    "fact_id": "C0713-F037",
+    "kind": "dropped",
+    "original": "4.4",
+    "extracted": null
    }
   ]
  },

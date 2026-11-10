@@ -55,7 +55,7 @@
      "q": "Q5",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Coronary artery disease / MI / stent / CABG\", \"diagnosed\": \"07/2024\", \"treatment\": \"atorvastatin, aspirin, metoprolol\", \"physician\": \"Dr. Barbara Carr\"}"
+      "{\"condition\": \"Coronary artery disease, s/p myocardial infarction\", \"diagnosed\": \"07/2024\", \"treatment\": \"atorvastatin, aspirin, metoprolol\", \"physician\": \"Dr. Barbara Carr\"}"
      ]
     },
     "Q6": {
@@ -825,11 +825,11 @@
   "vendor_schema": "pmx.v2",
   "payload": {
    "height": "5'5\"",
-   "weight_lbs": 272,
+   "weight_lbs": 270,
    "bp": [
-    "134/84",
-    "133/83",
-    "124/81"
+    "130/84",
+    "130/83",
+    "124/82"
    ],
    "pulse": 54,
    "remarks": []
@@ -846,21 +846,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 279,
+     "value": 282,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 72,
+     "value": 43,
      "flag": "",
      "units": null,
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 172,
+     "value": 204,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
@@ -874,8 +874,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 3.9,
-     "flag": "",
+     "value": 6.6,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -925,7 +925,7 @@
      "test": "Bilirubin, total",
      "value": 1,
      "flag": "",
-     "units": "mg/dL",
+     "units": null,
      "ref": "0.2-1.2"
     },
     {
@@ -996,6 +996,12 @@
     "fact_id": "C0180-F032",
     "kind": "flag_lost",
     "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0180-F041",
+    "kind": "unit_lost",
+    "original": "mg/dL",
     "extracted": null
    }
   ]
@@ -1082,22 +1088,17 @@
    "pages": [
     {
      "page": 1,
-     "text": "**CLINICAL SUMMARY - Ferguson LLC Clinic**\n\n**Patient:** William Richardson \n**DOB:** 05/27/1967 \n**Sex:** M \n**MRN:** 806089\n\n**Encounters:**\n\n- **2026-04-30:** Coronary artery disease / MI / stent / CABG \n - BP: 132/80 \n - Weight: 276 lb \n - The patient continues to do well with no new episodes of angina. His ejection fraction remains at 62%. Blood pressure is stable, and his lipid profile is controlled with current medications.\n\n- **2025-08-31:** Coronary artery disease / / stent / CABG \n - BP: 127/82 \n - Weight: 262 lb \n - Mr. Richardson reports feeling well overall. His blood pressure is well managed, and his weight is within acceptable limits. Echocardiogram confirms stable left ventricular function with an EF of 62%.\n\n- **2024-12-31:** Rash \n - BP: 128/90 \n - Weight: 266 lb \n - The patient presented with a mild rash, which was treated symptomatically. Cardiac status remains stable with an EF of 62%. There were no signs of exacerbation of coronary artery disease.\n\n- **2024-05-03:** Coronary artery disease / MI / stent / CABG \n - BP: 125/88 \n - Weight: 272 lb \n - Mr. Richardson continues to do well with no new cardiac events. His ejection fraction is 62%, and his LDL cholesterol is well-controlled at 91 Blood pressure is stable.\n\n- **2023-09-03:** Coronary artery disease / MI / stent / \n - BP: 125/83 \n - Weight: 270 lb \n - The patient is doing well post-CABG with no new episodes of angina. Ejection fraction is 62%, and his blood pressure is well controlled. \n\n- **2023-01-03:** Coronary artery disease / MI / stent / CABG \n - BP: 123/84 \n - Weight: 265 lb \n - Mr. Richardson reports feeling stable since his last stent placement. Ejection fraction is 62%, and he has no new cardiac symptoms. His blood pressure is well within target range.\n\n**Assessment/Plan:**\n\n• **Coronary artery disease / MI / stent / CABG** (event at age 57; 1.9 years ago; event MI; EF 62%; 1-vessel disease; LDL 91) - controlled; medications: atorvastatin 80 mg, aspirin 81 mg, metoprolol 100 mg. \n - Mr. Richardson remains stable with controlled coronary artery disease. His ejection fraction is 62%, and he has no angina. Lipid profile and blood pressure are within acceptable ranges. Regular follow-up is recommended to monitor cardiac status and lipid levels.\n\n• **Social History:** \n - Mr. Richardson consumes approximately four alcoholic drinks per week.\n\n**Additional Clinical Information:**\n\nMr. Richardson's physical examinations during these visits have been largely unremarkable with normal findings on cardiovascular and respirat"
+     "text": "CLINICAL SUMMARY - Ferguson LLC Clinic\nPatient: William Richardson DOB: 05/27/1967 Sex: M MRN: 996595\n\nEncounters:\n 2026-04-30 Coronary artery disease, s/p myocardial infarction BP 132/80 Wt 276\n 2025-08-31 Coronary artery disease, s/p myocardial infarction BP 127/82 Wt 262\n 2024-12-31 rash BP 128/90 Wt 266\n 2024-05-03 Coronary artery disease, s/p myocardial infarction BP 125/88 Wt 272\n 2023-09-03 Coronary artery disease, s/p myocardial infarction BP 125/83 Wt 270\n 2023-01-03 Coronary artery disease, s/p myocardial infarction BP 123/84 Wt 265\n\nAssessment/Plan:\n • Coronary artery disease, s/p myocardial infarction (event at age 57; 1.9 years ago; event MI; EF 62%; 1-vessel disease; LDL 91) - controlled; meds: atorvastatin 80 mg, aspirin 81 mg, metoprolol 100 mg\n - The patient continues to do well following his myocardial infarction that occurred in July 2024. His ejection fraction was recorded at 62% at the time of the event. He is on atorvastatin 80 mg, aspirin 81 mg, and metoprolol 100 mg daily to manage his condition. His low-density lipoprotein (LDL) cholesterol level is currently at 91 mg/dL, which is within target goals. There has been no evidence of abnormal stress test results or in the past year. His coronary artery disease involves a single vessel.\n • history: Mr. Richardson reports consuming approximately four alcoholic drinks per week.\n \nRecent Visit Summary:\n On April 30, 2026, Mr. Richardson presented for a follow-up concerning his coronary artery disease status post myocardial infarction. His blood pressure at this visit was 132/80 mmHg, and his weight was 276 pounds. A review of his cardiovascular risk factors and medications was performed. His lipid profile and current medication regimen are consistent with our prior recommendations. Physical examination findings were otherwise unremarkable.\n\nPast Medical History:\nMr. Richardson has a history of coronary artery disease, which manifested as a myocardial infarction in July 2024, when he was 57 years old. Since then, he has been closely monitored and managed with a combination of medications including atorvastatin 80 mg, aspirin 81 mg, and metoprolol 100 mg daily. His ejection fraction at the time of the myocardial infarction was 62%, indicating moderately reduced left ventricular systolic function. The patient has one-vessel coronary artery disease and has not experienced any episodes of angina. His most recent LDL cholesterol level is 91 mg/dL, which is well controlled.\n\nMedications:\n- Atorvastatin 80 mg daily: To manage hyperlipidemia and"
     },
     {
      "page": 2,
-     "text": "ory exams. He does not report any new pain or shortness of breath. His current medications are well-tolerated with no reported side effects. His family history is significant for type 2 diabetes in his mother, who is still alive.\n\n**Conclusion:**\n\nWilliam Richardson's coronary artery disease is well managed with current medical therapy. His cardiac function remains stable with an EF of 62%, and there have been no new cardiac events. Continuous monitoring and adherence to the prescribed medication regimen are crucial for maintaining his current status. \n\n**Dr. Barbara Carr** \n**Cardiology, Ferguson Clinic**\n"
+     "text": "reduce cardiovascular risk.\n- Aspirin 81 mg daily: For antiplatelet therapy to prevent thrombotic events.\n- Metoprolol 100 mg daily: Beta-blocker to manage heart rate and blood pressure, reducing myocardial oxygen demand.\n\nVital Signs 2026-04-30: BP 132/80 mmHg, Wt 276 lbs\n- 2025-08-31: BP 127/82 mmHg, Wt 262 lbs\n- 2024-12-31: BP 128/90 mmHg, Wt 266 lbs\n- 2024-05-03: BP 125/88 mmHg, Wt 272 lbs\n- 2023-09-03: BP 125/83 mmHg, Wt 270 lbs\n- 2023-01-03: BP 123/84 mmHg, Wt 265 lbs\n\nAdditional Notes:\n- Mr. Richardson reports a family history of type 2 diabetes in his mother, who was diagnosed at the age of 76 is currently alive at 82 years old.\n- The patient denies any history of tobacco use and has no other significant cardiac risk factors aside from his alcohol consumption of approximately four drinks per week.\n\nOverall, Mr. Richardson's coronary artery disease is well-controlled with current medical management. He remains compliant with his medication regimen and has not experienced any adverse cardiac events or significant changes in his condition since his myocardial infarction. His cardiovascular risk factors are being actively managed, and he continues to be monitored regularly.\n"
     }
    ],
    "entities": [
     {
-     "type": "diagnosis",
-     "text": "Coronary artery disease / MI / stent / CABG",
-     "status": "controlled"
-    },
-    {
      "type": "medication",
-     "text": "aspirin 81 mg"
+     "text": "atorvastatin 80 mg"
     },
     {
      "type": "medication",

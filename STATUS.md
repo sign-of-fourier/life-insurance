@@ -9,7 +9,7 @@ _Read PLAN.md first. Update this file at the end of every session._
 | 2 Reference dicts | **done** | gate PASS (src/check_reference.py) |
 | 3 Case design | **done** (pending user review of qa/phase3_coverage.md) | validation PASS, deterministic |
 | 4 Evidence gen | **done** | 4a/4b/4c/4d gates PASS; APS via Nova $1.74 |
-| 5 Golden | not started | |
+| 5 Golden | **done** | gate PASS; 84% target-band agreement, mismatches categorized (qa/phase5_golden.md); 11 manual reviews |
 | 6 Noisy notes | not started | |
 | 7 QA/baseline | not started | |
 | 8 Packaging | not started | |
@@ -82,7 +82,16 @@ _Read PLAN.md first. Update this file at the end of every session._
   Extraction: 2892 losses (2553 tied to facts); 2.1% of relevant facts dropped/truncated; labs ~1 loss/doc (units/flags/merged),
   Rx ~1/doc (row drops, garbled dates). Phase 4 gate PASS. Bedrock total $1.78.
 
+
+- 2026-11-10: Phase 5 done. src/engine.py (evidence-only; CLS-4 worksheet; trace cites fact ids + rule ids; grey areas),
+  src/render_golden.py -> data/golden/<case>.{json,md}, src/check_golden.py -> qa/phase5_golden.md, qa/phase5_manual_review.md.
+  Engine outcomes: Decline 171, Postpone 114, Std 100, T1-2 82, PP 79, ST 72, P 72, T5-8 69, SP 58, T3-4 51, TT1-4 33,
+  T9-16 33, Elite 32, PT 20, TT5-16 14. Validation 0 errors; deterministic; 3 mismatches unexplained (generator under-realization).
+  Upstream fixes (deterministic regen, random streams preserved): A1c floor, paramed clamp to BP-1 average/build column,
+  minimized tobacco date direction, HTN band, Std-row lipids, nm_misrep realized (DUI + depression undisclosed),
+  FIN net worth / in-force, varenicline order, specific diagnosis labels (src/dx_labels.py), Elite consistency.
+  Guideline: BP-4, APS-6 added; FIN-1.3, FIN-2.3 clarified. 493 APS re-written by Nova; Bedrock total $2.63.
+  Known gaps: no-APS conditions use chapter default rows (APS-6) - ~6% of conditions; benign med stop<start in truth (not visible).
+
 ## Next step
-Phase 5: src/engine.py (reuse src/rules.py) operating on EvidenceBundle facts in arrival order -> schemas.Golden trace +
-decision + grey-area alternatives; src/render_golden.py -> data/golden/<case>.md; checks: determinism, validate.check_golden,
-target-vs-engine outcome report (mismatches explained: hidden/untraceable, disclosure catches, modifiers), 10 manual reviews.
+Phase 6: noisy UW notes (personas, staggered observations + worksheet, corruptions logged vs golden steps).

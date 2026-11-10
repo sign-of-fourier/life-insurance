@@ -55,8 +55,8 @@
      "q": "Q5",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Coronary artery disease / MI / stent / CABG\", \"diagnosed\": \"10/2022\", \"treatment\": \"atorvastatin, aspirin, metoprolol\", \"physician\": \"Dr. Philip Green\"}",
-      "{\"condition\": \"Non-obstructive CAD (<50%) / coronary calcium\", \"diagnosed\": \"07/2011\", \"treatment\": \"none\", \"physician\": \"Dr. Philip Green\"}"
+      "{\"condition\": \"Coronary artery disease, s/p PCI/stent\", \"diagnosed\": \"10/2022\", \"treatment\": \"atorvastatin, aspirin, metoprolol\", \"physician\": \"Dr. Philip Green\"}",
+      "{\"condition\": \"Non-obstructive coronary artery disease\", \"diagnosed\": \"07/2011\", \"treatment\": \"none\", \"physician\": \"Dr. Philip Green\"}"
      ]
     },
     "Q6": {
@@ -1221,7 +1221,7 @@
      "spec": "psychiatry"
     },
     {
-     "date": "2025-03-26",
+     "date": "2025-01-25",
      "drug": "VARENICLINE",
      "strength": "1 mg",
      "days": 30,
@@ -1237,7 +1237,7 @@
      "spec": "family medicine"
     },
     {
-     "date": "2025-01-25",
+     "date": "2025-03-26",
      "drug": "VARENICLINE",
      "strength": "1 mg",
      "days": 30,
@@ -1342,8 +1342,8 @@
    "HT_IN": 64,
    "WT_KG": 77.1,
    "HR": 78,
-   "BP_1": "139/80",
-   "BP_2": "138/81"
+   "BP_1": "144/80",
+   "BP_2": "143/81"
   },
   "losses": []
  },
@@ -1357,21 +1357,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 287,
+     "value": 266,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 53,
-     "flag": "",
+     "value": 39,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 222,
+     "value": 215,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -1385,8 +1385,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.4,
-     "flag": "H",
+     "value": 6.8,
+     "flag": "",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -1401,7 +1401,7 @@
      "test": "HEMOGLOBIN A1C",
      "value": 5,
      "flag": "",
-     "units": null,
+     "units": "%",
      "ref": "4.0-5.6"
     },
     {
@@ -1420,17 +1420,10 @@
     },
     {
      "test": "GGT",
-     "value": 38,
+     "value": "38 114",
      "flag": "",
      "units": "U/L",
      "ref": "8-60"
-    },
-    {
-     "test": "Alkaline phosphatase",
-     "value": 114,
-     "flag": "",
-     "units": "U/L",
-     "ref": "40-130"
     },
     {
      "test": "Bilirubin, total",
@@ -1469,16 +1462,9 @@
     },
     {
      "test": "HIV-1/2 Ab",
-     "value": 0,
+     "value": "0 1.3",
      "flag": "",
      "units": "qual"
-    },
-    {
-     "test": "%CDT",
-     "value": 1.3,
-     "flag": "",
-     "units": "%dCDT",
-     "ref": "0-1.6"
     },
     {
      "test": "PSA",
@@ -1491,10 +1477,22 @@
   },
   "losses": [
    {
-    "fact_id": "C0917-F035",
-    "kind": "unit_lost",
-    "original": "%",
+    "fact_id": "C0917-F033",
+    "kind": "flag_lost",
+    "original": "H",
     "extracted": null
+   },
+   {
+    "fact_id": "C0917-F039",
+    "kind": "merged_cells",
+    "original": "alk_phos=114",
+    "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0917-F046",
+    "kind": "merged_cells",
+    "original": "cdt=1.3",
+    "extracted": "merged into previous row"
    }
   ]
  },
@@ -1555,17 +1553,17 @@
    "pages": [
     {
      "page": 1,
-     "text": "Williams PLC Clinic\n\n123 Main Street\nNew York, NY 10001\nPhone: (123) 456-7890\nFax: (123) 456-7891\n\nDate: February 10, 2025\n\nDr. Jane Smith\nAttending Physician\n123 Wellness Lane\nAnytown, USA 56789\n\nDear Colleague,\n\nRE: Douglas Macdonald, Male, DOB 08/11/1979\n\nI was asked to provide a summary of Douglas Macdonald’s medical history and current status for your records. Mr. Macdonald was seen in consultation on February 7, 2025, for an annual physical.\n\n**History and Presenting Complaints:**\nMr. Macdonald presented for his annual physical examination. He reports feeling well overall with no significant complaints. He denies any chest pain, shortness of breath, or palpitations. He mentions occasional fatigue but attributes this to his work schedule. His blood pressure was recorded at 130/84 mmHg, and his weight was 171 pounds.\n\n**Past Medical History:**\nMr. Macdonald has a significant history of cardiovascular disease. In October 2022, at age of 43, he experienced a myocardial infarction (MI) which was complicated by stent placement. His ejection fraction (EF) at that time was noted to be 59%. He underwent coronary artery bypass grafting (CABG) due to involvement of two coronary vessels. Currently, his coronary artery disease (CAD) is considered controlled.\n\nAdditionally, he has history of non-obstructive coronary artery disease (less than 50% stenosis) with coronary artery calcium present, first diagnosed in July 2009. His most recent coronary calcium score was not available at the time of visit, but his stenosis percentage was recorded at 1%.\n\n**Current Medications:**\n- Atorvastatin 80 mg daily\n- Aspirin 81 mg daily\n- Metoprolol 25 mg twice daily\n\n**Social History:**\nMr. Macdonald has a history of tobacco use, having smoked one pack per day of cigarettes since June 2019. He quit smoking on March 26, 2025. His alcohol consumption is approximately six drinks per week. He reports this honestly and consistently.\n\n**Examination Findings:**\nOn examination, Mr. Macdonald appeared well. His vital signs were stable with a blood pressure of 130/84 mmHg, and his weight was 171 pounds. His examination was notable for regular rhythm without murmurs, rubs, or gallops. His lungs were clear to auscultation bilaterally. His abdomen was soft and non-tender with no palpable masses. Extremities showed no edema, and pulses were symmetrical.\n\n**Impression:**\nMr. Macdonald’s coronary artery disease, including his history of stent placement and CABG, is currently controlled. His lipid profile, specifically his LDL cholesterol, is well-managed at 80 mg/dL. H"
+     "text": "**Williams PLC Clinic**\n\n**Dear Colleague,**\n\nI saw Mr. Douglas Macdonald in consultation on February 7, 2025, for an annual physical. \n\n**History:**\n\nMr. Macdonald is a 45-year-old male with a significant past medical history of coronary artery disease (CAD), status post percutaneous coronary intervention (PCI) with stent placement. His initial event occurred at age 43, approximately three years ago, where he underwent stent placement due to significant disease in two coronary vessels. At that time, his ejection fraction (EF) was documented at 59%, and his low-density lipoprotein (LDL) cholesterol level was 80 mg/dL. Currently, his condition is well controlled with medical therapy, which includes atorvastatin 80 mg daily, aspirin 81 mg daily, and metoprolol 25 mg daily. He has no history of angina and has not had any abnormal stress tests in the past 12 months.\n\nAdditionally, Mr. has a history of non-obstructive coronary artery disease, characterized by less than 1% stenosis, which is also currently well controlled without the need for additional medications.\n\nOn social history, Mr. Macdonald was a former smoker, having smoked one pack per day of cigarettes. He started smoking on June 15, 2019, and quit March 26, 2025. He reported his smoking cessation to be honest and truthful. Regarding alcohol consumption, he drinks approximately six drinks per week.\n\n**Exam:**\n\nOn examination today, Mr. Macdonald appeared to be in no acute His vital signs were within normal limits: blood pressure was 130/84 mmHg, and his weight was 171 pounds. The cardiovascular exam was notable for a regular rate and rhythm with no murmurs, rubs, or gallops. The respiratory exam revealed clear lung fields bilaterally with no wheezes, rales, or rhonchi. The abdominal exam was benign with no organomegaly or tenderness. Extremities were warm and well perfused with no edema.\n\n**Impression and Recommendations:**\n\nMr. Macdonald's coronary artery disease, both obstructive and non-obstructive, is currently well controlled with the outlined medical regimen. His lipid profile and cardiac status have been stable the past year with no episodes of angina or other ischemic symptoms. The recent stent placement three years ago has been effective in managing his disease, and there have been no complications or need for further revascularization.\n\nContinued management should focus on adherence to his current medications, lifestyle modifications, and regular follow-up. The patient has been compliant with his medication regimen and has made significant lifestyle changes, in"
     },
     {
      "page": 2,
-     "text": "is non-obstructive CAD is also well-controlled without any recent episodes of ischemia.\n\n**Recommendations:**\nGiven his current stable condition, I recommend continuing his current medication regimen which includes atorvastatin, aspirin, and metoprolol. Regular follow-up with his cardiologist is advised to monitor his cardiovascular health. He should also continue with his cardiac rehabilitation program to maintain his overall health and well-being.\n\nPlease feel free to reach out if you have any further questions or require additional information.\n\nSincerely,\n\nDr. Philip Green, MD\nCardiology\nWilliams PLC Clinic\n\n---\n\nCC: Medical Records Department\nAttachments: Summary of Lab Results, ECG Reports\n\n---\n\nThis letter should suffice for the life insurer's review of Mr. Macdonald's health status. If additional information or documentation is needed, please let me know.\n"
+     "text": "cluding quitting smoking. His alcohol intake is within moderate limits and should be monitored during follow-up visits.\n\nIt is recommended that Mr. Macdonald continue with his current medications: atorvastatin 80 mg daily, aspirin 81 mg daily, and metoprolol 25 mg daily. He should also continue to follow a heart-healthy diet, maintain regular physical activity, and abstain from smoking. Periodic lipid profile checks and routine cardiology follow-up are advised to ensure continued stability of his coronary artery disease.\n\nThank you for referring Mr. Macdonald to our care. Please do not hesitate to reach out if there are any further questions or if additional information is needed.\n\n**Sincerely,**\n\nDr. Philip Green \nCardiologist \nWilliams PLC Clinic\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Coronary artery disease / MI / stent / CABG",
+     "text": "Coronary artery disease, s/p PCI/stent",
      "status": "controlled"
     },
     {
@@ -1573,8 +1571,9 @@
      "text": "aspirin 81 mg"
     },
     {
-     "type": "medication",
-     "text": "metoprolol 25 mg"
+     "type": "diagnosis",
+     "text": "Non-obstructive coronary artery disease",
+     "status": "controlled"
     }
    ]
   },

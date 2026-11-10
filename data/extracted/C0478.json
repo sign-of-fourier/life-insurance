@@ -20,7 +20,7 @@
     "face": 250000,
     "product": "GUL",
     "riders": "['LTA', 'WMD']",
-    "existing": 500000,
+    "existing": 125000,
     "replacement": "False",
     "beneficiary": "spouse",
     "signed": "2025-10-14"
@@ -107,7 +107,7 @@
      "q": "7r",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Non-kidney organ transplant\", \"diagnosed\": \"10/2019\", \"treatment\": \"sirolimus\", \"physician\": \"Dr. Richard Bowman\"}",
+      "{\"condition\": \"Liver transplant recipient\", \"diagnosed\": \"10/2019\", \"treatment\": \"sirolimus\", \"physician\": \"Dr. Richard Bowman\"}",
       "{\"condition\": \"glaucoma\", \"diagnosed\": \"02/2024\", \"treatment\": \"latanoprost, timolol ophthalmic\", \"physician\": \"Dr. Richard Bowman\"}"
      ]
     },
@@ -269,9 +269,9 @@
    "height": "5'4\"",
    "weight_lbs": 247,
    "bp": [
-    "132/75",
-    "128/76",
-    "129/74"
+    "132/79",
+    "131/78",
+    "130/78"
    ],
    "pulse": 83,
    "remarks": []
@@ -288,17 +288,24 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 296,
+     "value": 248,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": "51 212",
-     "flag": "",
+     "value": 37,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
+    },
+    {
+     "test": "LDL (calc)",
+     "value": 178,
+     "flag": "",
+     "units": "mg/dL",
+     "ref": "0-99"
     },
     {
      "test": "Triglycerides",
@@ -309,7 +316,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.8,
+     "value": 6.7,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -339,7 +346,7 @@
      "test": "ALT (SGPT)",
      "value": 22,
      "flag": "",
-     "units": null,
+     "units": "U/L",
      "ref": "7-45"
     },
     {
@@ -393,16 +400,9 @@
     },
     {
      "test": "HIV-1/2 Ab",
-     "value": 0,
+     "value": "0 1.4",
      "flag": "",
      "units": "qual"
-    },
-    {
-     "test": "%CDT",
-     "value": 1.4,
-     "flag": "",
-     "units": "%dCDT",
-     "ref": "0-1.6"
     }
    ]
   },
@@ -415,15 +415,15 @@
    },
    {
     "fact_id": "C0478-F037",
-    "kind": "merged_cells",
-    "original": "ldl=212",
-    "extracted": "merged into previous row"
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
    },
    {
-    "fact_id": "C0478-F043",
-    "kind": "unit_lost",
-    "original": "U/L",
-    "extracted": null
+    "fact_id": "C0478-F052",
+    "kind": "merged_cells",
+    "original": "cdt=1.4",
+    "extracted": "merged into previous row"
    }
   ]
  },
@@ -484,7 +484,7 @@
    "pages": [
     {
      "page": 1,
-     "text": "Spencer PLC Clinic\n\nDear Colleague,\n\nI saw Ryan Barry in consultation on January 25, 2025. \n\nRegarding his Transient Ischemic Attack (TIA), which occurred 2.4 years ago, Ryan is currently doing well with no recent episodes, and no medications are prescribed for this condition at present. \n\nFor his chronic back pain and spinal issues, which require chronic opioid and benzodiazepine management, he is currently stable on naproxen 500 mg.\n\nRyan's Rheumatoid arthritis, managed with biologic therapy, remains controlled. He is on etanercept 50 mg injections and methotrexate 2.5 mg.\n\nHis non-kidney organ transplant, a liver transplant, performed six years ago, is also stable with no recent complications. He is taking sirolimus 1 mg for immunosuppression.\n\nRyan's glaucoma is well-controlled with latanoprost 0.005% and timolol ophthalmic 0.5%.\n\nImpression and recommendations are as outlined above. I like to thank you for this referral.\n\nPlease note that Ryan has been non-compliant with his medication regimen and has missed two follow-up appointments.\n\nSocial history includes former cigarette smoking, with a habit of 10 cigarettes per day, which he quit in September 2019. Additionally, Ryan consumes approximately 12 alcoholic drinks per week.\n\nThank you for your attention to this case.\n\nSincerely,\n\nDr. Richard Bowman \nFamily Medicine Specialist \nSpencer PLC Clinic\n\n---\n\n**Visit Summary - January 25, 2025** \n**Blood Pressure:** 138/69 \n**Weight:** 253 lbs \n\n**Physical Exam:** \n- General: Well\n"
+     "text": "Spencer PLC Clinic\n\nDear Colleague,\n\nI saw Ryan Barry in consultation on January 25, 2025. His blood pressure was 138/69, and his weight was 253 pounds.\n\nRegarding Ryan's Transient Ischemic Attack (TIA), which occurred 2.4 years ago, he is currently in a controlled status. There are no medications being prescribed for this condition.\n\nFor his chronic back pain and spine issues, Ryan is on chronic opioid and benzodiazepine therapy, which are currently controlling his symptoms. His medication regimen includes naproxen 500 mg.\n\nRyan also has Rheumatoid arthritis, which is being managed with biologic therapy. His current medications for this condition are etanercept 50 mg injection and methotrexate 2.5 mg. is a liver transplant recipient, having received his transplant 6 years ago. His immunosuppressive therapy includes sirolimus 1 mg, and his remains controlled.\n\nAdditionally, Ryan has been diagnosed with glaucoma and is being treated with latanoprost 0.005% and timolol ophthalmic 0.5%, both of which are effectively controlling his condition.\n\nImpression and recommendations remain as stated above. \n\nPlease note that Ryan has been non-compliant with his medication regimen and has missed follow-up appointments on two occasions.\n\nSocial history reveals that Ryan is a former smoker, having smoked 10 cigarettes a day until he quit in September 2019. He consumes approximately 12 alcoholic drinks per week.\n\nThank you for this referral.\n\nSincerely,\nDr. Richard Bowman\n"
     }
    ],
    "entities": [
@@ -508,9 +508,8 @@
      "text": "etanercept 50 mg inj"
     },
     {
-     "type": "diagnosis",
-     "text": "Non-kidney organ transplant",
-     "status": "controlled"
+     "type": "medication",
+     "text": "methotrexate 2.5 mg"
     },
     {
      "type": "medication",
@@ -520,14 +519,6 @@
      "type": "diagnosis",
      "text": "glaucoma",
      "status": "controlled"
-    },
-    {
-     "type": "medication",
-     "text": "latanoprost 0.005%"
-    },
-    {
-     "type": "medication",
-     "text": "timolol ophthalmic 0.5%"
     }
    ]
   },

@@ -40,6 +40,38 @@
     },
     "params": {},
     "disclosure": "honest"
+   },
+   {
+    "id": "nm_mvr:dui_2_5y",
+    "key": "nm_mvr",
+    "variant": "dui_2_5y",
+    "chapter": "MVR",
+    "kind": "nm",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {},
+    "disclosure": "omitted"
+   },
+   {
+    "id": "depression_anxiety:moderate",
+    "key": "depression_anxiety",
+    "variant": "moderate",
+    "chapter": "MH",
+    "kind": "med",
+    "debits": 25,
+    "outcome": "rate",
+    "best": "Standard Plus",
+    "fe": null,
+    "params": {
+     "any_of": {
+      "meds_count": {
+       "ge": 2
+      }
+     }
+    },
+    "disclosure": "omitted"
    }
   ],
   "tobacco": "cessation_rx_only",
@@ -81,7 +113,7 @@
    "fin_ratio": 0.757,
    "bmi": 27.5,
    "foreign_country": null,
-   "cessation_rx_quit": "2025-01-29",
+   "cessation_rx_quit": "2025-01-21",
    "nm_misrep": "multi_misrep"
   }
  },
@@ -109,33 +141,57 @@
   "riders_requested": [
    "ADB"
   ],
-  "existing_coverage": 0,
-  "replacement": false,
-  "beneficiary_relation": "spouse"
+  "existing_coverage": 100000,
+  "replacement": true,
+  "beneficiary_relation": "estate"
  },
  "height_in": 63.0,
  "weight_lb": 155.0,
- "bp_systolic": 113,
+ "bp_systolic": 132,
  "bp_diastolic": 90,
- "pulse": 85,
+ "pulse": 54,
  "tobacco": [
   {
    "product": "cigarette",
    "status": "former",
    "frequency": "1 ppd",
-   "start": "2016-10-14",
-   "quit": "2025-01-29",
+   "start": "1997-03-04",
+   "quit": "2025-01-21",
    "disclosure": "honest"
   }
  ],
- "alcohol_drinks_per_week": 3.0,
+ "alcohol_drinks_per_week": 0.0,
  "alcohol_treatment": false,
  "drug_use": [],
  "conditions": [
   {
+   "condition_key": "depression_anxiety",
+   "label": "Depression / anxiety",
+   "onset": "2005-12-28",
+   "status": "controlled",
+   "severity": "moderate",
+   "details": {
+    "meds_count": 2,
+    "work_loss_months": null,
+    "psychiatrist": false,
+    "hospitalization_years_ago": null,
+    "ect": false,
+    "disability": false,
+    "years_since_dx": 19.3
+   },
+   "meds": [],
+   "procedures": [],
+   "treating_provider_ids": [
+    "C0769-P2"
+   ],
+   "disclosure": "omitted",
+   "in_mib": false,
+   "irrelevant": false
+  },
+  {
    "condition_key": "benign_no_rating",
    "label": "osteopenia",
-   "onset": "2019-09-01",
+   "onset": "2024-06-09",
    "status": "controlled",
    "severity": "mild",
    "details": {
@@ -145,7 +201,7 @@
     {
      "drug": "alendronate",
      "dose": "70 mg",
-     "start": "2019-09-07",
+     "start": "2024-06-10",
      "stop": null,
      "prescriber_id": null,
      "indication": "osteopenia"
@@ -160,29 +216,27 @@
    "irrelevant": true
   }
  ],
- "family_history": [],
+ "family_history": [
+  {
+   "relation": "mother",
+   "condition": "COPD",
+   "age_at_onset": 80,
+   "age_at_death": 91,
+   "living": true
+  }
+ ],
  "mvr": [
   {
-   "date": "2025-01-01",
-   "code": "M06",
-   "disclosure": "honest"
-  },
-  {
-   "date": "2024-06-28",
-   "code": "S25",
-   "disclosure": "honest"
-  },
-  {
-   "date": "2019-09-04",
-   "code": "N04",
-   "disclosure": "honest"
+   "date": "2021-12-11",
+   "code": "D04",
+   "disclosure": "omitted"
   }
  ],
  "avocations": [
   {
    "activity": "mountain_climbing",
    "details": {
-    "max_altitude_ft": 14510,
+    "max_altitude_ft": 19140,
     "intends_to_stop": false
    },
    "disclosure": "honest"
@@ -191,9 +245,9 @@
  "travel": [],
  "prior_apps": [
   {
-   "year": 2024,
+   "year": 2018,
    "company": "Harborview Life",
-   "outcome": "not taken"
+   "outcome": "postponed"
   }
  ],
  "providers": [
@@ -204,29 +258,37 @@
    "practice": "Taylor Mitchell and Ortiz Medical Group",
    "aps_style": "epic_progress",
    "country": "US"
+  },
+  {
+   "provider_id": "C0769-P2",
+   "name": "Dr. Sharon Lewis",
+   "specialty": "psychiatry",
+   "practice": "Aguilar-Cox Medical Group",
+   "aps_style": "epic_progress",
+   "country": "US"
   }
  ],
  "true_labs": {
-  "tc": 278.0,
-  "hdl": 42.0,
-  "ldl": 218.0,
-  "triglycerides": 88.0,
-  "tc_hdl_ratio": 6.6,
-  "glucose_fasting": 87.0,
-  "a1c": 5.5,
-  "ast": 16.0,
-  "alt": 37.0,
-  "ggt": 47.0,
-  "alk_phos": 41.0,
-  "bilirubin": 0.5,
-  "albumin": 4.4,
+  "tc": 242.0,
+  "hdl": 36.0,
+  "ldl": 176.0,
+  "triglycerides": 150.0,
+  "tc_hdl_ratio": 6.7,
+  "glucose_fasting": 92.0,
+  "a1c": 5.1,
+  "ast": 29.0,
+  "alt": 42.0,
+  "ggt": 44.0,
+  "alk_phos": 105.0,
+  "bilirubin": 0.8,
+  "albumin": 4.6,
   "creatinine": 0.9,
-  "egfr": 106.0,
-  "urine_protein": 20.0,
-  "hemoglobin": 12.4,
-  "cdt": 1.1,
-  "nt_probnp": 72.0,
-  "cotinine_urine": 390.0,
+  "egfr": 109.0,
+  "urine_protein": 10.0,
+  "hemoglobin": 12.6,
+  "cdt": 1.2,
+  "nt_probnp": 43.0,
+  "cotinine_urine": 143.0,
   "hiv": 0.0,
   "cocaine": 0.0
  }

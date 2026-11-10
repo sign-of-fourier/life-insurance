@@ -20,7 +20,7 @@
     "face": 300000,
     "product": "Term 20",
     "riders": "['ROP-T']",
-    "existing": 500000,
+    "existing": 150000,
     "replacement": "False",
     "beneficiary": "spouse",
     "signed": "2025-08-03"
@@ -220,21 +220,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 300,
+     "value": 240,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 70,
-     "flag": "",
+     "value": 36,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 194,
+     "value": 168,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -248,7 +248,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.3,
+     "value": 6.7,
      "flag": "",
      "units": "ratio",
      "ref": "0-5.0"
@@ -348,6 +348,12 @@
   "losses": [
    {
     "fact_id": "C0047-F025",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0047-F029",
     "kind": "flag_lost",
     "original": "H",
     "extracted": null

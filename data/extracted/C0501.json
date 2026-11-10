@@ -1096,8 +1096,8 @@
    "HT_IN": 73.5,
    "WT_KG": 69.9,
    "HR": 62,
-   "BP_1": "137/80",
-   "BP_2": "140/82"
+   "BP_1": "146/92",
+   "BP_2": "146/92"
   },
   "losses": []
  },
@@ -1111,21 +1111,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 299,
+     "value": 242,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 58,
-     "flag": "",
+     "value": 36,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 211,
+     "value": 176,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -1139,7 +1139,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.2,
+     "value": 6.7,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -1188,17 +1188,10 @@
     },
     {
      "test": "Bilirubin, total",
-     "value": 0.9,
+     "value": "0.9 4.1",
      "flag": "",
      "units": "mg/dL",
      "ref": "0.2-1.2"
-    },
-    {
-     "test": "Albumin",
-     "value": 4.1,
-     "flag": "",
-     "units": "g/dL",
-     "ref": "3.5-5.0"
     },
     {
      "test": "Creatinine",
@@ -1206,13 +1199,6 @@
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
-    },
-    {
-     "test": "eGFR (CKD-EPI 2021)",
-     "value": 83,
-     "flag": "",
-     "units": "mL/min/1.73m2",
-     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -1243,7 +1229,20 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0501-F043",
+    "kind": "merged_cells",
+    "original": "albumin=4.1",
+    "extracted": "merged into previous row"
+   },
+   {
+    "fact_id": "C0501-F045",
+    "kind": "dropped",
+    "original": "83",
+    "extracted": null
+   }
+  ]
  },
  {
   "doc_id": "C0501-D08",

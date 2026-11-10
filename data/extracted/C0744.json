@@ -67,7 +67,7 @@
      "q": "Q8",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Cancer (see type table)\", \"diagnosed\": \"11/2015\", \"treatment\": \"none\", \"physician\": \"Dr. Courtney Hill\"}"
+      "{\"condition\": \"Diffuse large B-cell lymphoma\", \"diagnosed\": \"11/2015\", \"treatment\": \"none\", \"physician\": \"Dr. Courtney Hill\"}"
      ]
     },
     "Q9": {
@@ -1492,9 +1492,9 @@
    "height": "5'1\"",
    "weight_lbs": 163,
    "bp": [
-    "125/71",
+    "121/71",
     "1l7/74",
-    "124/74"
+    "121/74"
    ],
    "pulse": 54,
    "remarks": []
@@ -1518,21 +1518,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 275,
+     "value": 290,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 66,
+     "value": 43,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 171,
+     "value": 209,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
@@ -1546,8 +1546,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.2,
-     "flag": "",
+     "value": 6.7,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -1609,17 +1609,10 @@
     },
     {
      "test": "Creatinine",
-     "value": 0.9,
+     "value": "0.9 110",
      "flag": "",
      "units": "mg/dL",
      "ref": "0.6-1.3"
-    },
-    {
-     "test": "eGFR (CKD-EPI 2021)",
-     "value": 110,
-     "flag": "",
-     "units": "mL/min/1.73m2",
-     "ref": "60-200"
     },
     {
      "test": "Hemoglobin",
@@ -1649,6 +1642,12 @@
     "kind": "flag_lost",
     "original": "H",
     "extracted": null
+   },
+   {
+    "fact_id": "C0744-F044",
+    "kind": "merged_cells",
+    "original": "egfr=110",
+    "extracted": "merged into previous row"
    }
   ]
  },
@@ -1709,13 +1708,18 @@
    "pages": [
     {
      "page": 1,
-     "text": "Scott and Cardenas Clinic\n\nDear Colleague,\n\nI saw Jennifer Saunders in consultation on November 09, 2025. \n\nRegarding her eating disorder, which she has successfully managed since its onset in April 2014, she remains currently controlled. She has not been prescribed any medications for this condition. \n\nHer aggressive NHL cancer, treated approximately 10 years ago, is also currently controlled with no need for ongoing medication. \n\nJennifer has a history of vitamin D deficiency diagnosed in August 2016, which she is managing with ergocalciferol 50000 IU. Her most recent lab results indicate that this condition is well-controlled.\n\nHer hypothyroidism, which began in November 2017, is currently controlled with levothyroxine 100 mcg. \n\nJennifer also suffers from seasonal allergies, first diagnosed in May 2022, which she manages with fluticasone nasal 50 mcg and loratadine mg. Her allergy symptoms remain controlled.\n\nFurthermore, Jennifer experienced a urinary tract infection in May 2019, which she successfully treated with a combination of sulfamethoxazole-trimethoprim 800/160 mg and nitrofurantoin 100 mg. This condition is currently controlled.\n\nIt is worth noting that Jennifer has been non-compliant with her medications and missed follow-up appointments on two occasions.\n\nSocially, Jennifer used to smoke cigarettes at a rate of 10 per day until she quit in July 2024. She currently consumes approximately one alcoholic drink per week.\n\nImpression and recommendations as above. Thank you for this referral.\n\nSincerely,\n\nDr. Ashley Young\n"
+     "text": "Scott and Cardenas Clinic\n\nDear Colleague,\n\nI am writing to provide a detailed summary of the recent consultation with Ms. Jennifer Saunders, which took place on November 9, 2025. She presented with vitamin D deficiency, among other chronic conditions.\n\nMs. Saunders has a history of an eating disorder, which she has successfully managed for approximately 9.8 years. Currently, her condition is well-controlled, and she does not require any medications for this issue. \n\nAdditionally, Ms. Saunders was diagnosed with diffuse large B-cell lymphoma about 10 years ago, which is now in a controlled state following her treatment. She is not on any medications for this condition at the moment.\n\nVitamin D deficiency, which was the primary reason for her recent visit, is also well-managed. She is taking ergocalciferol 50000 IU as prescribed.\n\nHer hypothyroidism, which started in November is currently well-controlled with levothyroxine 100 mcg daily. \n\nSeasonal allergies, noted since May 2022, are being managed with fluticasone nasal spray 50 mcg and loratadine 10 mg as needed.\n\nFurthermore, her urinary tract infection from May 2019 is under control. She is taking sulfamethoxazole-trimethoprim 800/160 mg and nitrofurantoin 100 mg as prescribed.\n\nMs. Saunders has been non-compliant with her medication regimen and has missed two follow-up appointments, which is concerning.\n\nSocially, she used to smoke 10 cigarettes per day until she quit in July 2024 and consumes approximately one alcoholic drink per week\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
      "text": "Eating disorder",
+     "status": "controlled"
+    },
+    {
+     "type": "diagnosis",
+     "text": "Diffuse large B-cell lymphoma",
      "status": "controlled"
     },
     {
@@ -1757,20 +1761,10 @@
     {
      "type": "medication",
      "text": "sulfamethoxazole-trimethoprim 800/160 mg"
-    },
-    {
-     "type": "medication",
-     "text": "nitrofurantoin 100 mg"
     }
    ]
   },
   "losses": [
-   {
-    "fact_id": "C0744-F055",
-    "kind": "dropped",
-    "original": "9.8",
-    "extracted": null
-   },
    {
     "fact_id": "C0744-F056",
     "kind": "dropped",
@@ -1787,17 +1781,21 @@
   "payload": {
    "provider": "Dr. Courtney Hill",
    "specialty": "oncology",
-   "page_count": 1,
+   "page_count": 2,
    "pages": [
     {
      "page": 1,
-     "text": "RECEIVED 18  -- ROI --\nMedical Group\n\nRe: Jennifer Saunders (DOB 05/02/1983)\n\nDear Sir/Madam,\n\nI am writing this letter at the request of Ms. Jennifer Saunders regarding her medical history.\n\nOn June 30, 2025, Ms. Saunders visited our clinic due to the presence of a rash. Upon examination, her blood pressure was recorded at 118/69, and her weight was 172 pounds. The patient appeared to be good health, with no immediate concerns beyond the rash. She reported feeling well overall.\n\nDuring the visit on October 31, 2024, Ms. Saunders returned to our practice for follow-up on her cancer history. Her blood pressure at that time was 120/74, and she weighed 170 pounds. She has a known history of aggressive non-Hodgkin lymphoma (NHL), with treatment having been completed approximately 10 years ago. Her condition remains controlled, and she continues to do well without any signs of recurrence.\n\nOn March 3, 2024, Ms. Saunders visited us again to discuss her NHL. Her blood pressure was 116/65, and she weighed 160 pounds. She is doing well, and the cancer is stable following treatment over a decade ago. The stage of her cancer was not specified at the time of her initial diagnosis.\n\nOn July 5, 2023, Ms. Saunders had a follow-up appointment for NHL. Her blood pressure was 118/66, and she weighed 167 pounds. The patient reported feeling well and there were no concerns. \n\nNovember 5, 2022, saw another follow-up visit for her NHL. Her blood pressure was 117/75, and she weighed 165 pounds. Similar to previous visits, she continues to do well, with her NHL remaining stable after treatment approximately 10 years ago.\n\nOn March 7, 2022, Ms. Saunders visited for her NHL status. Her blood pressure was 122/77, and she weighed 172 pounds. She remains in good health, and there have been no signs of cancer recurrence.\n\nJuly 8, 2021, marked another follow-up visit for Ms. Saunders' NHL. Her blood pressure was 116/67, and she weighed 157 pounds. She was in good condition at that time, with her NHL remaining controlled following treatment over a decade ago.\n\nSocially, Ms. Saunders used to smoke cigarettes, consuming about 10 per day, but she quit in 2024. She also consumes approximately one alcoholic drink per week.\n\nPlease feel free to contact me if you need any further information or clarification.\n\nSincerely,\n\nDr. Courtney Hill\nHenry-Torres Medical Group\n"
+     "text": "Medical Group\nRe: Jennifer Saunders (DOB 05/02/1983)\n\nJune 30, 2025: \nDr. Courtney Hill, attending physician at Henry-Torres Medical Group, saw Jennifer Saunders today for a follow-up regarding a rash. During the visit, her blood pressure was recorded at 118/69 mmHg and her weight at 172 pounds. She appears to be doing well overall, and there were no alarming findings the physical exam. Her diffuse large B-cell lymphoma remains under control, with no new concerning symptoms or signs of relapse noted.\n\nOctober 31, 2024: \nDr. Courtney Hill evaluated Jennifer Saunders on this date for her ongoing management of diffuse large B-cell lymphoma. Her blood pressure was 120/74 mmHg and her weight was 170 pounds. The patient continues to do well, with no evidence of active lymphoma on recent imaging and blood tests. She has been in remission for about 10 years since completing her initial treatment. No new medications were started.\n\nMarch 03, 2024: \nJennifer Saunders was seen by Dr. Courtney Hill on March 3, 2024 for continued follow-up of her diffuse large B-cell lymphoma. At that time, her blood pressure was 116/65 mmHg and her weight 160 pounds. The patient remains in a controlled phase, with no signs of disease progression on recent PET/CT scan. She is doing well with no new complaints or symptoms. Her vital signs were stable and she had no issues.\n\nJuly 05, 2023: \nDr. Courtney Hill attended to Jennifer Saunders on July 5, 2023 for ongoing monitoring of her diffuse large B-cell lymphoma. Her blood pressure was 118/66 mmHg and her weight 167 pounds. The patient is doing well, with no evidence of disease relapse on her recent labs and imaging. She reports no new symptoms and her physical exam was unremarkable aside from a benign rash.\n\nNovember 05, 2022: \nJennifer Saunders was seen by Dr. Courtney Hill on November 5, 2022 for routine follow-up of her diffuse large B-cell lymphoma. Her blood pressure was 117/75 mmHg and her weight 165 pounds. The patient continues to do well, with no signs of active lymphoma on her most recent blood work and imaging. She reports feeling fine with no new complaints. Her exam otherwise unremarkable.\n\nMarch 07, 2022: \nDr. Courtney Hill evaluated Jennifer Saunders on March 7, 2022 for ongoing management of her diffuse large B-cell lymphoma. Her blood pressure was 122/77 mmHg and her weight 172 pounds. The patient remains in remission, with no evidence of disease recurrence on her recent PET/CT scan and blood tests. She is doing well overall with no new issues.\n\nJuly 08, 2021: \nJennifer Saunders was seen b"
+    },
+    {
+     "page": 2,
+     "text": "FAX 27  -- ROI --\ny Dr. Courtney Hill on July 8, 2021 for routine follow-up of her diffuse large B-cell lymphoma. At that time, her blood pressure was 116/67 mmHg and her weight 157 The patient is doing well\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Cancer (see type table)",
+     "text": "Diffuse large B-cell lymphoma",
      "status": "controlled"
     }
    ]

@@ -20,7 +20,7 @@
     "face": 750000,
     "product": "Term 10",
     "riders": "['ADB', 'GIO', 'KPE']",
-    "existing": 500000,
+    "existing": 375000,
     "replacement": "False",
     "beneficiary": "business partner",
     "signed": "2025-01-16"
@@ -74,7 +74,7 @@
      "q": "Q8",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Cancer (see type table)\", \"diagnosed\": \"06/2024\", \"treatment\": \"tamoxifen\", \"physician\": \"Dr. Michelle Butler\"}"
+      "{\"condition\": \"Ductal carcinoma in situ (DCIS), breast\", \"diagnosed\": \"06/2024\", \"treatment\": \"tamoxifen\", \"physician\": \"Dr. Michelle Butler\"}"
      ]
     },
     "Q9": {
@@ -782,7 +782,7 @@
    "fields": {
     "income": 134000,
     "net_worth": 1374000,
-    "existing": 500000,
+    "existing": 375000,
     "purpose": "business"
    }
   },
@@ -794,8 +794,8 @@
   "doc_type": "paramed",
   "vendor_schema": "pmx.v2",
   "payload": {
-   "height": "5'4.5\"",
-   "weight_lbs": 158,
+   "height": "5'4\"",
+   "weight_lbs": 161,
    "bp": [
     "128/73",
     "131/70",
@@ -816,21 +816,21 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 262,
+     "value": 240,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 40,
+     "value": 36,
      "flag": "",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 198,
+     "value": 180,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-99"
@@ -844,8 +844,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 6.5,
-     "flag": "",
+     "value": 6.7,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -914,17 +914,10 @@
     },
     {
      "test": "eGFR (CKD-EPI 2021)",
-     "value": 89,
+     "value": "89 12.7",
      "flag": "",
      "units": "mL/min/1.73m2",
      "ref": "60-200"
-    },
-    {
-     "test": "Hemoglobin",
-     "value": 12.7,
-     "flag": "",
-     "units": "g/dL",
-     "ref": "12.0-17.5"
     },
     {
      "test": "HIV-1/2 Ab",
@@ -950,10 +943,16 @@
   },
   "losses": [
    {
-    "fact_id": "C0359-F028",
+    "fact_id": "C0359-F025",
     "kind": "flag_lost",
-    "original": "H",
+    "original": "L",
     "extracted": null
+   },
+   {
+    "fact_id": "C0359-F039",
+    "kind": "merged_cells",
+    "original": "hemoglobin=12.7",
+    "extracted": "merged into previous row"
    }
   ]
  },
@@ -1014,17 +1013,17 @@
    "pages": [
     {
      "page": 1,
-     "text": "Christensen PLC Medical Group\nRe: Alexandra Ruiz (DOB 01/23/1970)\n\n---\n\n**January 04, 2025**\n\nMs. Alexandra Ruiz visited today to receive her flu shot. She appears to be in good health overall. Her blood pressure was 131/68, and she weighed 166 pounds. Her lungs were clear to auscultation bilaterally, and her heart rhythm was regular without murmurs. She reports no issues aside from a mild, occasional headache, which she has had for a few days. Her recent lab results and medical history are being reviewed, and I will provide a more comprehensive report shortly.\n\n---\n\n**July 16, 2024**\n\nMs. Ruiz came in today for evaluation of a rash on her arms. Upon examination, the rash appeared to be mild, with no signs of infection. Her blood pressure was 131/64, and she weighed 168 pounds. She has been managing her breast cancer, stage 0, which was treated approximately 0.1 years ago. She is currently on tamoxifen 20 mg daily. There were no new concerning symptoms noted otherwise. We discussed her ongoing treatment plan and the importance of regular follow-ups.\n\n---\n\n**January 26, 2024**\n\nMs. Ruiz was seen today for an ankle sprain she sustained. Her blood pressure was 123/72, and she weighed 153 She has a history of breast cancer, stage 0, which she was treated for about 0.1 years ago. Currently, she is on tamoxifen 20 mg daily. The ankle was examined, and she has been prescribed a short-term course of analgesics and advised to use RICE (rest, ice, compression, elevation) therapy. She also received a tetanus booster due to the injury.\n\n---\n\n**August 06, 2023**\n\nMs. Ruiz visited today regarding her breast cancer, stage 0, which was treated approximately 0.1 years ago. Her blood pressure was 121/67, and she weighed 164 pounds. She is currently on tamoxifen 20 mg daily. The examination was unremarkable aside from some mild discomfort at the treatment site. We discussed her ongoing treatment plan and the importance of adhering to her medication regimen. Follow-up imaging and lab work are scheduled to ensure her continued recovery.\n\n---\n\n**February 15, 2023**\n\nMs. Ruiz was today for follow-up regarding her breast cancer, stage 0, which was treated approximately 0.1 years ago. Her blood pressure was 133/68, and she weighed 154 pounds. She is currently on tamoxifen 20 mg daily. She reports feeling well overall, with no significant symptoms. The physical examination was largely normal, and we discussed the importance of maintaining her regular follow-ups. She has been advised to monitor for any new symptoms or changes.\n\n---\n\n**Social History:**\n\nMs. Ruiz has a"
+     "text": "Christensen PLC Medical Group\n\nRe: Alexandra Ruiz (DOB 01/23/1970)\n\nJanuary 04, 2025: Ms. Ruiz visited today for her annual flu shot. Upon examination, her blood pressure was recorded at 131/68, and her weight was 166 pounds. She appears to be doing well overall, and her vital signs were within normal limits. Ms. Ruiz mentioned that she has been feeling generally healthy and has no new concerns. We continued discussing her ongoing treatment for Ductal carcinoma in situ (DCIS) of the breast, which was diagnosed in June 2024. She is currently taking tamoxifen 20 mg daily, and her fructosamine level, checked in October 2012, was 233. Her most recent lab work and physical exam were unremarkable.\n\nJuly 16, 2024: Ms. Ruiz presented today with a complaint of a rash. Her blood pressure at that visit was 131/64, and her weight was 168 pounds. The rash appeared to be minor and was likely related to an allergic reaction, as no other significant findings were noted. Blood pressure and weight were stable. Ms. Ruiz continues to do well post her treatment for Ductal carcinoma in situ (DCIS) of the breast, which was diagnosed earlier in June 2024. Her fructosamine checked in October 2012 was 233, which is within an acceptable range. Her current medication, tamoxifen 20 mg, is being tolerated well, and she reports no new symptoms related to her breast cancer treatment.\n\nJanuary 26, 2024: Ms. Ruiz visited today due to an ankle sprain. Blood pressure was 123/72, and her weight was 153 pounds. She was prescribed standard care for the sprain, and her recovery is progressing as expected. Ms. Ruiz continues to be in remission from her Ductal carcinoma in situ (DCIS) of the breast, diagnosed in June 2024, and is maintaining her treatment regimen with tamoxifen 20 mg. Her fructosamine level checked in October 2012 was 233, indicating her diabetes management is stable. She remains in stage 0 of her breast cancer, and her overall health appears to be good with no new concerning symptoms.\n\nAugust 06, 2D23: Ms. Ruiz was seen for follow-up regarding her Ductal carcinoma in situ (DCIS) of the breast, diagnosed earlier in the year. Blood pressure was 121/67, and her weight was 164 pounds. Ms. Ruiz is currently in remission, having completed her treatment approximately 0.1 years ago. She is taking tamoxifen 20 mg daily as part of her ongoing care. Her fructosamine level from October 2012 was 233, suggesting good control of her diabetes. Physical exam and lab work were within normal limits.\n\nFebruary 15, 2023: Ms. Ruiz was seen today for follow-up her Ductal carcinoma in situ (D"
     },
     {
      "page": 2,
-     "text": "history of tobacco use, specifically cigars, which she consumes about eight times per year. She started in 2008 and continues to use them. She also consumes approximately 12 drinks per week. Her nicotine metabolite test from October 18, 2012, was negative.\n\n---\n\n**Outside Lab Results:**\n\n**Heritage Diagnostic Services, 10-18-12**\n\n- CHOL / HDL: 258 / 46\n- FRUCTOSAMINE: 233\n- NICOTINE METABOLITE: NEG\n- GAMMA GT: 21\n\n---\n\nPlease find enclosed Ms. Ruiz's detailed medical records, including the attached lab results from Heritage Diagnostic Services. I would be happy to provide additional information if needed.\n\nSincerely,\n\nDr. Michelle Butler, MD\nOncology, Christensen PLC Medical Group\n"
+     "text": "CIS) of the breast, diagnosed earlier in the year. Blood pressure was 133/68, and her weight was 154 pounds. Ms. Ruiz is currently in remission, having completed her treatment approximately 0.1 years ago. She is taking tamoxifen 20 mg daily as part of her ongoing care. Her fructosamine level from October 2012 was 233, suggesting good control of her diabetes. Physical exam and lab work were within normal limits.\n\nSocial history reveals that Ms. Ruiz is a current cigar smoker, smoking approximately 8 cigars per year, a habit she has maintained since April 2008. She has been honest about her tobacco use. Additionally, Ms. Ruiz consumes alcohol at a rate of approximately 12 drinks per week.\n\n[attached outside lab - Heritage Diagnostic Services 10-18-12]\nCHOL / HDL 236 / 42\nFRUCTOSAMINE 233\nNICOTINE METAB NEG\nGAMMA GT 21\n\nThis summary reflects Ms. Ruiz's medical history and current health status, including her ongoing treatment Ductal carcinoma in situ (DCIS) of the breast, her management of diabetes, and her social habits. She continues to be in good health, with no new concerning symptoms or complications.\n\nSincerely,\n\nDr. Michelle Butler\nOncologist\nChristensen PLC Medical Group\n"
     }
    ],
    "entities": [
     {
      "type": "diagnosis",
-     "text": "Cancer (see type table)",
+     "text": "Ductal carcinoma in situ (DCIS), breast",
      "status": "active"
     },
     {

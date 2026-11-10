@@ -216,8 +216,8 @@
    "HT_IN": 62,
    "WT_KG": 73.5,
    "HR": 59,
-   "BP_1": "135/88",
-   "BP_2": "138/86"
+   "BP_1": "121/99",
+   "BP_2": "122/99"
   },
   "losses": []
  },
@@ -242,15 +242,22 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": "295 45",
+     "value": 246,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
+     "test": "HDL CHOL",
+     "value": 38,
+     "flag": "",
+     "units": "mg/dL",
+     "ref": "40-999"
+    },
+    {
      "test": "LDL (calc)",
-     "value": 225,
-     "flag": "H",
+     "value": 183,
+     "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
     },
@@ -263,7 +270,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 6.6,
+     "value": 6.5,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -321,7 +328,7 @@
      "test": "Creatinine",
      "value": 0.9,
      "flag": "",
-     "units": "mg/dL",
+     "units": null,
      "ref": "0.6-1.3"
     },
     {
@@ -377,9 +384,21 @@
   "losses": [
    {
     "fact_id": "C0460-F026",
-    "kind": "merged_cells",
-    "original": "hdl=45",
-    "extracted": "merged into previous row"
+    "kind": "flag_lost",
+    "original": "L",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0460-F027",
+    "kind": "flag_lost",
+    "original": "H",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0460-F037",
+    "kind": "unit_lost",
+    "original": "mg/dL",
+    "extracted": null
    },
    {
     "fact_id": "C0460-F039",

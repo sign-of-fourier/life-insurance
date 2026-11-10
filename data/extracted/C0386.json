@@ -20,7 +20,7 @@
     "face": 500000,
     "product": "UL",
     "riders": "[]",
-    "existing": 500000,
+    "existing": 250000,
     "replacement": "False",
     "beneficiary": "trust",
     "signed": "2025-07-13"
@@ -217,8 +217,8 @@
    "HT_IN": 74,
    "WT_KG": 110.2,
    "HR": 85,
-   "BP_1": "131/79",
-   "BP_2": "132/77"
+   "BP_1": "135/79",
+   "BP_2": "134/78"
   },
   "losses": []
  },
@@ -232,21 +232,14 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 294,
+     "value": "252 37",
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
-     "test": "HDL CHOL",
-     "value": 52,
-     "flag": "",
-     "units": "mg/dL",
-     "ref": "40-999"
-    },
-    {
      "test": "LDL (calc)",
-     "value": 213,
+     "value": 186,
      "flag": "",
      "units": "mg/dL",
      "ref": "0-99"
@@ -260,7 +253,7 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 5.7,
+     "value": 6.8,
      "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
@@ -309,10 +302,17 @@
     },
     {
      "test": "Bilirubin, total",
-     "value": "0.4 4.5",
+     "value": 0.4,
      "flag": "",
      "units": "mg/dL",
      "ref": "0.2-1.2"
+    },
+    {
+     "test": "Albumin",
+     "value": 4.5,
+     "flag": "",
+     "units": "g/dL",
+     "ref": "3.5-5.0"
     },
     {
      "test": "Creatinine",
@@ -359,16 +359,16 @@
   },
   "losses": [
    {
+    "fact_id": "C0386-F025",
+    "kind": "merged_cells",
+    "original": "hdl=37",
+    "extracted": "merged into previous row"
+   },
+   {
     "fact_id": "C0386-F026",
     "kind": "flag_lost",
     "original": "H",
     "extracted": null
-   },
-   {
-    "fact_id": "C0386-F036",
-    "kind": "merged_cells",
-    "original": "albumin=4.5",
-    "extracted": "merged into previous row"
    }
   ]
  },

@@ -91,7 +91,7 @@
      "q": "Q14",
      "a": "Yes",
      "details": [
-      "{\"condition\": \"Thyroid disorder\", \"diagnosed\": \"11/2025\", \"treatment\": \"none\", \"physician\": \"Dr. Anna Wilson\"}"
+      "{\"condition\": \"Thyroid nodule\", \"diagnosed\": \"11/2025\", \"treatment\": \"none\", \"physician\": \"Dr. Anna Wilson\"}"
      ]
     },
     "Q15": {
@@ -389,9 +389,9 @@
    "height": "4'1D\"",
    "weight_lbs": 151,
    "bp": [
-    "134/90",
+    "136/90",
     "139/92",
-    "144/86"
+    "144/87"
    ],
    "pulse": 82,
    "remarks": []
@@ -442,23 +442,23 @@
    "results": [
     {
      "test": "CHOLESTEROL",
-     "value": 297,
+     "value": 246,
      "flag": "H",
      "units": "mg/dL",
      "ref": "0-199"
     },
     {
      "test": "HDL CHOL",
-     "value": 65,
-     "flag": "",
+     "value": 37,
+     "flag": "L",
      "units": "mg/dL",
      "ref": "40-999"
     },
     {
      "test": "LDL (calc)",
-     "value": 210,
+     "value": 187,
      "flag": "H",
-     "units": "mg/dL",
+     "units": null,
      "ref": "0-99"
     },
     {
@@ -470,8 +470,8 @@
     },
     {
      "test": "CHOL/HDL RATIO",
-     "value": 4.6,
-     "flag": "",
+     "value": 6.6,
+     "flag": "H",
      "units": "ratio",
      "ref": "0-5.0"
     },
@@ -547,16 +547,10 @@
     },
     {
      "test": "Hemoglobin",
-     "value": 12.8,
+     "value": "12.8 0",
      "flag": "",
      "units": "g/dL",
      "ref": "12.0-17.5"
-    },
-    {
-     "test": "HIV-1/2 Ab",
-     "value": 0,
-     "flag": "",
-     "units": "qual"
     },
     {
      "test": "%CDT",
@@ -567,7 +561,20 @@
     }
    ]
   },
-  "losses": []
+  "losses": [
+   {
+    "fact_id": "C0950-F027",
+    "kind": "unit_lost",
+    "original": "mg/dL",
+    "extracted": null
+   },
+   {
+    "fact_id": "C0950-F041",
+    "kind": "merged_cells",
+    "original": "hiv=0",
+    "extracted": "merged into previous row"
+   }
+  ]
  },
  {
   "doc_id": "C0950-D08",
