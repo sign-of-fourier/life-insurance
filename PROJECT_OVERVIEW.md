@@ -190,42 +190,59 @@ flowchart TB
 
 ## 6. Conclusions so far
 
-### 6a. LLM runs (Nova Lite, 200 test cases per split, 3 splits, ~$9.3)
+### 6a. LLM runs (Nova Lite, 200 test cases per split, 3 splits; $15.2 incl. pilots, Pro check, rewrites)
 
 Model input = the new application only; similar past cases are found from the application alone and their **noisy
-underwriter notes** go into the prompt as few-shot examples. Scored against golden without an LLM judge.
+underwriter notes** go into the prompt as few-shot examples. Scored against golden in code, no LLM judge.
 
-1. **Few-shot from similar cases makes the worksheet clearly better on every slice** (worksheet score 0.21 → 0.33;
-   finds more of the rated items, rates them closer to golden, cites the right rules, does the arithmetic).
-   The stated decision improves only slightly (exact 0.15 → 0.20, not significant at n=200).
+How to read the numbers:
+- **Exact decision** = share of cases whose written decision equals golden.
+- **Decision level** = ignore the written decision, add up the model's own item debits in code, turn the total into a
+  broad band (Preferred / Standard / T1-2 / T3-4 / T5-8 / T9-16 / Postpone / Decline), compare with golden's band
+  computed the same way. Rating judgement without Lite's arithmetic. Share of cases.
+- **Worksheet** = partial-credit score 0–1 per case, averaged: right items found, debits within 25, arithmetic adds
+  up, class follows the total (+ flat extras when present). Not a share of cases right.
+- Unless noted, a finding holds on all 3 splits; "split 11 only" marks the rest.
+
+1. **Few-shot from similar cases makes the worksheet clearly better on every slice** (worksheet, mean of 3 splits,
+   0.21 → 0.31; +0.08 to +0.13, always significant; finds more of the rated items, rates them closer to golden,
+   cites the right rules, does the arithmetic). The decision improves only slightly (exact 0.13 → 0.18 mean;
+   significant on 1 of 3 splits).
 2. **Similar beats random on partial-evidence and clean cases; on grey cases any worked file helps as much** —
    the grey-case gain is the worksheet format, not the similarity.
-3. **Every definition of similarity (cosine, VAE, PLS) helps the worksheet about equally; none beats plain cosine.**
+3. **Every definition of similarity (cosine, VAE, PLS, condition chunks) helps the worksheet about equally; none
+   beats plain cosine** (VAE / PLS-on-embeddings / chunks: split 11 only).
 4. **PLS on our own tokens does not beat cosine.** On the first split it looked better on the decision level
    (0.24 vs 0.17); on the other two splits the lead vanished (+0.04 ns, −0.03 ns). Withdrawn.
-   Findings 1–3 and 5 hold on all three splits (worksheet gain from notes +0.08 to +0.13, always significant).
-5. **Better similarity is the lever:** oracle neighbours (chosen with golden) beat cosine on the decision itself
-   (exact +0.09, band +0.13). No practical space closes that gap; it is widest on grey cases.
-6. **Condition chunks** find the most items and cite rules best, but give a weaker worksheet than whole-case notes.
-7. **Gap guideline:** with notes, performance recovers to the full-guideline level — the notes carry part of the
-   removed grey-area / partial-evidence knowledge. **Probably a synthetic-world result:** about half of the grey-case
-   prompts contain an example that cites a removed rule id verbatim (the notes were generated from traces that cite
-   rules); real notes rarely do. **Tested:** with rule names stripped, notes still improve the worksheet over no
-   notes (+0.07), but the decision level no longer recovers. So the knowledge-transfer part was mostly leaked names.
+5. **Better similarity is the lever:** oracle neighbours (chosen with golden, an upper bound) beat cosine on the
+   decision itself on all 3 splits (exact +0.07 to +0.11, decision level +0.09 to +0.11). No practical method gets
+   close.
+6. **Condition chunks** find the most items and cite rules best, but give a weaker worksheet than whole-case notes
+   (split 11 only).
+7. **Gap guideline (grey-area / partial-evidence rules removed): notes do not restore the missing rules.** At first
+   notes seemed to bring performance back to the full-guideline level, but the notes cite the removed rules by name
+   (about half the grey-case prompts). With rule names stripped, notes still improve the worksheet over no notes
+   (+0.07) but the decision level no longer recovers. (Split 11 only.)
 8. **Clean notes beat noisy notes** (golden write-ups of the same past cases, an upper bound): with cosine
    neighbours the decision level computed from the model's items rises 0.17 → 0.29 and the class follows the
    items far more often; rule names and grey-area flags improve. The noise costs consistency more than the decision.
-   Cleaning or regenerating notes (backlog: fine-tuned notes generator) is worth pursuing.
+   (Split 11 only.) Hence the rewrite test in 11.
 9. **For the decision, the LLM adds nothing over a free vote of the same neighbours** (band ≈ vote on all three
    splits; with PLS neighbours the vote is even better on partial-evidence cases). The LLM's value is the worksheet.
 10. **A stronger model (Nova Pro, 50 cases) keeps the same pattern:** notes improve its worksheet by the same
    amount (+0.13) and leave the decision unchanged. Pro's worksheets and arithmetic are much better than Lite's.
-11. **Cheap rewrite of the messy notes gets most of the clean-notes benefit.** Nova Lite rewrote each past case's
-   notes into the clean format (with 2 examples from a 150-case reviewed sample; $0.75). Used as examples, the
-   rewrites give the same worksheet score as perfect notes (0.40 vs 0.33 for messy) and about a third of the
-   decision-level gain (0.21 vs 0.17 messy, 0.29 perfect; not significant vs messy). **Confirmed on all 3
-   splits for the worksheet** (+0.06 to +0.07, always significant); the decision-level gain stays small
-   (+0.02 to +0.06, never clearly significant), and rewrites tend to drop flat extras.
+11. **A cheap rewrite of the messy notes fixes the worksheet, not the decision.** Nova Lite rewrote each past
+   case's notes into the clean format (from the case's application and notes, plus 2 examples from a 150-case
+   "reviewed" sample; never the case's own golden; ~$0.75 per split). Worksheet messy 0.31 → rewritten 0.37 (mean
+   of 3 splits; +0.06 to +0.07, always significant; perfect notes 0.40 on split 11). Decision level 0.16 → 0.20
+   (+0.02 to +0.06, never clearly significant; perfect 0.29). Exact decision unchanged. Rewrites tend to drop flat
+   extras.
+12. **Fine-tuning: deferred, probably out** (decided with the user 2026-11-11). Start with a good model: next, a
+   stronger rewriter (Sonnet / Haiku, other environment, exported prompts) with the same Lite underwriter. Reasons:
+   Bedrock training + hosting likely exceeds the budget; 150 training cases make a weak result inconclusive; the
+   strong-model rewrite answers most of the same question. If ever done, fine-tune a good model.
+13. Absolute levels are low (Lite exact 11–20%, oracle ~27%) but off the floor; differences between setups are
+   measurable at n=200.
 
 ### 6b. Offline retrieval (no LLM)
 
@@ -251,7 +268,7 @@ Full tables in `EXPERIMENTS.md`. k = 3 neighbours, mean of 3 splits.
    re-orders by topical overlap, not severity, and is worst on grey cases. Dropped.
 
 Spend to date: **$20.36** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
-reranker $0.9, LLM runs incl. pilots $12.8 (Pro check $2.66), notes rewrite $1.75).
+reranker $0.9, LLM runs incl. pilots $13.7 (Pro check $2.66), notes rewrites $1.45).
 
 ## 7. Known gaps and caveats
 
@@ -272,9 +289,9 @@ reranker $0.9, LLM runs incl. pilots $12.8 (Pro check $2.66), notes rewrite $1.7
 
 ## 8. Left to test (agreed plan)
 
-Done: worksheet scorer, G2 frozen, pilots (10, 30 cases), main 200-case matrix (11 setups), seeds 22/33, H6, gap ablation.
-
-Also done: H5 (LLM vs vote), Nova Pro check.
+Done: worksheet scorer, G2 frozen, pilots (10, 30 cases), main 200-case matrix (11 setups), seeds 22/33, H6
+(clean notes), gap ablation, H5 (LLM vs vote), Nova Pro check, notes rewrite on 3 splits. Open questions are listed
+in CHECKPOINT.md.
 
 1. Clean-notes rewrite (option A) done on all 3 splits. Next: stronger rewriter (Sonnet / Haiku, other
    environment) on the exported seed-11 prompts; rerun the 200-case test here (~$0.42). Fine-tuning deferred
@@ -287,7 +304,7 @@ Also done: H5 (LLM vs vote), Nova Pro check.
 | Item | Notes |
 |---|---|
 | **Fine-tuning (H7) — scope first** | Which model (generator vs retriever), where hosted (Bedrock customization vs local GPU), training data (golden write-ups vs noisy notes), cost, eval. GPU needed only for the local route. |
-| Fine-tuned golden-notes generator | Fine-tune a model to write clean golden-style notes for past cases (from their noisy notes / application), then use those as the few-shot examples instead of the noisy notes. Part of fine-tuning scoping. |
+| Fine-tuned golden-notes generator | **Deferred, probably out (2026-11-11): stronger-model rewrite first.** Fine-tune a model to write clean golden-style notes for past cases (from their noisy notes / application), then use those as the few-shot examples instead of the noisy notes. Part of fine-tuning scoping. |
 | Fine-tuned retriever (S5) | Train embeddings so cases with similar golden traces sit close; deferred with fine-tuning. |
 | More data for VAE / PLS | Learning curves still rising at 800. Unsupervised VAE needs only applications (~$15–20 for 5000 with LLM-written APS, under $2 with template APS). GPU advisable at that size. |
 | Extract-then-match (S6) | Embed the LLM's structured risk summary instead of raw JSON (partly done via condition extraction). |
