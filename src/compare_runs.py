@@ -20,10 +20,10 @@ KEYS = ["decision", "coarse", "derived_coarse", "worksheet", "item_recall", "ite
         "rule_acc", "arith_ok", "class_follows", "fe_recall", "grey_recall", "overrate_partial", "net_abs_err"]
 
 
-def scores(setup, cases):
+def scores(setup, cases, seed="11"):
     out = {}
     for c in cases:
-        p = R.out_path(setup, c)
+        p = R.out_path(setup, c, seed)
         if p.exists():
             out[c] = W.score(c, json.loads(p.read_text())["output"])
     return out
@@ -54,7 +54,7 @@ def main():
     for pair in a.pairs.split(","):
         x, y = pair.split(":")
         for s in (x, y):
-            cache.setdefault(s, scores(s, cases))
+            cache.setdefault(s, scores(s, cases, a.seed))
         A, B = cache[x], cache[y]
         lines += [f"## {x} vs {y}", "", "| metric | all | grey | partial | clean |", "|---|---|---|---|---|"]
         for k in KEYS:
