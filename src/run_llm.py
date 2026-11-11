@@ -92,13 +92,16 @@ def golden_text(cid: str) -> str:
 
 
 def example_text(cid: str, form: str) -> str:
-    return {"N1": notes_text, "N2": golden_text, "N3": lambda c: strip_rules(notes_text(c)),
-            "N4": rewrite_text}[form](cid)
+    if form.startswith("N4"):
+        return rewrite_text(cid, form[2:])
+    return {"N1": notes_text, "N2": golden_text, "N3": lambda c: strip_rules(notes_text(c))}[form](cid)
 
 
-def rewrite_text(cid: str) -> str:
-    """N4: noisy notes rewritten into the clean format by Nova Lite (src/rewrite_notes.py; no golden of this case)."""
-    return re.sub(r"^# .*\n", "", (E.EXP / f"rewrites/{cid}.md").read_text()).strip()
+def rewrite_text(cid: str, model: str = "") -> str:
+    """N4: noisy notes rewritten into the clean format (src/rewrite_notes.py; never sees the golden of this case).
+    N4 = Nova Lite rewrites (experiments/rewrites/); N4<model>, e.g. N4sonnet = experiments/rewrites_<model>/."""
+    d = "rewrites" if model in ("", "lite") else f"rewrites_{model}"
+    return re.sub(r"^# .*\n", "", (E.EXP / f"{d}/{cid}.md").read_text()).strip()
 
 
 LATENT = {"S3": ("vae", "cohere_whole"), "S4C": ("pls", "cohere_whole"), "S4R": ("pls", "r2")}

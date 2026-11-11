@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0881",
+ "setup": "S1-G1-N4",
+ "seed": "33",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 20167,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Chronic kidney disease (eGFR)\",\n      \"rule_id\": \"REN-1\",\n      \"debits\": 150,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": true\n    },\n    {\n      \"item\": \"Former cigarette use\",\n      \"rule_id\": \"TOB-2.3\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"High cholesterol\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"High total cholesterol/HDL ratio\",\n      \"rule_id\": \"LIP-3\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Father's history of COPD\",\n      \"rule_id\": \"FH-1\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Non-compliance with treatment plan for chronic kidney disease\",\n      \"rule_ids\": [\"GRY-0\", \"APS-5\"],\n      \"chosen\": \"Rate as worst documented / default column\"\n    },\n    {\n      \"issue\": \"Value within 2% of a class threshold (build, BP, lipids) with improving trend in APS\",\n      \"rule_ids\": [\"GRY-1\"],\n      \"chosen\": \"Award the better class\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Decline\",\n    \"table\": 0,\n    \"net_debits\": 150,\n    \"flat_extras\": [],\n    \"postpone_months\": null\n  }\n}\n```"
+}

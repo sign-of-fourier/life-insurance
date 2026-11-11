@@ -475,7 +475,26 @@ case it rewrites. Loop guard: retry on a repeated line, then collapse runs; 1 of
 - One split only. Reading: a cheap prompt-only rewrite recovers the worksheet benefit of perfect notes and part of
   the decision benefit. Fine-tuning (option B/C) would have to beat this on the decision level to be worth it.
 
-Not yet done: hybrid cosine + PLS neighbours (low priority); N4 on seeds 22 / 33 and with PLS neighbours.
+**N4 on seeds 22 / 33** ($1.36 incl. 290 more rewrites; tables `experiments/runs_n200_s{22,33}_rewrite.md`,
+`runs_paired_rewrite_n200_s{22,33}.md`). N4 vs N1 (messy), per split 11 / 22 / 33:
+
+| Metric | 11 | 22 | 33 | Verdict |
+|---|---|---|---|---|
+| Worksheet | +0.074* | +0.064* | +0.056* | replicates |
+| Class follows own items | +0.13* | +0.18* | +0.17* | replicates |
+| Arithmetic adds up | +0.10* | +0.11* | +0.15* | replicates |
+| Grey-area flags | +0.19* | +0.13* | +0.09 | mostly |
+| Derived band (decision level) | +0.05 | +0.06 (CI to 0.00) | +0.02 | small, never clearly significant |
+| Exact decision | +0.00 | -0.02 | -0.01 | no effect |
+| Debits ±25 | +0.03 | -0.04 | -0.08* | slightly worse |
+| Flat-extra recall (n≈15-20) | -0.11 | -0.07 | -0.11 | consistently lower: rewrites drop flat extras |
+
+Means over 3 splits: worksheet messy 0.31 -> rewritten 0.37 (perfect, seed 11 only: 0.40); derived band 0.16 -> 0.20
+(perfect 0.29). Reading: the Lite rewrite reliably cleans up the worksheet (consistency, arithmetic, grey flags)
+but barely moves the decision. Next: a stronger rewriter (Sonnet / Haiku, other environment) using the exported
+prompts `experiments/rewrite_prompts_S1_s11.jsonl`; then rerun S1-G1-N4<model> here with Nova Lite (~$0.42).
+
+Not yet done: hybrid cosine + PLS neighbours (low priority).
 
 ### PLS target: ordinal decision (offline, 2026-11-10)
 

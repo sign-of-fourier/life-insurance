@@ -7,7 +7,8 @@ the case's application, and 2 worked examples (noisy notes -> clean write-up) fr
 - The rewrite never sees the golden of the case it rewrites.
 Output: experiments/rewrites/<cid>.md; used as example form N4 in run_llm (e.g. S1-G1-N4).
 
-  python src/rewrite_notes.py --space S1 --seed 11 [--n 5] [--cap 1.0] [--dry-run]
+  python src/rewrite_notes.py --space S1 --seed 11 [--n 5] [--cap 1.0] [--model lite] [--dry-run]
+  python src/rewrite_notes.py --space S1 --seed 11 --export experiments/rewrite_prompts_S1_s11.jsonl   # run elsewhere
 """
 from __future__ import annotations
 
@@ -25,7 +26,7 @@ import exp_data as E  # noqa: E402
 import llm  # noqa: E402
 import run_llm as R  # noqa: E402
 
-OUT = E.EXP / "rewrites"
+OUT = E.EXP / "rewrites"          # lite; other models write to rewrites_<model>/ (form N4<model> in run_llm)
 N_EXPERT, N_SHOT, MAX_OUT, MODEL = 150, 2, 4000, "lite"
 
 SYSTEM = """You are a senior life insurance underwriter cleaning up a colleague's file notes. The notes are terse,
@@ -84,15 +85,19 @@ def ok(text: str) -> bool:
     return bool(text) and "Decision" in text and "|" in text and len(text) < 30000 and not looping(text)
 
 
-def rewrite(cid: str, budget) -> str:
-    p = OUT / f"{cid}.md"
+def out_dir(model: str) -> Path:
+    return OUT if model == "lite" else E.EXP / f"rewrites_{model}"
+
+
+def rewrite(cid: str, budget, model: str = MODEL) -> str:
+    p = out_dir(model) / f"{cid}.md"
     if p.exists():
         return p.read_text()
     pr = prompt(cid)
-    text = llm.call(MODEL, SYSTEM, pr, max_tokens=MAX_OUT, temperature=0.0, budget=budget, tag=f"rewrite:{cid}")
+    text = llm.call(model, SYSTEM, pr, max_tokens=MAX_OUT, temperature=0.0, budget=budget, tag=f"rewrite:{cid}")
     if not ok(text):
-        text = llm.call(MODEL, SYSTEM, pr, max_tokens=MAX_OUT, temperature=0.3, budget=budget, tag=f"rewrite:{cid}:retry")
-    OUT.mkdir(parents=True, exist_ok=True)
+        text = llm.call(model, SYSTEM, pr, max_tokens=MAX_OUT, temperature=0.3, budget=budget, tag=f"rewrite:{cid}:retry")
+    p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(collapse(text).strip() + "\n")
     return text
 
@@ -110,17 +115,27 @@ def main():
     ap.add_argument("--n", type=int, default=0, help="only neighbours of n stratified test cases (0 = all 200)")
     ap.add_argument("--cap", type=float, default=1.0)
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--model", default=MODEL, help="key in llm.PRICES (lite, pro, or one added there)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--export", default="", help="write prompts as JSONL to this path and exit (no LLM calls)")
     a = ap.parse_args()
-    todo = [c for c in targets(a.space, a.seed, a.n) if not (OUT / f"{c}.md").exists()]
-    est = sum(llm.cost(MODEL, int(R.TOK_FACTOR * llm.est_tokens(SYSTEM + prompt(c))), 2000) for c in todo)
+    if a.export:                       # prompts for running the rewrite elsewhere (no Bedrock needed)
+        out = Path(a.export)
+        with out.open("w") as f:
+            for c in targets(a.space, a.seed, a.n):
+                f.write(json.dumps({"case_id": c, "system": SYSTEM, "prompt": prompt(c), "max_tokens": MAX_OUT,
+                                    "temperature": 0.0, "save_as": f"experiments/rewrites_<model>/{c}.md"}) + "\n")
+        print(f"wrote {out}")
+        return
+    todo = [c for c in targets(a.space, a.seed, a.n) if not (out_dir(a.model) / f"{c}.md").exists()]
+    est = sum(llm.cost(a.model, int(R.TOK_FACTOR * llm.est_tokens(SYSTEM + prompt(c))), 2000) for c in todo)
     print(f"{len(todo)} rewrites to make, est ${est:.3f}; spent so far ${llm.global_spent():.2f}")
     (E.EXP / "rewrites_expert_sample.json").write_text(json.dumps(expert_sample()))
     if a.dry_run:
         return
-    with llm.Budget(f"phase7-rewrite-{a.space}", cap=a.cap) as b:
+    with llm.Budget(f"phase7-rewrite-{a.space}" + ("" if a.model == "lite" else f"-{a.model}"), cap=a.cap) as b:
         with ThreadPoolExecutor(a.workers) as ex:
-            list(ex.map(lambda c: rewrite(c, b), todo))
+            list(ex.map(lambda c: rewrite(c, b, a.model), todo))
         print(f"spent this batch ${b.spent:.3f} over {b.calls} calls")
 
 

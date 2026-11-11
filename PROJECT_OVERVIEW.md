@@ -223,7 +223,9 @@ underwriter notes** go into the prompt as few-shot examples. Scored against gold
 11. **Cheap rewrite of the messy notes gets most of the clean-notes benefit.** Nova Lite rewrote each past case's
    notes into the clean format (with 2 examples from a 150-case reviewed sample; $0.75). Used as examples, the
    rewrites give the same worksheet score as perfect notes (0.40 vs 0.33 for messy) and about a third of the
-   decision-level gain (0.21 vs 0.17 messy, 0.29 perfect; not significant vs messy). One split.
+   decision-level gain (0.21 vs 0.17 messy, 0.29 perfect; not significant vs messy). **Confirmed on all 3
+   splits for the worksheet** (+0.06 to +0.07, always significant); the decision-level gain stays small
+   (+0.02 to +0.06, never clearly significant), and rewrites tend to drop flat extras.
 
 ### 6b. Offline retrieval (no LLM)
 
@@ -248,8 +250,8 @@ Full tables in `EXPERIMENTS.md`. k = 3 neighbours, mean of 3 splits.
 8. **A cross-encoder reranker (Cohere Rerank 3.5) does not help** on condition chunks (50-case paired test): it
    re-orders by topical overlap, not severity, and is worst on grey cases. Dropped.
 
-Spend to date: **$18.82** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
-reranker $0.9, LLM runs incl. pilots $12.8 (Pro check $2.66), notes rewrite $0.75).
+Spend to date: **$20.36** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
+reranker $0.9, LLM runs incl. pilots $12.8 (Pro check $2.66), notes rewrite $1.75).
 
 ## 7. Known gaps and caveats
 
@@ -274,8 +276,9 @@ Done: worksheet scorer, G2 frozen, pilots (10, 30 cases), main 200-case matrix (
 
 Also done: H5 (LLM vs vote), Nova Pro check.
 
-1. Clean-notes rewrite (option A) done on one split. Next: confirm on seeds 22 / 33 (~$2.3 for both) before
-   deciding on fine-tuning (`SCOPING_NOTES_GENERATOR.md`).
+1. Clean-notes rewrite (option A) done on all 3 splits. Next: stronger rewriter (Sonnet / Haiku, other
+   environment) on the exported seed-11 prompts; rerun the 200-case test here (~$0.42). Fine-tuning deferred
+   (see CHECKPOINT.md).
 2. Use the neighbour vote as a decision hint / fallback next to the LLM worksheet (free to test offline).
 3. Hybrid cosine + PLS neighbours (e.g. 2 + 1): weaker case now that the PLS edge did not replicate; low priority.
 

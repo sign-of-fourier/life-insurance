@@ -5,6 +5,12 @@ Status: **option A done (2026-11-11), nothing trained.** Written 2026-11-10 afte
 **Result of option A** (seed 11, see EXPERIMENTS.md): rewritten notes match perfect notes on the worksheet (0.40 vs
 0.40; messy 0.33) and recover about a third of the decision-level gap (0.21; messy 0.17, perfect 0.29). Cost $0.75
 for 327 rewrites. Fine-tuning is only worth it if it can close the rest of the decision-level gap.
+Seeds 22 / 33 confirm the worksheet gain; the decision-level gain stays small (+0.02 to +0.06, ns).
+
+**Decision 2026-11-11 (with the user):** start with a good model, not fine-tuning. Run the rewrite with a stronger
+model (Sonnet / Haiku, other environment, exported prompts). Fine-tuning is **deferred, probably out**: Bedrock
+training + hosting likely exceeds the remaining budget, 150 training cases make a weak result inconclusive, and the
+strong-model rewrite answers most of the same question. If anything is fine-tuned later, fine-tune a good model.
 
 ## Why
 
