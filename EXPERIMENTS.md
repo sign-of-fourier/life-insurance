@@ -452,8 +452,30 @@ majority golden outcome of the same 3 neighbours whose notes the LLM saw; same c
 - Cost lesson: billed input tokens are 1.4x our estimate on these prompts (Lite and Pro); `run_llm` now applies
   `TOK_FACTOR = 1.4` to estimates.
 
-Not yet done: hybrid cosine + PLS neighbours (low priority); clean-notes generator - see
-`SCOPING_NOTES_GENERATOR.md`.
+**Clean-notes generator, option A - prompt-only rewrite (N4)** (`src/rewrite_notes.py`, seed 11, cosine
+neighbours, full guideline; $0.75 for 327 rewrites + $0.41 for the 200-case run; tables
+`experiments/runs_n200_s11_rewrite.md`, `runs_paired_rewrite_n200_s11.md`). Nova Lite rewrites each past case's
+noisy notes into the clean format from the application + guideline + 2 worked examples (noisy -> golden) taken from
+a 150-case "expert-reviewed" sample (drawn from the 510 cases in no test split). It never sees the golden of the
+case it rewrites. Loop guard: retry on a repeated line, then collapse runs; 1 of 327 still loops, 1 lacks a decision.
+
+| Examples | Exact | Band | Derived band | Worksheet | Debits ±25 | Rule ids | Class follows | Grey flags |
+|---|---|---|---|---|---|---|---|---|
+| none (B0) | 0.15 | 0.29 | 0.15 | 0.21 | 0.31 | 0.61 | 0.08 | 0.10 |
+| messy notes (N1) | 0.20 | 0.31 | 0.17 | 0.33 | 0.44 | 0.68 | 0.18 | 0.10 |
+| **rewritten (N4)** | 0.20 | 0.36 | 0.21 | **0.40** | 0.46 | 0.72 | 0.31 | 0.30 |
+| perfect golden (N2) | 0.22 | 0.38 | 0.29 | 0.40 | 0.36 | 0.85 | 0.42 | 0.29 |
+
+- N4 vs N1: worksheet +0.074*, class follows items +0.13*, arithmetic +0.10*, item precision +0.06*, grey flags
+  +0.19*; derived band +0.05 [-0.01, +0.11] ns; exact +0.00.
+- N2 vs N4: worksheet +0.00 (rewrite closes the whole worksheet gap), derived band +0.08* (closes ~1/3 of the
+  decision-level gap), rule ids +0.10*, class follows +0.11*; rewrite is better on debits ±25 (+0.09*) and item recall.
+- Flat-extra recall fell to 0 with N4 (0.11 with N1), but only a handful of test cases carry a flat extra; 25 of
+  29 neighbour rewrites with a golden flat extra mention it. Small-n; watch if rerun.
+- One split only. Reading: a cheap prompt-only rewrite recovers the worksheet benefit of perfect notes and part of
+  the decision benefit. Fine-tuning (option B/C) would have to beat this on the decision level to be worth it.
+
+Not yet done: hybrid cosine + PLS neighbours (low priority); N4 on seeds 22 / 33 and with PLS neighbours.
 
 ### PLS target: ordinal decision (offline, 2026-11-10)
 

@@ -1,0 +1,10 @@
+{
+ "retried": false,
+ "case_id": "C0736",
+ "setup": "S1-G1-N4",
+ "seed": "11",
+ "prompt_v": 1,
+ "model": "lite",
+ "prompt_tokens_est": 20045,
+ "output": "```json\n{\n  \"items\": [\n    {\n      \"item\": \"Colon adenocarcinoma, stage III\",\n      \"rule_id\": \"CA-1\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": \"Standard\",\n      \"flat_extra\": null,\n      \"postpone_months\": 12,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Tobacco use (chewing tobacco)\",\n      \"rule_id\": \"TOB-3.1\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Alcohol use (10 drinks/week)\",\n      \"rule_id\": \"ALC\",\n      \"debits\": 25,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    },\n    {\n      \"item\": \"Glaucoma\",\n      \"rule_id\": \"MISC-1\",\n      \"debits\": 0,\n      \"credits\": 0,\n      \"class_cap\": null,\n      \"flat_extra\": null,\n      \"postpone_months\": null,\n      \"decline\": false\n    }\n  ],\n  \"grey_areas\": [\n    {\n      \"issue\": \"Tobacco use frequency and type\",\n      \"rule_ids\": [\"GRY-4\", \"TOB-3.1\"],\n      \"chosen\": \"Tobacco use on weekends only, treated as 1.4 years quit date\"\n    },\n    {\n      \"issue\": \"Alcohol consumption\",\n      \"rule_ids\": [\"ALC\", \"GRY-1\"],\n      \"chosen\": \"Alcohol consumption at 10 drinks/week, treated as 25 debits\"\n    }\n  ],\n  \"decision\": {\n    \"ladder\": \"non_tobacco\",\n    \"risk_class\": \"Postpone\",\n    \"table\": 0,\n    \"net_debits\": 50,\n    \"flat_extras\": [],\n    \"postpone_months\": 12\n  }\n}\n```"
+}

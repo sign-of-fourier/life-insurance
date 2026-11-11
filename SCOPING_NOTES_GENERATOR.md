@@ -1,6 +1,10 @@
 # Scoping — clean-notes generator (fine-tuning backlog item)
 
-Status: **scoping only, nothing trained or started.** Written 2026-11-10 after H6.
+Status: **option A done (2026-11-11), nothing trained.** Written 2026-11-10 after H6.
+
+**Result of option A** (seed 11, see EXPERIMENTS.md): rewritten notes match perfect notes on the worksheet (0.40 vs
+0.40; messy 0.33) and recover about a third of the decision-level gap (0.21; messy 0.17, perfect 0.29). Cost $0.75
+for 327 rewrites. Fine-tuning is only worth it if it can close the rest of the decision-level gap.
 
 ## Why
 

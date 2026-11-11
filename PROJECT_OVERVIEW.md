@@ -220,6 +220,10 @@ underwriter notes** go into the prompt as few-shot examples. Scored against gold
    splits; with PLS neighbours the vote is even better on partial-evidence cases). The LLM's value is the worksheet.
 10. **A stronger model (Nova Pro, 50 cases) keeps the same pattern:** notes improve its worksheet by the same
    amount (+0.13) and leave the decision unchanged. Pro's worksheets and arithmetic are much better than Lite's.
+11. **Cheap rewrite of the messy notes gets most of the clean-notes benefit.** Nova Lite rewrote each past case's
+   notes into the clean format (with 2 examples from a 150-case reviewed sample; $0.75). Used as examples, the
+   rewrites give the same worksheet score as perfect notes (0.40 vs 0.33 for messy) and about a third of the
+   decision-level gain (0.21 vs 0.17 messy, 0.29 perfect; not significant vs messy). One split.
 
 ### 6b. Offline retrieval (no LLM)
 
@@ -244,8 +248,8 @@ Full tables in `EXPERIMENTS.md`. k = 3 neighbours, mean of 3 splits.
 8. **A cross-encoder reranker (Cohere Rerank 3.5) does not help** on condition chunks (50-case paired test): it
    re-orders by topical overlap, not severity, and is worst on grey cases. Dropped.
 
-Spend to date: **$17.64** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
-reranker $0.9, LLM runs incl. pilots $12.4 (Pro check $2.66)).
+Spend to date: **$18.82** of a $25 cap (APS writing $2.6, notes $0.4, embeddings $0.6, condition extraction $0.55,
+reranker $0.9, LLM runs incl. pilots $12.8 (Pro check $2.66), notes rewrite $0.75).
 
 ## 7. Known gaps and caveats
 
@@ -270,7 +274,8 @@ Done: worksheet scorer, G2 frozen, pilots (10, 30 cases), main 200-case matrix (
 
 Also done: H5 (LLM vs vote), Nova Pro check.
 
-1. **Clean-notes generator, option A** (prompt-only rewrite, ~$3-4 Lite): see `SCOPING_NOTES_GENERATOR.md`.
+1. Clean-notes rewrite (option A) done on one split. Next: confirm on seeds 22 / 33 (~$2.3 for both) before
+   deciding on fine-tuning (`SCOPING_NOTES_GENERATOR.md`).
 2. Use the neighbour vote as a decision hint / fallback next to the LLM worksheet (free to test offline).
 3. Hybrid cosine + PLS neighbours (e.g. 2 + 1): weaker case now that the PLS edge did not replicate; low priority.
 

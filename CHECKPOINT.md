@@ -20,8 +20,8 @@ recorded in `EXPERIMENTS.md`):
 
 **Done since:** worksheet scorer (`src/score_worksheet.py`), G2 frozen (`src/guideline_variants.py`), LLM runner
 (`src/run_llm.py`), paired comparisons (`src/compare_runs.py`), 200-case Nova Lite matrix (11 setups) — results in
-`EXPERIMENTS.md` and PROJECT_OVERVIEW §6a; then seeds 22/33, clean-notes (H6), gap ablation (stripped notes), H5 (LLM vs vote), Nova Pro check.
-**Next:** see PROJECT_OVERVIEW §8 and `SCOPING_NOTES_GENERATOR.md`. Spent $17.64. Cost estimates: billed tokens = 1.4x `est_tokens`.
+`EXPERIMENTS.md` and PROJECT_OVERVIEW §6a; then seeds 22/33, clean-notes (H6), gap ablation (stripped notes), H5 (LLM vs vote), Nova Pro check, prompt-only notes rewrite (N4).
+**Next:** see PROJECT_OVERVIEW §8 and `SCOPING_NOTES_GENERATOR.md`. Spent $18.82. Cost estimates: billed tokens = 1.4x `est_tokens`.
 
 ## Decisions made with the user (don't re-litigate)
 
@@ -51,7 +51,7 @@ recorded in `EXPERIMENTS.md`):
   (optional), `cohere.embed-v4:0`, `amazon.titan-embed-text-v2:0` (only to re-embed), `cohere.rerank-v3-5:0`
   (only to revisit the reranker). Ping: `python src/llm.py --ping lite`.
 - Spend tracking: `qa/usage.jsonl` (in git) feeds the **global cap** ($25 via `UW_CAP_GLOBAL`), so the running
-  total carries across accounts. Spent so far: **$17.64** (`python src/llm.py --spent`). Caps per batch $2,
+  total carries across accounts. Spent so far: **$18.82** (`python src/llm.py --spent`). Caps per batch $2,
   per session $5 (`UW_CAP_BATCH`, `UW_CAP_SESSION`).
 
 ## What is in git (and what is not)
